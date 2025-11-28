@@ -826,6 +826,8 @@ function App() {
         <Route path="/zh/convert/dng-to-webp" element={<DNGToWebPConverter />} />
         <Route path="/de/convert/doc-to-csv" element={<DOCToCSVConverter />} />
         <Route path="/id/convert/doc-to-csv" element={<DOCToCSVConverter />} />
+        <Route path="/sv/convert/doc-to-csv" element={<DOCToCSVConverter />} />
+        <Route path="/es/convert/doc-to-csv" element={<DOCToCSVConverter />} />
         <Route path="/de/convert/doc-to-epub" element={<DOCToEPUBConverter />} />
         <Route path="/de/convert/doc-to-mobi" element={<DOCToMOBIConverter />} />
         <Route path="/de/convert/doc-to-odt" element={<DOCToODTConverter />} />
@@ -1277,7 +1279,9 @@ function App() {
         <Route path="/viewers/ico" element={<ICOViewer />} />
         <Route path="/viewers/ico/editor" element={<ICOViewer />} />
         <Route path="/viewers/heic" element={<HEICViewer />} />
+        <Route path="/viewers/heic/editor" element={<HEICViewer />} />
         <Route path="/viewers/heif" element={<HEICViewer />} />
+        <Route path="/viewers/heif/editor" element={<HEICViewer />} />
         <Route path="/viewers/avif" element={<AVIFViewer />} />
         <Route path="/viewers/pdf" element={<PDFViewer />} />
         <Route path="/viewers/rtf" element={<RTFViewer />} />
@@ -1337,7 +1341,9 @@ function App() {
         <Route path="/pl/viewers/ico" element={<ICOViewer />} />
         <Route path="/pl/viewers/ico/editor" element={<ICOViewer />} />
         <Route path="/pl/viewers/heic" element={<HEICViewer />} />
+        <Route path="/pl/viewers/heic/editor" element={<HEICViewer />} />
         <Route path="/pl/viewers/heif" element={<HEICViewer />} />
+        <Route path="/pl/viewers/heif/editor" element={<HEICViewer />} />
         <Route path="/pl/viewers/avif" element={<AVIFViewer />} />
         <Route path="/pl/viewers/pdf" element={<PDFViewer />} />
         <Route path="/pl/viewers/rtf" element={<RTFViewer />} />
@@ -1397,7 +1403,9 @@ function App() {
         <Route path="/de/viewers/ico" element={<ICOViewer />} />
         <Route path="/de/viewers/ico/editor" element={<ICOViewer />} />
         <Route path="/de/viewers/heic" element={<HEICViewer />} />
+        <Route path="/de/viewers/heic/editor" element={<HEICViewer />} />
         <Route path="/de/viewers/heif" element={<HEICViewer />} />
+        <Route path="/de/viewers/heif/editor" element={<HEICViewer />} />
         <Route path="/de/viewers/avif" element={<AVIFViewer />} />
         <Route path="/de/viewers/pdf" element={<PDFViewer />} />
         <Route path="/de/viewers/rtf" element={<RTFViewer />} />
@@ -1446,6 +1454,10 @@ function App() {
         <Route path="/id/viewers/jpg/editor" element={<JPEGViewer />} />
         <Route path="/id/viewers/jpeg" element={<JPEGViewer />} />
         <Route path="/id/viewers/jpeg/editor" element={<JPEGViewer />} />
+        <Route path="/id/viewers/heic" element={<HEICViewer />} />
+        <Route path="/id/viewers/heic/editor" element={<HEICViewer />} />
+        <Route path="/id/viewers/heif" element={<HEICViewer />} />
+        <Route path="/id/viewers/heif/editor" element={<HEICViewer />} />
 
         {/* Swedish (SV) Viewer Routes */}
         <Route path="/sv/viewers" element={<Viewers />} />
@@ -1455,6 +1467,10 @@ function App() {
         <Route path="/sv/viewers/jpg/editor" element={<JPEGViewer />} />
         <Route path="/sv/viewers/jpeg" element={<JPEGViewer />} />
         <Route path="/sv/viewers/jpeg/editor" element={<JPEGViewer />} />
+        <Route path="/sv/viewers/heic" element={<HEICViewer />} />
+        <Route path="/sv/viewers/heic/editor" element={<HEICViewer />} />
+        <Route path="/sv/viewers/heif" element={<HEICViewer />} />
+        <Route path="/sv/viewers/heif/editor" element={<HEICViewer />} />
 
         {/* Spanish (ES) Viewer Routes */}
         <Route path="/es/viewers" element={<Viewers />} />
@@ -1464,6 +1480,10 @@ function App() {
         <Route path="/es/viewers/jpg/editor" element={<JPEGViewer />} />
         <Route path="/es/viewers/jpeg" element={<JPEGViewer />} />
         <Route path="/es/viewers/jpeg/editor" element={<JPEGViewer />} />
+        <Route path="/es/viewers/heic" element={<HEICViewer />} />
+        <Route path="/es/viewers/heic/editor" element={<HEICViewer />} />
+        <Route path="/es/viewers/heif" element={<HEICViewer />} />
+        <Route path="/es/viewers/heif/editor" element={<HEICViewer />} />
 
         {/* French (FR) Viewer Routes */}
         <Route path="/fr/viewers" element={<Viewers />} />
@@ -1473,6 +1493,10 @@ function App() {
         <Route path="/fr/viewers/jpg/editor" element={<JPEGViewer />} />
         <Route path="/fr/viewers/jpeg" element={<JPEGViewer />} />
         <Route path="/fr/viewers/jpeg/editor" element={<JPEGViewer />} />
+        <Route path="/fr/viewers/heic" element={<HEICViewer />} />
+        <Route path="/fr/viewers/heic/editor" element={<HEICViewer />} />
+        <Route path="/fr/viewers/heif" element={<HEICViewer />} />
+        <Route path="/fr/viewers/heif/editor" element={<HEICViewer />} />
 
         {/* Italian (IT) Viewer Routes */}
         <Route path="/it/viewers" element={<Viewers />} />
@@ -1482,6 +1506,10 @@ function App() {
         <Route path="/it/viewers/jpg/editor" element={<JPEGViewer />} />
         <Route path="/it/viewers/jpeg" element={<JPEGViewer />} />
         <Route path="/it/viewers/jpeg/editor" element={<JPEGViewer />} />
+        <Route path="/it/viewers/heic" element={<HEICViewer />} />
+        <Route path="/it/viewers/heic/editor" element={<HEICViewer />} />
+        <Route path="/it/viewers/heif" element={<HEICViewer />} />
+        <Route path="/it/viewers/heif/editor" element={<HEICViewer />} />
 
         {/* Dutch (NL) Viewer Routes */}
         <Route path="/nl/viewers" element={<Viewers />} />
@@ -1491,6 +1519,10 @@ function App() {
         <Route path="/nl/viewers/jpg/editor" element={<JPEGViewer />} />
         <Route path="/nl/viewers/jpeg" element={<JPEGViewer />} />
         <Route path="/nl/viewers/jpeg/editor" element={<JPEGViewer />} />
+        <Route path="/nl/viewers/heic" element={<HEICViewer />} />
+        <Route path="/nl/viewers/heic/editor" element={<HEICViewer />} />
+        <Route path="/nl/viewers/heif" element={<HEICViewer />} />
+        <Route path="/nl/viewers/heif/editor" element={<HEICViewer />} />
 
         {/* Portuguese (PT) Viewer Routes */}
         <Route path="/pt/viewers" element={<Viewers />} />
@@ -1500,6 +1532,10 @@ function App() {
         <Route path="/pt/viewers/jpg/editor" element={<JPEGViewer />} />
         <Route path="/pt/viewers/jpeg" element={<JPEGViewer />} />
         <Route path="/pt/viewers/jpeg/editor" element={<JPEGViewer />} />
+        <Route path="/pt/viewers/heic" element={<HEICViewer />} />
+        <Route path="/pt/viewers/heic/editor" element={<HEICViewer />} />
+        <Route path="/pt/viewers/heif" element={<HEICViewer />} />
+        <Route path="/pt/viewers/heif/editor" element={<HEICViewer />} />
 
         {/* Vietnamese (VI) Viewer Routes */}
         <Route path="/vi/viewers" element={<Viewers />} />
@@ -1509,6 +1545,10 @@ function App() {
         <Route path="/vi/viewers/jpg/editor" element={<JPEGViewer />} />
         <Route path="/vi/viewers/jpeg" element={<JPEGViewer />} />
         <Route path="/vi/viewers/jpeg/editor" element={<JPEGViewer />} />
+        <Route path="/vi/viewers/heic" element={<HEICViewer />} />
+        <Route path="/vi/viewers/heic/editor" element={<HEICViewer />} />
+        <Route path="/vi/viewers/heif" element={<HEICViewer />} />
+        <Route path="/vi/viewers/heif/editor" element={<HEICViewer />} />
 
         {/* Turkish (TR) Viewer Routes */}
         <Route path="/tr/viewers" element={<Viewers />} />
@@ -1518,6 +1558,10 @@ function App() {
         <Route path="/tr/viewers/jpg/editor" element={<JPEGViewer />} />
         <Route path="/tr/viewers/jpeg" element={<JPEGViewer />} />
         <Route path="/tr/viewers/jpeg/editor" element={<JPEGViewer />} />
+        <Route path="/tr/viewers/heic" element={<HEICViewer />} />
+        <Route path="/tr/viewers/heic/editor" element={<HEICViewer />} />
+        <Route path="/tr/viewers/heif" element={<HEICViewer />} />
+        <Route path="/tr/viewers/heif/editor" element={<HEICViewer />} />
 
         {/* Russian (RU) Viewer Routes */}
         <Route path="/ru/viewers" element={<Viewers />} />
@@ -1527,6 +1571,10 @@ function App() {
         <Route path="/ru/viewers/jpg/editor" element={<JPEGViewer />} />
         <Route path="/ru/viewers/jpeg" element={<JPEGViewer />} />
         <Route path="/ru/viewers/jpeg/editor" element={<JPEGViewer />} />
+        <Route path="/ru/viewers/heic" element={<HEICViewer />} />
+        <Route path="/ru/viewers/heic/editor" element={<HEICViewer />} />
+        <Route path="/ru/viewers/heif" element={<HEICViewer />} />
+        <Route path="/ru/viewers/heif/editor" element={<HEICViewer />} />
 
         {/* Arabic (AR) Viewer Routes */}
         <Route path="/ar/viewers" element={<Viewers />} />
@@ -1536,6 +1584,10 @@ function App() {
         <Route path="/ar/viewers/jpg/editor" element={<JPEGViewer />} />
         <Route path="/ar/viewers/jpeg" element={<JPEGViewer />} />
         <Route path="/ar/viewers/jpeg/editor" element={<JPEGViewer />} />
+        <Route path="/ar/viewers/heic" element={<HEICViewer />} />
+        <Route path="/ar/viewers/heic/editor" element={<HEICViewer />} />
+        <Route path="/ar/viewers/heif" element={<HEICViewer />} />
+        <Route path="/ar/viewers/heif/editor" element={<HEICViewer />} />
 
         {/* Thai (TH) Viewer Routes */}
         <Route path="/th/viewers" element={<Viewers />} />
@@ -1545,6 +1597,10 @@ function App() {
         <Route path="/th/viewers/jpg/editor" element={<JPEGViewer />} />
         <Route path="/th/viewers/jpeg" element={<JPEGViewer />} />
         <Route path="/th/viewers/jpeg/editor" element={<JPEGViewer />} />
+        <Route path="/th/viewers/heic" element={<HEICViewer />} />
+        <Route path="/th/viewers/heic/editor" element={<HEICViewer />} />
+        <Route path="/th/viewers/heif" element={<HEICViewer />} />
+        <Route path="/th/viewers/heif/editor" element={<HEICViewer />} />
 
         {/* Japanese (JA) Viewer Routes */}
         <Route path="/ja/viewers" element={<Viewers />} />
@@ -1554,6 +1610,10 @@ function App() {
         <Route path="/ja/viewers/jpg/editor" element={<JPEGViewer />} />
         <Route path="/ja/viewers/jpeg" element={<JPEGViewer />} />
         <Route path="/ja/viewers/jpeg/editor" element={<JPEGViewer />} />
+        <Route path="/ja/viewers/heic" element={<HEICViewer />} />
+        <Route path="/ja/viewers/heic/editor" element={<HEICViewer />} />
+        <Route path="/ja/viewers/heif" element={<HEICViewer />} />
+        <Route path="/ja/viewers/heif/editor" element={<HEICViewer />} />
 
         {/* Chinese (ZH) Viewer Routes */}
         <Route path="/zh/viewers" element={<Viewers />} />
@@ -1563,6 +1623,10 @@ function App() {
         <Route path="/zh/viewers/jpg/editor" element={<JPEGViewer />} />
         <Route path="/zh/viewers/jpeg" element={<JPEGViewer />} />
         <Route path="/zh/viewers/jpeg/editor" element={<JPEGViewer />} />
+        <Route path="/zh/viewers/heic" element={<HEICViewer />} />
+        <Route path="/zh/viewers/heic/editor" element={<HEICViewer />} />
+        <Route path="/zh/viewers/heif" element={<HEICViewer />} />
+        <Route path="/zh/viewers/heif/editor" element={<HEICViewer />} />
 
         {/* Indonesian (ID) WebP Viewer Routes */}
         <Route path="/id/viewers/webp" element={<WebPViewer />} />

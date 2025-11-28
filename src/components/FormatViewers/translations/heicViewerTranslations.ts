@@ -737,6 +737,956 @@ const resources: Record<string, HEICViewerTranslations> = {
         }
       }
     }
+  },
+  pt: {
+    viewers: {
+      heic: {
+        meta_title: 'Visualizador HEIC gratuito - Ver imagens Apple HEIC/HEIF online',
+        meta_description: 'Visualize imagens HEIC/HEIF (High Efficiency Image Container) online gratuitamente. Visualizador de imagens Apple iOS com suporte HDR e compressão superior. Até 20 arquivos, 100MB total. Não é necessário registro.',
+        meta_keywords: 'visualizador HEIC, visualizador HEIF, visualizador de imagens Apple, visualizador de imagens iOS, visualizador de fotos iPhone, visualizador de imagens HDR, visualização em lote',
+        hero_title: 'Visualizador HEIC gratuito',
+        hero_subtitle: 'Visualize imagens Apple HEIC/HEIF com compressão de alta eficiência e suporte HDR',
+        upload_title: 'Enviar arquivos HEIC',
+        upload_description: 'Arraste e solte suas imagens Apple HEIC/HEIF ou clique para navegar. Suporta fotos iOS, Live Photos e imagens HDR até 100MB total.',
+        upload: {
+          drag_drop_text: 'Arraste e solte seus arquivos aqui',
+          click_browse_text: 'ou clique no botão abaixo para navegar',
+          choose_files_button: 'Escolher arquivos',
+          max_files_info: 'Máx. {maxFiles} arquivos • Até {maxSize} total'
+        },
+        buttons: {
+          view_files: 'Ver arquivos',
+          back: 'Voltar para todos os visualizadores'
+        },
+        quick_stats: {
+          high_quality: '✓ Alta qualidade',
+          smaller_size: '🎨 Tamanho menor',
+          fast_processing: '⚡ Processamento rápido'
+        },
+        features: [
+          { title: 'Compressão superior', description: 'Visualize imagens HEIC com arquivos 50% menores que JPEG mantendo maior qualidade de imagem' },
+          { title: 'Suporte HDR', description: 'Suporte completo para imagens HDR (High Dynamic Range) e ampla gama de cores de dispositivos iOS' },
+          { title: 'Live Photos', description: 'Suporte para Apple Live Photos e sequências de fotos em rajada no formato HEIC' }
+        ],
+        about_title: 'Sobre o formato HEIC',
+        about_intro: 'HEIC (High Efficiency Image Container) é um formato de imagem moderno desenvolvido pela Apple, baseado no padrão HEIF (High Efficiency Image Format). Fornece compressão superior em comparação com JPEG mantendo maior qualidade de imagem, tornando-o o formato padrão para fotos tiradas em dispositivos iOS desde o iOS 11.',
+        advantages_title: 'Vantagens principais',
+        advantages: [
+          '50% arquivos menores – Melhor compressão que JPEG',
+          'Qualidade de imagem superior – Maior qualidade em tamanhos menores',
+          'Suporte HDR – Captura de imagens High Dynamic Range',
+          'Ampla gama de cores – Suporte para espaços de cores estendidos',
+          'Live Photos – Movimento e som no formato de imagem',
+          'Metadados avançados – Armazenamento rico de dados EXIF e imagem'
+        ],
+        use_cases_title: 'Melhores casos de uso',
+        use_cases: [
+          'Fotografia iPhone/iPad – Formato padrão para fotos iOS',
+          'Armazenamento de alta qualidade – Fotografia profissional',
+          'Captura de imagens HDR – Fotografia High Dynamic Range',
+          'Live Photos – Fotos em movimento de dispositivos iOS',
+          'Arquivamento eficiente em espaço – Arquivos menores para armazenamento',
+          'Fotografia profissional – Formato de imagem de alta qualidade'
+        ],
+        specs_title: 'Especificações técnicas',
+        specs_header_label: 'Especificação',
+        specs_header_value: 'Detalhes',
+        specs: [
+          { label: 'Extensão de arquivo', value: '.heic, .heif' },
+          { label: 'Tipo MIME', value: 'image/heic, image/heif' },
+          { label: 'Tipo de formato', value: 'Formato contêiner baseado no padrão HEIF' },
+          { label: 'Compressão', value: 'Compressão baseada em HEVC (H.265)' },
+          { label: 'Profundidade de cor', value: '8, 10, 12, 16 bits por canal' },
+          { label: 'Resolução máxima', value: '8192 × 8192 pixels' },
+          { label: 'Transparência', value: 'Suporte ao canal alfa' },
+          { label: 'Suporte HDR', value: 'Suporte completo HDR e ampla gama de cores' }
+        ],
+        seo_title: 'Recursos do visualizador e conversor HEIC',
+        seo_intro: 'Nosso visualizador HEIC profissional fornece suporte abrangente para imagens Apple HEIC/HEIF, incluindo exibição HDR, tratamento de compressão superior e capacidades de visualização em lote. Seja você um usuário iPhone, fotógrafo ou criador de conteúdo, nossa plataforma oferece as ferramentas necessárias para o tratamento profissional de imagens HEIC.',
+        seo_viewing_title: 'Recursos de visualização avançados',
+        seo_viewing_text: 'Visualize imagens HEIC com suporte HDR completo, exibição de ampla gama de cores e informações detalhadas da imagem. Nosso visualizador suporta todas as variantes HEIC, incluindo HEIC padrão, HEIF e Live Photos, garantindo representação precisa de suas imagens de dispositivos Apple.',
+        seo_conversion_title: 'Ferramentas de conversão profissionais',
+        seo_conversion_text: 'Converta arquivos HEIC para JPEG, PNG, WebP e outros formatos mantendo qualidade ótima. Nosso mecanismo de conversão oferece preservação HDR, tratamento de espaços de cores e capacidades de processamento em lote para lidar com vários arquivos simultaneamente.',
+        seo_optimization_title: 'Otimização de qualidade',
+        seo_optimization_text: 'Otimize arquivos HEIC para uso moderno com nossas ferramentas inteligentes que podem converter para formatos web-friendly preservando qualidade visual. Perfeito para compartilhar fotos iOS online, converter para compatibilidade e reduzir tamanhos de arquivo para melhor desempenho.',
+        editor: {
+          toggle_sidebar: 'Alternar barra lateral',
+          close: 'Fechar (Esc)',
+          close_sidebar: 'Fechar barra lateral',
+          search_placeholder: 'Buscar arquivos...',
+          files_header: 'Arquivos',
+          add_files: '+ Adicionar',
+          format_badge: 'HEIC',
+          present: 'Apresentar',
+          exit_presentation: 'Sair',
+          start_presentation: 'Iniciar apresentação (Espaço/Setas para navegar)',
+          print_image: 'Imprimir imagem',
+          download_image: 'Baixar imagem',
+          previous: 'Anterior (←)',
+          next: 'Próximo (→)',
+          zoom_out: 'Diminuir zoom (-)',
+          zoom_in: 'Aumentar zoom (+)',
+          reset_zoom: 'Clique para redefinir zoom',
+          rotate: 'Girar (R)',
+          fullscreen: 'Tela cheia (F)'
+        }
+      }
+    }
+  },
+  vi: {
+    viewers: {
+      heic: {
+        meta_title: 'Trình xem HEIC miễn phí - Xem hình ảnh Apple HEIC/HEIF trực tuyến',
+        meta_description: 'Xem hình ảnh HEIC/HEIF (High Efficiency Image Container) trực tuyến miễn phí. Trình xem hình ảnh Apple iOS với hỗ trợ HDR và nén vượt trội. Tối đa 20 tệp, tổng 100MB. Không cần đăng ký.',
+        meta_keywords: 'trình xem HEIC, trình xem HEIF, trình xem hình ảnh Apple, trình xem hình ảnh iOS, trình xem ảnh iPhone, trình xem hình ảnh HDR, xem hàng loạt',
+        hero_title: 'Trình xem HEIC miễn phí',
+        hero_subtitle: 'Xem hình ảnh Apple HEIC/HEIF với nén hiệu quả cao và hỗ trợ HDR',
+        upload_title: 'Tải lên tệp HEIC',
+        upload_description: 'Kéo và thả hình ảnh Apple HEIC/HEIF của bạn hoặc nhấp để duyệt. Hỗ trợ ảnh iOS, Live Photos và hình ảnh HDR tối đa 100MB tổng.',
+        upload: {
+          drag_drop_text: 'Kéo và thả tệp của bạn vào đây',
+          click_browse_text: 'hoặc nhấp vào nút bên dưới để duyệt',
+          choose_files_button: 'Chọn tệp',
+          max_files_info: 'Tối đa {maxFiles} tệp • Tối đa {maxSize} tổng'
+        },
+        buttons: {
+          view_files: 'Xem tệp',
+          back: 'Quay lại tất cả trình xem'
+        },
+        quick_stats: {
+          high_quality: '✓ Chất lượng cao',
+          smaller_size: '🎨 Kích thước nhỏ hơn',
+          fast_processing: '⚡ Xử lý nhanh'
+        },
+        features: [
+          { title: 'Nén vượt trội', description: 'Xem hình ảnh HEIC với kích thước tệp nhỏ hơn 50% so với JPEG trong khi duy trì chất lượng hình ảnh cao hơn' },
+          { title: 'Hỗ trợ HDR', description: 'Hỗ trợ đầy đủ cho hình ảnh HDR (High Dynamic Range) và dải màu rộng từ thiết bị iOS' },
+          { title: 'Live Photos', description: 'Hỗ trợ Apple Live Photos và chuỗi ảnh chụp liên tiếp ở định dạng HEIC' }
+        ],
+        about_title: 'Về định dạng HEIC',
+        about_intro: 'HEIC (High Efficiency Image Container) là định dạng hình ảnh hiện đại được phát triển bởi Apple, dựa trên tiêu chuẩn HEIF (High Efficiency Image Format). Nó cung cấp nén vượt trội so với JPEG trong khi duy trì chất lượng hình ảnh cao hơn, làm cho nó trở thành định dạng mặc định cho ảnh chụp trên thiết bị iOS từ iOS 11.',
+        advantages_title: 'Ưu điểm chính',
+        advantages: [
+          'Kích thước tệp nhỏ hơn 50% – Nén tốt hơn JPEG',
+          'Chất lượng hình ảnh vượt trội – Chất lượng cao hơn ở kích thước nhỏ hơn',
+          'Hỗ trợ HDR – Chụp hình ảnh High Dynamic Range',
+          'Dải màu rộng – Hỗ trợ không gian màu mở rộng',
+          'Live Photos – Chuyển động và âm thanh trong định dạng hình ảnh',
+          'Siêu dữ liệu nâng cao – Lưu trữ dữ liệu EXIF và hình ảnh phong phú'
+        ],
+        use_cases_title: 'Trường hợp sử dụng tốt nhất',
+        use_cases: [
+          'Nhiếp ảnh iPhone/iPad – Định dạng mặc định cho ảnh iOS',
+          'Lưu trữ chất lượng cao – Nhiếp ảnh chuyên nghiệp',
+          'Chụp hình ảnh HDR – Nhiếp ảnh High Dynamic Range',
+          'Live Photos – Ảnh chuyển động từ thiết bị iOS',
+          'Lưu trữ tiết kiệm không gian – Tệp nhỏ hơn để lưu trữ',
+          'Nhiếp ảnh chuyên nghiệp – Định dạng hình ảnh chất lượng cao'
+        ],
+        specs_title: 'Thông số kỹ thuật',
+        specs_header_label: 'Thông số',
+        specs_header_value: 'Chi tiết',
+        specs: [
+          { label: 'Phần mở rộng tệp', value: '.heic, .heif' },
+          { label: 'Loại MIME', value: 'image/heic, image/heif' },
+          { label: 'Loại định dạng', value: 'Định dạng container dựa trên tiêu chuẩn HEIF' },
+          { label: 'Nén', value: 'Nén dựa trên HEVC (H.265)' },
+          { label: 'Độ sâu màu', value: '8, 10, 12, 16 bit mỗi kênh' },
+          { label: 'Độ phân giải tối đa', value: '8192 × 8192 pixel' },
+          { label: 'Độ trong suốt', value: 'Hỗ trợ kênh alpha' },
+          { label: 'Hỗ trợ HDR', value: 'Hỗ trợ HDR đầy đủ và dải màu rộng' }
+        ],
+        seo_title: 'Tính năng trình xem và chuyển đổi HEIC',
+        seo_intro: 'Trình xem HEIC chuyên nghiệp của chúng tôi cung cấp hỗ trợ toàn diện cho hình ảnh Apple HEIC/HEIF, bao gồm hiển thị HDR, xử lý nén vượt trội và khả năng xem trước hàng loạt. Cho dù bạn là người dùng iPhone, nhiếp ảnh gia hay người tạo nội dung, nền tảng của chúng tôi cung cấp các công cụ bạn cần để xử lý hình ảnh HEIC chuyên nghiệp.',
+        seo_viewing_title: 'Tính năng xem nâng cao',
+        seo_viewing_text: 'Xem hình ảnh HEIC với hỗ trợ HDR đầy đủ, hiển thị dải màu rộng và thông tin hình ảnh chi tiết. Trình xem của chúng tôi hỗ trợ tất cả các biến thể HEIC, bao gồm HEIC tiêu chuẩn, HEIF và Live Photos, đảm bảo biểu diễn chính xác hình ảnh thiết bị Apple của bạn.',
+        seo_conversion_title: 'Công cụ chuyển đổi chuyên nghiệp',
+        seo_conversion_text: 'Chuyển đổi tệp HEIC sang JPEG, PNG, WebP và các định dạng khác trong khi duy trì chất lượng tối ưu. Công cụ chuyển đổi của chúng tôi cung cấp bảo toàn HDR, xử lý không gian màu và khả năng xử lý hàng loạt để xử lý nhiều tệp đồng thời.',
+        seo_optimization_title: 'Tối ưu hóa chất lượng',
+        seo_optimization_text: 'Tối ưu hóa tệp HEIC cho sử dụng hiện đại với các công cụ thông minh của chúng tôi có thể chuyển đổi sang định dạng web-friendly trong khi bảo toàn chất lượng hình ảnh. Hoàn hảo để chia sẻ ảnh iOS trực tuyến, chuyển đổi để tương thích và giảm kích thước tệp để hiệu suất tốt hơn.',
+        editor: {
+          toggle_sidebar: 'Chuyển thanh bên',
+          close: 'Đóng (Esc)',
+          close_sidebar: 'Đóng thanh bên',
+          search_placeholder: 'Tìm tệp...',
+          files_header: 'Tệp',
+          add_files: '+ Thêm',
+          format_badge: 'HEIC',
+          present: 'Trình bày',
+          exit_presentation: 'Thoát',
+          start_presentation: 'Bắt đầu trình bày (Phím cách/Mũi tên để điều hướng)',
+          print_image: 'In hình ảnh',
+          download_image: 'Tải xuống hình ảnh',
+          previous: 'Trước (←)',
+          next: 'Tiếp (→)',
+          zoom_out: 'Thu nhỏ (-)',
+          zoom_in: 'Phóng to (+)',
+          reset_zoom: 'Nhấp để đặt lại thu phóng',
+          rotate: 'Xoay (R)',
+          fullscreen: 'Toàn màn hình (F)'
+        }
+      }
+    }
+  },
+  tr: {
+    viewers: {
+      heic: {
+        meta_title: 'Ücretsiz HEIC görüntüleyici - Apple HEIC/HEIF görüntülerini çevrimiçi görüntüle',
+        meta_description: 'HEIC/HEIF (High Efficiency Image Container) görüntülerini çevrimiçi ücretsiz görüntüleyin. HDR desteği ve üstün sıkıştırma ile Apple iOS görüntü görüntüleyici. En fazla 20 dosya, toplam 100MB. Kayıt gerekmez.',
+        meta_keywords: 'HEIC görüntüleyici, HEIF görüntüleyici, Apple görüntü görüntüleyici, iOS görüntü görüntüleyici, iPhone foto görüntüleyici, HDR görüntü görüntüleyici, toplu görüntüleme',
+        hero_title: 'Ücretsiz HEIC görüntüleyici',
+        hero_subtitle: 'Yüksek verimli sıkıştırma ve HDR desteği ile Apple HEIC/HEIF görüntülerini görüntüleyin',
+        upload_title: 'HEIC dosyalarını yükle',
+        upload_description: 'Apple HEIC/HEIF görüntülerinizi sürükleyip bırakın veya göz atmak için tıklayın. iOS fotoğrafları, Live Photos ve HDR görüntülerini toplam 100MB\'a kadar destekler.',
+        upload: {
+          drag_drop_text: 'Dosyalarınızı buraya sürükleyip bırakın',
+          click_browse_text: 'veya göz atmak için aşağıdaki düğmeye tıklayın',
+          choose_files_button: 'Dosya seç',
+          max_files_info: 'Maks. {maxFiles} dosya • Toplam {maxSize} kadar'
+        },
+        buttons: {
+          view_files: 'Dosyaları görüntüle',
+          back: 'Tüm görüntüleyicilere dön'
+        },
+        quick_stats: {
+          high_quality: '✓ Yüksek kalite',
+          smaller_size: '🎨 Daha küçük boyut',
+          fast_processing: '⚡ Hızlı işleme'
+        },
+        features: [
+          { title: 'Üstün sıkıştırma', description: 'Daha yüksek görüntü kalitesi korurken JPEG\'den %50 daha küçük dosya boyutlarıyla HEIC görüntülerini görüntüleyin' },
+          { title: 'HDR desteği', description: 'iOS cihazlarından HDR (High Dynamic Range) görüntüleri ve geniş renk gamı için tam destek' },
+          { title: 'Live Photos', description: 'HEIC formatında Apple Live Photos ve patlama çekim dizileri desteği' }
+        ],
+        about_title: 'HEIC formatı hakkında',
+        about_intro: 'HEIC (High Efficiency Image Container), HEIF (High Efficiency Image Format) standardına dayalı Apple tarafından geliştirilmiş modern bir görüntü formatıdır. Daha yüksek görüntü kalitesi korurken JPEG\'e kıyasla üstün sıkıştırma sağlar ve iOS 11\'den beri iOS cihazlarında çekilen fotoğraflar için varsayılan format haline gelir.',
+        advantages_title: 'Ana avantajlar',
+        advantages: [
+          '%50 daha küçük dosya boyutları – JPEG\'den daha iyi sıkıştırma',
+          'Üstün görüntü kalitesi – Daha küçük boyutlarda daha yüksek kalite',
+          'HDR desteği – High Dynamic Range görüntü yakalama',
+          'Geniş renk gamı – Genişletilmiş renk alanları desteği',
+          'Live Photos – Görüntü formatında hareket ve ses',
+          'Gelişmiş meta veriler – Zengin EXIF ve görüntü verisi depolama'
+        ],
+        use_cases_title: 'En iyi kullanım durumları',
+        use_cases: [
+          'iPhone/iPad fotoğrafçılığı – iOS fotoğrafları için varsayılan format',
+          'Yüksek kaliteli görüntü depolama – Profesyonel fotoğrafçılık',
+          'HDR görüntü yakalama – High Dynamic Range fotoğrafçılık',
+          'Live Photos – iOS cihazlarından hareketli fotoğraflar',
+          'Alan verimli arşivleme – Depolama için daha küçük dosyalar',
+          'Profesyonel fotoğrafçılık – Yüksek kaliteli görüntü formatı'
+        ],
+        specs_title: 'Teknik özellikler',
+        specs_header_label: 'Özellik',
+        specs_header_value: 'Detaylar',
+        specs: [
+          { label: 'Dosya uzantısı', value: '.heic, .heif' },
+          { label: 'MIME türü', value: 'image/heic, image/heif' },
+          { label: 'Format türü', value: 'HEIF standardına dayalı konteyner formatı' },
+          { label: 'Sıkıştırma', value: 'HEVC (H.265) tabanlı sıkıştırma' },
+          { label: 'Renk derinliği', value: 'Kanal başına 8, 10, 12, 16 bit' },
+          { label: 'Maksimum çözünürlük', value: '8192 × 8192 piksel' },
+          { label: 'Şeffaflık', value: 'Alfa kanal desteği' },
+          { label: 'HDR desteği', value: 'Tam HDR ve geniş renk gamı desteği' }
+        ],
+        seo_title: 'HEIC görüntüleyici ve dönüştürücü özellikleri',
+        seo_intro: 'Profesyonel HEIC görüntüleyicimiz, HDR görüntüleme, üstün sıkıştırma işleme ve toplu önizleme yetenekleri dahil olmak üzere Apple HEIC/HEIF görüntüleri için kapsamlı destek sağlar. İster iPhone kullanıcısı, fotoğrafçı veya içerik oluşturucu olun, platformumuz profesyonel HEIC görüntü işleme için ihtiyacınız olan araçları sunar.',
+        seo_viewing_title: 'Gelişmiş görüntüleme özellikleri',
+        seo_viewing_text: 'Tam HDR desteği, geniş renk gamı görüntüleme ve detaylı görüntü bilgileriyle HEIC görüntülerini görüntüleyin. Görüntüleyicimiz standart HEIC, HEIF ve Live Photos dahil olmak üzere tüm HEIC varyantlarını destekler ve Apple cihaz görüntülerinizin doğru temsilini sağlar.',
+        seo_conversion_title: 'Profesyonel dönüştürme araçları',
+        seo_conversion_text: 'Optimal kaliteyi korurken HEIC dosyalarını JPEG, PNG, WebP ve diğer formatlara dönüştürün. Dönüştürme motorumuz, birden fazla dosyayı aynı anda işlemek için HDR koruma, renk alanı işleme ve toplu işleme yetenekleri sunar.',
+        seo_optimization_title: 'Kalite optimizasyonu',
+        seo_optimization_text: 'Görsel kaliteyi korurken web dostu formatlara dönüştürebilen akıllı araçlarımızla HEIC dosyalarını modern kullanım için optimize edin. iOS fotoğraflarını çevrimiçi paylaşmak, uyumluluk için dönüştürmek ve daha iyi performans için dosya boyutlarını azaltmak için mükemmeldir.',
+        editor: {
+          toggle_sidebar: 'Kenar çubuğunu aç/kapat',
+          close: 'Kapat (Esc)',
+          close_sidebar: 'Kenar çubuğunu kapat',
+          search_placeholder: 'Dosyaları ara...',
+          files_header: 'Dosyalar',
+          add_files: '+ Ekle',
+          format_badge: 'HEIC',
+          present: 'Sun',
+          exit_presentation: 'Çık',
+          start_presentation: 'Sunumu başlat (Gezinmek için Boşluk/Ok tuşları)',
+          print_image: 'Görüntüyü yazdır',
+          download_image: 'Görüntüyü indir',
+          previous: 'Önceki (←)',
+          next: 'Sonraki (→)',
+          zoom_out: 'Uzaklaştır (-)',
+          zoom_in: 'Yakınlaştır (+)',
+          reset_zoom: 'Yakınlaştırmayı sıfırlamak için tıklayın',
+          rotate: 'Döndür (R)',
+          fullscreen: 'Tam ekran (F)'
+        }
+      }
+    }
+  },
+  ru: {
+    viewers: {
+      heic: {
+        meta_title: 'Бесплатный просмотрщик HEIC - Просмотр изображений Apple HEIC/HEIF онлайн',
+        meta_description: 'Просматривайте изображения HEIC/HEIF (High Efficiency Image Container) онлайн бесплатно. Просмотрщик изображений Apple iOS с поддержкой HDR и превосходным сжатием. До 20 файлов, всего 100MB. Регистрация не требуется.',
+        meta_keywords: 'просмотрщик HEIC, просмотрщик HEIF, просмотрщик изображений Apple, просмотрщик изображений iOS, просмотрщик фотографий iPhone, просмотрщик изображений HDR, пакетный просмотр',
+        hero_title: 'Бесплатный просмотрщик HEIC',
+        hero_subtitle: 'Просматривайте изображения Apple HEIC/HEIF с высокоэффективным сжатием и поддержкой HDR',
+        upload_title: 'Загрузить файлы HEIC',
+        upload_description: 'Перетащите изображения Apple HEIC/HEIF или нажмите для просмотра. Поддерживает фотографии iOS, Live Photos и изображения HDR до 100MB всего.',
+        upload: {
+          drag_drop_text: 'Перетащите файлы сюда',
+          click_browse_text: 'или нажмите кнопку ниже для просмотра',
+          choose_files_button: 'Выбрать файлы',
+          max_files_info: 'Макс. {maxFiles} файлов • До {maxSize} всего'
+        },
+        buttons: {
+          view_files: 'Просмотреть файлы',
+          back: 'Вернуться ко всем просмотрщикам'
+        },
+        quick_stats: {
+          high_quality: '✓ Высокое качество',
+          smaller_size: '🎨 Меньший размер',
+          fast_processing: '⚡ Быстрая обработка'
+        },
+        features: [
+          { title: 'Превосходное сжатие', description: 'Просматривайте изображения HEIC с файлами на 50% меньше, чем JPEG, сохраняя более высокое качество изображения' },
+          { title: 'Поддержка HDR', description: 'Полная поддержка изображений HDR (High Dynamic Range) и широкого цветового охвата с устройств iOS' },
+          { title: 'Live Photos', description: 'Поддержка Apple Live Photos и последовательностей серийной съемки в формате HEIC' }
+        ],
+        about_title: 'О формате HEIC',
+        about_intro: 'HEIC (High Efficiency Image Container) - это современный формат изображения, разработанный Apple, основанный на стандарте HEIF (High Efficiency Image Format). Он обеспечивает превосходное сжатие по сравнению с JPEG, сохраняя более высокое качество изображения, что делает его форматом по умолчанию для фотографий, сделанных на устройствах iOS с iOS 11.',
+        advantages_title: 'Ключевые преимущества',
+        advantages: [
+          'На 50% меньшие файлы – Лучшее сжатие, чем JPEG',
+          'Превосходное качество изображения – Более высокое качество при меньших размерах',
+          'Поддержка HDR – Захват изображений High Dynamic Range',
+          'Широкий цветовой охват – Поддержка расширенных цветовых пространств',
+          'Live Photos – Движение и звук в формате изображения',
+          'Расширенные метаданные – Богатое хранение данных EXIF и изображения'
+        ],
+        use_cases_title: 'Лучшие случаи использования',
+        use_cases: [
+          'Фотография iPhone/iPad – Формат по умолчанию для фотографий iOS',
+          'Хранение высокого качества – Профессиональная фотография',
+          'Захват изображений HDR – Фотография High Dynamic Range',
+          'Live Photos – Анимированные фотографии с устройств iOS',
+          'Эффективное архивирование – Меньшие файлы для хранения',
+          'Профессиональная фотография – Формат изображения высокого качества'
+        ],
+        specs_title: 'Технические характеристики',
+        specs_header_label: 'Характеристика',
+        specs_header_value: 'Детали',
+        specs: [
+          { label: 'Расширение файла', value: '.heic, .heif' },
+          { label: 'Тип MIME', value: 'image/heic, image/heif' },
+          { label: 'Тип формата', value: 'Формат контейнера на основе стандарта HEIF' },
+          { label: 'Сжатие', value: 'Сжатие на основе HEVC (H.265)' },
+          { label: 'Глубина цвета', value: '8, 10, 12, 16 бит на канал' },
+          { label: 'Максимальное разрешение', value: '8192 × 8192 пикселей' },
+          { label: 'Прозрачность', value: 'Поддержка альфа-канала' },
+          { label: 'Поддержка HDR', value: 'Полная поддержка HDR и широкого цветового охвата' }
+        ],
+        seo_title: 'Функции просмотрщика и конвертера HEIC',
+        seo_intro: 'Наш профессиональный просмотрщик HEIC обеспечивает комплексную поддержку изображений Apple HEIC/HEIF, включая отображение HDR, обработку превосходного сжатия и возможности пакетного предпросмотра. Будь вы пользователь iPhone, фотограф или создатель контента, наша платформа предлагает инструменты, необходимые для профессиональной обработки изображений HEIC.',
+        seo_viewing_title: 'Расширенные функции просмотра',
+        seo_viewing_text: 'Просматривайте изображения HEIC с полной поддержкой HDR, отображением широкого цветового охвата и подробной информацией об изображении. Наш просмотрщик поддерживает все варианты HEIC, включая стандартный HEIC, HEIF и Live Photos, обеспечивая точное представление ваших изображений устройств Apple.',
+        seo_conversion_title: 'Профессиональные инструменты конвертации',
+        seo_conversion_text: 'Конвертируйте файлы HEIC в JPEG, PNG, WebP и другие форматы, сохраняя оптимальное качество. Наш движок конвертации предлагает сохранение HDR, обработку цветовых пространств и возможности пакетной обработки для одновременной обработки нескольких файлов.',
+        seo_optimization_title: 'Оптимизация качества',
+        seo_optimization_text: 'Оптимизируйте файлы HEIC для современного использования с помощью наших интеллектуальных инструментов, которые могут конвертировать в веб-дружественные форматы, сохраняя визуальное качество. Идеально подходит для обмена фотографиями iOS в интернете, конвертации для совместимости и уменьшения размеров файлов для лучшей производительности.',
+        editor: {
+          toggle_sidebar: 'Переключить боковую панель',
+          close: 'Закрыть (Esc)',
+          close_sidebar: 'Закрыть боковую панель',
+          search_placeholder: 'Поиск файлов...',
+          files_header: 'Файлы',
+          add_files: '+ Добавить',
+          format_badge: 'HEIC',
+          present: 'Презентовать',
+          exit_presentation: 'Выход',
+          start_presentation: 'Начать презентацию (Пробел/Стрелки для навигации)',
+          print_image: 'Печать изображения',
+          download_image: 'Скачать изображение',
+          previous: 'Предыдущий (←)',
+          next: 'Следующий (→)',
+          zoom_out: 'Уменьшить (-)',
+          zoom_in: 'Увеличить (+)',
+          reset_zoom: 'Нажмите, чтобы сбросить масштаб',
+          rotate: 'Повернуть (R)',
+          fullscreen: 'Полноэкранный режим (F)'
+        }
+      }
+    }
+  },
+  ar: {
+    viewers: {
+      heic: {
+        meta_title: 'عارض HEIC مجاني - عرض صور Apple HEIC/HEIF عبر الإنترنت',
+        meta_description: 'اعرض صور HEIC/HEIF (High Efficiency Image Container) عبر الإنترنت مجانًا. عارض صور Apple iOS مع دعم HDR وضغط متفوق. حتى 20 ملفًا، 100MB إجمالي. لا يلزم التسجيل.',
+        meta_keywords: 'عارض HEIC، عارض HEIF، عارض صور Apple، عارض صور iOS، عارض صور iPhone، عارض صور HDR، عرض مجمع',
+        hero_title: 'عارض HEIC مجاني',
+        hero_subtitle: 'اعرض صور Apple HEIC/HEIF مع ضغط عالي الكفاءة ودعم HDR',
+        upload_title: 'رفع ملفات HEIC',
+        upload_description: 'اسحب وأفلت صور Apple HEIC/HEIF أو انقر للتصفح. يدعم صور iOS وLive Photos وصور HDR حتى 100MB إجمالي.',
+        upload: {
+          drag_drop_text: 'اسحب وأفلت ملفاتك هنا',
+          click_browse_text: 'أو انقر على الزر أدناه للتصفح',
+          choose_files_button: 'اختر الملفات',
+          max_files_info: 'الحد الأقصى {maxFiles} ملف • حتى {maxSize} إجمالي'
+        },
+        buttons: {
+          view_files: 'عرض الملفات',
+          back: 'العودة إلى جميع العارضات'
+        },
+        quick_stats: {
+          high_quality: '✓ جودة عالية',
+          smaller_size: '🎨 حجم أصغر',
+          fast_processing: '⚡ معالجة سريعة'
+        },
+        features: [
+          { title: 'ضغط متفوق', description: 'اعرض صور HEIC بملفات أصغر بنسبة 50% من JPEG مع الحفاظ على جودة صورة أعلى' },
+          { title: 'دعم HDR', description: 'دعم كامل لصور HDR (High Dynamic Range) ونطاق ألوان واسع من أجهزة iOS' },
+          { title: 'Live Photos', description: 'دعم Apple Live Photos وتسلسلات الصور المتتالية بتنسيق HEIC' }
+        ],
+        about_title: 'حول تنسيق HEIC',
+        about_intro: 'HEIC (High Efficiency Image Container) هو تنسيق صورة حديث طورته Apple، يعتمد على معيار HEIF (High Efficiency Image Format). يوفر ضغطًا متفوقًا مقارنة بـ JPEG مع الحفاظ على جودة صورة أعلى، مما يجعله التنسيق الافتراضي للصور الملتقطة على أجهزة iOS منذ iOS 11.',
+        advantages_title: 'المزايا الرئيسية',
+        advantages: [
+          'ملفات أصغر بنسبة 50% – ضغط أفضل من JPEG',
+          'جودة صورة متفوقة – جودة أعلى بأحجام أصغر',
+          'دعم HDR – التقاط صور High Dynamic Range',
+          'نطاق ألوان واسع – دعم مساحات ألوان موسعة',
+          'Live Photos – الحركة والصوت بتنسيق الصورة',
+          'بيانات وصفية متقدمة – تخزين غني لبيانات EXIF والصورة'
+        ],
+        use_cases_title: 'أفضل حالات الاستخدام',
+        use_cases: [
+          'تصوير iPhone/iPad – التنسيق الافتراضي لصور iOS',
+          'تخزين عالي الجودة – التصوير الفوتوغرافي الاحترافي',
+          'التقاط صور HDR – التصوير الفوتوغرافي High Dynamic Range',
+          'Live Photos – صور متحركة من أجهزة iOS',
+          'أرشفة فعالة للمساحة – ملفات أصغر للتخزين',
+          'التصوير الفوتوغرافي الاحترافي – تنسيق صورة عالي الجودة'
+        ],
+        specs_title: 'المواصفات التقنية',
+        specs_header_label: 'المواصفة',
+        specs_header_value: 'التفاصيل',
+        specs: [
+          { label: 'امتداد الملف', value: '.heic, .heif' },
+          { label: 'نوع MIME', value: 'image/heic, image/heif' },
+          { label: 'نوع التنسيق', value: 'تنسيق حاوية يعتمد على معيار HEIF' },
+          { label: 'الضغط', value: 'ضغط يعتمد على HEVC (H.265)' },
+          { label: 'عمق اللون', value: '8، 10، 12، 16 بت لكل قناة' },
+          { label: 'الحد الأقصى للدقة', value: '8192 × 8192 بكسل' },
+          { label: 'الشفافية', value: 'دعم قناة ألفا' },
+          { label: 'دعم HDR', value: 'دعم كامل لـ HDR ونطاق ألوان واسع' }
+        ],
+        seo_title: 'ميزات عارض ومحول HEIC',
+        seo_intro: 'يوفر عارض HEIC الاحترافي لدينا دعمًا شاملاً لصور Apple HEIC/HEIF، بما في ذلك عرض HDR ومعالجة ضغط متفوقة وإمكانيات معاينة مجمعة. سواء كنت مستخدم iPhone أو مصورًا أو منشئ محتوى، تقدم منصتنا الأدوات التي تحتاجها لمعالجة صور HEIC الاحترافية.',
+        seo_viewing_title: 'ميزات عرض متقدمة',
+        seo_viewing_text: 'اعرض صور HEIC مع دعم HDR الكامل وعرض نطاق ألوان واسع ومعلومات صورة مفصلة. يدعم عارضنا جميع متغيرات HEIC، بما في ذلك HEIC القياسي وHEIF وLive Photos، مما يضمن تمثيلًا دقيقًا لصور أجهزة Apple الخاصة بك.',
+        seo_conversion_title: 'أدوات تحويل احترافية',
+        seo_conversion_text: 'حول ملفات HEIC إلى JPEG وPNG وWebP وتنسيقات أخرى مع الحفاظ على جودة مثلى. يوفر محرك التحويل لدينا الحفاظ على HDR ومعالجة مساحة الألوان وإمكانيات المعالجة المجمعة للتعامل مع ملفات متعددة في وقت واحد.',
+        seo_optimization_title: 'تحسين الجودة',
+        seo_optimization_text: 'حسّن ملفات HEIC للاستخدام الحديث باستخدام أدواتنا الذكية التي يمكنها التحويل إلى تنسيقات مناسبة للويب مع الحفاظ على الجودة البصرية. مثالي لمشاركة صور iOS عبر الإنترنت والتحويل للتوافق وتقليل أحجام الملفات لأداء أفضل.',
+        editor: {
+          toggle_sidebar: 'تبديل الشريط الجانبي',
+          close: 'إغلاق (Esc)',
+          close_sidebar: 'إغلاق الشريط الجانبي',
+          search_placeholder: 'البحث عن الملفات...',
+          files_header: 'الملفات',
+          add_files: '+ إضافة',
+          format_badge: 'HEIC',
+          present: 'عرض',
+          exit_presentation: 'خروج',
+          start_presentation: 'بدء العرض (المسافة/الأسهم للتنقل)',
+          print_image: 'طباعة الصورة',
+          download_image: 'تنزيل الصورة',
+          previous: 'السابق (←)',
+          next: 'التالي (→)',
+          zoom_out: 'تصغير (-)',
+          zoom_in: 'تكبير (+)',
+          reset_zoom: 'انقر لإعادة تعيين التكبير',
+          rotate: 'تدوير (R)',
+          fullscreen: 'ملء الشاشة (F)'
+        }
+      }
+    }
+  },
+  th: {
+    viewers: {
+      heic: {
+        meta_title: 'โปรแกรมดู HEIC ฟรี - ดูรูปภาพ Apple HEIC/HEIF ออนไลน์',
+        meta_description: 'ดูรูปภาพ HEIC/HEIF (High Efficiency Image Container) ออนไลน์ฟรี โปรแกรมดูรูปภาพ Apple iOS พร้อมรองรับ HDR และการบีบอัดที่เหนือกว่า สูงสุด 20 ไฟล์ รวม 100MB ไม่ต้องลงทะเบียน',
+        meta_keywords: 'โปรแกรมดู HEIC, โปรแกรมดู HEIF, โปรแกรมดูรูปภาพ Apple, โปรแกรมดูรูปภาพ iOS, โปรแกรมดูรูปภาพ iPhone, โปรแกรมดูรูปภาพ HDR, การดูแบบกลุ่ม',
+        hero_title: 'โปรแกรมดู HEIC ฟรี',
+        hero_subtitle: 'ดูรูปภาพ Apple HEIC/HEIF ด้วยการบีบอัดประสิทธิภาพสูงและการรองรับ HDR',
+        upload_title: 'อัปโหลดไฟล์ HEIC',
+        upload_description: 'ลากและวางรูปภาพ Apple HEIC/HEIF ของคุณหรือคลิกเพื่อเรียกดู รองรับรูปภาพ iOS, Live Photos และรูปภาพ HDR สูงสุด 100MB รวม',
+        upload: {
+          drag_drop_text: 'ลากและวางไฟล์ของคุณที่นี่',
+          click_browse_text: 'หรือคลิกปุ่มด้านล่างเพื่อเรียกดู',
+          choose_files_button: 'เลือกไฟล์',
+          max_files_info: 'สูงสุด {maxFiles} ไฟล์ • สูงสุด {maxSize} รวม'
+        },
+        buttons: {
+          view_files: 'ดูไฟล์',
+          back: 'กลับไปยังโปรแกรมดูทั้งหมด'
+        },
+        quick_stats: {
+          high_quality: '✓ คุณภาพสูง',
+          smaller_size: '🎨 ขนาดเล็กกว่า',
+          fast_processing: '⚡ ประมวลผลเร็ว'
+        },
+        features: [
+          { title: 'การบีบอัดที่เหนือกว่า', description: 'ดูรูปภาพ HEIC ด้วยไฟล์ที่เล็กกว่า JPEG 50% ในขณะที่รักษาคุณภาพรูปภาพที่สูงกว่า' },
+          { title: 'รองรับ HDR', description: 'รองรับเต็มรูปแบบสำหรับรูปภาพ HDR (High Dynamic Range) และช่วงสีกว้างจากอุปกรณ์ iOS' },
+          { title: 'Live Photos', description: 'รองรับ Apple Live Photos และลำดับการถ่ายภาพต่อเนื่องในรูปแบบ HEIC' }
+        ],
+        about_title: 'เกี่ยวกับรูปแบบ HEIC',
+        about_intro: 'HEIC (High Efficiency Image Container) เป็นรูปแบบรูปภาพสมัยใหม่ที่พัฒนาโดย Apple โดยอิงตามมาตรฐาน HEIF (High Efficiency Image Format) ให้การบีบอัดที่เหนือกว่าเมื่อเทียบกับ JPEG ในขณะที่รักษาคุณภาพรูปภาพที่สูงกว่า ทำให้เป็นรูปแบบเริ่มต้นสำหรับรูปภาพที่ถ่ายบนอุปกรณ์ iOS ตั้งแต่ iOS 11',
+        advantages_title: 'ข้อดีหลัก',
+        advantages: [
+          'ไฟล์เล็กลง 50% – การบีบอัดดีกว่า JPEG',
+          'คุณภาพรูปภาพที่เหนือกว่า – คุณภาพสูงกว่าที่ขนาดเล็กลง',
+          'รองรับ HDR – การจับภาพ High Dynamic Range',
+          'ช่วงสีกว้าง – รองรับพื้นที่สีขยาย',
+          'Live Photos – การเคลื่อนไหวและเสียงในรูปแบบรูปภาพ',
+          'ข้อมูลเมตาดาต้าขั้นสูง – การจัดเก็บข้อมูล EXIF และรูปภาพที่อุดมสมบูรณ์'
+        ],
+        use_cases_title: 'กรณีการใช้งานที่ดีที่สุด',
+        use_cases: [
+          'การถ่ายภาพ iPhone/iPad – รูปแบบเริ่มต้นสำหรับรูปภาพ iOS',
+          'การจัดเก็บคุณภาพสูง – การถ่ายภาพมืออาชีพ',
+          'การจับภาพ HDR – การถ่ายภาพ High Dynamic Range',
+          'Live Photos – รูปภาพเคลื่อนไหวจากอุปกรณ์ iOS',
+          'การเก็บถาวรประหยัดพื้นที่ – ไฟล์เล็กลงสำหรับการจัดเก็บ',
+          'การถ่ายภาพมืออาชีพ – รูปแบบรูปภาพคุณภาพสูง'
+        ],
+        specs_title: 'ข้อมูลจำเพาะทางเทคนิค',
+        specs_header_label: 'ข้อมูลจำเพาะ',
+        specs_header_value: 'รายละเอียด',
+        specs: [
+          { label: 'นามสกุลไฟล์', value: '.heic, .heif' },
+          { label: 'ประเภท MIME', value: 'image/heic, image/heif' },
+          { label: 'ประเภทรูปแบบ', value: 'รูปแบบคอนเทนเนอร์ตามมาตรฐาน HEIF' },
+          { label: 'การบีบอัด', value: 'การบีบอัดตาม HEVC (H.265)' },
+          { label: 'ความลึกสี', value: '8, 10, 12, 16 บิตต่อช่อง' },
+          { label: 'ความละเอียดสูงสุด', value: '8192 × 8192 พิกเซล' },
+          { label: 'ความโปร่งใส', value: 'รองรับช่องอัลฟา' },
+          { label: 'รองรับ HDR', value: 'รองรับ HDR และช่วงสีกว้างเต็มรูปแบบ' }
+        ],
+        seo_title: 'คุณสมบัติโปรแกรมดูและแปลง HEIC',
+        seo_intro: 'โปรแกรมดู HEIC มืออาชีพของเรามีการรองรับที่ครอบคลุมสำหรับรูปภาพ Apple HEIC/HEIF รวมถึงการแสดงผล HDR การจัดการการบีบอัดที่เหนือกว่า และความสามารถในการแสดงตัวอย่างแบบกลุ่ม ไม่ว่าคุณจะเป็นผู้ใช้ iPhone ช่างภาพ หรือผู้สร้างเนื้อหา แพลตฟอร์มของเรามีเครื่องมือที่คุณต้องการสำหรับการจัดการรูปภาพ HEIC มืออาชีพ',
+        seo_viewing_title: 'คุณสมบัติการดูขั้นสูง',
+        seo_viewing_text: 'ดูรูปภาพ HEIC ด้วยการรองรับ HDR เต็มรูปแบบ การแสดงผลช่วงสีกว้าง และข้อมูลรูปภาพโดยละเอียด โปรแกรมดูของเรารองรับรูปแบบ HEIC ทั้งหมด รวมถึง HEIC มาตรฐาน, HEIF และ Live Photos เพื่อให้แน่ใจว่าการแสดงผลที่ถูกต้องของรูปภาพอุปกรณ์ Apple ของคุณ',
+        seo_conversion_title: 'เครื่องมือแปลงมืออาชีพ',
+        seo_conversion_text: 'แปลงไฟล์ HEIC เป็น JPEG, PNG, WebP และรูปแบบอื่น ๆ ในขณะที่รักษาคุณภาพที่เหมาะสม เครื่องมือแปลงของเรามีการรักษา HDR การจัดการพื้นที่สี และความสามารถในการประมวลผลแบบกลุ่มสำหรับการจัดการไฟล์หลายไฟล์พร้อมกัน',
+        seo_optimization_title: 'การปรับปรุงคุณภาพ',
+        seo_optimization_text: 'ปรับปรุงไฟล์ HEIC สำหรับการใช้งานสมัยใหม่ด้วยเครื่องมืออัจฉริยะของเราที่สามารถแปลงเป็นรูปแบบที่เหมาะกับเว็บในขณะที่รักษาคุณภาพภาพ เหมาะสำหรับการแชร์รูปภาพ iOS ออนไลน์ การแปลงเพื่อความเข้ากันได้ และการลดขนาดไฟล์เพื่อประสิทธิภาพที่ดีขึ้น',
+        editor: {
+          toggle_sidebar: 'สลับแถบด้านข้าง',
+          close: 'ปิด (Esc)',
+          close_sidebar: 'ปิดแถบด้านข้าง',
+          search_placeholder: 'ค้นหาไฟล์...',
+          files_header: 'ไฟล์',
+          add_files: '+ เพิ่ม',
+          format_badge: 'HEIC',
+          present: 'นำเสนอ',
+          exit_presentation: 'ออก',
+          start_presentation: 'เริ่มการนำเสนอ (Space/ลูกศรเพื่อนำทาง)',
+          print_image: 'พิมพ์รูปภาพ',
+          download_image: 'ดาวน์โหลดรูปภาพ',
+          previous: 'ก่อนหน้า (←)',
+          next: 'ถัดไป (→)',
+          zoom_out: 'ซูมออก (-)',
+          zoom_in: 'ซูมเข้า (+)',
+          reset_zoom: 'คลิกเพื่อรีเซ็ตการซูม',
+          rotate: 'หมุน (R)',
+          fullscreen: 'เต็มหน้าจอ (F)'
+        }
+      }
+    }
+  },
+  ja: {
+    viewers: {
+      heic: {
+        meta_title: '無料HEICビューア - Apple HEIC/HEIF画像をオンラインで表示',
+        meta_description: 'HEIC/HEIF（High Efficiency Image Container）画像をオンラインで無料表示。HDRサポートと優れた圧縮を備えたApple iOS画像ビューア。最大20ファイル、合計100MB。登録不要。',
+        meta_keywords: 'HEICビューア、HEIFビューア、Apple画像ビューア、iOS画像ビューア、iPhone写真ビューア、HDR画像ビューア、一括表示',
+        hero_title: '無料HEICビューア',
+        hero_subtitle: '高効率圧縮とHDRサポートでApple HEIC/HEIF画像を表示',
+        upload_title: 'HEICファイルをアップロード',
+        upload_description: 'Apple HEIC/HEIF画像をドラッグ＆ドロップするか、クリックして参照。iOS写真、Live Photos、HDR画像を最大100MBまでサポート。',
+        upload: {
+          drag_drop_text: 'ファイルをここにドラッグ＆ドロップ',
+          click_browse_text: 'または下のボタンをクリックして参照',
+          choose_files_button: 'ファイルを選択',
+          max_files_info: '最大{maxFiles}ファイル • 合計{maxSize}まで'
+        },
+        buttons: {
+          view_files: 'ファイルを表示',
+          back: 'すべてのビューアに戻る'
+        },
+        quick_stats: {
+          high_quality: '✓ 高品質',
+          smaller_size: '🎨 小さなサイズ',
+          fast_processing: '⚡ 高速処理'
+        },
+        features: [
+          { title: '優れた圧縮', description: 'より高い画質を維持しながら、JPEGより50%小さいファイルサイズでHEIC画像を表示' },
+          { title: 'HDRサポート', description: 'iOSデバイスからのHDR（High Dynamic Range）画像と広色域の完全サポート' },
+          { title: 'Live Photos', description: 'HEIC形式でのApple Live Photosとバースト撮影シーケンスのサポート' }
+        ],
+        about_title: 'HEIC形式について',
+        about_intro: 'HEIC（High Efficiency Image Container）は、HEIF（High Efficiency Image Format）標準に基づいてAppleが開発した最新の画像形式です。より高い画質を維持しながらJPEGと比較して優れた圧縮を提供し、iOS 11以降のiOSデバイスで撮影された写真のデフォルト形式となっています。',
+        advantages_title: '主な利点',
+        advantages: [
+          '50%小さなファイルサイズ – JPEGより優れた圧縮',
+          '優れた画質 – より小さなサイズでより高い品質',
+          'HDRサポート – High Dynamic Range画像キャプチャ',
+          '広色域 – 拡張色空間のサポート',
+          'Live Photos – 画像形式での動きと音',
+          '高度なメタデータ – 豊富なEXIFと画像データストレージ'
+        ],
+        use_cases_title: '最適な使用例',
+        use_cases: [
+          'iPhone/iPad写真 – iOS写真のデフォルト形式',
+          '高品質画像ストレージ – プロフェッショナル写真',
+          'HDR画像キャプチャ – High Dynamic Range写真',
+          'Live Photos – iOSデバイスからの動画写真',
+          'スペース効率的なアーカイブ – ストレージ用の小さなファイル',
+          'プロフェッショナル写真 – 高品質画像形式'
+        ],
+        specs_title: '技術仕様',
+        specs_header_label: '仕様',
+        specs_header_value: '詳細',
+        specs: [
+          { label: 'ファイル拡張子', value: '.heic, .heif' },
+          { label: 'MIMEタイプ', value: 'image/heic, image/heif' },
+          { label: '形式タイプ', value: 'HEIF標準に基づくコンテナ形式' },
+          { label: '圧縮', value: 'HEVC（H.265）ベースの圧縮' },
+          { label: '色深度', value: 'チャネルあたり8、10、12、16ビット' },
+          { label: '最大解像度', value: '8192 × 8192ピクセル' },
+          { label: '透明度', value: 'アルファチャネルサポート' },
+          { label: 'HDRサポート', value: '完全なHDRと広色域サポート' }
+        ],
+        seo_title: 'HEICビューアとコンバーター機能',
+        seo_intro: '当社のプロフェッショナルHEICビューアは、HDR表示、優れた圧縮処理、一括プレビュー機能を含む、Apple HEIC/HEIF画像の包括的なサポートを提供します。iPhoneユーザー、写真家、コンテンツ作成者を問わず、当社のプラットフォームはプロフェッショナルなHEIC画像処理に必要なツールを提供します。',
+        seo_viewing_title: '高度な表示機能',
+        seo_viewing_text: '完全なHDRサポート、広色域表示、詳細な画像情報でHEIC画像を表示。当社のビューアは、標準HEIC、HEIF、Live Photosを含むすべてのHEICバリアントをサポートし、Appleデバイス画像の正確な表現を保証します。',
+        seo_conversion_title: 'プロフェッショナル変換ツール',
+        seo_conversion_text: '最適な品質を維持しながら、HEICファイルをJPEG、PNG、WebP、その他の形式に変換。当社の変換エンジンは、HDR保持、色空間処理、複数ファイルの同時処理のための一括処理機能を提供します。',
+        seo_optimization_title: '品質最適化',
+        seo_optimization_text: '視覚品質を維持しながらWebフレンドリーな形式に変換できる当社のスマートツールで、HEICファイルを最新の使用に最適化。iOS写真のオンライン共有、互換性のための変換、パフォーマンス向上のためのファイルサイズ削減に最適です。',
+        editor: {
+          toggle_sidebar: 'サイドバーの切り替え',
+          close: '閉じる（Esc）',
+          close_sidebar: 'サイドバーを閉じる',
+          search_placeholder: 'ファイルを検索...',
+          files_header: 'ファイル',
+          add_files: '+ 追加',
+          format_badge: 'HEIC',
+          present: 'プレゼント',
+          exit_presentation: '終了',
+          start_presentation: 'プレゼンテーションを開始（スペース/矢印でナビゲート）',
+          print_image: '画像を印刷',
+          download_image: '画像をダウンロード',
+          previous: '前へ（←）',
+          next: '次へ（→）',
+          zoom_out: 'ズームアウト（-）',
+          zoom_in: 'ズームイン（+）',
+          reset_zoom: 'クリックしてズームをリセット',
+          rotate: '回転（R）',
+          fullscreen: 'フルスクリーン（F）'
+        }
+      }
+    }
+  },
+  zh: {
+    viewers: {
+      heic: {
+        meta_title: '免费HEIC查看器 - 在线查看Apple HEIC/HEIF图像',
+        meta_description: '免费在线查看HEIC/HEIF（高效图像容器）图像。支持HDR和卓越压缩的Apple iOS图像查看器。最多20个文件，总计100MB。无需注册。',
+        meta_keywords: 'HEIC查看器，HEIF查看器，Apple图像查看器，iOS图像查看器，iPhone照片查看器，HDR图像查看器，批量查看',
+        hero_title: '免费HEIC查看器',
+        hero_subtitle: '以高效压缩和HDR支持查看Apple HEIC/HEIF图像',
+        upload_title: '上传HEIC文件',
+        upload_description: '拖放您的Apple HEIC/HEIF图像或点击浏览。支持iOS照片、Live Photos和HDR图像，总计最多100MB。',
+        upload: {
+          drag_drop_text: '将文件拖放到此处',
+          click_browse_text: '或点击下面的按钮浏览',
+          choose_files_button: '选择文件',
+          max_files_info: '最多{maxFiles}个文件 • 总计最多{maxSize}'
+        },
+        buttons: {
+          view_files: '查看文件',
+          back: '返回所有查看器'
+        },
+        quick_stats: {
+          high_quality: '✓ 高质量',
+          smaller_size: '🎨 更小尺寸',
+          fast_processing: '⚡ 快速处理'
+        },
+        features: [
+          { title: '卓越压缩', description: '以比JPEG小50%的文件大小查看HEIC图像，同时保持更高的图像质量' },
+          { title: 'HDR支持', description: '完全支持来自iOS设备的HDR（高动态范围）图像和宽色域' },
+          { title: 'Live Photos', description: '支持HEIC格式的Apple Live Photos和连拍序列' }
+        ],
+        about_title: '关于HEIC格式',
+        about_intro: 'HEIC（高效图像容器）是Apple开发的现代图像格式，基于HEIF（高效图像格式）标准。它在保持更高图像质量的同时提供比JPEG更卓越的压缩，使其成为自iOS 11以来在iOS设备上拍摄的照片的默认格式。',
+        advantages_title: '主要优势',
+        advantages: [
+          '文件大小减少50% – 比JPEG更好的压缩',
+          '卓越的图像质量 – 在更小的尺寸下更高的质量',
+          'HDR支持 – 高动态范围图像捕获',
+          '宽色域 – 支持扩展色彩空间',
+          'Live Photos – 图像格式中的运动和声音',
+          '高级元数据 – 丰富的EXIF和图像数据存储'
+        ],
+        use_cases_title: '最佳用例',
+        use_cases: [
+          'iPhone/iPad摄影 – iOS照片的默认格式',
+          '高质量图像存储 – 专业摄影',
+          'HDR图像捕获 – 高动态范围摄影',
+          'Live Photos – 来自iOS设备的动态照片',
+          '节省空间的归档 – 用于存储的更小文件',
+          '专业摄影 – 高质量图像格式'
+        ],
+        specs_title: '技术规格',
+        specs_header_label: '规格',
+        specs_header_value: '详情',
+        specs: [
+          { label: '文件扩展名', value: '.heic, .heif' },
+          { label: 'MIME类型', value: 'image/heic, image/heif' },
+          { label: '格式类型', value: '基于HEIF标准的容器格式' },
+          { label: '压缩', value: '基于HEVC（H.265）的压缩' },
+          { label: '颜色深度', value: '每通道8、10、12、16位' },
+          { label: '最大分辨率', value: '8192 × 8192像素' },
+          { label: '透明度', value: 'Alpha通道支持' },
+          { label: 'HDR支持', value: '完整的HDR和宽色域支持' }
+        ],
+        seo_title: 'HEIC查看器和转换器功能',
+        seo_intro: '我们的专业HEIC查看器为Apple HEIC/HEIF图像提供全面支持，包括HDR显示、卓越压缩处理和批量预览功能。无论您是iPhone用户、摄影师还是内容创作者，我们的平台都提供专业HEIC图像处理所需的工具。',
+        seo_viewing_title: '高级查看功能',
+        seo_viewing_text: '以完整的HDR支持、宽色域显示和详细的图像信息查看HEIC图像。我们的查看器支持所有HEIC变体，包括标准HEIC、HEIF和Live Photos，确保准确表示您的Apple设备图像。',
+        seo_conversion_title: '专业转换工具',
+        seo_conversion_text: '在保持最佳质量的同时，将HEIC文件转换为JPEG、PNG、WebP和其他格式。我们的转换引擎提供HDR保留、色彩空间处理和批量处理功能，可同时处理多个文件。',
+        seo_optimization_title: '质量优化',
+        seo_optimization_text: '使用我们的智能工具优化HEIC文件以供现代使用，这些工具可以在保持视觉质量的同时转换为网络友好格式。非常适合在线共享iOS照片、为兼容性转换以及减小文件大小以提高性能。',
+        editor: {
+          toggle_sidebar: '切换侧边栏',
+          close: '关闭（Esc）',
+          close_sidebar: '关闭侧边栏',
+          search_placeholder: '搜索文件...',
+          files_header: '文件',
+          add_files: '+ 添加',
+          format_badge: 'HEIC',
+          present: '演示',
+          exit_presentation: '退出',
+          start_presentation: '开始演示（空格/箭头键导航）',
+          print_image: '打印图像',
+          download_image: '下载图像',
+          previous: '上一个（←）',
+          next: '下一个（→）',
+          zoom_out: '缩小（-）',
+          zoom_in: '放大（+）',
+          reset_zoom: '点击重置缩放',
+          rotate: '旋转（R）',
+          fullscreen: '全屏（F）'
+        }
+      }
+    }
+  },
+  id: {
+    viewers: {
+      heic: {
+        meta_title: 'Penampil HEIC Gratis - Lihat Gambar Apple HEIC/HEIF Online',
+        meta_description: 'Lihat gambar HEIC/HEIF (High Efficiency Image Container) online gratis. Penampil gambar Apple iOS dengan dukungan HDR dan kompresi superior. Hingga 20 file, total 100MB. Tidak perlu registrasi.',
+        meta_keywords: 'penampil HEIC, penampil HEIF, penampil gambar Apple, penampil gambar iOS, penampil foto iPhone, penampil gambar HDR, tampilan batch',
+        hero_title: 'Penampil HEIC Gratis',
+        hero_subtitle: 'Lihat gambar Apple HEIC/HEIF dengan kompresi efisiensi tinggi dan dukungan HDR',
+        upload_title: 'Unggah File HEIC',
+        upload_description: 'Seret dan lepas gambar Apple HEIC/HEIF Anda atau klik untuk menjelajah. Mendukung foto iOS, Live Photos dan gambar HDR hingga total 100MB.',
+        upload: {
+          drag_drop_text: 'Seret dan lepas file Anda di sini',
+          click_browse_text: 'atau klik tombol di bawah untuk menjelajah',
+          choose_files_button: 'Pilih File',
+          max_files_info: 'Maks. {maxFiles} file • Hingga {maxSize} total'
+        },
+        buttons: {
+          view_files: 'Lihat File',
+          back: 'Kembali ke Semua Penampil'
+        },
+        quick_stats: {
+          high_quality: '✓ Kualitas Tinggi',
+          smaller_size: '🎨 Ukuran Lebih Kecil',
+          fast_processing: '⚡ Pemrosesan Cepat'
+        },
+        features: [
+          { title: 'Kompresi Superior', description: 'Lihat gambar HEIC dengan ukuran file 50% lebih kecil dari JPEG sambil mempertahankan kualitas gambar yang lebih tinggi' },
+          { title: 'Dukungan HDR', description: 'Dukungan penuh untuk gambar HDR (High Dynamic Range) dan rentang warna lebar dari perangkat iOS' },
+          { title: 'Live Photos', description: 'Dukungan untuk Apple Live Photos dan urutan foto burst dalam format HEIC' }
+        ],
+        about_title: 'Tentang Format HEIC',
+        about_intro: 'HEIC (High Efficiency Image Container) adalah format gambar modern yang dikembangkan oleh Apple, berdasarkan standar HEIF (High Efficiency Image Format). Ini memberikan kompresi superior dibandingkan dengan JPEG sambil mempertahankan kualitas gambar yang lebih tinggi, menjadikannya format default untuk foto yang diambil pada perangkat iOS sejak iOS 11.',
+        advantages_title: 'Keuntungan Utama',
+        advantages: [
+          'Ukuran file 50% lebih kecil – Kompresi lebih baik dari JPEG',
+          'Kualitas gambar superior – Kualitas lebih tinggi pada ukuran lebih kecil',
+          'Dukungan HDR – Pengambilan gambar High Dynamic Range',
+          'Rentang warna lebar – Dukungan untuk ruang warna yang diperluas',
+          'Live Photos – Gerakan dan suara dalam format gambar',
+          'Metadata lanjutan – Penyimpanan data EXIF dan gambar yang kaya'
+        ],
+        use_cases_title: 'Kasus Penggunaan Terbaik',
+        use_cases: [
+          'Fotografi iPhone/iPad – Format default untuk foto iOS',
+          'Penyimpanan kualitas tinggi – Fotografi profesional',
+          'Pengambilan gambar HDR – Fotografi High Dynamic Range',
+          'Live Photos – Foto bergerak dari perangkat iOS',
+          'Arsip efisien ruang – File lebih kecil untuk penyimpanan',
+          'Fotografi profesional – Format gambar berkualitas tinggi'
+        ],
+        specs_title: 'Spesifikasi Teknis',
+        specs_header_label: 'Spesifikasi',
+        specs_header_value: 'Detail',
+        specs: [
+          { label: 'Ekstensi File', value: '.heic, .heif' },
+          { label: 'Tipe MIME', value: 'image/heic, image/heif' },
+          { label: 'Tipe Format', value: 'Format kontainer berdasarkan standar HEIF' },
+          { label: 'Kompresi', value: 'Kompresi berbasis HEVC (H.265)' },
+          { label: 'Kedalaman Warna', value: '8, 10, 12, 16 bit per saluran' },
+          { label: 'Resolusi Maksimum', value: '8192 × 8192 piksel' },
+          { label: 'Transparansi', value: 'Dukungan saluran alpha' },
+          { label: 'Dukungan HDR', value: 'Dukungan HDR penuh dan rentang warna lebar' }
+        ],
+        seo_title: 'Fitur Penampil dan Konverter HEIC',
+        seo_intro: 'Penampil HEIC profesional kami menyediakan dukungan komprehensif untuk gambar Apple HEIC/HEIF, termasuk tampilan HDR, penanganan kompresi superior, dan kemampuan pratinjau batch. Baik Anda pengguna iPhone, fotografer, atau pembuat konten, platform kami menawarkan alat yang Anda butuhkan untuk penanganan gambar HEIC profesional.',
+        seo_viewing_title: 'Fitur Tampilan Lanjutan',
+        seo_viewing_text: 'Lihat gambar HEIC dengan dukungan HDR penuh, tampilan rentang warna lebar, dan informasi gambar terperinci. Penampil kami mendukung semua varian HEIC, termasuk HEIC standar, HEIF, dan Live Photos, memastikan representasi akurat dari gambar perangkat Apple Anda.',
+        seo_conversion_title: 'Alat Konversi Profesional',
+        seo_conversion_text: 'Konversi file HEIC ke JPEG, PNG, WebP, dan format lain sambil mempertahankan kualitas optimal. Mesin konversi kami menawarkan preservasi HDR, penanganan ruang warna, dan kemampuan pemrosesan batch untuk menangani beberapa file secara bersamaan.',
+        seo_optimization_title: 'Optimasi Kualitas',
+        seo_optimization_text: 'Optimalkan file HEIC untuk penggunaan modern dengan alat pintar kami yang dapat mengonversi ke format ramah web sambil mempertahankan kualitas visual. Sempurna untuk berbagi foto iOS online, mengonversi untuk kompatibilitas, dan mengurangi ukuran file untuk kinerja yang lebih baik.',
+        editor: {
+          toggle_sidebar: 'Alihkan Sidebar',
+          close: 'Tutup (Esc)',
+          close_sidebar: 'Tutup Sidebar',
+          search_placeholder: 'Cari file...',
+          files_header: 'File',
+          add_files: '+ Tambah',
+          format_badge: 'HEIC',
+          present: 'Presentasikan',
+          exit_presentation: 'Keluar',
+          start_presentation: 'Mulai Presentasi (Spasi/Panah untuk navigasi)',
+          print_image: 'Cetak Gambar',
+          download_image: 'Unduh Gambar',
+          previous: 'Sebelumnya (←)',
+          next: 'Selanjutnya (→)',
+          zoom_out: 'Perkecil (-)',
+          zoom_in: 'Perbesar (+)',
+          reset_zoom: 'Klik untuk mengatur ulang zoom',
+          rotate: 'Putar (R)',
+          fullscreen: 'Layar Penuh (F)'
+        }
+      }
+    }
+  },
+  sv: {
+    viewers: {
+      heic: {
+        meta_title: 'Gratis HEIC-visare - Visa Apple HEIC/HEIF-bilder online',
+        meta_description: 'Visa HEIC/HEIF (High Efficiency Image Container) bilder online gratis. Apple iOS bildvisare med HDR-stöd och överlägsen komprimering. Upp till 20 filer, 100MB totalt. Ingen registrering krävs.',
+        meta_keywords: 'HEIC-visare, HEIF-visare, Apple bildvisare, iOS bildvisare, iPhone fotovisare, HDR bildvisare, batchvisning',
+        hero_title: 'Gratis HEIC-visare',
+        hero_subtitle: 'Visa Apple HEIC/HEIF-bilder med högeffektiv komprimering och HDR-stöd',
+        upload_title: 'Ladda upp HEIC-filer',
+        upload_description: 'Dra och släpp dina Apple HEIC/HEIF-bilder eller klicka för att bläddra. Stöder iOS-foton, Live Photos och HDR-bilder upp till 100MB totalt.',
+        upload: {
+          drag_drop_text: 'Dra och släpp dina filer här',
+          click_browse_text: 'eller klicka på knappen nedan för att bläddra',
+          choose_files_button: 'Välj filer',
+          max_files_info: 'Max {maxFiles} filer • Upp till {maxSize} totalt'
+        },
+        buttons: {
+          view_files: 'Visa filer',
+          back: 'Tillbaka till alla visare'
+        },
+        quick_stats: {
+          high_quality: '✓ Hög kvalitet',
+          smaller_size: '🎨 Mindre storlek',
+          fast_processing: '⚡ Snabb bearbetning'
+        },
+        features: [
+          { title: 'Överlägsen komprimering', description: 'Visa HEIC-bilder med 50% mindre filstorlekar än JPEG samtidigt som högre bildkvalitet bibehålls' },
+          { title: 'HDR-stöd', description: 'Fullt stöd för HDR (High Dynamic Range) bilder och bredt färgomfång från iOS-enheter' },
+          { title: 'Live Photos', description: 'Stöd för Apple Live Photos och burst-fotosekvenser i HEIC-format' }
+        ],
+        about_title: 'Om HEIC-formatet',
+        about_intro: 'HEIC (High Efficiency Image Container) är ett modernt bildformat utvecklat av Apple, baserat på HEIF (High Efficiency Image Format) standarden. Det ger överlägsen komprimering jämfört med JPEG samtidigt som högre bildkvalitet bibehålls, vilket gör det till standardformatet för foton tagna på iOS-enheter sedan iOS 11.',
+        advantages_title: 'Nyckel fördelar',
+        advantages: [
+          '50% mindre filstorlekar – Bättre komprimering än JPEG',
+          'Överlägsen bildkvalitet – Högre kvalitet vid mindre storlekar',
+          'HDR-stöd – High Dynamic Range bildfångst',
+          'Bredt färgomfång – Stöd för utökade färgrymder',
+          'Live Photos – Rörelse och ljud i bildformat',
+          'Avancerade metadata – Rik EXIF- och bilddata lagring'
+        ],
+        use_cases_title: 'Bästa användningsfall',
+        use_cases: [
+          'iPhone/iPad fotografering – Standardformat för iOS-foton',
+          'Högkvalitativ bildlagring – Professionell fotografering',
+          'HDR bildfångst – High Dynamic Range fotografering',
+          'Live Photos – Rörelsefoton från iOS-enheter',
+          'Utrymmeseffektiv arkivering – Mindre filer för lagring',
+          'Professionell fotografering – Högkvalitativt bildformat'
+        ],
+        specs_title: 'Tekniska specifikationer',
+        specs_header_label: 'Specifikation',
+        specs_header_value: 'Detaljer',
+        specs: [
+          { label: 'Filändelse', value: '.heic, .heif' },
+          { label: 'MIME-typ', value: 'image/heic, image/heif' },
+          { label: 'Formattyp', value: 'Containerformat baserat på HEIF-standarden' },
+          { label: 'Komprimering', value: 'HEVC (H.265) baserad komprimering' },
+          { label: 'Färgdjup', value: '8, 10, 12, 16 bitar per kanal' },
+          { label: 'Maximal upplösning', value: '8192 × 8192 pixlar' },
+          { label: 'Transparens', value: 'Alfakanalstöd' },
+          { label: 'HDR-stöd', value: 'Fullt HDR- och bredt färgomfångsstöd' }
+        ],
+        seo_title: 'HEIC-visare och konverteringsfunktioner',
+        seo_intro: 'Vår professionella HEIC-visare ger omfattande stöd för Apple HEIC/HEIF-bilder, inklusive HDR-visning, överlägsen komprimeringshantering och batch-förhandsgranskningsmöjligheter. Oavsett om du är iPhone-användare, fotograf eller innehållsskapare, erbjuder vår plattform verktygen du behöver för professionell HEIC-bildhantering.',
+        seo_viewing_title: 'Avancerade visningsfunktioner',
+        seo_viewing_text: 'Visa HEIC-bilder med fullt HDR-stöd, bredt färgomfångsvisning och detaljerad bildinformation. Vår visare stöder alla HEIC-varianter, inklusive standard HEIC, HEIF och Live Photos, vilket säkerställer korrekt representation av dina Apple-enhetsbilder.',
+        seo_conversion_title: 'Professionella konverteringsverktyg',
+        seo_conversion_text: 'Konvertera HEIC-filer till JPEG, PNG, WebP och andra format samtidigt som optimal kvalitet bibehålls. Vår konverteringsmotor erbjuder HDR-bevarande, färgrymds hantering och batch-bearbetningsmöjligheter för att hantera flera filer samtidigt.',
+        seo_optimization_title: 'Kvalitetsoptimering',
+        seo_optimization_text: 'Optimera HEIC-filer för modern användning med våra smarta verktyg som kan konvertera till webbvänliga format samtidigt som visuell kvalitet bevaras. Perfekt för att dela iOS-foton online, konvertera för kompatibilitet och minska filstorlekar för bättre prestanda.',
+        editor: {
+          toggle_sidebar: 'Växla sidopanel',
+          close: 'Stäng (Esc)',
+          close_sidebar: 'Stäng sidopanel',
+          search_placeholder: 'Sök filer...',
+          files_header: 'Filer',
+          add_files: '+ Lägg till',
+          format_badge: 'HEIC',
+          present: 'Presentera',
+          exit_presentation: 'Avsluta',
+          start_presentation: 'Starta presentation (Mellanslag/Pilar för navigering)',
+          print_image: 'Skriv ut bild',
+          download_image: 'Ladda ner bild',
+          previous: 'Föregående (←)',
+          next: 'Nästa (→)',
+          zoom_out: 'Zooma ut (-)',
+          zoom_in: 'Zooma in (+)',
+          reset_zoom: 'Klicka för att återställa zoom',
+          rotate: 'Rotera (R)',
+          fullscreen: 'Helskärm (F)'
+        }
+      }
+    }
   }
 };
 
