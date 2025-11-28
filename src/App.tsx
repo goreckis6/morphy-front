@@ -1256,7 +1256,9 @@ function App() {
         <Route path="/viewers/gif" element={<GIFViewer />} />
         <Route path="/viewers/gif/editor" element={<GIFViewer />} />
         <Route path="/viewers/svg" element={<SVGViewer />} />
+        <Route path="/viewers/svg/editor" element={<SVGViewer />} />
         <Route path="/viewers/bmp" element={<BMPViewer />} />
+        <Route path="/viewers/bmp/editor" element={<BMPViewer />} />
         <Route path="/viewers/ico" element={<ICOViewer />} />
         <Route path="/viewers/heic" element={<HEICViewer />} />
         <Route path="/viewers/heif" element={<HEICViewer />} />
@@ -1313,7 +1315,9 @@ function App() {
         <Route path="/pl/viewers/gif" element={<GIFViewer />} />
         <Route path="/pl/viewers/gif/editor" element={<GIFViewer />} />
         <Route path="/pl/viewers/svg" element={<SVGViewer />} />
+        <Route path="/pl/viewers/svg/editor" element={<SVGViewer />} />
         <Route path="/pl/viewers/bmp" element={<BMPViewer />} />
+        <Route path="/pl/viewers/bmp/editor" element={<BMPViewer />} />
         <Route path="/pl/viewers/ico" element={<ICOViewer />} />
         <Route path="/pl/viewers/heic" element={<HEICViewer />} />
         <Route path="/pl/viewers/heif" element={<HEICViewer />} />
@@ -1370,7 +1374,9 @@ function App() {
         <Route path="/de/viewers/gif" element={<GIFViewer />} />
         <Route path="/de/viewers/gif/editor" element={<GIFViewer />} />
         <Route path="/de/viewers/svg" element={<SVGViewer />} />
+        <Route path="/de/viewers/svg/editor" element={<SVGViewer />} />
         <Route path="/de/viewers/bmp" element={<BMPViewer />} />
+        <Route path="/de/viewers/bmp/editor" element={<BMPViewer />} />
         <Route path="/de/viewers/ico" element={<ICOViewer />} />
         <Route path="/de/viewers/heic" element={<HEICViewer />} />
         <Route path="/de/viewers/heif" element={<HEICViewer />} />
@@ -1651,6 +1657,118 @@ function App() {
         {/* Chinese (ZH) GIF Viewer Routes */}
         <Route path="/zh/viewers/gif" element={<GIFViewer />} />
         <Route path="/zh/viewers/gif/editor" element={<GIFViewer />} />
+
+        {/* Indonesian (ID) SVG Viewer Routes */}
+        <Route path="/id/viewers/svg" element={<SVGViewer />} />
+        <Route path="/id/viewers/svg/editor" element={<SVGViewer />} />
+
+        {/* Swedish (SV) SVG Viewer Routes */}
+        <Route path="/sv/viewers/svg" element={<SVGViewer />} />
+        <Route path="/sv/viewers/svg/editor" element={<SVGViewer />} />
+
+        {/* Spanish (ES) SVG Viewer Routes */}
+        <Route path="/es/viewers/svg" element={<SVGViewer />} />
+        <Route path="/es/viewers/svg/editor" element={<SVGViewer />} />
+
+        {/* French (FR) SVG Viewer Routes */}
+        <Route path="/fr/viewers/svg" element={<SVGViewer />} />
+        <Route path="/fr/viewers/svg/editor" element={<SVGViewer />} />
+
+        {/* Italian (IT) SVG Viewer Routes */}
+        <Route path="/it/viewers/svg" element={<SVGViewer />} />
+        <Route path="/it/viewers/svg/editor" element={<SVGViewer />} />
+
+        {/* Dutch (NL) SVG Viewer Routes */}
+        <Route path="/nl/viewers/svg" element={<SVGViewer />} />
+        <Route path="/nl/viewers/svg/editor" element={<SVGViewer />} />
+
+        {/* Portuguese (PT) SVG Viewer Routes */}
+        <Route path="/pt/viewers/svg" element={<SVGViewer />} />
+        <Route path="/pt/viewers/svg/editor" element={<SVGViewer />} />
+
+        {/* Vietnamese (VI) SVG Viewer Routes */}
+        <Route path="/vi/viewers/svg" element={<SVGViewer />} />
+        <Route path="/vi/viewers/svg/editor" element={<SVGViewer />} />
+
+        {/* Turkish (TR) SVG Viewer Routes */}
+        <Route path="/tr/viewers/svg" element={<SVGViewer />} />
+        <Route path="/tr/viewers/svg/editor" element={<SVGViewer />} />
+
+        {/* Russian (RU) SVG Viewer Routes */}
+        <Route path="/ru/viewers/svg" element={<SVGViewer />} />
+        <Route path="/ru/viewers/svg/editor" element={<SVGViewer />} />
+
+        {/* Arabic (AR) SVG Viewer Routes */}
+        <Route path="/ar/viewers/svg" element={<SVGViewer />} />
+        <Route path="/ar/viewers/svg/editor" element={<SVGViewer />} />
+
+        {/* Thai (TH) SVG Viewer Routes */}
+        <Route path="/th/viewers/svg" element={<SVGViewer />} />
+        <Route path="/th/viewers/svg/editor" element={<SVGViewer />} />
+
+        {/* Japanese (JA) SVG Viewer Routes */}
+        <Route path="/ja/viewers/svg" element={<SVGViewer />} />
+        <Route path="/ja/viewers/svg/editor" element={<SVGViewer />} />
+
+        {/* Chinese (ZH) SVG Viewer Routes */}
+        <Route path="/zh/viewers/svg" element={<SVGViewer />} />
+        <Route path="/zh/viewers/svg/editor" element={<SVGViewer />} />
+
+        {/* Indonesian (ID) BMP Viewer Routes */}
+        <Route path="/id/viewers/bmp" element={<BMPViewer />} />
+        <Route path="/id/viewers/bmp/editor" element={<BMPViewer />} />
+
+        {/* Swedish (SV) BMP Viewer Routes */}
+        <Route path="/sv/viewers/bmp" element={<BMPViewer />} />
+        <Route path="/sv/viewers/bmp/editor" element={<BMPViewer />} />
+
+        {/* Spanish (ES) BMP Viewer Routes */}
+        <Route path="/es/viewers/bmp" element={<BMPViewer />} />
+        <Route path="/es/viewers/bmp/editor" element={<BMPViewer />} />
+
+        {/* French (FR) BMP Viewer Routes */}
+        <Route path="/fr/viewers/bmp" element={<BMPViewer />} />
+        <Route path="/fr/viewers/bmp/editor" element={<BMPViewer />} />
+
+        {/* Italian (IT) BMP Viewer Routes */}
+        <Route path="/it/viewers/bmp" element={<BMPViewer />} />
+        <Route path="/it/viewers/bmp/editor" element={<BMPViewer />} />
+
+        {/* Dutch (NL) BMP Viewer Routes */}
+        <Route path="/nl/viewers/bmp" element={<BMPViewer />} />
+        <Route path="/nl/viewers/bmp/editor" element={<BMPViewer />} />
+
+        {/* Portuguese (PT) BMP Viewer Routes */}
+        <Route path="/pt/viewers/bmp" element={<BMPViewer />} />
+        <Route path="/pt/viewers/bmp/editor" element={<BMPViewer />} />
+
+        {/* Vietnamese (VI) BMP Viewer Routes */}
+        <Route path="/vi/viewers/bmp" element={<BMPViewer />} />
+        <Route path="/vi/viewers/bmp/editor" element={<BMPViewer />} />
+
+        {/* Turkish (TR) BMP Viewer Routes */}
+        <Route path="/tr/viewers/bmp" element={<BMPViewer />} />
+        <Route path="/tr/viewers/bmp/editor" element={<BMPViewer />} />
+
+        {/* Russian (RU) BMP Viewer Routes */}
+        <Route path="/ru/viewers/bmp" element={<BMPViewer />} />
+        <Route path="/ru/viewers/bmp/editor" element={<BMPViewer />} />
+
+        {/* Arabic (AR) BMP Viewer Routes */}
+        <Route path="/ar/viewers/bmp" element={<BMPViewer />} />
+        <Route path="/ar/viewers/bmp/editor" element={<BMPViewer />} />
+
+        {/* Thai (TH) BMP Viewer Routes */}
+        <Route path="/th/viewers/bmp" element={<BMPViewer />} />
+        <Route path="/th/viewers/bmp/editor" element={<BMPViewer />} />
+
+        {/* Japanese (JA) BMP Viewer Routes */}
+        <Route path="/ja/viewers/bmp" element={<BMPViewer />} />
+        <Route path="/ja/viewers/bmp/editor" element={<BMPViewer />} />
+
+        {/* Chinese (ZH) BMP Viewer Routes */}
+        <Route path="/zh/viewers/bmp" element={<BMPViewer />} />
+        <Route path="/zh/viewers/bmp/editor" element={<BMPViewer />} />
 
         {/* Compression Routes */}
         <Route path="/compress/jpg" element={<JPGCompressor />} />
