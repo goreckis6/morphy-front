@@ -1532,6 +1532,8 @@ function App() {
         <Route path="/it/viewers/heic/editor" element={<HEICViewer />} />
         <Route path="/it/viewers/heif" element={<HEICViewer />} />
         <Route path="/it/viewers/heif/editor" element={<HEICViewer />} />
+        <Route path="/it/viewers/avif" element={<AVIFViewer />} />
+        <Route path="/it/viewers/avif/editor" element={<AVIFViewer />} />
 
         {/* Dutch (NL) Viewer Routes */}
         <Route path="/nl/viewers" element={<Viewers />} />
@@ -1545,6 +1547,8 @@ function App() {
         <Route path="/nl/viewers/heic/editor" element={<HEICViewer />} />
         <Route path="/nl/viewers/heif" element={<HEICViewer />} />
         <Route path="/nl/viewers/heif/editor" element={<HEICViewer />} />
+        <Route path="/nl/viewers/avif" element={<AVIFViewer />} />
+        <Route path="/nl/viewers/avif/editor" element={<AVIFViewer />} />
 
         {/* Portuguese (PT) Viewer Routes */}
         <Route path="/pt/viewers" element={<Viewers />} />
@@ -1558,6 +1562,8 @@ function App() {
         <Route path="/pt/viewers/heic/editor" element={<HEICViewer />} />
         <Route path="/pt/viewers/heif" element={<HEICViewer />} />
         <Route path="/pt/viewers/heif/editor" element={<HEICViewer />} />
+        <Route path="/pt/viewers/avif" element={<AVIFViewer />} />
+        <Route path="/pt/viewers/avif/editor" element={<AVIFViewer />} />
 
         {/* Vietnamese (VI) Viewer Routes */}
         <Route path="/vi/viewers" element={<Viewers />} />
@@ -1571,6 +1577,8 @@ function App() {
         <Route path="/vi/viewers/heic/editor" element={<HEICViewer />} />
         <Route path="/vi/viewers/heif" element={<HEICViewer />} />
         <Route path="/vi/viewers/heif/editor" element={<HEICViewer />} />
+        <Route path="/vi/viewers/avif" element={<AVIFViewer />} />
+        <Route path="/vi/viewers/avif/editor" element={<AVIFViewer />} />
 
         {/* Turkish (TR) Viewer Routes */}
         <Route path="/tr/viewers" element={<Viewers />} />
@@ -1584,6 +1592,8 @@ function App() {
         <Route path="/tr/viewers/heic/editor" element={<HEICViewer />} />
         <Route path="/tr/viewers/heif" element={<HEICViewer />} />
         <Route path="/tr/viewers/heif/editor" element={<HEICViewer />} />
+        <Route path="/tr/viewers/avif" element={<AVIFViewer />} />
+        <Route path="/tr/viewers/avif/editor" element={<AVIFViewer />} />
 
         {/* Russian (RU) Viewer Routes */}
         <Route path="/ru/viewers" element={<Viewers />} />
@@ -1597,6 +1607,8 @@ function App() {
         <Route path="/ru/viewers/heic/editor" element={<HEICViewer />} />
         <Route path="/ru/viewers/heif" element={<HEICViewer />} />
         <Route path="/ru/viewers/heif/editor" element={<HEICViewer />} />
+        <Route path="/ru/viewers/avif" element={<AVIFViewer />} />
+        <Route path="/ru/viewers/avif/editor" element={<AVIFViewer />} />
 
         {/* Arabic (AR) Viewer Routes */}
         <Route path="/ar/viewers" element={<Viewers />} />
@@ -1610,6 +1622,8 @@ function App() {
         <Route path="/ar/viewers/heic/editor" element={<HEICViewer />} />
         <Route path="/ar/viewers/heif" element={<HEICViewer />} />
         <Route path="/ar/viewers/heif/editor" element={<HEICViewer />} />
+        <Route path="/ar/viewers/avif" element={<AVIFViewer />} />
+        <Route path="/ar/viewers/avif/editor" element={<AVIFViewer />} />
 
         {/* Thai (TH) Viewer Routes */}
         <Route path="/th/viewers" element={<Viewers />} />
@@ -1623,6 +1637,8 @@ function App() {
         <Route path="/th/viewers/heic/editor" element={<HEICViewer />} />
         <Route path="/th/viewers/heif" element={<HEICViewer />} />
         <Route path="/th/viewers/heif/editor" element={<HEICViewer />} />
+        <Route path="/th/viewers/avif" element={<AVIFViewer />} />
+        <Route path="/th/viewers/avif/editor" element={<AVIFViewer />} />
 
         {/* Japanese (JA) Viewer Routes */}
         <Route path="/ja/viewers" element={<Viewers />} />
@@ -1636,6 +1652,8 @@ function App() {
         <Route path="/ja/viewers/heic/editor" element={<HEICViewer />} />
         <Route path="/ja/viewers/heif" element={<HEICViewer />} />
         <Route path="/ja/viewers/heif/editor" element={<HEICViewer />} />
+        <Route path="/ja/viewers/avif" element={<AVIFViewer />} />
+        <Route path="/ja/viewers/avif/editor" element={<AVIFViewer />} />
 
         {/* Chinese (ZH) Viewer Routes */}
         <Route path="/zh/viewers" element={<Viewers />} />
@@ -1649,6 +1667,8 @@ function App() {
         <Route path="/zh/viewers/heic/editor" element={<HEICViewer />} />
         <Route path="/zh/viewers/heif" element={<HEICViewer />} />
         <Route path="/zh/viewers/heif/editor" element={<HEICViewer />} />
+        <Route path="/zh/viewers/avif" element={<AVIFViewer />} />
+        <Route path="/zh/viewers/avif/editor" element={<AVIFViewer />} />
 
         {/* Indonesian (ID) WebP Viewer Routes */}
         <Route path="/id/viewers/webp" element={<WebPViewer />} />
