@@ -167,9 +167,7 @@ const resources: Record<string, GIFViewerTranslations> = {
         }
       }
     }
-  }
-};
-
+  },
   pl: {
     viewers: {
       gif: {
