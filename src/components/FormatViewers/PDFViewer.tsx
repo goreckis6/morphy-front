@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { FileText, Upload, Eye, ArrowLeft, Book, Search, ZoomIn, Info, Star, Layers, Sparkles } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
+import { PDFEditor } from './PDFEditor';
 import { useFileValidation } from '../../hooks/useFileValidation';
 import { useTranslation } from 'react-i18next';
 import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
@@ -11,9 +13,37 @@ import './translations/pdfViewerTranslations'; // Register translations
 
 export const PDFViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
+  const [isEditorOpen, setIsEditorOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
   const { validateBatchFiles, validationError, clearValidationError } = useFileValidation();
   const { t, i18n } = useTranslation();
   usePathLanguageSync(i18n);
+
+  // Check if URL ends with /editor and open editor if files exist
+  useEffect(() => {
+    if (location.pathname.endsWith('/editor') && selectedFiles.length > 0 && !isEditorOpen) {
+      setIsEditorOpen(true);
+    } else if (!location.pathname.endsWith('/editor') && isEditorOpen) {
+      setIsEditorOpen(false);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.pathname, selectedFiles.length]);
+
+  // Get the base path for PDF
+  const getBasePath = () => {
+    const path = location.pathname;
+    if (path.includes('/viewers/pdf')) {
+      return path.replace('/editor', '').replace(/\/viewers\/pdf.*/, '/viewers/pdf');
+    }
+    // Handle language prefixes
+    const langMatch = path.match(/\/([a-z]{2})\/viewers\/pdf/);
+    if (langMatch) {
+      const [, lang] = langMatch;
+      return `/${lang}/viewers/pdf`;
+    }
+    return '/viewers/pdf'; // fallback
+  };
 
   const features = t('viewers.pdf.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
   const advantages = t('viewers.pdf.advantages', { returnObjects: true }) as string[];
@@ -33,6 +63,9 @@ export const PDFViewer: React.FC = () => {
     
     if (validation.isValid) {
       setSelectedFiles(pdfFiles);
+      // Automatically open editor when files are selected
+      const basePath = getBasePath();
+      navigate(`${basePath}/editor`, { replace: true });
     }
   };
 
@@ -164,13 +197,8 @@ export const PDFViewer: React.FC = () => {
     }
   };
 
-  const handleViewAllFiles = () => {
-    // Open all PDF files in sequence
-    selectedFiles.forEach((file, index) => {
-      setTimeout(() => {
-        handleViewPDF(file);
-      }, index * 500); // Stagger the opening
-    });
+  const handleAddFilesToEditor = (newFiles: File[]) => {
+    setSelectedFiles((prev: File[]) => [...prev, ...newFiles]);
   };
 
   return (
@@ -291,7 +319,11 @@ export const PDFViewer: React.FC = () => {
           {selectedFiles.length > 0 && (
             <div className="flex justify-center mb-8">
               <button
-                onClick={handleViewAllFiles}
+                onClick={() => {
+                  setIsEditorOpen(true);
+                  const basePath = getBasePath();
+                  navigate(`${basePath}/editor`, { replace: true });
+                }}
                 className="group relative px-8 py-4 bg-gradient-to-r from-red-600 via-pink-600 to-rose-600 hover:from-red-700 hover:via-pink-700 hover:to-rose-700 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl flex items-center gap-3 text-lg overflow-hidden"
               >
                 <div className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
@@ -497,6 +529,19 @@ export const PDFViewer: React.FC = () => {
         </div>
       
         <Footer />
+
+        {/* PDF Editor */}
+        {isEditorOpen && (
+          <PDFEditor
+            files={selectedFiles}
+            onClose={() => {
+              setIsEditorOpen(false);
+              const basePath = getBasePath();
+              navigate(basePath, { replace: true });
+            }}
+            onAddFiles={handleAddFilesToEditor}
+          />
+        )}
       </div>
 
       {/* Custom Animations */}

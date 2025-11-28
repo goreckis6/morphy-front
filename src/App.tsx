@@ -1296,6 +1296,7 @@ function App() {
         <Route path="/viewers/avif" element={<AVIFViewer />} />
         <Route path="/viewers/avif/editor" element={<AVIFViewer />} />
         <Route path="/viewers/pdf" element={<PDFViewer />} />
+        <Route path="/viewers/pdf/editor" element={<PDFViewer />} />
         <Route path="/viewers/rtf" element={<RTFViewer />} />
         <Route path="/viewers/txt" element={<TXTViewer />} />
         <Route path="/viewers/md" element={<MarkdownViewer />} />
@@ -1359,6 +1360,7 @@ function App() {
         <Route path="/pl/viewers/avif" element={<AVIFViewer />} />
         <Route path="/pl/viewers/avif/editor" element={<AVIFViewer />} />
         <Route path="/pl/viewers/pdf" element={<PDFViewer />} />
+        <Route path="/pl/viewers/pdf/editor" element={<PDFViewer />} />
         <Route path="/pl/viewers/rtf" element={<RTFViewer />} />
         <Route path="/pl/viewers/txt" element={<TXTViewer />} />
         <Route path="/pl/viewers/md" element={<MarkdownViewer />} />
@@ -1422,6 +1424,7 @@ function App() {
         <Route path="/de/viewers/avif" element={<AVIFViewer />} />
         <Route path="/de/viewers/avif/editor" element={<AVIFViewer />} />
         <Route path="/de/viewers/pdf" element={<PDFViewer />} />
+        <Route path="/de/viewers/pdf/editor" element={<PDFViewer />} />
         <Route path="/de/viewers/rtf" element={<RTFViewer />} />
         <Route path="/de/viewers/txt" element={<TXTViewer />} />
         <Route path="/de/viewers/md" element={<MarkdownViewer />} />
@@ -1474,6 +1477,8 @@ function App() {
         <Route path="/id/viewers/heif/editor" element={<HEICViewer />} />
         <Route path="/id/viewers/avif" element={<AVIFViewer />} />
         <Route path="/id/viewers/avif/editor" element={<AVIFViewer />} />
+        <Route path="/id/viewers/pdf" element={<PDFViewer />} />
+        <Route path="/id/viewers/pdf/editor" element={<PDFViewer />} />
 
         {/* Swedish (SV) Viewer Routes */}
         <Route path="/sv/viewers" element={<Viewers />} />
@@ -1489,6 +1494,8 @@ function App() {
         <Route path="/sv/viewers/heif/editor" element={<HEICViewer />} />
         <Route path="/sv/viewers/avif" element={<AVIFViewer />} />
         <Route path="/sv/viewers/avif/editor" element={<AVIFViewer />} />
+        <Route path="/sv/viewers/pdf" element={<PDFViewer />} />
+        <Route path="/sv/viewers/pdf/editor" element={<PDFViewer />} />
 
         {/* Spanish (ES) Viewer Routes */}
         <Route path="/es/viewers" element={<Viewers />} />
@@ -1504,6 +1511,8 @@ function App() {
         <Route path="/es/viewers/heif/editor" element={<HEICViewer />} />
         <Route path="/es/viewers/avif" element={<AVIFViewer />} />
         <Route path="/es/viewers/avif/editor" element={<AVIFViewer />} />
+        <Route path="/es/viewers/pdf" element={<PDFViewer />} />
+        <Route path="/es/viewers/pdf/editor" element={<PDFViewer />} />
 
         {/* French (FR) Viewer Routes */}
         <Route path="/fr/viewers" element={<Viewers />} />
@@ -1519,6 +1528,8 @@ function App() {
         <Route path="/fr/viewers/heif/editor" element={<HEICViewer />} />
         <Route path="/fr/viewers/avif" element={<AVIFViewer />} />
         <Route path="/fr/viewers/avif/editor" element={<AVIFViewer />} />
+        <Route path="/fr/viewers/pdf" element={<PDFViewer />} />
+        <Route path="/fr/viewers/pdf/editor" element={<PDFViewer />} />
 
         {/* Italian (IT) Viewer Routes */}
         <Route path="/it/viewers" element={<Viewers />} />
@@ -1534,6 +1545,8 @@ function App() {
         <Route path="/it/viewers/heif/editor" element={<HEICViewer />} />
         <Route path="/it/viewers/avif" element={<AVIFViewer />} />
         <Route path="/it/viewers/avif/editor" element={<AVIFViewer />} />
+        <Route path="/it/viewers/pdf" element={<PDFViewer />} />
+        <Route path="/it/viewers/pdf/editor" element={<PDFViewer />} />
 
         {/* Dutch (NL) Viewer Routes */}
         <Route path="/nl/viewers" element={<Viewers />} />
@@ -1549,6 +1562,8 @@ function App() {
         <Route path="/nl/viewers/heif/editor" element={<HEICViewer />} />
         <Route path="/nl/viewers/avif" element={<AVIFViewer />} />
         <Route path="/nl/viewers/avif/editor" element={<AVIFViewer />} />
+        <Route path="/nl/viewers/pdf" element={<PDFViewer />} />
+        <Route path="/nl/viewers/pdf/editor" element={<PDFViewer />} />
 
         {/* Portuguese (PT) Viewer Routes */}
         <Route path="/pt/viewers" element={<Viewers />} />
@@ -1564,6 +1579,8 @@ function App() {
         <Route path="/pt/viewers/heif/editor" element={<HEICViewer />} />
         <Route path="/pt/viewers/avif" element={<AVIFViewer />} />
         <Route path="/pt/viewers/avif/editor" element={<AVIFViewer />} />
+        <Route path="/pt/viewers/pdf" element={<PDFViewer />} />
+        <Route path="/pt/viewers/pdf/editor" element={<PDFViewer />} />
 
         {/* Vietnamese (VI) Viewer Routes */}
         <Route path="/vi/viewers" element={<Viewers />} />
@@ -1579,6 +1596,8 @@ function App() {
         <Route path="/vi/viewers/heif/editor" element={<HEICViewer />} />
         <Route path="/vi/viewers/avif" element={<AVIFViewer />} />
         <Route path="/vi/viewers/avif/editor" element={<AVIFViewer />} />
+        <Route path="/vi/viewers/pdf" element={<PDFViewer />} />
+        <Route path="/vi/viewers/pdf/editor" element={<PDFViewer />} />
 
         {/* Turkish (TR) Viewer Routes */}
         <Route path="/tr/viewers" element={<Viewers />} />
@@ -1594,6 +1613,8 @@ function App() {
         <Route path="/tr/viewers/heif/editor" element={<HEICViewer />} />
         <Route path="/tr/viewers/avif" element={<AVIFViewer />} />
         <Route path="/tr/viewers/avif/editor" element={<AVIFViewer />} />
+        <Route path="/tr/viewers/pdf" element={<PDFViewer />} />
+        <Route path="/tr/viewers/pdf/editor" element={<PDFViewer />} />
 
         {/* Russian (RU) Viewer Routes */}
         <Route path="/ru/viewers" element={<Viewers />} />
@@ -1609,6 +1630,8 @@ function App() {
         <Route path="/ru/viewers/heif/editor" element={<HEICViewer />} />
         <Route path="/ru/viewers/avif" element={<AVIFViewer />} />
         <Route path="/ru/viewers/avif/editor" element={<AVIFViewer />} />
+        <Route path="/ru/viewers/pdf" element={<PDFViewer />} />
+        <Route path="/ru/viewers/pdf/editor" element={<PDFViewer />} />
 
         {/* Arabic (AR) Viewer Routes */}
         <Route path="/ar/viewers" element={<Viewers />} />
@@ -1624,6 +1647,8 @@ function App() {
         <Route path="/ar/viewers/heif/editor" element={<HEICViewer />} />
         <Route path="/ar/viewers/avif" element={<AVIFViewer />} />
         <Route path="/ar/viewers/avif/editor" element={<AVIFViewer />} />
+        <Route path="/ar/viewers/pdf" element={<PDFViewer />} />
+        <Route path="/ar/viewers/pdf/editor" element={<PDFViewer />} />
 
         {/* Thai (TH) Viewer Routes */}
         <Route path="/th/viewers" element={<Viewers />} />
@@ -1639,6 +1664,8 @@ function App() {
         <Route path="/th/viewers/heif/editor" element={<HEICViewer />} />
         <Route path="/th/viewers/avif" element={<AVIFViewer />} />
         <Route path="/th/viewers/avif/editor" element={<AVIFViewer />} />
+        <Route path="/th/viewers/pdf" element={<PDFViewer />} />
+        <Route path="/th/viewers/pdf/editor" element={<PDFViewer />} />
 
         {/* Japanese (JA) Viewer Routes */}
         <Route path="/ja/viewers" element={<Viewers />} />
@@ -1654,6 +1681,8 @@ function App() {
         <Route path="/ja/viewers/heif/editor" element={<HEICViewer />} />
         <Route path="/ja/viewers/avif" element={<AVIFViewer />} />
         <Route path="/ja/viewers/avif/editor" element={<AVIFViewer />} />
+        <Route path="/ja/viewers/pdf" element={<PDFViewer />} />
+        <Route path="/ja/viewers/pdf/editor" element={<PDFViewer />} />
 
         {/* Chinese (ZH) Viewer Routes */}
         <Route path="/zh/viewers" element={<Viewers />} />
@@ -1669,6 +1698,8 @@ function App() {
         <Route path="/zh/viewers/heif/editor" element={<HEICViewer />} />
         <Route path="/zh/viewers/avif" element={<AVIFViewer />} />
         <Route path="/zh/viewers/avif/editor" element={<AVIFViewer />} />
+        <Route path="/zh/viewers/pdf" element={<PDFViewer />} />
+        <Route path="/zh/viewers/pdf/editor" element={<PDFViewer />} />
 
         {/* Indonesian (ID) WebP Viewer Routes */}
         <Route path="/id/viewers/webp" element={<WebPViewer />} />
