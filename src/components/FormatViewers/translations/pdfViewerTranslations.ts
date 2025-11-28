@@ -63,6 +63,27 @@ type PDFViewerTranslations = {
         message: string;
         close: string;
       };
+      editor: {
+        toggle_sidebar: string;
+        close: string;
+        close_sidebar: string;
+        search_placeholder: string;
+        files_header: string;
+        add_files: string;
+        format_badge: string;
+        present: string;
+        exit_presentation: string;
+        start_presentation: string;
+        print_pdf: string;
+        download_pdf: string;
+        previous: string;
+        next: string;
+        zoom_out: string;
+        zoom_in: string;
+        reset_zoom: string;
+        rotate: string;
+        fullscreen: string;
+      };
     };
   };
 };
@@ -152,6 +173,27 @@ const resources: Record<string, PDFViewerTranslations> = {
           title: 'Preview Error',
           message: 'Failed to generate PDF preview. Please try downloading the file instead.',
           close: 'Close'
+        },
+        editor: {
+          toggle_sidebar: 'Toggle Sidebar',
+          close: 'Close (Esc)',
+          close_sidebar: 'Close Sidebar',
+          search_placeholder: 'Search files...',
+          files_header: 'Files',
+          add_files: '+ Add',
+          format_badge: 'PDF',
+          present: 'Present',
+          exit_presentation: 'Exit',
+          start_presentation: 'Start Presentation (Space/Arrows to navigate)',
+          print_pdf: 'Print PDF',
+          download_pdf: 'Download PDF',
+          previous: 'Previous (←)',
+          next: 'Next (→)',
+          zoom_out: 'Zoom Out (-)',
+          zoom_in: 'Zoom In (+)',
+          reset_zoom: 'Click to reset zoom',
+          rotate: 'Rotate (R)',
+          fullscreen: 'Fullscreen (F)'
         }
       }
     }
@@ -240,6 +282,27 @@ const resources: Record<string, PDFViewerTranslations> = {
           title: 'Błąd podglądu',
           message: 'Nie udało się wygenerować podglądu PDF. Zamiast tego spróbuj pobrać plik.',
           close: 'Zamknij'
+        },
+        editor: {
+          toggle_sidebar: 'Przełącz Pasek Boczny',
+          close: 'Zamknij (Esc)',
+          close_sidebar: 'Zamknij Pasek Boczny',
+          search_placeholder: 'Szukaj plików...',
+          files_header: 'Pliki',
+          add_files: '+ Dodaj',
+          format_badge: 'PDF',
+          present: 'Prezentuj',
+          exit_presentation: 'Wyjdź',
+          start_presentation: 'Rozpocznij Prezentację (Spacja/Strzałki do nawigacji)',
+          print_pdf: 'Drukuj PDF',
+          download_pdf: 'Pobierz PDF',
+          previous: 'Poprzedni (←)',
+          next: 'Następny (→)',
+          zoom_out: 'Pomniejsz (-)',
+          zoom_in: 'Powiększ (+)',
+          reset_zoom: 'Kliknij, aby zresetować zoom',
+          rotate: 'Obróć (R)',
+          fullscreen: 'Pełny Ekran (F)'
         }
       }
     }
@@ -328,6 +391,27 @@ const resources: Record<string, PDFViewerTranslations> = {
           title: 'Vorschaufehler',
           message: 'PDF-Vorschau konnte nicht generiert werden. Bitte versuchen Sie stattdessen, die Datei herunterzuladen.',
           close: 'Schließen'
+        },
+        editor: {
+          toggle_sidebar: 'Seitenleiste Umschalten',
+          close: 'Schließen (Esc)',
+          close_sidebar: 'Seitenleiste Schließen',
+          search_placeholder: 'Dateien suchen...',
+          files_header: 'Dateien',
+          add_files: '+ Hinzufügen',
+          format_badge: 'PDF',
+          present: 'Präsentieren',
+          exit_presentation: 'Beenden',
+          start_presentation: 'Präsentation Starten (Leertaste/Pfeile zum Navigieren)',
+          print_pdf: 'PDF Drucken',
+          download_pdf: 'PDF Herunterladen',
+          previous: 'Vorherige (←)',
+          next: 'Nächste (→)',
+          zoom_out: 'Verkleinern (-)',
+          zoom_in: 'Vergrößern (+)',
+          reset_zoom: 'Klicken zum Zurücksetzen des Zooms',
+          rotate: 'Drehen (R)',
+          fullscreen: 'Vollbild (F)'
         }
       }
     }
@@ -416,6 +500,27 @@ const resources: Record<string, PDFViewerTranslations> = {
           title: 'Error de Vista Previa',
           message: 'Error al generar la vista previa PDF. Por favor intenta descargar el archivo en su lugar.',
           close: 'Cerrar'
+        },
+        editor: {
+          toggle_sidebar: 'Alternar Barra Lateral',
+          close: 'Cerrar (Esc)',
+          close_sidebar: 'Cerrar Barra Lateral',
+          search_placeholder: 'Buscar archivos...',
+          files_header: 'Archivos',
+          add_files: '+ Añadir',
+          format_badge: 'PDF',
+          present: 'Presentar',
+          exit_presentation: 'Salir',
+          start_presentation: 'Iniciar Presentación (Espacio/Flechas para navegar)',
+          print_pdf: 'Imprimir PDF',
+          download_pdf: 'Descargar PDF',
+          previous: 'Anterior (←)',
+          next: 'Siguiente (→)',
+          zoom_out: 'Alejar (-)',
+          zoom_in: 'Acercar (+)',
+          reset_zoom: 'Clic para restablecer zoom',
+          rotate: 'Rotar (R)',
+          fullscreen: 'Pantalla Completa (F)'
         }
       }
     }
@@ -504,6 +609,27 @@ const resources: Record<string, PDFViewerTranslations> = {
           title: 'Erreur d\'Aperçu',
           message: 'Échec de la génération de l\'aperçu PDF. Veuillez essayer de télécharger le fichier à la place.',
           close: 'Fermer'
+        },
+        editor: {
+          toggle_sidebar: 'Basculer la Barre Latérale',
+          close: 'Fermer (Esc)',
+          close_sidebar: 'Fermer la Barre Latérale',
+          search_placeholder: 'Rechercher des fichiers...',
+          files_header: 'Fichiers',
+          add_files: '+ Ajouter',
+          format_badge: 'PDF',
+          present: 'Présenter',
+          exit_presentation: 'Quitter',
+          start_presentation: 'Démarrer la Présentation (Espace/Flèches pour naviguer)',
+          print_pdf: 'Imprimer PDF',
+          download_pdf: 'Télécharger PDF',
+          previous: 'Précédent (←)',
+          next: 'Suivant (→)',
+          zoom_out: 'Dézoomer (-)',
+          zoom_in: 'Zoomer (+)',
+          reset_zoom: 'Cliquer pour réinitialiser le zoom',
+          rotate: 'Tourner (R)',
+          fullscreen: 'Plein Écran (F)'
         }
       }
     }
@@ -592,6 +718,27 @@ const resources: Record<string, PDFViewerTranslations> = {
           title: 'Errore Anteprima',
           message: 'Impossibile generare l\'anteprima PDF. Si prega di provare a scaricare il file invece.',
           close: 'Chiudi'
+        },
+        editor: {
+          toggle_sidebar: 'Wissel Zijbalk',
+          close: 'Sluiten (Esc)',
+          close_sidebar: 'Zijbalk Sluiten',
+          search_placeholder: 'Zoek bestanden...',
+          files_header: 'Bestanden',
+          add_files: '+ Toevoegen',
+          format_badge: 'PDF',
+          present: 'Presenteren',
+          exit_presentation: 'Afsluiten',
+          start_presentation: 'Presentatie Starten (Spatie/Pijlen om te navigeren)',
+          print_pdf: 'PDF Afdrukken',
+          download_pdf: 'PDF Downloaden',
+          previous: 'Vorige (←)',
+          next: 'Volgende (→)',
+          zoom_out: 'Uitzoomen (-)',
+          zoom_in: 'Inzoomen (+)',
+          reset_zoom: 'Klik om zoom te resetten',
+          rotate: 'Draaien (R)',
+          fullscreen: 'Volledig Scherm (F)'
         }
       }
     }
@@ -768,6 +915,27 @@ const resources: Record<string, PDFViewerTranslations> = {
           title: 'Erro de Pré-visualização',
           message: 'Falha ao gerar pré-visualização PDF. Por favor tente baixar o arquivo em vez disso.',
           close: 'Fechar'
+        },
+        editor: {
+          toggle_sidebar: 'Alternar Barra Lateral',
+          close: 'Fechar (Esc)',
+          close_sidebar: 'Fechar Barra Lateral',
+          search_placeholder: 'Buscar arquivos...',
+          files_header: 'Arquivos',
+          add_files: '+ Adicionar',
+          format_badge: 'PDF',
+          present: 'Apresentar',
+          exit_presentation: 'Sair',
+          start_presentation: 'Iniciar Apresentação (Espaço/Setas para navegar)',
+          print_pdf: 'Imprimir PDF',
+          download_pdf: 'Baixar PDF',
+          previous: 'Anterior (←)',
+          next: 'Próximo (→)',
+          zoom_out: 'Diminuir Zoom (-)',
+          zoom_in: 'Aumentar Zoom (+)',
+          reset_zoom: 'Clique para redefinir zoom',
+          rotate: 'Rotacionar (R)',
+          fullscreen: 'Tela Cheia (F)'
         }
       }
     }
@@ -856,6 +1024,27 @@ const resources: Record<string, PDFViewerTranslations> = {
           title: 'Lỗi Xem Trước',
           message: 'Không thể tạo xem trước PDF. Vui lòng thử tải xuống tệp thay thế.',
           close: 'Đóng'
+        },
+        editor: {
+          toggle_sidebar: 'Chuyển Thanh Bên',
+          close: 'Đóng (Esc)',
+          close_sidebar: 'Đóng Thanh Bên',
+          search_placeholder: 'Tìm kiếm tệp...',
+          files_header: 'Tệp',
+          add_files: '+ Thêm',
+          format_badge: 'PDF',
+          present: 'Trình Bày',
+          exit_presentation: 'Thoát',
+          start_presentation: 'Bắt Đầu Trình Bày (Phím Cách/Mũi Tên để điều hướng)',
+          print_pdf: 'In PDF',
+          download_pdf: 'Tải Xuống PDF',
+          previous: 'Trước (←)',
+          next: 'Tiếp (→)',
+          zoom_out: 'Thu Nhỏ (-)',
+          zoom_in: 'Phóng To (+)',
+          reset_zoom: 'Nhấp để đặt lại zoom',
+          rotate: 'Xoay (R)',
+          fullscreen: 'Toàn Màn Hình (F)'
         }
       }
     }
@@ -944,6 +1133,27 @@ const resources: Record<string, PDFViewerTranslations> = {
           title: 'Önizleme Hatası',
           message: 'PDF önizlemesi oluşturulamadı. Lütfen bunun yerine dosyayı indirmeyi deneyin.',
           close: 'Kapat'
+        },
+        editor: {
+          toggle_sidebar: 'Kenar Çubuğunu Aç/Kapat',
+          close: 'Kapat (Esc)',
+          close_sidebar: 'Kenar Çubuğunu Kapat',
+          search_placeholder: 'Dosyaları ara...',
+          files_header: 'Dosyalar',
+          add_files: '+ Ekle',
+          format_badge: 'PDF',
+          present: 'Sun',
+          exit_presentation: 'Çık',
+          start_presentation: 'Sunumu Başlat (Gezinmek için Boşluk/Ok)',
+          print_pdf: 'PDF Yazdır',
+          download_pdf: 'PDF İndir',
+          previous: 'Önceki (←)',
+          next: 'Sonraki (→)',
+          zoom_out: 'Uzaklaştır (-)',
+          zoom_in: 'Yakınlaştır (+)',
+          reset_zoom: 'Yakınlaştırmayı sıfırlamak için tıklayın',
+          rotate: 'Döndür (R)',
+          fullscreen: 'Tam Ekran (F)'
         }
       }
     }
@@ -1032,6 +1242,27 @@ const resources: Record<string, PDFViewerTranslations> = {
           title: 'Ошибка Предпросмотра',
           message: 'Не удалось создать предпросмотр PDF. Пожалуйста, попробуйте скачать файл вместо этого.',
           close: 'Закрыть'
+        },
+        editor: {
+          toggle_sidebar: 'Переключить Боковую Панель',
+          close: 'Закрыть (Esc)',
+          close_sidebar: 'Закрыть Боковую Панель',
+          search_placeholder: 'Поиск файлов...',
+          files_header: 'Файлы',
+          add_files: '+ Добавить',
+          format_badge: 'PDF',
+          present: 'Презентовать',
+          exit_presentation: 'Выход',
+          start_presentation: 'Начать Презентацию (Пробел/Стрелки для навигации)',
+          print_pdf: 'Печать PDF',
+          download_pdf: 'Скачать PDF',
+          previous: 'Предыдущий (←)',
+          next: 'Следующий (→)',
+          zoom_out: 'Уменьшить (-)',
+          zoom_in: 'Увеличить (+)',
+          reset_zoom: 'Нажмите, чтобы сбросить масштаб',
+          rotate: 'Повернуть (R)',
+          fullscreen: 'Полный Экран (F)'
         }
       }
     }
@@ -1120,6 +1351,27 @@ const resources: Record<string, PDFViewerTranslations> = {
           title: 'خطأ المعاينة',
           message: 'فشل في إنشاء معاينة PDF. يرجى محاولة تحميل الملف بدلاً من ذلك.',
           close: 'إغلاق'
+        },
+        editor: {
+          toggle_sidebar: 'تبديل الشريط الجانبي',
+          close: 'إغلاق (Esc)',
+          close_sidebar: 'إغلاق الشريط الجانبي',
+          search_placeholder: 'البحث عن الملفات...',
+          files_header: 'الملفات',
+          add_files: '+ إضافة',
+          format_badge: 'PDF',
+          present: 'عرض',
+          exit_presentation: 'خروج',
+          start_presentation: 'بدء العرض (المسافة/الأسهم للتنقل)',
+          print_pdf: 'طباعة PDF',
+          download_pdf: 'تحميل PDF',
+          previous: 'السابق (←)',
+          next: 'التالي (→)',
+          zoom_out: 'تصغير (-)',
+          zoom_in: 'تكبير (+)',
+          reset_zoom: 'انقر لإعادة تعيين التكبير',
+          rotate: 'تدوير (R)',
+          fullscreen: 'ملء الشاشة (F)'
         }
       }
     }
@@ -1208,6 +1460,27 @@ const resources: Record<string, PDFViewerTranslations> = {
           title: 'ข้อผิดพลาดตัวอย่าง',
           message: 'ไม่สามารถสร้างตัวอย่าง PDF ได้ กรุณาลองดาวน์โหลดไฟล์แทน',
           close: 'ปิด'
+        },
+        editor: {
+          toggle_sidebar: 'สลับแถบด้านข้าง',
+          close: 'ปิด (Esc)',
+          close_sidebar: 'ปิดแถบด้านข้าง',
+          search_placeholder: 'ค้นหาไฟล์...',
+          files_header: 'ไฟล์',
+          add_files: '+ เพิ่ม',
+          format_badge: 'PDF',
+          present: 'นำเสนอ',
+          exit_presentation: 'ออก',
+          start_presentation: 'เริ่มการนำเสนอ (Space/ลูกศรเพื่อนำทาง)',
+          print_pdf: 'พิมพ์ PDF',
+          download_pdf: 'ดาวน์โหลด PDF',
+          previous: 'ก่อนหน้า (←)',
+          next: 'ถัดไป (→)',
+          zoom_out: 'ซูมออก (-)',
+          zoom_in: 'ซูมเข้า (+)',
+          reset_zoom: 'คลิกเพื่อรีเซ็ตซูม',
+          rotate: 'หมุน (R)',
+          fullscreen: 'เต็มหน้าจอ (F)'
         }
       }
     }
@@ -1296,6 +1569,27 @@ const resources: Record<string, PDFViewerTranslations> = {
           title: 'プレビューエラー',
           message: 'PDFプレビューを生成できませんでした。代わりにファイルをダウンロードしてください。',
           close: '閉じる'
+        },
+        editor: {
+          toggle_sidebar: 'サイドバーを切り替え',
+          close: '閉じる (Esc)',
+          close_sidebar: 'サイドバーを閉じる',
+          search_placeholder: 'ファイルを検索...',
+          files_header: 'ファイル',
+          add_files: '+ 追加',
+          format_badge: 'PDF',
+          present: 'プレゼン',
+          exit_presentation: '終了',
+          start_presentation: 'プレゼンテーション開始 (スペース/矢印でナビゲート)',
+          print_pdf: 'PDFを印刷',
+          download_pdf: 'PDFをダウンロード',
+          previous: '前へ (←)',
+          next: '次へ (→)',
+          zoom_out: 'ズームアウト (-)',
+          zoom_in: 'ズームイン (+)',
+          reset_zoom: 'クリックしてズームをリセット',
+          rotate: '回転 (R)',
+          fullscreen: 'フルスクリーン (F)'
         }
       }
     }
@@ -1384,6 +1678,27 @@ const resources: Record<string, PDFViewerTranslations> = {
           title: '预览错误',
           message: '无法生成PDF预览。请改为尝试下载文件。',
           close: '关闭'
+        },
+        editor: {
+          toggle_sidebar: '切换侧边栏',
+          close: '关闭 (Esc)',
+          close_sidebar: '关闭侧边栏',
+          search_placeholder: '搜索文件...',
+          files_header: '文件',
+          add_files: '+ 添加',
+          format_badge: 'PDF',
+          present: '演示',
+          exit_presentation: '退出',
+          start_presentation: '开始演示 (空格/箭头键导航)',
+          print_pdf: '打印PDF',
+          download_pdf: '下载PDF',
+          previous: '上一个 (←)',
+          next: '下一个 (→)',
+          zoom_out: '缩小 (-)',
+          zoom_in: '放大 (+)',
+          reset_zoom: '点击重置缩放',
+          rotate: '旋转 (R)',
+          fullscreen: '全屏 (F)'
         }
       }
     }
@@ -1472,6 +1787,27 @@ const resources: Record<string, PDFViewerTranslations> = {
           title: 'Kesalahan Pratinjau',
           message: 'Gagal menghasilkan pratinjau PDF. Silakan coba unduh file sebagai gantinya.',
           close: 'Tutup'
+        },
+        editor: {
+          toggle_sidebar: 'Alihkan Sidebar',
+          close: 'Tutup (Esc)',
+          close_sidebar: 'Tutup Sidebar',
+          search_placeholder: 'Cari file...',
+          files_header: 'File',
+          add_files: '+ Tambah',
+          format_badge: 'PDF',
+          present: 'Presentasikan',
+          exit_presentation: 'Keluar',
+          start_presentation: 'Mulai Presentasi (Spasi/Panah untuk navigasi)',
+          print_pdf: 'Cetak PDF',
+          download_pdf: 'Unduh PDF',
+          previous: 'Sebelumnya (←)',
+          next: 'Selanjutnya (→)',
+          zoom_out: 'Perkecil (-)',
+          zoom_in: 'Perbesar (+)',
+          reset_zoom: 'Klik untuk mengatur ulang zoom',
+          rotate: 'Putar (R)',
+          fullscreen: 'Layar Penuh (F)'
         }
       }
     }
@@ -1560,6 +1896,27 @@ const resources: Record<string, PDFViewerTranslations> = {
           title: 'Förhandsvisningsfel',
           message: 'Kunde inte generera PDF-förhandsvisning. Försök ladda ner filen istället.',
           close: 'Stäng'
+        },
+        editor: {
+          toggle_sidebar: 'Växla Sidofält',
+          close: 'Stäng (Esc)',
+          close_sidebar: 'Stäng Sidofält',
+          search_placeholder: 'Sök filer...',
+          files_header: 'Filer',
+          add_files: '+ Lägg Till',
+          format_badge: 'PDF',
+          present: 'Presentera',
+          exit_presentation: 'Avsluta',
+          start_presentation: 'Starta Presentation (Mellanslag/Pilar för navigering)',
+          print_pdf: 'Skriv Ut PDF',
+          download_pdf: 'Ladda Ner PDF',
+          previous: 'Föregående (←)',
+          next: 'Nästa (→)',
+          zoom_out: 'Zooma Ut (-)',
+          zoom_in: 'Zooma In (+)',
+          reset_zoom: 'Klicka för att återställa zoom',
+          rotate: 'Rotera (R)',
+          fullscreen: 'Helskärm (F)'
         }
       }
     }
