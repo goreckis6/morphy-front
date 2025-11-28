@@ -825,6 +825,7 @@ function App() {
         <Route path="/ja/convert/dng-to-webp" element={<DNGToWebPConverter />} />
         <Route path="/zh/convert/dng-to-webp" element={<DNGToWebPConverter />} />
         <Route path="/de/convert/doc-to-csv" element={<DOCToCSVConverter />} />
+        <Route path="/id/convert/doc-to-csv" element={<DOCToCSVConverter />} />
         <Route path="/de/convert/doc-to-epub" element={<DOCToEPUBConverter />} />
         <Route path="/de/convert/doc-to-mobi" element={<DOCToMOBIConverter />} />
         <Route path="/de/convert/doc-to-odt" element={<DOCToODTConverter />} />
