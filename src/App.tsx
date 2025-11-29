@@ -291,6 +291,19 @@ function App() {
     };
   }, []);
 
+  // Ensure mouse wheel scrolling works everywhere
+  React.useEffect(() => {
+    // Ensure body and html elements allow scrolling
+    document.body.style.overflowY = 'auto';
+    document.documentElement.style.overflowY = 'auto';
+    
+    // Make sure scrolling is enabled on the root element
+    const root = document.getElementById('root');
+    if (root) {
+      root.style.overflowY = 'auto';
+    }
+  }, []);
+
   return (
     <Router>
       <Helmet>
