@@ -261,6 +261,36 @@ function App() {
     (window as any).addToConversionCounter = addToConversionCounter;
   }, []);
 
+  // Global safeguard: ensure body overflow is never stuck on hidden
+  React.useEffect(() => {
+    const checkOverflow = () => {
+      const currentPath = window.location.pathname;
+      const isEditorPage = currentPath.includes('/editor');
+      
+      // If we're not on an editor page and overflow is hidden, restore it
+      if (!isEditorPage && document.body.style.overflow === 'hidden') {
+        // Small delay to let editor cleanup run first
+        setTimeout(() => {
+          if (document.body.style.overflow === 'hidden') {
+            document.body.style.overflow = '';
+          }
+        }, 100);
+      }
+    };
+
+    // Check on mount and periodically
+    checkOverflow();
+    const interval = setInterval(checkOverflow, 500);
+    
+    return () => {
+      clearInterval(interval);
+      // Final safety: ensure overflow is restored on unmount
+      if (document.body.style.overflow === 'hidden') {
+        document.body.style.overflow = '';
+      }
+    };
+  }, []);
+
   return (
     <Router>
       <Helmet>

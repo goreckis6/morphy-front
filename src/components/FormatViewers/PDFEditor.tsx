@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Search, X, Download, Printer, ZoomIn, ZoomOut, Maximize2, Play, ChevronLeft, ChevronRight, Menu, ChevronUp, ChevronDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from '../LanguageSwitcher';
@@ -30,10 +31,31 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
+  const location = useLocation();
+  
   // Prevent body scroll when editor is open
   useEffect(() => {
     document.body.style.overflow = 'hidden';
     return () => {
+      document.body.style.overflow = '';
+    };
+  }, []);
+
+  // Ensure overflow is restored when route changes
+  useEffect(() => {
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [location.pathname]);
+
+  // Safety net: restore overflow on page unload
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      document.body.style.overflow = '';
+    };
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
       document.body.style.overflow = '';
     };
   }, []);
