@@ -104,7 +104,7 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
 
         if (response.ok) {
           let html = await response.text();
-          // Hide the red bar controls in the PDF HTML and fix background
+          // Hide the red bar controls in the PDF HTML and fix background, add smooth scrolling
           html = html.replace(/<style>([\s\S]*?)<\/style>/i, (match, styles) => {
             return `<style>${styles}
               .toolbar, .header-bar, [class*="toolbar"], [class*="header"] {
@@ -114,9 +114,16 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
                 background: white !important;
                 margin: 0 !important;
                 padding: 0 !important;
+                overflow-y: auto !important;
+                scroll-behavior: smooth !important;
               }
               html {
                 background: white !important;
+                overflow-y: auto !important;
+                scroll-behavior: smooth !important;
+              }
+              * {
+                scroll-behavior: smooth !important;
               }
             </style>`;
           });
@@ -130,9 +137,16 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
                 background: white !important;
                 margin: 0 !important;
                 padding: 0 !important;
+                overflow-y: auto !important;
+                scroll-behavior: smooth !important;
               }
               html {
                 background: white !important;
+                overflow-y: auto !important;
+                scroll-behavior: smooth !important;
+              }
+              * {
+                scroll-behavior: smooth !important;
               }
             </style>`);
           }
@@ -210,13 +224,34 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
   };
 
   const scrollToPage = (page: number) => {
-    setCurrentPage(page);
     if (iframeRef.current?.contentWindow) {
       const iframe = iframeRef.current.contentWindow;
-      // Try to find page element and scroll to it
-      const pageHeight = iframe.innerHeight || 800;
-      const scrollPosition = (page - 1) * pageHeight;
-      iframe.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+      
+      try {
+        const iframeDoc = iframe.document;
+        // Try to find page elements
+        const pageElements = iframeDoc.querySelectorAll('[data-page], .page, page');
+        
+        if (pageElements.length > 0 && pageElements[page - 1]) {
+          // Scroll to specific page element
+          const targetPage = pageElements[page - 1] as HTMLElement;
+          const scrollTop = targetPage.offsetTop - 20; // Small offset from top
+          iframe.scrollTo({ top: scrollTop, behavior: 'smooth' });
+        } else {
+          // Fallback: calculate scroll position
+          const docHeight = iframeDoc.documentElement.scrollHeight || iframeDoc.body.scrollHeight;
+          const pageHeight = docHeight / currentTotalPages;
+          const scrollPosition = (page - 1) * pageHeight;
+          iframe.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+        }
+      } catch (error) {
+        // Cross-origin error, use viewport-based calculation
+        const viewportHeight = iframe.innerHeight || 800;
+        const scrollPosition = (page - 1) * viewportHeight;
+        iframe.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+      }
+      
+      setCurrentPage(page);
     }
   };
 
@@ -371,25 +406,100 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
     }
   }, [currentPdfHtml, selectedIndex]);
 
-  // Handle scroll-based page navigation
+  // Handle scroll-based page navigation with proper page detection
   useEffect(() => {
     const iframe = iframeRef.current?.contentWindow;
-    if (!iframe) return;
+    if (!iframe || currentTotalPages <= 1) return;
+
+    let scrollTimeout: NodeJS.Timeout;
+    let isScrolling = false;
 
     const handleScroll = () => {
-      const scrollTop = iframe.scrollY || iframe.pageYOffset || 0;
-      const pageHeight = iframe.innerHeight || 800;
-      const newPage = Math.floor(scrollTop / pageHeight) + 1;
-      if (newPage !== currentPage && newPage >= 1 && newPage <= currentTotalPages) {
-        setCurrentPage(newPage);
-      }
+      if (isScrolling) return; // Prevent updates while programmatically scrolling
+      
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        try {
+          const scrollTop = iframe.scrollY || iframe.pageYOffset || 0;
+          const iframeDoc = iframe.document;
+          
+          // Try to find page elements in the PDF
+          const pageElements = iframeDoc.querySelectorAll('[data-page], .page, page');
+          let newPage = currentPage;
+          
+          if (pageElements.length > 0) {
+            // If PDF has page elements, find which one is in view
+            let closestPage = 1;
+            let minDistance = Infinity;
+            
+            pageElements.forEach((el, index) => {
+              const rect = el.getBoundingClientRect();
+              const elementTop = rect.top + scrollTop;
+              const distance = Math.abs(scrollTop - elementTop);
+              
+              if (distance < minDistance && scrollTop >= elementTop - 100) {
+                minDistance = distance;
+                closestPage = index + 1;
+              }
+            });
+            
+            newPage = closestPage;
+          } else {
+            // Fallback: calculate based on document height
+            const docHeight = iframeDoc.documentElement.scrollHeight || iframeDoc.body.scrollHeight;
+            const viewportHeight = iframe.innerHeight || 800;
+            const pageHeight = docHeight / currentTotalPages;
+            newPage = Math.min(Math.max(Math.floor(scrollTop / pageHeight) + 1, 1), currentTotalPages);
+          }
+          
+          if (newPage !== currentPage && newPage >= 1 && newPage <= currentTotalPages) {
+            setCurrentPage(newPage);
+          }
+        } catch (error) {
+          // Cross-origin or other error, use fallback calculation
+          const scrollTop = iframe.scrollY || iframe.pageYOffset || 0;
+          const viewportHeight = iframe.innerHeight || 800;
+          const newPage = Math.min(Math.max(Math.floor(scrollTop / viewportHeight) + 1, 1), currentTotalPages);
+          if (newPage !== currentPage) {
+            setCurrentPage(newPage);
+          }
+        }
+      }, 50); // Throttle scroll events
     };
 
-    iframe.addEventListener('scroll', handleScroll);
+    iframe.addEventListener('scroll', handleScroll, { passive: true });
+    
+    // Also listen for wheel events for better responsiveness
+    const handleWheel = () => {
+      handleScroll();
+    };
+    
+    iframe.addEventListener('wheel', handleWheel, { passive: true });
+    
     return () => {
+      clearTimeout(scrollTimeout);
       iframe.removeEventListener('scroll', handleScroll);
+      iframe.removeEventListener('wheel', handleWheel);
     };
   }, [currentPage, currentTotalPages]);
+
+  // Auto-scroll sidebar to show active page
+  useEffect(() => {
+    if (currentPage > 0 && isPagesSidebarOpen) {
+      const thumbElement = document.getElementById(`page-thumb-${currentPage}`);
+      const sidebar = document.getElementById('pages-sidebar');
+      
+      if (thumbElement && sidebar) {
+        const thumbRect = thumbElement.getBoundingClientRect();
+        const sidebarRect = sidebar.getBoundingClientRect();
+        
+        // Check if thumb is outside visible area
+        if (thumbRect.top < sidebarRect.top || thumbRect.bottom > sidebarRect.bottom) {
+          thumbElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+    }
+  }, [currentPage, isPagesSidebarOpen]);
 
   return (
     <div className="fixed inset-0 z-50 flex flex-col bg-white overflow-hidden" ref={viewerRef}>
@@ -545,22 +655,30 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
                   <X className="w-4 h-4" />
                 </button>
               </div>
-              <div className="flex-1 overflow-y-auto scroller p-2 space-y-2">
+              <div className="flex-1 overflow-y-auto scroller p-2 space-y-2" id="pages-sidebar">
                 {Array.from({ length: currentTotalPages }, (_, i) => i + 1).map((pageNum) => (
                   <button
                     key={pageNum}
                     onClick={() => handlePageClick(pageNum)}
                     className={`w-full p-2 rounded-lg border-2 transition-all text-left ${
                       currentPage === pageNum
-                        ? 'border-pink-500 bg-pink-50 shadow-sm'
+                        ? 'border-pink-500 bg-pink-50 shadow-sm ring-2 ring-pink-200'
                         : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
                     }`}
+                    id={`page-thumb-${pageNum}`}
                   >
-                    <div className="flex items-center justify-center w-full h-24 sm:h-32 bg-gray-100 rounded mb-2 overflow-hidden">
-                      <span className="text-xs font-medium text-gray-500">{pageNum}</span>
+                    <div className="flex items-center justify-center w-full h-24 sm:h-32 bg-gray-100 rounded mb-2 overflow-hidden relative">
+                      {/* Page number overlay */}
+                      <span className="absolute top-1 left-1 bg-black/50 text-white text-xs px-1.5 py-0.5 rounded font-medium z-10">
+                        {pageNum}
+                      </span>
+                      {/* Placeholder for page preview - in future can show actual thumbnail */}
+                      <div className="w-full h-full flex items-center justify-center">
+                        <span className="text-xs font-medium text-gray-400">{t('viewers.pdf.editor.page_preview', 'Page Preview')}</span>
+                      </div>
                     </div>
                     <p className={`text-xs text-center font-medium ${
-                      currentPage === pageNum ? 'text-pink-700' : 'text-gray-600'
+                      currentPage === pageNum ? 'text-pink-700 font-bold' : 'text-gray-600'
                     }`}>
                       {t('viewers.pdf.editor.page', 'Page')} {pageNum}
                     </p>
@@ -738,8 +856,10 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
                   style={{ 
                     display: 'block',
                     margin: '0 auto',
-                    background: 'white'
+                    background: 'white',
+                    overflow: 'auto'
                   }}
+                  scrolling="yes"
                 />
               </div>
             ) : currentPdfUrl ? (
@@ -753,8 +873,10 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
                   transformOrigin: 'center center',
                   display: 'block',
                   margin: '0 auto',
-                  background: 'white'
+                  background: 'white',
+                  overflow: 'auto'
                 }}
+                scrolling="yes"
               />
             ) : null}
 
