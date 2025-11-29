@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from '../LanguageSwitcher';
 import { FileProcessor } from '../../utils/fileProcessing';
 import { PDFDocument } from 'pdf-lib';
+import * as pdfjsLib from 'pdfjs-dist';
 
 interface PDFEditorProps {
   files: File[];
@@ -22,6 +23,8 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
   const [pdfUrls, setPdfUrls] = useState<Map<number, string>>(new Map());
   const [pdfHtml, setPdfHtml] = useState<Map<number, string>>(new Map());
   const [isLoading, setIsLoading] = useState<Map<number, boolean>>(new Map());
+  const [pdfDocuments, setPdfDocuments] = useState<Map<number, any>>(new Map());
+  const [pageThumbnails, setPageThumbnails] = useState<Map<string, string>>(new Map());
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [isPresentationMode, setIsPresentationMode] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -96,11 +99,18 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
     };
   }, []);
 
-  // Create object URLs for PDFs and fetch preview HTML
+  // Initialize PDF.js worker
+  useEffect(() => {
+    pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
+  }, []);
+
+  // Create object URLs for PDFs and load with pdfjs-dist
   useEffect(() => {
     const urls = new Map<number, string>();
+    const pdfDocs = new Map<number, any>();
     const htmls = new Map<number, string>();
     const loading = new Map<number, boolean>();
+    const thumbnails = new Map<string, string>();
 
     files.forEach(async (file, index) => {
       const url = URL.createObjectURL(file);
@@ -108,89 +118,119 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
       loading.set(index, true);
       setIsLoading(new Map(loading));
 
-      // First, get the actual page count from the PDF file
       try {
+        // Load PDF with pdfjs-dist
         const arrayBuffer = await file.arrayBuffer();
-        const pdfDoc = await PDFDocument.load(arrayBuffer);
-        const pageCount = pdfDoc.getPageCount();
+        const loadingTask = pdfjsLib.getDocument({ data: arrayBuffer });
+        const pdfDoc = await loadingTask.promise;
+        
+        const pageCount = pdfDoc.numPages;
+        pdfDocs.set(index, pdfDoc);
+        setPdfDocuments(new Map(pdfDocs));
+        
         setTotalPages(prev => {
           const newMap = new Map(prev);
           newMap.set(index, pageCount);
           return newMap;
         });
+
+        // Generate thumbnails for first few pages
+        const thumbnailPromises: Promise<void>[] = [];
+        for (let pageNum = 1; pageNum <= Math.min(pageCount, 10); pageNum++) {
+          thumbnailPromises.push(
+            (async () => {
+              try {
+                const page = await pdfDoc.getPage(pageNum);
+                const viewport = page.getViewport({ scale: 0.3 });
+                const canvas = document.createElement('canvas');
+                const context = canvas.getContext('2d');
+                if (!context) return;
+                
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+                
+                await page.render({
+                  canvasContext: context,
+                  viewport: viewport
+                }).promise;
+                
+                const thumbnailUrl = canvas.toDataURL();
+                thumbnails.set(`${index}-${pageNum}`, thumbnailUrl);
+                setPageThumbnails(new Map(thumbnails));
+              } catch (error) {
+                console.error(`Error generating thumbnail for page ${pageNum}:`, error);
+              }
+            })()
+          );
+        }
+        
+        // Also fetch HTML preview as fallback
+        try {
+          const formData = new FormData();
+          formData.append('file', file);
+          const response = await fetch('https://api.morphyhub.com/api/preview/pdf', {
+            method: 'POST',
+            body: formData,
+          });
+          if (response.ok) {
+            let html = await response.text();
+            html = html.replace(/<style>([\s\S]*?)<\/style>/i, (match, styles) => {
+              return `<style>${styles}
+                .toolbar, .header-bar, [class*="toolbar"], [class*="header"] {
+                  display: none !important;
+                }
+                body {
+                  background: white !important;
+                  margin: 0 !important;
+                  padding: 0 !important;
+                  overflow-y: auto !important;
+                  scroll-behavior: smooth !important;
+                }
+                html {
+                  background: white !important;
+                  overflow-y: auto !important;
+                  scroll-behavior: smooth !important;
+                }
+                * {
+                  scroll-behavior: smooth !important;
+                }
+              </style>`;
+            });
+            if (!html.includes('<style>')) {
+              html = html.replace('<head>', `<head><style>
+                .toolbar, .header-bar, [class*="toolbar"], [class*="header"] {
+                  display: none !important;
+                }
+                body {
+                  background: white !important;
+                  margin: 0 !important;
+                  padding: 0 !important;
+                  overflow-y: auto !important;
+                  scroll-behavior: smooth !important;
+                }
+                html {
+                  background: white !important;
+                  overflow-y: auto !important;
+                  scroll-behavior: smooth !important;
+                }
+                * {
+                  scroll-behavior: smooth !important;
+                }
+              </style>`);
+            }
+            htmls.set(index, html);
+            setPdfHtml(new Map(htmls));
+          }
+        } catch (error) {
+          console.error('Error loading PDF HTML preview:', error);
+        }
       } catch (error) {
-        console.error('Error reading PDF page count:', error);
-        // Default to 1 page if we can't read it
+        console.error('Error loading PDF with pdfjs-dist:', error);
         setTotalPages(prev => {
           const newMap = new Map(prev);
           newMap.set(index, 1);
           return newMap;
         });
-      }
-
-      // Then fetch the preview HTML
-      try {
-        const formData = new FormData();
-        formData.append('file', file);
-
-        const response = await fetch('https://api.morphyhub.com/api/preview/pdf', {
-          method: 'POST',
-          body: formData,
-        });
-
-        if (response.ok) {
-          let html = await response.text();
-          // Hide the red bar controls in the PDF HTML and fix background, add smooth scrolling
-          html = html.replace(/<style>([\s\S]*?)<\/style>/i, (match, styles) => {
-            return `<style>${styles}
-              .toolbar, .header-bar, [class*="toolbar"], [class*="header"] {
-                display: none !important;
-              }
-              body {
-                background: white !important;
-                margin: 0 !important;
-                padding: 0 !important;
-                overflow-y: auto !important;
-                scroll-behavior: smooth !important;
-              }
-              html {
-                background: white !important;
-                overflow-y: auto !important;
-                scroll-behavior: smooth !important;
-              }
-              * {
-                scroll-behavior: smooth !important;
-              }
-            </style>`;
-          });
-          // Also try to hide by adding style tag if no existing style tag
-          if (!html.includes('<style>')) {
-            html = html.replace('<head>', `<head><style>
-              .toolbar, .header-bar, [class*="toolbar"], [class*="header"] {
-                display: none !important;
-              }
-              body {
-                background: white !important;
-                margin: 0 !important;
-                padding: 0 !important;
-                overflow-y: auto !important;
-                scroll-behavior: smooth !important;
-              }
-              html {
-                background: white !important;
-                overflow-y: auto !important;
-                scroll-behavior: smooth !important;
-              }
-              * {
-                scroll-behavior: smooth !important;
-              }
-            </style>`);
-          }
-          htmls.set(index, html);
-          setPdfHtml(new Map(htmls));
-        }
-      } catch (error) {
-        console.error('Error loading PDF preview:', error);
       } finally {
         loading.set(index, false);
         setIsLoading(new Map(loading));
@@ -200,8 +240,12 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
     setPdfUrls(new Map(urls));
 
     return () => {
-      // Cleanup object URLs
       urls.forEach(url => URL.revokeObjectURL(url));
+      thumbnails.forEach(url => {
+        if (url.startsWith('data:')) {
+          // Data URLs don't need cleanup, but canvas URLs might
+        }
+      });
     };
   }, [files]);
 
@@ -216,6 +260,8 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
   const currentPdfHtml = pdfHtml.get(currentFileIndex) || '';
   const currentIsLoading = isLoading.get(currentFileIndex) || false;
   const currentTotalPages = totalPages.get(currentFileIndex) || 1;
+  const currentPdfDoc = pdfDocuments.get(currentFileIndex);
+  const pagesContainerRef = useRef<HTMLDivElement>(null);
 
   const handleNext = useCallback(() => {
     if (selectedIndex < filteredFiles.length - 1) {
@@ -264,19 +310,24 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
     setCurrentPage(page);
     lastPageRef.current = page;
 
-    const container = getScrollContainer();
-    if (!container) {
+    // Try to find page element by ID first
+    const pageElement = document.getElementById(`pdf-page-${currentFileIndex}-${page}`);
+    if (pageElement) {
+      pageElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
       return;
     }
 
-    const scrollHeight = container.scrollHeight;
-    const pageHeight = scrollHeight / currentTotalPages;
-    const targetScroll = (page - 1) * pageHeight;
-
-    container.scrollTo({
-      top: targetScroll,
-      behavior: 'smooth',
-    });
+    // Fallback: use scroll container
+    const container = getScrollContainer();
+    if (container) {
+      const scrollHeight = container.scrollHeight;
+      const pageHeight = scrollHeight / currentTotalPages;
+      const targetScroll = (page - 1) * pageHeight;
+      container.scrollTo({
+        top: targetScroll,
+        behavior: 'smooth',
+      });
+    }
   };
 
   const handlePageClick = (page: number) => {
@@ -420,16 +471,99 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
     return () => window.removeEventListener('keydown', handleKeyPress);
   }, [selectedIndex, filteredFiles.length, isPresentationMode, handleNext, handlePrevious, onClose, handleZoomIn, handleZoomOut, toggleFullscreen]);
 
-  // Update iframe content when PDF HTML changes
+  // Render PDF pages using pdfjs-dist
   useEffect(() => {
-    if (iframeRef.current && currentPdfHtml) {
-      iframeRef.current.contentWindow?.document.open();
-      iframeRef.current.contentWindow?.document.write(currentPdfHtml);
-      iframeRef.current.contentWindow?.document.close();
-      setCurrentPage(1); // Reset to first page when switching files
-      lastPageRef.current = 1; // Also update ref
+    if (!currentPdfDoc || !pagesContainerRef.current) {
+      // Fallback to iframe if pdfjs-dist not available
+      if (iframeRef.current && currentPdfHtml) {
+        iframeRef.current.contentWindow?.document.open();
+        iframeRef.current.contentWindow?.document.write(currentPdfHtml);
+        iframeRef.current.contentWindow?.document.close();
+        setCurrentPage(1);
+        lastPageRef.current = 1;
+      }
+      return;
     }
-  }, [currentPdfHtml, selectedIndex]);
+    
+    const container = pagesContainerRef.current;
+    container.innerHTML = '';
+    setCurrentPage(1);
+    lastPageRef.current = 1;
+
+    const renderPages = async () => {
+      for (let pageNum = 1; pageNum <= currentTotalPages; pageNum++) {
+        try {
+          const page = await currentPdfDoc.getPage(pageNum);
+          const viewport = page.getViewport({ scale: zoom / 100 });
+          
+          const pageDiv = document.createElement('div');
+          pageDiv.id = `pdf-page-${currentFileIndex}-${pageNum}`;
+          pageDiv.className = 'pdf-page mb-4 mx-auto bg-white shadow-lg';
+          pageDiv.style.width = `${viewport.width}px`;
+          pageDiv.style.minHeight = `${viewport.height}px`;
+          
+          const canvas = document.createElement('canvas');
+          const context = canvas.getContext('2d');
+          if (!context) continue;
+          
+          canvas.height = viewport.height;
+          canvas.width = viewport.width;
+          
+          await page.render({
+            canvasContext: context,
+            viewport: viewport
+          }).promise;
+          
+          pageDiv.appendChild(canvas);
+          container.appendChild(pageDiv);
+        } catch (error) {
+          console.error(`Error rendering page ${pageNum}:`, error);
+        }
+      }
+    };
+    
+    renderPages();
+  }, [currentPdfDoc, currentTotalPages, currentFileIndex, zoom, currentPdfHtml, selectedIndex]);
+
+  // Use Intersection Observer for scroll detection when using pdfjs-dist
+  useEffect(() => {
+    if (!currentPdfDoc || currentTotalPages <= 1 || !containerRef.current) return;
+    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const pageId = entry.target.id;
+            const match = pageId.match(/pdf-page-\d+-(\d+)/);
+            if (match) {
+              const pageNum = parseInt(match[1], 10);
+              if (pageNum !== lastPageRef.current) {
+                lastPageRef.current = pageNum;
+                setCurrentPage(pageNum);
+              }
+            }
+          }
+        });
+      },
+      {
+        root: containerRef.current,
+        rootMargin: '-20% 0px -20% 0px',
+        threshold: 0.5
+      }
+    );
+
+    // Observe all page elements
+    for (let pageNum = 1; pageNum <= currentTotalPages; pageNum++) {
+      const pageElement = document.getElementById(`pdf-page-${currentFileIndex}-${pageNum}`);
+      if (pageElement) {
+        observer.observe(pageElement);
+      }
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [currentPdfDoc, currentTotalPages, currentFileIndex]);
 
   // Handle scroll-based page navigation with reliable container tracking
   useEffect(() => {
@@ -701,9 +835,15 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
                         }`}>
                           {pageNum}
                         </span>
-                        {/* Page preview - using canvas or iframe to show actual page */}
+                        {/* Page preview - using thumbnail if available, otherwise placeholder */}
                         <div className="w-full h-full flex items-center justify-center relative">
-                          {currentPdfUrl ? (
+                          {pageThumbnails.get(`${currentFileIndex}-${pageNum}`) ? (
+                            <img
+                              src={pageThumbnails.get(`${currentFileIndex}-${pageNum}`)}
+                              alt={`Page ${pageNum}`}
+                              className="w-full h-full object-contain"
+                            />
+                          ) : currentPdfUrl ? (
                             <iframe
                               src={`${currentPdfUrl}#page=${pageNum}`}
                               className="w-full h-full border-0 pointer-events-none opacity-60"
@@ -886,12 +1026,21 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
               </>
             )}
 
-            {/* PDF iframe */}
+            {/* PDF Viewer - using pdfjs-dist if available, otherwise fallback to iframe */}
             {currentIsLoading ? (
               <div className="flex flex-col items-center justify-center text-gray-500">
                 <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-pink-600 mb-4"></div>
                 <p className="text-sm">{t('viewers.pdf.loading_window.title', 'Loading PDF...')}</p>
               </div>
+            ) : currentPdfDoc ? (
+              <div 
+                ref={pagesContainerRef}
+                className="w-full py-4 px-2 flex flex-col items-center"
+                style={{
+                  transform: `scale(${zoom / 100})`,
+                  transformOrigin: 'top center',
+                }}
+              />
             ) : currentPdfHtml ? (
               <div 
                 className="w-full h-full bg-white"
