@@ -227,6 +227,9 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
     const iframe = iframeRef.current;
     if (!iframe) return;
     
+    // Update current page immediately for UI feedback
+    setCurrentPage(page);
+    
     try {
       const iframeWindow = iframe.contentWindow;
       if (!iframeWindow) return;
@@ -234,19 +237,14 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
       const viewportHeight = iframeWindow.innerHeight || iframe.clientHeight || 800;
       const scrollPosition = (page - 1) * viewportHeight;
       
-      // Temporarily disable scroll detection to prevent feedback loop
       // Scroll smoothly to the page
       iframeWindow.scrollTo({ 
         top: scrollPosition, 
         behavior: 'smooth' 
       });
-      
-      // Update current page immediately for UI feedback
-      setCurrentPage(page);
     } catch (error) {
       // Cross-origin error - can't scroll iframe
       console.warn('Cannot scroll iframe:', error);
-      setCurrentPage(page);
     }
   };
 
@@ -401,14 +399,15 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
     }
   }, [currentPdfHtml, selectedIndex]);
 
-  // Handle scroll-based page navigation - improved version
+  // Handle scroll-based page navigation - improved version with better mouse scroll detection
   useEffect(() => {
     const iframe = iframeRef.current;
     if (!iframe || currentTotalPages <= 1) return;
 
     let rafId: number | null = null;
     let lastScrollTop = 0;
-    let isUserScrolling = true;
+    let scrollTimeout: NodeJS.Timeout;
+    let isProgrammaticScroll = false;
 
     const updateCurrentPage = () => {
       try {
@@ -425,56 +424,87 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
           currentTotalPages
         );
         
-        // Update if page changed and user is scrolling (not programmatic scroll)
-        if (newPage !== currentPage && isUserScrolling && Math.abs(scrollTop - lastScrollTop) > 30) {
+        // Always update if page changed - remove programmatic scroll check for better mouse scroll response
+        if (newPage !== currentPage) {
           setCurrentPage(newPage);
           lastScrollTop = scrollTop;
         }
       } catch (error) {
-        // Cross-origin or access error
-        // Fallback: use container scroll if available
+        // Cross-origin or access error - try alternative method
+        console.warn('Scroll detection error:', error);
       }
     };
 
     const handleScroll = () => {
+      // Clear any existing timeout
+      clearTimeout(scrollTimeout);
+      
+      // Use requestAnimationFrame for smooth updates
       if (rafId) return;
       
-      isUserScrolling = true;
       rafId = window.requestAnimationFrame(() => {
         updateCurrentPage();
         rafId = null;
       });
+      
+      // Also set a timeout to catch any missed scroll events
+      scrollTimeout = setTimeout(() => {
+        updateCurrentPage();
+      }, 100);
     };
 
     // Listen to iframe scroll events
     try {
       const iframeWindow = iframe.contentWindow;
       if (iframeWindow) {
+        // Listen to scroll events
         iframeWindow.addEventListener('scroll', handleScroll, { passive: true });
+        // Listen to wheel events for immediate feedback
         iframeWindow.addEventListener('wheel', handleScroll, { passive: true });
+        // Listen to touch events for mobile
+        iframeWindow.addEventListener('touchmove', handleScroll, { passive: true });
       }
     } catch (error) {
-      // Cross-origin - can't access iframe window
+      // Cross-origin - can't access iframe window directly
+      // Try listening on the iframe element itself
+      iframe.addEventListener('load', () => {
+        try {
+          const iframeWindow = iframe.contentWindow;
+          if (iframeWindow) {
+            iframeWindow.addEventListener('scroll', handleScroll, { passive: true });
+            iframeWindow.addEventListener('wheel', handleScroll, { passive: true });
+          }
+        } catch (e) {
+          // Still can't access
+        }
+      });
     }
     
-    // Also check periodically as fallback
+    // Periodic check as fallback (more frequent for better responsiveness)
+    // More frequent checks for better mouse scroll responsiveness
     const interval = setInterval(() => {
-      if (isUserScrolling) {
-        updateCurrentPage();
-      }
-    }, 300);
+      updateCurrentPage();
+    }, 100);
     
-    // Mark when we're programmatically scrolling
+    // Mark programmatic scrolls
     const originalScrollToPage = scrollToPage;
+    const handleProgrammaticScroll = () => {
+      isProgrammaticScroll = true;
+      setTimeout(() => {
+        isProgrammaticScroll = false;
+      }, 500);
+    };
     
     return () => {
       if (rafId) window.cancelAnimationFrame(rafId);
       clearInterval(interval);
+      clearTimeout(scrollTimeout);
       try {
         const iframeWindow = iframe.contentWindow;
         if (iframeWindow) {
           iframeWindow.removeEventListener('scroll', handleScroll);
           iframeWindow.removeEventListener('wheel', handleScroll);
+          iframeWindow.removeEventListener('touchmove', handleScroll);
         }
       } catch (error) {
         // Ignore cleanup errors
@@ -891,6 +921,28 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
                     overflow: 'auto'
                   }}
                   scrolling="yes"
+                  onLoad={() => {
+                    // Ensure scroll events are attached after iframe loads
+                    const iframe = iframeRef.current;
+                    if (iframe?.contentWindow) {
+                      // Force a scroll check after load
+                      setTimeout(() => {
+                        try {
+                          const scrollTop = iframe.contentWindow?.scrollY || 0;
+                          const viewportHeight = iframe.contentWindow?.innerHeight || 800;
+                          const page = Math.min(
+                            Math.max(Math.floor(scrollTop / viewportHeight) + 1, 1),
+                            currentTotalPages
+                          );
+                          if (page !== currentPage) {
+                            setCurrentPage(page);
+                          }
+                        } catch (e) {
+                          // Ignore errors
+                        }
+                      }, 200);
+                    }
+                  }}
                 />
               </div>
             ) : currentPdfUrl ? (
@@ -908,6 +960,24 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
                   overflow: 'auto'
                 }}
                 scrolling="yes"
+                onLoad={() => {
+                  // Ensure scroll events are attached after iframe loads
+                  const iframe = iframeRef.current;
+                  if (iframe?.contentWindow) {
+                    // Force a scroll check after load
+                    setTimeout(() => {
+                      const scrollTop = iframe.contentWindow?.scrollY || 0;
+                      const viewportHeight = iframe.contentWindow?.innerHeight || 800;
+                      const page = Math.min(
+                        Math.max(Math.floor(scrollTop / viewportHeight) + 1, 1),
+                        currentTotalPages
+                      );
+                      if (page !== currentPage) {
+                        setCurrentPage(page);
+                      }
+                    }, 100);
+                  }
+                }}
               />
             ) : null}
 
