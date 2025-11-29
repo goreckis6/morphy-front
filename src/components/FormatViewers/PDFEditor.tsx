@@ -66,7 +66,6 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
       return null;
     }
   }, []);
-  const lastPageRef = useRef<number>(1);
 
   const location = useLocation();
   
