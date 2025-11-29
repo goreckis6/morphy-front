@@ -3,6 +3,7 @@ import { Search, X, Download, Printer, ZoomIn, ZoomOut, Maximize2, Play, Chevron
 import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from '../LanguageSwitcher';
 import { FileProcessor } from '../../utils/fileProcessing';
+import { PDFDocument } from 'pdf-lib';
 
 interface PDFEditorProps {
   files: File[];
@@ -16,7 +17,7 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
   const [searchQuery, setSearchQuery] = useState('');
   const [zoom, setZoom] = useState(100);
   const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(1);
+  const [totalPages, setTotalPages] = useState<Map<number, number>>(new Map());
   const [pdfUrls, setPdfUrls] = useState<Map<number, string>>(new Map());
   const [pdfHtml, setPdfHtml] = useState<Map<number, string>>(new Map());
   const [isLoading, setIsLoading] = useState<Map<number, boolean>>(new Map());
@@ -48,6 +49,27 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
       loading.set(index, true);
       setIsLoading(new Map(loading));
 
+      // First, get the actual page count from the PDF file
+      try {
+        const arrayBuffer = await file.arrayBuffer();
+        const pdfDoc = await PDFDocument.load(arrayBuffer);
+        const pageCount = pdfDoc.getPageCount();
+        setTotalPages(prev => {
+          const newMap = new Map(prev);
+          newMap.set(index, pageCount);
+          return newMap;
+        });
+      } catch (error) {
+        console.error('Error reading PDF page count:', error);
+        // Default to 1 page if we can't read it
+        setTotalPages(prev => {
+          const newMap = new Map(prev);
+          newMap.set(index, 1);
+          return newMap;
+        });
+      }
+
+      // Then fetch the preview HTML
       try {
         const formData = new FormData();
         formData.append('file', file);
@@ -100,9 +122,11 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
   );
 
   const currentFile = filteredFiles[selectedIndex] || files[0];
-  const currentPdfUrl = pdfUrls.get(selectedIndex) || '';
-  const currentPdfHtml = pdfHtml.get(selectedIndex) || '';
-  const currentIsLoading = isLoading.get(selectedIndex) || false;
+  const currentFileIndex = files.indexOf(currentFile);
+  const currentPdfUrl = pdfUrls.get(currentFileIndex) || '';
+  const currentPdfHtml = pdfHtml.get(currentFileIndex) || '';
+  const currentIsLoading = isLoading.get(currentFileIndex) || false;
+  const currentTotalPages = totalPages.get(currentFileIndex) || 1;
 
   const handleNext = useCallback(() => {
     if (selectedIndex < filteredFiles.length - 1) {
@@ -140,7 +164,7 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
   };
 
   const handleNextPage = () => {
-    if (currentPage < totalPages) {
+    if (currentPage < currentTotalPages) {
       setCurrentPage(currentPage + 1);
       scrollToPage(currentPage + 1);
     }
@@ -253,26 +277,26 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
 
       if (e.key === 'ArrowRight') {
         e.preventDefault();
-        if (totalPages > 1) {
+        if (currentTotalPages > 1) {
           handleNextPage();
         } else {
           handleNext();
         }
       } else if (e.key === 'ArrowLeft') {
         e.preventDefault();
-        if (totalPages > 1) {
+        if (currentTotalPages > 1) {
           handlePreviousPage();
         } else {
           handlePrevious();
         }
       } else if (e.key === 'ArrowUp') {
         e.preventDefault();
-        if (totalPages > 1) {
+        if (currentTotalPages > 1) {
           handlePreviousPage();
         }
       } else if (e.key === 'ArrowDown') {
         e.preventDefault();
-        if (totalPages > 1) {
+        if (currentTotalPages > 1) {
           handleNextPage();
         }
       } else if (e.key === 'Escape') {
@@ -293,64 +317,13 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
     return () => window.removeEventListener('keydown', handleKeyPress);
   }, [selectedIndex, filteredFiles.length, isPresentationMode, handleNext, handlePrevious, onClose, handleZoomIn, handleZoomOut, toggleFullscreen]);
 
-  // Update iframe content when PDF HTML changes and count pages
+  // Update iframe content when PDF HTML changes
   useEffect(() => {
     if (iframeRef.current && currentPdfHtml) {
       iframeRef.current.contentWindow?.document.open();
       iframeRef.current.contentWindow?.document.write(currentPdfHtml);
       iframeRef.current.contentWindow?.document.close();
       setCurrentPage(1); // Reset to first page when switching files
-      
-      // Wait for iframe to load, then count pages
-      const iframe = iframeRef.current;
-      const checkPages = () => {
-        try {
-          const iframeDoc = iframe.contentWindow?.document;
-          if (!iframeDoc) return;
-          
-          // Try multiple methods to count pages
-          // Method 1: Look for page elements (common in PDF viewers)
-          const pageElements = iframeDoc.querySelectorAll('[class*="page"], [id*="page"], .pdf-page, [data-page]');
-          if (pageElements.length > 0) {
-            setTotalPages(pageElements.length);
-            return;
-          }
-          
-          // Method 2: Look for canvas elements (PDF.js uses canvas)
-          const canvases = iframeDoc.querySelectorAll('canvas');
-          if (canvases.length > 0) {
-            setTotalPages(canvases.length);
-            return;
-          }
-          
-          // Method 3: Look for page divs or sections
-          const pageDivs = iframeDoc.querySelectorAll('div[class*="Page"], section[class*="Page"]');
-          if (pageDivs.length > 0) {
-            setTotalPages(pageDivs.length);
-            return;
-          }
-          
-          // Method 4: Check scroll height vs viewport height (estimate)
-          const body = iframeDoc.body;
-          if (body) {
-            const viewportHeight = iframe.contentWindow?.innerHeight || 800;
-            const scrollHeight = body.scrollHeight;
-            const estimatedPages = Math.max(1, Math.round(scrollHeight / viewportHeight));
-            setTotalPages(estimatedPages);
-          } else {
-            // Default to 1 if we can't detect
-            setTotalPages(1);
-          }
-        } catch (error) {
-          // If we can't access iframe content (cross-origin), default to 1
-          console.warn('Could not count PDF pages:', error);
-          setTotalPages(1);
-        }
-      };
-      
-      // Wait a bit for the iframe to fully render
-      setTimeout(checkPages, 500);
-      iframe.onload = checkPages;
     }
   }, [currentPdfHtml, selectedIndex]);
 
@@ -363,7 +336,7 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
       const scrollTop = iframe.scrollY || iframe.pageYOffset || 0;
       const pageHeight = iframe.innerHeight || 800;
       const newPage = Math.floor(scrollTop / pageHeight) + 1;
-      if (newPage !== currentPage && newPage >= 1 && newPage <= totalPages) {
+      if (newPage !== currentPage && newPage >= 1 && newPage <= currentTotalPages) {
         setCurrentPage(newPage);
       }
     };
@@ -372,7 +345,7 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
     return () => {
       iframe.removeEventListener('scroll', handleScroll);
     };
-  }, [currentPage, totalPages]);
+  }, [currentPage, currentTotalPages]);
 
   return (
     <div className="fixed inset-0 z-50 flex flex-col bg-white overflow-hidden" ref={viewerRef}>
@@ -527,13 +500,13 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
 
             <div className="flex items-center gap-1 sm:gap-2 w-full sm:w-auto justify-end flex-wrap">
               {/* Page Navigation */}
-              {totalPages > 1 && (
+              {currentTotalPages > 1 && (
                 <>
                   <div className="flex items-center gap-1 px-2 py-1 bg-gray-50 rounded border border-gray-200">
                     <span className="text-xs text-gray-600 hidden sm:inline">Page</span>
                     <span className="text-xs font-medium text-gray-700">{currentPage}</span>
                     <span className="text-xs text-gray-400">/</span>
-                    <span className="text-xs text-gray-600">{totalPages}</span>
+                    <span className="text-xs text-gray-600">{currentTotalPages}</span>
                   </div>
                   <button
                     onClick={handlePreviousPage}
@@ -545,7 +518,7 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
                   </button>
                   <button
                     onClick={handleNextPage}
-                    disabled={currentPage === totalPages}
+                    disabled={currentPage === currentTotalPages}
                     className="btn-icon w-8 h-8 text-gray-600 hover:bg-gray-100 rounded transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                     title={t('viewers.pdf.editor.next_page', 'Next Page')}
                   >
