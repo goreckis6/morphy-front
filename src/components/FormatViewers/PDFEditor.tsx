@@ -77,15 +77,6 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
           }
           htmls.set(index, html);
           setPdfHtml(new Map(htmls));
-          
-          // Try to extract total pages from HTML
-          const pageMatch = html.match(/total[_-]?pages?[:\s]*(\d+)/i) || html.match(/(\d+)\s*\/\s*\d+/);
-          if (pageMatch) {
-            const pages = parseInt(pageMatch[1]);
-            if (pages > 0) {
-              setTotalPages(pages);
-            }
-          }
         }
       } catch (error) {
         console.error('Error loading PDF preview:', error);
@@ -302,13 +293,64 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
     return () => window.removeEventListener('keydown', handleKeyPress);
   }, [selectedIndex, filteredFiles.length, isPresentationMode, handleNext, handlePrevious, onClose, handleZoomIn, handleZoomOut, toggleFullscreen]);
 
-  // Update iframe content when PDF HTML changes
+  // Update iframe content when PDF HTML changes and count pages
   useEffect(() => {
     if (iframeRef.current && currentPdfHtml) {
       iframeRef.current.contentWindow?.document.open();
       iframeRef.current.contentWindow?.document.write(currentPdfHtml);
       iframeRef.current.contentWindow?.document.close();
       setCurrentPage(1); // Reset to first page when switching files
+      
+      // Wait for iframe to load, then count pages
+      const iframe = iframeRef.current;
+      const checkPages = () => {
+        try {
+          const iframeDoc = iframe.contentWindow?.document;
+          if (!iframeDoc) return;
+          
+          // Try multiple methods to count pages
+          // Method 1: Look for page elements (common in PDF viewers)
+          const pageElements = iframeDoc.querySelectorAll('[class*="page"], [id*="page"], .pdf-page, [data-page]');
+          if (pageElements.length > 0) {
+            setTotalPages(pageElements.length);
+            return;
+          }
+          
+          // Method 2: Look for canvas elements (PDF.js uses canvas)
+          const canvases = iframeDoc.querySelectorAll('canvas');
+          if (canvases.length > 0) {
+            setTotalPages(canvases.length);
+            return;
+          }
+          
+          // Method 3: Look for page divs or sections
+          const pageDivs = iframeDoc.querySelectorAll('div[class*="Page"], section[class*="Page"]');
+          if (pageDivs.length > 0) {
+            setTotalPages(pageDivs.length);
+            return;
+          }
+          
+          // Method 4: Check scroll height vs viewport height (estimate)
+          const body = iframeDoc.body;
+          if (body) {
+            const viewportHeight = iframe.contentWindow?.innerHeight || 800;
+            const scrollHeight = body.scrollHeight;
+            const estimatedPages = Math.max(1, Math.round(scrollHeight / viewportHeight));
+            setTotalPages(estimatedPages);
+          } else {
+            // Default to 1 if we can't detect
+            setTotalPages(1);
+          }
+        } catch (error) {
+          // If we can't access iframe content (cross-origin), default to 1
+          console.warn('Could not count PDF pages:', error);
+          setTotalPages(1);
+        }
+      };
+      
+      // Wait a bit for the iframe to fully render
+      setTimeout(checkPages, 500);
+      iframe.onload = checkPages;
     }
   }, [currentPdfHtml, selectedIndex]);
 
