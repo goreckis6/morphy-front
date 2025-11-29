@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { Search, X, Download, Printer, ZoomIn, ZoomOut, Maximize2, Play, ChevronLeft, ChevronRight, Menu } from 'lucide-react';
+import { Search, X, Download, Printer, ZoomIn, ZoomOut, Maximize2, Play, ChevronLeft, ChevronRight, Menu, ChevronUp, ChevronDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from '../LanguageSwitcher';
 import { FileProcessor } from '../../utils/fileProcessing';
@@ -15,6 +15,8 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [searchQuery, setSearchQuery] = useState('');
   const [zoom, setZoom] = useState(100);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
   const [pdfUrls, setPdfUrls] = useState<Map<number, string>>(new Map());
   const [pdfHtml, setPdfHtml] = useState<Map<number, string>>(new Map());
   const [isLoading, setIsLoading] = useState<Map<number, boolean>>(new Map());
@@ -24,6 +26,7 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
   const fileInputRef = useRef<HTMLInputElement>(null);
   const viewerRef = useRef<HTMLDivElement>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   // Prevent body scroll when editor is open
   useEffect(() => {
@@ -55,9 +58,34 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
         });
 
         if (response.ok) {
-          const html = await response.text();
+          let html = await response.text();
+          // Hide the red bar controls in the PDF HTML
+          html = html.replace(/<style>([\s\S]*?)<\/style>/i, (match, styles) => {
+            return `<style>${styles}
+              .toolbar, .header-bar, [class*="toolbar"], [class*="header"] {
+                display: none !important;
+              }
+            </style>`;
+          });
+          // Also try to hide by adding style tag if no existing style tag
+          if (!html.includes('<style>')) {
+            html = html.replace('<head>', `<head><style>
+              .toolbar, .header-bar, [class*="toolbar"], [class*="header"] {
+                display: none !important;
+              }
+            </style>`);
+          }
           htmls.set(index, html);
           setPdfHtml(new Map(htmls));
+          
+          // Try to extract total pages from HTML
+          const pageMatch = html.match(/total[_-]?pages?[:\s]*(\d+)/i) || html.match(/(\d+)\s*\/\s*\d+/);
+          if (pageMatch) {
+            const pages = parseInt(pageMatch[1]);
+            if (pages > 0) {
+              setTotalPages(pages);
+            }
+          }
         }
       } catch (error) {
         console.error('Error loading PDF preview:', error);
@@ -110,6 +138,35 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
   };
 
   const handleResetZoom = () => {
+    setZoom(100);
+  };
+
+  const handlePreviousPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+      scrollToPage(currentPage - 1);
+    }
+  };
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+      scrollToPage(currentPage + 1);
+    }
+  };
+
+  const scrollToPage = (page: number) => {
+    if (iframeRef.current?.contentWindow) {
+      const iframe = iframeRef.current.contentWindow;
+      // Try to find page element and scroll to it
+      const pageHeight = iframe.innerHeight || 800;
+      const scrollPosition = (page - 1) * pageHeight;
+      iframe.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+    }
+  };
+
+  const handleFitWidth = () => {
+    // Reset zoom to fit width - this is a placeholder, actual implementation depends on PDF viewer
     setZoom(100);
   };
 
@@ -205,10 +262,28 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
 
       if (e.key === 'ArrowRight') {
         e.preventDefault();
-        handleNext();
+        if (totalPages > 1) {
+          handleNextPage();
+        } else {
+          handleNext();
+        }
       } else if (e.key === 'ArrowLeft') {
         e.preventDefault();
-        handlePrevious();
+        if (totalPages > 1) {
+          handlePreviousPage();
+        } else {
+          handlePrevious();
+        }
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (totalPages > 1) {
+          handlePreviousPage();
+        }
+      } else if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (totalPages > 1) {
+          handleNextPage();
+        }
       } else if (e.key === 'Escape') {
         onClose();
       } else if ((e.key === '+' || e.key === '=') && !e.shiftKey) {
@@ -233,8 +308,29 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
       iframeRef.current.contentWindow?.document.open();
       iframeRef.current.contentWindow?.document.write(currentPdfHtml);
       iframeRef.current.contentWindow?.document.close();
+      setCurrentPage(1); // Reset to first page when switching files
     }
   }, [currentPdfHtml, selectedIndex]);
+
+  // Handle scroll-based page navigation
+  useEffect(() => {
+    const iframe = iframeRef.current?.contentWindow;
+    if (!iframe) return;
+
+    const handleScroll = () => {
+      const scrollTop = iframe.scrollY || iframe.pageYOffset || 0;
+      const pageHeight = iframe.innerHeight || 800;
+      const newPage = Math.floor(scrollTop / pageHeight) + 1;
+      if (newPage !== currentPage && newPage >= 1 && newPage <= totalPages) {
+        setCurrentPage(newPage);
+      }
+    };
+
+    iframe.addEventListener('scroll', handleScroll);
+    return () => {
+      iframe.removeEventListener('scroll', handleScroll);
+    };
+  }, [currentPage, totalPages]);
 
   return (
     <div className="fixed inset-0 z-50 flex flex-col bg-white overflow-hidden" ref={viewerRef}>
@@ -387,7 +483,66 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
               )}
             </div>
 
-            <div className="flex items-center gap-1 sm:gap-2 w-full sm:w-auto justify-end">
+            <div className="flex items-center gap-1 sm:gap-2 w-full sm:w-auto justify-end flex-wrap">
+              {/* Page Navigation */}
+              {totalPages > 1 && (
+                <>
+                  <div className="flex items-center gap-1 px-2 py-1 bg-gray-50 rounded border border-gray-200">
+                    <span className="text-xs text-gray-600 hidden sm:inline">Page</span>
+                    <span className="text-xs font-medium text-gray-700">{currentPage}</span>
+                    <span className="text-xs text-gray-400">/</span>
+                    <span className="text-xs text-gray-600">{totalPages}</span>
+                  </div>
+                  <button
+                    onClick={handlePreviousPage}
+                    disabled={currentPage === 1}
+                    className="btn-icon w-8 h-8 text-gray-600 hover:bg-gray-100 rounded transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                    title={t('viewers.pdf.editor.previous_page', 'Previous Page')}
+                  >
+                    <ChevronLeft className="w-4 h-4" />
+                  </button>
+                  <button
+                    onClick={handleNextPage}
+                    disabled={currentPage === totalPages}
+                    className="btn-icon w-8 h-8 text-gray-600 hover:bg-gray-100 rounded transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                    title={t('viewers.pdf.editor.next_page', 'Next Page')}
+                  >
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
+                  <div className="w-px h-4 sm:h-6 bg-gray-200 mx-0.5 sm:mx-1" />
+                </>
+              )}
+
+              {/* Zoom Controls */}
+              <button
+                onClick={handleZoomOut}
+                className="btn-icon w-8 h-8 text-gray-600 hover:bg-gray-100 rounded transition-colors"
+                title={t('viewers.pdf.editor.zoom_out', 'Zoom Out (-)')}
+              >
+                <ZoomOut className="w-4 h-4" />
+              </button>
+              <button
+                onClick={handleResetZoom}
+                className="text-xs font-mono font-medium px-2 py-1 text-center hover:text-pink-600 transition-colors min-w-[3rem]"
+                title={t('viewers.pdf.editor.reset_zoom', 'Click to reset zoom')}
+              >
+                {zoom}%
+              </button>
+              <button
+                onClick={handleZoomIn}
+                className="btn-icon w-8 h-8 text-gray-600 hover:bg-gray-100 rounded transition-colors"
+                title={t('viewers.pdf.editor.zoom_in', 'Zoom In (+)')}
+              >
+                <ZoomIn className="w-4 h-4" />
+              </button>
+              <button
+                onClick={handleFitWidth}
+                className="text-xs px-2 py-1 text-gray-600 hover:bg-gray-100 rounded transition-colors hidden sm:inline"
+                title={t('viewers.pdf.editor.fit_width', 'Fit Width')}
+              >
+                Fit Width
+              </button>
+              <div className="w-px h-4 sm:h-6 bg-gray-200 mx-0.5 sm:mx-1" />
               <button
                 onClick={() => {
                   setIsPresentationMode(!isPresentationMode);
@@ -410,8 +565,6 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
                 </span>
               </button>
 
-              <div className="w-px h-4 sm:h-6 bg-gray-200 mx-0.5 sm:mx-1" />
-
               <button
                 onClick={handlePrint}
                 className="btn-icon w-8 h-8 sm:w-9 sm:h-9 text-gray-600 hover:bg-gray-100 rounded transition-colors"
@@ -431,7 +584,7 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
           </div>
 
           {/* PDF Viewer */}
-          <div className="flex-1 overflow-auto p-2 sm:p-4 md:p-8 bg-gray-100 flex justify-center items-center relative">
+          <div ref={containerRef} className="flex-1 overflow-auto p-2 sm:p-4 md:p-8 bg-gray-100 flex justify-center items-center relative">
             {/* Navigation Arrows */}
             {filteredFiles.length > 1 && (
               <>
@@ -491,36 +644,14 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
               />
             ) : null}
 
-            {/* Zoom Controls */}
-            <div className="absolute bottom-2 sm:bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur border border-gray-200 shadow-lg rounded-full px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 flex items-center gap-2 sm:gap-3 md:gap-4 z-20">
-              <button
-                onClick={handleZoomOut}
-                className="hover:text-pink-600 transition-colors p-1"
-                title={t('viewers.pdf.editor.zoom_out', 'Zoom Out (-)')}
-              >
-                <ZoomOut className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-              </button>
-              <button
-                onClick={handleResetZoom}
-                className="text-xs font-mono font-medium w-12 sm:w-14 md:w-16 text-center hover:text-pink-600 transition-colors"
-                title={t('viewers.pdf.editor.reset_zoom', 'Click to reset zoom')}
-              >
-                {zoom}%
-              </button>
-              <button
-                onClick={handleZoomIn}
-                className="hover:text-pink-600 transition-colors p-1"
-                title={t('viewers.pdf.editor.zoom_in', 'Zoom In (+)')}
-              >
-                <ZoomIn className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-              </button>
-              <div className="w-px h-3 sm:h-4 bg-gray-300 hidden sm:block" />
+            {/* Fullscreen button only (zoom controls moved to toolbar) */}
+            <div className="absolute bottom-2 sm:bottom-4 md:bottom-6 right-2 sm:right-4 bg-white/90 backdrop-blur border border-gray-200 shadow-lg rounded-full p-2 z-20">
               <button
                 onClick={toggleFullscreen}
-                className="hover:text-pink-600 transition-colors p-1 hidden sm:block"
+                className="hover:text-pink-600 transition-colors"
                 title={t('viewers.pdf.editor.fullscreen', 'Fullscreen (F)')}
               >
-                <Maximize2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                <Maximize2 className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
             </div>
 

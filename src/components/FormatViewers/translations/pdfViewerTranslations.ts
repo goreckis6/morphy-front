@@ -78,9 +78,12 @@ type PDFViewerTranslations = {
         download_pdf: string;
         previous: string;
         next: string;
+        previous_page: string;
+        next_page: string;
         zoom_out: string;
         zoom_in: string;
         reset_zoom: string;
+        fit_width: string;
         rotate: string;
         fullscreen: string;
       };
@@ -189,9 +192,12 @@ const resources: Record<string, PDFViewerTranslations> = {
           download_pdf: 'Download PDF',
           previous: 'Previous (←)',
           next: 'Next (→)',
+          previous_page: 'Previous Page',
+          next_page: 'Next Page',
           zoom_out: 'Zoom Out (-)',
           zoom_in: 'Zoom In (+)',
           reset_zoom: 'Click to reset zoom',
+          fit_width: 'Fit Width',
           rotate: 'Rotate (R)',
           fullscreen: 'Fullscreen (F)'
         }
@@ -298,9 +304,12 @@ const resources: Record<string, PDFViewerTranslations> = {
           download_pdf: 'Pobierz PDF',
           previous: 'Poprzedni (←)',
           next: 'Następny (→)',
+          previous_page: 'Poprzednia Strona',
+          next_page: 'Następna Strona',
           zoom_out: 'Pomniejsz (-)',
           zoom_in: 'Powiększ (+)',
           reset_zoom: 'Kliknij, aby zresetować zoom',
+          fit_width: 'Dopasuj do Szerokości',
           rotate: 'Obróć (R)',
           fullscreen: 'Pełny Ekran (F)'
         }
@@ -407,9 +416,12 @@ const resources: Record<string, PDFViewerTranslations> = {
           download_pdf: 'PDF Herunterladen',
           previous: 'Vorherige (←)',
           next: 'Nächste (→)',
+          previous_page: 'Vorherige Seite',
+          next_page: 'Nächste Seite',
           zoom_out: 'Verkleinern (-)',
           zoom_in: 'Vergrößern (+)',
           reset_zoom: 'Klicken zum Zurücksetzen des Zooms',
+          fit_width: 'An Breite Anpassen',
           rotate: 'Drehen (R)',
           fullscreen: 'Vollbild (F)'
         }
@@ -516,9 +528,12 @@ const resources: Record<string, PDFViewerTranslations> = {
           download_pdf: 'Descargar PDF',
           previous: 'Anterior (←)',
           next: 'Siguiente (→)',
+          previous_page: 'Página Anterior',
+          next_page: 'Página Siguiente',
           zoom_out: 'Alejar (-)',
           zoom_in: 'Acercar (+)',
           reset_zoom: 'Clic para restablecer zoom',
+          fit_width: 'Ajustar Ancho',
           rotate: 'Rotar (R)',
           fullscreen: 'Pantalla Completa (F)'
         }
@@ -625,9 +640,12 @@ const resources: Record<string, PDFViewerTranslations> = {
           download_pdf: 'Télécharger PDF',
           previous: 'Précédent (←)',
           next: 'Suivant (→)',
+          previous_page: 'Page Précédente',
+          next_page: 'Page Suivante',
           zoom_out: 'Dézoomer (-)',
           zoom_in: 'Zoomer (+)',
           reset_zoom: 'Cliquer pour réinitialiser le zoom',
+          fit_width: 'Ajuster la Largeur',
           rotate: 'Tourner (R)',
           fullscreen: 'Plein Écran (F)'
         }
@@ -720,25 +738,28 @@ const resources: Record<string, PDFViewerTranslations> = {
           close: 'Chiudi'
         },
         editor: {
-          toggle_sidebar: 'Wissel Zijbalk',
-          close: 'Sluiten (Esc)',
-          close_sidebar: 'Zijbalk Sluiten',
-          search_placeholder: 'Zoek bestanden...',
-          files_header: 'Bestanden',
-          add_files: '+ Toevoegen',
+          toggle_sidebar: 'Mostra/Nascondi Barra Laterale',
+          close: 'Chiudi (Esc)',
+          close_sidebar: 'Chiudi Barra Laterale',
+          search_placeholder: 'Cerca file...',
+          files_header: 'File',
+          add_files: '+ Aggiungi',
           format_badge: 'PDF',
-          present: 'Presenteren',
-          exit_presentation: 'Afsluiten',
-          start_presentation: 'Presentatie Starten (Spatie/Pijlen om te navigeren)',
-          print_pdf: 'PDF Afdrukken',
-          download_pdf: 'PDF Downloaden',
-          previous: 'Vorige (←)',
-          next: 'Volgende (→)',
-          zoom_out: 'Uitzoomen (-)',
-          zoom_in: 'Inzoomen (+)',
-          reset_zoom: 'Klik om zoom te resetten',
-          rotate: 'Draaien (R)',
-          fullscreen: 'Volledig Scherm (F)'
+          present: 'Presenta',
+          exit_presentation: 'Esci',
+          start_presentation: 'Avvia Presentazione (Spazio/Frecce per navigare)',
+          print_pdf: 'Stampa PDF',
+          download_pdf: 'Scarica PDF',
+          previous: 'Precedente (←)',
+          next: 'Successivo (→)',
+          previous_page: 'Pagina Precedente',
+          next_page: 'Pagina Successiva',
+          zoom_out: 'Riduci (-)',
+          zoom_in: 'Ingrandisci (+)',
+          reset_zoom: 'Clicca per reimpostare lo zoom',
+          fit_width: 'Adatta Larghezza',
+          rotate: 'Ruota (R)',
+          fullscreen: 'Schermo Intero (F)'
         }
       }
     }
@@ -931,9 +952,12 @@ const resources: Record<string, PDFViewerTranslations> = {
           download_pdf: 'Baixar PDF',
           previous: 'Anterior (←)',
           next: 'Próximo (→)',
+          previous_page: 'Página Anterior',
+          next_page: 'Próxima Página',
           zoom_out: 'Diminuir Zoom (-)',
           zoom_in: 'Aumentar Zoom (+)',
           reset_zoom: 'Clique para redefinir zoom',
+          fit_width: 'Ajustar Largura',
           rotate: 'Rotacionar (R)',
           fullscreen: 'Tela Cheia (F)'
         }
@@ -1040,9 +1064,12 @@ const resources: Record<string, PDFViewerTranslations> = {
           download_pdf: 'Tải Xuống PDF',
           previous: 'Trước (←)',
           next: 'Tiếp (→)',
+          previous_page: 'Trang Trước',
+          next_page: 'Trang Tiếp',
           zoom_out: 'Thu Nhỏ (-)',
           zoom_in: 'Phóng To (+)',
           reset_zoom: 'Nhấp để đặt lại zoom',
+          fit_width: 'Vừa Chiều Rộng',
           rotate: 'Xoay (R)',
           fullscreen: 'Toàn Màn Hình (F)'
         }
@@ -1149,9 +1176,12 @@ const resources: Record<string, PDFViewerTranslations> = {
           download_pdf: 'PDF İndir',
           previous: 'Önceki (←)',
           next: 'Sonraki (→)',
+          previous_page: 'Önceki Sayfa',
+          next_page: 'Sonraki Sayfa',
           zoom_out: 'Uzaklaştır (-)',
           zoom_in: 'Yakınlaştır (+)',
           reset_zoom: 'Yakınlaştırmayı sıfırlamak için tıklayın',
+          fit_width: 'Genişliğe Sığdır',
           rotate: 'Döndür (R)',
           fullscreen: 'Tam Ekran (F)'
         }
@@ -1258,9 +1288,12 @@ const resources: Record<string, PDFViewerTranslations> = {
           download_pdf: 'Скачать PDF',
           previous: 'Предыдущий (←)',
           next: 'Следующий (→)',
+          previous_page: 'Предыдущая Страница',
+          next_page: 'Следующая Страница',
           zoom_out: 'Уменьшить (-)',
           zoom_in: 'Увеличить (+)',
           reset_zoom: 'Нажмите, чтобы сбросить масштаб',
+          fit_width: 'По Ширине',
           rotate: 'Повернуть (R)',
           fullscreen: 'Полный Экран (F)'
         }
@@ -1367,9 +1400,12 @@ const resources: Record<string, PDFViewerTranslations> = {
           download_pdf: 'تحميل PDF',
           previous: 'السابق (←)',
           next: 'التالي (→)',
+          previous_page: 'الصفحة السابقة',
+          next_page: 'الصفحة التالية',
           zoom_out: 'تصغير (-)',
           zoom_in: 'تكبير (+)',
           reset_zoom: 'انقر لإعادة تعيين التكبير',
+          fit_width: 'تعديل العرض',
           rotate: 'تدوير (R)',
           fullscreen: 'ملء الشاشة (F)'
         }
@@ -1476,9 +1512,12 @@ const resources: Record<string, PDFViewerTranslations> = {
           download_pdf: 'ดาวน์โหลด PDF',
           previous: 'ก่อนหน้า (←)',
           next: 'ถัดไป (→)',
+          previous_page: 'หน้าที่แล้ว',
+          next_page: 'หน้าถัดไป',
           zoom_out: 'ซูมออก (-)',
           zoom_in: 'ซูมเข้า (+)',
           reset_zoom: 'คลิกเพื่อรีเซ็ตซูม',
+          fit_width: 'พอดีความกว้าง',
           rotate: 'หมุน (R)',
           fullscreen: 'เต็มหน้าจอ (F)'
         }
@@ -1585,9 +1624,12 @@ const resources: Record<string, PDFViewerTranslations> = {
           download_pdf: 'PDFをダウンロード',
           previous: '前へ (←)',
           next: '次へ (→)',
+          previous_page: '前のページ',
+          next_page: '次のページ',
           zoom_out: 'ズームアウト (-)',
           zoom_in: 'ズームイン (+)',
           reset_zoom: 'クリックしてズームをリセット',
+          fit_width: '幅に合わせる',
           rotate: '回転 (R)',
           fullscreen: 'フルスクリーン (F)'
         }
@@ -1694,9 +1736,12 @@ const resources: Record<string, PDFViewerTranslations> = {
           download_pdf: '下载PDF',
           previous: '上一个 (←)',
           next: '下一个 (→)',
+          previous_page: '上一页',
+          next_page: '下一页',
           zoom_out: '缩小 (-)',
           zoom_in: '放大 (+)',
           reset_zoom: '点击重置缩放',
+          fit_width: '适应宽度',
           rotate: '旋转 (R)',
           fullscreen: '全屏 (F)'
         }
@@ -1803,9 +1848,12 @@ const resources: Record<string, PDFViewerTranslations> = {
           download_pdf: 'Unduh PDF',
           previous: 'Sebelumnya (←)',
           next: 'Selanjutnya (→)',
+          previous_page: 'Halaman Sebelumnya',
+          next_page: 'Halaman Selanjutnya',
           zoom_out: 'Perkecil (-)',
           zoom_in: 'Perbesar (+)',
           reset_zoom: 'Klik untuk mengatur ulang zoom',
+          fit_width: 'Sesuaikan Lebar',
           rotate: 'Putar (R)',
           fullscreen: 'Layar Penuh (F)'
         }
@@ -1912,9 +1960,12 @@ const resources: Record<string, PDFViewerTranslations> = {
           download_pdf: 'Ladda Ner PDF',
           previous: 'Föregående (←)',
           next: 'Nästa (→)',
+          previous_page: 'Föregående Sida',
+          next_page: 'Nästa Sida',
           zoom_out: 'Zooma Ut (-)',
           zoom_in: 'Zooma In (+)',
           reset_zoom: 'Klicka för att återställa zoom',
+          fit_width: 'Anpassa Bredd',
           rotate: 'Rotera (R)',
           fullscreen: 'Helskärm (F)'
         }
