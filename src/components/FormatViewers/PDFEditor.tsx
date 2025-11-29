@@ -224,33 +224,28 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
   };
 
   const scrollToPage = (page: number) => {
-    if (iframeRef.current?.contentWindow) {
-      const iframe = iframeRef.current.contentWindow;
+    const iframe = iframeRef.current;
+    if (!iframe) return;
+    
+    try {
+      const iframeWindow = iframe.contentWindow;
+      if (!iframeWindow) return;
       
-      try {
-        const iframeDoc = iframe.document;
-        // Try to find page elements
-        const pageElements = iframeDoc.querySelectorAll('[data-page], .page, page');
-        
-        if (pageElements.length > 0 && pageElements[page - 1]) {
-          // Scroll to specific page element
-          const targetPage = pageElements[page - 1] as HTMLElement;
-          const scrollTop = targetPage.offsetTop - 20; // Small offset from top
-          iframe.scrollTo({ top: scrollTop, behavior: 'smooth' });
-        } else {
-          // Fallback: calculate scroll position
-          const docHeight = iframeDoc.documentElement.scrollHeight || iframeDoc.body.scrollHeight;
-          const pageHeight = docHeight / currentTotalPages;
-          const scrollPosition = (page - 1) * pageHeight;
-          iframe.scrollTo({ top: scrollPosition, behavior: 'smooth' });
-        }
-      } catch (error) {
-        // Cross-origin error, use viewport-based calculation
-        const viewportHeight = iframe.innerHeight || 800;
-        const scrollPosition = (page - 1) * viewportHeight;
-        iframe.scrollTo({ top: scrollPosition, behavior: 'smooth' });
-      }
+      const viewportHeight = iframeWindow.innerHeight || iframe.clientHeight || 800;
+      const scrollPosition = (page - 1) * viewportHeight;
       
+      // Temporarily disable scroll detection to prevent feedback loop
+      // Scroll smoothly to the page
+      iframeWindow.scrollTo({ 
+        top: scrollPosition, 
+        behavior: 'smooth' 
+      });
+      
+      // Update current page immediately for UI feedback
+      setCurrentPage(page);
+    } catch (error) {
+      // Cross-origin error - can't scroll iframe
+      console.warn('Cannot scroll iframe:', error);
       setCurrentPage(page);
     }
   };
@@ -406,80 +401,84 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
     }
   }, [currentPdfHtml, selectedIndex]);
 
-  // Handle scroll-based page navigation with proper page detection
+  // Handle scroll-based page navigation - improved version
   useEffect(() => {
-    const iframe = iframeRef.current?.contentWindow;
+    const iframe = iframeRef.current;
     if (!iframe || currentTotalPages <= 1) return;
 
-    let scrollTimeout: NodeJS.Timeout;
-    let isScrolling = false;
+    let rafId: number | null = null;
+    let lastScrollTop = 0;
+    let isUserScrolling = true;
+
+    const updateCurrentPage = () => {
+      try {
+        const iframeWindow = iframe.contentWindow;
+        if (!iframeWindow) return;
+        
+        const scrollTop = iframeWindow.scrollY || iframeWindow.pageYOffset || 0;
+        const viewportHeight = iframeWindow.innerHeight || iframe.clientHeight || 800;
+        
+        // Calculate which page is visible based on scroll position
+        // Each page is approximately one viewport height
+        const newPage = Math.min(
+          Math.max(Math.floor(scrollTop / viewportHeight) + 1, 1),
+          currentTotalPages
+        );
+        
+        // Update if page changed and user is scrolling (not programmatic scroll)
+        if (newPage !== currentPage && isUserScrolling && Math.abs(scrollTop - lastScrollTop) > 30) {
+          setCurrentPage(newPage);
+          lastScrollTop = scrollTop;
+        }
+      } catch (error) {
+        // Cross-origin or access error
+        // Fallback: use container scroll if available
+      }
+    };
 
     const handleScroll = () => {
-      if (isScrolling) return; // Prevent updates while programmatically scrolling
+      if (rafId) return;
       
-      clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => {
-        try {
-          const scrollTop = iframe.scrollY || iframe.pageYOffset || 0;
-          const iframeDoc = iframe.document;
-          
-          // Try to find page elements in the PDF
-          const pageElements = iframeDoc.querySelectorAll('[data-page], .page, page');
-          let newPage = currentPage;
-          
-          if (pageElements.length > 0) {
-            // If PDF has page elements, find which one is in view
-            let closestPage = 1;
-            let minDistance = Infinity;
-            
-            pageElements.forEach((el, index) => {
-              const rect = el.getBoundingClientRect();
-              const elementTop = rect.top + scrollTop;
-              const distance = Math.abs(scrollTop - elementTop);
-              
-              if (distance < minDistance && scrollTop >= elementTop - 100) {
-                minDistance = distance;
-                closestPage = index + 1;
-              }
-            });
-            
-            newPage = closestPage;
-          } else {
-            // Fallback: calculate based on document height
-            const docHeight = iframeDoc.documentElement.scrollHeight || iframeDoc.body.scrollHeight;
-            const viewportHeight = iframe.innerHeight || 800;
-            const pageHeight = docHeight / currentTotalPages;
-            newPage = Math.min(Math.max(Math.floor(scrollTop / pageHeight) + 1, 1), currentTotalPages);
-          }
-          
-          if (newPage !== currentPage && newPage >= 1 && newPage <= currentTotalPages) {
-            setCurrentPage(newPage);
-          }
-        } catch (error) {
-          // Cross-origin or other error, use fallback calculation
-          const scrollTop = iframe.scrollY || iframe.pageYOffset || 0;
-          const viewportHeight = iframe.innerHeight || 800;
-          const newPage = Math.min(Math.max(Math.floor(scrollTop / viewportHeight) + 1, 1), currentTotalPages);
-          if (newPage !== currentPage) {
-            setCurrentPage(newPage);
-          }
-        }
-      }, 50); // Throttle scroll events
+      isUserScrolling = true;
+      rafId = window.requestAnimationFrame(() => {
+        updateCurrentPage();
+        rafId = null;
+      });
     };
 
-    iframe.addEventListener('scroll', handleScroll, { passive: true });
+    // Listen to iframe scroll events
+    try {
+      const iframeWindow = iframe.contentWindow;
+      if (iframeWindow) {
+        iframeWindow.addEventListener('scroll', handleScroll, { passive: true });
+        iframeWindow.addEventListener('wheel', handleScroll, { passive: true });
+      }
+    } catch (error) {
+      // Cross-origin - can't access iframe window
+    }
     
-    // Also listen for wheel events for better responsiveness
-    const handleWheel = () => {
-      handleScroll();
-    };
+    // Also check periodically as fallback
+    const interval = setInterval(() => {
+      if (isUserScrolling) {
+        updateCurrentPage();
+      }
+    }, 300);
     
-    iframe.addEventListener('wheel', handleWheel, { passive: true });
+    // Mark when we're programmatically scrolling
+    const originalScrollToPage = scrollToPage;
     
     return () => {
-      clearTimeout(scrollTimeout);
-      iframe.removeEventListener('scroll', handleScroll);
-      iframe.removeEventListener('wheel', handleWheel);
+      if (rafId) window.cancelAnimationFrame(rafId);
+      clearInterval(interval);
+      try {
+        const iframeWindow = iframe.contentWindow;
+        if (iframeWindow) {
+          iframeWindow.removeEventListener('scroll', handleScroll);
+          iframeWindow.removeEventListener('wheel', handleScroll);
+        }
+      } catch (error) {
+        // Ignore cleanup errors
+      }
     };
   }, [currentPage, currentTotalPages]);
 
@@ -656,34 +655,66 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
                 </button>
               </div>
               <div className="flex-1 overflow-y-auto scroller p-2 space-y-2" id="pages-sidebar">
-                {Array.from({ length: currentTotalPages }, (_, i) => i + 1).map((pageNum) => (
-                  <button
-                    key={pageNum}
-                    onClick={() => handlePageClick(pageNum)}
-                    className={`w-full p-2 rounded-lg border-2 transition-all text-left ${
-                      currentPage === pageNum
-                        ? 'border-pink-500 bg-pink-50 shadow-sm ring-2 ring-pink-200'
-                        : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
-                    }`}
-                    id={`page-thumb-${pageNum}`}
-                  >
-                    <div className="flex items-center justify-center w-full h-24 sm:h-32 bg-gray-100 rounded mb-2 overflow-hidden relative">
-                      {/* Page number overlay */}
-                      <span className="absolute top-1 left-1 bg-black/50 text-white text-xs px-1.5 py-0.5 rounded font-medium z-10">
-                        {pageNum}
-                      </span>
-                      {/* Placeholder for page preview - in future can show actual thumbnail */}
-                      <div className="w-full h-full flex items-center justify-center">
-                        <span className="text-xs font-medium text-gray-400">{t('viewers.pdf.editor.page_preview', 'Page Preview')}</span>
+                {Array.from({ length: currentTotalPages }, (_, i) => i + 1).map((pageNum) => {
+                  const isActive = currentPage === pageNum;
+                  return (
+                    <button
+                      key={pageNum}
+                      onClick={() => {
+                        handlePageClick(pageNum);
+                        setIsPagesSidebarOpen(true); // Keep sidebar open when clicking
+                      }}
+                      className={`w-full p-2 rounded-lg border-2 transition-all text-left group ${
+                        isActive
+                          ? 'border-pink-500 bg-pink-50 shadow-md ring-2 ring-pink-200 scale-105'
+                          : 'border-gray-200 hover:border-pink-300 hover:bg-pink-50/50 hover:shadow-sm'
+                      }`}
+                      id={`page-thumb-${pageNum}`}
+                    >
+                      <div className="flex items-center justify-center w-full h-24 sm:h-32 bg-gradient-to-br from-gray-50 to-gray-100 rounded mb-2 overflow-hidden relative border border-gray-200">
+                        {/* Page number badge */}
+                        <span className={`absolute top-1 left-1 text-xs px-2 py-1 rounded font-bold z-10 ${
+                          isActive 
+                            ? 'bg-pink-600 text-white shadow-lg' 
+                            : 'bg-gray-700/80 text-white group-hover:bg-pink-600'
+                        }`}>
+                          {pageNum}
+                        </span>
+                        {/* Page preview - using canvas or iframe to show actual page */}
+                        <div className="w-full h-full flex items-center justify-center relative">
+                          {currentPdfUrl ? (
+                            <iframe
+                              src={`${currentPdfUrl}#page=${pageNum}`}
+                              className="w-full h-full border-0 pointer-events-none opacity-60"
+                              style={{ transform: 'scale(0.3)', transformOrigin: 'top left', width: '333%', height: '333%' }}
+                              title={`Page ${pageNum} preview`}
+                            />
+                          ) : (
+                            <div className="text-center">
+                              <div className={`text-2xl font-bold mb-1 ${
+                                isActive ? 'text-pink-600' : 'text-gray-400'
+                              }`}>
+                                {pageNum}
+                              </div>
+                              <div className="text-xs text-gray-500">
+                                {t('viewers.pdf.editor.page', 'Page')}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                        {/* Active indicator */}
+                        {isActive && (
+                          <div className="absolute bottom-0 left-0 right-0 h-1 bg-pink-500"></div>
+                        )}
                       </div>
-                    </div>
-                    <p className={`text-xs text-center font-medium ${
-                      currentPage === pageNum ? 'text-pink-700 font-bold' : 'text-gray-600'
-                    }`}>
-                      {t('viewers.pdf.editor.page', 'Page')} {pageNum}
-                    </p>
-                  </button>
-                ))}
+                      <p className={`text-xs text-center font-medium mt-1 ${
+                        isActive ? 'text-pink-700 font-bold' : 'text-gray-600'
+                      }`}>
+                        {t('viewers.pdf.editor.page', 'Page')} {pageNum}
+                      </p>
+                    </button>
+                  );
+                })}
               </div>
             </aside>
           )}
