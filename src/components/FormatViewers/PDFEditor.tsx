@@ -32,6 +32,42 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
   const containerRef = useRef<HTMLDivElement>(null);
   const lastPageRef = useRef<number>(1);
 
+  const getScrollContainer = useCallback((): HTMLElement | null => {
+    const iframe = iframeRef.current;
+    if (!iframe) {
+      return null;
+    }
+
+    try {
+      const doc = iframe.contentDocument || iframe.contentWindow?.document;
+      if (!doc) {
+        return null;
+      }
+
+      const selectors = [
+        '#viewerContainer',
+        '.viewerContainer',
+        '.pdfViewer',
+        '#viewer',
+        '#page-container',
+        'body',
+      ];
+
+      for (const selector of selectors) {
+        const el = doc.querySelector(selector);
+        if (el instanceof HTMLElement) {
+          return el;
+        }
+      }
+
+      return doc.body as HTMLElement | null;
+    } catch (error) {
+      console.warn('Unable to access scroll container:', error);
+      return null;
+    }
+  }, []);
+  const lastPageRef = useRef<number>(1);
+
   const location = useLocation();
   
   // Prevent body scroll when editor is open
@@ -225,28 +261,23 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
   };
 
   const scrollToPage = (page: number) => {
-    const iframe = iframeRef.current;
-    if (!iframe) return;
-    
     // Update current page immediately for UI feedback
     setCurrentPage(page);
-    
-    try {
-      const iframeWindow = iframe.contentWindow;
-      if (!iframeWindow) return;
-      
-      const viewportHeight = iframeWindow.innerHeight || iframe.clientHeight || 800;
-      const scrollPosition = (page - 1) * viewportHeight;
-      
-      // Scroll smoothly to the page
-      iframeWindow.scrollTo({ 
-        top: scrollPosition, 
-        behavior: 'smooth' 
-      });
-    } catch (error) {
-      // Cross-origin error - can't scroll iframe
-      console.warn('Cannot scroll iframe:', error);
+    lastPageRef.current = page;
+
+    const container = getScrollContainer();
+    if (!container) {
+      return;
     }
+
+    const scrollHeight = container.scrollHeight;
+    const pageHeight = scrollHeight / currentTotalPages;
+    const targetScroll = (page - 1) * pageHeight;
+
+    container.scrollTo({
+      top: targetScroll,
+      behavior: 'smooth',
+    });
   };
 
   const handlePageClick = (page: number) => {
@@ -401,88 +432,77 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
     }
   }, [currentPdfHtml, selectedIndex]);
 
-  // Handle scroll-based page navigation - completely rewritten for reliability
+  // Handle scroll-based page navigation with reliable container tracking
   useEffect(() => {
     const iframe = iframeRef.current;
     if (!iframe || currentTotalPages <= 1) return;
 
     let checkInterval: NodeJS.Timeout;
-    lastPageRef.current = currentPage; // Initialize ref
+    let scrollContainer: HTMLElement | null = null;
+    let scrollHandler: (() => void) | null = null;
 
     const updateCurrentPage = () => {
-      try {
-        const iframeWindow = iframe.contentWindow;
-        if (!iframeWindow) {
-          return;
-        }
-        
-        const scrollTop = iframeWindow.scrollY || iframeWindow.pageYOffset || 0;
-        const viewportHeight = iframeWindow.innerHeight || iframe.clientHeight || 800;
-        
-        // Calculate which page is visible - each page is one viewport height
-        const newPage = Math.min(
-          Math.max(Math.floor(scrollTop / viewportHeight) + 1, 1),
-          currentTotalPages
-        );
-        
-        // Update if page changed (use ref to avoid dependency issues)
-        if (newPage !== lastPageRef.current) {
-          console.log(`Page changed: ${lastPageRef.current} -> ${newPage} (scrollTop: ${scrollTop}, viewportHeight: ${viewportHeight})`);
-          lastPageRef.current = newPage;
-          setCurrentPage(newPage);
-        }
-      } catch (error) {
-        // Cross-origin error - can't access iframe
-        console.warn('Cannot access iframe for scroll detection:', error);
+      const container = scrollContainer || getScrollContainer();
+      if (!container) {
+        return;
+      }
+
+      const scrollTop = container.scrollTop;
+      const scrollHeight = container.scrollHeight || container.clientHeight * currentTotalPages;
+      const pageHeight = scrollHeight / currentTotalPages || container.clientHeight || 800;
+
+      const newPage = Math.min(
+        Math.max(Math.floor(scrollTop / pageHeight) + 1, 1),
+        currentTotalPages
+      );
+
+      if (newPage !== lastPageRef.current) {
+        lastPageRef.current = newPage;
+        setCurrentPage(newPage);
       }
     };
 
-    // Try to attach scroll listeners (may fail due to cross-origin)
     const attachListeners = () => {
-      try {
-        const iframeWindow = iframe.contentWindow;
-        if (iframeWindow) {
-          const handleScroll = () => {
-            updateCurrentPage();
-          };
-          iframeWindow.addEventListener('scroll', handleScroll, { passive: true });
-          iframeWindow.addEventListener('wheel', handleScroll, { passive: true });
-          return true;
-        }
-      } catch (error) {
-        // Cross-origin - can't attach listeners, will rely on interval
+      scrollContainer = getScrollContainer();
+      if (!scrollContainer) {
+        return false;
       }
-      return false;
+
+      scrollHandler = () => updateCurrentPage();
+      scrollContainer.addEventListener('scroll', scrollHandler, { passive: true });
+      return true;
     };
 
-    // Try to attach immediately
+    // Attach listeners immediately if possible
     attachListeners();
-    
-    // Also try after iframe loads
+
     const loadHandler = () => {
       setTimeout(() => {
         attachListeners();
-        updateCurrentPage(); // Check immediately after load
+        updateCurrentPage();
       }, 300);
     };
+
     iframe.addEventListener('load', loadHandler);
-    
-    // Primary method: very frequent interval checks (works even with cross-origin)
-    // This is the most reliable method
+
+    // Frequent interval checks as fallback (in case listeners fail)
     checkInterval = setInterval(() => {
       updateCurrentPage();
-    }, 80); // Check every 80ms for very responsive updates
-    
+    }, 100);
+
     // Initial check
     setTimeout(() => {
       updateCurrentPage();
-    }, 500);
-    
+    }, 200);
+
     return () => {
       clearInterval(checkInterval);
       iframe.removeEventListener('load', loadHandler);
+      if (scrollContainer && scrollHandler) {
+        scrollContainer.removeEventListener('scroll', scrollHandler);
+      }
     };
-  }, [currentTotalPages]); // Only depend on totalPages, not currentPage
+  }, [currentTotalPages, getScrollContainer]);
 
   // Auto-scroll sidebar to show active page
   useEffect(() => {
