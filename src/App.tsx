@@ -1409,7 +1409,9 @@ function App() {
         <Route path="/pl/viewers/md" element={<MarkdownViewer />} />
         <Route path="/pl/viewers/markdown" element={<MarkdownViewer />} />
         <Route path="/pl/viewers/docx" element={<DOCXViewer />} />
+        <Route path="/pl/viewers/docx/editor" element={<DOCXViewer />} />
         <Route path="/pl/viewers/doc" element={<DOCXViewer />} />
+        <Route path="/pl/viewers/doc/editor" element={<DOCXViewer />} />
         <Route path="/pl/viewers/odt" element={<ODTViewer />} />
         <Route path="/pl/viewers/xlsx" element={<XLSXViewer />} />
         <Route path="/pl/viewers/excel" element={<XLSXViewer />} />
@@ -1473,7 +1475,9 @@ function App() {
         <Route path="/de/viewers/md" element={<MarkdownViewer />} />
         <Route path="/de/viewers/markdown" element={<MarkdownViewer />} />
         <Route path="/de/viewers/docx" element={<DOCXViewer />} />
+        <Route path="/de/viewers/docx/editor" element={<DOCXViewer />} />
         <Route path="/de/viewers/doc" element={<DOCXViewer />} />
+        <Route path="/de/viewers/doc/editor" element={<DOCXViewer />} />
         <Route path="/de/viewers/odt" element={<ODTViewer />} />
         <Route path="/de/viewers/xlsx" element={<XLSXViewer />} />
         <Route path="/de/viewers/excel" element={<XLSXViewer />} />
@@ -1522,6 +1526,10 @@ function App() {
         <Route path="/id/viewers/avif/editor" element={<AVIFViewer />} />
         <Route path="/id/viewers/pdf" element={<PDFViewer />} />
         <Route path="/id/viewers/pdf/editor" element={<PDFViewer />} />
+        <Route path="/id/viewers/docx" element={<DOCXViewer />} />
+        <Route path="/id/viewers/docx/editor" element={<DOCXViewer />} />
+        <Route path="/id/viewers/doc" element={<DOCXViewer />} />
+        <Route path="/id/viewers/doc/editor" element={<DOCXViewer />} />
 
         {/* Swedish (SV) Viewer Routes */}
         <Route path="/sv/viewers" element={<Viewers />} />
@@ -1539,6 +1547,10 @@ function App() {
         <Route path="/sv/viewers/avif/editor" element={<AVIFViewer />} />
         <Route path="/sv/viewers/pdf" element={<PDFViewer />} />
         <Route path="/sv/viewers/pdf/editor" element={<PDFViewer />} />
+        <Route path="/sv/viewers/docx" element={<DOCXViewer />} />
+        <Route path="/sv/viewers/docx/editor" element={<DOCXViewer />} />
+        <Route path="/sv/viewers/doc" element={<DOCXViewer />} />
+        <Route path="/sv/viewers/doc/editor" element={<DOCXViewer />} />
 
         {/* Spanish (ES) Viewer Routes */}
         <Route path="/es/viewers" element={<Viewers />} />
@@ -1556,6 +1568,10 @@ function App() {
         <Route path="/es/viewers/avif/editor" element={<AVIFViewer />} />
         <Route path="/es/viewers/pdf" element={<PDFViewer />} />
         <Route path="/es/viewers/pdf/editor" element={<PDFViewer />} />
+        <Route path="/es/viewers/docx" element={<DOCXViewer />} />
+        <Route path="/es/viewers/docx/editor" element={<DOCXViewer />} />
+        <Route path="/es/viewers/doc" element={<DOCXViewer />} />
+        <Route path="/es/viewers/doc/editor" element={<DOCXViewer />} />
 
         {/* French (FR) Viewer Routes */}
         <Route path="/fr/viewers" element={<Viewers />} />
@@ -1573,6 +1589,10 @@ function App() {
         <Route path="/fr/viewers/avif/editor" element={<AVIFViewer />} />
         <Route path="/fr/viewers/pdf" element={<PDFViewer />} />
         <Route path="/fr/viewers/pdf/editor" element={<PDFViewer />} />
+        <Route path="/fr/viewers/docx" element={<DOCXViewer />} />
+        <Route path="/fr/viewers/docx/editor" element={<DOCXViewer />} />
+        <Route path="/fr/viewers/doc" element={<DOCXViewer />} />
+        <Route path="/fr/viewers/doc/editor" element={<DOCXViewer />} />
 
         {/* Italian (IT) Viewer Routes */}
         <Route path="/it/viewers" element={<Viewers />} />
@@ -1590,6 +1610,10 @@ function App() {
         <Route path="/it/viewers/avif/editor" element={<AVIFViewer />} />
         <Route path="/it/viewers/pdf" element={<PDFViewer />} />
         <Route path="/it/viewers/pdf/editor" element={<PDFViewer />} />
+        <Route path="/it/viewers/docx" element={<DOCXViewer />} />
+        <Route path="/it/viewers/docx/editor" element={<DOCXViewer />} />
+        <Route path="/it/viewers/doc" element={<DOCXViewer />} />
+        <Route path="/it/viewers/doc/editor" element={<DOCXViewer />} />
 
         {/* Dutch (NL) Viewer Routes */}
         <Route path="/nl/viewers" element={<Viewers />} />
@@ -1607,6 +1631,10 @@ function App() {
         <Route path="/nl/viewers/avif/editor" element={<AVIFViewer />} />
         <Route path="/nl/viewers/pdf" element={<PDFViewer />} />
         <Route path="/nl/viewers/pdf/editor" element={<PDFViewer />} />
+        <Route path="/nl/viewers/docx" element={<DOCXViewer />} />
+        <Route path="/nl/viewers/docx/editor" element={<DOCXViewer />} />
+        <Route path="/nl/viewers/doc" element={<DOCXViewer />} />
+        <Route path="/nl/viewers/doc/editor" element={<DOCXViewer />} />
 
         {/* Portuguese (PT) Viewer Routes */}
         <Route path="/pt/viewers" element={<Viewers />} />
@@ -1624,6 +1652,10 @@ function App() {
         <Route path="/pt/viewers/avif/editor" element={<AVIFViewer />} />
         <Route path="/pt/viewers/pdf" element={<PDFViewer />} />
         <Route path="/pt/viewers/pdf/editor" element={<PDFViewer />} />
+        <Route path="/pt/viewers/docx" element={<DOCXViewer />} />
+        <Route path="/pt/viewers/docx/editor" element={<DOCXViewer />} />
+        <Route path="/pt/viewers/doc" element={<DOCXViewer />} />
+        <Route path="/pt/viewers/doc/editor" element={<DOCXViewer />} />
 
         {/* Vietnamese (VI) Viewer Routes */}
         <Route path="/vi/viewers" element={<Viewers />} />
@@ -1641,6 +1673,10 @@ function App() {
         <Route path="/vi/viewers/avif/editor" element={<AVIFViewer />} />
         <Route path="/vi/viewers/pdf" element={<PDFViewer />} />
         <Route path="/vi/viewers/pdf/editor" element={<PDFViewer />} />
+        <Route path="/vi/viewers/docx" element={<DOCXViewer />} />
+        <Route path="/vi/viewers/docx/editor" element={<DOCXViewer />} />
+        <Route path="/vi/viewers/doc" element={<DOCXViewer />} />
+        <Route path="/vi/viewers/doc/editor" element={<DOCXViewer />} />
 
         {/* Turkish (TR) Viewer Routes */}
         <Route path="/tr/viewers" element={<Viewers />} />
@@ -1658,6 +1694,10 @@ function App() {
         <Route path="/tr/viewers/avif/editor" element={<AVIFViewer />} />
         <Route path="/tr/viewers/pdf" element={<PDFViewer />} />
         <Route path="/tr/viewers/pdf/editor" element={<PDFViewer />} />
+        <Route path="/tr/viewers/docx" element={<DOCXViewer />} />
+        <Route path="/tr/viewers/docx/editor" element={<DOCXViewer />} />
+        <Route path="/tr/viewers/doc" element={<DOCXViewer />} />
+        <Route path="/tr/viewers/doc/editor" element={<DOCXViewer />} />
 
         {/* Russian (RU) Viewer Routes */}
         <Route path="/ru/viewers" element={<Viewers />} />
@@ -1675,6 +1715,10 @@ function App() {
         <Route path="/ru/viewers/avif/editor" element={<AVIFViewer />} />
         <Route path="/ru/viewers/pdf" element={<PDFViewer />} />
         <Route path="/ru/viewers/pdf/editor" element={<PDFViewer />} />
+        <Route path="/ru/viewers/docx" element={<DOCXViewer />} />
+        <Route path="/ru/viewers/docx/editor" element={<DOCXViewer />} />
+        <Route path="/ru/viewers/doc" element={<DOCXViewer />} />
+        <Route path="/ru/viewers/doc/editor" element={<DOCXViewer />} />
 
         {/* Arabic (AR) Viewer Routes */}
         <Route path="/ar/viewers" element={<Viewers />} />
@@ -1692,6 +1736,10 @@ function App() {
         <Route path="/ar/viewers/avif/editor" element={<AVIFViewer />} />
         <Route path="/ar/viewers/pdf" element={<PDFViewer />} />
         <Route path="/ar/viewers/pdf/editor" element={<PDFViewer />} />
+        <Route path="/ar/viewers/docx" element={<DOCXViewer />} />
+        <Route path="/ar/viewers/docx/editor" element={<DOCXViewer />} />
+        <Route path="/ar/viewers/doc" element={<DOCXViewer />} />
+        <Route path="/ar/viewers/doc/editor" element={<DOCXViewer />} />
 
         {/* Thai (TH) Viewer Routes */}
         <Route path="/th/viewers" element={<Viewers />} />
@@ -1709,6 +1757,10 @@ function App() {
         <Route path="/th/viewers/avif/editor" element={<AVIFViewer />} />
         <Route path="/th/viewers/pdf" element={<PDFViewer />} />
         <Route path="/th/viewers/pdf/editor" element={<PDFViewer />} />
+        <Route path="/th/viewers/docx" element={<DOCXViewer />} />
+        <Route path="/th/viewers/docx/editor" element={<DOCXViewer />} />
+        <Route path="/th/viewers/doc" element={<DOCXViewer />} />
+        <Route path="/th/viewers/doc/editor" element={<DOCXViewer />} />
 
         {/* Japanese (JA) Viewer Routes */}
         <Route path="/ja/viewers" element={<Viewers />} />
@@ -1726,6 +1778,10 @@ function App() {
         <Route path="/ja/viewers/avif/editor" element={<AVIFViewer />} />
         <Route path="/ja/viewers/pdf" element={<PDFViewer />} />
         <Route path="/ja/viewers/pdf/editor" element={<PDFViewer />} />
+        <Route path="/ja/viewers/docx" element={<DOCXViewer />} />
+        <Route path="/ja/viewers/docx/editor" element={<DOCXViewer />} />
+        <Route path="/ja/viewers/doc" element={<DOCXViewer />} />
+        <Route path="/ja/viewers/doc/editor" element={<DOCXViewer />} />
 
         {/* Chinese (ZH) Viewer Routes */}
         <Route path="/zh/viewers" element={<Viewers />} />
@@ -1743,6 +1799,10 @@ function App() {
         <Route path="/zh/viewers/avif/editor" element={<AVIFViewer />} />
         <Route path="/zh/viewers/pdf" element={<PDFViewer />} />
         <Route path="/zh/viewers/pdf/editor" element={<PDFViewer />} />
+        <Route path="/zh/viewers/docx" element={<DOCXViewer />} />
+        <Route path="/zh/viewers/docx/editor" element={<DOCXViewer />} />
+        <Route path="/zh/viewers/doc" element={<DOCXViewer />} />
+        <Route path="/zh/viewers/doc/editor" element={<DOCXViewer />} />
 
         {/* Indonesian (ID) WebP Viewer Routes */}
         <Route path="/id/viewers/webp" element={<WebPViewer />} />

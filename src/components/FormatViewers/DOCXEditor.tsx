@@ -574,8 +574,9 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
   return (
     <div className="fixed inset-0 z-50 flex flex-col bg-white overflow-hidden" ref={viewerRef}>
       {/* Header */}
-      <header className="h-12 sm:h-14 bg-gradient-to-r from-red-600 to-pink-600 text-white flex items-center justify-between px-3 sm:px-6 shadow-md z-20">
+      <header className="h-12 sm:h-14 bg-gradient-to-r from-blue-600 to-purple-600 text-white flex items-center justify-between px-3 sm:px-6 shadow-md z-20">
         <div className="flex items-center gap-2 sm:gap-3">
+          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsSidebarOpen(!isSidebarOpen)}
             className="lg:hidden p-2 hover:bg-white/20 rounded transition-colors"
@@ -611,94 +612,99 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
       </header>
 
       <main className="flex-1 flex overflow-hidden">
-        {/* Files Sidebar */}
+        {/* Sidebar */}
         <aside className={`absolute lg:relative inset-y-0 left-0 w-72 sm:w-80 bg-white border-r border-gray-200 flex flex-col z-30 lg:z-10 shadow-[4px_0_24px_rgba(0,0,0,0.02)] transform transition-transform duration-300 ease-in-out ${
           isSidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
         }`}>
-          <div className="h-12 sm:h-14 border-b border-gray-200 flex items-center justify-between px-3 sm:px-4 bg-gray-50">
-            <h2 className="text-sm sm:text-base font-semibold text-gray-700">
-              {t('viewers.docx.editor.files', 'Files')} ({filteredFiles.length})
-            </h2>
-            <button
-              onClick={() => setIsSidebarOpen(false)}
-              className="lg:hidden p-1 text-gray-500 hover:text-gray-700 hover:bg-gray-200 rounded transition-colors"
-            >
-              <X className="w-4 h-4" />
-            </button>
+          {/* Mobile Close Button */}
+          <button
+            onClick={() => setIsSidebarOpen(false)}
+            className="lg:hidden absolute top-2 right-2 p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded transition-colors z-40"
+            title={t('viewers.docx.editor.close_sidebar', 'Close Sidebar')}
+          >
+            <X className="w-5 h-5" />
+          </button>
+          {/* Search */}
+          <div className="p-2 sm:p-3 border-b border-gray-100 pt-12 lg:pt-2">
+            <div className="relative">
+              <Search className="absolute left-2 sm:left-3 top-2.5 w-4 h-4 text-gray-400" />
+              <input
+                type="text"
+                placeholder={t('viewers.docx.editor.search_placeholder', 'Search files...')}
+                value={searchQuery}
+                onChange={(e) => {
+                  setSearchQuery(e.target.value);
+                  setSelectedIndex(0);
+                }}
+                className="w-full pl-8 sm:pl-9 pr-2 sm:pr-3 py-1.5 sm:py-2 bg-gray-50 border border-gray-200 rounded-md text-xs sm:text-sm focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all"
+              />
+            </div>
           </div>
           
-          <div className="flex-1 overflow-y-auto p-2 sm:p-3">
-            <div className="mb-3">
-              <div className="relative">
-                <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
-                <input
-                  type="text"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder={t('viewers.docx.editor.search_files', 'Search files...')}
-                  className="w-full pl-8 sm:pl-9 pr-2 sm:pr-3 py-1.5 sm:py-2 bg-gray-50 border border-gray-200 rounded-md text-xs sm:text-sm focus:outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition-all"
-                />
-              </div>
-            </div>
-            
-            {onAddFiles && (
+          {/* Add Files Button */}
+          {onAddFiles && (
+            <div className="px-2 sm:px-3 pb-2 border-b border-gray-100">
               <button
                 onClick={() => fileInputRef.current?.click()}
-                className="w-full mb-3 px-3 py-2 bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white text-xs sm:text-sm font-semibold rounded-lg transition-all shadow-sm hover:shadow-md"
+                className="w-full px-3 py-2 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white text-xs sm:text-sm font-semibold rounded-lg transition-all shadow-sm hover:shadow-md"
               >
                 {t('viewers.docx.editor.add_files', '+ Add Files')}
               </button>
-            )}
-            
-            <input
-              ref={fileInputRef}
-              type="file"
-              multiple
-              accept=".docx,.doc,.docm,.dotx,.dotm"
-              onChange={(e) => {
-                const newFiles = Array.from(e.target.files || []);
-                if (onAddFiles && newFiles.length > 0) {
-                  onAddFiles(newFiles);
-                }
-                if (e.target) {
-                  e.target.value = '';
-                }
-              }}
-              className="hidden"
-            />
-
-            <div className="space-y-1.5 sm:space-y-2">
-              {filteredFiles.map((file, fileIndex) => {
-                const actualIndex = files.indexOf(file);
-                const isSelected = actualIndex === selectedIndex;
-                return (
-                  <div
-                    key={actualIndex}
-                    onClick={() => {
-                      handleFileSelect(actualIndex);
-                      setIsSidebarOpen(false);
-                    }}
-                    className={`group flex items-start gap-2 sm:gap-3 p-1.5 sm:p-2 rounded-lg cursor-pointer transition-all ${
-                      isSelected
-                        ? 'bg-pink-50 border border-pink-200 shadow-sm'
-                        : 'border border-transparent hover:bg-gray-100'
-                    }`}
-                  >
-                    <div className="flex-1 min-w-0">
-                      <p className={`text-xs sm:text-sm font-medium truncate ${
-                        isSelected ? 'font-semibold text-pink-900' : 'font-medium text-gray-700'
-                      }`}
-                      title={file.name}>
-                        {file.name}
-                      </p>
-                      <p className={`text-xs ${isSelected ? 'text-pink-600' : 'text-gray-400'}`}>
-                        {formatFileSize(file.size)}
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
             </div>
+          )}
+            
+          <input
+            ref={fileInputRef}
+            type="file"
+            multiple
+            accept=".docx,.doc,.docm,.dotx,.dotm"
+            onChange={(e) => {
+              if (e.target.files && onAddFiles) {
+                const newFiles = Array.from(e.target.files).filter(file => {
+                  const ext = file.name.split('.').pop()?.toLowerCase();
+                  return ['docx', 'doc', 'docm', 'dotx', 'dotm'].includes(ext || '');
+                });
+                onAddFiles(newFiles);
+              }
+              if (e.target) {
+                e.target.value = '';
+              }
+            }}
+            className="hidden"
+          />
+
+          {/* File List */}
+          <div className="flex-1 overflow-y-auto p-2 sm:p-3 space-y-1.5 sm:space-y-2">
+            {filteredFiles.map((file, fileIndex) => {
+              const actualIndex = files.indexOf(file);
+              const isSelected = actualIndex === selectedIndex;
+              return (
+                <div
+                  key={actualIndex}
+                  onClick={() => {
+                    handleFileSelect(actualIndex);
+                    setIsSidebarOpen(false);
+                  }}
+                  className={`group flex items-start gap-2 sm:gap-3 p-1.5 sm:p-2 rounded-lg cursor-pointer transition-all ${
+                    isSelected
+                      ? 'bg-purple-50 border border-purple-200 shadow-sm'
+                      : 'border border-transparent hover:bg-gray-100'
+                  }`}
+                >
+                  <div className="flex-1 min-w-0">
+                    <p className={`text-xs sm:text-sm font-medium truncate ${
+                      isSelected ? 'font-semibold text-purple-900' : 'font-medium text-gray-700'
+                    }`}
+                    title={file.name}>
+                      {file.name}
+                    </p>
+                    <p className={`text-xs ${isSelected ? 'text-purple-600' : 'text-gray-400'}`}>
+                      {formatFileSize(file.size)}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </aside>
 
@@ -732,22 +738,22 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
                     }}
                     className={`w-full p-2 rounded-lg border-2 transition-all text-left group ${
                       isActive
-                        ? 'border-pink-500 bg-pink-50 shadow-md ring-2 ring-pink-200 scale-105'
-                        : 'border-gray-200 hover:border-pink-300 hover:bg-pink-50/50 hover:shadow-sm'
+                        ? 'border-purple-500 bg-purple-50 shadow-md ring-2 ring-purple-200 scale-105'
+                        : 'border-gray-200 hover:border-purple-300 hover:bg-purple-50/50 hover:shadow-sm'
                     }`}
                     id={`page-thumb-${pageNum}`}
                   >
                     <div className="flex items-center justify-center w-full h-24 sm:h-32 bg-gradient-to-br from-gray-50 to-gray-100 rounded mb-2 overflow-hidden relative border border-gray-200">
                       <span className={`absolute top-1 left-1 text-xs px-2 py-1 rounded font-bold z-10 ${
                         isActive 
-                          ? 'bg-pink-600 text-white shadow-lg' 
-                          : 'bg-gray-700/80 text-white group-hover:bg-pink-600'
+                          ? 'bg-purple-600 text-white shadow-lg' 
+                          : 'bg-gray-700/80 text-white group-hover:bg-purple-600'
                       }`}>
                         {pageNum}
                       </span>
                       <div className="text-center">
                         <div className={`text-2xl font-bold mb-1 ${
-                          isActive ? 'text-pink-600' : 'text-gray-400'
+                          isActive ? 'text-purple-600' : 'text-gray-400'
                         }`}>
                           {pageNum}
                         </div>
@@ -757,10 +763,10 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
                       </div>
                     </div>
                     {isActive && (
-                      <div className="absolute bottom-0 left-0 right-0 h-1 bg-pink-500"></div>
+                      <div className="absolute bottom-0 left-0 right-0 h-1 bg-purple-500"></div>
                     )}
                     <p className={`text-xs text-center font-medium mt-1 ${
-                      isActive ? 'text-pink-700 font-bold' : 'text-gray-600'
+                      isActive ? 'text-purple-700 font-bold' : 'text-gray-600'
                     }`}>
                       {t('viewers.docx.editor.page', 'Page')} {pageNum}
                     </p>
@@ -855,7 +861,7 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
               {/* Presentation Mode */}
               <button
                 onClick={() => setIsPresentationMode(!isPresentationMode)}
-                className="btn-icon flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 text-gray-600 hover:bg-pink-50 hover:text-pink-700 rounded transition-colors text-xs sm:text-sm"
+                className="btn-icon flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 text-gray-600 hover:bg-purple-50 hover:text-purple-700 rounded transition-colors text-xs sm:text-sm"
                 title={t('viewers.docx.editor.start_presentation', 'Start Presentation (Space/Arrows to navigate)')}
               >
                 <Play className="w-3 h-3 sm:w-4 sm:h-4" />
@@ -889,14 +895,14 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
               <>
                 <button
                   onClick={handlePrevious}
-                  className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 p-2 sm:p-3 bg-white/90 backdrop-blur border border-gray-200 shadow-lg rounded-full hover:bg-white hover:text-pink-600 transition-all z-20"
+                  className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 p-2 sm:p-3 bg-white/90 backdrop-blur border border-gray-200 shadow-lg rounded-full hover:bg-white hover:text-purple-600 transition-all z-20"
                   title={t('viewers.docx.editor.previous', 'Previous (←)')}
                 >
                   <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6" />
                 </button>
                 <button
                   onClick={handleNext}
-                  className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 p-2 sm:p-3 bg-white/90 backdrop-blur border border-gray-200 shadow-lg rounded-full hover:bg-white hover:text-pink-600 transition-all z-20"
+                  className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 p-2 sm:p-3 bg-white/90 backdrop-blur border border-gray-200 shadow-lg rounded-full hover:bg-white hover:text-purple-600 transition-all z-20"
                   title={t('viewers.docx.editor.next', 'Next (→)')}
                 >
                   <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6" />
@@ -907,7 +913,7 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
             {/* DOCX iframe */}
             {currentIsLoading ? (
               <div className="flex flex-col items-center justify-center text-gray-500 h-full">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-pink-600 mb-4"></div>
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mb-4"></div>
                 <p className="text-sm">{t('viewers.docx.loading_window.title', 'Loading DOCX...')}</p>
               </div>
             ) : currentDocxHtml ? (
