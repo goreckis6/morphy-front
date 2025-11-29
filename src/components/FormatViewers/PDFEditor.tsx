@@ -24,6 +24,7 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [isPresentationMode, setIsPresentationMode] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isPagesSidebarOpen, setIsPagesSidebarOpen] = useState(true);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const viewerRef = useRef<HTMLDivElement>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
@@ -81,11 +82,19 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
 
         if (response.ok) {
           let html = await response.text();
-          // Hide the red bar controls in the PDF HTML
+          // Hide the red bar controls in the PDF HTML and fix background
           html = html.replace(/<style>([\s\S]*?)<\/style>/i, (match, styles) => {
             return `<style>${styles}
               .toolbar, .header-bar, [class*="toolbar"], [class*="header"] {
                 display: none !important;
+              }
+              body {
+                background: white !important;
+                margin: 0 !important;
+                padding: 0 !important;
+              }
+              html {
+                background: white !important;
               }
             </style>`;
           });
@@ -94,6 +103,14 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
             html = html.replace('<head>', `<head><style>
               .toolbar, .header-bar, [class*="toolbar"], [class*="header"] {
                 display: none !important;
+              }
+              body {
+                background: white !important;
+                margin: 0 !important;
+                padding: 0 !important;
+              }
+              html {
+                background: white !important;
               }
             </style>`);
           }
@@ -171,6 +188,7 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
   };
 
   const scrollToPage = (page: number) => {
+    setCurrentPage(page);
     if (iframeRef.current?.contentWindow) {
       const iframe = iframeRef.current.contentWindow;
       // Try to find page element and scroll to it
@@ -178,6 +196,10 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
       const scrollPosition = (page - 1) * pageHeight;
       iframe.scrollTo({ top: scrollPosition, behavior: 'smooth' });
     }
+  };
+
+  const handlePageClick = (page: number) => {
+    scrollToPage(page);
   };
 
   const handleFitWidth = () => {
@@ -388,7 +410,7 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
       </header>
 
       <main className="flex-1 flex overflow-hidden">
-        {/* Sidebar */}
+        {/* Files Sidebar */}
         <aside className={`absolute lg:relative inset-y-0 left-0 w-72 sm:w-80 bg-white border-r border-gray-200 flex flex-col z-30 lg:z-10 shadow-[4px_0_24px_rgba(0,0,0,0.02)] transform transition-transform duration-300 ease-in-out ${
           isSidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
         }`}>
@@ -484,6 +506,58 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
 
         {/* Main Viewer */}
         <section className="flex-1 flex flex-col min-w-0 bg-gray-50 relative">
+          {/* Pages Thumbnails Sidebar */}
+          {currentTotalPages > 1 && (
+            <aside className={`absolute inset-y-0 left-0 w-48 sm:w-56 bg-white border-r border-gray-200 flex flex-col z-20 shadow-[4px_0_24px_rgba(0,0,0,0.02)] transform transition-transform duration-300 ease-in-out ${
+              isPagesSidebarOpen ? 'translate-x-0' : '-translate-x-full'
+            }`}>
+              <div className="px-3 py-2 border-b border-gray-200 flex items-center justify-between bg-gray-50">
+                <span className="text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                  {t('viewers.pdf.editor.pages', 'Pages')}
+                </span>
+                <button
+                  onClick={() => setIsPagesSidebarOpen(false)}
+                  className="p-1 text-gray-500 hover:text-gray-700 hover:bg-gray-200 rounded transition-colors"
+                  title={t('viewers.pdf.editor.close_pages_sidebar', 'Close Pages')}
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+              <div className="flex-1 overflow-y-auto scroller p-2 space-y-2">
+                {Array.from({ length: currentTotalPages }, (_, i) => i + 1).map((pageNum) => (
+                  <button
+                    key={pageNum}
+                    onClick={() => handlePageClick(pageNum)}
+                    className={`w-full p-2 rounded-lg border-2 transition-all text-left ${
+                      currentPage === pageNum
+                        ? 'border-pink-500 bg-pink-50 shadow-sm'
+                        : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
+                    }`}
+                  >
+                    <div className="flex items-center justify-center w-full h-24 sm:h-32 bg-gray-100 rounded mb-2 overflow-hidden">
+                      <span className="text-xs font-medium text-gray-500">{pageNum}</span>
+                    </div>
+                    <p className={`text-xs text-center font-medium ${
+                      currentPage === pageNum ? 'text-pink-700' : 'text-gray-600'
+                    }`}>
+                      {t('viewers.pdf.editor.page', 'Page')} {pageNum}
+                    </p>
+                  </button>
+                ))}
+              </div>
+            </aside>
+          )}
+
+          {/* Toggle Pages Sidebar Button (when closed) */}
+          {currentTotalPages > 1 && !isPagesSidebarOpen && (
+            <button
+              onClick={() => setIsPagesSidebarOpen(true)}
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-30 bg-white border border-gray-200 rounded-r-lg px-2 py-4 shadow-lg hover:bg-gray-50 transition-colors"
+              title={t('viewers.pdf.editor.show_pages', 'Show Pages')}
+            >
+              <ChevronRight className="w-4 h-4 text-gray-600" />
+            </button>
+          )}
           {/* Toolbar */}
           <div className="h-12 sm:h-14 border-b border-gray-200 bg-white flex flex-col sm:flex-row justify-between items-start sm:items-center px-2 sm:px-4 py-1.5 sm:py-0 shadow-sm z-10 gap-2 sm:gap-0">
             <div className="flex items-center gap-1.5 sm:gap-2 min-w-0 flex-1">
@@ -599,7 +673,7 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
           </div>
 
           {/* PDF Viewer */}
-          <div ref={containerRef} className="flex-1 overflow-auto p-2 sm:p-4 md:p-8 bg-gray-100 flex justify-center items-center relative">
+          <div ref={containerRef} className="flex-1 overflow-auto p-0 bg-white flex justify-center items-center relative">
             {/* Navigation Arrows */}
             {filteredFiles.length > 1 && (
               <>
@@ -628,33 +702,36 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
               </div>
             ) : currentPdfHtml ? (
               <div 
-                className="bg-white shadow-xl sm:shadow-2xl border border-gray-200 transition-transform duration-200"
+                className="w-full h-full bg-white"
                 style={{
                   transform: `scale(${zoom / 100})`,
                   transformOrigin: 'center center',
-                  width: '100%',
-                  height: '100%',
-                  maxWidth: '100%',
-                  maxHeight: '100%',
                 }}
               >
                 <iframe
                   ref={iframeRef}
                   srcDoc={currentPdfHtml}
-                  className="w-full h-full border-0"
+                  className="w-full h-full border-0 bg-white"
                   title={currentFile?.name}
-                  style={{ minHeight: '600px' }}
+                  style={{ 
+                    display: 'block',
+                    margin: '0 auto',
+                    background: 'white'
+                  }}
                 />
               </div>
             ) : currentPdfUrl ? (
               <iframe
+                ref={iframeRef}
                 src={currentPdfUrl}
-                className="w-full h-full border-0 bg-white shadow-xl sm:shadow-2xl border border-gray-200"
+                className="w-full h-full border-0 bg-white"
                 title={currentFile?.name}
                 style={{ 
                   transform: `scale(${zoom / 100})`,
                   transformOrigin: 'center center',
-                  minHeight: '600px'
+                  display: 'block',
+                  margin: '0 auto',
+                  background: 'white'
                 }}
               />
             ) : null}

@@ -86,6 +86,10 @@ type PDFViewerTranslations = {
         fit_width: string;
         rotate: string;
         fullscreen: string;
+        pages: string;
+        page: string;
+        close_pages_sidebar: string;
+        show_pages: string;
       };
     };
   };
@@ -199,7 +203,11 @@ const resources: Record<string, PDFViewerTranslations> = {
           reset_zoom: 'Click to reset zoom',
           fit_width: 'Fit Width',
           rotate: 'Rotate (R)',
-          fullscreen: 'Fullscreen (F)'
+          fullscreen: 'Fullscreen (F)',
+          pages: 'Pages',
+          page: 'Page',
+          close_pages_sidebar: 'Close Pages',
+          show_pages: 'Show Pages'
         }
       }
     }
@@ -311,7 +319,11 @@ const resources: Record<string, PDFViewerTranslations> = {
           reset_zoom: 'Kliknij, aby zresetować zoom',
           fit_width: 'Dopasuj do Szerokości',
           rotate: 'Obróć (R)',
-          fullscreen: 'Pełny Ekran (F)'
+          fullscreen: 'Pełny Ekran (F)',
+          pages: 'Strony',
+          page: 'Strona',
+          close_pages_sidebar: 'Zamknij Strony',
+          show_pages: 'Pokaż Strony'
         }
       }
     }
@@ -423,7 +435,11 @@ const resources: Record<string, PDFViewerTranslations> = {
           reset_zoom: 'Klicken zum Zurücksetzen des Zooms',
           fit_width: 'An Breite Anpassen',
           rotate: 'Drehen (R)',
-          fullscreen: 'Vollbild (F)'
+          fullscreen: 'Vollbild (F)',
+          pages: 'Seiten',
+          page: 'Seite',
+          close_pages_sidebar: 'Seiten Schließen',
+          show_pages: 'Seiten Zeigen'
         }
       }
     }
@@ -535,7 +551,11 @@ const resources: Record<string, PDFViewerTranslations> = {
           reset_zoom: 'Clic para restablecer zoom',
           fit_width: 'Ajustar Ancho',
           rotate: 'Rotar (R)',
-          fullscreen: 'Pantalla Completa (F)'
+          fullscreen: 'Pantalla Completa (F)',
+          pages: 'Páginas',
+          page: 'Página',
+          close_pages_sidebar: 'Cerrar Páginas',
+          show_pages: 'Mostrar Páginas'
         }
       }
     }
@@ -647,7 +667,11 @@ const resources: Record<string, PDFViewerTranslations> = {
           reset_zoom: 'Cliquer pour réinitialiser le zoom',
           fit_width: 'Ajuster la Largeur',
           rotate: 'Tourner (R)',
-          fullscreen: 'Plein Écran (F)'
+          fullscreen: 'Plein Écran (F)',
+          pages: 'Pages',
+          page: 'Page',
+          close_pages_sidebar: 'Fermer Pages',
+          show_pages: 'Afficher Pages'
         }
       }
     }
@@ -759,7 +783,11 @@ const resources: Record<string, PDFViewerTranslations> = {
           reset_zoom: 'Clicca per reimpostare lo zoom',
           fit_width: 'Adatta Larghezza',
           rotate: 'Ruota (R)',
-          fullscreen: 'Schermo Intero (F)'
+          fullscreen: 'Schermo Intero (F)',
+          pages: 'Pagine',
+          page: 'Pagina',
+          close_pages_sidebar: 'Chiudi Pagine',
+          show_pages: 'Mostra Pagine'
         }
       }
     }
@@ -959,7 +987,11 @@ const resources: Record<string, PDFViewerTranslations> = {
           reset_zoom: 'Clique para redefinir zoom',
           fit_width: 'Ajustar Largura',
           rotate: 'Rotacionar (R)',
-          fullscreen: 'Tela Cheia (F)'
+          fullscreen: 'Tela Cheia (F)',
+          pages: 'Páginas',
+          page: 'Página',
+          close_pages_sidebar: 'Fechar Páginas',
+          show_pages: 'Mostrar Páginas'
         }
       }
     }
@@ -1071,7 +1103,11 @@ const resources: Record<string, PDFViewerTranslations> = {
           reset_zoom: 'Nhấp để đặt lại zoom',
           fit_width: 'Vừa Chiều Rộng',
           rotate: 'Xoay (R)',
-          fullscreen: 'Toàn Màn Hình (F)'
+          fullscreen: 'Toàn Màn Hình (F)',
+          pages: 'Trang',
+          page: 'Trang',
+          close_pages_sidebar: 'Đóng Trang',
+          show_pages: 'Hiển Thị Trang'
         }
       }
     }
@@ -1183,7 +1219,11 @@ const resources: Record<string, PDFViewerTranslations> = {
           reset_zoom: 'Yakınlaştırmayı sıfırlamak için tıklayın',
           fit_width: 'Genişliğe Sığdır',
           rotate: 'Döndür (R)',
-          fullscreen: 'Tam Ekran (F)'
+          fullscreen: 'Tam Ekran (F)',
+          pages: 'Sayfalar',
+          page: 'Sayfa',
+          close_pages_sidebar: 'Sayfaları Kapat',
+          show_pages: 'Sayfaları Göster'
         }
       }
     }
@@ -1295,7 +1335,11 @@ const resources: Record<string, PDFViewerTranslations> = {
           reset_zoom: 'Нажмите, чтобы сбросить масштаб',
           fit_width: 'По Ширине',
           rotate: 'Повернуть (R)',
-          fullscreen: 'Полный Экран (F)'
+          fullscreen: 'Полный Экран (F)',
+          pages: 'Страницы',
+          page: 'Страница',
+          close_pages_sidebar: 'Закрыть Страницы',
+          show_pages: 'Показать Страницы'
         }
       }
     }
@@ -1407,7 +1451,11 @@ const resources: Record<string, PDFViewerTranslations> = {
           reset_zoom: 'انقر لإعادة تعيين التكبير',
           fit_width: 'تعديل العرض',
           rotate: 'تدوير (R)',
-          fullscreen: 'ملء الشاشة (F)'
+          fullscreen: 'ملء الشاشة (F)',
+          pages: 'الصفحات',
+          page: 'صفحة',
+          close_pages_sidebar: 'إغلاق الصفحات',
+          show_pages: 'إظهار الصفحات'
         }
       }
     }
@@ -1519,7 +1567,11 @@ const resources: Record<string, PDFViewerTranslations> = {
           reset_zoom: 'คลิกเพื่อรีเซ็ตซูม',
           fit_width: 'พอดีความกว้าง',
           rotate: 'หมุน (R)',
-          fullscreen: 'เต็มหน้าจอ (F)'
+          fullscreen: 'เต็มหน้าจอ (F)',
+          pages: 'หน้า',
+          page: 'หน้า',
+          close_pages_sidebar: 'ปิดหน้า',
+          show_pages: 'แสดงหน้า'
         }
       }
     }
@@ -1631,7 +1683,11 @@ const resources: Record<string, PDFViewerTranslations> = {
           reset_zoom: 'クリックしてズームをリセット',
           fit_width: '幅に合わせる',
           rotate: '回転 (R)',
-          fullscreen: 'フルスクリーン (F)'
+          fullscreen: 'フルスクリーン (F)',
+          pages: 'ページ',
+          page: 'ページ',
+          close_pages_sidebar: 'ページを閉じる',
+          show_pages: 'ページを表示'
         }
       }
     }
@@ -1743,7 +1799,11 @@ const resources: Record<string, PDFViewerTranslations> = {
           reset_zoom: '点击重置缩放',
           fit_width: '适应宽度',
           rotate: '旋转 (R)',
-          fullscreen: '全屏 (F)'
+          fullscreen: '全屏 (F)',
+          pages: '页面',
+          page: '页',
+          close_pages_sidebar: '关闭页面',
+          show_pages: '显示页面'
         }
       }
     }
@@ -1855,7 +1915,11 @@ const resources: Record<string, PDFViewerTranslations> = {
           reset_zoom: 'Klik untuk mengatur ulang zoom',
           fit_width: 'Sesuaikan Lebar',
           rotate: 'Putar (R)',
-          fullscreen: 'Layar Penuh (F)'
+          fullscreen: 'Layar Penuh (F)',
+          pages: 'Halaman',
+          page: 'Halaman',
+          close_pages_sidebar: 'Tutup Halaman',
+          show_pages: 'Tampilkan Halaman'
         }
       }
     }
@@ -1967,7 +2031,11 @@ const resources: Record<string, PDFViewerTranslations> = {
           reset_zoom: 'Klicka för att återställa zoom',
           fit_width: 'Anpassa Bredd',
           rotate: 'Rotera (R)',
-          fullscreen: 'Helskärm (F)'
+          fullscreen: 'Helskärm (F)',
+          pages: 'Sidor',
+          page: 'Sida',
+          close_pages_sidebar: 'Stäng Sidor',
+          show_pages: 'Visa Sidor'
         }
       }
     }
