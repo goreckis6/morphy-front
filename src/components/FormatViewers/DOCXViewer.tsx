@@ -1,17 +1,50 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { FileText, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
+import { DOCXEditor } from './DOCXEditor';
 import { useFileValidation } from '../../hooks/useFileValidation';
+import { useTranslation } from 'react-i18next';
+import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
 
 export const DOCXViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
+  const [isEditorOpen, setIsEditorOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
   const { validateBatchFiles, validationError, clearValidationError } = useFileValidation();
+  const { t, i18n } = useTranslation();
+  usePathLanguageSync(i18n);
+
+  // Check if URL ends with /editor and open editor if files exist
+  useEffect(() => {
+    if (location.pathname.endsWith('/editor') && selectedFiles.length > 0 && !isEditorOpen) {
+      setIsEditorOpen(true);
+    } else if (!location.pathname.endsWith('/editor') && isEditorOpen) {
+      setIsEditorOpen(false);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.pathname, selectedFiles.length]);
+
+  // Get the base path for DOCX
+  const getBasePath = () => {
+    const path = location.pathname;
+    if (path.includes('/viewers/docx')) {
+      return path.replace('/editor', '').replace(/\/viewers\/docx.*/, '/viewers/docx');
+    }
+    // Handle language prefixes
+    const langMatch = path.match(/\/([a-z]{2})\/viewers\/docx/);
+    if (langMatch) {
+      const [, lang] = langMatch;
+      return `/${lang}/viewers/docx`;
+    }
+    return '/viewers/docx'; // fallback
+  };
 
   const handleFilesSelected = (files: File[]) => {
-    // Clear previous validation errors
     clearValidationError();
     
     // Filter only DOCX/DOC files
@@ -20,11 +53,13 @@ export const DOCXViewer: React.FC = () => {
       return ['docx', 'doc', 'docm', 'dotx', 'dotm'].includes(extension || '');
     });
     
-    // Validate the files
     const validation = validateBatchFiles(docxFiles);
     
     if (validation.isValid) {
       setSelectedFiles(docxFiles);
+      // Automatically open editor when files are selected
+      const basePath = getBasePath();
+      navigate(`${basePath}/editor`, { replace: true });
     }
   };
 
@@ -229,6 +264,23 @@ export const DOCXViewer: React.FC = () => {
     }
   };
 
+  if (isEditorOpen && selectedFiles.length > 0) {
+    return (
+      <DOCXEditor
+        files={selectedFiles}
+        onClose={() => {
+          setIsEditorOpen(false);
+          const basePath = getBasePath();
+          navigate(basePath, { replace: true });
+        }}
+        onAddFiles={(newFiles) => {
+          const allFiles = [...selectedFiles, ...newFiles];
+          setSelectedFiles(allFiles);
+        }}
+      />
+    );
+  }
+
   return (
     <>
       <Helmet>
@@ -372,7 +424,11 @@ export const DOCXViewer: React.FC = () => {
                     
                     <div className="space-y-2">
                       <button
-                        onClick={() => handleViewDOCX(file)}
+                        onClick={() => {
+                          setSelectedFiles([file]);
+                          const basePath = getBasePath();
+                          navigate(`${basePath}/editor`, { replace: true });
+                        }}
                         className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
                       >
                         <Eye className="w-4 h-4" />
