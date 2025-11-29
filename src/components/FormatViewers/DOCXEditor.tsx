@@ -86,9 +86,25 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
             // Process HTML to display in A4 page format like Microsoft Word
             let processedHtml = html;
             
-            // Wrap content in A4 page container
-            if (!processedHtml.includes('docx-a4-container')) {
-              processedHtml = `<div class="docx-a4-container">${processedHtml}</div>`;
+            // Extract body content
+            let bodyContent = '';
+            const bodyMatch = html.match(/<body[^>]*>([\s\S]*)<\/body>/i);
+            if (bodyMatch) {
+              bodyContent = bodyMatch[1];
+            } else {
+              // If no body tag, use entire HTML
+              bodyContent = html.replace(/<head[^>]*>[\s\S]*<\/head>/i, '').replace(/<html[^>]*>|<\/html>/gi, '');
+            }
+            
+            // Wrap body content in A4 page container with proper structure
+            const wrappedContent = `<div class="docx-a4-container"><div class="docx-a4-page">${bodyContent}</div></div>`;
+            
+            // Replace body content
+            if (bodyMatch) {
+              processedHtml = processedHtml.replace(/<body[^>]*>[\s\S]*<\/body>/i, `<body>${wrappedContent}</body>`);
+            } else {
+              // If no body tag, create one
+              processedHtml = processedHtml.replace(/<\/head>/i, `</head><body>${wrappedContent}</body>`);
             }
 
             // Add A4 page styling (like Microsoft Word)
@@ -114,7 +130,7 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
                   min-height: 100vh;
                   background: #e5e5e5;
                 }
-                /* A4 Page Format */
+                /* A4 Page Format - 210mm x 297mm */
                 .docx-a4-page {
                   width: 210mm;
                   min-height: 297mm;
@@ -125,39 +141,15 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
                   position: relative;
                   page-break-after: always;
                   break-after: page;
-                }
-                /* Auto-wrap content into A4 pages */
-                .docx-a4-container > * {
-                  width: 210mm;
-                  background: white;
-                  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-                  margin: 0 auto 20px;
-                  padding: 25.4mm 31.7mm;
-                  min-height: 297mm;
-                  page-break-after: always;
-                  break-after: page;
-                  position: relative;
-                }
-                /* If content doesn't have page structure, wrap it */
-                .docx-a4-container:not(:has(.docx-a4-page)) {
                   display: block;
+                  overflow: visible;
                 }
-                .docx-a4-container:not(:has(.docx-a4-page)) > *:first-child {
-                  width: 210mm;
-                  background: white;
-                  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-                  margin: 0 auto 20px;
-                  padding: 25.4mm 31.7mm;
-                  min-height: 297mm;
-                  page-break-after: always;
-                  break-after: page;
+                /* Ensure content inside pages is properly formatted */
+                .docx-a4-page > * {
+                  margin: 0 0 1em 0;
                 }
-                /* Ensure proper page breaks */
-                @media print {
-                  .docx-a4-page, .docx-a4-container > * {
-                    page-break-after: always;
-                    margin-bottom: 0;
-                  }
+                .docx-a4-page > *:last-child {
+                  margin-bottom: 0;
                 }
                 /* Hide any existing toolbars or controls */
                 .toolbar, .header-bar, [class*="toolbar"], [class*="header"], 
@@ -181,17 +173,80 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
               </style></head>`
             );
             
-            // If the HTML doesn't have proper structure, wrap it in A4 pages
-            if (!processedHtml.includes('docx-a4-page') && !processedHtml.match(/<body[^>]*>/i)) {
-              processedHtml = processedHtml.replace(
-                /<body[^>]*>/i,
-                '<body><div class="docx-a4-page">'
-              );
-              processedHtml = processedHtml.replace(
-                /<\/body>/i,
-                '</div></body>'
-              );
-            }
+            // Add JavaScript to split content into A4 pages after load
+            processedHtml = processedHtml.replace(
+              /<\/body>/i,
+              `<script>
+                (function() {
+                  function splitIntoA4Pages() {
+                    try {
+                      const container = document.querySelector('.docx-a4-container');
+                      if (!container) return;
+                      
+                      const firstPage = container.querySelector('.docx-a4-page');
+                      if (!firstPage) return;
+                      
+                      // A4 content area height: 297mm - (25.4mm * 2) = 246.2mm ≈ 931px at 96 DPI
+                      const maxContentHeight = 931;
+                      
+                      // Get direct children only (top-level elements)
+                      const children = Array.from(firstPage.children);
+                      if (children.length === 0) return;
+                      
+                      // Store original content
+                      const originalHTML = firstPage.innerHTML;
+                      firstPage.innerHTML = '';
+                      firstPage.setAttribute('data-page', '1');
+                      
+                      let currentPage = firstPage;
+                      let currentPageHeight = 0;
+                      let pageNum = 1;
+                      
+                      // Process each element
+                      children.forEach((element) => {
+                        // Measure element height by temporarily adding it
+                        const testDiv = document.createElement('div');
+                        testDiv.style.position = 'absolute';
+                        testDiv.style.visibility = 'hidden';
+                        testDiv.style.width = '146.6mm';
+                        testDiv.appendChild(element.cloneNode(true));
+                        document.body.appendChild(testDiv);
+                        const elementHeight = testDiv.offsetHeight || 50;
+                        document.body.removeChild(testDiv);
+                        
+                        // Check if we need a new page
+                        if (currentPageHeight + elementHeight > maxContentHeight && currentPageHeight > 0) {
+                          // Create new page
+                          pageNum++;
+                          currentPage = document.createElement('div');
+                          currentPage.className = 'docx-a4-page';
+                          currentPage.setAttribute('data-page', pageNum.toString());
+                          container.appendChild(currentPage);
+                          currentPageHeight = 0;
+                        }
+                        
+                        // Add element to current page
+                        currentPage.appendChild(element);
+                        currentPageHeight += elementHeight;
+                      });
+                      
+                      console.log('Split into', pageNum, 'A4 pages');
+                    } catch (e) {
+                      console.warn('Error splitting into A4 pages:', e);
+                    }
+                  }
+                  
+                  // Run multiple times to ensure content is loaded
+                  setTimeout(splitIntoA4Pages, 100);
+                  setTimeout(splitIntoA4Pages, 500);
+                  setTimeout(splitIntoA4Pages, 1000);
+                  if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', splitIntoA4Pages);
+                  }
+                  window.addEventListener('load', splitIntoA4Pages);
+                })();
+              </script></body>`
+            );
 
             htmls.set(index, processedHtml);
             setDocxHtml(new Map(htmls));
