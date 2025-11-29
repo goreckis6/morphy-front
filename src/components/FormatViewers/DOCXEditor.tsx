@@ -83,60 +83,120 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
           const html = await response.text();
 
           if (contentType.includes('text/html') && html.trim().length > 0) {
-            // Process HTML to add page markers and improve structure
+            // Process HTML to display in A4 page format like Microsoft Word
             let processedHtml = html;
             
-            // Add page break markers if not present
-            if (!processedHtml.includes('page-break') && !processedHtml.includes('page-break-after')) {
-              // Try to detect natural page breaks (large spacing, headers, etc.)
-              processedHtml = processedHtml.replace(
-                /(<h[1-6][^>]*>|<\/h[1-6]>|<div[^>]*class="[^"]*page[^"]*"[^>]*>|<\/div>)/gi,
-                '<div class="docx-page-break"></div>$1'
-              );
+            // Wrap content in A4 page container
+            if (!processedHtml.includes('docx-a4-container')) {
+              processedHtml = `<div class="docx-a4-container">${processedHtml}</div>`;
             }
 
-            // Wrap content in a container with page markers
-            if (!processedHtml.includes('docx-page-container')) {
-              processedHtml = `<div class="docx-page-container">${processedHtml}</div>`;
-            }
-
-            // Add styles for page detection
+            // Add A4 page styling (like Microsoft Word)
             processedHtml = processedHtml.replace(
               /<\/head>/i,
               `<style>
-                .docx-page-container {
-                  max-width: 800px;
-                  margin: 0 auto;
-                  padding: 40px 20px;
-                  background: white;
+                * {
+                  box-sizing: border-box;
                 }
-                .docx-page-break {
-                  page-break-after: always;
-                  break-after: page;
-                  min-height: 100vh;
-                  position: relative;
-                }
-                .docx-page {
-                  min-height: 100vh;
-                  padding: 40px;
-                  margin-bottom: 20px;
-                  background: white;
-                  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-                  position: relative;
-                }
-                body {
+                html, body {
                   margin: 0;
                   padding: 0;
-                  background: #f5f5f5;
-                  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+                  background: #e5e5e5;
+                  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+                  overflow-x: hidden;
+                }
+                .docx-a4-container {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  padding: 20px;
+                  gap: 20px;
+                  min-height: 100vh;
+                  background: #e5e5e5;
+                }
+                /* A4 Page Format */
+                .docx-a4-page {
+                  width: 210mm;
+                  min-height: 297mm;
+                  background: white;
+                  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+                  margin: 0 auto 20px;
+                  padding: 25.4mm 31.7mm;
+                  position: relative;
+                  page-break-after: always;
+                  break-after: page;
+                }
+                /* Auto-wrap content into A4 pages */
+                .docx-a4-container > * {
+                  width: 210mm;
+                  background: white;
+                  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+                  margin: 0 auto 20px;
+                  padding: 25.4mm 31.7mm;
+                  min-height: 297mm;
+                  page-break-after: always;
+                  break-after: page;
+                  position: relative;
+                }
+                /* If content doesn't have page structure, wrap it */
+                .docx-a4-container:not(:has(.docx-a4-page)) {
+                  display: block;
+                }
+                .docx-a4-container:not(:has(.docx-a4-page)) > *:first-child {
+                  width: 210mm;
+                  background: white;
+                  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+                  margin: 0 auto 20px;
+                  padding: 25.4mm 31.7mm;
+                  min-height: 297mm;
+                  page-break-after: always;
+                  break-after: page;
+                }
+                /* Ensure proper page breaks */
+                @media print {
+                  .docx-a4-page, .docx-a4-container > * {
+                    page-break-after: always;
+                    margin-bottom: 0;
+                  }
+                }
+                /* Hide any existing toolbars or controls */
+                .toolbar, .header-bar, [class*="toolbar"], [class*="header"], 
+                [class*="control"], [class*="menu"] {
+                  display: none !important;
+                }
+                /* Ensure text is readable */
+                p, div, span, h1, h2, h3, h4, h5, h6, li, td, th {
+                  color: #000 !important;
+                }
+                /* Table styling */
+                table {
+                  border-collapse: collapse;
+                  width: 100%;
+                  margin: 10px 0;
+                }
+                table td, table th {
+                  border: 1px solid #ddd;
+                  padding: 8px;
                 }
               </style></head>`
             );
+            
+            // If the HTML doesn't have proper structure, wrap it in A4 pages
+            if (!processedHtml.includes('docx-a4-page') && !processedHtml.match(/<body[^>]*>/i)) {
+              processedHtml = processedHtml.replace(
+                /<body[^>]*>/i,
+                '<body><div class="docx-a4-page">'
+              );
+              processedHtml = processedHtml.replace(
+                /<\/body>/i,
+                '</div></body>'
+              );
+            }
 
             htmls.set(index, processedHtml);
             setDocxHtml(new Map(htmls));
 
-            // Estimate page count based on content height
+            // Estimate page count based on A4 pages
             setTimeout(() => {
               const iframe = document.createElement('iframe');
               iframe.style.display = 'none';
@@ -147,16 +207,26 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
                   const doc = iframe.contentDocument || iframe.contentWindow?.document;
                   if (doc) {
                     const body = doc.body;
-                    const pageBreaks = doc.querySelectorAll('.docx-page-break, [style*="page-break"]').length;
-                    const estimatedHeight = body.scrollHeight;
-                    const viewportHeight = 800; // Approximate viewport height
-                    const estimatedPages = Math.max(1, Math.ceil(estimatedHeight / viewportHeight) + pageBreaks);
-                    
-                    setTotalPages(prev => {
-                      const newMap = new Map(prev);
-                      newMap.set(index, estimatedPages);
-                      return newMap;
-                    });
+                    // Count A4 pages (210mm x 297mm = A4)
+                    const a4Pages = doc.querySelectorAll('.docx-a4-page, .docx-a4-container > *').length;
+                    if (a4Pages > 0) {
+                      setTotalPages(prev => {
+                        const newMap = new Map(prev);
+                        newMap.set(index, a4Pages);
+                        return newMap;
+                      });
+                    } else {
+                      // Estimate based on content height divided by A4 page height
+                      const estimatedHeight = body.scrollHeight;
+                      const a4PageHeight = 1123; // 297mm in pixels at 96 DPI
+                      const estimatedPages = Math.max(1, Math.ceil(estimatedHeight / a4PageHeight));
+                      
+                      setTotalPages(prev => {
+                        const newMap = new Map(prev);
+                        newMap.set(index, estimatedPages);
+                        return newMap;
+                      });
+                    }
                   }
                 } catch (e) {
                   // Cross-origin or other error
@@ -245,6 +315,16 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
       try {
         const doc = iframe.contentDocument || iframe.contentWindow.document;
         if (doc) {
+          // Look for A4 page elements first
+          const a4PageElements = doc.querySelectorAll('.docx-a4-page, .docx-a4-container > *, [class*="a4"]');
+          if (a4PageElements.length > 0) {
+            const targetElement = a4PageElements[Math.min(page - 1, a4PageElements.length - 1)] as HTMLElement;
+            if (targetElement) {
+              targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              return;
+            }
+          }
+          // Fallback to other page elements
           const pageElements = doc.querySelectorAll('.docx-page, .docx-page-break, [class*="page"]');
           if (pageElements.length > 0) {
             const targetElement = pageElements[Math.min(page - 1, pageElements.length - 1)] as HTMLElement;
@@ -259,10 +339,9 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
       }
     }
 
-    // Fallback: scroll by estimated page height
-    const scrollHeight = container.scrollHeight;
-    const pageHeight = scrollHeight / currentTotalPages;
-    const targetScroll = (page - 1) * pageHeight;
+    // Fallback: scroll by A4 page height (297mm + 20px gap = 1143px)
+    const a4PageHeight = 1143; // 297mm + 20px gap
+    const targetScroll = (page - 1) * a4PageHeight;
     container.scrollTo({
       top: targetScroll,
       behavior: 'smooth',
@@ -501,9 +580,10 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
         const viewportHeight = iframeWindow.innerHeight || 800;
         const scrollHeight = iframeWindow.document.documentElement.scrollHeight || 800;
 
-        const pageHeight = scrollHeight / currentTotalPages;
+        // A4 page height in pixels (297mm at 96 DPI = ~1123px, plus 20px gap)
+        const a4PageHeight = 1143; // 297mm + 20px gap
         const newPage = Math.min(
-          Math.max(Math.floor(scrollTop / pageHeight) + 1, 1),
+          Math.max(Math.floor(scrollTop / a4PageHeight) + 1, 1),
           currentTotalPages
         );
 
@@ -924,23 +1004,25 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
               </div>
             ) : currentDocxHtml ? (
               <div 
-                className="w-full h-full bg-gray-100"
+                className="w-full h-full overflow-auto"
                 style={{
                   transform: `scale(${zoom / 100})`,
                   transformOrigin: 'top center',
+                  background: '#e5e5e5'
                 }}
               >
                 <iframe
                   ref={iframeRef}
                   srcDoc={currentDocxHtml}
-                  className="w-full h-full border-0 bg-white"
+                  className="w-full h-full border-0"
                   title={currentFile?.name}
                   style={{ 
                     display: 'block',
                     margin: '0 auto',
-                    background: 'white',
+                    background: '#e5e5e5',
                     overflow: 'auto',
-                    minHeight: '100%'
+                    minHeight: '100%',
+                    width: '100%'
                   }}
                   scrolling="yes"
                 />
