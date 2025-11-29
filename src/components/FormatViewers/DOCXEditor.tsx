@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Search, X, Download, Printer, ZoomIn, ZoomOut, Maximize2, Play, ChevronLeft, ChevronRight, Menu, ChevronUp, ChevronDown } from 'lucide-react';
+import { Search, X, Download, Printer, ZoomIn, ZoomOut, Maximize2, Play, ChevronLeft, ChevronRight, Menu, ChevronUp, ChevronDown, FileText } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from '../LanguageSwitcher';
 import { FileProcessor } from '../../utils/fileProcessing';
@@ -186,10 +186,10 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
   );
 
   const currentFile = filteredFiles[selectedIndex] || files[0];
-  const currentFileIndex = files.indexOf(currentFile);
-  const currentDocxHtml = docxHtml.get(currentFileIndex) || '';
-  const currentIsLoading = isLoading.get(currentFileIndex) || false;
-  const currentTotalPages = totalPages.get(currentFileIndex) || 1;
+  const currentFileIndex = currentFile ? files.indexOf(currentFile) : -1;
+  const currentDocxHtml = currentFileIndex >= 0 ? docxHtml.get(currentFileIndex) || '' : '';
+  const currentIsLoading = currentFileIndex >= 0 ? isLoading.get(currentFileIndex) || false : false;
+  const currentTotalPages = currentFileIndex >= 0 ? totalPages.get(currentFileIndex) || 1 : 1;
 
   const handleNext = useCallback(() => {
     if (selectedIndex < filteredFiles.length - 1) {
@@ -911,7 +911,13 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
             )}
 
             {/* DOCX iframe */}
-            {currentIsLoading ? (
+            {files.length === 0 ? (
+              <div className="flex flex-col items-center justify-center text-gray-500 h-full">
+                <FileText className="w-16 h-16 text-gray-400 mb-4" />
+                <p className="text-lg font-medium text-gray-600 mb-2">{t('viewers.docx.editor.no_files', 'No files loaded')}</p>
+                <p className="text-sm text-gray-500">{t('viewers.docx.editor.add_files_prompt', 'Use the sidebar to add DOCX files')}</p>
+              </div>
+            ) : currentIsLoading ? (
               <div className="flex flex-col items-center justify-center text-gray-500 h-full">
                 <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mb-4"></div>
                 <p className="text-sm">{t('viewers.docx.loading_window.title', 'Loading DOCX...')}</p>
@@ -939,7 +945,12 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
                   scrolling="yes"
                 />
               </div>
-            ) : null}
+            ) : (
+              <div className="flex flex-col items-center justify-center text-gray-500 h-full">
+                <FileText className="w-16 h-16 text-gray-400 mb-4" />
+                <p className="text-sm">{t('viewers.docx.editor.no_preview', 'No preview available')}</p>
+              </div>
+            )}
           </div>
         </div>
       </main>

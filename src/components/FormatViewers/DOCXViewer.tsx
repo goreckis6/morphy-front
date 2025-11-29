@@ -20,15 +20,19 @@ export const DOCXViewer: React.FC = () => {
   const { t, i18n } = useTranslation();
   usePathLanguageSync(i18n);
 
-  // Check if URL ends with /editor and open editor if files exist
+  // Check if URL ends with /editor and open editor
   useEffect(() => {
-    if (location.pathname.endsWith('/editor') && selectedFiles.length > 0 && !isEditorOpen) {
-      setIsEditorOpen(true);
-    } else if (!location.pathname.endsWith('/editor') && isEditorOpen) {
-      setIsEditorOpen(false);
+    if (location.pathname.endsWith('/editor')) {
+      if (!isEditorOpen) {
+        setIsEditorOpen(true);
+      }
+    } else {
+      if (isEditorOpen) {
+        setIsEditorOpen(false);
+      }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [location.pathname, selectedFiles.length]);
+  }, [location.pathname]);
 
   // Get the base path for DOCX
   const getBasePath = () => {
@@ -265,7 +269,7 @@ export const DOCXViewer: React.FC = () => {
     }
   };
 
-  if (isEditorOpen && selectedFiles.length > 0) {
+  if (isEditorOpen) {
     return (
       <DOCXEditor
         files={selectedFiles}

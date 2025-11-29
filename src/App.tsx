@@ -1345,7 +1345,9 @@ function App() {
         <Route path="/viewers/md" element={<MarkdownViewer />} />
         <Route path="/viewers/markdown" element={<MarkdownViewer />} />
         <Route path="/viewers/docx" element={<DOCXViewer />} />
+        <Route path="/viewers/docx/editor" element={<DOCXViewer />} />
         <Route path="/viewers/doc" element={<DOCXViewer />} />
+        <Route path="/viewers/doc/editor" element={<DOCXViewer />} />
         <Route path="/viewers/odt" element={<ODTViewer />} />
         <Route path="/viewers/xlsx" element={<XLSXViewer />} />
         <Route path="/viewers/excel" element={<XLSXViewer />} />

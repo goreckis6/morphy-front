@@ -28,6 +28,9 @@ type DOCXViewerTranslations = {
         next: string;
         files: string;
         files_header: string;
+        no_files: string;
+        add_files_prompt: string;
+        no_preview: string;
       };
       loading_window: {
         title: string;
@@ -64,7 +67,10 @@ const resources: Record<string, DOCXViewerTranslations> = {
           previous: 'Previous (←)',
           next: 'Next (→)',
           files: 'Files',
-          files_header: 'Files'
+          files_header: 'Files',
+          no_files: 'No files loaded',
+          add_files_prompt: 'Use the sidebar to add DOCX files',
+          no_preview: 'No preview available'
         },
         loading_window: {
           title: 'Loading DOCX...'
@@ -99,7 +105,10 @@ const resources: Record<string, DOCXViewerTranslations> = {
           previous: 'Poprzedni (←)',
           next: 'Następny (→)',
           files: 'Pliki',
-          files_header: 'Pliki'
+          files_header: 'Pliki',
+          no_files: 'Brak załadowanych plików',
+          add_files_prompt: 'Użyj paska bocznego, aby dodać pliki DOCX',
+          no_preview: 'Brak podglądu'
         },
         loading_window: {
           title: 'Ładowanie DOCX...'
@@ -134,7 +143,10 @@ const resources: Record<string, DOCXViewerTranslations> = {
           previous: 'Vorherige (←)',
           next: 'Nächste (→)',
           files: 'Dateien',
-          files_header: 'Dateien'
+          files_header: 'Dateien',
+          no_files: 'Keine Dateien geladen',
+          add_files_prompt: 'Verwenden Sie die Seitenleiste, um DOCX-Dateien hinzuzufügen',
+          no_preview: 'Keine Vorschau verfügbar'
         },
         loading_window: {
           title: 'DOCX wird geladen...'
@@ -169,7 +181,10 @@ const resources: Record<string, DOCXViewerTranslations> = {
           previous: 'Anterior (←)',
           next: 'Siguiente (→)',
           files: 'Archivos',
-          files_header: 'Archivos'
+          files_header: 'Archivos',
+          no_files: 'No hay archivos cargados',
+          add_files_prompt: 'Use la barra lateral para agregar archivos DOCX',
+          no_preview: 'No hay vista previa disponible'
         },
         loading_window: {
           title: 'Cargando DOCX...'
@@ -204,7 +219,10 @@ const resources: Record<string, DOCXViewerTranslations> = {
           previous: 'Précédent (←)',
           next: 'Suivant (→)',
           files: 'Fichiers',
-          files_header: 'Fichiers'
+          files_header: 'Fichiers',
+          no_files: 'Aucun fichier chargé',
+          add_files_prompt: 'Utilisez la barre latérale pour ajouter des fichiers DOCX',
+          no_preview: 'Aucun aperçu disponible'
         },
         loading_window: {
           title: 'Chargement de DOCX...'
@@ -239,7 +257,10 @@ const resources: Record<string, DOCXViewerTranslations> = {
           previous: 'Precedente (←)',
           next: 'Successivo (→)',
           files: 'File',
-          files_header: 'File'
+          files_header: 'File',
+          no_files: 'Nessun file caricato',
+          add_files_prompt: 'Usa la barra laterale per aggiungere file DOCX',
+          no_preview: 'Nessuna anteprima disponibile'
         },
         loading_window: {
           title: 'Caricamento DOCX...'
@@ -274,7 +295,10 @@ const resources: Record<string, DOCXViewerTranslations> = {
           previous: 'Vorige (←)',
           next: 'Volgende (→)',
           files: 'Bestanden',
-          files_header: 'Bestanden'
+          files_header: 'Bestanden',
+          no_files: 'Geen bestanden geladen',
+          add_files_prompt: 'Gebruik de zijbalk om DOCX-bestanden toe te voegen',
+          no_preview: 'Geen voorbeeld beschikbaar'
         },
         loading_window: {
           title: 'DOCX laden...'
@@ -309,7 +333,10 @@ const resources: Record<string, DOCXViewerTranslations> = {
           previous: 'Anterior (←)',
           next: 'Próximo (→)',
           files: 'Arquivos',
-          files_header: 'Arquivos'
+          files_header: 'Arquivos',
+          no_files: 'Nenhum arquivo carregado',
+          add_files_prompt: 'Use a barra lateral para adicionar arquivos DOCX',
+          no_preview: 'Nenhuma visualização disponível'
         },
         loading_window: {
           title: 'Carregando DOCX...'
@@ -344,7 +371,10 @@ const resources: Record<string, DOCXViewerTranslations> = {
           previous: 'Trước (←)',
           next: 'Tiếp theo (→)',
           files: 'Tệp',
-          files_header: 'Tệp'
+          files_header: 'Tệp',
+          no_files: 'Không có tệp nào được tải',
+          add_files_prompt: 'Sử dụng thanh bên để thêm tệp DOCX',
+          no_preview: 'Không có bản xem trước'
         },
         loading_window: {
           title: 'Đang tải DOCX...'
@@ -379,7 +409,10 @@ const resources: Record<string, DOCXViewerTranslations> = {
           previous: 'Önceki (←)',
           next: 'Sonraki (→)',
           files: 'Dosyalar',
-          files_header: 'Dosyalar'
+          files_header: 'Dosyalar',
+          no_files: 'Yüklenen dosya yok',
+          add_files_prompt: 'DOCX dosyaları eklemek için kenar çubuğunu kullanın',
+          no_preview: 'Önizleme mevcut değil'
         },
         loading_window: {
           title: 'DOCX yükleniyor...'
@@ -414,7 +447,10 @@ const resources: Record<string, DOCXViewerTranslations> = {
           previous: 'Предыдущий (←)',
           next: 'Следующий (→)',
           files: 'Файлы',
-          files_header: 'Файлы'
+          files_header: 'Файлы',
+          no_files: 'Файлы не загружены',
+          add_files_prompt: 'Используйте боковую панель для добавления файлов DOCX',
+          no_preview: 'Предварительный просмотр недоступен'
         },
         loading_window: {
           title: 'Загрузка DOCX...'
@@ -449,7 +485,10 @@ const resources: Record<string, DOCXViewerTranslations> = {
           previous: 'السابق (←)',
           next: 'التالي (→)',
           files: 'الملفات',
-          files_header: 'الملفات'
+          files_header: 'الملفات',
+          no_files: 'لا توجد ملفات محملة',
+          add_files_prompt: 'استخدم الشريط الجانبي لإضافة ملفات DOCX',
+          no_preview: 'لا توجد معاينة متاحة'
         },
         loading_window: {
           title: 'جارٍ تحميل DOCX...'
@@ -484,7 +523,10 @@ const resources: Record<string, DOCXViewerTranslations> = {
           previous: 'ก่อนหน้า (←)',
           next: 'ถัดไป (→)',
           files: 'ไฟล์',
-          files_header: 'ไฟล์'
+          files_header: 'ไฟล์',
+          no_files: 'ไม่มีไฟล์ที่โหลด',
+          add_files_prompt: 'ใช้แถบด้านข้างเพื่อเพิ่มไฟล์ DOCX',
+          no_preview: 'ไม่มีตัวอย่างให้ดู'
         },
         loading_window: {
           title: 'กำลังโหลด DOCX...'
@@ -519,7 +561,10 @@ const resources: Record<string, DOCXViewerTranslations> = {
           previous: '前へ (←)',
           next: '次へ (→)',
           files: 'ファイル',
-          files_header: 'ファイル'
+          files_header: 'ファイル',
+          no_files: 'ファイルが読み込まれていません',
+          add_files_prompt: 'サイドバーを使用してDOCXファイルを追加',
+          no_preview: 'プレビューが利用できません'
         },
         loading_window: {
           title: 'DOCXを読み込み中...'
@@ -554,7 +599,10 @@ const resources: Record<string, DOCXViewerTranslations> = {
           previous: '上一个 (←)',
           next: '下一个 (→)',
           files: '文件',
-          files_header: '文件'
+          files_header: '文件',
+          no_files: '未加载文件',
+          add_files_prompt: '使用侧边栏添加 DOCX 文件',
+          no_preview: '无预览可用'
         },
         loading_window: {
           title: '正在加载 DOCX...'
@@ -589,7 +637,10 @@ const resources: Record<string, DOCXViewerTranslations> = {
           previous: 'Sebelumnya (←)',
           next: 'Berikutnya (→)',
           files: 'File',
-          files_header: 'File'
+          files_header: 'File',
+          no_files: 'Tidak ada file yang dimuat',
+          add_files_prompt: 'Gunakan bilah sisi untuk menambahkan file DOCX',
+          no_preview: 'Tidak ada pratinjau tersedia'
         },
         loading_window: {
           title: 'Memuat DOCX...'
@@ -624,7 +675,10 @@ const resources: Record<string, DOCXViewerTranslations> = {
           previous: 'Föregående (←)',
           next: 'Nästa (→)',
           files: 'Filer',
-          files_header: 'Filer'
+          files_header: 'Filer',
+          no_files: 'Inga filer laddade',
+          add_files_prompt: 'Använd sidofältet för att lägga till DOCX-filer',
+          no_preview: 'Ingen förhandsvisning tillgänglig'
         },
         loading_window: {
           title: 'Laddar DOCX...'
