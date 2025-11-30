@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { FileText, Upload, ArrowLeft, AlertCircle, Info, Star, Sparkles, Layers } from 'lucide-react';
+import { FileText, Upload, Eye, ArrowLeft, AlertCircle, Info, Star, Sparkles, Layers, Zap, Palette } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
@@ -394,20 +394,22 @@ export const DOCXViewer: React.FC = () => {
         </div>
 
         {/* Content */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          {/* Upload Section */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="p-3 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl">
-                <Upload className="w-6 h-6 text-white" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10">
+          {/* Upload Section - Glassmorphism Card */}
+          <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-10 mb-8 border border-white/50">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="p-4 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300">
+                <Upload className="w-8 h-8 text-white" />
               </div>
-              <h2 className="text-3xl font-bold text-gray-900">
-                Upload DOCX Files
-              </h2>
+              <div>
+                <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
+                  {t('viewers.docx.upload_title')}
+                </h2>
+                <p className="text-gray-600 mt-1 text-sm sm:text-base">
+                  {t('viewers.docx.upload_description')}
+                </p>
+              </div>
             </div>
-            <p className="text-gray-600 mb-6">
-              Drag and drop your Microsoft Word documents or click to browse. Supports DOCX, DOC, DOCM, DOTX, DOTM files up to 100MB each, with batch upload support for up to 20 files.
-            </p>
             <FileUpload 
               onFilesSelected={handleFilesSelected}
               acceptedFormats={['docx', 'doc', 'docm', 'dotx', 'dotm']}
@@ -415,8 +417,13 @@ export const DOCXViewer: React.FC = () => {
               maxSize={100 * 1024 * 1024}
               hideFormatList={true}
               showTotalSize={true}
+              translationKeys={{
+                dragDropText: t('viewers.docx.upload.drag_drop_text'),
+                clickBrowseText: t('viewers.docx.upload.click_browse_text'),
+                chooseFilesButton: t('viewers.docx.upload.choose_files_button'),
+                maxFilesInfo: t('viewers.docx.upload.max_files_info')
+              }}
             />
-            
             {validationError && (
               <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
                 <div className="flex items-center">
@@ -427,6 +434,25 @@ export const DOCXViewer: React.FC = () => {
             )}
           </div>
 
+          {/* View Files Button - Prominent */}
+          {selectedFiles.length > 0 && (
+            <div className="flex justify-center mb-8">
+              <button
+                onClick={() => {
+                  setIsEditorOpen(true);
+                  const basePath = getBasePath();
+                  navigate(`${basePath}/editor`, { replace: true });
+                }}
+                className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl flex items-center gap-3 text-lg overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                <Eye className="w-6 h-6 relative z-10" />
+                <span className="relative z-10">{t('viewers.docx.buttons.view_files')}</span>
+                <Sparkles className="w-5 h-5 relative z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
+              </button>
+            </div>
+          )}
+
           {/* Features Section - Redesigned Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {features.map((feature, index) => {
@@ -436,9 +462,9 @@ export const DOCXViewer: React.FC = () => {
                 'from-purple-500 to-pink-500'
               ];
               const iconNodes = [
-                <FileText className="w-8 h-8 text-white" key="file1" />,
-                <FileText className="w-8 h-8 text-white" key="file2" />,
-                <FileText className="w-8 h-8 text-white" key="file3" />
+                <FileText className="w-8 h-8 text-white" key="filetext1" />,
+                <Zap className="w-8 h-8 text-white" key="zap" />,
+                <Palette className="w-8 h-8 text-white" key="palette" />
               ];
               return (
                 <div

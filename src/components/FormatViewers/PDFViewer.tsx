@@ -45,10 +45,16 @@ export const PDFViewer: React.FC = () => {
     return '/viewers/pdf'; // fallback
   };
 
-  const features = t('viewers.pdf.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
-  const advantages = t('viewers.pdf.advantages', { returnObjects: true }) as string[];
-  const useCases = t('viewers.pdf.use_cases', { returnObjects: true }) as string[];
-  const specs = t('viewers.pdf.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
+  // Get translations with fallbacks to prevent map errors
+  const featuresRaw = t('viewers.pdf.features', { returnObjects: true });
+  const advantagesRaw = t('viewers.pdf.advantages', { returnObjects: true });
+  const useCasesRaw = t('viewers.pdf.use_cases', { returnObjects: true });
+  const specsRaw = t('viewers.pdf.specs', { returnObjects: true });
+  
+  const features = Array.isArray(featuresRaw) ? featuresRaw : [] as Array<{ title: string; description: string }>;
+  const advantages = Array.isArray(advantagesRaw) ? advantagesRaw : [] as string[];
+  const useCases = Array.isArray(useCasesRaw) ? useCasesRaw : [] as string[];
+  const specs = Array.isArray(specsRaw) ? specsRaw : [] as Array<{ label: string; value: string }>;
 
   const handleFilesSelected = (files: File[]) => {
     clearValidationError();
