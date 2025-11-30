@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { FileText, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info, Star, Sparkles, Layers } from 'lucide-react';
+import { FileText, Upload, ArrowLeft, AlertCircle, Info, Star, Sparkles, Layers } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
@@ -421,212 +421,226 @@ export const DOCXViewer: React.FC = () => {
             )}
           </div>
 
-          {/* Preview Section */}
-          {selectedFiles.length > 0 && (
-            <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center space-x-3">
-                  <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl">
-                    <CheckCircle className="w-6 h-6 text-white" />
-                  </div>
-                  <h2 className="text-3xl font-bold text-gray-900">
-                    Your DOCX Files ({selectedFiles.length})
-                  </h2>
-                </div>
-              </div>
-
-              {/* How to View Instructions */}
-              <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                <div className="flex items-start space-x-3">
-                  <Info className="w-5 h-5 text-blue-600 mt-0.5" />
-                  <div>
-                    <h4 className="font-semibold text-blue-900 mb-1">How to View DOCX Files</h4>
-                    <p className="text-sm text-blue-700">
-                      Click the <strong>"View Document"</strong> button to open the Word document in a preview modal. 
-                      You can also download the original file for offline viewing or editing.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {selectedFiles.map((file, index) => (
-                  <div key={index} className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl p-4 hover:shadow-lg transition-all transform hover:scale-105 border border-gray-200">
-                    <div className="flex items-center space-x-3 mb-4">
-                      <div className="p-2 bg-blue-100 rounded-lg">
-                        <FileText className="w-6 h-6 text-blue-600" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <h3 className="text-sm font-medium text-gray-800 truncate">
-                          {file.name}
-                        </h3>
-                        <p className="text-xs text-gray-500">
-                          {(file.size / 1024 / 1024).toFixed(2)} MB
-                        </p>
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <button
-                        onClick={() => {
-                          setSelectedFiles([file]);
-                          const basePath = getBasePath();
-                          navigate(`${basePath}/editor`, { replace: true });
-                        }}
-                        className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
-                      >
-                        <Eye className="w-4 h-4" />
-                        <span>View Document</span>
-                      </button>
-                      <button
-                        onClick={() => handleDownload(file)}
-                        className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
-                      >
-                        <Download className="w-4 h-4" />
-                        <span>Download</span>
-                      </button>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Features Section */}
+          {/* Features Section - Redesigned Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-lg p-8 border border-blue-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <FileText className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Rich Formatting
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Advanced typography, styles, themes, and layout options for professional document creation with full formatting control
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl shadow-lg p-8 border border-green-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <FileText className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Collaboration Tools
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Track changes, comments, and version control support for seamless team collaboration and document review workflows
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl shadow-lg p-8 border border-purple-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <FileText className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Cross-Platform Support
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Compatible with Microsoft Word, Google Docs, LibreOffice, and other office suites across all operating systems
-              </p>
-            </div>
+            {features.map((feature, index) => {
+              const gradients = [
+                'from-blue-500 to-cyan-500',
+                'from-indigo-500 to-purple-500',
+                'from-purple-500 to-pink-500'
+              ];
+              const iconNodes = [
+                <FileText className="w-8 h-8 text-white" key="file1" />,
+                <FileText className="w-8 h-8 text-white" key="file2" />,
+                <FileText className="w-8 h-8 text-white" key="file3" />
+              ];
+              return (
+                <div
+                  key={feature.title}
+                  className="group relative bg-white/80 backdrop-blur-xl rounded-3xl p-8 border border-gray-200 hover:border-transparent shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
+                >
+                  {/* Gradient Background on Hover */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
+                  
+                  {/* Icon */}
+                  <div className={`relative mb-6 w-16 h-16 bg-gradient-to-br ${gradients[index]} rounded-2xl flex items-center justify-center shadow-lg transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
+                    {iconNodes[index]}
+                  </div>
+                  
+                  {/* Content */}
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 relative z-10">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed relative z-10">
+                    {feature.description}
+                  </p>
+                  
+                  {/* Decorative Element */}
+                  <div className={`absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-br ${gradients[index]} opacity-5 rounded-full -mr-16 -mb-16 group-hover:opacity-10 transition-opacity`}></div>
+                </div>
+              );
+            })}
           </div>
 
-          {/* About DOCX Format Section */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="p-3 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl">
-                <FileText className="w-6 h-6 text-white" />
+          {/* About Section - Split Layout */}
+          <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-10 mb-8 border border-white/50">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="p-4 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl shadow-lg">
+                <Info className="w-8 h-8 text-white" />
               </div>
-              <h2 className="text-3xl font-bold text-gray-900">
-                About DOCX Format
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
+                {t('viewers.docx.about_title')}
               </h2>
             </div>
             
-            <div className="prose max-w-none text-gray-600">
-              <p className="mb-6">
-                DOCX (Office Open XML Document) is the default file format for Microsoft Word documents since Word 2007. 
-                It's based on the Open XML standard and uses ZIP compression to reduce file size while maintaining 
-                rich formatting capabilities. DOCX files support advanced features like styles, themes, embedded objects, 
-                charts, tables, and complex formatting options.
+            <div className="prose max-w-none">
+              <p className="text-gray-700 text-base sm:text-lg mb-8 leading-relaxed">
+                {t('viewers.docx.about_intro')}
               </p>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Advantages</h3>
-                  <ul className="space-y-2 text-sm">
-                    <li>• <strong>Smaller file sizes</strong> - ZIP compression reduces size by up to 75%</li>
-                    <li>• <strong>Better recovery</strong> - Improved file corruption recovery</li>
-                    <li>• <strong>Enhanced security</strong> - Built-in encryption and digital signatures</li>
-                    <li>• <strong>Cross-platform</strong> - Compatible with multiple office suites</li>
-                    <li>• <strong>Rich formatting</strong> - Advanced typography and layout options</li>
-                    <li>• <strong>Collaboration</strong> - Track changes and comments support</li>
+              
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {/* Advantages */}
+                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-100">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Star className="w-6 h-6 text-blue-600" />
+                    <h3 className="text-xl font-bold text-gray-900">{t('viewers.docx.advantages_title')}</h3>
+                  </div>
+                  <ul className="space-y-3">
+                    {advantages.map((item, idx) => {
+                      // Remove existing bullet points from the item if present
+                      const cleanItem = item.replace(/^•\s*/, '').trim();
+                      return (
+                        <li key={idx} className="flex items-start gap-3 text-gray-700">
+                          <span className="text-blue-600 font-bold mt-0.5">•</span>
+                          <span dangerouslySetInnerHTML={{ __html: cleanItem }} />
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
                 
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Best Use Cases</h3>
-                  <ul className="space-y-2 text-sm">
-                    <li>• <strong>Business documents</strong> - Reports, proposals, contracts</li>
-                    <li>• <strong>Academic papers</strong> - Research papers, theses, publications</li>
-                    <li>• <strong>Legal documents</strong> - Contracts, agreements, court documents</li>
-                    <li>• <strong>Templates</strong> - Document templates and forms</li>
-                    <li>• <strong>Collaboration</strong> - Multi-author document editing</li>
-                    <li>• <strong>Publishing</strong> - Books, manuals, and documentation</li>
+                {/* Use Cases */}
+                <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 border border-purple-100">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Layers className="w-6 h-6 text-purple-600" />
+                    <h3 className="text-xl font-bold text-gray-900">{t('viewers.docx.use_cases_title')}</h3>
+                  </div>
+                  <ul className="space-y-3">
+                    {useCases.map((item, idx) => {
+                      // Remove existing bullet points from the item if present
+                      const cleanItem = item.replace(/^•\s*/, '').trim();
+                      return (
+                        <li key={idx} className="flex items-start gap-3 text-gray-700">
+                          <span className="text-purple-600 font-bold mt-0.5">•</span>
+                          <span dangerouslySetInnerHTML={{ __html: cleanItem }} />
+                        </li>
+                      );
+                    })}
                   </ul>
-                </div>
-              </div>
-
-              {/* Technical Specifications */}
-              <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Technical Specifications</h3>
-                <div className="overflow-x-auto">
-                  <table className="min-w-full">
-                    <tbody className="divide-y divide-gray-200">
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">File Extensions</td>
-                        <td className="py-2 text-sm text-gray-900">.docx, .doc, .docm, .dotx, .dotm</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">MIME Type</td>
-                        <td className="py-2 text-sm text-gray-900">application/vnd.openxmlformats-officedocument.wordprocessingml.document</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Standard</td>
-                        <td className="py-2 text-sm text-gray-900">Office Open XML (OOXML) - ISO/IEC 29500</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Developed By</td>
-                        <td className="py-2 text-sm text-gray-900">Microsoft Corporation (2007)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Compression</td>
-                        <td className="py-2 text-sm text-gray-900">ZIP-based compression</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Character Encoding</td>
-                        <td className="py-2 text-sm text-gray-900">UTF-8</td>
-                      </tr>
-                    </tbody>
-                  </table>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Back to Viewers Button */}
-          <div className="text-center mt-8">
+          {/* Technical Specifications - Modern Table */}
+          <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-10 mb-8 border border-white/50 overflow-hidden">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="p-4 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl shadow-lg">
+                <FileText className="w-8 h-8 text-white" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
+                {t('viewers.docx.specs_title')}
+              </h2>
+            </div>
+            
+            <div className="overflow-x-auto">
+              <table className="min-w-full">
+                <thead>
+                  <tr className="bg-gradient-to-r from-gray-50 to-gray-100">
+                    <th className="px-6 py-4 text-left text-sm font-bold text-gray-700 uppercase tracking-wider">{t('viewers.docx.specs_header_label')}</th>
+                    <th className="px-6 py-4 text-left text-sm font-bold text-gray-700 uppercase tracking-wider">{t('viewers.docx.specs_header_value')}</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200">
+                  {specs.map((row, idx) => (
+                    <tr key={row.label} className={`hover:bg-blue-50/50 transition-colors ${idx % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}`}>
+                      <td className="px-6 py-4 text-sm font-semibold text-gray-900">{row.label}</td>
+                      <td className="px-6 py-4 text-sm text-gray-700">{row.value}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* SEO Content - Enhanced */}
+          <div className="bg-gradient-to-br from-white via-purple-50/50 to-pink-50/50 backdrop-blur-xl rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-10 mb-8 border border-purple-100">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="p-4 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl shadow-lg">
+                <Sparkles className="w-8 h-8 text-white" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
+                {t('viewers.docx.seo_title')}
+              </h2>
+            </div>
+            
+            <div className="prose max-w-none text-gray-700">
+              <p className="text-base sm:text-lg mb-6 leading-relaxed">
+                {t('viewers.docx.seo_intro')}
+              </p>
+              
+              <div className="space-y-6">
+                <div className="bg-white/60 rounded-xl p-6 border border-purple-100">
+                  <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+                    <FileText className="w-5 h-5 text-purple-600" />
+                    {t('viewers.docx.seo_viewing_title')}
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    {t('viewers.docx.seo_viewing_text')}
+                  </p>
+                </div>
+                
+                <div className="bg-white/60 rounded-xl p-6 border border-purple-100">
+                  <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+                    <FileText className="w-5 h-5 text-purple-600" />
+                    {t('viewers.docx.seo_features_title')}
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    {t('viewers.docx.seo_features_text')}
+                  </p>
+                </div>
+                
+                <div className="bg-white/60 rounded-xl p-6 border border-purple-100">
+                  <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+                    <FileText className="w-5 h-5 text-purple-600" />
+                    {t('viewers.docx.seo_security_title')}
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    {t('viewers.docx.seo_security_text')}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Back Button - Enhanced */}
+          <div className="text-center mb-12">
             <a
               href="/viewers"
-              className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl text-base sm:text-lg group"
             >
-              ← Back to All Viewers
+              <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
+              <span>{t('viewers.docx.buttons.back').replace(/^←\s*/, '')}</span>
             </a>
           </div>
         </div>
         
-        {/* Footer */}
         <Footer />
       </div>
+
+      {/* Custom Animations */}
+      <style>{`
+        @keyframes blob {
+          0%, 100% {
+            transform: translate(0, 0) scale(1);
+          }
+          33% {
+            transform: translate(30px, -50px) scale(1.1);
+          }
+          66% {
+            transform: translate(-20px, 20px) scale(0.9);
+          }
+        }
+        .animate-blob {
+          animation: blob 7s infinite;
+        }
+        .animation-delay-2000 {
+          animation-delay: 2s;
+        }
+        .animation-delay-4000 {
+          animation-delay: 4s;
+        }
+      `}</style>
     </>
   );
 };
