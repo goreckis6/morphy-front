@@ -46,10 +46,16 @@ export const BMPViewer: React.FC = () => {
     return '/viewers/bmp'; // fallback
   };
 
-  const features = t('viewers.bmp.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
-  const advantages = t('viewers.bmp.advantages', { returnObjects: true }) as string[];
-  const useCases = t('viewers.bmp.use_cases', { returnObjects: true }) as string[];
-  const specs = t('viewers.bmp.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
+  // Get translations with fallbacks to prevent map errors
+  const featuresRaw = t('viewers.bmp.features', { returnObjects: true });
+  const advantagesRaw = t('viewers.bmp.advantages', { returnObjects: true });
+  const useCasesRaw = t('viewers.bmp.use_cases', { returnObjects: true });
+  const specsRaw = t('viewers.bmp.specs', { returnObjects: true });
+  
+  const features = Array.isArray(featuresRaw) ? featuresRaw : [] as Array<{ title: string; description: string }>;
+  const advantages = Array.isArray(advantagesRaw) ? advantagesRaw : [] as string[];
+  const useCases = Array.isArray(useCasesRaw) ? useCasesRaw : [] as string[];
+  const specs = Array.isArray(specsRaw) ? specsRaw : [] as Array<{ label: string; value: string }>;
 
   const handleFilesSelected = (files: File[]) => {
     // Filter only BMP files
@@ -75,24 +81,6 @@ export const BMPViewer: React.FC = () => {
     const basePath = getBasePath();
     navigate(basePath);
   };
-
-  const gradients = [
-    'from-blue-500 to-cyan-600',
-    'from-cyan-500 to-sky-600',
-    'from-sky-500 to-blue-600',
-    'from-blue-500 to-indigo-600',
-    'from-cyan-500 to-teal-600',
-    'from-sky-500 to-cyan-600'
-  ];
-
-  const iconNodes = [
-    <Monitor className="w-8 h-8 text-white" />,
-    <Palette className="w-8 h-8 text-white" />,
-    <Zap className="w-8 h-8 text-white" />,
-    <Layers className="w-8 h-8 text-white" />,
-    <Sparkles className="w-8 h-8 text-white" />,
-    <FileImage className="w-8 h-8 text-white" />
-  ];
 
   return (
     <>
@@ -132,37 +120,34 @@ export const BMPViewer: React.FC = () => {
                 <ArrowLeft className="w-5 h-5 sm:w-6 sm:h-6" />
               </button>
 
-              {/* Logo */}
-              <div className="mb-4 sm:mb-6">
-                <div className="p-3 sm:p-4 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 inline-block">
-                  <Monitor className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
+              {/* Icon with Glow Effect - Smaller */}
+              <div className="relative mb-2 sm:mb-3">
+                <div className="absolute inset-0 bg-white/30 rounded-2xl blur-xl transform scale-125"></div>
+                <div className="relative p-2 sm:p-3 bg-white/20 backdrop-blur-xl rounded-2xl border border-white/30 shadow-xl">
+                  <Monitor className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                 </div>
               </div>
 
-              {/* Title and Subtitle */}
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-2 sm:mb-3 px-4">
+              {/* Title - Smaller and moved up */}
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-5 leading-tight">
                 {t('viewers.bmp.hero_title')}
               </h1>
-              <p className="text-base sm:text-lg lg:text-xl text-blue-100 mb-4 sm:mb-5 px-4 max-w-2xl">
+              
+              {/* Subtitle - More visible */}
+              <p className="text-sm sm:text-base md:text-lg text-white/95 max-w-2xl mx-auto mb-3 sm:mb-4 leading-relaxed font-medium">
                 {t('viewers.bmp.hero_subtitle')}
               </p>
 
-              {/* Quick Stats */}
-              <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-4 sm:mb-6">
-                <div className="bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2 border border-white/20">
-                  <span className="text-sm sm:text-base text-white font-medium">
-                    {t('viewers.bmp.quick_stats.uncompressed')}
-                  </span>
+              {/* Quick Stats - More visible */}
+              <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
+                <div className="px-2.5 sm:px-3 py-1 sm:py-1.5 bg-white/20 backdrop-blur-md rounded-full border border-white/30 shadow-md">
+                  <span className="text-white text-xs sm:text-sm font-semibold">{t('viewers.bmp.quick_stats.uncompressed', '✓ Uncompressed')}</span>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2 border border-white/20">
-                  <span className="text-sm sm:text-base text-white font-medium">
-                    {t('viewers.bmp.quick_stats.wide_support')}
-                  </span>
+                <div className="px-2.5 sm:px-3 py-1 sm:py-1.5 bg-white/20 backdrop-blur-md rounded-full border border-white/30 shadow-md">
+                  <span className="text-white text-xs sm:text-sm font-semibold">{t('viewers.bmp.quick_stats.wide_support', '🌐 Wide Support')}</span>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 py-1.5 sm:py-2 border border-white/20">
-                  <span className="text-sm sm:text-base text-white font-medium">
-                    {t('viewers.bmp.quick_stats.fast_processing')}
-                  </span>
+                <div className="px-2.5 sm:px-3 py-1 sm:py-1.5 bg-white/20 backdrop-blur-md rounded-full border border-white/30 shadow-md">
+                  <span className="text-white text-xs sm:text-sm font-semibold">{t('viewers.bmp.quick_stats.fast_processing', '⚡ Fast Processing')}</span>
                 </div>
               </div>
             </div>
@@ -170,15 +155,15 @@ export const BMPViewer: React.FC = () => {
         </div>
 
         {/* Content */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-          {/* Upload Section */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10">
+          {/* Upload Section - Glassmorphism Card */}
           <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-10 mb-8 border border-white/50">
             <div className="flex items-center gap-4 mb-6">
-              <div className="p-4 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl shadow-lg">
+              <div className="p-4 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300">
                 <Upload className="w-8 h-8 text-white" />
               </div>
               <div>
-                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+                <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
                   {t('viewers.bmp.upload_title')}
                 </h2>
                 <p className="text-gray-600 mt-1 text-sm sm:text-base">
@@ -204,20 +189,32 @@ export const BMPViewer: React.FC = () => {
 
           {/* View Files Button - Prominent */}
           {selectedFiles.length > 0 && (
-            <div className="mb-8 text-center">
+            <div className="flex justify-center mb-8">
               <button
                 onClick={handleOpenEditor}
-                className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-bold py-4 px-8 sm:px-10 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-xl text-lg sm:text-xl"
+                className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-600 hover:from-blue-700 hover:via-cyan-700 hover:to-sky-700 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl flex items-center gap-3 text-lg overflow-hidden"
               >
-                <Eye className="w-6 h-6" />
-                <span>{t('viewers.bmp.buttons.view_files')}</span>
+                <div className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                <Eye className="w-6 h-6 relative z-10" />
+                <span className="relative z-10">{t('viewers.bmp.buttons.view_files')}</span>
+                <Sparkles className="w-5 h-5 relative z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
               </button>
             </div>
           )}
 
-          {/* Features Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-8">
+          {/* Features Section - Redesigned Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {features.map((feature, index) => {
+              const gradients = [
+                'from-blue-500 to-cyan-500',
+                'from-cyan-500 to-sky-500',
+                'from-sky-500 to-blue-500'
+              ];
+              const iconNodes = [
+                <Monitor className="w-8 h-8 text-white" key="monitor" />,
+                <Palette className="w-8 h-8 text-white" key="palette" />,
+                <Zap className="w-8 h-8 text-white" key="zap" />
+              ];
               return (
                 <div
                   key={feature.title}
@@ -270,33 +267,45 @@ export const BMPViewer: React.FC = () => {
                     <h3 className="text-xl font-bold text-gray-900">{t('viewers.bmp.advantages_title')}</h3>
                   </div>
                   <ul className="space-y-3">
-                    {advantages.map((advantage, idx) => (
-                      <li key={idx} className="text-gray-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: `<span class="text-blue-600 font-bold mr-2">•</span>${advantage}` }} />
-                    ))}
+                    {advantages.map((item, idx) => {
+                      const cleanItem = item.replace(/^•\s*/, '').trim();
+                      return (
+                        <li key={idx} className="flex items-start gap-3 text-gray-700">
+                          <span className="text-blue-600 font-bold mt-0.5">•</span>
+                          <span dangerouslySetInnerHTML={{ __html: cleanItem }} />
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
                 
                 {/* Use Cases */}
                 <div className="bg-gradient-to-br from-cyan-50 to-sky-50 rounded-2xl p-6 border border-cyan-100">
                   <div className="flex items-center gap-3 mb-4">
-                    <Sparkles className="w-6 h-6 text-cyan-600" />
+                    <Layers className="w-6 h-6 text-cyan-600" />
                     <h3 className="text-xl font-bold text-gray-900">{t('viewers.bmp.use_cases_title')}</h3>
                   </div>
                   <ul className="space-y-3">
-                    {useCases.map((useCase, idx) => (
-                      <li key={idx} className="text-gray-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: `<span class="text-cyan-600 font-bold mr-2">•</span>${useCase}` }} />
-                    ))}
+                    {useCases.map((item, idx) => {
+                      const cleanItem = item.replace(/^•\s*/, '').trim();
+                      return (
+                        <li key={idx} className="flex items-start gap-3 text-gray-700">
+                          <span className="text-cyan-600 font-bold mt-0.5">•</span>
+                          <span dangerouslySetInnerHTML={{ __html: cleanItem }} />
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Technical Specifications */}
-          <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-10 mb-8 border border-white/50">
+          {/* Technical Specifications - Modern Table */}
+          <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-10 mb-8 border border-white/50 overflow-hidden">
             <div className="flex items-center gap-4 mb-8">
               <div className="p-4 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl shadow-lg">
-                <Layers className="w-8 h-8 text-white" />
+                <FileImage className="w-8 h-8 text-white" />
               </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
                 {t('viewers.bmp.specs_title')}
@@ -304,18 +313,18 @@ export const BMPViewer: React.FC = () => {
             </div>
             
             <div className="overflow-x-auto">
-              <table className="min-w-full bg-white/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-200">
+              <table className="min-w-full">
                 <thead>
-                  <tr className="bg-gradient-to-r from-blue-500 to-cyan-600">
-                    <th className="px-6 py-4 text-left text-sm font-bold text-white">{t('viewers.bmp.specs_header_label')}</th>
-                    <th className="px-6 py-4 text-left text-sm font-bold text-white">{t('viewers.bmp.specs_header_value')}</th>
+                  <tr className="bg-gradient-to-r from-gray-50 to-gray-100">
+                    <th className="px-6 py-4 text-left text-sm font-bold text-gray-700 uppercase tracking-wider">{t('viewers.bmp.specs_header_label')}</th>
+                    <th className="px-6 py-4 text-left text-sm font-bold text-gray-700 uppercase tracking-wider">{t('viewers.bmp.specs_header_value')}</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200">
-                  {specs.map((spec, idx) => (
-                    <tr key={idx} className="hover:bg-blue-50/50 transition-colors">
-                      <td className="px-6 py-4 text-sm font-semibold text-gray-800">{spec.label}</td>
-                      <td className="px-6 py-4 text-sm text-gray-600">{spec.value}</td>
+                  {specs.map((row, idx) => (
+                    <tr key={row.label} className={`hover:bg-blue-50/50 transition-colors ${idx % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}`}>
+                      <td className="px-6 py-4 text-sm font-semibold text-gray-900">{row.label}</td>
+                      <td className="px-6 py-4 text-sm text-gray-700">{row.value}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -323,42 +332,65 @@ export const BMPViewer: React.FC = () => {
             </div>
           </div>
 
-          {/* SEO Section */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-8">
-            <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-white/50 shadow-lg">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-4">
-                <Eye className="w-6 h-6 text-white" />
+          {/* SEO Content - Enhanced */}
+          <div className="bg-gradient-to-br from-white via-blue-50/50 to-cyan-50/50 backdrop-blur-xl rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-10 mb-8 border border-blue-100">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="p-4 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl shadow-lg">
+                <Sparkles className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{t('viewers.bmp.seo_viewing_title')}</h3>
-              <p className="text-gray-600 leading-relaxed">{t('viewers.bmp.seo_viewing_text')}</p>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
+                {t('viewers.bmp.seo_title')}
+              </h2>
             </div>
             
-            <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-white/50 shadow-lg">
-              <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-sky-600 rounded-xl flex items-center justify-center mb-4">
-                <Zap className="w-6 h-6 text-white" />
+            <div className="prose max-w-none text-gray-700">
+              <p className="text-base sm:text-lg mb-6 leading-relaxed">
+                {t('viewers.bmp.seo_intro')}
+              </p>
+              
+              <div className="space-y-6">
+                <div className="bg-white/60 rounded-xl p-6 border border-blue-100">
+                  <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+                    <Eye className="w-5 h-5 text-blue-600" />
+                    {t('viewers.bmp.seo_viewing_title')}
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    {t('viewers.bmp.seo_viewing_text')}
+                  </p>
+                </div>
+                
+                <div className="bg-white/60 rounded-xl p-6 border border-blue-100">
+                  <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+                    <Zap className="w-5 h-5 text-blue-600" />
+                    {t('viewers.bmp.seo_conversion_title')}
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    {t('viewers.bmp.seo_conversion_text')}
+                  </p>
+                </div>
+                
+                <div className="bg-white/60 rounded-xl p-6 border border-blue-100">
+                  <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+                    <Palette className="w-5 h-5 text-blue-600" />
+                    {t('viewers.bmp.seo_optimization_title')}
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    {t('viewers.bmp.seo_optimization_text')}
+                  </p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{t('viewers.bmp.seo_conversion_title')}</h3>
-              <p className="text-gray-600 leading-relaxed">{t('viewers.bmp.seo_conversion_text')}</p>
-            </div>
-            
-            <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-white/50 shadow-lg">
-              <div className="w-12 h-12 bg-gradient-to-br from-sky-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">
-                <Palette className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{t('viewers.bmp.seo_optimization_title')}</h3>
-              <p className="text-gray-600 leading-relaxed">{t('viewers.bmp.seo_optimization_text')}</p>
             </div>
           </div>
 
-          {/* Back to Viewers Button */}
-          <div className="text-center mb-8">
-            <button
-              onClick={() => window.location.href = '/viewers'}
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-bold py-4 px-8 sm:px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+          {/* Back Button - Enhanced */}
+          <div className="text-center mb-12">
+            <a
+              href="/viewers"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-600 hover:from-blue-700 hover:via-cyan-700 hover:to-sky-700 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl text-base sm:text-lg group"
             >
-              <ArrowLeft className="w-5 h-5" />
-              <span>{t('viewers.bmp.buttons.back', 'Back to All Viewers').replace(/^←\s*/, '')}</span>
-            </button>
+              <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
+              <span>{t('viewers.bmp.buttons.back').replace(/^←\s*/, '')}</span>
+            </a>
           </div>
         </div>
         
