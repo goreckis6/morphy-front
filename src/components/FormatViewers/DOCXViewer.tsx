@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { FileText, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info } from 'lucide-react';
+import { FileText, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info, Star, Sparkles, Layers } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
@@ -78,6 +78,11 @@ export const DOCXViewer: React.FC = () => {
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
   };
+
+  const features = t('viewers.docx.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
+  const advantages = t('viewers.docx.advantages', { returnObjects: true }) as string[];
+  const useCases = t('viewers.docx.use_cases', { returnObjects: true }) as string[];
+  const specs = t('viewers.docx.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
 
   const handleViewDOCX = async (file: File) => {
     // Check file size (max 100MB for preview)
@@ -317,31 +322,65 @@ export const DOCXViewer: React.FC = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
         <Header />
-        
-        {/* Hero Section */}
-        <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700">
-          <div className="absolute inset-0 bg-black/20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-4">
-                <button
-                  onClick={() => window.location.href = '/viewers'}
-                  className="p-2 text-white/80 hover:text-white hover:bg-white/20 rounded-lg transition-colors"
-                >
-                  <ArrowLeft className="w-5 h-5" />
-                </button>
-                <div className="p-4 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
-                  <FileText className="w-12 h-12 text-white" />
+      
+        {/* Hero Section - Redesigned */}
+        <div className="relative overflow-hidden">
+          {/* Animated Background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700">
+            <div 
+              className="absolute inset-0 opacity-20"
+              style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+                backgroundRepeat: 'repeat'
+              }}
+            ></div>
+          </div>
+          
+          {/* Floating Orbs */}
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+          <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-indigo-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
+            <div className="flex flex-col items-center text-center">
+              {/* Back Button - Floating */}
+              <button
+                onClick={() => window.location.href = '/viewers'}
+                className="absolute top-4 left-4 sm:left-6 p-2 sm:p-3 bg-white/10 backdrop-blur-md text-white/90 hover:text-white hover:bg-white/20 rounded-xl transition-all duration-300 transform hover:scale-110 shadow-lg border border-white/20"
+              >
+                <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
+              </button>
+
+              {/* Icon with Glow Effect - Smaller */}
+              <div className="relative mb-2 sm:mb-3">
+                <div className="absolute inset-0 bg-white/30 rounded-2xl blur-xl transform scale-125"></div>
+                <div className="relative p-2 sm:p-3 bg-white/20 backdrop-blur-xl rounded-2xl border border-white/30 shadow-xl">
+                  <FileText className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                 </div>
-                <div>
-                  <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
-                    Free DOCX Viewer
-                  </h1>
-                  <p className="text-xl text-blue-100">
-                    View and analyze Microsoft Word documents with professional tools - 100% free
-                  </p>
+              </div>
+
+              {/* Title - Smaller and moved up */}
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-5 leading-tight">
+                {t('viewers.docx.hero_title')}
+              </h1>
+              
+              {/* Subtitle - More visible */}
+              <p className="text-sm sm:text-base md:text-lg text-white/95 max-w-2xl mx-auto mb-3 sm:mb-4 leading-relaxed font-medium">
+                {t('viewers.docx.hero_subtitle')}
+              </p>
+
+              {/* Quick Stats - More visible */}
+              <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
+                <div className="px-2.5 sm:px-3 py-1 sm:py-1.5 bg-white/20 backdrop-blur-md rounded-full border border-white/30 shadow-md">
+                  <span className="text-white text-xs sm:text-sm font-semibold">{t('viewers.docx.quick_stats.universal_format', '✓ Universal Format')}</span>
+                </div>
+                <div className="px-2.5 sm:px-3 py-1 sm:py-1.5 bg-white/20 backdrop-blur-md rounded-full border border-white/30 shadow-md">
+                  <span className="text-white text-xs sm:text-sm font-semibold">{t('viewers.docx.quick_stats.fast_processing', '⚡ Fast Processing')}</span>
+                </div>
+                <div className="px-2.5 sm:px-3 py-1 sm:py-1.5 bg-white/20 backdrop-blur-md rounded-full border border-white/30 shadow-md">
+                  <span className="text-white text-xs sm:text-sm font-semibold">{t('viewers.docx.quick_stats.high_quality', '🎨 High Quality')}</span>
                 </div>
               </div>
             </div>
