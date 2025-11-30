@@ -79,10 +79,16 @@ export const DOCXViewer: React.FC = () => {
     URL.revokeObjectURL(url);
   };
 
-  const features = t('viewers.docx.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
-  const advantages = t('viewers.docx.advantages', { returnObjects: true }) as string[];
-  const useCases = t('viewers.docx.use_cases', { returnObjects: true }) as string[];
-  const specs = t('viewers.docx.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
+  // Get translations with fallbacks to prevent map errors
+  const featuresRaw = t('viewers.docx.features', { returnObjects: true });
+  const advantagesRaw = t('viewers.docx.advantages', { returnObjects: true });
+  const useCasesRaw = t('viewers.docx.use_cases', { returnObjects: true });
+  const specsRaw = t('viewers.docx.specs', { returnObjects: true });
+  
+  const features = Array.isArray(featuresRaw) ? featuresRaw : [] as Array<{ title: string; description: string }>;
+  const advantages = Array.isArray(advantagesRaw) ? advantagesRaw : [] as string[];
+  const useCases = Array.isArray(useCasesRaw) ? useCasesRaw : [] as string[];
+  const specs = Array.isArray(specsRaw) ? specsRaw : [] as Array<{ label: string; value: string }>;
 
   const handleViewDOCX = async (file: File) => {
     // Check file size (max 100MB for preview)

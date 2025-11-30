@@ -1,8 +1,52 @@
 import i18n from '../../../i18n';
 
+type Feature = { title: string; description: string };
+type Spec = { label: string; value: string };
+
 type DOCXViewerTranslations = {
   viewers: {
     docx: {
+      meta_title: string;
+      meta_description: string;
+      meta_keywords: string;
+      hero_title: string;
+      hero_subtitle: string;
+      upload_title: string;
+      upload_description: string;
+      upload: {
+        drag_drop_text: string;
+        click_browse_text: string;
+        choose_files_button: string;
+        max_files_info: string;
+      };
+      buttons: {
+        view_files: string;
+        back: string;
+      };
+      quick_stats: {
+        universal_format: string;
+        fast_processing: string;
+        high_quality: string;
+      };
+      features: Feature[];
+      about_title: string;
+      about_intro: string;
+      advantages_title: string;
+      advantages: string[];
+      use_cases_title: string;
+      use_cases: string[];
+      specs_title: string;
+      specs_header_label: string;
+      specs_header_value: string;
+      specs: Spec[];
+      seo_title: string;
+      seo_intro: string;
+      seo_viewing_title: string;
+      seo_viewing_text: string;
+      seo_features_title: string;
+      seo_features_text: string;
+      seo_security_title: string;
+      seo_security_text: string;
       editor: {
         toggle_sidebar: string;
         close: string;
@@ -43,6 +87,72 @@ const resources: Record<string, DOCXViewerTranslations> = {
   en: {
     viewers: {
       docx: {
+        meta_title: 'Free DOCX Viewer - View Microsoft Word Documents Online',
+        meta_description: 'Free professional DOCX viewer for Microsoft Word documents. Upload and preview DOCX, DOC, DOCM files online with advanced document viewing tools. Supports batch viewing up to 20 files. 100% free DOCX viewer tool.',
+        meta_keywords: 'DOCX viewer, Word document viewer, Microsoft Word viewer, DOC viewer, document preview, online DOCX reader, DOCX viewer online, DOCX viewer free',
+        hero_title: 'Free DOCX Viewer',
+        hero_subtitle: 'View and analyze Microsoft Word documents directly in your browser – 100% free',
+        upload_title: 'Upload DOCX Documents',
+        upload_description: 'Drag and drop your DOCX files or click to browse. Supports DOCX, DOC, DOCM, DOTX, DOTM files up to 100MB each, with batch upload for up to 20 documents.',
+        upload: {
+          drag_drop_text: 'Drag & Drop Your Files Here',
+          click_browse_text: 'or click the button below to browse',
+          choose_files_button: 'Choose Files',
+          max_files_info: 'Max {maxFiles} files • Up to {maxSize} Total'
+        },
+        buttons: {
+          view_files: 'View Files',
+          back: 'Back to All Viewers'
+        },
+        quick_stats: {
+          universal_format: '✓ Universal Format',
+          fast_processing: '⚡ Fast Processing',
+          high_quality: '🎨 High Quality'
+        },
+        features: [
+          { title: 'Rich Formatting', description: 'Advanced typography, styles, themes, and layout options for professional document creation with full formatting control' },
+          { title: 'Collaboration Tools', description: 'Track changes, comments, and version control support for seamless team collaboration and document review workflows' },
+          { title: 'Cross-Platform Support', description: 'Compatible with Microsoft Word, Google Docs, LibreOffice, and other office suites across all operating systems' }
+        ],
+        about_title: 'About DOCX Format',
+        about_intro: 'DOCX (Office Open XML Document) is the default file format for Microsoft Word documents since Word 2007. It\'s based on the Open XML standard and uses ZIP compression to reduce file size while maintaining rich formatting capabilities. DOCX files support advanced features like styles, themes, embedded objects, charts, tables, and complex formatting options.',
+        advantages_title: 'Key Advantages',
+        advantages: [
+          'Smaller file sizes – ZIP compression reduces size by up to 75%',
+          'Better recovery – Improved file corruption recovery',
+          'Enhanced security – Built-in encryption and digital signatures',
+          'Cross-platform – Compatible with multiple office suites',
+          'Rich formatting – Advanced typography and layout options',
+          'Collaboration – Track changes and comments support'
+        ],
+        use_cases_title: 'Best Use Cases',
+        use_cases: [
+          'Business documents – Reports, proposals, contracts',
+          'Academic papers – Research papers, theses, publications',
+          'Legal documents – Contracts, agreements, court documents',
+          'Templates – Document templates and forms',
+          'Collaboration – Multi-author document editing',
+          'Publishing – Books, manuals, and documentation'
+        ],
+        specs_title: 'Technical Specifications',
+        specs_header_label: 'Specification',
+        specs_header_value: 'Details',
+        specs: [
+          { label: 'File Extensions', value: '.docx, .doc, .docm, .dotx, .dotm' },
+          { label: 'MIME Type', value: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' },
+          { label: 'Standard', value: 'Office Open XML (OOXML) - ISO/IEC 29500' },
+          { label: 'Developed By', value: 'Microsoft Corporation (2007)' },
+          { label: 'Compression', value: 'ZIP-based compression' },
+          { label: 'Character Encoding', value: 'UTF-8' }
+        ],
+        seo_title: 'Why Choose Our DOCX Viewer?',
+        seo_intro: 'Our DOCX viewer provides a seamless experience for viewing and managing Word documents directly in your browser.',
+        seo_viewing_title: 'Professional Document Viewing',
+        seo_viewing_text: 'View DOCX documents with high-quality rendering, zoom controls, and navigation tools.',
+        seo_features_title: 'Advanced Features',
+        seo_features_text: 'Access powerful DOCX viewing features including search, zoom, and page navigation.',
+        seo_security_title: 'Secure & Private',
+        seo_security_text: 'Your DOCX files are processed securely and never stored on our servers.',
         editor: {
           toggle_sidebar: 'Toggle Sidebar',
           close: 'Close (Esc)',
@@ -81,6 +191,72 @@ const resources: Record<string, DOCXViewerTranslations> = {
   pl: {
     viewers: {
       docx: {
+        meta_title: 'Darmowy przeglądarka DOCX - Przeglądaj dokumenty Microsoft Word online',
+        meta_description: 'Darmowa profesjonalna przeglądarka DOCX dla dokumentów Microsoft Word. Przesyłaj i przeglądaj pliki DOCX, DOC, DOCM online za pomocą zaawansowanych narzędzi do przeglądania dokumentów. Obsługuje przeglądanie wsadowe do 20 plików. 100% darmowe narzędzie przeglądarki DOCX.',
+        meta_keywords: 'przeglądarka DOCX, przeglądarka dokumentów Word, przeglądarka Microsoft Word, przeglądarka DOC, podgląd dokumentów, czytnik DOCX online, przeglądarka DOCX online, darmowa przeglądarka DOCX',
+        hero_title: 'Darmowa przeglądarka DOCX',
+        hero_subtitle: 'Przeglądaj i analizuj dokumenty Microsoft Word bezpośrednio w przeglądarce – 100% darmowe',
+        upload_title: 'Prześlij dokumenty DOCX',
+        upload_description: 'Przeciągnij i upuść pliki DOCX lub kliknij, aby przeglądać. Obsługuje pliki DOCX, DOC, DOCM, DOTX, DOTM do 100MB każdy, z możliwością przesyłania wsadowego do 20 dokumentów.',
+        upload: {
+          drag_drop_text: 'Przeciągnij i upuść pliki tutaj',
+          click_browse_text: 'lub kliknij przycisk poniżej, aby przeglądać',
+          choose_files_button: 'Wybierz pliki',
+          max_files_info: 'Maks. {maxFiles} plików • Do {maxSize} łącznie'
+        },
+        buttons: {
+          view_files: 'Wyświetl pliki',
+          back: 'Powrót do wszystkich przeglądarek'
+        },
+        quick_stats: {
+          universal_format: '✓ Uniwersalny format',
+          fast_processing: '⚡ Szybkie przetwarzanie',
+          high_quality: '🎨 Wysoka jakość'
+        },
+        features: [
+          { title: 'Bogate formatowanie', description: 'Zaawansowana typografia, style, motywy i opcje układu do profesjonalnego tworzenia dokumentów z pełną kontrolą formatowania' },
+          { title: 'Narzędzia do współpracy', description: 'Śledzenie zmian, komentarze i obsługa kontroli wersji dla płynnej współpracy zespołowej i przepływów pracy przeglądu dokumentów' },
+          { title: 'Obsługa wielu platform', description: 'Zgodne z Microsoft Word, Google Docs, LibreOffice i innymi pakietami biurowymi we wszystkich systemach operacyjnych' }
+        ],
+        about_title: 'O formacie DOCX',
+        about_intro: 'DOCX (Office Open XML Document) to domyślny format plików dla dokumentów Microsoft Word od Word 2007. Jest oparty na standardzie Open XML i używa kompresji ZIP do zmniejszenia rozmiaru pliku przy zachowaniu bogatych możliwości formatowania. Pliki DOCX obsługują zaawansowane funkcje, takie jak style, motywy, osadzone obiekty, wykresy, tabele i złożone opcje formatowania.',
+        advantages_title: 'Kluczowe zalety',
+        advantages: [
+          'Mniejsze rozmiary plików – kompresja ZIP zmniejsza rozmiar nawet o 75%',
+          'Lepsze odzyskiwanie – ulepszone odzyskiwanie uszkodzonych plików',
+          'Zwiększone bezpieczeństwo – wbudowane szyfrowanie i podpisy cyfrowe',
+          'Wieloplatformowość – zgodne z wieloma pakietami biurowymi',
+          'Bogate formatowanie – zaawansowana typografia i opcje układu',
+          'Współpraca – obsługa śledzenia zmian i komentarzy'
+        ],
+        use_cases_title: 'Najlepsze zastosowania',
+        use_cases: [
+          'Dokumenty biznesowe – raporty, propozycje, umowy',
+          'Prace akademickie – artykuły naukowe, tezy, publikacje',
+          'Dokumenty prawne – umowy, porozumienia, dokumenty sądowe',
+          'Szablony – szablony dokumentów i formularze',
+          'Współpraca – edycja dokumentów przez wielu autorów',
+          'Publikowanie – książki, podręczniki i dokumentacja'
+        ],
+        specs_title: 'Specyfikacje techniczne',
+        specs_header_label: 'Specyfikacja',
+        specs_header_value: 'Szczegóły',
+        specs: [
+          { label: 'Rozszerzenia plików', value: '.docx, .doc, .docm, .dotx, .dotm' },
+          { label: 'Typ MIME', value: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' },
+          { label: 'Standard', value: 'Office Open XML (OOXML) - ISO/IEC 29500' },
+          { label: 'Opracowane przez', value: 'Microsoft Corporation (2007)' },
+          { label: 'Kompresja', value: 'Kompresja oparta na ZIP' },
+          { label: 'Kodowanie znaków', value: 'UTF-8' }
+        ],
+        seo_title: 'Dlaczego wybrać naszą przeglądarkę DOCX?',
+        seo_intro: 'Nasza przeglądarka DOCX zapewnia płynne doświadczenie w przeglądaniu i zarządzaniu dokumentami Word bezpośrednio w przeglądarce.',
+        seo_viewing_title: 'Profesjonalne przeglądanie dokumentów',
+        seo_viewing_text: 'Przeglądaj dokumenty DOCX z renderowaniem wysokiej jakości, kontrolami powiększenia i narzędziami nawigacji.',
+        seo_features_title: 'Zaawansowane funkcje',
+        seo_features_text: 'Uzyskaj dostęp do potężnych funkcji przeglądania DOCX, w tym wyszukiwania, powiększania i nawigacji po stronach.',
+        seo_security_title: 'Bezpieczne i prywatne',
+        seo_security_text: 'Twoje pliki DOCX są przetwarzane bezpiecznie i nigdy nie są przechowywane na naszych serwerach.',
         editor: {
           toggle_sidebar: 'Przełącz pasek boczny',
           close: 'Zamknij (Esc)',
@@ -119,6 +295,72 @@ const resources: Record<string, DOCXViewerTranslations> = {
   de: {
     viewers: {
       docx: {
+        meta_title: 'Kostenloser DOCX-Viewer - Microsoft Word-Dokumente online anzeigen',
+        meta_description: 'Kostenloser professioneller DOCX-Viewer für Microsoft Word-Dokumente. Laden Sie DOCX-, DOC-, DOCM-Dateien online hoch und zeigen Sie sie mit erweiterten Dokumentanzeigetools an. Unterstützt Batch-Anzeige von bis zu 20 Dateien. 100% kostenloses DOCX-Viewer-Tool.',
+        meta_keywords: 'DOCX Viewer, Word-Dokument-Viewer, Microsoft Word Viewer, DOC Viewer, Dokumentvorschau, Online-DOCX-Reader, DOCX Viewer online, kostenloser DOCX Viewer',
+        hero_title: 'Kostenloser DOCX-Viewer',
+        hero_subtitle: 'Microsoft Word-Dokumente direkt in Ihrem Browser anzeigen und analysieren – 100% kostenlos',
+        upload_title: 'DOCX-Dokumente hochladen',
+        upload_description: 'Ziehen Sie Ihre DOCX-Dateien hierher oder klicken Sie zum Durchsuchen. Unterstützt DOCX-, DOC-, DOCM-, DOTX-, DOTM-Dateien bis zu 100 MB pro Datei, mit Batch-Upload für bis zu 20 Dokumente.',
+        upload: {
+          drag_drop_text: 'Dateien hier ablegen',
+          click_browse_text: 'oder klicken Sie auf die Schaltfläche unten zum Durchsuchen',
+          choose_files_button: 'Dateien auswählen',
+          max_files_info: 'Max. {maxFiles} Dateien • Bis zu {maxSize} gesamt'
+        },
+        buttons: {
+          view_files: 'Dateien anzeigen',
+          back: 'Zurück zu allen Viewern'
+        },
+        quick_stats: {
+          universal_format: '✓ Universelles Format',
+          fast_processing: '⚡ Schnelle Verarbeitung',
+          high_quality: '🎨 Hohe Qualität'
+        },
+        features: [
+          { title: 'Umfangreiche Formatierung', description: 'Erweiterte Typografie, Stile, Designs und Layout-Optionen für professionelle Dokumenterstellung mit vollständiger Formatierungskontrolle' },
+          { title: 'Kollaborationstools', description: 'Änderungen verfolgen, Kommentare und Versionskontrolle für nahtlose Teamzusammenarbeit und Dokumentprüfungs-Workflows' },
+          { title: 'Plattformübergreifende Unterstützung', description: 'Kompatibel mit Microsoft Word, Google Docs, LibreOffice und anderen Office-Suiten auf allen Betriebssystemen' }
+        ],
+        about_title: 'Über das DOCX-Format',
+        about_intro: 'DOCX (Office Open XML Document) ist das Standarddateiformat für Microsoft Word-Dokumente seit Word 2007. Es basiert auf dem Open XML-Standard und verwendet ZIP-Komprimierung, um die Dateigröße zu reduzieren und gleichzeitig umfangreiche Formatierungsmöglichkeiten zu erhalten. DOCX-Dateien unterstützen erweiterte Funktionen wie Stile, Designs, eingebettete Objekte, Diagramme, Tabellen und komplexe Formatierungsoptionen.',
+        advantages_title: 'Wichtigste Vorteile',
+        advantages: [
+          'Kleinere Dateigrößen – ZIP-Komprimierung reduziert die Größe um bis zu 75%',
+          'Besseres Wiederherstellen – Verbesserte Wiederherstellung beschädigter Dateien',
+          'Erhöhte Sicherheit – Integrierte Verschlüsselung und digitale Signaturen',
+          'Plattformübergreifend – Kompatibel mit mehreren Office-Suiten',
+          'Umfangreiche Formatierung – Erweiterte Typografie und Layout-Optionen',
+          'Kollaboration – Unterstützung für Änderungsverfolgung und Kommentare'
+        ],
+        use_cases_title: 'Beste Anwendungsfälle',
+        use_cases: [
+          'Geschäftsdokumente – Berichte, Vorschläge, Verträge',
+          'Akademische Arbeiten – Forschungsarbeiten, Dissertationen, Publikationen',
+          'Rechtsdokumente – Verträge, Vereinbarungen, Gerichtsdokumente',
+          'Vorlagen – Dokumentvorlagen und Formulare',
+          'Kollaboration – Mehrfachautoren-Dokumentbearbeitung',
+          'Veröffentlichung – Bücher, Handbücher und Dokumentation'
+        ],
+        specs_title: 'Technische Spezifikationen',
+        specs_header_label: 'Spezifikation',
+        specs_header_value: 'Details',
+        specs: [
+          { label: 'Dateierweiterungen', value: '.docx, .doc, .docm, .dotx, .dotm' },
+          { label: 'MIME-Typ', value: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' },
+          { label: 'Standard', value: 'Office Open XML (OOXML) - ISO/IEC 29500' },
+          { label: 'Entwickelt von', value: 'Microsoft Corporation (2007)' },
+          { label: 'Komprimierung', value: 'ZIP-basierte Komprimierung' },
+          { label: 'Zeichencodierung', value: 'UTF-8' }
+        ],
+        seo_title: 'Warum unseren DOCX-Viewer wählen?',
+        seo_intro: 'Unser DOCX-Viewer bietet eine nahtlose Erfahrung zum Anzeigen und Verwalten von Word-Dokumenten direkt in Ihrem Browser.',
+        seo_viewing_title: 'Professionelle Dokumentanzeige',
+        seo_viewing_text: 'Zeigen Sie DOCX-Dokumente mit hochwertigem Rendering, Zoom-Steuerungen und Navigationswerkzeugen an.',
+        seo_features_title: 'Erweiterte Funktionen',
+        seo_features_text: 'Greifen Sie auf leistungsstarke DOCX-Anzeigefunktionen zu, einschließlich Suche, Zoom und Seitennavigation.',
+        seo_security_title: 'Sicher & privat',
+        seo_security_text: 'Ihre DOCX-Dateien werden sicher verarbeitet und niemals auf unseren Servern gespeichert.',
         editor: {
           toggle_sidebar: 'Seitenleiste umschalten',
           close: 'Schließen (Esc)',
@@ -157,6 +399,72 @@ const resources: Record<string, DOCXViewerTranslations> = {
   es: {
     viewers: {
       docx: {
+        meta_title: 'Visor DOCX gratuito - Ver documentos de Microsoft Word en línea',
+        meta_description: 'Visor DOCX profesional gratuito para documentos de Microsoft Word. Sube y previsualiza archivos DOCX, DOC, DOCM en línea con herramientas avanzadas de visualización de documentos. Soporta visualización por lotes de hasta 20 archivos. Herramienta de visor DOCX 100% gratuita.',
+        meta_keywords: 'visor DOCX, visor de documentos Word, visor de Microsoft Word, visor DOC, vista previa de documentos, lector DOCX en línea, visor DOCX en línea, visor DOCX gratuito',
+        hero_title: 'Visor DOCX Gratuito',
+        hero_subtitle: 'Ver y analizar documentos de Microsoft Word directamente en tu navegador – 100% gratuito',
+        upload_title: 'Subir Documentos DOCX',
+        upload_description: 'Arrastra y suelta tus archivos DOCX o haz clic para explorar. Soporta archivos DOCX, DOC, DOCM, DOTX, DOTM de hasta 100MB cada uno, con carga por lotes de hasta 20 documentos.',
+        upload: {
+          drag_drop_text: 'Arrastra y Suelta Tus Archivos Aquí',
+          click_browse_text: 'o haz clic en el botón de abajo para explorar',
+          choose_files_button: 'Elegir Archivos',
+          max_files_info: 'Máx. {maxFiles} archivos • Hasta {maxSize} Total'
+        },
+        buttons: {
+          view_files: 'Ver Archivos',
+          back: 'Volver a Todos los Visores'
+        },
+        quick_stats: {
+          universal_format: '✓ Formato Universal',
+          fast_processing: '⚡ Procesamiento Rápido',
+          high_quality: '🎨 Alta Calidad'
+        },
+        features: [
+          { title: 'Formato Rico', description: 'Tipografía avanzada, estilos, temas y opciones de diseño para creación profesional de documentos con control completo de formato' },
+          { title: 'Herramientas de Colaboración', description: 'Seguimiento de cambios, comentarios y soporte de control de versiones para colaboración fluida en equipo y flujos de trabajo de revisión de documentos' },
+          { title: 'Soporte Multiplataforma', description: 'Compatible con Microsoft Word, Google Docs, LibreOffice y otras suites ofimáticas en todos los sistemas operativos' }
+        ],
+        about_title: 'Acerca del Formato DOCX',
+        about_intro: 'DOCX (Documento Office Open XML) es el formato de archivo predeterminado para documentos de Microsoft Word desde Word 2007. Está basado en el estándar Open XML y usa compresión ZIP para reducir el tamaño del archivo mientras mantiene capacidades de formato ricas. Los archivos DOCX soportan características avanzadas como estilos, temas, objetos incrustados, gráficos, tablas y opciones de formato complejas.',
+        advantages_title: 'Ventajas Clave',
+        advantages: [
+          'Tamaños de archivo más pequeños – La compresión ZIP reduce el tamaño hasta en un 75%',
+          'Mejor recuperación – Recuperación mejorada de archivos corruptos',
+          'Seguridad mejorada – Cifrado integrado y firmas digitales',
+          'Multiplataforma – Compatible con múltiples suites ofimáticas',
+          'Formato rico – Tipografía y opciones de diseño avanzadas',
+          'Colaboración – Soporte de seguimiento de cambios y comentarios'
+        ],
+        use_cases_title: 'Mejores Casos de Uso',
+        use_cases: [
+          'Documentos comerciales – Informes, propuestas, contratos',
+          'Documentos académicos – Artículos de investigación, tesis, publicaciones',
+          'Documentos legales – Contratos, acuerdos, documentos judiciales',
+          'Plantillas – Plantillas de documentos y formularios',
+          'Colaboración – Edición de documentos multi-autor',
+          'Publicación – Libros, manuales y documentación'
+        ],
+        specs_title: 'Especificaciones Técnicas',
+        specs_header_label: 'Especificación',
+        specs_header_value: 'Detalles',
+        specs: [
+          { label: 'Extensiones de Archivo', value: '.docx, .doc, .docm, .dotx, .dotm' },
+          { label: 'Tipo MIME', value: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' },
+          { label: 'Estándar', value: 'Office Open XML (OOXML) - ISO/IEC 29500' },
+          { label: 'Desarrollado Por', value: 'Microsoft Corporation (2007)' },
+          { label: 'Compresión', value: 'Compresión basada en ZIP' },
+          { label: 'Codificación de Caracteres', value: 'UTF-8' }
+        ],
+        seo_title: '¿Por Qué Elegir Nuestro Visor DOCX?',
+        seo_intro: 'Nuestro visor DOCX proporciona una experiencia fluida para ver y gestionar documentos Word directamente en tu navegador.',
+        seo_viewing_title: 'Visualización Profesional de Documentos',
+        seo_viewing_text: 'Ver documentos DOCX con renderizado de alta calidad, controles de zoom y herramientas de navegación.',
+        seo_features_title: 'Características Avanzadas',
+        seo_features_text: 'Accede a potentes características de visualización DOCX incluyendo búsqueda, zoom y navegación de páginas.',
+        seo_security_title: 'Seguro y Privado',
+        seo_security_text: 'Tus archivos DOCX se procesan de forma segura y nunca se almacenan en nuestros servidores.',
         editor: {
           toggle_sidebar: 'Alternar barra lateral',
           close: 'Cerrar (Esc)',
