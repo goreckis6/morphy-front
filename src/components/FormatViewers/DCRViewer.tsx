@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Camera, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info, Image as ImageIcon, Maximize2, Zap } from 'lucide-react';
+import { Camera, Upload, ArrowLeft, CheckCircle, AlertCircle, Info, Image as ImageIcon, Maximize2, Zap, Star, Sparkles, Layers, FileImage } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
@@ -467,31 +467,65 @@ export const DCRViewer: React.FC = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50 to-violet-50">
         <Header />
         
-        {/* Hero Section */}
-        <div className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-700">
-          <div className="absolute inset-0 bg-black/20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-4">
-                <button
-                  onClick={() => window.location.href = '/viewers'}
-                  className="p-2 text-white/80 hover:text-white hover:bg-white/20 rounded-lg transition-colors"
-                >
-                  <ArrowLeft className="w-5 h-5" />
-                </button>
-                <div className="p-4 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
-                  <Camera className="w-12 h-12 text-white" />
+        {/* Hero Section - Redesigned */}
+        <div className="relative overflow-hidden">
+          {/* Animated Background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-600 via-violet-600 to-indigo-700">
+            <div 
+              className="absolute inset-0 opacity-20"
+              style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+                backgroundRepeat: 'repeat'
+              }}
+            ></div>
+          </div>
+          
+          {/* Floating Orbs */}
+          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-violet-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+          <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-indigo-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
+            <div className="flex flex-col items-center text-center">
+              {/* Back Button - Floating */}
+              <button
+                onClick={() => window.location.href = '/viewers'}
+                className="absolute top-4 left-4 sm:left-6 p-2 sm:p-3 bg-white/10 backdrop-blur-md text-white/90 hover:text-white hover:bg-white/20 rounded-xl transition-all duration-300 transform hover:scale-110 shadow-lg border border-white/20"
+              >
+                <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
+              </button>
+
+              {/* Icon with Glow Effect - Smaller */}
+              <div className="relative mb-2 sm:mb-3">
+                <div className="absolute inset-0 bg-white/30 rounded-2xl blur-xl transform scale-125"></div>
+                <div className="relative p-2 sm:p-3 bg-white/20 backdrop-blur-xl rounded-2xl border border-white/30 shadow-xl">
+                  <Camera className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                 </div>
-                <div>
-                  <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
-                    {t('viewers.dcr.hero_title')}
-                  </h1>
-                  <p className="text-xl text-purple-100">
-                    {t('viewers.dcr.hero_subtitle')}
-                  </p>
+              </div>
+
+              {/* Title - Smaller and moved up */}
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-5 leading-tight">
+                {t('viewers.dcr.hero_title')}
+              </h1>
+              
+              {/* Subtitle - More visible */}
+              <p className="text-sm sm:text-base md:text-lg text-white/95 max-w-2xl mx-auto mb-3 sm:mb-4 leading-relaxed font-medium">
+                {t('viewers.dcr.hero_subtitle')}
+              </p>
+
+              {/* Quick Stats - More visible */}
+              <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
+                <div className="px-2.5 sm:px-3 py-1 sm:py-1.5 bg-white/20 backdrop-blur-md rounded-full border border-white/30 shadow-md">
+                  <span className="text-white text-xs sm:text-sm font-semibold">{t('viewers.dcr.quick_stats.raw_format', '✓ RAW Format')}</span>
+                </div>
+                <div className="px-2.5 sm:px-3 py-1 sm:py-1.5 bg-white/20 backdrop-blur-md rounded-full border border-white/30 shadow-md">
+                  <span className="text-white text-xs sm:text-sm font-semibold">{t('viewers.dcr.quick_stats.high_quality', '🎨 High Quality')}</span>
+                </div>
+                <div className="px-2.5 sm:px-3 py-1 sm:py-1.5 bg-white/20 backdrop-blur-md rounded-full border border-white/30 shadow-md">
+                  <span className="text-white text-xs sm:text-sm font-semibold">{t('viewers.dcr.quick_stats.fast_processing', '⚡ Fast Processing')}</span>
                 </div>
               </div>
             </div>
@@ -499,20 +533,22 @@ export const DCRViewer: React.FC = () => {
         </div>
 
         {/* Content */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          {/* Upload Section */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="p-3 bg-gradient-to-br from-purple-500 to-violet-600 rounded-xl">
-                <Upload className="w-6 h-6 text-white" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10">
+          {/* Upload Section - Glassmorphism Card */}
+          <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-10 mb-8 border border-white/50">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="p-4 bg-gradient-to-br from-purple-500 to-violet-600 rounded-2xl shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300">
+                <Upload className="w-8 h-8 text-white" />
               </div>
-              <h2 className="text-3xl font-bold text-gray-900">
-                {t('viewers.dcr.upload_title')}
-              </h2>
+              <div>
+                <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
+                  {t('viewers.dcr.upload_title')}
+                </h2>
+                <p className="text-gray-600 mt-1 text-sm sm:text-base">
+                  {t('viewers.dcr.upload_description')}
+                </p>
+              </div>
             </div>
-            <p className="text-gray-600 mb-6">
-              {t('viewers.dcr.upload_description')}
-            </p>
             <FileUpload 
               onFilesSelected={handleFilesSelected}
               acceptedFormats={['dcr']}
@@ -520,8 +556,13 @@ export const DCRViewer: React.FC = () => {
               maxSize={100 * 1024 * 1024}
               hideFormatList={true}
               showTotalSize={true}
+              translationKeys={{
+                dragDropText: t('viewers.dcr.upload.drag_drop_text', 'Drag & Drop Your Files Here'),
+                clickBrowseText: t('viewers.dcr.upload.click_browse_text', 'or click the button below to browse'),
+                chooseFilesButton: t('viewers.dcr.upload.choose_files_button', 'Choose Files'),
+                maxFilesInfo: t('viewers.dcr.upload.max_files_info', 'Max {maxFiles} files • Up to {maxSize} Total')
+              }}
             />
-            
             {validationError && (
               <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
                 <div className="flex items-center">
@@ -532,155 +573,217 @@ export const DCRViewer: React.FC = () => {
             )}
           </div>
 
-          {/* Preview Section */}
-          {selectedFiles.length > 0 && (
-            <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center space-x-3">
-                  <div className="p-3 bg-gradient-to-br from-purple-500 to-violet-600 rounded-xl">
-                    <CheckCircle className="w-6 h-6 text-white" />
-                  </div>
-                  <h2 className="text-3xl font-bold text-gray-900">
-                    {t('viewers.dcr.files_heading', { count: selectedFiles.length })}
-                  </h2>
-                </div>
-              </div>
-
-              <div className="mb-6 p-4 bg-purple-50 border border-purple-200 rounded-lg">
-                <div className="flex items-start space-x-3">
-                  <Info className="w-5 h-5 text-purple-600 mt-0.5" />
-                  <div>
-                    <h4 className="font-semibold text-purple-900 mb-1">{t('viewers.dcr.how_to_title')}</h4>
-                    <p className="text-sm text-purple-700" dangerouslySetInnerHTML={{ __html: t('viewers.dcr.how_to_description') }} />
-                  </div>
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {selectedFiles.map((file, index) => (
-                  <div key={index} className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-xl p-4 hover:shadow-lg transition-all transform hover:scale-105 border border-gray-200">
-                    <div className="flex items-center space-x-3 mb-4">
-                      <div className="p-2 bg-purple-100 rounded-lg">
-                        <Camera className="w-6 h-6 text-purple-600" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <h3 className="text-sm font-medium text-gray-800 truncate">
-                          {file.name}
-                        </h3>
-                        <p className="text-xs text-gray-500">
-                          {(file.size / 1024 / 1024).toFixed(2)} MB
-                        </p>
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <button
-                        onClick={() => handleViewDCR(file)}
-                        className="w-full bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
-                      >
-                        <Eye className="w-4 h-4" />
-                        <span>{t('viewers.dcr.buttons.view')}</span>
-                      </button>
-                      <button
-                        onClick={() => handleDownload(file)}
-                        className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
-                      >
-                        <Download className="w-4 h-4" />
-                        <span>{t('viewers.dcr.buttons.download')}</span>
-                      </button>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Features Section */}
+          {/* Features Section - Redesigned Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            {features.map((feature, index) => (
-              <div key={index} className={`bg-gradient-to-br ${index === 0 ? 'from-purple-50 to-violet-50 border-purple-200' : index === 1 ? 'from-violet-50 to-indigo-50 border-violet-200' : 'from-indigo-50 to-purple-50 border-indigo-200'} rounded-2xl shadow-lg p-8 border hover:shadow-xl transition-all transform hover:scale-105`}>
-                <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                  {index === 0 && <ImageIcon className="w-8 h-8 text-purple-600" />}
-                  {index === 1 && <Maximize2 className="w-8 h-8 text-violet-600" />}
-                  {index === 2 && <Zap className="w-8 h-8 text-indigo-600" />}
+            {features.map((feature, index) => {
+              const gradients = [
+                'from-purple-500 to-violet-500',
+                'from-violet-500 to-indigo-500',
+                'from-indigo-500 to-purple-500'
+              ];
+              const iconNodes = [
+                <ImageIcon className="w-8 h-8 text-white" key="image" />,
+                <Maximize2 className="w-8 h-8 text-white" key="maximize" />,
+                <Zap className="w-8 h-8 text-white" key="zap" />
+              ];
+              return (
+                <div
+                  key={feature.title || index}
+                  className="group relative bg-white/80 backdrop-blur-xl rounded-3xl p-8 border border-gray-200 hover:border-transparent shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
+                >
+                  {/* Gradient Background on Hover */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
+                  
+                  {/* Icon */}
+                  <div className={`relative mb-6 w-16 h-16 bg-gradient-to-br ${gradients[index]} rounded-2xl flex items-center justify-center shadow-lg transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
+                    {iconNodes[index]}
+                  </div>
+                  
+                  {/* Content */}
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 relative z-10">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed relative z-10">
+                    {feature.description}
+                  </p>
+                  
+                  {/* Decorative Element */}
+                  <div className={`absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-br ${gradients[index]} opacity-5 rounded-full -mr-16 -mb-16 group-hover:opacity-10 transition-opacity`}></div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3" dangerouslySetInnerHTML={{ __html: feature.title }} />
-                <p className="text-gray-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: feature.description }} />
-              </div>
-            ))}
+              );
+            })}
           </div>
 
-          {/* About DCR Format Section */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="p-3 bg-gradient-to-br from-purple-500 to-violet-600 rounded-xl">
-                <Camera className="w-6 h-6 text-white" />
+          {/* About Section - Split Layout */}
+          <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-10 mb-8 border border-white/50">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="p-4 bg-gradient-to-br from-purple-500 to-violet-600 rounded-2xl shadow-lg">
+                <Info className="w-8 h-8 text-white" />
               </div>
-              <h2 className="text-3xl font-bold text-gray-900">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
                 {t('viewers.dcr.about_title')}
               </h2>
             </div>
             
-            <div className="prose max-w-none text-gray-600">
-              <p className="mb-6" dangerouslySetInnerHTML={{ __html: t('viewers.dcr.about_intro') }} />
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.dcr.advantages_title')}</h3>
-                  <ul className="space-y-2 text-sm">
-                    {advantages.map((advantage, index) => (
-                      <li key={index} dangerouslySetInnerHTML={{ __html: advantage }} />
-                    ))}
+            <div className="prose max-w-none">
+              <p className="text-gray-700 text-base sm:text-lg mb-8 leading-relaxed">
+                {t('viewers.dcr.about_intro')}
+              </p>
+              
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {/* Advantages */}
+                <div className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl p-6 border border-purple-100">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Star className="w-6 h-6 text-purple-600" />
+                    <h3 className="text-xl font-bold text-gray-900">{t('viewers.dcr.advantages_title')}</h3>
+                  </div>
+                  <ul className="space-y-3">
+                    {advantages.map((item, idx) => {
+                      const cleanItem = item.replace(/^•\s*/, '').trim();
+                      return (
+                        <li key={idx} className="flex items-start gap-3 text-gray-700">
+                          <span className="text-purple-600 font-bold mt-0.5">•</span>
+                          <span dangerouslySetInnerHTML={{ __html: cleanItem }} />
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
                 
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.dcr.compatible_cameras_title')}</h3>
-                  <ul className="space-y-2 text-sm">
-                    {compatibleCameras.map((camera, index) => (
-                      <li key={index} dangerouslySetInnerHTML={{ __html: camera }} />
-                    ))}
+                {/* Compatible Cameras */}
+                <div className="bg-gradient-to-br from-violet-50 to-indigo-50 rounded-2xl p-6 border border-violet-100">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Layers className="w-6 h-6 text-violet-600" />
+                    <h3 className="text-xl font-bold text-gray-900">{t('viewers.dcr.compatible_cameras_title')}</h3>
+                  </div>
+                  <ul className="space-y-3">
+                    {compatibleCameras.map((item, idx) => {
+                      const cleanItem = item.replace(/^•\s*/, '').trim();
+                      return (
+                        <li key={idx} className="flex items-start gap-3 text-gray-700">
+                          <span className="text-violet-600 font-bold mt-0.5">•</span>
+                          <span dangerouslySetInnerHTML={{ __html: cleanItem }} />
+                        </li>
+                      );
+                    })}
                   </ul>
-                </div>
-              </div>
-
-              <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.dcr.specs_title')}</h3>
-                <div className="overflow-x-auto">
-                  <table className="min-w-full">
-                    <thead>
-                      <tr className="bg-gray-100">
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">{t('viewers.dcr.specs_header_label')}</th>
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">{t('viewers.dcr.specs_header_value')}</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-gray-200">
-                      {specs.map((spec, index) => (
-                        <tr key={index}>
-                          <td className="py-2 text-sm font-medium text-gray-500">{spec.label}</td>
-                          <td className="py-2 text-sm text-gray-900">{spec.value}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Back to Viewers Button */}
-          <div className="text-center mt-8">
+          {/* Technical Specifications - Modern Table */}
+          <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-10 mb-8 border border-white/50 overflow-hidden">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="p-4 bg-gradient-to-br from-purple-500 to-violet-600 rounded-2xl shadow-lg">
+                <FileImage className="w-8 h-8 text-white" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
+                {t('viewers.dcr.specs_title')}
+              </h2>
+            </div>
+            
+            <div className="overflow-x-auto">
+              <table className="min-w-full">
+                <thead>
+                  <tr className="bg-gradient-to-r from-gray-50 to-gray-100">
+                    <th className="px-6 py-4 text-left text-sm font-bold text-gray-700 uppercase tracking-wider">{t('viewers.dcr.specs_header_label')}</th>
+                    <th className="px-6 py-4 text-left text-sm font-bold text-gray-700 uppercase tracking-wider">{t('viewers.dcr.specs_header_value')}</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200">
+                  {specs.map((row, idx) => (
+                    <tr key={row.label || idx} className={`hover:bg-purple-50/50 transition-colors ${idx % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}`}>
+                      <td className="px-6 py-4 text-sm font-semibold text-gray-900">{row.label}</td>
+                      <td className="px-6 py-4 text-sm text-gray-700">{row.value}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* SEO Content - Enhanced */}
+          <div className="bg-gradient-to-br from-white via-purple-50/50 to-violet-50/50 backdrop-blur-xl rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-10 mb-8 border border-purple-100">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="p-4 bg-gradient-to-br from-purple-500 to-violet-600 rounded-2xl shadow-lg">
+                <Sparkles className="w-8 h-8 text-white" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
+                {t('viewers.dcr.seo_title', 'Why Choose Our DCR Viewer?')}
+              </h2>
+            </div>
+            
+            <div className="prose max-w-none text-gray-700">
+              <p className="text-base sm:text-lg mb-6 leading-relaxed">
+                {t('viewers.dcr.seo_intro', 'Our DCR viewer provides a seamless experience for viewing and managing Kodak RAW files directly in your browser.')}
+              </p>
+              
+              <div className="space-y-6">
+                <div className="bg-white/60 rounded-xl p-6 border border-purple-100">
+                  <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+                    <Camera className="w-5 h-5 text-purple-600" />
+                    {t('viewers.dcr.seo_viewing_title', 'Professional RAW Viewing')}
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    {t('viewers.dcr.seo_viewing_text', 'View DCR files with high-quality rendering, zoom controls, and navigation tools.')}
+                  </p>
+                </div>
+                
+                <div className="bg-white/60 rounded-xl p-6 border border-purple-100">
+                  <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+                    <Zap className="w-5 h-5 text-purple-600" />
+                    {t('viewers.dcr.seo_features_title', 'Advanced Features')}
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    {t('viewers.dcr.seo_features_text', 'Access powerful DCR viewing features including metadata display, zoom, and rotation controls.')}
+                  </p>
+                </div>
+                
+                <div className="bg-white/60 rounded-xl p-6 border border-purple-100">
+                  <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+                    <CheckCircle className="w-5 h-5 text-purple-600" />
+                    {t('viewers.dcr.seo_security_title', 'Secure & Private')}
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    {t('viewers.dcr.seo_security_text', 'Your DCR files are processed securely and never stored on our servers.')}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Back Button - Enhanced */}
+          <div className="text-center mb-12">
             <a
               href="/viewers"
-              className="inline-block bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 hover:from-purple-700 hover:via-violet-700 hover:to-indigo-700 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl text-base sm:text-lg group"
             >
-              {t('viewers.dcr.buttons.back')}
+              <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
+              <span>{t('viewers.dcr.buttons.back', 'Back to All Viewers').replace(/^←\s*/, '')}</span>
             </a>
           </div>
         </div>
         
-        {/* Footer */}
         <Footer />
+
+        {/* Custom Animations */}
+        <style>{`
+          @keyframes blob {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+          }
+          .animate-blob {
+            animation: blob 7s infinite;
+          }
+          .animation-delay-2000 {
+            animation-delay: 2s;
+          }
+          .animation-delay-4000 {
+            animation-delay: 4s;
+          }
+        `}</style>
       </div>
     </>
   );
