@@ -84,403 +84,267 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
 
           if (contentType.includes('text/html') && html.trim().length > 0) {
             // Process HTML to display in A4 page format like Microsoft Word
-            let processedHtml = html;
-            
-            // Extract body content
+            // Extract body content from backend HTML
             let bodyContent = '';
             const bodyMatch = html.match(/<body[^>]*>([\s\S]*)<\/body>/i);
             if (bodyMatch) {
               bodyContent = bodyMatch[1];
             } else {
-              // If no body tag, use entire HTML
-              bodyContent = html.replace(/<head[^>]*>[\s\S]*<\/head>/i, '').replace(/<html[^>]*>|<\/html>/gi, '');
+              // If no body tag, extract content between body tags or use entire HTML
+              const bodyStart = html.indexOf('<body');
+              const bodyEnd = html.indexOf('</body>');
+              if (bodyStart >= 0 && bodyEnd >= 0) {
+                const bodyTagEnd = html.indexOf('>', bodyStart);
+                bodyContent = html.substring(bodyTagEnd + 1, bodyEnd);
+              } else {
+                // Remove head and html tags
+                bodyContent = html.replace(/<head[^>]*>[\s\S]*?<\/head>/i, '').replace(/<\/?html[^>]*>/gi, '');
+              }
             }
             
-            // Wrap body content in A4 page container - let CSS handle page breaks
+            // Clean up body content - remove scripts and styles that might interfere
+            bodyContent = bodyContent.replace(/<script[\s\S]*?<\/script>/gi, '');
+            bodyContent = bodyContent.replace(/<style[\s\S]*?<\/style>/gi, '');
+            
+            // Create clean HTML structure with A4 pages
             const wrappedContent = `<div class="docx-a4-container"><div class="docx-a4-page">${bodyContent}</div></div>`;
             
-            // Replace body content
-            if (bodyMatch) {
-              processedHtml = processedHtml.replace(/<body[^>]*>[\s\S]*<\/body>/i, `<body>${wrappedContent}</body>`);
-            } else {
-              // If no body tag, create one
-              processedHtml = processedHtml.replace(/<\/head>/i, `</head><body>${wrappedContent}</body>`);
-            }
+            // Build complete HTML document
+            let processedHtml = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOCX Preview</title>`;
 
             // Add A4 page styling (like Microsoft Word)
-            processedHtml = processedHtml.replace(
-              /<\/head>/i,
-              `<style>
-                * {
-                  box-sizing: border-box;
-                }
-                html, body {
-                  margin: 0;
-                  padding: 0;
-                  background: #e5e5e5;
-                  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-                  overflow-x: hidden;
-                }
-                .docx-a4-container {
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-                  padding: 20px;
-                  gap: 20px;
-                  min-height: 100vh;
-                  background: #e5e5e5;
-                  width: 100%;
-                }
-                /* A4 Page Format - 210mm x 297mm */
-                .docx-a4-page {
-                  width: 210mm;
-                  min-height: 297mm;
-                  max-width: 100%;
-                  background: white;
-                  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-                  margin: 0 auto 20px;
-                  padding: 25.4mm 31.7mm;
-                  position: relative;
-                  page-break-after: always;
-                  break-after: page;
-                  display: block;
-                  overflow: visible;
-                  box-sizing: border-box;
-                }
-                /* Ensure pages are clearly separated */
-                .docx-a4-page:not(:last-child) {
-                  margin-bottom: 20px;
-                }
-                /* Ensure content inside pages is properly formatted */
-                .docx-a4-page > * {
-                  margin: 0 0 1em 0;
-                }
-                .docx-a4-page > *:last-child {
-                  margin-bottom: 0;
-                }
-                /* Add page break markers every 246mm (content height) */
-                .docx-a4-page::after {
-                  content: '';
-                  display: block;
-                  page-break-after: always;
-                  break-after: page;
-                }
-                /* Hide any existing toolbars or controls */
-                .toolbar, .header-bar, [class*="toolbar"], [class*="header"], 
-                [class*="control"], [class*="menu"] {
-                  display: none !important;
-                }
-                /* Ensure text is readable */
-                p, div, span, h1, h2, h3, h4, h5, h6, li, td, th {
-                  color: #000 !important;
-                }
-                /* Table styling */
-                table {
-                  border-collapse: collapse;
-                  width: 100%;
-                  margin: 10px 0;
-                }
-                table td, table th {
-                  border: 1px solid #ddd;
-                  padding: 8px;
-                }
-              </style></head>`
-            );
+            processedHtml += `
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #e5e5e5;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      overflow-x: hidden;
+    }
+    .docx-a4-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      gap: 20px;
+      min-height: 100vh;
+      background: #e5e5e5;
+      width: 100%;
+    }
+    /* A4 Page Format - 210mm x 297mm */
+    .docx-a4-page {
+      width: 210mm;
+      min-height: 297mm;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      margin: 0 auto 20px;
+      padding: 25.4mm 31.7mm;
+      position: relative;
+      page-break-after: always;
+      break-after: page;
+      display: block;
+      overflow: visible;
+      box-sizing: border-box;
+    }
+    .docx-a4-page > * {
+      margin: 0 0 1em 0;
+    }
+    .docx-a4-page > *:last-child {
+      margin-bottom: 0;
+    }
+    /* Hide any existing toolbars or controls */
+    .toolbar, .header-bar, [class*="toolbar"], [class*="header"], 
+    [class*="control"], [class*="menu"] {
+      display: none !important;
+    }
+    /* Ensure text is readable */
+    p, div, span, h1, h2, h3, h4, h5, h6, li, td, th {
+      color: #000 !important;
+    }
+    /* Table styling */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 10px 0;
+    }
+    table td, table th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+  ${wrappedContent}
+`;
             
             // Add JavaScript to split content into multiple A4 pages
-            processedHtml = processedHtml.replace(
-              /<\/body>/i,
-              `<script>
-                (function() {
-                  function splitIntoA4Pages() {
-                    try {
-                      const container = document.querySelector('.docx-a4-container');
-                      if (!container) {
-                        console.warn('Container not found, retrying...');
-                        setTimeout(splitIntoA4Pages, 500);
-                        return;
-                      }
-                      
-                      const firstPage = container.querySelector('.docx-a4-page');
-                      if (!firstPage) {
-                        console.warn('First page not found, retrying...');
-                        setTimeout(splitIntoA4Pages, 500);
-                        return;
-                      }
-                      
-                      // A4 content area: 297mm - (25.4mm * 2) = 246.2mm ≈ 931px at 96 DPI
-                      // Using a slightly smaller value to account for margins and spacing
-                      const maxContentHeight = 900; // pixels
-                      const pageWidth = 210; // mm
-                      const contentWidth = 146.6; // mm (210mm - 31.7mm * 2)
-                      
-                      // Get all content from first page
-                      const originalContent = firstPage.innerHTML;
-                      if (!originalContent || !originalContent.trim()) {
-                        console.warn('No content to split');
-                        return;
-                      }
-                      
-                      // Clear first page but keep it
-                      firstPage.innerHTML = '';
-                      firstPage.setAttribute('data-page', '1');
-                      firstPage.id = 'docx-page-1';
-                      
-                      // Create a temporary container to measure content accurately
-                      const tempContainer = document.createElement('div');
-                      tempContainer.style.cssText = 'position: absolute; visibility: hidden; width: ' + contentWidth + 'mm; top: -9999px; left: -9999px;';
-                      tempContainer.innerHTML = originalContent;
-                      document.body.appendChild(tempContainer);
-                      
-                      // Force layout calculation
-                      void tempContainer.offsetHeight;
-                      
-                      // Get all direct children elements
-                      let elements = Array.from(tempContainer.children);
-                      
-                      if (elements.length === 0) {
-                        // If no direct children, try to find content in the temp container
-                        // Check if there's any HTML content
-                        const innerHTML = tempContainer.innerHTML.trim();
-                        if (innerHTML) {
-                          // Try to parse and create elements
-                          const parser = new DOMParser();
-                          const parsed = parser.parseFromString('<div>' + innerHTML + '</div>', 'text/html');
-                          const parsedElements = Array.from(parsed.body.firstElementChild?.children || []);
-                          
-                          if (parsedElements.length > 0) {
-                            // Clear and add parsed elements
-                            tempContainer.innerHTML = '';
-                            parsedElements.forEach(el => {
-                              tempContainer.appendChild(el.cloneNode(true));
-                            });
-                            elements = Array.from(tempContainer.children);
-                          } else {
-                            // Create a single div with all content
-                            const wrapper = document.createElement('div');
-                            wrapper.innerHTML = innerHTML;
-                            tempContainer.innerHTML = '';
-                            tempContainer.appendChild(wrapper);
-                            elements = [wrapper];
-                          }
-                        }
-                      }
-                      
-                      // If still no elements, try splitting by common block elements
-                      if (elements.length === 0 || elements.length === 1) {
-                        const allContent = tempContainer.innerHTML;
-                        // Try to find block-level elements in the content
-                        const blockMatches = allContent.match(/<(p|div|h[1-6]|table|ul|ol|li)[^>]*>[\s\S]*?<\/(?:p|div|h[1-6]|table|ul|ol|li)>/gi);
-                        if (blockMatches && blockMatches.length > 1) {
-                          tempContainer.innerHTML = '';
-                          blockMatches.forEach(blockHtml => {
-                            const div = document.createElement('div');
-                            div.innerHTML = blockHtml;
-                            tempContainer.appendChild(div.firstElementChild || div);
-                          });
-                          elements = Array.from(tempContainer.children);
-                        }
-                      }
-                      
-                      if (elements.length === 0) {
-                        // Last resort: put all content in first page
-                        firstPage.innerHTML = originalContent;
-                        if (tempContainer.parentNode) {
-                          document.body.removeChild(tempContainer);
-                        }
-                        container.setAttribute('data-total-pages', '1');
-                        console.log('No elements to split, using single page');
-                        return;
-                      }
-                      
-                      let currentPage = firstPage;
-                      let currentHeight = 0;
-                      let pageNum = 1;
-                      
-                      // Distribute elements across pages
-                      // First, measure all elements in the temp container to get accurate heights
-                      const elementHeights: number[] = [];
-                      elements.forEach((element) => {
-                        // Force layout calculation
-                        void element.offsetHeight;
-                        // Get the actual rendered height
-                        const height = Math.max(
-                          element.offsetHeight || 0,
-                          element.scrollHeight || 0,
-                          element.clientHeight || 0,
-                          20 // minimum height for small elements
-                        );
-                        elementHeights.push(height);
-                      });
-                      
-                      // Now distribute elements across pages
-                      elements.forEach((element, index) => {
-                        const elementHeight = elementHeights[index] || 30;
-                        
-                        // Check if we need a new page
-                        // Add buffer to prevent elements from being cut off
-                        const heightWithBuffer = currentHeight + elementHeight + 40; // 40px buffer for margins/spacing
-                        
-                        if (heightWithBuffer > maxContentHeight && currentHeight > 0) {
-                          pageNum++;
-                          currentPage = document.createElement('div');
-                          currentPage.className = 'docx-a4-page';
-                          currentPage.id = 'docx-page-' + pageNum;
-                          currentPage.setAttribute('data-page', pageNum.toString());
-                          currentPage.style.cssText = 'width: ' + pageWidth + 'mm; min-height: 297mm; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.15); margin: 0 auto 20px; padding: 25.4mm 31.7mm; position: relative; page-break-after: always; display: block; box-sizing: border-box;';
-                          container.appendChild(currentPage);
-                          currentHeight = 0;
-                        }
-                        
-                        // Clone and add element to current page
-                        const clonedElement = element.cloneNode(true);
-                        currentPage.appendChild(clonedElement);
-                        
-                        // Force layout recalculation
-                        void currentPage.offsetHeight;
-                        
-                        // Update current height based on actual page content
-                        // Subtract the padding (top + bottom = 25.4mm * 2)
-                        const paddingPx = 25.4 * 2 * 3.779527559; // Convert mm to px (96 DPI)
-                        const actualContentHeight = currentPage.scrollHeight - paddingPx;
-                        currentHeight = Math.max(currentHeight, actualContentHeight);
-                      });
-                      
-                      // Clean up temp container
-                      if (tempContainer.parentNode) {
-                        document.body.removeChild(tempContainer);
-                      }
-                      
-                      // Update page count
-                      let totalPages = container.querySelectorAll('.docx-a4-page').length;
-                      
-                      // Fallback: If we only have one page but content is very tall, split by height
-                      if (totalPages === 1) {
-                        const singlePage = container.querySelector('.docx-a4-page');
-                        if (singlePage) {
-                          void singlePage.offsetHeight; // Force layout
-                          const pageContentHeight = singlePage.scrollHeight;
-                          const paddingPx = 25.4 * 2 * 3.779527559;
-                          const actualContentHeight = pageContentHeight - paddingPx;
-                          
-                          // If content is taller than maxContentHeight, split it
-                          if (actualContentHeight > maxContentHeight) {
-                            const estimatedPages = Math.ceil(actualContentHeight / maxContentHeight);
-                            if (estimatedPages > 1) {
-                              // Re-split by cloning the page content and distributing
-                              const pageContent = singlePage.innerHTML;
-                              singlePage.innerHTML = '';
-                              
-                              // Create a temp div to measure content
-                              const measureDiv = document.createElement('div');
-                              measureDiv.style.cssText = 'width: ' + contentWidth + 'mm; position: absolute; visibility: hidden; top: -9999px;';
-                              measureDiv.innerHTML = pageContent;
-                              document.body.appendChild(measureDiv);
-                              void measureDiv.offsetHeight;
-                              
-                              // Split by creating multiple pages with equal content distribution
-                              const contentPerPage = Math.ceil(elements.length / estimatedPages);
-                              let currentPageEl = singlePage;
-                              let pageIndex = 0;
-                              
-                              elements.forEach((element, idx) => {
-                                if (idx > 0 && idx % contentPerPage === 0 && pageIndex < estimatedPages - 1) {
-                                  pageIndex++;
-                                  currentPageEl = document.createElement('div');
-                                  currentPageEl.className = 'docx-a4-page';
-                                  currentPageEl.id = 'docx-page-' + (pageIndex + 1);
-                                  currentPageEl.setAttribute('data-page', (pageIndex + 1).toString());
-                                  currentPageEl.style.cssText = 'width: ' + pageWidth + 'mm; min-height: 297mm; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.15); margin: 0 auto 20px; padding: 25.4mm 31.7mm; position: relative; page-break-after: always; display: block; box-sizing: border-box;';
-                                  container.appendChild(currentPageEl);
-                                }
-                                const clonedElement = element.cloneNode(true);
-                                currentPageEl.appendChild(clonedElement);
-                              });
-                              
-                              document.body.removeChild(measureDiv);
-                              totalPages = container.querySelectorAll('.docx-a4-page').length;
-                            }
-                          }
-                        }
-                      }
-                      
-                      container.setAttribute('data-total-pages', totalPages.toString());
-                      
-                      // Ensure all pages have proper IDs
-                      container.querySelectorAll('.docx-a4-page').forEach((page, idx) => {
-                        if (!page.id) {
-                          page.id = 'docx-page-' + (idx + 1);
-                        }
-                        if (!page.getAttribute('data-page')) {
-                          page.setAttribute('data-page', (idx + 1).toString());
-                        }
-                      });
-                      
-                      console.log('Successfully split into', totalPages, 'A4 pages');
-                      
-                      // Dispatch custom event to notify parent
-                      window.dispatchEvent(new CustomEvent('docx-pages-split', { 
-                        detail: { totalPages: totalPages } 
-                      }));
-                    } catch (e) {
-                      console.error('Error splitting into A4 pages:', e);
-                    }
-                  }
-                  
-                  // Multiple attempts to ensure it runs
-                  let attempts = 0;
-                  const maxAttempts = 5;
-                  
-                  function trySplit() {
-                    attempts++;
-                    splitIntoA4Pages();
-                    if (attempts < maxAttempts) {
-                      setTimeout(trySplit, 1000);
-                    }
-                  }
-                  
-                  // Run immediately if DOM is ready
-                  if (document.readyState === 'loading') {
-                    document.addEventListener('DOMContentLoaded', function() {
-                      setTimeout(trySplit, 100);
-                    });
-                  } else {
-                    setTimeout(trySplit, 100);
-                  }
-                  
-                  // Also try on window load
-                  window.addEventListener('load', function() {
-                    setTimeout(trySplit, 500);
-                  });
-                  
-                  // Fallback: try after images load
-                  if (document.images.length > 0) {
-                    let imagesLoaded = 0;
-                    Array.from(document.images).forEach(img => {
-                      if (img.complete) {
-                        imagesLoaded++;
-                      } else {
-                        img.addEventListener('load', function() {
-                          imagesLoaded++;
-                          if (imagesLoaded === document.images.length) {
-                            setTimeout(trySplit, 300);
-                          }
-                        });
-                        img.addEventListener('error', function() {
-                          imagesLoaded++;
-                          if (imagesLoaded === document.images.length) {
-                            setTimeout(trySplit, 300);
-                          }
-                        });
-                      }
-                    });
-                    if (imagesLoaded === document.images.length) {
-                      setTimeout(trySplit, 300);
-                    }
-                  }
-                })();
-              </script></body>`
+            processedHtml += `
+  <script>
+    (function() {
+      function splitIntoA4Pages() {
+        try {
+          const container = document.querySelector('.docx-a4-container');
+          if (!container) {
+            setTimeout(splitIntoA4Pages, 200);
+            return;
+          }
+          
+          const firstPage = container.querySelector('.docx-a4-page');
+          if (!firstPage) {
+            setTimeout(splitIntoA4Pages, 200);
+            return;
+          }
+          
+          // A4 content area: 297mm - (25.4mm * 2) = 246.2mm ≈ 931px at 96 DPI
+          const maxContentHeight = 931; // pixels (246.2mm)
+          const pageWidth = 210; // mm
+          const contentWidth = 146.6; // mm (210mm - 31.7mm * 2)
+          
+          // Get original content
+          const originalContent = firstPage.innerHTML;
+          if (!originalContent || !originalContent.trim()) {
+            container.setAttribute('data-total-pages', '1');
+            return;
+          }
+          
+          // Create temporary container to measure content
+          const tempDiv = document.createElement('div');
+          tempDiv.style.cssText = 'position: absolute; visibility: hidden; width: ' + contentWidth + 'mm; top: -9999px; left: -9999px; padding: 0;';
+          tempDiv.innerHTML = originalContent;
+          document.body.appendChild(tempDiv);
+          
+          // Force layout
+          void tempDiv.offsetHeight;
+          
+          // Get all block-level elements
+          const allElements = [];
+          const walker = document.createTreeWalker(
+            tempDiv,
+            NodeFilter.SHOW_ELEMENT,
+            {
+              acceptNode: function(node) {
+                const tagName = node.tagName ? node.tagName.toLowerCase() : '';
+                const blockTags = ['p', 'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'table', 'ul', 'ol', 'li', 'blockquote', 'pre', 'hr'];
+                if (blockTags.includes(tagName)) {
+                  return NodeFilter.FILTER_ACCEPT;
+                }
+                return NodeFilter.FILTER_SKIP;
+              }
+            }
+          );
+          
+          let node;
+          while (node = walker.nextNode()) {
+            allElements.push(node);
+          }
+          
+          // If no block elements found, use direct children
+          if (allElements.length === 0) {
+            allElements.push(...Array.from(tempDiv.children));
+          }
+          
+          // If still empty, create a wrapper
+          if (allElements.length === 0) {
+            const wrapper = document.createElement('div');
+            wrapper.innerHTML = originalContent;
+            allElements.push(wrapper);
+          }
+          
+          // Clear first page
+          firstPage.innerHTML = '';
+          firstPage.id = 'docx-page-1';
+          firstPage.setAttribute('data-page', '1');
+          
+          let currentPage = firstPage;
+          let currentHeight = 0;
+          let pageNum = 1;
+          
+          // Distribute elements across pages
+          allElements.forEach((element) => {
+            // Measure element height
+            const elementHeight = Math.max(
+              element.offsetHeight || 0,
+              element.scrollHeight || 0,
+              30 // minimum
             );
+            
+            // Check if we need a new page
+            if (currentHeight + elementHeight > maxContentHeight && currentHeight > 0) {
+              pageNum++;
+              currentPage = document.createElement('div');
+              currentPage.className = 'docx-a4-page';
+              currentPage.id = 'docx-page-' + pageNum;
+              currentPage.setAttribute('data-page', pageNum.toString());
+              currentPage.style.cssText = 'width: ' + pageWidth + 'mm; min-height: 297mm; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.15); margin: 0 auto 20px; padding: 25.4mm 31.7mm; position: relative; page-break-after: always; display: block; box-sizing: border-box;';
+              container.appendChild(currentPage);
+              currentHeight = 0;
+            }
+            
+            // Clone and add element
+            const cloned = element.cloneNode(true);
+            currentPage.appendChild(cloned);
+            
+            // Update height
+            void currentPage.offsetHeight;
+            const paddingPx = 25.4 * 2 * 3.779527559; // mm to px
+            currentHeight = currentPage.scrollHeight - paddingPx;
+          });
+          
+          // Clean up
+          if (tempDiv.parentNode) {
+            document.body.removeChild(tempDiv);
+          }
+          
+          // Update page count
+          const totalPages = container.querySelectorAll('.docx-a4-page').length;
+          container.setAttribute('data-total-pages', totalPages.toString());
+          
+          // Ensure all pages have IDs
+          container.querySelectorAll('.docx-a4-page').forEach((page, idx) => {
+            if (!page.id) {
+              page.id = 'docx-page-' + (idx + 1);
+            }
+            if (!page.getAttribute('data-page')) {
+              page.setAttribute('data-page', (idx + 1).toString());
+            }
+          });
+          
+          console.log('Split into', totalPages, 'A4 pages');
+          
+          // Notify parent
+          window.dispatchEvent(new CustomEvent('docx-pages-split', { 
+            detail: { totalPages: totalPages } 
+          }));
+        } catch (e) {
+          console.error('Error splitting pages:', e);
+        }
+      }
+      
+      // Run when ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+          setTimeout(splitIntoA4Pages, 100);
+        });
+      } else {
+        setTimeout(splitIntoA4Pages, 100);
+      }
+      
+      window.addEventListener('load', function() {
+        setTimeout(splitIntoA4Pages, 300);
+      });
+    })();
+  </script>
+</body>
+</html>`;
 
             htmls.set(index, processedHtml);
             setDocxHtml(new Map(htmls));
