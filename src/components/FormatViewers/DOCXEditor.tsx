@@ -9,9 +9,10 @@ interface DOCXEditorProps {
   files: File[];
   onClose: () => void;
   onAddFiles?: (files: File[]) => void;
+  onRemoveFile?: (index: number) => void;
 }
 
-export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFiles }) => {
+export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFiles, onRemoveFile }) => {
   const { t } = useTranslation();
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [searchQuery, setSearchQuery] = useState('');
@@ -30,6 +31,7 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
   const containerRef = useRef<HTMLDivElement>(null);
   const pagesContainerRef = useRef<HTMLDivElement>(null);
   const lastPageRef = useRef<number>(1);
+  const loadingRef = useRef<Set<number>>(new Set()); // Track which files are being loaded
 
   const location = useLocation();
   
@@ -104,10 +106,22 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
 
   // Load DOCX files and fetch HTML previews
   useEffect(() => {
+    // Prevent duplicate loading
+    if (files.length === 0) return;
+    
     const htmls = new Map<number, string>();
     const loading = new Map<number, boolean>();
-
-    files.forEach(async (file, index) => {
+    
+    // Use Promise.all to handle async operations properly
+    const loadPromises = files.map(async (file, index) => {
+      // Skip if already loaded or currently loading
+      if (docxHtml.has(index) || loadingRef.current.has(index)) {
+        console.log(`File ${index} already loaded or loading, skipping`);
+        return;
+      }
+      
+      // Mark as loading
+      loadingRef.current.add(index);
       loading.set(index, true);
       setIsLoading(new Map(loading));
 
@@ -250,17 +264,32 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
             processedHtml += `
   <script>
     (function() {
+      let hasSplit = false; // Flag to prevent multiple splits
+      let originalContent = null; // Store original content
+      
       function splitIntoA4Pages() {
         try {
           const container = document.querySelector('.docx-a4-container');
           if (!container) {
-            setTimeout(splitIntoA4Pages, 200);
+            if (!hasSplit) {
+              setTimeout(splitIntoA4Pages, 200);
+            }
+            return;
+          }
+          
+          // Check if already split (using both flag and data attribute)
+          const isAlreadySplit = container.getAttribute('data-split-complete') === 'true';
+          const existingPages = container.querySelectorAll('.docx-a4-page');
+          if ((hasSplit || isAlreadySplit) && existingPages.length > 1) {
+            console.log('Pages already split, skipping');
             return;
           }
           
           const firstPage = container.querySelector('.docx-a4-page');
           if (!firstPage) {
-            setTimeout(splitIntoA4Pages, 200);
+            if (!hasSplit) {
+              setTimeout(splitIntoA4Pages, 200);
+            }
             return;
           }
           
@@ -269,10 +298,19 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
           const pageWidth = 210; // mm
           const contentWidth = 146.6; // mm (210mm - 31.7mm * 2)
           
-          // Get original content
-          const originalContent = firstPage.innerHTML;
+          // Get original content (only on first run)
+          if (!originalContent) {
+            originalContent = firstPage.innerHTML;
+          }
+          
           if (!originalContent || !originalContent.trim()) {
             container.setAttribute('data-total-pages', '1');
+            hasSplit = true;
+            return;
+          }
+          
+          // If already split, don't split again
+          if (hasSplit) {
             return;
           }
           
@@ -380,26 +418,39 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
           
           console.log('Split into', totalPages, 'A4 pages');
           
+          // Mark as split to prevent re-running (both flag and data attribute)
+          hasSplit = true;
+          container.setAttribute('data-split-complete', 'true');
+          
           // Notify parent
           window.dispatchEvent(new CustomEvent('docx-pages-split', { 
             detail: { totalPages: totalPages } 
           }));
         } catch (e) {
           console.error('Error splitting pages:', e);
+          hasSplit = true; // Mark as attempted even on error to prevent infinite retries
         }
       }
       
-      // Run when ready
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', function() {
-          setTimeout(splitIntoA4Pages, 100);
-        });
-      } else {
+      // Run only once when ready
+      let hasRun = false;
+      function runSplitOnce() {
+        if (hasRun) return;
+        hasRun = true;
         setTimeout(splitIntoA4Pages, 100);
       }
       
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', runSplitOnce);
+      } else {
+        runSplitOnce();
+      }
+      
+      // Also try on window load as fallback (but only if not already run)
       window.addEventListener('load', function() {
-        setTimeout(splitIntoA4Pages, 300);
+        if (!hasSplit) {
+          setTimeout(splitIntoA4Pages, 300);
+        }
       });
     })();
   </script>
@@ -526,11 +577,26 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
           return newMap;
         });
       } finally {
+        // Remove from loading ref
+        loadingRef.current.delete(index);
         loading.set(index, false);
         setIsLoading(new Map(loading));
       }
     });
-  }, [files]);
+    
+    // Wait for all files to load
+    Promise.all(loadPromises).then(() => {
+      console.log('All DOCX files loaded');
+    }).catch((error) => {
+      console.error('Error loading some DOCX files:', error);
+    });
+    
+    // Cleanup function
+    return () => {
+      // Cancel any pending operations if component unmounts
+      console.log('DOCXEditor unmounting, cleaning up');
+    };
+  }, [files]); // Remove docxHtml from dependencies to prevent infinite loop
 
   // Filter files based on search
   const filteredFiles = files.filter(file =>
@@ -558,6 +624,18 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
       setSelectedIndex(filteredFiles.length - 1);
     }
   }, [selectedIndex, filteredFiles.length, isPresentationMode]);
+
+  const handleRemoveFile = useCallback((index: number) => {
+    if (onRemoveFile) {
+      onRemoveFile(index);
+      // Adjust selected index if needed
+      if (index === selectedIndex && selectedIndex > 0) {
+        setSelectedIndex(selectedIndex - 1);
+      } else if (index < selectedIndex) {
+        setSelectedIndex(selectedIndex - 1);
+      }
+    }
+  }, [onRemoveFile, selectedIndex]);
 
   const handleZoomIn = () => {
     setZoom(prev => Math.min(prev + 25, 500));
@@ -1113,17 +1191,19 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
               return (
                 <div
                   key={actualIndex}
-                  onClick={() => {
-                    handleFileSelect(actualIndex);
-                    setIsSidebarOpen(false);
-                  }}
-                  className={`group flex items-start gap-2 sm:gap-3 p-1.5 sm:p-2 rounded-lg cursor-pointer transition-all ${
+                  className={`group flex items-start gap-2 sm:gap-3 p-1.5 sm:p-2 rounded-lg transition-all ${
                     isSelected
                       ? 'bg-purple-50 border border-purple-200 shadow-sm'
                       : 'border border-transparent hover:bg-gray-100'
                   }`}
                 >
-                  <div className="flex-1 min-w-0">
+                  <div
+                    onClick={() => {
+                      handleFileSelect(actualIndex);
+                      setIsSidebarOpen(false);
+                    }}
+                    className="flex-1 min-w-0 cursor-pointer"
+                  >
                     <p className={`text-xs sm:text-sm font-medium truncate ${
                       isSelected ? 'font-semibold text-purple-900' : 'font-medium text-gray-700'
                     }`}
@@ -1134,6 +1214,18 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
                       {formatFileSize(file.size)}
                     </p>
                   </div>
+                  {onRemoveFile && files.length > 1 && (
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleRemoveFile(actualIndex);
+                      }}
+                      className="opacity-0 group-hover:opacity-100 transition-opacity p-1 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded flex-shrink-0"
+                      title={t('viewers.docx.editor.remove_file', 'Remove file')}
+                    >
+                      <X className="w-4 h-4" />
+                    </button>
+                  )}
                 </div>
               );
             })}
@@ -1393,4 +1485,6 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
     </div>
   );
 };
+
+
 

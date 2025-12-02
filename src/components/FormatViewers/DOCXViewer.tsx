@@ -293,6 +293,16 @@ export const DOCXViewer: React.FC = () => {
           const allFiles = [...selectedFiles, ...newFiles];
           setSelectedFiles(allFiles);
         }}
+        onRemoveFile={(index) => {
+          const newFiles = selectedFiles.filter((_, i) => i !== index);
+          setSelectedFiles(newFiles);
+          // Close editor if no files left
+          if (newFiles.length === 0) {
+            setIsEditorOpen(false);
+            const basePath = getBasePath();
+            navigate(basePath, { replace: true });
+          }
+        }}
       />
     );
   }
