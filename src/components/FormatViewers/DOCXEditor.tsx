@@ -160,55 +160,78 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
 
           if (contentType.includes('text/html') && html.trim().length > 0) {
             // Process HTML to display in A4 page format like Microsoft Word
-            // Extract body content from backend HTML
-            let bodyContent = '';
+            // Check if backend already returned split pages
+            const hasSplitPages = html.includes('class="docx-a4-page"') || html.includes("class='docx-a4-page'");
             
-            // First, try to extract from body tags
-            const bodyMatch = html.match(/<body[^>]*>([\s\S]*)<\/body>/i);
-            if (bodyMatch && bodyMatch[1]) {
-              bodyContent = bodyMatch[1];
-            } else {
-              // If no body tag, check for html tag
-              const htmlMatch = html.match(/<html[^>]*>([\s\S]*)<\/html>/i);
-              if (htmlMatch && htmlMatch[1]) {
-                // Remove head tag if present
-                bodyContent = htmlMatch[1].replace(/<head[^>]*>[\s\S]*?<\/head>/i, '');
+            let wrappedContent = '';
+            
+            if (hasSplitPages) {
+              // Backend already split the pages - use them directly
+              console.log('Backend returned pre-split pages');
+              // Extract just the page divs (remove any wrapper)
+              const pageMatch = html.match(/(<div[^>]*class=["']docx-a4-page["'][^>]*>[\s\S]*?<\/div>)/gi);
+              if (pageMatch && pageMatch.length > 0) {
+                wrappedContent = `<div class="docx-a4-container">${pageMatch.join('\n')}</div>`;
               } else {
-                // Backend returns just content (no wrapper tags) - use it directly
-                bodyContent = html;
+                // Pages might be in a container already
+                const containerMatch = html.match(/<div[^>]*class=["']docx-a4-container["'][^>]*>([\s\S]*?)<\/div>/i);
+                if (containerMatch) {
+                  wrappedContent = html; // Use as-is
+                } else {
+                  wrappedContent = `<div class="docx-a4-container">${html}</div>`;
+                }
               }
+            } else {
+              // Backend didn't split - extract body content and wrap in single page
+              let bodyContent = '';
+              
+              // First, try to extract from body tags
+              const bodyMatch = html.match(/<body[^>]*>([\s\S]*)<\/body>/i);
+              if (bodyMatch && bodyMatch[1]) {
+                bodyContent = bodyMatch[1];
+              } else {
+                // If no body tag, check for html tag
+                const htmlMatch = html.match(/<html[^>]*>([\s\S]*)<\/html>/i);
+                if (htmlMatch && htmlMatch[1]) {
+                  // Remove head tag if present
+                  bodyContent = htmlMatch[1].replace(/<head[^>]*>[\s\S]*?<\/head>/i, '');
+                } else {
+                  // Backend returns just content (no wrapper tags) - use it directly
+                  bodyContent = html;
+                }
+              }
+              
+              // Clean up body content - remove scripts and styles that might interfere
+              bodyContent = bodyContent.replace(/<script[\s\S]*?<\/script>/gi, '');
+              bodyContent = bodyContent.replace(/<style[\s\S]*?<\/style>/gi, '');
+              
+              // Trim whitespace
+              bodyContent = bodyContent.trim();
+              
+              // If bodyContent is empty or just whitespace, show error
+              if (!bodyContent || bodyContent.length === 0) {
+                console.error('Empty content from backend');
+                bodyContent = '<p style="color: red; padding: 20px;">No content received from backend. Please check the file format.</p>';
+              }
+              
+              console.log('Extracted body content length:', bodyContent.length);
+              console.log('Body content preview:', bodyContent.substring(0, 200));
+              
+              // Create clean HTML structure with A4 pages (single page for now, frontend will split)
+              wrappedContent = `<div class="docx-a4-container"><div class="docx-a4-page">${bodyContent}</div></div>`;
             }
-            
-            // Clean up body content - remove scripts and styles that might interfere
-            bodyContent = bodyContent.replace(/<script[\s\S]*?<\/script>/gi, '');
-            bodyContent = bodyContent.replace(/<style[\s\S]*?<\/style>/gi, '');
-            
-            // Trim whitespace
-            bodyContent = bodyContent.trim();
-            
-            // If bodyContent is empty or just whitespace, show error
-            if (!bodyContent || bodyContent.length === 0) {
-              console.error('Empty content from backend');
-              bodyContent = '<p style="color: red; padding: 20px;">No content received from backend. Please check the file format.</p>';
-            }
-            
-            console.log('Extracted body content length:', bodyContent.length);
-            console.log('Body content preview:', bodyContent.substring(0, 200));
-            
-            // Create clean HTML structure with A4 pages
-            const wrappedContent = `<div class="docx-a4-container"><div class="docx-a4-page">${bodyContent}</div></div>`;
             
             // Build complete HTML document
-            let processedHtml = `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DOCX Preview</title>`;
+            // Use string concatenation to avoid template literal issues with user content
+            let processedHtml = '<!DOCTYPE html>\n' +
+'<html lang="en">\n' +
+'<head>\n' +
+'  <meta charset="UTF-8">\n' +
+'  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n' +
+'  <title>DOCX Preview</title>\n';
 
             // Add A4 page styling (like Microsoft Word)
-            processedHtml += `
-  <style>
+            processedHtml += '\n  <style>\n';
     * {
       box-sizing: border-box;
     }
@@ -269,15 +292,13 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
       border: 1px solid #ddd;
       padding: 8px;
     }
-  </style>
-</head>
-<body>
-  ${wrappedContent}
-`;
+  </style>\n' +
+'</head>\n' +
+'<body>\n' +
+'  ' + wrappedContent + '\n';
             
             // Add JavaScript to split content into multiple A4 pages
-            processedHtml += `
-  <script>
+            processedHtml += '\n  <script>\n';
     (function() {
       let hasSplit = false; // Flag to prevent multiple splits
       let originalContent = null; // Store original content
@@ -519,10 +540,10 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
       
       // Disconnect observer after 10 seconds
       setTimeout(() => observer.disconnect(), 10000);
-    })();
-  </script>
-</body>
-</html>`;
+    })();\n' +
+'  </script>\n' +
+'</body>\n' +
+'</html>';
 
             htmls.set(index, processedHtml);
             setDocxHtml(new Map(htmls));
