@@ -60,6 +60,48 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
     };
   }, []);
 
+  // Helper function to create error HTML
+  const createErrorHtml = (errorMessage: string) => {
+    const errorContent = `<div class="docx-a4-container"><div class="docx-a4-page"><p style="color: red; padding: 20px; font-size: 14px;">${errorMessage}</p></div></div>`;
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOCX Preview Error</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #e5e5e5;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    .docx-a4-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      gap: 20px;
+      min-height: 100vh;
+      background: #e5e5e5;
+    }
+    .docx-a4-page {
+      width: 210mm;
+      min-height: 297mm;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      margin: 0 auto 20px;
+      padding: 25.4mm 31.7mm;
+    }
+  </style>
+</head>
+<body>
+  ${errorContent}
+</body>
+</html>`;
+  };
+
   // Load DOCX files and fetch HTML previews
   useEffect(() => {
     const htmls = new Map<number, string>();
@@ -81,30 +123,48 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
         if (response.ok) {
           const contentType = response.headers.get('Content-Type') || '';
           const html = await response.text();
+          
+          console.log('Backend response status:', response.status);
+          console.log('Backend response content-type:', contentType);
+          console.log('Backend response length:', html.length);
+          console.log('Backend response preview:', html.substring(0, 500));
 
           if (contentType.includes('text/html') && html.trim().length > 0) {
             // Process HTML to display in A4 page format like Microsoft Word
             // Extract body content from backend HTML
             let bodyContent = '';
+            
+            // First, try to extract from body tags
             const bodyMatch = html.match(/<body[^>]*>([\s\S]*)<\/body>/i);
-            if (bodyMatch) {
+            if (bodyMatch && bodyMatch[1]) {
               bodyContent = bodyMatch[1];
             } else {
-              // If no body tag, extract content between body tags or use entire HTML
-              const bodyStart = html.indexOf('<body');
-              const bodyEnd = html.indexOf('</body>');
-              if (bodyStart >= 0 && bodyEnd >= 0) {
-                const bodyTagEnd = html.indexOf('>', bodyStart);
-                bodyContent = html.substring(bodyTagEnd + 1, bodyEnd);
+              // If no body tag, check for html tag
+              const htmlMatch = html.match(/<html[^>]*>([\s\S]*)<\/html>/i);
+              if (htmlMatch && htmlMatch[1]) {
+                // Remove head tag if present
+                bodyContent = htmlMatch[1].replace(/<head[^>]*>[\s\S]*?<\/head>/i, '');
               } else {
-                // Remove head and html tags
-                bodyContent = html.replace(/<head[^>]*>[\s\S]*?<\/head>/i, '').replace(/<\/?html[^>]*>/gi, '');
+                // Backend returns just content (no wrapper tags) - use it directly
+                bodyContent = html;
               }
             }
             
             // Clean up body content - remove scripts and styles that might interfere
             bodyContent = bodyContent.replace(/<script[\s\S]*?<\/script>/gi, '');
             bodyContent = bodyContent.replace(/<style[\s\S]*?<\/style>/gi, '');
+            
+            // Trim whitespace
+            bodyContent = bodyContent.trim();
+            
+            // If bodyContent is empty or just whitespace, show error
+            if (!bodyContent || bodyContent.length === 0) {
+              console.error('Empty content from backend');
+              bodyContent = '<p style="color: red; padding: 20px;">No content received from backend. Please check the file format.</p>';
+            }
+            
+            console.log('Extracted body content length:', bodyContent.length);
+            console.log('Body content preview:', bodyContent.substring(0, 200));
             
             // Create clean HTML structure with A4 pages
             const wrappedContent = `<div class="docx-a4-container"><div class="docx-a4-page">${bodyContent}</div></div>`;
@@ -430,10 +490,41 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
                 setTimeout(checkPages, 300);
               };
             }, 100);
+          } else {
+            // Backend returned non-HTML or empty response
+            console.warn('Backend returned non-HTML or empty response');
+            const errorHtml = createErrorHtml('Backend returned invalid response. Content-Type: ' + contentType);
+            htmls.set(index, errorHtml);
+            setDocxHtml(new Map(htmls));
+            setTotalPages(prev => {
+              const newMap = new Map(prev);
+              newMap.set(index, 1);
+              return newMap;
+            });
           }
+        } else {
+          // Response not OK - show error
+          const errorText = await response.text().catch(() => 'Unknown error');
+          console.error('Backend error:', response.status, errorText);
+          const errorHtml = createErrorHtml(`Backend error (${response.status}): ${errorText.substring(0, 200)}`);
+          htmls.set(index, errorHtml);
+          setDocxHtml(new Map(htmls));
+          setTotalPages(prev => {
+            const newMap = new Map(prev);
+            newMap.set(index, 1);
+            return newMap;
+          });
         }
       } catch (error) {
         console.error('Error loading DOCX preview:', error);
+        const errorHtml = createErrorHtml(`Error: ${error instanceof Error ? error.message : String(error)}`);
+        htmls.set(index, errorHtml);
+        setDocxHtml(new Map(htmls));
+        setTotalPages(prev => {
+          const newMap = new Map(prev);
+          newMap.set(index, 1);
+          return newMap;
+        });
       } finally {
         loading.set(index, false);
         setIsLoading(new Map(loading));
