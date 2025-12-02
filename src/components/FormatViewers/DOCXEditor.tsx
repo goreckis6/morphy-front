@@ -434,7 +434,8 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
           if (allElements.length === 0) {
             const parser = new DOMParser();
             const parsed = parser.parseFromString('<div>' + originalContent + '</div>', 'text/html');
-            const topLevelElements = Array.from(parsed.body.firstElementChild?.children || []);
+            const firstChild = parsed.body.firstElementChild;
+            const topLevelElements = Array.from(firstChild && firstChild.children ? firstChild.children : []);
             if (topLevelElements.length > 0) {
               topLevelElements.forEach(el => {
                 const cloned = el.cloneNode(true);
@@ -493,7 +494,7 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
               
               allNodes.forEach((node) => {
                 if (node.nodeType === Node.ELEMENT_NODE) {
-                  const el = node as HTMLElement;
+                  const el = node;
                   const elHeight = el.offsetHeight || el.scrollHeight || 50;
                   
                   if (currentChunkHeight + elHeight > chunkHeight && currentChunk.length > 0) {
@@ -562,7 +563,7 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
           const paddingPx = 25.4 * 2 * 3.779527559; // mm to px
           
           // First, measure all elements to get accurate heights
-          const elementHeights: number[] = [];
+          const elementHeights = [];
           allElements.forEach((element) => {
             // Measure in temp container
             const measureDiv = document.createElement('div');
