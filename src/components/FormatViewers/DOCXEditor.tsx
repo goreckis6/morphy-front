@@ -341,7 +341,11 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
           }
           
           // Check if content looks like it has structure
-          const hasBlockElements = /<(p|div|h[1-6]|table|ul|ol|li|tr|td|th)[\s>]/i.test(originalContent);
+          const blockTags = ['p', 'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'table', 'ul', 'ol', 'li', 'tr', 'td', 'th'];
+          const hasBlockElements = blockTags.some(tag => {
+            const pattern = '<' + tag + '[\\s>]';
+            return new RegExp(pattern, 'i').test(originalContent);
+          });
           console.log('Content has block elements:', hasBlockElements);
           
           // Count how many top-level block elements we have
@@ -684,7 +688,8 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
                   const elementHTML = largeElement.innerHTML || largeElement.textContent || '';
                   
                   // Try to split by paragraphs or line breaks first
-                  const paragraphs = elementHTML.split(/(<p[^>]*>[\s\S]*?<\/p>|<br\s*\/?>|\n\n)/i);
+                  const paragraphRegex = new RegExp('(<p[^>]*>[\\s\\S]*?</p>|<br\\s*/?>|\\n\\n)', 'i');
+                  const paragraphs = elementHTML.split(paragraphRegex);
                   const validParagraphs = paragraphs.filter(p => p.trim().length > 0);
                   
                   if (validParagraphs.length > estimatedPages) {
