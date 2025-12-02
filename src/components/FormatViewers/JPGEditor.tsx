@@ -27,7 +27,7 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
   const viewerRef = useRef<HTMLDivElement>(null);
 
   const location = useLocation();
-  
+
   // Prevent body scroll when editor is open
   useEffect(() => {
     document.body.style.overflow = 'hidden';

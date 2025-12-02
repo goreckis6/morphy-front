@@ -71,7 +71,7 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
   }, []);
 
   const location = useLocation();
-  
+
   // Prevent body scroll when editor is open
   useEffect(() => {
     document.body.style.overflow = 'hidden';
@@ -157,71 +157,71 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
                 const thumbnailUrl = canvas.toDataURL();
                 thumbnails.set(`${index}-${pageNum}`, thumbnailUrl);
                 setPageThumbnails(new Map(thumbnails));
-              } catch (error) {
+      } catch (error) {
                 console.error(`Error generating thumbnail for page ${pageNum}:`, error);
               }
             })()
           );
-        }
-        
+      }
+
         // Also fetch HTML preview as fallback
-        try {
-          const formData = new FormData();
-          formData.append('file', file);
-          const response = await fetch('https://api.morphyhub.com/api/preview/pdf', {
-            method: 'POST',
-            body: formData,
+      try {
+        const formData = new FormData();
+        formData.append('file', file);
+        const response = await fetch('https://api.morphyhub.com/api/preview/pdf', {
+          method: 'POST',
+          body: formData,
+        });
+        if (response.ok) {
+          let html = await response.text();
+          html = html.replace(/<style>([\s\S]*?)<\/style>/i, (match, styles) => {
+            return `<style>${styles}
+              .toolbar, .header-bar, [class*="toolbar"], [class*="header"] {
+                display: none !important;
+              }
+              body {
+                background: white !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                  overflow-y: auto !important;
+                  scroll-behavior: smooth !important;
+              }
+              html {
+                background: white !important;
+                  overflow-y: auto !important;
+                  scroll-behavior: smooth !important;
+                }
+                * {
+                  scroll-behavior: smooth !important;
+              }
+            </style>`;
           });
-          if (response.ok) {
-            let html = await response.text();
-            html = html.replace(/<style>([\s\S]*?)<\/style>/i, (match, styles) => {
-              return `<style>${styles}
-                .toolbar, .header-bar, [class*="toolbar"], [class*="header"] {
-                  display: none !important;
-                }
-                body {
-                  background: white !important;
-                  margin: 0 !important;
-                  padding: 0 !important;
+          if (!html.includes('<style>')) {
+            html = html.replace('<head>', `<head><style>
+              .toolbar, .header-bar, [class*="toolbar"], [class*="header"] {
+                display: none !important;
+              }
+              body {
+                background: white !important;
+                margin: 0 !important;
+                padding: 0 !important;
                   overflow-y: auto !important;
                   scroll-behavior: smooth !important;
-                }
-                html {
-                  background: white !important;
-                  overflow-y: auto !important;
-                  scroll-behavior: smooth !important;
-                }
-                * {
-                  scroll-behavior: smooth !important;
-                }
-              </style>`;
-            });
-            if (!html.includes('<style>')) {
-              html = html.replace('<head>', `<head><style>
-                .toolbar, .header-bar, [class*="toolbar"], [class*="header"] {
-                  display: none !important;
-                }
-                body {
-                  background: white !important;
-                  margin: 0 !important;
-                  padding: 0 !important;
-                  overflow-y: auto !important;
-                  scroll-behavior: smooth !important;
-                }
-                html {
-                  background: white !important;
+              }
+              html {
+                background: white !important;
                   overflow-y: auto !important;
                   scroll-behavior: smooth !important;
                 }
                 * {
                   scroll-behavior: smooth !important;
-                }
-              </style>`);
-            }
-            htmls.set(index, html);
-            setPdfHtml(new Map(htmls));
+              }
+            </style>`);
           }
-        } catch (error) {
+          htmls.set(index, html);
+          setPdfHtml(new Map(htmls));
+        }
+      } catch (error) {
           console.error('Error loading PDF HTML preview:', error);
         }
       } catch (error) {
@@ -475,10 +475,10 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
   useEffect(() => {
     if (!currentPdfDoc || !pagesContainerRef.current) {
       // Fallback to iframe if pdfjs-dist not available
-      if (iframeRef.current && currentPdfHtml) {
-        iframeRef.current.contentWindow?.document.open();
-        iframeRef.current.contentWindow?.document.write(currentPdfHtml);
-        iframeRef.current.contentWindow?.document.close();
+    if (iframeRef.current && currentPdfHtml) {
+      iframeRef.current.contentWindow?.document.open();
+      iframeRef.current.contentWindow?.document.write(currentPdfHtml);
+      iframeRef.current.contentWindow?.document.close();
         setCurrentPage(1);
         lastPageRef.current = 1;
       }
@@ -813,8 +813,8 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
                 {Array.from({ length: currentTotalPages }, (_, i) => i + 1).map((pageNum) => {
                   const isActive = currentPage === pageNum;
                   return (
-                    <button
-                      key={pageNum}
+                  <button
+                    key={pageNum}
                       onClick={() => {
                         handlePageClick(pageNum);
                         setIsPagesSidebarOpen(true); // Keep sidebar open when clicking
@@ -823,9 +823,9 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
                         isActive
                           ? 'border-pink-500 bg-pink-50 shadow-md ring-2 ring-pink-200 scale-105'
                           : 'border-gray-200 hover:border-pink-300 hover:bg-pink-50/50 hover:shadow-sm'
-                      }`}
+                    }`}
                       id={`page-thumb-${pageNum}`}
-                    >
+                  >
                       <div className="flex items-center justify-center w-full h-24 sm:h-32 bg-gradient-to-br from-gray-50 to-gray-100 rounded mb-2 overflow-hidden relative border border-gray-200">
                         {/* Page number badge */}
                         <span className={`absolute top-1 left-1 text-xs px-2 py-1 rounded font-bold z-10 ${
@@ -856,7 +856,7 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
                                 isActive ? 'text-pink-600' : 'text-gray-400'
                               }`}>
                                 {pageNum}
-                              </div>
+                    </div>
                               <div className="text-xs text-gray-500">
                                 {t('viewers.pdf.editor.page', 'Page')}
                               </div>
@@ -870,10 +870,10 @@ export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles
                       </div>
                       <p className={`text-xs text-center font-medium mt-1 ${
                         isActive ? 'text-pink-700 font-bold' : 'text-gray-600'
-                      }`}>
-                        {t('viewers.pdf.editor.page', 'Page')} {pageNum}
-                      </p>
-                    </button>
+                    }`}>
+                      {t('viewers.pdf.editor.page', 'Page')} {pageNum}
+                    </p>
+                  </button>
                   );
                 })}
               </div>
