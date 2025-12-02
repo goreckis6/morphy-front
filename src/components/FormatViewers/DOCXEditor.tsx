@@ -318,6 +318,19 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
             originalContent = firstPage.innerHTML;
             console.log('Original content length:', originalContent.length);
             console.log('Original content preview:', originalContent.substring(0, 300));
+            
+            // Check actual rendered height immediately
+            void firstPage.offsetHeight;
+            const renderedHeight = firstPage.scrollHeight;
+            const paddingPxCheck = 25.4 * 2 * 3.779527559;
+            const contentHeight = renderedHeight - paddingPxCheck;
+            const estimatedPagesFromHeight = Math.max(1, Math.ceil(contentHeight / maxContentHeight));
+            console.log('Rendered content height:', contentHeight, 'px, estimated pages:', estimatedPagesFromHeight);
+            
+            // If content is clearly taller than one page, we know we need to split
+            if (estimatedPagesFromHeight > 1) {
+              console.log('Content is', estimatedPagesFromHeight, 'pages tall - will force split');
+            }
           }
           
           if (!originalContent || !originalContent.trim()) {
@@ -331,8 +344,21 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
           const hasBlockElements = /<(p|div|h[1-6]|table|ul|ol|li|tr|td|th)[\s>]/i.test(originalContent);
           console.log('Content has block elements:', hasBlockElements);
           
+          // Count how many top-level block elements we have
+          const tempCheckDiv = document.createElement('div');
+          tempCheckDiv.innerHTML = originalContent;
+          const topLevelElements = Array.from(tempCheckDiv.children).filter(el => {
+            const tag = el.tagName.toLowerCase();
+            return ['p', 'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'table', 'ul', 'ol', 'li', 'blockquote', 'pre', 'hr'].includes(tag);
+          });
+          console.log('Top-level block elements found:', topLevelElements.length);
+          
           if (!hasBlockElements && originalContent.length > 500) {
-            console.warn('Content is long but has no block elements - might need different splitting strategy');
+            console.warn('Content is long but has no block elements - will use text-based splitting');
+          }
+          
+          if (topLevelElements.length === 0 && originalContent.length > 1000) {
+            console.warn('No top-level block elements found - content might be in one big element');
           }
           
           // If already split, don't split again
@@ -356,27 +382,44 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
           const allElements = [];
           
           // Strategy 1: Get all block-level elements using TreeWalker
-          const walker = document.createTreeWalker(
-            tempDiv,
-            NodeFilter.SHOW_ELEMENT,
-            {
-              acceptNode: function(node) {
-                const tagName = node.tagName ? node.tagName.toLowerCase() : '';
-                const blockTags = ['p', 'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'table', 'ul', 'ol', 'li', 'blockquote', 'pre', 'hr', 'tr', 'td', 'th'];
-                if (blockTags.includes(tagName)) {
-                  return NodeFilter.FILTER_ACCEPT;
+          // First, try to get direct children (top-level elements)
+          const directBlockChildren = Array.from(tempDiv.children).filter(el => {
+            const tag = el.tagName.toLowerCase();
+            const blockTags = ['p', 'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'table', 'ul', 'ol', 'li', 'blockquote', 'pre', 'hr', 'tr', 'td', 'th', 'span', 'strong', 'em', 'b', 'i'];
+            return blockTags.includes(tag) || el.children.length > 0;
+          });
+          
+          if (directBlockChildren.length > 0) {
+            console.log('Found', directBlockChildren.length, 'direct block children');
+            directBlockChildren.forEach(el => allElements.push(el));
+          } else {
+            // Use TreeWalker to find nested elements
+            const walker = document.createTreeWalker(
+              tempDiv,
+              NodeFilter.SHOW_ELEMENT,
+              {
+                acceptNode: function(node) {
+                  const tagName = node.tagName ? node.tagName.toLowerCase() : '';
+                  const blockTags = ['p', 'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'table', 'ul', 'ol', 'li', 'blockquote', 'pre', 'hr', 'tr', 'td', 'th'];
+                  if (blockTags.includes(tagName)) {
+                    // Only accept if it's a direct child or if parent is not a block element
+                    const parent = node.parentElement;
+                    if (!parent || parent === tempDiv || !blockTags.includes(parent.tagName.toLowerCase())) {
+                      return NodeFilter.FILTER_ACCEPT;
+                    }
+                  }
+                  return NodeFilter.FILTER_SKIP;
                 }
-                return NodeFilter.FILTER_SKIP;
               }
+            );
+            
+            let node;
+            while (node = walker.nextNode()) {
+              allElements.push(node);
             }
-          );
-          
-          let node;
-          while (node = walker.nextNode()) {
-            allElements.push(node);
+            
+            console.log('Found', allElements.length, 'block elements via TreeWalker');
           }
-          
-          console.log('Found', allElements.length, 'block elements via TreeWalker');
           
           // Strategy 2: If no elements, get direct children
           if (allElements.length === 0) {
@@ -518,35 +561,35 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
           // Distribute elements across pages - improved algorithm
           const paddingPx = 25.4 * 2 * 3.779527559; // mm to px
           
-          allElements.forEach((element, elemIndex) => {
-            // Clone element
-            const cloned = element.cloneNode(true);
-            
-            // Add to current page temporarily to measure
-            currentPage.appendChild(cloned);
-            
-            // Force multiple layout calculations for accuracy
-            void currentPage.offsetHeight;
-            void currentPage.scrollHeight;
-            
-            // Wait a bit for layout to settle
-            const pageContentHeight = currentPage.scrollHeight - paddingPx;
-            const elementHeight = Math.max(
-              cloned.offsetHeight || 0,
-              cloned.scrollHeight || 0,
-              cloned.clientHeight || 0,
-              15 // minimum height
+          // First, measure all elements to get accurate heights
+          const elementHeights: number[] = [];
+          allElements.forEach((element) => {
+            // Measure in temp container
+            const measureDiv = document.createElement('div');
+            measureDiv.style.cssText = 'position: absolute; visibility: hidden; width: ' + contentWidth + 'mm; top: -9999px;';
+            measureDiv.appendChild(element.cloneNode(true));
+            document.body.appendChild(measureDiv);
+            void measureDiv.offsetHeight;
+            const height = Math.max(
+              measureDiv.offsetHeight || 0,
+              measureDiv.scrollHeight || 0,
+              20
             );
+            elementHeights.push(height);
+            document.body.removeChild(measureDiv);
+          });
+          
+          console.log('Measured element heights:', elementHeights);
+          
+          // Now distribute elements based on measured heights
+          allElements.forEach((element, elemIndex) => {
+            const elementHeight = elementHeights[elemIndex] || 30;
             
-            // Check if we need a new page
-            // Use a buffer (50px) to prevent elements from being cut off
-            const needsNewPage = pageContentHeight > (maxContentHeight - 50) && currentHeight > 100;
+            // Check if adding this element would exceed page height
+            const wouldExceed = (currentHeight + elementHeight) > maxContentHeight;
             
-            if (needsNewPage) {
-              // Remove element from current page
-              currentPage.removeChild(cloned);
-              
-              // Create new page
+            if (wouldExceed && currentHeight > 50) {
+              // Create new page before adding this element
               pageNum++;
               currentPage = document.createElement('div');
               currentPage.className = 'docx-a4-page';
@@ -554,17 +597,18 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
               currentPage.setAttribute('data-page', pageNum.toString());
               currentPage.style.cssText = 'width: ' + pageWidth + 'mm; min-height: 297mm; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.15); margin: 0 auto 20px; padding: 25.4mm 31.7mm; position: relative; page-break-after: always; display: block; box-sizing: border-box;';
               container.appendChild(currentPage);
-              
-              // Add element to new page
-              currentPage.appendChild(cloned);
-              void currentPage.offsetHeight;
-              currentHeight = currentPage.scrollHeight - paddingPx;
-              
-              console.log('Created new page', pageNum, 'at element', elemIndex);
-            } else {
-              // Element fits, update current height
-              currentHeight = pageContentHeight;
+              currentHeight = 0;
+              console.log('Created new page', pageNum, 'before element', elemIndex);
             }
+            
+            // Add element to current page
+            const cloned = element.cloneNode(true);
+            currentPage.appendChild(cloned);
+            
+            // Update height after adding
+            void currentPage.offsetHeight;
+            const pageContentHeight = currentPage.scrollHeight - paddingPx;
+            currentHeight = Math.max(currentHeight, pageContentHeight);
           });
           
           console.log('Distributed', allElements.length, 'elements across', pageNum, 'pages');
@@ -573,31 +617,135 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
           const pagesAfterDistribution = container.querySelectorAll('.docx-a4-page');
           console.log('Pages after distribution:', pagesAfterDistribution.length);
           
-          // If we still only have one page but have many elements, force create more pages
-          if (pagesAfterDistribution.length === 1 && allElements.length > 10) {
-            console.log('Only 1 page but', allElements.length, 'elements - forcing page creation');
+          // If we still only have one page, force split it
+          if (pagesAfterDistribution.length === 1) {
             const singlePage = pagesAfterDistribution[0];
-            const elementsPerPage = Math.max(5, Math.ceil(allElements.length / 3)); // At least 3 pages
+            void singlePage.offsetHeight;
+            const pageContentHeight = singlePage.scrollHeight - paddingPx;
+            const estimatedPages = Math.max(2, Math.ceil(pageContentHeight / maxContentHeight));
             
-            singlePage.innerHTML = '';
+            console.log('Only 1 page detected, content height:', pageContentHeight, 'px, estimated pages:', estimatedPages);
             
-            allElements.forEach((element, idx) => {
-              const targetPageNum = Math.floor(idx / elementsPerPage) + 1;
-              let targetPage = container.querySelector('.docx-a4-page[data-page="' + targetPageNum + '"]');
-              
-              if (!targetPage) {
-                targetPage = document.createElement('div');
-                targetPage.className = 'docx-a4-page';
-                targetPage.id = 'docx-page-' + targetPageNum;
-                targetPage.setAttribute('data-page', targetPageNum.toString());
-                targetPage.style.cssText = 'width: ' + pageWidth + 'mm; min-height: 297mm; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.15); margin: 0 auto 20px; padding: 25.4mm 31.7mm; position: relative; page-break-after: always; display: block; box-sizing: border-box;';
-                container.appendChild(targetPage);
+            if (estimatedPages > 1) {
+              // Strategy 1: If we have multiple elements, distribute them
+              if (allElements.length > 1) {
+                console.log('Force splitting', allElements.length, 'elements into', estimatedPages, 'pages');
+                const elementsPerPage = Math.max(1, Math.ceil(allElements.length / estimatedPages));
+                singlePage.innerHTML = '';
+                
+                allElements.forEach((element, idx) => {
+                  const targetPageNum = Math.floor(idx / elementsPerPage) + 1;
+                  let targetPage = container.querySelector('.docx-a4-page[data-page="' + targetPageNum + '"]');
+                  
+                  if (!targetPage) {
+                    targetPage = document.createElement('div');
+                    targetPage.className = 'docx-a4-page';
+                    targetPage.id = 'docx-page-' + targetPageNum;
+                    targetPage.setAttribute('data-page', targetPageNum.toString());
+                    targetPage.style.cssText = 'width: ' + pageWidth + 'mm; min-height: 297mm; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.15); margin: 0 auto 20px; padding: 25.4mm 31.7mm; position: relative; page-break-after: always; display: block; box-sizing: border-box;';
+                    container.appendChild(targetPage);
+                  }
+                  
+                  targetPage.appendChild(element.cloneNode(true));
+                });
+                
+                console.log('Force created', container.querySelectorAll('.docx-a4-page').length, 'pages from elements');
+              } else if (allElements.length === 1) {
+                // Strategy 2: Split single large element by its children
+                console.log('Splitting single large element by its children');
+                const largeElement = allElements[0];
+                const children = Array.from(largeElement.children || []);
+                
+                if (children.length > 0) {
+                  singlePage.innerHTML = '';
+                  const childrenPerPage = Math.max(1, Math.ceil(children.length / estimatedPages));
+                  
+                  children.forEach((child, idx) => {
+                    const targetPageNum = Math.floor(idx / childrenPerPage) + 1;
+                    let targetPage = container.querySelector('.docx-a4-page[data-page="' + targetPageNum + '"]');
+                    
+                    if (!targetPage) {
+                      targetPage = document.createElement('div');
+                      targetPage.className = 'docx-a4-page';
+                      targetPage.id = 'docx-page-' + targetPageNum;
+                      targetPage.setAttribute('data-page', targetPageNum.toString());
+                      targetPage.style.cssText = 'width: ' + pageWidth + 'mm; min-height: 297mm; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.15); margin: 0 auto 20px; padding: 25.4mm 31.7mm; position: relative; page-break-after: always; display: block; box-sizing: border-box;';
+                      container.appendChild(targetPage);
+                    }
+                    
+                    targetPage.appendChild(child.cloneNode(true));
+                  });
+                  
+                  console.log('Split large element into', container.querySelectorAll('.docx-a4-page').length, 'pages');
+                } else {
+                  // Strategy 3: Split by text content - try to preserve HTML structure
+                  console.log('Splitting single element by text content');
+                  const elementHTML = largeElement.innerHTML || largeElement.textContent || '';
+                  
+                  // Try to split by paragraphs or line breaks first
+                  const paragraphs = elementHTML.split(/(<p[^>]*>[\s\S]*?<\/p>|<br\s*\/?>|\n\n)/i);
+                  const validParagraphs = paragraphs.filter(p => p.trim().length > 0);
+                  
+                  if (validParagraphs.length > estimatedPages) {
+                    // Split paragraphs across pages
+                    singlePage.innerHTML = '';
+                    const parasPerPage = Math.ceil(validParagraphs.length / estimatedPages);
+                    
+                    validParagraphs.forEach((para, idx) => {
+                      const targetPageNum = Math.floor(idx / parasPerPage) + 1;
+                      let targetPage = container.querySelector('.docx-a4-page[data-page="' + targetPageNum + '"]');
+                      
+                      if (!targetPage) {
+                        targetPage = document.createElement('div');
+                        targetPage.className = 'docx-a4-page';
+                        targetPage.id = 'docx-page-' + targetPageNum;
+                        targetPage.setAttribute('data-page', targetPageNum.toString());
+                        targetPage.style.cssText = 'width: ' + pageWidth + 'mm; min-height: 297mm; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.15); margin: 0 auto 20px; padding: 25.4mm 31.7mm; position: relative; page-break-after: always; display: block; box-sizing: border-box;';
+                        container.appendChild(targetPage);
+                      }
+                      
+                      // Create a div to hold the paragraph
+                      const paraDiv = document.createElement('div');
+                      paraDiv.innerHTML = para;
+                      targetPage.appendChild(paraDiv);
+                    });
+                    
+                    console.log('Split by paragraphs into', container.querySelectorAll('.docx-a4-page').length, 'pages');
+                  } else {
+                    // Fallback: split by character count
+                    console.log('Splitting by character count');
+                    const textContent = largeElement.textContent || elementHTML.replace(/<[^>]+>/g, '');
+                    const charsPerPage = Math.ceil(textContent.length / estimatedPages);
+                    
+                    singlePage.innerHTML = '';
+                    
+                    for (let i = 0; i < estimatedPages; i++) {
+                      const startChar = i * charsPerPage;
+                      const endChar = Math.min((i + 1) * charsPerPage, textContent.length);
+                      const pageText = textContent.substring(startChar, endChar).trim();
+                      
+                      if (pageText.length === 0) continue;
+                      
+                      let targetPage = container.querySelector('.docx-a4-page[data-page="' + (i + 1) + '"]');
+                      if (!targetPage) {
+                        targetPage = document.createElement('div');
+                        targetPage.className = 'docx-a4-page';
+                        targetPage.id = 'docx-page-' + (i + 1);
+                        targetPage.setAttribute('data-page', (i + 1).toString());
+                        targetPage.style.cssText = 'width: ' + pageWidth + 'mm; min-height: 297mm; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.15); margin: 0 auto 20px; padding: 25.4mm 31.7mm; position: relative; page-break-after: always; display: block; box-sizing: border-box;';
+                        container.appendChild(targetPage);
+                      }
+                      
+                      const p = document.createElement('p');
+                      p.textContent = pageText;
+                      targetPage.appendChild(p);
+                    }
+                    
+                    console.log('Split by text into', container.querySelectorAll('.docx-a4-page').length, 'pages');
+                  }
+                }
               }
-              
-              targetPage.appendChild(element.cloneNode(true));
-            });
-            
-            console.log('Force created', container.querySelectorAll('.docx-a4-page').length, 'pages');
+            }
           }
           
           // Clean up
@@ -661,8 +809,61 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
             }
           }
           
-          // Update page count (use finalPageCount if we did force split, otherwise count)
-          const totalPages = finalPageCount || container.querySelectorAll('.docx-a4-page').length;
+          // Final verification: check if we need more pages based on actual content height
+          const allPagesFinal = container.querySelectorAll('.docx-a4-page');
+          let finalPageCount = allPagesFinal.length;
+          
+          // Check each page's content height
+          allPagesFinal.forEach((page, idx) => {
+            void page.offsetHeight;
+            const pageContentHeight = page.scrollHeight - paddingPx;
+            if (pageContentHeight > maxContentHeight * 1.1) {
+              console.warn('Page', (idx + 1), 'is too tall:', pageContentHeight, 'px - should split further');
+            }
+          });
+          
+          // If we still only have 1 page but content is clearly multi-page, force split one more time
+          if (finalPageCount === 1 && allPagesFinal.length > 0) {
+            const lastPage = allPagesFinal[0];
+            void lastPage.offsetHeight;
+            const lastPageHeight = lastPage.scrollHeight - paddingPx;
+            const stillNeedsPages = Math.ceil(lastPageHeight / maxContentHeight);
+            
+            if (stillNeedsPages > 1) {
+              console.log('Final check: content still needs', stillNeedsPages, 'pages, forcing final split');
+              // Get all content from the single page
+              const allContent = lastPage.innerHTML;
+              lastPage.innerHTML = '';
+              
+              // Split by creating multiple pages with equal content distribution
+              const contentLength = allContent.length;
+              const contentPerPage = Math.ceil(contentLength / stillNeedsPages);
+              
+              for (let i = 0; i < stillNeedsPages; i++) {
+                const startIdx = i * contentPerPage;
+                const endIdx = Math.min((i + 1) * contentPerPage, contentLength);
+                const pageContent = allContent.substring(startIdx, endIdx);
+                
+                let targetPage = container.querySelector('.docx-a4-page[data-page="' + (i + 1) + '"]');
+                if (!targetPage) {
+                  targetPage = document.createElement('div');
+                  targetPage.className = 'docx-a4-page';
+                  targetPage.id = 'docx-page-' + (i + 1);
+                  targetPage.setAttribute('data-page', (i + 1).toString());
+                  targetPage.style.cssText = 'width: ' + pageWidth + 'mm; min-height: 297mm; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.15); margin: 0 auto 20px; padding: 25.4mm 31.7mm; position: relative; page-break-after: always; display: block; box-sizing: border-box;';
+                  container.appendChild(targetPage);
+                } else {
+                  targetPage.innerHTML = pageContent;
+                }
+              }
+              
+              finalPageCount = container.querySelectorAll('.docx-a4-page').length;
+              console.log('Final split created', finalPageCount, 'pages');
+            }
+          }
+          
+          // Update page count
+          const totalPages = finalPageCount;
           container.setAttribute('data-total-pages', totalPages.toString());
           console.log('Final page count:', totalPages, 'pages created');
           
@@ -670,6 +871,7 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
           const allPages = container.querySelectorAll('.docx-a4-page');
           console.log('All pages in DOM:', allPages.length);
           allPages.forEach((page, idx) => {
+            void page.offsetHeight;
             console.log('Page', (idx + 1), ':', page.id, 'height:', page.scrollHeight, 'px');
           });
           
