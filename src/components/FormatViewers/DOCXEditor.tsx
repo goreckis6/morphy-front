@@ -25,6 +25,7 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
   const [isPresentationMode, setIsPresentationMode] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isPagesSidebarOpen, setIsPagesSidebarOpen] = useState(true);
+  const [pageThumbnails, setPageThumbnails] = useState<Map<string, string>>(new Map()); // key: "fileIndex-pageNum"
   const fileInputRef = useRef<HTMLInputElement>(null);
   const viewerRef = useRef<HTMLDivElement>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
@@ -1064,6 +1065,55 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
     };
   }, [currentDocxHtml, currentTotalPages]);
 
+  // Generate page thumbnails - store page content for preview
+  useEffect(() => {
+    if (!iframeRef.current || currentTotalPages <= 1 || !currentDocxHtml) return;
+
+    const generateThumbnails = () => {
+      try {
+        const iframe = iframeRef.current;
+        if (!iframe?.contentWindow) return;
+
+        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+        if (!iframeDoc) return;
+
+        const container = iframeDoc.querySelector('.docx-a4-container');
+        if (!container) return;
+
+        const pages = container.querySelectorAll('.docx-a4-page');
+        const newThumbnails = new Map<string, string>();
+
+        pages.forEach((page, index) => {
+          const pageNum = index + 1;
+          const key = `${currentFileIndex}-${pageNum}`;
+          
+          // Store the page HTML content for preview
+          // We'll render it directly in the thumbnail with CSS scaling
+          newThumbnails.set(key, page.innerHTML);
+        });
+
+        setPageThumbnails(prev => {
+          const updated = new Map(prev);
+          // Only update thumbnails for current file
+          Array.from({ length: currentTotalPages }, (_, i) => i + 1).forEach(pageNum => {
+            const key = `${currentFileIndex}-${pageNum}`;
+            const content = newThumbnails.get(key);
+            if (content) {
+              updated.set(key, content);
+            }
+          });
+          return updated;
+        });
+      } catch (error) {
+        console.error('Error generating thumbnails:', error);
+      }
+    };
+
+    // Wait for pages to be fully rendered and split
+    const timer = setTimeout(generateThumbnails, 2000);
+    return () => clearTimeout(timer);
+  }, [currentFileIndex, currentTotalPages, currentDocxHtml]);
+
   // Auto-scroll sidebar to show active page
   useEffect(() => {
     if (currentPage > 0 && isPagesSidebarOpen) {
@@ -1183,9 +1233,26 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
             className="hidden"
           />
 
+          {/* File List Header */}
+          <div className="px-2 sm:px-3 py-2 border-b border-gray-100 bg-gray-50">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                {t('viewers.docx.editor.files', 'Files')}
+              </span>
+              <span className="text-xs text-gray-500">
+                {filteredFiles.length} / {files.length}
+              </span>
+            </div>
+          </div>
+
           {/* File List */}
-          <div className="flex-1 overflow-y-auto p-2 sm:p-3 space-y-1.5 sm:space-y-2">
-            {filteredFiles.map((file, fileIndex) => {
+          <div className="flex-1 overflow-y-auto p-2 sm:p-3 space-y-1.5 sm:space-y-2 min-h-0">
+            {filteredFiles.length === 0 ? (
+              <div className="text-center py-8 text-gray-500 text-sm">
+                {t('viewers.docx.editor.no_files', 'No files found')}
+              </div>
+            ) : (
+              filteredFiles.map((file, fileIndex) => {
               const actualIndex = files.indexOf(file);
               const isSelected = actualIndex === selectedIndex;
               return (
@@ -1220,15 +1287,16 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
                         e.stopPropagation();
                         handleRemoveFile(actualIndex);
                       }}
-                      className="opacity-0 group-hover:opacity-100 transition-opacity p-1 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded flex-shrink-0"
+                      className="opacity-60 group-hover:opacity-100 transition-opacity p-1.5 text-gray-500 hover:text-red-600 hover:bg-red-50 rounded flex-shrink-0 border border-transparent hover:border-red-200"
                       title={t('viewers.docx.editor.remove_file', 'Remove file')}
                     >
-                      <X className="w-4 h-4" />
+                      <X className="w-4 h-4 sm:w-5 sm:h-5" />
                     </button>
                   )}
                 </div>
               );
-            })}
+              })
+            )}
           </div>
         </aside>
 
@@ -1253,6 +1321,8 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
             <div className="flex-1 overflow-y-auto scroller p-2 space-y-2" id="pages-sidebar">
               {Array.from({ length: currentTotalPages }, (_, i) => i + 1).map((pageNum) => {
                 const isActive = currentPage === pageNum;
+                const thumbnailKey = `${currentFileIndex}-${pageNum}`;
+                const thumbnail = pageThumbnails.get(thumbnailKey);
                 return (
                   <button
                     key={pageNum}
@@ -1260,35 +1330,48 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
                       handlePageClick(pageNum);
                       setIsPagesSidebarOpen(true);
                     }}
-                    className={`w-full p-2 rounded-lg border-2 transition-all text-left group ${
+                    className={`w-full p-2 rounded-lg border-2 transition-all text-left group relative ${
                       isActive
                         ? 'border-purple-500 bg-purple-50 shadow-md ring-2 ring-purple-200 scale-105'
                         : 'border-gray-200 hover:border-purple-300 hover:bg-purple-50/50 hover:shadow-sm'
                     }`}
                     id={`page-thumb-${pageNum}`}
                   >
-                    <div className="flex items-center justify-center w-full h-24 sm:h-32 bg-gradient-to-br from-gray-50 to-gray-100 rounded mb-2 overflow-hidden relative border border-gray-200">
-                      <span className={`absolute top-1 left-1 text-xs px-2 py-1 rounded font-bold z-10 ${
+                    <div className="flex items-center justify-center w-full h-24 sm:h-32 bg-white rounded mb-2 overflow-hidden relative border border-gray-200 shadow-sm">
+                      <span className={`absolute top-1 left-1 text-xs px-1.5 py-0.5 rounded font-bold z-10 ${
                         isActive 
                           ? 'bg-purple-600 text-white shadow-lg' 
-                          : 'bg-gray-700/80 text-white group-hover:bg-purple-600'
+                          : 'bg-gray-700/90 text-white group-hover:bg-purple-600'
                       }`}>
                         {pageNum}
                       </span>
-                      <div className="text-center">
-                        <div className={`text-2xl font-bold mb-1 ${
-                          isActive ? 'text-purple-600' : 'text-gray-400'
-                        }`}>
-                          {pageNum}
+                      {thumbnail ? (
+                        <div 
+                          className="w-full h-full overflow-hidden"
+                          style={{ 
+                            transform: 'scale(0.12)',
+                            transformOrigin: 'top left',
+                            width: '833%',
+                            height: '833%',
+                            pointerEvents: 'none'
+                          }}
+                          dangerouslySetInnerHTML={{ __html: thumbnail }}
+                        />
+                      ) : (
+                        <div className="text-center w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100">
+                          <div>
+                            <div className={`text-xl font-bold mb-1 ${
+                              isActive ? 'text-purple-600' : 'text-gray-400'
+                            }`}>
+                              {pageNum}
+                            </div>
+                            <div className="text-xs text-gray-500">
+                              {t('viewers.docx.editor.page', 'Page')}
+                            </div>
+                          </div>
                         </div>
-                        <div className="text-xs text-gray-500">
-                          {t('viewers.docx.editor.page', 'Page')}
-                        </div>
-                      </div>
+                      )}
                     </div>
-                    {isActive && (
-                      <div className="absolute bottom-0 left-0 right-0 h-1 bg-purple-500"></div>
-                    )}
                     <p className={`text-xs text-center font-medium mt-1 ${
                       isActive ? 'text-purple-700 font-bold' : 'text-gray-600'
                     }`}>
