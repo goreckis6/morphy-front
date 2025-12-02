@@ -231,75 +231,75 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
 '  <title>DOCX Preview</title>\n';
 
             // Add A4 page styling (like Microsoft Word)
-            processedHtml += '\n  <style>\n';
-    * {
-      box-sizing: border-box;
-    }
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: #e5e5e5;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      overflow-x: hidden;
-    }
-    .docx-a4-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-      gap: 20px;
-      min-height: 100vh;
-      background: #e5e5e5;
-      width: 100%;
-    }
-    /* A4 Page Format - 210mm x 297mm */
-    .docx-a4-page {
-      width: 210mm;
-      min-height: 297mm;
-      background: white;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-      margin: 0 auto 20px;
-      padding: 25.4mm 31.7mm;
-      position: relative;
-      page-break-after: always;
-      break-after: page;
-      display: block;
-      overflow: visible;
-      box-sizing: border-box;
-    }
-    .docx-a4-page > * {
-      margin: 0 0 1em 0;
-    }
-    .docx-a4-page > *:last-child {
-      margin-bottom: 0;
-    }
-    /* Hide any existing toolbars or controls */
-    .toolbar, .header-bar, [class*="toolbar"], [class*="header"], 
-    [class*="control"], [class*="menu"] {
-      display: none !important;
-    }
-    /* Ensure text is readable */
-    p, div, span, h1, h2, h3, h4, h5, h6, li, td, th {
-      color: #000 !important;
-    }
-    /* Table styling */
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      margin: 10px 0;
-    }
-    table td, table th {
-      border: 1px solid #ddd;
-      padding: 8px;
-    }
-  </style>\n' +
+            processedHtml += '\n  <style>\n' +
+'    * {\n' +
+'      box-sizing: border-box;\n' +
+'    }\n' +
+'    html, body {\n' +
+'      margin: 0;\n' +
+'      padding: 0;\n' +
+'      background: #e5e5e5;\n' +
+'      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;\n' +
+'      overflow-x: hidden;\n' +
+'    }\n' +
+'    .docx-a4-container {\n' +
+'      display: flex;\n' +
+'      flex-direction: column;\n' +
+'      align-items: center;\n' +
+'      padding: 20px;\n' +
+'      gap: 20px;\n' +
+'      min-height: 100vh;\n' +
+'      background: #e5e5e5;\n' +
+'      width: 100%;\n' +
+'    }\n' +
+'    /* A4 Page Format - 210mm x 297mm */\n' +
+'    .docx-a4-page {\n' +
+'      width: 210mm;\n' +
+'      min-height: 297mm;\n' +
+'      background: white;\n' +
+'      box-shadow: 0 2px 8px rgba(0,0,0,0.15);\n' +
+'      margin: 0 auto 20px;\n' +
+'      padding: 25.4mm 31.7mm;\n' +
+'      position: relative;\n' +
+'      page-break-after: always;\n' +
+'      break-after: page;\n' +
+'      display: block;\n' +
+'      overflow: visible;\n' +
+'      box-sizing: border-box;\n' +
+'    }\n' +
+'    .docx-a4-page > * {\n' +
+'      margin: 0 0 1em 0;\n' +
+'    }\n' +
+'    .docx-a4-page > *:last-child {\n' +
+'      margin-bottom: 0;\n' +
+'    }\n' +
+'    /* Hide any existing toolbars or controls */\n' +
+'    .toolbar, .header-bar, [class*="toolbar"], [class*="header"], \n' +
+'    [class*="control"], [class*="menu"] {\n' +
+'      display: none !important;\n' +
+'    }\n' +
+'    /* Ensure text is readable */\n' +
+'    p, div, span, h1, h2, h3, h4, h5, h6, li, td, th {\n' +
+'      color: #000 !important;\n' +
+'    }\n' +
+'    /* Table styling */\n' +
+'    table {\n' +
+'      border-collapse: collapse;\n' +
+'      width: 100%;\n' +
+'      margin: 10px 0;\n' +
+'    }\n' +
+'    table td, table th {\n' +
+'      border: 1px solid #ddd;\n' +
+'      padding: 8px;\n' +
+'    }\n' +
+'  </style>\n' +
 '</head>\n' +
 '<body>\n' +
 '  ' + wrappedContent + '\n';
             
             // Add JavaScript to split content into multiple A4 pages
-            processedHtml += '\n  <script>\n';
-    (function() {
+            // Use template literal for the JavaScript code
+            const jsCode = `(function() {
       let hasSplit = false; // Flag to prevent multiple splits
       let originalContent = null; // Store original content
       
@@ -507,7 +507,6 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
       
       // Also try on window load
       window.addEventListener('load', function() {
-      window.addEventListener('load', function() {
         if (!hasSplit && runCount < maxRuns) {
           setTimeout(() => {
             runCount++;
@@ -540,8 +539,9 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
       
       // Disconnect observer after 10 seconds
       setTimeout(() => observer.disconnect(), 10000);
-    })();\n' +
-'  </script>\n' +
+    })();`;
+            
+            processedHtml += '\n  <script>\n' + jsCode + '\n  </script>\n' +
 '</body>\n' +
 '</html>';
 
