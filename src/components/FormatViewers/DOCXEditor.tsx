@@ -110,16 +110,30 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
     // Prevent duplicate loading
     if (files.length === 0) return;
     
-    const htmls = new Map<number, string>();
+    console.log('Files changed, checking which need loading. Total files:', files.length);
+    console.log('Already loaded files:', Array.from(docxHtml.keys()));
+    
+    const htmls = new Map(docxHtml); // Start with existing HTMLs
     const loading = new Map<number, boolean>();
     
-    // Use Promise.all to handle async operations properly
-    const loadPromises = files.map(async (file, index) => {
-      // Skip if already loaded or currently loading
-      if (docxHtml.has(index) || loadingRef.current.has(index)) {
-        console.log(`File ${index} already loaded or loading, skipping`);
-        return;
+    // Find files that need loading
+    const filesToLoad: number[] = [];
+    files.forEach((file, index) => {
+      if (!docxHtml.has(index) && !loadingRef.current.has(index)) {
+        filesToLoad.push(index);
       }
+    });
+    
+    console.log('Files to load:', filesToLoad);
+    
+    if (filesToLoad.length === 0) {
+      console.log('No new files to load');
+      return;
+    }
+    
+    // Use Promise.all to handle async operations properly
+    const loadPromises = filesToLoad.map(async (index) => {
+      const file = files[index];
       
       // Mark as loading
       loadingRef.current.add(index);
@@ -348,14 +362,30 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
           
           // If no block elements found, use direct children
           if (allElements.length === 0) {
-            allElements.push(...Array.from(tempDiv.children));
+            const directChildren = Array.from(tempDiv.children);
+            if (directChildren.length > 0) {
+              allElements.push(...directChildren);
+            }
           }
           
-          // If still empty, create a wrapper
+          // If still empty, try to parse the HTML and create elements
           if (allElements.length === 0) {
-            const wrapper = document.createElement('div');
-            wrapper.innerHTML = originalContent;
-            allElements.push(wrapper);
+            // Try to find any elements in the content
+            const tempDiv2 = document.createElement('div');
+            tempDiv2.innerHTML = originalContent;
+            const allNodes = tempDiv2.querySelectorAll('*');
+            
+            if (allNodes.length > 0) {
+              // Get top-level elements
+              Array.from(tempDiv2.children).forEach(child => {
+                allElements.push(child);
+              });
+            } else {
+              // Last resort: create a wrapper with all content
+              const wrapper = document.createElement('div');
+              wrapper.innerHTML = originalContent;
+              allElements.push(wrapper);
+            }
           }
           
           // Clear first page
@@ -368,16 +398,30 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
           let pageNum = 1;
           
           // Distribute elements across pages
-          allElements.forEach((element) => {
-            // Measure element height
+          allElements.forEach((element, elemIndex) => {
+            // Clone element first to measure it in the page context
+            const cloned = element.cloneNode(true);
+            
+            // Temporarily add to current page to measure
+            currentPage.appendChild(cloned);
+            void currentPage.offsetHeight; // Force layout
+            
+            // Measure the actual height after adding to page
+            const paddingPx = 25.4 * 2 * 3.779527559; // mm to px
+            const pageContentHeight = currentPage.scrollHeight - paddingPx;
             const elementHeight = Math.max(
-              element.offsetHeight || 0,
-              element.scrollHeight || 0,
-              30 // minimum
+              cloned.offsetHeight || 0,
+              cloned.scrollHeight || 0,
+              20 // minimum
             );
             
             // Check if we need a new page
-            if (currentHeight + elementHeight > maxContentHeight && currentHeight > 0) {
+            // Use a buffer to prevent elements from being cut off
+            if (pageContentHeight > maxContentHeight && currentHeight > 0) {
+              // Remove the element from current page
+              currentPage.removeChild(cloned);
+              
+              // Create new page
               pageNum++;
               currentPage = document.createElement('div');
               currentPage.className = 'docx-a4-page';
@@ -385,17 +429,15 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
               currentPage.setAttribute('data-page', pageNum.toString());
               currentPage.style.cssText = 'width: ' + pageWidth + 'mm; min-height: 297mm; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.15); margin: 0 auto 20px; padding: 25.4mm 31.7mm; position: relative; page-break-after: always; display: block; box-sizing: border-box;';
               container.appendChild(currentPage);
-              currentHeight = 0;
+              
+              // Add element to new page
+              currentPage.appendChild(cloned);
+              void currentPage.offsetHeight;
+              currentHeight = currentPage.scrollHeight - paddingPx;
+            } else {
+              // Element fits, keep it in current page
+              currentHeight = pageContentHeight;
             }
-            
-            // Clone and add element
-            const cloned = element.cloneNode(true);
-            currentPage.appendChild(cloned);
-            
-            // Update height
-            void currentPage.offsetHeight;
-            const paddingPx = 25.4 * 2 * 3.779527559; // mm to px
-            currentHeight = currentPage.scrollHeight - paddingPx;
           });
           
           // Clean up
@@ -403,9 +445,55 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
             document.body.removeChild(tempDiv);
           }
           
+          // Final check: ensure all content is distributed
+          // If we still have only one page but content is tall, force split
+          const pages = container.querySelectorAll('.docx-a4-page');
+          if (pages.length === 1) {
+            const singlePage = pages[0];
+            void singlePage.offsetHeight;
+            const pageContentHeight = singlePage.scrollHeight;
+            const paddingPx = 25.4 * 2 * 3.779527559;
+            const actualContentHeight = pageContentHeight - paddingPx;
+            
+            // If content is much taller than one page, split it
+            if (actualContentHeight > maxContentHeight * 1.5) {
+              const estimatedPages = Math.ceil(actualContentHeight / maxContentHeight);
+              console.log('Content too tall, forcing split into', estimatedPages, 'pages');
+              
+              // Re-split by dividing elements evenly
+              if (allElements.length > 0) {
+                const elementsPerPage = Math.ceil(allElements.length / estimatedPages);
+                
+                // Clear first page
+                singlePage.innerHTML = '';
+                
+                // Distribute elements across pages
+                allElements.forEach((element, elemIndex) => {
+                  const targetPageIndex = Math.floor(elemIndex / elementsPerPage);
+                  let targetPage = pages[targetPageIndex];
+                  
+                  if (!targetPage && targetPageIndex > 0) {
+                    // Create new page
+                    targetPage = document.createElement('div');
+                    targetPage.className = 'docx-a4-page';
+                    targetPage.id = 'docx-page-' + (targetPageIndex + 1);
+                    targetPage.setAttribute('data-page', (targetPageIndex + 1).toString());
+                    targetPage.style.cssText = 'width: ' + pageWidth + 'mm; min-height: 297mm; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.15); margin: 0 auto 20px; padding: 25.4mm 31.7mm; position: relative; page-break-after: always; display: block; box-sizing: border-box;';
+                    container.appendChild(targetPage);
+                  }
+                  
+                  if (targetPage) {
+                    targetPage.appendChild(element.cloneNode(true));
+                  }
+                });
+              }
+            }
+          }
+          
           // Update page count
           const totalPages = container.querySelectorAll('.docx-a4-page').length;
           container.setAttribute('data-total-pages', totalPages.toString());
+          console.log('Final page count:', totalPages);
           
           // Ensure all pages have IDs
           container.querySelectorAll('.docx-a4-page').forEach((page, idx) => {
@@ -842,8 +930,9 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
                   setTotalPages(prev => {
                     const newMap = new Map(prev);
                     const currentCount = newMap.get(currentFileIndex) || 1;
-                    // Only update if we got a better count
-                    if (pageCount > currentCount || currentCount === 1) {
+                    // Always update if count is different and valid
+                    if (pageCount !== currentCount && pageCount > 0) {
+                      console.log(`Updating page count for file ${currentFileIndex}: ${currentCount} -> ${pageCount}`);
                       newMap.set(currentFileIndex, pageCount);
                       return newMap;
                     }
@@ -869,12 +958,53 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
         iframe.contentWindow.addEventListener('load', checkPagesAfterLoad);
         iframe.contentWindow.addEventListener('docx-pages-split', ((e: CustomEvent) => {
           const pageCount = e.detail?.totalPages || 1;
+          console.log('Received docx-pages-split event:', pageCount);
           setTotalPages(prev => {
             const newMap = new Map(prev);
             newMap.set(currentFileIndex, pageCount);
             return newMap;
           });
         }) as EventListener);
+        
+        // Also set up a continuous checker for page count
+        const continuousChecker = setInterval(() => {
+          try {
+            const doc = iframe.contentDocument || iframe.contentWindow?.document;
+            if (doc) {
+              const container = doc.querySelector('.docx-a4-container');
+              if (container) {
+                const totalPagesAttr = container.getAttribute('data-total-pages');
+                const a4Pages = doc.querySelectorAll('.docx-a4-page').length;
+                
+                if (a4Pages > 0) {
+                  const pageCount = totalPagesAttr ? parseInt(totalPagesAttr, 10) : a4Pages;
+                  
+                  setTotalPages(prev => {
+                    const newMap = new Map(prev);
+                    const currentCount = newMap.get(currentFileIndex) || 1;
+                    // Always update if count is different and valid
+                    if (pageCount !== currentCount && pageCount > 0) {
+                      console.log(`Continuous check: Page count updated for file ${currentFileIndex}: ${currentCount} -> ${pageCount}`);
+                      newMap.set(currentFileIndex, pageCount);
+                      return newMap;
+                    }
+                    return prev;
+                  });
+                  
+                  // Stop checking if we have a stable count
+                  if (a4Pages > 1 && totalPagesAttr) {
+                    clearInterval(continuousChecker);
+                  }
+                }
+              }
+            }
+          } catch (e) {
+            // Cross-origin error
+          }
+        }, 1000);
+        
+        // Clean up interval after 30 seconds
+        setTimeout(() => clearInterval(continuousChecker), 30000);
       }
     }
   }, [currentDocxHtml, selectedIndex, currentFileIndex]);
@@ -1301,15 +1431,20 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
         </aside>
 
         {/* Pages Sidebar */}
-        {currentTotalPages > 1 && isPagesSidebarOpen && (
+        {currentTotalPages >= 1 && isPagesSidebarOpen && (
           <aside 
             id="pages-sidebar"
             className="w-24 sm:w-32 bg-white border-r border-gray-200 flex flex-col z-20 shadow-[4px_0_24px_rgba(0,0,0,0.02)]"
           >
             <div className="px-3 py-2 border-b border-gray-200 flex items-center justify-between bg-gray-50">
-              <span className="text-xs font-semibold text-gray-700 uppercase tracking-wider">
-                {t('viewers.docx.editor.pages', 'Pages')}
-              </span>
+              <div className="flex flex-col">
+                <span className="text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                  {t('viewers.docx.editor.pages', 'Pages')}
+                </span>
+                <span className="text-xs text-gray-500 mt-0.5">
+                  {currentPage} / {currentTotalPages}
+                </span>
+              </div>
               <button
                 onClick={() => setIsPagesSidebarOpen(false)}
                 className="p-1 text-gray-500 hover:text-gray-700 hover:bg-gray-200 rounded transition-colors"
