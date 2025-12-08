@@ -910,6 +910,20 @@ function App() {
         <Route path="/th/convert/doc-to-mobi" element={<DOCToMOBIConverter />} />
         <Route path="/ja/convert/doc-to-mobi" element={<DOCToMOBIConverter />} />
         <Route path="/zh/convert/doc-to-mobi" element={<DOCToMOBIConverter />} />
+        <Route path="/id/convert/doc-to-odt" element={<DOCToODTConverter />} />
+        <Route path="/sv/convert/doc-to-odt" element={<DOCToODTConverter />} />
+        <Route path="/es/convert/doc-to-odt" element={<DOCToODTConverter />} />
+        <Route path="/fr/convert/doc-to-odt" element={<DOCToODTConverter />} />
+        <Route path="/it/convert/doc-to-odt" element={<DOCToODTConverter />} />
+        <Route path="/nl/convert/doc-to-odt" element={<DOCToODTConverter />} />
+        <Route path="/pt/convert/doc-to-odt" element={<DOCToODTConverter />} />
+        <Route path="/vi/convert/doc-to-odt" element={<DOCToODTConverter />} />
+        <Route path="/tr/convert/doc-to-odt" element={<DOCToODTConverter />} />
+        <Route path="/ru/convert/doc-to-odt" element={<DOCToODTConverter />} />
+        <Route path="/ar/convert/doc-to-odt" element={<DOCToODTConverter />} />
+        <Route path="/th/convert/doc-to-odt" element={<DOCToODTConverter />} />
+        <Route path="/ja/convert/doc-to-odt" element={<DOCToODTConverter />} />
+        <Route path="/zh/convert/doc-to-odt" element={<DOCToODTConverter />} />
         <Route path="/de/convert/doc-to-epub" element={<DOCToEPUBConverter />} />
         <Route path="/de/convert/doc-to-mobi" element={<DOCToMOBIConverter />} />
         <Route path="/de/convert/doc-to-odt" element={<DOCToODTConverter />} />
