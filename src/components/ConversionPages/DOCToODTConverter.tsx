@@ -18,6 +18,7 @@ import {
   File,
   BarChart3
 } from 'lucide-react';
+import { useFileValidation } from '../../hooks/useFileValidation';
 import { API_BASE_URL } from '../../services/api';
 
 export const DOCToODTConverter: React.FC = () => {
@@ -34,13 +35,34 @@ export const DOCToODTConverter: React.FC = () => {
   const [batchResults, setBatchResults] = useState<Array<{ file: File; blob: Blob }>>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  // Use shared validation hook
+  const {
+    validateSingleFile,
+    validateBatchFiles,
+    getBatchSizeDisplay,
+    formatFileSize,
+    clearValidationError
+  } = useFileValidation();
+
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
       if (file.name.toLowerCase().endsWith('.doc')) {
+        const validation = validateSingleFile(file);
+        if (!validation.isValid) {
+          setError(validation.error?.message || 'File validation failed');
+          setSelectedFile(null);
+          setPreviewUrl(null);
+          if (event.target) {
+            event.target.value = '';
+          }
+          return;
+        }
         setSelectedFile(file);
         setError(null);
         setPreviewUrl(URL.createObjectURL(file));
+        setConvertedFile(null);
+        clearValidationError();
       } else {
         setError('Please select a valid DOC file');
       }
@@ -52,8 +74,21 @@ export const DOCToODTConverter: React.FC = () => {
     const docFiles = files.filter(file => 
       file.name.toLowerCase().endsWith('.doc')
     );
+    
+    const validation = validateBatchFiles(docFiles);
+    if (!validation.isValid) {
+      setError(validation.error?.message || 'Batch validation failed.');
+      setBatchFiles([]);
+      if (fileInputRef.current) fileInputRef.current.value = '';
+      return;
+    }
+    
     setBatchFiles(docFiles);
     setError(null);
+    setBatchResults([]);
+    setBatchConverted(false);
+    setConvertedFile(null);
+    clearValidationError();
   };
 
   const handleConvert = async (file: File): Promise<Blob> => {
@@ -161,7 +196,7 @@ export const DOCToODTConverter: React.FC = () => {
               // Download the converted file
               const downloadResponse = await fetch(`${API_BASE_URL}${fileResult.downloadPath}`);
               blob = await downloadResponse.blob();
-      }
+            }
             
             results.push({ file: originalFile, blob });
           } catch (downloadError) {
@@ -178,12 +213,16 @@ export const DOCToODTConverter: React.FC = () => {
         throw new Error('Batch conversion failed: No files were successfully converted.');
       }
       
-      if (failedFiles.length > 0) {
-        setError(`Batch conversion completed with errors. Failed to convert: ${failedFiles.join(', ')}`);
-      }
-      
+      // Set batch results and mark as converted
       setBatchResults(results);
       setBatchConverted(true);
+      
+      // Show error message if some files failed, but don't throw (partial success)
+      if (failedFiles.length > 0) {
+        setError(`Batch conversion completed with errors. Failed to convert: ${failedFiles.join(', ')}`);
+      } else {
+        setError(null);
+      }
     } catch (err) {
       console.error('DOC to ODT batch conversion error:', err);
       setError(err instanceof Error ? err.message : 'Batch conversion failed. Please try again.');
@@ -221,6 +260,11 @@ export const DOCToODTConverter: React.FC = () => {
   };
 
   const resetForm = () => {
+    // Clean up any blob URLs to prevent memory leaks
+    if (previewUrl) {
+      URL.revokeObjectURL(previewUrl);
+    }
+    
     setSelectedFile(null);
     setConvertedFile(null);
     setError(null);
@@ -229,6 +273,7 @@ export const DOCToODTConverter: React.FC = () => {
     setBatchConverted(false);
     setBatchResults([]);
     if (fileInputRef.current) fileInputRef.current.value = '';
+    clearValidationError();
   };
 
   return (
@@ -309,12 +354,22 @@ export const DOCToODTConverter: React.FC = () => {
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   {batchMode ? 'Upload Multiple DOC Files' : 'Upload DOC File'}
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-2">
                   {batchMode 
                     ? 'Select multiple DOC files to convert them all at once' 
                     : 'Drag and drop your DOC file here or click to browse'
                   }
                 </p>
+                {!batchMode && (
+                  <p className="text-sm text-gray-500 mb-4">
+                    Single file limit: 100.00 MB per file.
+                  </p>
+                )}
+                {batchMode && (
+                  <p className="text-sm text-gray-500 mb-4">
+                    Batch conversion supports up to 20 files, 100.00 MB per file, 100.00 MB total.
+                  </p>
+                )}
                 <input
                   ref={fileInputRef}
                   type="file"
@@ -340,7 +395,7 @@ export const DOCToODTConverter: React.FC = () => {
                       <File className="w-12 h-12 text-gray-400" />
                     </div>
                     <p className="text-sm text-gray-600 mt-2 text-center">
-                      {selectedFile?.name} ({(selectedFile?.size || 0) / 1024} KB)
+                      <strong>{selectedFile?.name}</strong> ({formatFileSize(selectedFile?.size || 0)})
                     </p>
                   </div>
                 </div>
@@ -349,15 +404,38 @@ export const DOCToODTConverter: React.FC = () => {
               {/* Batch Files List */}
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Selected Files ({batchFiles.length})</h4>
-                  <div className="space-y-2 max-h-40 overflow-y-auto">
-                    {batchFiles.map((file, index) => (
-                      <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
-                        <span className="text-sm font-medium">{file.name}</span>
-                        <span className="text-xs text-gray-500">{(file.size / 1024).toFixed(1)} KB</span>
-                      </div>
-                    ))}
-                  </div>
+                  {(() => {
+                    const totalSize = batchFiles.reduce((sum: number, f: File) => sum + f.size, 0);
+                    const sizeDisplay = getBatchSizeDisplay(totalSize);
+                    return (
+                      <>
+                        <div className="flex items-center justify-between mb-4">
+                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                          <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
+                            Total size: {sizeDisplay.text}
+                          </div>
+                        </div>
+                        {sizeDisplay.isWarning && (
+                          <div className="mb-4 p-3 bg-orange-50 border border-orange-200 rounded-lg">
+                            <div className="flex items-center">
+                              <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
+                              <span className="text-sm text-orange-700">
+                                Total file size is approaching the limit. Please reduce the number of files or file sizes.
+                              </span>
+                            </div>
+                          </div>
+                        )}
+                        <div className="space-y-2 max-h-40 overflow-y-auto">
+                          {batchFiles.map((file: File, index: number) => (
+                            <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
+                              <span className="text-sm font-medium">{file.name}</span>
+                              <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </>
+                    );
+                  })()}
                 </div>
               )}
 
@@ -416,6 +494,50 @@ export const DOCToODTConverter: React.FC = () => {
                       Convert Another
                     </button>
                   </div>
+                </div>
+              )}
+
+              {/* Batch Conversion Success Message */}
+              {batchConverted && batchMode && batchResults.length > 0 && (
+                <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
+                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
+                  </div>
+                  <p className="text-green-700 mb-4">
+                    Successfully converted {batchResults.length} file{batchResults.length !== 1 ? 's' : ''} to ODT format.
+                  </p>
+                  <div className="space-y-2 mb-4 max-h-60 overflow-y-auto">
+                    {batchResults.map((result: { file: File; blob: Blob }, index: number) => (
+                      <div key={index} className="flex flex-col sm:flex-row items-start sm:items-center justify-between bg-white rounded-lg p-3 border border-green-200 gap-2">
+                        <div className="flex items-center gap-3 flex-1 min-w-0">
+                          <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                          <div className="min-w-0 flex-1">
+                            <p className="text-sm font-medium text-gray-900 break-words">
+                              {result.file.name.replace(/\.doc$/i, '.odt')}
+                            </p>
+                            <p className="text-xs text-gray-500">
+                              {formatFileSize(result.blob.size)}
+                            </p>
+                          </div>
+                        </div>
+                        <button
+                          onClick={() => handleBatchDownload(result.file, result.blob)}
+                          className="w-full sm:w-auto bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
+                        >
+                          <Download className="w-4 h-4 mr-1" />
+                          Download
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                  <button
+                    onClick={resetForm}
+                    className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
+                  >
+                    <RefreshCw className="w-5 h-5 mr-2" />
+                    Convert More Files
+                  </button>
                 </div>
               )}
             </div>
