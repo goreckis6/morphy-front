@@ -283,9 +283,16 @@ export const LanguageSwitcher: React.FC = () => {
   const menuRef = useRef<HTMLDivElement>(null);
 
   const changeLanguage = (lng: string) => {
-    const currentPath = window.location.pathname;
-    const newUrl = getLocalizedUrl(currentPath, lng);
-    window.location.href = newUrl;
+    // First change i18n language
+    i18n.changeLanguage(lng).then(() => {
+      // Then navigate to the localized URL
+      const currentPath = window.location.pathname;
+      const newUrl = getLocalizedUrl(currentPath, lng);
+      window.history.pushState({}, '', newUrl);
+      
+      // Trigger a custom event so the app knows the URL changed
+      window.dispatchEvent(new PopStateEvent('popstate'));
+    });
   };
 
   const currentLanguage = useMemo(
