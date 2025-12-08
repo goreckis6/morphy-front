@@ -882,6 +882,20 @@ function App() {
         <Route path="/th/convert/doc-to-csv" element={<DOCToCSVConverter />} />
         <Route path="/ja/convert/doc-to-csv" element={<DOCToCSVConverter />} />
         <Route path="/zh/convert/doc-to-csv" element={<DOCToCSVConverter />} />
+        <Route path="/id/convert/doc-to-epub" element={<DOCToEPUBConverter />} />
+        <Route path="/sv/convert/doc-to-epub" element={<DOCToEPUBConverter />} />
+        <Route path="/es/convert/doc-to-epub" element={<DOCToEPUBConverter />} />
+        <Route path="/fr/convert/doc-to-epub" element={<DOCToEPUBConverter />} />
+        <Route path="/it/convert/doc-to-epub" element={<DOCToEPUBConverter />} />
+        <Route path="/nl/convert/doc-to-epub" element={<DOCToEPUBConverter />} />
+        <Route path="/pt/convert/doc-to-epub" element={<DOCToEPUBConverter />} />
+        <Route path="/vi/convert/doc-to-epub" element={<DOCToEPUBConverter />} />
+        <Route path="/tr/convert/doc-to-epub" element={<DOCToEPUBConverter />} />
+        <Route path="/ru/convert/doc-to-epub" element={<DOCToEPUBConverter />} />
+        <Route path="/ar/convert/doc-to-epub" element={<DOCToEPUBConverter />} />
+        <Route path="/th/convert/doc-to-epub" element={<DOCToEPUBConverter />} />
+        <Route path="/ja/convert/doc-to-epub" element={<DOCToEPUBConverter />} />
+        <Route path="/zh/convert/doc-to-epub" element={<DOCToEPUBConverter />} />
         <Route path="/de/convert/doc-to-epub" element={<DOCToEPUBConverter />} />
         <Route path="/de/convert/doc-to-mobi" element={<DOCToMOBIConverter />} />
         <Route path="/de/convert/doc-to-odt" element={<DOCToODTConverter />} />
