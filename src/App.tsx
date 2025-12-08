@@ -896,6 +896,20 @@ function App() {
         <Route path="/th/convert/doc-to-epub" element={<DOCToEPUBConverter />} />
         <Route path="/ja/convert/doc-to-epub" element={<DOCToEPUBConverter />} />
         <Route path="/zh/convert/doc-to-epub" element={<DOCToEPUBConverter />} />
+        <Route path="/id/convert/doc-to-mobi" element={<DOCToMOBIConverter />} />
+        <Route path="/sv/convert/doc-to-mobi" element={<DOCToMOBIConverter />} />
+        <Route path="/es/convert/doc-to-mobi" element={<DOCToMOBIConverter />} />
+        <Route path="/fr/convert/doc-to-mobi" element={<DOCToMOBIConverter />} />
+        <Route path="/it/convert/doc-to-mobi" element={<DOCToMOBIConverter />} />
+        <Route path="/nl/convert/doc-to-mobi" element={<DOCToMOBIConverter />} />
+        <Route path="/pt/convert/doc-to-mobi" element={<DOCToMOBIConverter />} />
+        <Route path="/vi/convert/doc-to-mobi" element={<DOCToMOBIConverter />} />
+        <Route path="/tr/convert/doc-to-mobi" element={<DOCToMOBIConverter />} />
+        <Route path="/ru/convert/doc-to-mobi" element={<DOCToMOBIConverter />} />
+        <Route path="/ar/convert/doc-to-mobi" element={<DOCToMOBIConverter />} />
+        <Route path="/th/convert/doc-to-mobi" element={<DOCToMOBIConverter />} />
+        <Route path="/ja/convert/doc-to-mobi" element={<DOCToMOBIConverter />} />
+        <Route path="/zh/convert/doc-to-mobi" element={<DOCToMOBIConverter />} />
         <Route path="/de/convert/doc-to-epub" element={<DOCToEPUBConverter />} />
         <Route path="/de/convert/doc-to-mobi" element={<DOCToMOBIConverter />} />
         <Route path="/de/convert/doc-to-odt" element={<DOCToODTConverter />} />
