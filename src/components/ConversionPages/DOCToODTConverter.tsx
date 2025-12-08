@@ -18,6 +18,7 @@ import {
   File,
   BarChart3
 } from 'lucide-react';
+import { API_BASE_URL } from '../../services/api';
 
 export const DOCToODTConverter: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -29,6 +30,8 @@ export const DOCToODTConverter: React.FC = () => {
   const [includeImages, setIncludeImages] = useState(true);
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
+  const [batchConverted, setBatchConverted] = useState(false);
+  const [batchResults, setBatchResults] = useState<Array<{ file: File; blob: Blob }>>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -54,9 +57,38 @@ export const DOCToODTConverter: React.FC = () => {
   };
 
   const handleConvert = async (file: File): Promise<Blob> => {
-    // Mock conversion - in a real implementation, you would parse DOC and generate ODT
-    const odtContent = `Mock ODT content for ${file.name} - Formatting: ${preserveFormatting}, Images: ${includeImages}`;
-    return new Blob([odtContent], { type: 'application/vnd.oasis.opendocument.text' });
+    try {
+      console.log('DOC to ODT: Converting file:', file.name, 'size:', file.size, 'bytes');
+
+      // Use direct fetch since we need to pass custom FormData fields
+      const formData = new FormData();
+      formData.append('file', file);
+      formData.append('preserveFormatting', preserveFormatting.toString());
+      formData.append('includeImages', includeImages.toString());
+
+      const response = await fetch(`${API_BASE_URL}/convert/doc-to-odt/single`, {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({ error: 'Conversion failed' }));
+        // Simplify error message for user
+        const errorMsg = errorData.error || errorData.details || 'Conversion failed';
+        // Remove technical stack traces and show user-friendly message
+        if (errorMsg.includes('stack') || errorMsg.includes('Traceback') || errorMsg.length > 200) {
+          throw new Error('Failed to convert DOC to ODT. Please ensure your file is a valid DOC document.');
+        }
+        throw new Error(errorMsg);
+      }
+
+      const blob = await response.blob();
+      console.log('DOC to ODT: Conversion successful, blob size:', blob.size, 'bytes');
+      return blob;
+    } catch (error) {
+      console.error('DOC to ODT conversion error:', error);
+      throw new Error(error instanceof Error ? error.message : 'Failed to convert DOC to ODT. Please try again.');
+    }
   };
 
   const handleSingleConvert = async () => {
@@ -82,13 +114,79 @@ export const DOCToODTConverter: React.FC = () => {
     setError(null);
     
     try {
-      // Mock batch conversion - process each file
-      for (const file of batchFiles) {
-        await handleConvert(file);
+      console.log('DOC to ODT Batch: Converting', batchFiles.length, 'files');
+
+      // Use direct fetch for batch conversion with custom options
+      const formData = new FormData();
+      batchFiles.forEach(file => formData.append('files', file));
+      formData.append('preserveFormatting', preserveFormatting.toString());
+      formData.append('includeImages', includeImages.toString());
+
+      const response = await fetch(`${API_BASE_URL}/convert/doc-to-odt/batch`, {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({ error: 'Batch conversion failed' }));
+        throw new Error(errorData.error || 'Batch conversion failed');
       }
-      setError(null);
+
+      const result = await response.json();
+
+      console.log('DOC to ODT Batch: Conversion result:', result);
+      
+      if (!result.success) {
+        throw new Error('Batch conversion failed');
+      }
+      
+      // Process batch results
+      const results: Array<{ file: File; blob: Blob }> = [];
+      const failedFiles: string[] = [];
+      
+      for (let i = 0; i < result.results.length; i++) {
+        const fileResult = result.results[i];
+        const originalFile = batchFiles[i];
+        
+        if (fileResult.success && fileResult.downloadPath) {
+          try {
+            let blob: Blob;
+            
+            // Check if downloadPath is a base64 data URL
+            if (fileResult.downloadPath.startsWith('data:')) {
+              // Convert base64 data URL to blob
+              const response = await fetch(fileResult.downloadPath);
+              blob = await response.blob();
+            } else {
+              // Download the converted file
+              const downloadResponse = await fetch(`${API_BASE_URL}${fileResult.downloadPath}`);
+              blob = await downloadResponse.blob();
+            }
+            
+            results.push({ file: originalFile, blob });
+          } catch (downloadError) {
+            console.error(`Error processing file ${i}:`, downloadError);
+            failedFiles.push(originalFile.name);
+          }
+        } else {
+          // Simplified error message
+          failedFiles.push(originalFile.name);
+        }
+      }
+      
+      if (results.length === 0) {
+        throw new Error('Batch conversion failed: No files were successfully converted.');
+      }
+      
+      if (failedFiles.length > 0) {
+        setError(`Batch conversion completed with errors. Failed to convert: ${failedFiles.join(', ')}`);
+      }
+      
+      setBatchResults(results);
+      setBatchConverted(true);
     } catch (err) {
-      setError('Batch conversion failed. Please try again.');
+      console.error('DOC to ODT batch conversion error:', err);
+      setError(err instanceof Error ? err.message : 'Batch conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
     }
@@ -111,12 +209,25 @@ export const DOCToODTConverter: React.FC = () => {
     window.location.href = '/';
   };
 
+  const handleBatchDownload = (file: File, blob: Blob) => {
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = file.name.replace('.doc', '.odt');
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
   const resetForm = () => {
     setSelectedFile(null);
     setConvertedFile(null);
     setError(null);
     setPreviewUrl(null);
     setBatchFiles([]);
+    setBatchConverted(false);
+    setBatchResults([]);
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
