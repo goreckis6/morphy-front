@@ -161,7 +161,7 @@ export const DOCToODTConverter: React.FC = () => {
               // Download the converted file
               const downloadResponse = await fetch(`${API_BASE_URL}${fileResult.downloadPath}`);
               blob = await downloadResponse.blob();
-            }
+      }
             
             results.push({ file: originalFile, blob });
           } catch (downloadError) {
