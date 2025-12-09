@@ -1,5 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
+import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { 
@@ -22,6 +24,7 @@ import { useFileValidation } from '../../hooks/useFileValidation';
 import { API_BASE_URL } from '../../services/api';
 
 export const DOCToODTConverter: React.FC = () => {
+  const { t, i18n } = useTranslation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [isConverting, setIsConverting] = useState(false);
@@ -34,6 +37,9 @@ export const DOCToODTConverter: React.FC = () => {
   const [batchConverted, setBatchConverted] = useState(false);
   const [batchResults, setBatchResults] = useState<Array<{ file: File; blob: Blob }>>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Language synchronization
+  usePathLanguageSync(i18n);
 
   // Use shared validation hook
   const {
@@ -279,8 +285,8 @@ export const DOCToODTConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>DOC to ODT Converter - Convert Word to OpenDocument</title>
-        <meta name="description" content="Convert DOC files to ODT format for LibreOffice. Transform Microsoft Word documents to OpenDocument text format. Free online converter." />
+        <title>{t('doc_to_odt.meta_title')}</title>
+        <meta name="description" content={t('doc_to_odt.meta_description')} />
         <meta name="keywords" content="DOC to ODT, Word to OpenDocument, LibreOffice converter, ODT format, document conversion" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">
@@ -292,23 +298,23 @@ export const DOCToODTConverter: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              DOC to ODT Converter
+              {t('doc_to_odt.title')}
             </h1>
             <p className="text-lg sm:text-xl text-green-100 mb-6 max-w-2xl mx-auto">
-              Convert Microsoft Word DOC files to OpenDocument Text (ODT) format. Transform Word documents into open-source document format for cross-platform compatibility.
+              {t('doc_to_odt.subtitle')}
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-green-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
-                <span>Lightning Fast</span>
+                <span>{t('features.lightning_fast')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
-                <span>100% Secure</span>
+                <span>{t('features.secure')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>No Registration</span>
+                <span>{t('features.no_registration')}</span>
               </div>
             </div>
           </div>
@@ -333,7 +339,7 @@ export const DOCToODTConverter: React.FC = () => {
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  Single File
+                  {t('common.single_file')}
                 </button>
                 <button
                   onClick={() => setBatchMode(true)}
@@ -344,7 +350,7 @@ export const DOCToODTConverter: React.FC = () => {
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  Batch Convert
+                  {t('common.batch_convert')}
                 </button>
               </div>
 
@@ -352,22 +358,22 @@ export const DOCToODTConverter: React.FC = () => {
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-green-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {batchMode ? 'Upload Multiple DOC Files' : 'Upload DOC File'}
+                  {batchMode ? t('doc_to_odt.upload_batch') : t('doc_to_odt.upload_single')}
                 </h3>
                 <p className="text-gray-600 mb-2">
                   {batchMode 
-                    ? 'Select multiple DOC files to convert them all at once' 
-                    : 'Drag and drop your DOC file here or click to browse'
+                    ? t('doc_to_odt.upload_text_batch')
+                    : t('doc_to_odt.upload_text_single')
                   }
                 </p>
                 {!batchMode && (
                   <p className="text-sm text-gray-500 mb-4">
-                    Single file limit: 100.00 MB per file.
+                    {t('doc_to_odt.file_limits_single')}
                   </p>
                 )}
                 {batchMode && (
                   <p className="text-sm text-gray-500 mb-4">
-                    Batch conversion supports up to 20 files, 100.00 MB per file, 100.00 MB total.
+                    {t('doc_to_odt.file_limits_batch')}
                   </p>
                 )}
                 <input
@@ -382,14 +388,14 @@ export const DOCToODTConverter: React.FC = () => {
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors"
                 >
-                  Choose Files
+                  {t('common.choose_files')}
                 </button>
               </div>
 
               {/* File Preview */}
               {previewUrl && !batchMode && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Preview</h4>
+                  <h4 className="text-lg font-semibold mb-4">{t('doc_to_odt.file_info')}</h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
                       <File className="w-12 h-12 text-gray-400" />
@@ -410,9 +416,9 @@ export const DOCToODTConverter: React.FC = () => {
                     return (
                       <>
                         <div className="flex items-center justify-between mb-4">
-                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                          <h4 className="text-lg font-semibold">{t('doc_to_odt.selected_files')} ({batchFiles.length})</h4>
                           <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
-                            Total size: {sizeDisplay.text}
+                            {t('common.total_size', { current: sizeDisplay.text, max: '100.00 MB' })}
                           </div>
                         </div>
                         {sizeDisplay.isWarning && (
@@ -420,7 +426,7 @@ export const DOCToODTConverter: React.FC = () => {
                             <div className="flex items-center">
                               <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
                               <span className="text-sm text-orange-700">
-                                Total file size is approaching the limit. Please reduce the number of files or file sizes.
+                                {t('doc_to_odt.batch_size_warning')}
                               </span>
                             </div>
                           </div>
@@ -457,12 +463,12 @@ export const DOCToODTConverter: React.FC = () => {
                   {isConverting ? (
                     <div className="flex items-center justify-center">
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
-                      Converting...
+                      {t('common.converting')}
                     </div>
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? `Convert ${batchFiles.length} Files` : 'Convert to ODT'}
+                      {batchMode ? t('doc_to_odt.convert_files', { count: batchFiles.length }) : t('doc_to_odt.convert_to_odt')}
                     </div>
                   )}
                 </button>
@@ -473,10 +479,10 @@ export const DOCToODTConverter: React.FC = () => {
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('doc_to_odt.conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    Your DOC file has been successfully converted to ODT format.
+                    {t('doc_to_odt.success_message')}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
@@ -484,14 +490,14 @@ export const DOCToODTConverter: React.FC = () => {
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      Download ODT File
+                      {t('doc_to_odt.download_odt')}
                     </button>
                     <button
                       onClick={resetForm}
                       className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert Another
+                      {t('common.convert_another')}
                     </button>
                   </div>
                 </div>
@@ -502,10 +508,10 @@ export const DOCToODTConverter: React.FC = () => {
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('doc_to_odt.batch_conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    Successfully converted {batchResults.length} file{batchResults.length !== 1 ? 's' : ''} to ODT format.
+                    {t('doc_to_odt.batch_success_message', { count: batchResults.length, total: batchFiles.length })}
                   </p>
                   <div className="space-y-2 mb-4 max-h-60 overflow-y-auto">
                     {batchResults.map((result: { file: File; blob: Blob }, index: number) => (
@@ -526,7 +532,7 @@ export const DOCToODTConverter: React.FC = () => {
                           className="w-full sm:w-auto bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                         >
                           <Download className="w-4 h-4 mr-1" />
-                          Download
+                          {t('common.download')}
                         </button>
                       </div>
                     ))}
@@ -536,7 +542,7 @@ export const DOCToODTConverter: React.FC = () => {
                     className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                   >
                     <RefreshCw className="w-5 h-5 mr-2" />
-                    Convert More Files
+                    {t('common.convert_more_files')}
                   </button>
                 </div>
               )}
@@ -550,7 +556,7 @@ export const DOCToODTConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Settings className="w-5 h-5 mr-2 text-green-600" />
-                ODT Settings
+                {t('doc_to_odt.odt_settings')}
               </h3>
               
               {/* Preserve Formatting */}
@@ -562,8 +568,9 @@ export const DOCToODTConverter: React.FC = () => {
                     onChange={(e) => setPreserveFormatting(e.target.checked)}
                     className="rounded border-gray-300 text-green-600 focus:ring-green-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Preserve document formatting</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('doc_to_odt.preserve_formatting')}</span>
                 </label>
+                <p className="text-xs text-gray-500 mt-1 ml-6">{t('doc_to_odt.preserve_formatting_desc')}</p>
               </div>
 
               {/* Include Images */}
@@ -575,8 +582,9 @@ export const DOCToODTConverter: React.FC = () => {
                     onChange={(e) => setIncludeImages(e.target.checked)}
                     className="rounded border-gray-300 text-green-600 focus:ring-green-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Include images and graphics</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('doc_to_odt.include_images')}</span>
                 </label>
+                <p className="text-xs text-gray-500 mt-1 ml-6">{t('doc_to_odt.include_images_desc')}</p>
               </div>
             </div>
 
@@ -584,16 +592,16 @@ export const DOCToODTConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                Why Choose Our Converter?
+                {t('doc_to_odt.why_choose_title')}
               </h3>
               <div className="space-y-4">
                 {[
-                  "OpenDocument compatibility",
-                  "Cross-platform support",
-                  "LibreOffice integration",
-                  "Open-source format",
-                  "Universal document access",
-                  "Batch processing support"
+                  t('doc_to_odt.feature_1'),
+                  t('doc_to_odt.feature_2'),
+                  t('doc_to_odt.feature_3'),
+                  t('doc_to_odt.feature_4'),
+                  t('doc_to_odt.feature_5'),
+                  t('doc_to_odt.feature_6')
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -607,16 +615,16 @@ export const DOCToODTConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-green-600" />
-                Perfect For
+                {t('doc_to_odt.perfect_for_title')}
               </h3>
               <div className="space-y-3">
                 {[
-                  "Cross-platform document sharing",
-                  "Open-source office suite integration",
-                  "Universal document compatibility",
-                  "Legacy format migration",
-                  "Collaborative document editing",
-                  "Free office software workflows"
+                  t('doc_to_odt.use_case_3'),
+                  t('doc_to_odt.use_case_2'),
+                  t('doc_to_odt.feature_1'),
+                  t('doc_to_odt.use_case_4'),
+                  t('doc_to_odt.use_collaboration'),
+                  t('doc_to_odt.use_case_6')
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></div>
@@ -634,106 +642,106 @@ export const DOCToODTConverter: React.FC = () => {
             onClick={handleBack}
             className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
           >
-            ← Back to Home
+            ← {t('common.back_to_home')}
           </button>
         </div>
 
         {/* SEO Content Section */}
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Why Convert DOC to ODT?
+            {t('doc_to_odt.seo.title')}
           </h2>
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting Microsoft Word DOC files to OpenDocument Text (ODT) format is essential for cross-platform document sharing, open-source office suite integration, and universal document compatibility. While DOC files are proprietary to Microsoft Word, ODT format provides open-source compatibility and works seamlessly with LibreOffice, OpenOffice, and other free office applications.
+              {t('doc_to_odt.seo.description')}
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of ODT Format</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('doc_to_odt.benefits_title')}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-green-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-green-900 mb-3">Open-Source Standard</h4>
+                <h4 className="text-xl font-semibold text-green-900 mb-3">{t('doc_to_odt.benefit_open_title')}</h4>
                 <p className="text-gray-700">
-                  ODT is an open standard format that ensures your documents remain accessible and editable across different software applications and platforms.
+                  {t('doc_to_odt.benefit_open_text')}
                 </p>
               </div>
               
               <div className="bg-blue-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-blue-900 mb-3">Cross-Platform Compatibility</h4>
+                <h4 className="text-xl font-semibold text-blue-900 mb-3">{t('doc_to_odt.seo.feature_4_title')}</h4>
                 <p className="text-gray-700">
-                  ODT files work seamlessly with LibreOffice, OpenOffice, Google Docs, and many other office applications across Windows, Mac, and Linux.
+                  {t('doc_to_odt.seo.feature_4_text')}
                 </p>
               </div>
               
               <div className="bg-teal-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-teal-900 mb-3">Future-Proof Format</h4>
+                <h4 className="text-xl font-semibold text-teal-900 mb-3">{t('doc_to_odt.benefit_formatting_title')}</h4>
                 <p className="text-gray-700">
-                  As an open standard, ODT format ensures your documents will remain accessible and editable for years to come, regardless of software changes.
+                  {t('doc_to_odt.benefit_formatting_text')}
                 </p>
               </div>
               
               <div className="bg-cyan-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-cyan-900 mb-3">Free Software Integration</h4>
+                <h4 className="text-xl font-semibold text-cyan-900 mb-3">{t('doc_to_odt.benefit_libreoffice_title')}</h4>
                 <p className="text-gray-700">
-                  ODT format is the native format for LibreOffice and other free office suites, providing seamless integration with open-source workflows.
+                  {t('doc_to_odt.benefit_libreoffice_text')}
                 </p>
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('doc_to_odt.use_cases_title')}</h3>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-green-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Cross-Platform Document Sharing</h4>
-                  <p className="text-gray-700">Convert DOC files to ODT format for sharing documents across different operating systems and office applications without compatibility issues.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('doc_to_odt.seo.use_case_3_title')}</h4>
+                  <p className="text-gray-700">{t('doc_to_odt.seo.use_case_3_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Open-Source Office Suite Integration</h4>
-                  <p className="text-gray-700">Transform Word documents to ODT format for seamless integration with LibreOffice, OpenOffice, and other free office applications.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('doc_to_odt.seo.use_case_1_title')}</h4>
+                  <p className="text-gray-700">{t('doc_to_odt.seo.use_case_1_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-teal-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Legacy Format Migration</h4>
-                  <p className="text-gray-700">Modernize old DOC documents by converting them to ODT format, ensuring long-term accessibility and compatibility with modern office suites.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('doc_to_odt.seo.use_case_2_title')}</h4>
+                  <p className="text-gray-700">{t('doc_to_odt.seo.use_case_2_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-cyan-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Collaborative Document Editing</h4>
-                  <p className="text-gray-700">Convert documents to ODT format for collaborative editing in free office suites, enabling team collaboration without proprietary software dependencies.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('doc_to_odt.seo.use_case_4_title')}</h4>
+                  <p className="text-gray-700">{t('doc_to_odt.seo.use_case_4_text')}</p>
                 </div>
               </div>
             </div>
 
             <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your DOC Files?</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('doc_to_odt.ready_title')}</h3>
               <p className="text-lg mb-6 opacity-90">
-                Use our free online DOC to ODT converter to transform your Word documents into open-source format.
+                {t('doc_to_odt.ready_text')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Converting Now
+                  {t('common.start_converting_now')}
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
                 >
-                  Back to Home
+                  {t('common.back_to_home')}
                 </button>
               </div>
             </div>
