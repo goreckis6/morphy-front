@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Upload, Download, RefreshCw, ArrowLeft, CheckCircle, AlertCircle, Star } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { getLocalizedUrl } from '../../i18n';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 
@@ -31,6 +33,7 @@ export const BaseConverter: React.FC<BaseConverterProps> = ({
   features,
   useCases
 }) => {
+  const { i18n } = useTranslation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [isConverting, setIsConverting] = useState(false);
@@ -95,8 +98,8 @@ export const BaseConverter: React.FC<BaseConverterProps> = ({
   };
 
   const handleBack = () => {
-    // Always go to home page for consistency
-    window.location.href = '/';
+    // Go to home page in current language
+    window.location.href = getLocalizedUrl('/', i18n.language);
   };
 
   return (
