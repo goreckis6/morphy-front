@@ -7,6 +7,7 @@ import { Footer } from '../Footer';
 import { RAWProcessor } from '../../utils/rawProcessor';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
+import { getLocalizedUrl } from '../../i18n';
 import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
 
 export const ThreeFRViewer: React.FC = () => {
@@ -64,7 +65,7 @@ export const ThreeFRViewer: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="flex items-center space-x-4">
               <button
-                onClick={() => window.location.href = '/viewers'}
+                onClick={() => window.location.href = getLocalizedUrl('/viewers', i18n.language)}
                 className="p-2 text-gray-500 hover:text-blue-500 hover:bg-blue-50 rounded-lg transition-colors"
               >
                 <ArrowLeft className="w-5 h-5" />
@@ -209,7 +210,7 @@ export const ThreeFRViewer: React.FC = () => {
           </div>
           <div className="text-center mt-6">
             <a
-              href="/viewers"
+              href={getLocalizedUrl('/viewers', i18n.language)}
               className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               {t('viewers.threefr.buttons.back')}

@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import { Image, Upload, Eye, Download, Share2, ArrowLeft, Palette, Code, Zap } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { getLocalizedUrl } from '../../i18n';
 import { FileUpload } from '../FileUpload';
 import { FileViewer } from '../FileViewer';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 
 export const EPSViewer: React.FC = () => {
+  const { i18n } = useTranslation();
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [viewerFile, setViewerFile] = useState<File | null>(null);
 
@@ -174,7 +177,7 @@ export const EPSViewer: React.FC = () => {
           </div>
           <div className="text-center mt-6">
             <a
-              href="/"
+              href={getLocalizedUrl('/', i18n.language)}
               className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Back to Home

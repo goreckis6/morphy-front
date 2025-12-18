@@ -1,5 +1,7 @@
 import React from 'react';
 import { Eye, ArrowLeft } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { getLocalizedUrl } from '../../i18n';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 
@@ -10,6 +12,7 @@ interface FormatData {
 }
 
 export const MainViewer: React.FC = () => {
+  const { i18n } = useTranslation();
   const formatCategories = [
     {
       title: "STANDARD IMAGE FORMATS",
@@ -221,7 +224,7 @@ export const MainViewer: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex items-center space-x-4">
             <button
-              onClick={() => window.location.href = '/'}
+              onClick={() => window.location.href = getLocalizedUrl('/', i18n.language)}
               className="p-2 text-gray-500 hover:text-blue-500 hover:bg-blue-50 rounded-lg transition-colors"
             >
               <ArrowLeft className="w-5 h-5" />
@@ -317,7 +320,7 @@ export const MainViewer: React.FC = () => {
             We support over 100+ file formats. If you don't see your format listed above, try our universal viewer.
           </p>
           <a
-            href="/"
+            href={getLocalizedUrl('/', i18n.language)}
             className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             Back to Home

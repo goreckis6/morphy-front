@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
+import { getLocalizedUrl } from '../i18n';
 import { Header } from '../components/Header';
 import { Home, ArrowLeft, Search, Image as ImageIcon, Smile, Ghost, Rocket } from 'lucide-react';
 
 export default function NotFound() {
   const navigate = useNavigate();
+  const { i18n } = useTranslation();
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [rotateDeg, setRotateDeg] = useState(0);
 
@@ -143,7 +146,7 @@ export default function NotFound() {
             {/* Action buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                onClick={() => navigate('/')}
+                onClick={() => navigate(getLocalizedUrl('/', i18n.language))}
                 className="group inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 hover:from-purple-700 hover:via-blue-700 hover:to-indigo-700 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-2xl"
               >
                 <Home className="w-5 h-5 group-hover:rotate-12 transition-transform" />
@@ -158,7 +161,7 @@ export default function NotFound() {
                 Go Back
               </button>
               <button
-                onClick={() => navigate('/converters')}
+                onClick={() => navigate(getLocalizedUrl('/converters', i18n.language))}
                 className="group inline-flex items-center gap-3 bg-white border-2 border-blue-300 text-blue-700 font-bold py-4 px-8 rounded-full hover:bg-blue-50 hover:border-blue-400 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
               >
                 <ImageIcon className="w-5 h-5 group-hover:rotate-12 transition-transform" />

@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import { MousePointer, Upload, Eye, Download, Share2, ArrowLeft, Monitor, Palette, Zap } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { getLocalizedUrl } from '../../i18n';
 import { FileUpload } from '../FileUpload';
 import { FileViewer } from '../FileViewer';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 
 export const CURViewer: React.FC = () => {
+  const { i18n } = useTranslation();
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [viewerFile, setViewerFile] = useState<File | null>(null);
 
@@ -174,7 +177,7 @@ export const CURViewer: React.FC = () => {
           </div>
           <div className="text-center mt-6">
             <a
-              href="/"
+              href={getLocalizedUrl('/', i18n.language)}
               className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Back to Home
