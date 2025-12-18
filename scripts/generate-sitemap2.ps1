@@ -28,15 +28,18 @@ $uniqueRoutes = $allRoutes | Sort-Object -Unique
 
 Write-Host "Found $($uniqueRoutes.Count) unique routes" -ForegroundColor Cyan
 
-# Build XML as string for better control - pure sitemap format
+# Build XML as string for better control
 $xmlContent = "<?xml version=`"1.0`" encoding=`"utf-8`"?>`n"
-$xmlContent += "<urlset xmlns=`"http://www.sitemaps.org/schemas/sitemap/0.9`">`n"
+$xmlContent += "<?xml-stylesheet type=`"text/xsl`" href=`"/sitemap.xsl`"?>`n"
+$xmlContent += "<urlset xmlns=`"http://www.sitemaps.org/schemas/sitemap/0.9`" xmlns:xhtml=`"http://www.w3.org/1999/xhtml`">`n"
 
 function Get-UrlXml {
     param(
         [string]$path,
         [string]$changefreq = 'weekly',
-        [string]$priority = '0.8'
+        [string]$priority = '0.8',
+        [bool]$addHreflang = $true,
+        [string[]]$availableLanguages = $script:languages
     )
     
     if ([string]::IsNullOrWhiteSpace($path)) {
@@ -50,8 +53,32 @@ function Get-UrlXml {
     
     $url = "$baseUrl$path"
     
+    # Determine base path (without language prefix)
+    # Match language code only if followed by / or end of string (prevents matching "vi" in "viewers")
+    $langPattern = '^/(' + ($script:languages -join '|') + ')(/|$)'
+    $basePath = $path -replace $langPattern, '/'
+    if ($basePath -eq '') { $basePath = '/' }
+    
+    # Remove trailing slash for consistency (except root)
+    if ($basePath -ne '/' -and $basePath.EndsWith('/')) {
+        $basePath = $basePath.TrimEnd('/')
+    }
+    
     $xml = "  <url>`n"
     $xml += "    <loc>$url</loc>`n"
+    
+    if ($addHreflang) {
+        # Always add English
+        $enUrl = "$baseUrl$basePath"
+        $xml += "    <xhtml:link rel=`"alternate`" hreflang=`"en`" href=`"$enUrl`" />`n"
+        
+        # Add all available language versions
+        foreach ($lang in $availableLanguages) {
+            $langUrl = "$baseUrl/$lang$basePath"
+            $xml += "    <xhtml:link rel=`"alternate`" hreflang=`"$lang`" href=`"$langUrl`" />`n"
+        }
+    }
+    
     $xml += "    <lastmod>$today</lastmod>`n"
     $xml += "    <changefreq>$changefreq</changefreq>`n"
     $xml += "    <priority>$priority</priority>`n"
