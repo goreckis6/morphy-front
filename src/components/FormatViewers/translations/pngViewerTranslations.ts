@@ -76,8 +76,8 @@ const resources: Record<string, PNGViewerTranslations> = {
   en: {
     viewers: {
       png: {
-        meta_title: 'FREE PNG Viewer & File Opener (Online) - No Download',
-        meta_description: 'FREE PNG Viewer: Instantly open and view PNG images in your web browser. No software installation or registration is needed. Secure and 100% free to use',
+        meta_title: 'PNG Viewer: Open & View PNG Images Online for Free',
+        meta_description: 'Open PNG files online with full transparency support. No install or sign-up required. Fast, free, and secure PNG viewer in your browser. View now!',
         meta_keywords: 'PNG viewer, PNG to JPG, PNG to WebP, image viewer, transparency, lossless compression, alpha channel, batch processing',
         hero_title: 'Free PNG Viewer',
         hero_subtitle: 'View PNG images with lossless quality and transparency support',
@@ -171,8 +171,8 @@ const resources: Record<string, PNGViewerTranslations> = {
   pl: {
     viewers: {
       png: {
-        meta_title: 'DARMOWY Podgląd PNG i Otwieracz Plików (Online) - Bez Pobierania',
-        meta_description: 'DARMOWY Podgląd PNG: Natychmiast otwieraj i przeglądaj obrazy PNG w przeglądarce internetowej. Nie wymaga instalacji oprogramowania ani rejestracji. Bezpieczne i w 100% darmowe w użyciu',
+        meta_title: 'Przeglądarka PNG: Otwieraj i Przeglądaj Obrazy PNG Online za Darmo',
+        meta_description: 'Otwieraj pliki PNG online z pełną obsługą przezroczystości. Bez instalacji i rejestracji. Szybka, darmowa i bezpieczna przeglądarka PNG w przeglądarce. Zobacz teraz!',
         meta_keywords: 'podgląd PNG, PNG do JPG, PNG do WebP, podgląd obrazów, przezroczystość, kompresja bezstratna, kanał alfa, przetwarzanie wsadowe',
         hero_title: 'Darmowy Podgląd PNG',
         hero_subtitle: 'Oglądaj obrazy PNG z jakością bezstratną i obsługą przezroczystości',
@@ -266,8 +266,8 @@ const resources: Record<string, PNGViewerTranslations> = {
   de: {
     viewers: {
       png: {
-        meta_title: 'KOSTENLOSER PNG Viewer & Dateiöffner (Online) - Kein Download',
-        meta_description: 'KOSTENLOSER PNG Viewer: Öffnen und zeigen Sie PNG-Bilder sofort in Ihrem Webbrowser. Keine Softwareinstallation oder Registrierung erforderlich. Sicher und 100% kostenlos zu verwenden',
+        meta_title: 'PNG Viewer: PNG-Bilder Online Kostenlos Öffnen & Ansehen',
+        meta_description: 'Öffnen Sie PNG-Dateien online mit voller Transparenzunterstützung. Keine Installation oder Anmeldung erforderlich. Schneller, kostenloser und sicherer PNG-Viewer in Ihrem Browser. Jetzt ansehen!',
         meta_keywords: 'PNG Viewer, PNG zu JPG, PNG zu WebP, Bildbetrachter, Transparenz, verlustfreie Kompression, Alphakanal, Stapelverarbeitung',
         hero_title: 'Kostenloser PNG-Viewer',
         hero_subtitle: 'PNG-Bilder mit verlustfreier Qualität und Transparenzunterstützung anzeigen',
@@ -361,8 +361,8 @@ const resources: Record<string, PNGViewerTranslations> = {
   es: {
     viewers: {
       png: {
-        meta_title: 'VISOR PNG GRATIS y Abridor de Archivos (Online) - Sin Descarga',
-        meta_description: 'VISOR PNG GRATIS: Abre y visualiza imágenes PNG instantáneamente en tu navegador web. No se requiere instalación de software ni registro. Seguro y 100% gratis de usar',
+        meta_title: 'Visor PNG: Abre y Visualiza Imágenes PNG Online Gratis',
+        meta_description: 'Abre archivos PNG online con soporte completo de transparencia. Sin instalación ni registro. Visor PNG rápido, gratuito y seguro en tu navegador. ¡Visualiza ahora!',
         meta_keywords: 'visor PNG, PNG a JPG, PNG a WebP, visor de imágenes, transparencia, compresión sin pérdidas, canal alfa, procesamiento por lotes',
         hero_title: 'Visor PNG Gratis',
         hero_subtitle: 'Ver imágenes PNG con calidad sin pérdidas y soporte de transparencia',
@@ -456,8 +456,8 @@ const resources: Record<string, PNGViewerTranslations> = {
   fr: {
     viewers: {
       png: {
-        meta_title: 'VISIONNEUSE PNG GRATUITE et Ouvrir Fichiers (En Ligne) - Sans Téléchargement',
-        meta_description: 'VISIONNEUSE PNG GRATUITE: Ouvrez et visualisez instantanément des images PNG dans votre navigateur web. Aucune installation de logiciel ni inscription n\'est nécessaire. Sécurisé et 100% gratuit à utiliser',
+        meta_title: 'Visionneuse PNG: Ouvrir et Voir Images PNG en Ligne Gratuitement',
+        meta_description: 'Ouvrez des fichiers PNG en ligne avec un support complet de la transparence. Aucune installation ni inscription requise. Visionneuse PNG rapide, gratuite et sécurisée dans votre navigateur. Visualisez maintenant!',
         meta_keywords: 'visionneuse PNG, PNG vers JPG, PNG vers WebP, visionneuse d\'images, transparence, compression sans perte, canal alpha, traitement par lots',
         hero_title: 'Visionneuse PNG Gratuite',
         hero_subtitle: 'Voir les images PNG avec qualité sans perte et support de transparence',
@@ -551,8 +551,8 @@ const resources: Record<string, PNGViewerTranslations> = {
   it: {
     viewers: {
       png: {
-        meta_title: 'VISUALIZZATORE PNG GRATUITO e Apri File (Online) - Nessun Download',
-        meta_description: 'VISUALIZZATORE PNG GRATUITO: Apri e visualizza istantaneamente immagini PNG nel tuo browser web. Non è necessaria l\'installazione di software o registrazione. Sicuro e 100% gratuito da usare',
+        meta_title: 'Visualizzatore PNG: Apri e Visualizza Immagini PNG Online Gratis',
+        meta_description: 'Apri file PNG online con supporto completo della trasparenza. Nessuna installazione o registrazione richiesta. Visualizzatore PNG veloce, gratuito e sicuro nel tuo browser. Visualizza ora!',
         meta_keywords: 'visualizzatore PNG, PNG a JPG, PNG a WebP, visualizzatore immagini, trasparenza, compressione senza perdite, canale alfa, elaborazione batch',
         hero_title: 'Visualizzatore PNG Gratuito',
         hero_subtitle: 'Visualizza immagini PNG con qualità senza perdite e supporto trasparenza',
@@ -646,8 +646,8 @@ const resources: Record<string, PNGViewerTranslations> = {
   nl: {
     viewers: {
       png: {
-        meta_title: 'GRATIS PNG Viewer en Bestandsopener (Online) - Geen Download',
-        meta_description: 'GRATIS PNG Viewer: Open en bekijk PNG afbeeldingen direct in uw webbrowser. Geen software-installatie of registratie nodig. Veilig en 100% gratis te gebruiken',
+        meta_title: 'PNG Viewer: PNG-Afbeeldingen Online Gratis Openen & Bekijken',
+        meta_description: 'Open PNG-bestanden online met volledige transparantie-ondersteuning. Geen installatie of registratie vereist. Snelle, gratis en veilige PNG-viewer in uw browser. Bekijk nu!',
         meta_keywords: 'PNG viewer, PNG naar JPG, PNG naar WebP, afbeeldingsviewer, transparantie, verliesloze compressie, alfakanaal, batchverwerking',
         hero_title: 'Gratis PNG Viewer',
         hero_subtitle: 'Bekijk PNG afbeeldingen met verliesloze kwaliteit en transparantieondersteuning',
@@ -741,8 +741,8 @@ const resources: Record<string, PNGViewerTranslations> = {
   pt: {
     viewers: {
       png: {
-        meta_title: 'VISUALIZADOR PNG GRATUITO e Abridor de Arquivos (Online) - Sem Download',
-        meta_description: 'VISUALIZADOR PNG GRATUITO: Abra e visualize imagens PNG instantaneamente no seu navegador web. Nenhuma instalação de software ou registro é necessário. Seguro e 100% gratuito para usar',
+        meta_title: 'Visualizador PNG: Abra e Visualize Imagens PNG Online Grátis',
+        meta_description: 'Abra arquivos PNG online com suporte completo à transparência. Nenhuma instalação ou registro necessário. Visualizador PNG rápido, gratuito e seguro no seu navegador. Visualize agora!',
         meta_keywords: 'visualizador PNG, PNG para JPG, PNG para WebP, visualizador de imagens, transparência, compressão sem perdas, canal alfa, processamento em lote',
         hero_title: 'Visualizador PNG Gratuito',
         hero_subtitle: 'Ver imagens PNG com qualidade sem perdas e suporte de transparência',
@@ -836,8 +836,8 @@ const resources: Record<string, PNGViewerTranslations> = {
   vi: {
     viewers: {
       png: {
-        meta_title: 'TRÌNH XEM PNG MIỄN PHÍ và Mở Tệp (Trực Tuyến) - Không Cần Tải Xuống',
-        meta_description: 'TRÌNH XEM PNG MIỄN PHÍ: Mở và xem hình ảnh PNG ngay lập tức trong trình duyệt web của bạn. Không cần cài đặt phần mềm hoặc đăng ký. An toàn và 100% miễn phí để sử dụng',
+        meta_title: 'Trình Xem PNG: Mở & Xem Hình Ảnh PNG Trực Tuyến Miễn Phí',
+        meta_description: 'Mở tệp PNG trực tuyến với hỗ trợ đầy đủ độ trong suốt. Không cần cài đặt hay đăng ký. Trình xem PNG nhanh, miễn phí và an toàn trong trình duyệt của bạn. Xem ngay!',
         meta_keywords: 'trình xem PNG, PNG sang JPG, PNG sang WebP, trình xem hình ảnh, trong suốt, nén không mất mát, kênh alpha, xử lý hàng loạt',
         hero_title: 'Trình Xem PNG Miễn Phí',
         hero_subtitle: 'Xem hình ảnh PNG với chất lượng không mất mát và hỗ trợ trong suốt',
@@ -931,8 +931,8 @@ const resources: Record<string, PNGViewerTranslations> = {
   tr: {
     viewers: {
       png: {
-        meta_title: 'ÜCRETSİZ PNG Görüntüleyici ve Dosya Açıcı (Çevrimiçi) - İndirme Yok',
-        meta_description: 'ÜCRETSİZ PNG Görüntüleyici: PNG görsellerini web tarayıcınızda anında açın ve görüntüleyin. Yazılım kurulumu veya kayıt gerekmez. Güvenli ve %100 ücretsiz kullanım',
+        meta_title: 'PNG Görüntüleyici: PNG Görsellerini Çevrimiçi Ücretsiz Açın & Görüntüleyin',
+        meta_description: 'PNG dosyalarını tam şeffaflık desteğiyle çevrimiçi açın. Kurulum veya kayıt gerekmez. Tarayıcınızda hızlı, ücretsiz ve güvenli PNG görüntüleyici. Şimdi görüntüleyin!',
         meta_keywords: 'PNG görüntüleyici, PNG\'den JPG\'ye, PNG\'den WebP\'ye, görsel görüntüleyici, şeffaflık, kayıpsız sıkıştırma, alfakanal, toplu işleme',
         hero_title: 'Ücretsiz PNG Görüntüleyici',
         hero_subtitle: 'PNG görsellerini kayıpsız kalite ve şeffaflık desteği ile görüntüle',
@@ -1026,8 +1026,8 @@ const resources: Record<string, PNGViewerTranslations> = {
   ru: {
     viewers: {
       png: {
-        meta_title: 'БЕСПЛАТНЫЙ Просмотрщик PNG и Открыватель Файлов (Онлайн) - Без Загрузки',
-        meta_description: 'БЕСПЛАТНЫЙ Просмотрщик PNG: Мгновенно открывайте и просматривайте изображения PNG в вашем веб-браузере. Установка программного обеспечения или регистрация не требуется. Безопасно и на 100% бесплатно в использовании',
+        meta_title: 'Просмотрщик PNG: Открывайте и Просматривайте PNG Изображения Онлайн Бесплатно',
+        meta_description: 'Открывайте файлы PNG онлайн с полной поддержкой прозрачности. Без установки и регистрации. Быстрый, бесплатный и безопасный просмотрщик PNG в вашем браузере. Просмотрите сейчас!',
         meta_keywords: 'просмотрщик PNG, PNG в JPG, PNG в WebP, просмотрщик изображений, прозрачность, сжатие без потерь, альфа-канал, пакетная обработка',
         hero_title: 'Бесплатный Просмотрщик PNG',
         hero_subtitle: 'Просматривайте изображения PNG с качеством без потерь и поддержкой прозрачности',
@@ -1121,8 +1121,8 @@ const resources: Record<string, PNGViewerTranslations> = {
   ar: {
     viewers: {
       png: {
-        meta_title: 'عارض PNG مجاني وفتاح الملفات (عبر الإنترنت) - بدون تنزيل',
-        meta_description: 'عارض PNG مجاني: افتح واعرض صور PNG على الفور في متصفح الويب الخاص بك. لا حاجة لتثبيت البرامج أو التسجيل. آمن و 100% مجاني للاستخدام',
+        meta_title: 'عارض PNG: افتح وشاهد صور PNG عبر الإنترنت مجاناً',
+        meta_description: 'افتح ملفات PNG عبر الإنترنت مع دعم كامل للشفافية. لا حاجة للتثبيت أو التسجيل. عارض PNG سريع ومجاني وآمن في متصفحك. شاهد الآن!',
         meta_keywords: 'عارض PNG، PNG إلى JPG، PNG إلى WebP، عارض الصور، الشفافية، ضغط بدون فقدان، قناة ألفا، المعالجة المجمعة',
         hero_title: 'عارض PNG مجاني',
         hero_subtitle: 'اعرض صور PNG مع جودة بدون فقدان ودعم الشفافية',
@@ -1216,8 +1216,8 @@ const resources: Record<string, PNGViewerTranslations> = {
   th: {
     viewers: {
       png: {
-        meta_title: 'โปรแกรมดู PNG ฟรีและเปิดไฟล์ (ออนไลน์) - ไม่ต้องดาวน์โหลด',
-        meta_description: 'โปรแกรมดู PNG ฟรี: เปิดและดูรูปภาพ PNG ทันทีในเว็บเบราว์เซอร์ของคุณ ไม่ต้องติดตั้งซอฟต์แวร์หรือลงทะเบียน ปลอดภัยและใช้งานได้ฟรี 100%',
+        meta_title: 'โปรแกรมดู PNG: เปิดและดูภาพ PNG ออนไลน์ฟรี',
+        meta_description: 'เปิดไฟล์ PNG ออนไลน์ด้วยการรองรับความโปร่งใสเต็มรูปแบบ ไม่ต้องติดตั้งหรือลงทะเบียน โปรแกรมดู PNG ที่เร็ว ฟรี และปลอดภัยในเบราว์เซอร์ของคุณ ดูเลย!',
         meta_keywords: 'โปรแกรมดู PNG, PNG เป็น JPG, PNG เป็น WebP, โปรแกรมดูรูปภาพ, ความโปร่งใส, การบีบอัดแบบไม่สูญเสีย, ช่องอัลฟา, การประมวลผลแบบกลุ่ม',
         hero_title: 'โปรแกรมดู PNG ฟรี',
         hero_subtitle: 'ดูรูปภาพ PNG ด้วยคุณภาพแบบไม่สูญเสียและการรองรับความโปร่งใส',
@@ -1311,8 +1311,8 @@ const resources: Record<string, PNGViewerTranslations> = {
   ja: {
     viewers: {
       png: {
-        meta_title: '無料PNGビューアーとファイルオープナー（オンライン）- ダウンロード不要',
-        meta_description: '無料PNGビューアー：WebブラウザでPNG画像を即座に開いて表示します。ソフトウェアのインストールや登録は不要です。安全で100%無料で使用できます',
+        meta_title: 'PNGビューアー：PNG画像をオンラインで無料で開いて表示',
+        meta_description: 'PNGファイルを完全な透明度サポートでオンラインで開く。インストールや登録不要。ブラウザで高速、無料、安全なPNGビューアー。今すぐ表示！',
         meta_keywords: 'PNGビューアー、PNGからJPG、PNGからWebP、画像ビューアー、透明度、可逆圧縮、アルファチャンネル、バッチ処理',
         hero_title: '無料PNGビューアー',
         hero_subtitle: '可逆品質と透明度サポートでPNG画像を表示',
@@ -1406,8 +1406,8 @@ const resources: Record<string, PNGViewerTranslations> = {
   zh: {
     viewers: {
       png: {
-        meta_title: '免费PNG查看器和文件打开器（在线）- 无需下载',
-        meta_description: '免费PNG查看器：在您的网络浏览器中即时打开和查看PNG图片。无需安装软件或注册。安全且100%免费使用',
+        meta_title: 'PNG查看器：在线免费打开和查看PNG图像',
+        meta_description: '在线打开PNG文件，全面支持透明度。无需安装或注册。浏览器中快速、免费、安全的PNG查看器。立即查看！',
         meta_keywords: 'PNG查看器，PNG转JPG，PNG转WebP，图片查看器，透明度，无损压缩，alpha通道，批量处理',
         hero_title: '免费PNG查看器',
         hero_subtitle: '使用无损质量和透明度支持查看PNG图片',
@@ -1501,8 +1501,8 @@ const resources: Record<string, PNGViewerTranslations> = {
   id: {
     viewers: {
       png: {
-        meta_title: 'PENAMPIL PNG GRATIS dan Pembuka File (Online) - Tanpa Unduhan',
-        meta_description: 'PENAMPIL PNG GRATIS: Buka dan lihat gambar PNG secara instan di browser web Anda. Tidak perlu instalasi perangkat lunak atau registrasi. Aman dan 100% gratis digunakan',
+        meta_title: 'Penampil PNG: Buka & Lihat Gambar PNG Online Gratis',
+        meta_description: 'Buka file PNG online dengan dukungan transparansi penuh. Tanpa instalasi atau pendaftaran. Penampil PNG yang cepat, gratis, dan aman di browser Anda. Lihat sekarang!',
         meta_keywords: 'penampil PNG, PNG ke JPG, PNG ke WebP, penampil gambar, transparansi, kompresi tanpa loss, saluran alpha, pemrosesan batch',
         hero_title: 'Penampil PNG Gratis',
         hero_subtitle: 'Lihat gambar PNG dengan kualitas tanpa loss dan dukungan transparansi',
@@ -1596,8 +1596,8 @@ const resources: Record<string, PNGViewerTranslations> = {
   sv: {
     viewers: {
       png: {
-        meta_title: 'GRATIS PNG-visare och Filöppnare (Online) - Ingen Nedladdning',
-        meta_description: 'GRATIS PNG-visare: Öppna och visa PNG-bilder omedelbart i din webbläsare. Ingen programvaruinstallation eller registrering krävs. Säker och 100% gratis att använda',
+        meta_title: 'PNG-visare: Öppna & Visa PNG-bilder Online Gratis',
+        meta_description: 'Öppna PNG-filer online med fullt transparensstöd. Ingen installation eller registrering krävs. Snabb, gratis och säker PNG-visare i din webbläsare. Visa nu!',
         meta_keywords: 'PNG-visare, PNG till JPG, PNG till WebP, bildvisare, transparens, förlustfri komprimering, alfakanal, batchbearbetning',
         hero_title: 'Gratis PNG-visare',
         hero_subtitle: 'Visa PNG-bilder med förlustfri kvalitet och transparensstöd',
