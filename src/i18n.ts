@@ -23051,4 +23051,12 @@ const resources = {
       'epub_to_csv.upload_single_desc': 'Seret dan lepas file EPUB Anda di sini atau klik untuk menelusuri',
       'epub_to_csv.upload_multiple_desc': 'Pilih beberapa file EPUB untuk mengonversi semuanya sekaligus',
       'epub_to_csv.choose_files': 'Pilih File',
-      'epub_to_c
+      'epub_to_csv.download_csv': 'Unduh File CSV',
+      'epub_to_csv.download': 'Unduh',
+      'epub_to_csv.convert_more': 'Konversi Lebih Banyak File',
+      'epub_to_csv.failed_convert': 'Gagal mengonversi'
+    }
+  }
+};
+
+export default resources;
