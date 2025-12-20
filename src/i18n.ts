@@ -23058,6 +23058,23 @@ const resources = {
   }
 };
 
+// Helper function to resolve language from URL path
+export const resolveLanguageFromPath = (path: string): string => {
+  const supportedLanguages = ['en', 'pl', 'de', 'id', 'sv', 'es', 'fr', 'it', 'nl', 'pt', 'vi', 'tr', 'ru', 'ar', 'th', 'ja', 'zh'];
+  
+  // Extract the first segment of the path
+  const pathSegments = path.split('/').filter(Boolean);
+  const firstSegment = pathSegments[0];
+  
+  // Check if the first segment is a supported language
+  if (firstSegment && supportedLanguages.includes(firstSegment)) {
+    return firstSegment;
+  }
+  
+  // Default to English if no language prefix found
+  return 'en';
+};
+
 // Helper function to get localized URL
 export const getLocalizedUrl = (path: string, targetLang: string): string => {
   const supportedLanguages = ['en', 'pl', 'de', 'id', 'sv', 'es', 'fr', 'it', 'nl', 'pt', 'vi', 'tr', 'ru', 'ar', 'th', 'ja', 'zh'];
