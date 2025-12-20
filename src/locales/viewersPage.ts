@@ -48,7 +48,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   en: {
     viewers_page: {
       meta: {
-        title: 'Free Online File Viewers - MorphyHub | View Files in Browser',
+        title: 'Free File Viewer Online',
         description:
           'View and preview files directly in your browser. Support for images, documents, spreadsheets, and more. No download required.',
         keywords:
@@ -108,135 +108,135 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
       },
       formats: {
         jpeg: {
-          title: 'JPEG Viewer',
+          title: 'Free JPEG Viewer Online',
           description: 'View JPEG images with zoom and pan controls.'
         },
         png: {
-          title: 'PNG Viewer',
+          title: 'Free PNG Viewer Online',
           description: 'View PNG images with transparency support.'
         },
         webp: {
-          title: 'WebP Viewer',
+          title: 'Free WebP Viewer Online',
           description: 'View WebP images with modern compression.'
         },
         gif: {
-          title: 'GIF Viewer',
+          title: 'Free GIF Viewer Online',
           description: 'View animated GIF images with playback controls.'
         },
         svg: {
-          title: 'SVG Viewer',
+          title: 'Free SVG Viewer Online',
           description: 'View scalable vector graphics with zoom.'
         },
         bmp: {
-          title: 'BMP Viewer',
+          title: 'Free BMP Viewer Online',
           description: 'View bitmap images with color depth support.'
         },
         ico: {
-          title: 'ICO Viewer',
+          title: 'Free ICO Viewer Online',
           description: 'View Windows icon files with multiple sizes.'
         },
         heic: {
-          title: 'HEIC Viewer',
+          title: 'Free HEIC Viewer Online',
           description: 'View HEIC images from modern cameras.'
         },
         avif: {
-          title: 'AVIF Viewer',
+          title: 'Free AVIF Viewer Online',
           description: 'View AVIF images with next-gen compression.'
         },
         pdf: {
-          title: 'PDF Viewer',
+          title: 'Free PDF Viewer Online',
           description: 'View PDF documents with page navigation.'
         },
         docx: {
-          title: 'DOCX Viewer',
+          title: 'Free DOCX Viewer Online',
           description: 'View Microsoft Word documents.'
         },
         rtf: {
-          title: 'RTF Viewer',
+          title: 'Free RTF Viewer Online',
           description: 'View Rich Text Format documents.'
         },
         odt: {
-          title: 'ODT Viewer',
+          title: 'Free ODT Viewer Online',
           description: 'View OpenDocument Text files.'
         },
         txt: {
-          title: 'TXT Viewer',
+          title: 'Free TXT Viewer Online',
           description: 'View plain text files with syntax highlighting.'
         },
         md: {
-          title: 'Markdown Viewer',
+          title: 'Free Markdown Viewer Online',
           description: 'View Markdown files with rendered formatting.'
         },
         xlsx: {
-          title: 'Excel Viewer',
+          title: 'Free XLSX Viewer Online',
           description: 'View Excel spreadsheets with formula support.'
         },
         csv: {
-          title: 'CSV Viewer',
+          title: 'Free CSV Viewer Online',
           description: 'View CSV files with table formatting.'
         },
         ods: {
-          title: 'ODS Viewer',
+          title: 'Free ODS Viewer Online',
           description: 'View OpenDocument Spreadsheet files.'
         },
         json: {
-          title: 'JSON Viewer',
+          title: 'Free JSON Viewer Online',
           description: 'View JSON files with syntax highlighting and formatting.'
         },
         xml: {
-          title: 'XML Viewer',
+          title: 'Free XML Viewer Online',
           description: 'View XML files with tree structure.'
         },
         html: {
-          title: 'HTML Viewer',
+          title: 'Free HTML Viewer Online',
           description: 'View HTML files with rendered content.'
         },
         css: {
-          title: 'CSS Viewer',
+          title: 'Free CSS Viewer Online',
           description: 'View CSS files with syntax highlighting.'
         },
         js: {
-          title: 'JavaScript Viewer',
+          title: 'Free JavaScript Viewer Online',
           description: 'View JS files with syntax highlighting.'
         },
         py: {
-          title: 'Python Viewer',
+          title: 'Free Python Viewer Online',
           description: 'View Python files with syntax highlighting.'
         },
         nef: {
-          title: 'NEF Viewer',
+          title: 'Free NEF Viewer Online',
           description: 'View Nikon raw camera files.'
         },
         cr2: {
-          title: 'CR2 Viewer',
+          title: 'Free CR2 Viewer Online',
           description: 'View Canon raw camera files.'
         },
         dcr: {
-          title: 'DCR Viewer',
+          title: 'Free DCR Viewer Online',
           description: 'View Kodak raw camera files.'
         },
         x3f: {
-          title: 'X3F Viewer',
+          title: 'Free X3F Viewer Online',
           description: 'View Sigma raw camera files.'
         },
         arw: {
-          title: 'ARW Viewer',
+          title: 'Free ARW Viewer Online',
           description: 'View Sony raw camera files.'
         },
         raf: {
-          title: 'RAF Viewer',
+          title: 'Free RAF Viewer Online',
           description: 'View Fuji raw camera files.'
         },
         orf: {
-          title: 'ORF Viewer',
+          title: 'Free ORF Viewer Online',
           description: 'View Olympus raw camera files.'
         },
         dng: {
-          title: 'DNG Viewer',
+          title: 'Free DNG Viewer Online',
           description: 'View Adobe Digital Negative files.'
         },
         pef: {
-          title: 'PEF Viewer',
+          title: 'Free PEF Viewer Online',
           description: 'View Pentax raw camera files.'
         }
       }
@@ -245,7 +245,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   pl: {
     viewers_page: {
       meta: {
-        title: 'Darmowe podglądy plików online - MorphyHub | Otwieraj pliki w przeglądarce',
+        title: 'Darmowy podgląd plików online',
         description:
           'Przeglądaj pliki bezpośrednio w przeglądarce. Obsługa obrazów, dokumentów, arkuszy kalkulacyjnych i wielu innych. Bez pobierania.',
         keywords:
@@ -445,7 +445,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   de: {
     viewers_page: {
       meta: {
-        title: 'Kostenlose Online-Datei-Viewer - MorphyHub | Dateien im Browser anzeigen',
+        title: 'Kostenloser Datei-Viewer online',
         description:
           'Zeige Dateien direkt im Browser an. Unterstützung für Bilder, Dokumente, Tabellen und mehr. Kein Download erforderlich.',
         keywords:
@@ -566,7 +566,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
           description: 'Zeige Markdown-Dateien mit gerendertem Layout an.'
         },
         xlsx: {
-          title: 'Excel-Viewer',
+          title: 'XLSX-Viewer',
           description: 'Zeige Excel-Tabellen mit Formelunterstützung an.'
         },
         csv: {
@@ -643,7 +643,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   es: {
     viewers_page: {
       meta: {
-        title: 'Visores de archivos en línea gratuitos - MorphyHub | Ver archivos en el navegador',
+        title: 'Visor de archivos gratuito online',
         description:
           'Ver y previsualizar archivos directamente en tu navegador. Soporte para imágenes, documentos, hojas de cálculo y más. No se requiere descarga.',
         keywords:
@@ -840,7 +840,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   fr: {
     viewers_page: {
       meta: {
-        title: 'Visionneuses de fichiers en ligne gratuites - MorphyHub | Voir les fichiers dans le navigateur',
+        title: 'Visionneuse de fichiers gratuite en ligne',
         description:
           'Voir et prévisualiser les fichiers directement dans votre navigateur. Prise en charge des images, documents, feuilles de calcul et plus encore. Aucun téléchargement requis.',
         keywords:
@@ -1037,7 +1037,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   it: {
     viewers_page: {
       meta: {
-        title: 'Visualizzatori di file online gratuiti - MorphyHub | Visualizza file nel browser',
+        title: 'Visualizzatore di file gratuito online',
         description:
           'Visualizza e anteprima file direttamente nel tuo browser. Supporto per immagini, documenti, fogli di calcolo e altro. Nessun download richiesto.',
         keywords:
@@ -1111,7 +1111,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
         odt: { title: 'Visualizzatore ODT', description: 'Visualizza file testo OpenDocument.' },
         txt: { title: 'Visualizzatore TXT', description: 'Visualizza file testo semplice con evidenziazione sintassi.' },
         md: { title: 'Visualizzatore Markdown', description: 'Visualizza file Markdown con formattazione renderizzata.' },
-        xlsx: { title: 'Visualizzatore Excel', description: 'Visualizza fogli Excel con supporto formule.' },
+        xlsx: { title: 'Visualizzatore XLSX', description: 'Visualizza fogli Excel con supporto formule.' },
         csv: { title: 'Visualizzatore CSV', description: 'Visualizza file CSV con formattazione tabella.' },
         ods: { title: 'Visualizzatore ODS', description: 'Visualizza fogli OpenDocument Spreadsheet.' },
         json: { title: 'Visualizzatore JSON', description: 'Visualizza file JSON con evidenziazione sintassi e formattazione.' },
@@ -1135,7 +1135,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   nl: {
     viewers_page: {
       meta: {
-        title: 'Gratis online bestandsviewers - MorphyHub | Bekijk bestanden in de browser',
+        title: 'Gratis bestandsviewer online',
         description:
           'Bekijk en preview bestanden direct in uw browser. Ondersteuning voor afbeeldingen, documenten, spreadsheets en meer. Geen download vereist.',
         keywords:
@@ -1209,7 +1209,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
         odt: { title: 'ODT Viewer', description: 'Bekijk OpenDocument-tekstbestanden.' },
         txt: { title: 'TXT Viewer', description: 'Bekijk tekstbestanden met syntaxmarkering.' },
         md: { title: 'Markdown Viewer', description: 'Bekijk Markdown-bestanden met gerenderde opmaak.' },
-        xlsx: { title: 'Excel Viewer', description: 'Bekijk Excel-spreadsheets met formule-ondersteuning.' },
+        xlsx: { title: 'XLSX Viewer', description: 'Bekijk Excel-spreadsheets met formule-ondersteuning.' },
         csv: { title: 'CSV Viewer', description: 'Bekijk CSV-bestanden met tabelopmaak.' },
         ods: { title: 'ODS Viewer', description: 'Bekijk OpenDocument Spreadsheet-bestanden.' },
         json: { title: 'JSON Viewer', description: 'Bekijk JSON-bestanden met syntaxmarkering en opmaak.' },
@@ -1233,7 +1233,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   pt: {
     viewers_page: {
       meta: {
-        title: 'Visualizadores de arquivos online gratuitos - MorphyHub | Ver arquivos no navegador',
+        title: 'Visualizador de arquivos gratuito online',
         description:
           'Visualize e pré-visualize arquivos diretamente no seu navegador. Suporte para imagens, documentos, planilhas e mais. Nenhum download necessário.',
         keywords:
@@ -1307,7 +1307,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
         odt: { title: 'Visualizador ODT', description: 'Visualize arquivos de texto OpenDocument.' },
         txt: { title: 'Visualizador TXT', description: 'Visualize arquivos de texto simples com destaque de sintaxe.' },
         md: { title: 'Visualizador Markdown', description: 'Visualize arquivos Markdown com formatação renderizada.' },
-        xlsx: { title: 'Visualizador Excel', description: 'Visualize planilhas Excel com suporte a fórmulas.' },
+        xlsx: { title: 'Visualizador XLSX', description: 'Visualize planilhas Excel com suporte a fórmulas.' },
         csv: { title: 'Visualizador CSV', description: 'Visualize arquivos CSV com formatação de tabela.' },
         ods: { title: 'Visualizador ODS', description: 'Visualize arquivos de planilha OpenDocument.' },
         json: { title: 'Visualizador JSON', description: 'Visualize arquivos JSON com destaque de sintaxe e formatação.' },
@@ -1331,7 +1331,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   vi: {
     viewers_page: {
       meta: {
-        title: 'Trình xem tệp trực tuyến miễn phí - MorphyHub | Xem tệp trong trình duyệt',
+        title: 'Trình xem tệp miễn phí trực tuyến',
         description:
           'Xem và xem trước tệp trực tiếp trong trình duyệt của bạn. Hỗ trợ hình ảnh, tài liệu, bảng tính và nhiều hơn nữa. Không cần tải xuống.',
         keywords:
@@ -1405,7 +1405,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
         odt: { title: 'Trình xem ODT', description: 'Xem tệp văn bản OpenDocument.' },
         txt: { title: 'Trình xem TXT', description: 'Xem tệp văn bản thuần với tô sáng cú pháp.' },
         md: { title: 'Trình xem Markdown', description: 'Xem tệp Markdown với định dạng được kết xuất.' },
-        xlsx: { title: 'Trình xem Excel', description: 'Xem bảng tính Excel với hỗ trợ công thức.' },
+        xlsx: { title: 'Trình xem XLSX', description: 'Xem bảng tính Excel với hỗ trợ công thức.' },
         csv: { title: 'Trình xem CSV', description: 'Xem tệp CSV với định dạng bảng.' },
         ods: { title: 'Trình xem ODS', description: 'Xem tệp bảng tính OpenDocument.' },
         json: { title: 'Trình xem JSON', description: 'Xem tệp JSON với tô sáng cú pháp và định dạng.' },
@@ -1429,7 +1429,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   tr: {
     viewers_page: {
       meta: {
-        title: 'Ücretsiz çevrimiçi dosya görüntüleyiciler - MorphyHub | Tarayıcıda dosya görüntüle',
+        title: 'Ücretsiz dosya görüntüleyici online',
         description:
           'Dosyaları doğrudan tarayıcınızda görüntüleyin ve önizleyin. Görüntüler, belgeler, elektronik tablolar ve daha fazlası için destek. İndirme gerekmez.',
         keywords:
@@ -1503,7 +1503,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
         odt: { title: 'ODT Görüntüleyici', description: 'OpenDocument metin dosyalarını görüntüleyin.' },
         txt: { title: 'TXT Görüntüleyici', description: 'Sözdizimi vurgulama ile düz metin dosyalarını görüntüleyin.' },
         md: { title: 'Markdown Görüntüleyici', description: 'İşlenmiş biçimlendirmeyle Markdown dosyalarını görüntüleyin.' },
-        xlsx: { title: 'Excel Görüntüleyici', description: 'Formül desteğiyle Excel elektronik tablolarını görüntüleyin.' },
+        xlsx: { title: 'XLSX Görüntüleyici', description: 'Formül desteğiyle Excel elektronik tablolarını görüntüleyin.' },
         csv: { title: 'CSV Görüntüleyici', description: 'Tablo biçimlendirmesiyle CSV dosyalarını görüntüleyin.' },
         ods: { title: 'ODS Görüntüleyici', description: 'OpenDocument elektronik tablo dosyalarını görüntüleyin.' },
         json: { title: 'JSON Görüntüleyici', description: 'Sözdizimi vurgulama ve biçimlendirmeyle JSON dosyalarını görüntüleyin.' },
@@ -1527,7 +1527,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   ru: {
     viewers_page: {
       meta: {
-        title: 'Бесплатные онлайн-просмотрщики файлов - MorphyHub | Просмотр файлов в браузере',
+        title: 'Бесплатный просмотрщик файлов онлайн',
         description:
           'Просматривайте и предварительно просматривайте файлы прямо в браузере. Поддержка изображений, документов, электронных таблиц и многого другого. Загрузка не требуется.',
         keywords:
@@ -1603,7 +1603,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
         odt: { title: 'Просмотрщик ODT', description: 'Просматривайте текстовые файлы OpenDocument.' },
         txt: { title: 'Просмотрщик TXT', description: 'Просматривайте текстовые файлы с подсветкой синтаксиса.' },
         md: { title: 'Просмотрщик Markdown', description: 'Просматривайте файлы Markdown с отрендеренным форматированием.' },
-        xlsx: { title: 'Просмотрщик Excel', description: 'Просматривайте электронные таблицы Excel с поддержкой формул.' },
+        xlsx: { title: 'Просмотрщик XLSX', description: 'Просматривайте электронные таблицы Excel с поддержкой формул.' },
         csv: { title: 'Просмотрщик CSV', description: 'Просматривайте файлы CSV с табличным форматированием.' },
         ods: { title: 'Просмотрщик ODS', description: 'Просматривайте файлы электронных таблиц OpenDocument.' },
         json: { title: 'Просмотрщик JSON', description: 'Просматривайте файлы JSON с подсветкой синтаксиса и форматированием.' },
@@ -1627,7 +1627,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   ar: {
     viewers_page: {
       meta: {
-        title: 'عارضات الملفات المجانية عبر الإنترنت - MorphyHub | عرض الملفات في المتصفح',
+        title: 'عارض ملفات مجاني على الإنترنت',
         description:
           'عرض ومعاينة الملفات مباشرة في متصفحك. دعم الصور والمستندات وجداول البيانات والمزيد. لا حاجة للتنزيل.',
         keywords:
@@ -1701,7 +1701,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
         odt: { title: 'عارض ODT', description: 'عرض ملفات نص OpenDocument.' },
         txt: { title: 'عارض TXT', description: 'عرض ملفات النص العادي مع تمييز بناء الجملة.' },
         md: { title: 'عارض Markdown', description: 'عرض ملفات Markdown مع تنسيق مقدم.' },
-        xlsx: { title: 'عارض Excel', description: 'عرض جداول بيانات Excel مع دعم الصيغ.' },
+        xlsx: { title: 'عارض XLSX', description: 'عرض جداول بيانات Excel مع دعم الصيغ.' },
         csv: { title: 'عارض CSV', description: 'عرض ملفات CSV مع تنسيق الجدول.' },
         ods: { title: 'عارض ODS', description: 'عرض ملفات جداول بيانات OpenDocument.' },
         json: { title: 'عارض JSON', description: 'عرض ملفات JSON مع تمييز بناء الجملة والتنسيق.' },
@@ -1725,7 +1725,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   th: {
     viewers_page: {
       meta: {
-        title: 'โปรแกรมดูไฟล์ออนไลน์ฟรี - MorphyHub | ดูไฟล์ในเบราว์เซอร์',
+        title: 'โปรแกรมดูไฟล์ออนไลน์ฟรี',
         description:
           'ดูและแสดงตัวอย่างไฟล์โดยตรงในเบราว์เซอร์ของคุณ รองรับรูปภาพ เอกสาร สเปรดชีต และอื่นๆ ไม่ต้องดาวน์โหลด',
         keywords:
@@ -1799,7 +1799,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
         odt: { title: 'โปรแกรมดู ODT', description: 'ดูไฟล์ข้อความ OpenDocument' },
         txt: { title: 'โปรแกรมดู TXT', description: 'ดูไฟล์ข้อความธรรมดาพร้อมการเน้นไวยากรณ์' },
         md: { title: 'โปรแกรมดู Markdown', description: 'ดูไฟล์ Markdown พร้อมการจัดรูปแบบที่แสดงผล' },
-        xlsx: { title: 'โปรแกรมดู Excel', description: 'ดูสเปรดชีต Excel พร้อมการรองรับสูตร' },
+        xlsx: { title: 'โปรแกรมดู XLSX', description: 'ดูสเปรดชีต Excel พร้อมการรองรับสูตร' },
         csv: { title: 'โปรแกรมดู CSV', description: 'ดูไฟล์ CSV พร้อมการจัดรูปแบบตาราง' },
         ods: { title: 'โปรแกรมดู ODS', description: 'ดูไฟล์สเปรดชีต OpenDocument' },
         json: { title: 'โปรแกรมดู JSON', description: 'ดูไฟล์ JSON พร้อมการเน้นไวยากรณ์และการจัดรูปแบบ' },
@@ -1823,7 +1823,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   ja: {
     viewers_page: {
       meta: {
-        title: '無料オンラインファイルビューア - MorphyHub | ブラウザでファイルを表示',
+        title: '無料ファイルビューアオンライン',
         description:
           'ブラウザで直接ファイルを表示およびプレビュー。画像、ドキュメント、スプレッドシートなどをサポート。ダウンロード不要。',
         keywords:
@@ -1897,7 +1897,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
         odt: { title: 'ODTビューア', description: 'OpenDocumentテキストファイルを表示。' },
         txt: { title: 'TXTビューア', description: '構文ハイライトでプレーンテキストファイルを表示。' },
         md: { title: 'Markdownビューア', description: 'レンダリングされたフォーマットでMarkdownファイルを表示。' },
-        xlsx: { title: 'Excelビューア', description: '数式サポートでExcelスプレッドシートを表示。' },
+        xlsx: { title: 'XLSXビューア', description: '数式サポートでExcelスプレッドシートを表示。' },
         csv: { title: 'CSVビューア', description: 'テーブルフォーマットでCSVファイルを表示。' },
         ods: { title: 'ODSビューア', description: 'OpenDocumentスプレッドシートファイルを表示。' },
         json: { title: 'JSONビューア', description: '構文ハイライトとフォーマットでJSONファイルを表示。' },
@@ -1921,7 +1921,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   zh: {
     viewers_page: {
       meta: {
-        title: '免费在线文件查看器 - MorphyHub | 在浏览器中查看文件',
+        title: '免费文件查看器在线',
         description:
           '直接在浏览器中查看和预览文件。支持图像、文档、电子表格等。无需下载。',
         keywords:
@@ -1995,7 +1995,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
         odt: { title: 'ODT查看器', description: '查看OpenDocument文本文件。' },
         txt: { title: 'TXT查看器', description: '查看带有语法高亮的纯文本文件。' },
         md: { title: 'Markdown查看器', description: '查看带有渲染格式的Markdown文件。' },
-        xlsx: { title: 'Excel查看器', description: '查看支持公式的Excel电子表格。' },
+        xlsx: { title: 'XLSX查看器', description: '查看支持公式的Excel电子表格。' },
         csv: { title: 'CSV查看器', description: '查看带有表格格式的CSV文件。' },
         ods: { title: 'ODS查看器', description: '查看OpenDocument电子表格文件。' },
         json: { title: 'JSON查看器', description: '查看带有语法高亮和格式化的JSON文件。' },
@@ -2019,7 +2019,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   id: {
     viewers_page: {
       meta: {
-        title: 'Penampil file online gratis - MorphyHub | Lihat file di browser',
+        title: 'Penampil file gratis online',
         description:
           'Lihat dan pratinjau file langsung di browser Anda. Dukungan untuk gambar, dokumen, spreadsheet, dan lainnya. Tidak perlu unduhan.',
         keywords:
@@ -2093,7 +2093,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
         odt: { title: 'Penampil ODT', description: 'Lihat file teks OpenDocument.' },
         txt: { title: 'Penampil TXT', description: 'Lihat file teks biasa dengan penyorotan sintaks.' },
         md: { title: 'Penampil Markdown', description: 'Lihat file Markdown dengan pemformatan yang dirender.' },
-        xlsx: { title: 'Penampil Excel', description: 'Lihat spreadsheet Excel dengan dukungan rumus.' },
+        xlsx: { title: 'Penampil XLSX', description: 'Lihat spreadsheet Excel dengan dukungan rumus.' },
         csv: { title: 'Penampil CSV', description: 'Lihat file CSV dengan pemformatan tabel.' },
         ods: { title: 'Penampil ODS', description: 'Lihat file spreadsheet OpenDocument.' },
         json: { title: 'Penampil JSON', description: 'Lihat file JSON dengan penyorotan sintaks dan pemformatan.' },
@@ -2117,7 +2117,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   sv: {
     viewers_page: {
       meta: {
-        title: 'Gratis online filvisare - MorphyHub | Visa filer i webbläsaren',
+        title: 'Gratis filvisare online',
         description:
           'Visa och förhandsgranska filer direkt i din webbläsare. Stöd för bilder, dokument, kalkylblad och mer. Ingen nedladdning krävs.',
         keywords:
@@ -2191,7 +2191,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
         odt: { title: 'ODT-visare', description: 'Visa OpenDocument-textfiler.' },
         txt: { title: 'TXT-visare', description: 'Visa oformaterade textfiler med syntaxmarkering.' },
         md: { title: 'Markdown-visare', description: 'Visa Markdown-filer med renderad formatering.' },
-        xlsx: { title: 'Excel-visare', description: 'Visa Excel-kalkylblad med formelstöd.' },
+        xlsx: { title: 'XLSX-visare', description: 'Visa Excel-kalkylblad med formelstöd.' },
         csv: { title: 'CSV-visare', description: 'Visa CSV-filer med tabellformatering.' },
         ods: { title: 'ODS-visare', description: 'Visa OpenDocument-kalkylblad.' },
         json: { title: 'JSON-visare', description: 'Visa JSON-filer med syntaxmarkering och formatering.' },

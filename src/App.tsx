@@ -943,75 +943,19 @@ function App() {
         <Route path="/de/convert/doc-to-odt" element={<DOCToODTConverter />} />
         <Route path="/de/convert/doc-to-txt" element={<DOCToTXTConverter />} />
         <Route path="/id/convert/docx-to-csv" element={<DOCXToCSVConverter />} />
-        <Route path="/id/convert/docx-to-epub" element={<DOCXToEPUBConverter />} />
-        <Route path="/id/convert/docx-to-mobi" element={<DOCXToMOBIConverter />} />
-        <Route path="/id/convert/docx-to-odt" element={<DOCXToODTConverter />} />
-        <Route path="/id/convert/docx-to-txt" element={<DOCXToTXTConverter />} />
         <Route path="/sv/convert/docx-to-csv" element={<DOCXToCSVConverter />} />
-        <Route path="/sv/convert/docx-to-epub" element={<DOCXToEPUBConverter />} />
-        <Route path="/sv/convert/docx-to-mobi" element={<DOCXToMOBIConverter />} />
-        <Route path="/sv/convert/docx-to-odt" element={<DOCXToODTConverter />} />
-        <Route path="/sv/convert/docx-to-txt" element={<DOCXToTXTConverter />} />
         <Route path="/es/convert/docx-to-csv" element={<DOCXToCSVConverter />} />
-        <Route path="/es/convert/docx-to-epub" element={<DOCXToEPUBConverter />} />
-        <Route path="/es/convert/docx-to-mobi" element={<DOCXToMOBIConverter />} />
-        <Route path="/es/convert/docx-to-odt" element={<DOCXToODTConverter />} />
-        <Route path="/es/convert/docx-to-txt" element={<DOCXToTXTConverter />} />
         <Route path="/fr/convert/docx-to-csv" element={<DOCXToCSVConverter />} />
-        <Route path="/fr/convert/docx-to-epub" element={<DOCXToEPUBConverter />} />
-        <Route path="/fr/convert/docx-to-mobi" element={<DOCXToMOBIConverter />} />
-        <Route path="/fr/convert/docx-to-odt" element={<DOCXToODTConverter />} />
-        <Route path="/fr/convert/docx-to-txt" element={<DOCXToTXTConverter />} />
         <Route path="/it/convert/docx-to-csv" element={<DOCXToCSVConverter />} />
-        <Route path="/it/convert/docx-to-epub" element={<DOCXToEPUBConverter />} />
-        <Route path="/it/convert/docx-to-mobi" element={<DOCXToMOBIConverter />} />
-        <Route path="/it/convert/docx-to-odt" element={<DOCXToODTConverter />} />
-        <Route path="/it/convert/docx-to-txt" element={<DOCXToTXTConverter />} />
         <Route path="/nl/convert/docx-to-csv" element={<DOCXToCSVConverter />} />
-        <Route path="/nl/convert/docx-to-epub" element={<DOCXToEPUBConverter />} />
-        <Route path="/nl/convert/docx-to-mobi" element={<DOCXToMOBIConverter />} />
-        <Route path="/nl/convert/docx-to-odt" element={<DOCXToODTConverter />} />
-        <Route path="/nl/convert/docx-to-txt" element={<DOCXToTXTConverter />} />
         <Route path="/pt/convert/docx-to-csv" element={<DOCXToCSVConverter />} />
-        <Route path="/pt/convert/docx-to-epub" element={<DOCXToEPUBConverter />} />
-        <Route path="/pt/convert/docx-to-mobi" element={<DOCXToMOBIConverter />} />
-        <Route path="/pt/convert/docx-to-odt" element={<DOCXToODTConverter />} />
-        <Route path="/pt/convert/docx-to-txt" element={<DOCXToTXTConverter />} />
         <Route path="/vi/convert/docx-to-csv" element={<DOCXToCSVConverter />} />
-        <Route path="/vi/convert/docx-to-epub" element={<DOCXToEPUBConverter />} />
-        <Route path="/vi/convert/docx-to-mobi" element={<DOCXToMOBIConverter />} />
-        <Route path="/vi/convert/docx-to-odt" element={<DOCXToODTConverter />} />
-        <Route path="/vi/convert/docx-to-txt" element={<DOCXToTXTConverter />} />
         <Route path="/tr/convert/docx-to-csv" element={<DOCXToCSVConverter />} />
-        <Route path="/tr/convert/docx-to-epub" element={<DOCXToEPUBConverter />} />
-        <Route path="/tr/convert/docx-to-mobi" element={<DOCXToMOBIConverter />} />
-        <Route path="/tr/convert/docx-to-odt" element={<DOCXToODTConverter />} />
-        <Route path="/tr/convert/docx-to-txt" element={<DOCXToTXTConverter />} />
         <Route path="/ru/convert/docx-to-csv" element={<DOCXToCSVConverter />} />
-        <Route path="/ru/convert/docx-to-epub" element={<DOCXToEPUBConverter />} />
-        <Route path="/ru/convert/docx-to-mobi" element={<DOCXToMOBIConverter />} />
-        <Route path="/ru/convert/docx-to-odt" element={<DOCXToODTConverter />} />
-        <Route path="/ru/convert/docx-to-txt" element={<DOCXToTXTConverter />} />
         <Route path="/ar/convert/docx-to-csv" element={<DOCXToCSVConverter />} />
-        <Route path="/ar/convert/docx-to-epub" element={<DOCXToEPUBConverter />} />
-        <Route path="/ar/convert/docx-to-mobi" element={<DOCXToMOBIConverter />} />
-        <Route path="/ar/convert/docx-to-odt" element={<DOCXToODTConverter />} />
-        <Route path="/ar/convert/docx-to-txt" element={<DOCXToTXTConverter />} />
         <Route path="/th/convert/docx-to-csv" element={<DOCXToCSVConverter />} />
-        <Route path="/th/convert/docx-to-epub" element={<DOCXToEPUBConverter />} />
-        <Route path="/th/convert/docx-to-mobi" element={<DOCXToMOBIConverter />} />
-        <Route path="/th/convert/docx-to-odt" element={<DOCXToODTConverter />} />
-        <Route path="/th/convert/docx-to-txt" element={<DOCXToTXTConverter />} />
         <Route path="/ja/convert/docx-to-csv" element={<DOCXToCSVConverter />} />
-        <Route path="/ja/convert/docx-to-epub" element={<DOCXToEPUBConverter />} />
-        <Route path="/ja/convert/docx-to-mobi" element={<DOCXToMOBIConverter />} />
-        <Route path="/ja/convert/docx-to-odt" element={<DOCXToODTConverter />} />
-        <Route path="/ja/convert/docx-to-txt" element={<DOCXToTXTConverter />} />
         <Route path="/zh/convert/docx-to-csv" element={<DOCXToCSVConverter />} />
-        <Route path="/zh/convert/docx-to-epub" element={<DOCXToEPUBConverter />} />
-        <Route path="/zh/convert/docx-to-mobi" element={<DOCXToMOBIConverter />} />
-        <Route path="/zh/convert/docx-to-odt" element={<DOCXToODTConverter />} />
-        <Route path="/zh/convert/docx-to-txt" element={<DOCXToTXTConverter />} />
         <Route path="/de/convert/heic-to-svg" element={<HEICtoSVGConverter />} />
         <Route path="/de/convert/heic-to-pdf" element={<HEICtoPDFConverter />} />
         <Route path="/de/convert/heic-to-png" element={<HEICtoPNGConventer />} />
