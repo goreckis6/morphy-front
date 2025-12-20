@@ -22521,7 +22521,6 @@ const resources = {
       'csv_to_json.use_case_db': 'Impor database',
       'csv_to_json.single_info': 'Unggah satu file CSV untuk mengonversinya ke format JSON',
       'csv_to_json.batch_info': 'Unggah beberapa file CSV untuk mengonversinya semua ke format JSON',
-      'csv_to_json.convert_files': 'Konversi ke JSON',
       'csv_to_json.seo_title': 'Mengapa Konversi CSV ke JSON?',
       'csv_to_json.seo_description': 'Mengonversi file CSV ke format JSON sangat penting untuk pengembangan web modern, pertukaran data API, dan pengembangan aplikasi mobile. Meskipun file CSV sangat baik untuk penyimpanan data dan aplikasi spreadsheet, format JSON menyediakan format data terstruktur dan hierarkis yang native untuk teknologi web, menjadikannya sempurna untuk web API, aplikasi mobile, dan alur kerja pemrosesan data modern.',
       'csv_to_json.benefits_title': 'Manfaat Utama Format JSON',
@@ -23057,6 +23056,28 @@ const resources = {
       'epub_to_csv.failed_convert': 'Gagal mengonversi'
     }
   }
+};
+
+// Helper function to get localized URL
+export const getLocalizedUrl = (path: string, targetLang: string): string => {
+  const supportedLanguages = ['en', 'pl', 'de', 'id', 'sv', 'es', 'fr', 'it', 'nl', 'pt', 'vi', 'tr', 'ru', 'ar', 'th', 'ja', 'zh'];
+  
+  // Remove any existing language prefix
+  let cleanPath = path;
+  for (const lang of supportedLanguages) {
+    if (path.startsWith(`/${lang}/`) || path === `/${lang}`) {
+      cleanPath = path.substring(lang.length + 1);
+      break;
+    }
+  }
+  
+  // If target language is English, don't add prefix
+  if (targetLang === 'en') {
+    return cleanPath || '/';
+  }
+  
+  // Add the new language prefix
+  return `/${targetLang}${cleanPath}`;
 };
 
 export default resources;
