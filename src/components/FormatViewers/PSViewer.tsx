@@ -6,7 +6,7 @@ import { FileUpload } from '../FileUpload';
 import { FileViewer } from '../FileViewer';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
-import { getLanguageFromUrl, getLocalizedUrl } from '../../i18n';
+import { getLanguageFromUrl } from '../../i18n';
 
 export const PSViewer: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -175,7 +175,7 @@ export const PSViewer: React.FC = () => {
           </div>
           <div className="text-center mt-6">
             <a
-              href={getLocalizedUrl('/', i18n.language)}
+              href="/"
               className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               {t('viewers.ps.back_button')}

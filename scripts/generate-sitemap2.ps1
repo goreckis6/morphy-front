@@ -54,9 +54,8 @@ function Get-UrlXml {
     $url = "$baseUrl$path"
     
     # Determine base path (without language prefix)
-    # Match language code only if followed by / or end of string (prevents matching "vi" in "viewers")
-    $langPattern = '^/(' + ($script:languages -join '|') + ')(/|$)'
-    $basePath = $path -replace $langPattern, '/'
+    $langPattern = '(' + ($script:languages -join '|') + ')'
+    $basePath = $path -replace "^/$langPattern", ''
     if ($basePath -eq '') { $basePath = '/' }
     
     # Remove trailing slash for consistency (except root)
@@ -150,8 +149,8 @@ foreach ($route in $uniqueRoutes) {
     }
     
     # Check if this is a language-specific route
-    $langPattern = '^/(' + ($languages -join '|') + ')/'
-    $isLanguageRoute = $route -match $langPattern
+    $langPattern = '(' + ($languages -join '|') + ')'
+    $isLanguageRoute = $route -match "^/$langPattern/"
     
     if ($isLanguageRoute) {
         # This is already a language route, just add it
@@ -183,22 +182,12 @@ foreach ($route in $uniqueRoutes) {
 # Close urlset
 $xmlContent += "</urlset>`n"
 
-# Save the sitemap (backup old one first if it exists)
-$sitemapPath = Join-Path $PSScriptRoot '..\public\sitemap.xml'
-$sitemapBackupPath = Join-Path $PSScriptRoot '..\public\sitemap_backup.xml'
-
-if (Test-Path $sitemapPath) {
-    Write-Host "Backing up existing sitemap.xml..." -ForegroundColor Yellow
-    Copy-Item $sitemapPath $sitemapBackupPath -Force
-}
-
+# Save the sitemap
+$sitemapPath = Join-Path $PSScriptRoot '..\public\sitemap2.xml'
 $xmlContent | Out-File -FilePath $sitemapPath -Encoding UTF8 -NoNewline
 
-Write-Host "`nsitemap.xml generated successfully!" -ForegroundColor Green
+Write-Host "`nSitemap2.xml generated successfully!" -ForegroundColor Green
 Write-Host "Location: $sitemapPath" -ForegroundColor Cyan
-if (Test-Path $sitemapBackupPath) {
-    Write-Host "Backup saved to: $sitemapBackupPath" -ForegroundColor Gray
-}
 
 # Count URLs
 $urlCount = ([regex]::Matches($xmlContent, '<url>')).Count

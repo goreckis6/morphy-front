@@ -6,7 +6,6 @@ import { FileViewer } from '../FileViewer';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { useTranslation } from 'react-i18next';
-import { getLocalizedUrl } from '../../i18n';
 import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
 
 export const JPGViewer: React.FC = () => {
@@ -146,7 +145,7 @@ export const JPGViewer: React.FC = () => {
           </div>
           <div className="text-center mt-6">
             <a
-              href={getLocalizedUrl('/', i18n.language)}
+              href="/"
               className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               {t('viewers.jpg.home_link')}
