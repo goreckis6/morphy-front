@@ -74,8 +74,8 @@ const resources: Record<string, JPEGViewerTranslations> = {
   en: {
     viewers: {
       jpeg: {
-        meta_title: 'FREE JPG Viewer & Photo File Opener (Online)',
-        meta_description: 'FREE JPG Viewer: Open and view JPG/JPEG image files instantly in your browser. No installation or registration is required. Simple, fast, and secure.',
+        meta_title: 'JPG Viewer: Open & View JPEG Photos Online for Free',
+        meta_description: 'View JPG/JPEG files instantly in your browser. No install, no sign-up, 100% free. Fast, secure, and easy-to-use online image viewer. Try it now!',
         meta_keywords: 'JPEG viewer, JPG viewer, image viewer, JPEG converter, JPG to PNG, view JPEG online, EXIF viewer, photo viewer',
         hero_title: 'Free JPG Viewer',
         hero_subtitle: 'View and analyze JPEG images with professional tools',
@@ -169,8 +169,8 @@ const resources: Record<string, JPEGViewerTranslations> = {
   pl: {
     viewers: {
       jpeg: {
-        meta_title: 'DARMOWY Podgląd JPG i Otwieracz Plików Zdjęciowych (Online)',
-        meta_description: 'DARMOWY Podgląd JPG: Otwieraj i przeglądaj pliki obrazów JPG/JPEG natychmiast w przeglądarce. Nie wymaga instalacji ani rejestracji. Prosty, szybki i bezpieczny.',
+        meta_title: 'Przeglądarka JPG: Otwieraj i Przeglądaj Zdjęcia JPEG Online za Darmo',
+        meta_description: 'Oglądaj pliki JPG/JPEG natychmiast w przeglądarce. Bez instalacji, bez rejestracji, 100% za darmo. Szybka, bezpieczna i łatwa w użyciu przeglądarka obrazów online. Wypróbuj teraz!',
         meta_keywords: 'podgląd jpg, przeglądarka jpg, podgląd jpeg online, podgląd obrazu, przeglądarka zdjęć, exif online',
         hero_title: 'Darmowy Podgląd JPG',
         hero_subtitle: 'Analizuj obrazy JPEG z profesjonalnymi narzędziami',
@@ -264,8 +264,8 @@ const resources: Record<string, JPEGViewerTranslations> = {
   de: {
     viewers: {
       jpeg: {
-        meta_title: 'KOSTENLOSER JPG Viewer & Foto-Dateiöffner (Online)',
-        meta_description: 'KOSTENLOSER JPG Viewer: Öffnen und zeigen Sie JPG/JPEG-Bilddateien sofort in Ihrem Browser. Keine Installation oder Registrierung erforderlich. Einfach, schnell und sicher.',
+        meta_title: 'JPG Viewer: JPEG-Fotos Online Kostenlos Öffnen & Ansehen',
+        meta_description: 'Zeigen Sie JPG/JPEG-Dateien sofort in Ihrem Browser. Keine Installation, keine Anmeldung, 100% kostenlos. Schneller, sicherer und benutzerfreundlicher Online-Bildbetrachter. Jetzt ausprobieren!',
         meta_keywords: 'jpg viewer, jpeg viewer online, bildbetrachter, exif viewer, foto viewer',
         hero_title: 'Kostenloser JPG-Viewer',
         hero_subtitle: 'JPEG-Bilder mit professionellen Werkzeugen analysieren',
@@ -359,8 +359,8 @@ const resources: Record<string, JPEGViewerTranslations> = {
   es: {
     viewers: {
       jpeg: {
-        meta_title: 'VISOR JPG GRATIS y Abridor de Archivos de Fotos (Online)',
-        meta_description: 'VISOR JPG GRATIS: Abre y visualiza archivos de imágenes JPG/JPEG instantáneamente en tu navegador. No se requiere instalación ni registro. Simple, rápido y seguro.',
+        meta_title: 'Visor JPG: Abre y Visualiza Fotos JPEG Online Gratis',
+        meta_description: 'Visualiza archivos JPG/JPEG al instante en tu navegador. Sin instalación, sin registro, 100% gratis. Visor de imágenes online rápido, seguro y fácil de usar. ¡Pruébalo ahora!',
         meta_keywords: 'visor jpeg, visor jpg, visor de imágenes, convertidor jpeg, jpg a png, ver jpeg online, visor exif, visor de fotos',
         hero_title: 'Visor JPG Gratis',
         hero_subtitle: 'Ver y analizar imágenes JPEG con herramientas profesionales',
@@ -454,8 +454,8 @@ const resources: Record<string, JPEGViewerTranslations> = {
   fr: {
     viewers: {
       jpeg: {
-        meta_title: 'VISIONNEUSE JPG GRATUITE et Ouvrir Fichiers Photo (En Ligne)',
-        meta_description: 'VISIONNEUSE JPG GRATUITE: Ouvrez et visualisez les fichiers d\'images JPG/JPEG instantanément dans votre navigateur. Aucune installation ni inscription n\'est requise. Simple, rapide et sécurisé.',
+        meta_title: 'Visionneuse JPG: Ouvrir et Voir Photos JPEG en Ligne Gratuitement',
+        meta_description: 'Visualisez les fichiers JPG/JPEG instantanément dans votre navigateur. Pas d\'installation, pas d\'inscription, 100% gratuit. Visionneuse d\'images en ligne rapide, sécurisée et facile à utiliser. Essayez maintenant!',
         meta_keywords: 'visionneuse jpeg, visionneuse jpg, visionneuse d\'images, convertisseur jpeg, jpg vers png, voir jpeg en ligne, visionneuse exif, visionneuse de photos',
         hero_title: 'Visionneuse JPG Gratuite',
         hero_subtitle: 'Voir et analyser les images JPEG avec des outils professionnels',
@@ -549,8 +549,8 @@ const resources: Record<string, JPEGViewerTranslations> = {
   it: {
     viewers: {
       jpeg: {
-        meta_title: 'VISUALIZZATORE JPG GRATUITO e Apri File Foto (Online)',
-        meta_description: 'VISUALIZZATORE JPG GRATUITO: Apri e visualizza file di immagini JPG/JPEG istantaneamente nel tuo browser. Non è richiesta installazione o registrazione. Semplice, veloce e sicuro.',
+        meta_title: 'Visualizzatore JPG: Apri e Visualizza Foto JPEG Online Gratis',
+        meta_description: 'Visualizza file JPG/JPEG istantaneamente nel tuo browser. Nessuna installazione, nessuna registrazione, 100% gratuito. Visualizzatore di immagini online veloce, sicuro e facile da usare. Provalo ora!',
         meta_keywords: 'visualizzatore jpeg, visualizzatore jpg, visualizzatore immagini, convertitore jpeg, jpg a png, visualizza jpeg online, visualizzatore exif, visualizzatore foto',
         hero_title: 'Visualizzatore JPG Gratuito',
         hero_subtitle: 'Visualizza e analizza immagini JPEG con strumenti professionali',
@@ -644,8 +644,8 @@ const resources: Record<string, JPEGViewerTranslations> = {
   nl: {
     viewers: {
       jpeg: {
-        meta_title: 'GRATIS JPG Viewer en Foto Bestandsopener (Online)',
-        meta_description: 'GRATIS JPG Viewer: Open en bekijk JPG/JPEG afbeeldingsbestanden direct in uw browser. Geen installatie of registratie vereist. Eenvoudig, snel en veilig.',
+        meta_title: 'JPG Viewer: JPEG-Foto\'s Online Gratis Openen & Bekijken',
+        meta_description: 'Bekijk JPG/JPEG-bestanden direct in uw browser. Geen installatie, geen registratie, 100% gratis. Snelle, veilige en gebruiksvriendelijke online afbeeldingsviewer. Probeer het nu!',
         meta_keywords: 'jpeg viewer, jpg viewer, afbeeldingsviewer, jpeg converter, jpg naar png, bekijk jpeg online, exif viewer, fotoviewer',
         hero_title: 'Gratis JPG Viewer',
         hero_subtitle: 'Bekijk en analyseer JPEG afbeeldingen met professionele tools',
@@ -739,8 +739,8 @@ const resources: Record<string, JPEGViewerTranslations> = {
   pt: {
     viewers: {
       jpeg: {
-        meta_title: 'VISUALIZADOR JPG GRATUITO e Abridor de Arquivos de Fotos (Online)',
-        meta_description: 'VISUALIZADOR JPG GRATUITO: Abra e visualize arquivos de imagens JPG/JPEG instantaneamente no seu navegador. Nenhuma instalação ou registro é necessário. Simples, rápido e seguro.',
+        meta_title: 'Visualizador JPG: Abra e Visualize Fotos JPEG Online Grátis',
+        meta_description: 'Visualize arquivos JPG/JPEG instantaneamente no seu navegador. Sem instalação, sem cadastro, 100% grátis. Visualizador de imagens online rápido, seguro e fácil de usar. Experimente agora!',
         meta_keywords: 'visualizador jpeg, visualizador jpg, visualizador de imagens, conversor jpeg, jpg para png, ver jpeg online, visualizador exif, visualizador de fotos',
         hero_title: 'Visualizador JPG Gratuito',
         hero_subtitle: 'Ver e analisar imagens JPEG com ferramentas profissionais',
@@ -834,8 +834,8 @@ const resources: Record<string, JPEGViewerTranslations> = {
   vi: {
     viewers: {
       jpeg: {
-        meta_title: 'TRÌNH XEM JPG MIỄN PHÍ và Mở Tệp Ảnh (Trực Tuyến)',
-        meta_description: 'TRÌNH XEM JPG MIỄN PHÍ: Mở và xem tệp hình ảnh JPG/JPEG ngay lập tức trong trình duyệt của bạn. Không cần cài đặt hoặc đăng ký. Đơn giản, nhanh chóng và an toàn.',
+        meta_title: 'Trình Xem JPG: Mở & Xem Ảnh JPEG Trực Tuyến Miễn Phí',
+        meta_description: 'Xem tệp JPG/JPEG ngay lập tức trong trình duyệt của bạn. Không cài đặt, không đăng ký, 100% miễn phí. Trình xem hình ảnh trực tuyến nhanh, an toàn và dễ sử dụng. Thử ngay!',
         meta_keywords: 'trình xem jpeg, trình xem jpg, trình xem hình ảnh, bộ chuyển đổi jpeg, jpg sang png, xem jpeg trực tuyến, trình xem exif, trình xem ảnh',
         hero_title: 'Trình Xem JPG Miễn Phí',
         hero_subtitle: 'Xem và phân tích hình ảnh JPEG với các công cụ chuyên nghiệp',
@@ -929,8 +929,8 @@ const resources: Record<string, JPEGViewerTranslations> = {
   tr: {
     viewers: {
       jpeg: {
-        meta_title: 'ÜCRETSİZ JPG Görüntüleyici ve Fotoğraf Dosya Açıcı (Çevrimiçi)',
-        meta_description: 'ÜCRETSİZ JPG Görüntüleyici: JPG/JPEG görsel dosyalarını tarayıcınızda anında açın ve görüntüleyin. Kurulum veya kayıt gerekmez. Basit, hızlı ve güvenli.',
+        meta_title: 'JPG Görüntüleyici: JPEG Fotoğrafları Çevrimiçi Ücretsiz Açın ve Görüntüleyin',
+        meta_description: 'JPG/JPEG dosyalarını tarayıcınızda anında görüntüleyin. Kurulum yok, kayıt yok, %100 ücretsiz. Hızlı, güvenli ve kullanımı kolay çevrimiçi resim görüntüleyici. Şimdi deneyin!',
         meta_keywords: 'jpeg görüntüleyici, jpg görüntüleyici, görsel görüntüleyici, jpeg dönüştürücü, jpg\'den png\'ye, jpeg çevrimiçi görüntüle, exif görüntüleyici, foto görüntüleyici',
         hero_title: 'Ücretsiz JPG Görüntüleyici',
         hero_subtitle: 'JPEG görsellerini profesyonel araçlarla görüntüle ve analiz et',
@@ -1024,8 +1024,8 @@ const resources: Record<string, JPEGViewerTranslations> = {
   ru: {
     viewers: {
       jpeg: {
-        meta_title: 'БЕСПЛАТНЫЙ Просмотрщик JPG и Открыватель Фото Файлов (Онлайн)',
-        meta_description: 'БЕСПЛАТНЫЙ Просмотрщик JPG: Открывайте и просматривайте файлы изображений JPG/JPEG мгновенно в вашем браузере. Установка или регистрация не требуется. Простой, быстрый и безопасный.',
+        meta_title: 'Просмотрщик JPG: Открывайте и Просматривайте JPEG Фото Онлайн Бесплатно',
+        meta_description: 'Просматривайте файлы JPG/JPEG мгновенно в браузере. Без установки, без регистрации, 100% бесплатно. Быстрый, безопасный и простой в использовании онлайн-просмотрщик изображений. Попробуйте сейчас!',
         meta_keywords: 'просмотрщик jpeg, просмотрщик jpg, просмотрщик изображений, конвертер jpeg, jpg в png, просмотр jpeg онлайн, просмотрщик exif, просмотрщик фотографий',
         hero_title: 'Бесплатный Просмотрщик JPG',
         hero_subtitle: 'Просматривайте и анализируйте изображения JPEG с профессиональными инструментами',
@@ -1119,8 +1119,8 @@ const resources: Record<string, JPEGViewerTranslations> = {
   ar: {
     viewers: {
       jpeg: {
-        meta_title: 'عارض JPG مجاني وفتاح ملفات الصور (عبر الإنترنت)',
-        meta_description: 'عارض JPG مجاني: افتح واعرض ملفات صور JPG/JPEG على الفور في متصفحك. لا حاجة للتثبيت أو التسجيل. بسيط وسريع وآمن.',
+        meta_title: 'عارض JPG: افتح وشاهد صور JPEG عبر الإنترنت مجاناً',
+        meta_description: 'اعرض ملفات JPG/JPEG على الفور في متصفحك. بدون تثبيت، بدون تسجيل، مجاني 100%. عارض صور إلكتروني سريع وآمن وسهل الاستخدام. جربه الآن!',
         meta_keywords: 'عارض jpeg، عارض jpg، عارض الصور، محول jpeg، jpg إلى png، عرض jpeg عبر الإنترنت، عارض exif، عارض الصور',
         hero_title: 'عارض JPG مجاني',
         hero_subtitle: 'اعرض وحلل صور JPEG بأدوات احترافية',
@@ -1214,8 +1214,8 @@ const resources: Record<string, JPEGViewerTranslations> = {
   th: {
     viewers: {
       jpeg: {
-        meta_title: 'โปรแกรมดู JPG ฟรีและเปิดไฟล์รูปภาพ (ออนไลน์)',
-        meta_description: 'โปรแกรมดู JPG ฟรี: เปิดและดูไฟล์รูปภาพ JPG/JPEG ทันทีในเบราว์เซอร์ของคุณ ไม่ต้องติดตั้งหรือลงทะเบียน เรียบง่าย เร็วและปลอดภัย',
+        meta_title: 'โปรแกรมดู JPG: เปิดและดูภาพถ่าย JPEG ออนไลน์ฟรี',
+        meta_description: 'ดูไฟล์ JPG/JPEG ทันทีในเบราว์เซอร์ของคุณ ไม่ต้องติดตั้ง ไม่ต้องลงทะเบียน ฟรี 100% โปรแกรมดูรูปภาพออนไลน์ที่เร็ว ปลอดภัย และใช้งานง่าย ลองเลย!',
         meta_keywords: 'โปรแกรมดู jpeg, โปรแกรมดู jpg, โปรแกรมดูรูปภาพ, ตัวแปลง jpeg, jpg เป็น png, ดู jpeg ออนไลน์, โปรแกรมดู exif, โปรแกรมดูรูปถ่าย',
         hero_title: 'โปรแกรมดู JPG ฟรี',
         hero_subtitle: 'ดูและวิเคราะห์รูปภาพ JPEG ด้วยเครื่องมือระดับมืออาชีพ',
@@ -1309,8 +1309,8 @@ const resources: Record<string, JPEGViewerTranslations> = {
   ja: {
     viewers: {
       jpeg: {
-        meta_title: '無料JPGビューアーと写真ファイルオープナー（オンライン）',
-        meta_description: '無料JPGビューアー：ブラウザでJPG/JPEG画像ファイルを即座に開いて表示します。インストールや登録は不要です。シンプル、高速、安全です。',
+        meta_title: 'JPGビューアー：JPEG写真をオンラインで無料で開いて表示',
+        meta_description: 'ブラウザでJPG/JPEGファイルを即座に表示。インストール不要、登録不要、100%無料。高速で安全、使いやすいオンライン画像ビューアー。今すぐお試しください！',
         meta_keywords: 'jpegビューアー、jpgビューアー、画像ビューアー、jpegコンバーター、jpgからpng、jpegオンライン表示、exifビューアー、写真ビューアー',
         hero_title: '無料JPGビューアー',
         hero_subtitle: 'プロフェッショナルツールでJPEG画像を表示・分析',
@@ -1404,8 +1404,8 @@ const resources: Record<string, JPEGViewerTranslations> = {
   zh: {
     viewers: {
       jpeg: {
-        meta_title: '免费JPG查看器和照片文件打开器（在线）',
-        meta_description: '免费JPG查看器：在浏览器中即时打开和查看JPG/JPEG图片文件。无需安装或注册。简单、快速且安全。',
+        meta_title: 'JPG查看器：在线免费打开和查看JPEG照片',
+        meta_description: '在浏览器中即时查看JPG/JPEG文件。无需安装，无需注册，100%免费。快速、安全、易用的在线图片查看器。立即试用！',
         meta_keywords: 'jpeg查看器，jpg查看器，图片查看器，jpeg转换器，jpg转png，在线查看jpeg，exif查看器，照片查看器',
         hero_title: '免费JPG查看器',
         hero_subtitle: '使用专业工具查看和分析JPEG图片',
@@ -1499,8 +1499,8 @@ const resources: Record<string, JPEGViewerTranslations> = {
   id: {
     viewers: {
       jpeg: {
-        meta_title: 'PENAMPIL JPG GRATIS dan Pembuka File Foto (Online)',
-        meta_description: 'PENAMPIL JPG GRATIS: Buka dan lihat file gambar JPG/JPEG secara instan di browser Anda. Tidak perlu instalasi atau registrasi. Sederhana, cepat dan aman.',
+        meta_title: 'Penampil JPG: Buka & Lihat Foto JPEG Online Gratis',
+        meta_description: 'Lihat file JPG/JPEG secara instan di browser Anda. Tanpa instalasi, tanpa pendaftaran, 100% gratis. Penampil gambar online yang cepat, aman, dan mudah digunakan. Coba sekarang!',
         meta_keywords: 'penampil jpeg, penampil jpg, penampil gambar, konverter jpeg, jpg ke png, lihat jpeg online, penampil exif, penampil foto',
         hero_title: 'Penampil JPG Gratis',
         hero_subtitle: 'Lihat dan analisis gambar JPEG dengan alat profesional',
@@ -1594,8 +1594,8 @@ const resources: Record<string, JPEGViewerTranslations> = {
   sv: {
     viewers: {
       jpeg: {
-        meta_title: 'GRATIS JPG-visare och Foto Filöppnare (Online)',
-        meta_description: 'GRATIS JPG-visare: Öppna och visa JPG/JPEG bildfiler omedelbart i din webbläsare. Ingen installation eller registrering krävs. Enkelt, snabbt och säkert.',
+        meta_title: 'JPG-visare: Öppna & Visa JPEG-foton Online Gratis',
+        meta_description: 'Visa JPG/JPEG-filer omedelbart i din webbläsare. Ingen installation, ingen registrering, 100% gratis. Snabb, säker och lättanvänd online bildvisare. Prova nu!',
         meta_keywords: 'jpeg-visare, jpg-visare, bildvisare, jpeg-konverterare, jpg till png, visa jpeg online, exif-visare, fotovisare',
         hero_title: 'Gratis JPG-visare',
         hero_subtitle: 'Visa och analysera JPEG-bilder med professionella verktyg',
