@@ -76,8 +76,8 @@ const resources: Record<string, SVGViewerTranslations> = {
   en: {
     viewers: {
       svg: {
-        meta_title: 'Free SVG Viewer - Online Scalable Vector Graphic Viewer',
-        meta_description: 'View and convert SVG (Scalable Vector Graphics) files online for free. Infinite scalability, code-based editing, and interactive elements. Up to 20 files, 100MB total. No registration required.',
+        meta_title: 'SVG Viewer: Open & View SVG Vector Files Online for Free',
+        meta_description: 'View SVG vector files instantly in your browser. No software or registration required. A fast, secure, and 100% free online SVG viewer. Try it now!',
         meta_keywords: 'SVG viewer, vector graphics, SVG to PNG, SVG to JPEG, scalable graphics, XML graphics, logo viewer, icon viewer, batch processing',
         hero_title: 'Free SVG Viewer',
         hero_subtitle: 'View scalable vector graphics with infinite zoom and code editing',
@@ -171,8 +171,8 @@ const resources: Record<string, SVGViewerTranslations> = {
   pl: {
     viewers: {
       svg: {
-        meta_title: 'Darmowy Podgląd SVG - Online Przeglądarka Grafiki Wektorowej',
-        meta_description: 'Przeglądaj i konwertuj pliki SVG (Scalable Vector Graphics) online za darmo. Nieskończona skalowalność, edycja oparta na kodzie i elementy interaktywne. Do 20 plików, 100MB łącznie. Bez rejestracji.',
+        meta_title: 'Przeglądarka SVG: Otwórz i Wyświetl Pliki Wektorowe SVG Online za Darmo',
+        meta_description: 'Wyświetlaj pliki wektorowe SVG natychmiast w przeglądarce. Bez oprogramowania i rejestracji. Szybka, bezpieczna i w 100% darmowa przeglądarka SVG online. Wypróbuj teraz!',
         meta_keywords: 'podgląd SVG, grafika wektorowa, SVG do PNG, SVG do JPEG, skalowalna grafika, grafika XML, podgląd logo, podgląd ikon, przetwarzanie wsadowe',
         hero_title: 'Darmowy Podgląd SVG',
         hero_subtitle: 'Przeglądaj skalowalną grafikę wektorową z nieskończonym zoomem i edycją kodu',
@@ -266,8 +266,8 @@ const resources: Record<string, SVGViewerTranslations> = {
   de: {
     viewers: {
       svg: {
-        meta_title: 'Kostenloser SVG Viewer – Online Skalierbarer Vektorgrafik-Viewer',
-        meta_description: 'SVG (Scalable Vector Graphics) Dateien online kostenlos anzeigen und konvertieren. Unendliche Skalierbarkeit, codebasierte Bearbeitung und interaktive Elemente. Bis zu 20 Dateien, 100MB insgesamt. Keine Registrierung erforderlich.',
+        meta_title: 'SVG Viewer: SVG-Vektordateien Online Kostenlos Öffnen & Anzeigen',
+        meta_description: 'SVG-Vektordateien sofort in Ihrem Browser anzeigen. Keine Software oder Registrierung erforderlich. Ein schneller, sicherer und 100% kostenloser Online-SVG-Viewer. Jetzt ausprobieren!',
         meta_keywords: 'SVG Viewer, Vektorgrafik, SVG zu PNG, SVG zu JPEG, skalierbare Grafiken, XML-Grafiken, Logo-Viewer, Icon-Viewer, Stapelverarbeitung',
         hero_title: 'Kostenloser SVG Viewer',
         hero_subtitle: 'Skalierbare Vektorgrafiken mit unendlichem Zoom und Code-Bearbeitung anzeigen',
@@ -361,8 +361,8 @@ const resources: Record<string, SVGViewerTranslations> = {
   es: {
     viewers: {
       svg: {
-        meta_title: 'Visor SVG Gratis - Visor de Gráficos Vectoriales Escalables Online',
-        meta_description: 'Ver y convertir archivos SVG (Scalable Vector Graphics) online gratis. Escalabilidad infinita, edición basada en código y elementos interactivos. Hasta 20 archivos, 100MB total. Sin registro requerido.',
+        meta_title: 'Visor SVG: Abre y Visualiza Archivos Vectoriales SVG Online Gratis',
+        meta_description: 'Visualiza archivos vectoriales SVG al instante en tu navegador. Sin software ni registro requerido. Un visor SVG online rápido, seguro y 100% gratis. ¡Pruébalo ahora!',
         meta_keywords: 'visor SVG, gráficos vectoriales, SVG a PNG, SVG a JPEG, gráficos escalables, gráficos XML, visor de logos, visor de iconos, procesamiento por lotes',
         hero_title: 'Visor SVG Gratis',
         hero_subtitle: 'Ver gráficos vectoriales escalables con zoom infinito y edición de código',
@@ -456,8 +456,8 @@ const resources: Record<string, SVGViewerTranslations> = {
   fr: {
     viewers: {
       svg: {
-        meta_title: 'Visionneuse SVG Gratuite - Visionneuse de Graphiques Vectoriels Scalables en Ligne',
-        meta_description: 'Voir et convertir des fichiers SVG (Scalable Vector Graphics) en ligne gratuitement. Scalabilité infinie, édition basée sur le code et éléments interactifs. Jusqu\'à 20 fichiers, 100 Mo au total. Aucune inscription requise.',
+        meta_title: 'Visionneuse SVG: Ouvrez et Visualisez des Fichiers Vectoriels SVG en Ligne Gratuitement',
+        meta_description: 'Visualisez des fichiers vectoriels SVG instantanément dans votre navigateur. Aucun logiciel ou inscription requis. Une visionneuse SVG en ligne rapide, sécurisée et 100% gratuite. Essayez-la maintenant!',
         meta_keywords: 'visionneuse SVG, graphiques vectoriels, SVG vers PNG, SVG vers JPEG, graphiques scalables, graphiques XML, visionneuse de logos, visionneuse d\'icônes, traitement par lots',
         hero_title: 'Visionneuse SVG Gratuite',
         hero_subtitle: 'Voir des graphiques vectoriels scalables avec zoom infini et édition de code',
@@ -551,8 +551,8 @@ const resources: Record<string, SVGViewerTranslations> = {
   it: {
     viewers: {
       svg: {
-        meta_title: 'Visualizzatore SVG Gratuito - Visualizzatore di Grafica Vettoriale Scalabile Online',
-        meta_description: 'Visualizza e converti file SVG (Scalable Vector Graphics) online gratuitamente. Scalabilità infinita, modifica basata su codice ed elementi interattivi. Fino a 20 file, 100MB totali. Nessuna registrazione richiesta.',
+        meta_title: 'Visualizzatore SVG: Apri e Visualizza File Vettoriali SVG Online Gratis',
+        meta_description: 'Visualizza file vettoriali SVG istantaneamente nel tuo browser. Nessun software o registrazione richiesta. Un visualizzatore SVG online veloce, sicuro e 100% gratuito. Provalo ora!',
         meta_keywords: 'visualizzatore SVG, grafica vettoriale, SVG a PNG, SVG a JPEG, grafica scalabile, grafica XML, visualizzatore logo, visualizzatore icone, elaborazione batch',
         hero_title: 'Visualizzatore SVG Gratuito',
         hero_subtitle: 'Visualizza grafica vettoriale scalabile con zoom infinito e modifica codice',
@@ -646,8 +646,8 @@ const resources: Record<string, SVGViewerTranslations> = {
   nl: {
     viewers: {
       svg: {
-        meta_title: 'Gratis SVG Viewer - Online Schaalbaar Vectorafbeelding Viewer',
-        meta_description: 'Bekijk en converteer SVG (Scalable Vector Graphics) bestanden online gratis. Oneindige schaalbaarheid, code-gebaseerde bewerking en interactieve elementen. Tot 20 bestanden, 100MB totaal. Geen registratie vereist.',
+        meta_title: 'SVG Viewer: Open & Bekijk SVG Vectorbestanden Online Gratis',
+        meta_description: 'Bekijk SVG vectorbestanden direct in je browser. Geen software of registratie vereist. Een snelle, veilige en 100% gratis online SVG-viewer. Probeer het nu!',
         meta_keywords: 'SVG viewer, vectorafbeeldingen, SVG naar PNG, SVG naar JPEG, schaalbare afbeeldingen, XML-afbeeldingen, logo viewer, icoon viewer, batchverwerking',
         hero_title: 'Gratis SVG Viewer',
         hero_subtitle: 'Bekijk schaalbare vectorafbeeldingen met oneindige zoom en codebewerking',
@@ -741,8 +741,8 @@ const resources: Record<string, SVGViewerTranslations> = {
   pt: {
     viewers: {
       svg: {
-        meta_title: 'Visualizador SVG Gratuito - Visualizador de Gráficos Vetoriais Escaláveis Online',
-        meta_description: 'Ver e converter arquivos SVG (Scalable Vector Graphics) online gratuitamente. Escalabilidade infinita, edição baseada em código e elementos interativos. Até 20 arquivos, 100MB total. Nenhum registro necessário.',
+        meta_title: 'Visualizador SVG: Abra e Visualize Arquivos Vetoriais SVG Online Grátis',
+        meta_description: 'Visualize arquivos vetoriais SVG instantaneamente no seu navegador. Sem software ou registro necessário. Um visualizador SVG online rápido, seguro e 100% gratuito. Experimente agora!',
         meta_keywords: 'visualizador SVG, gráficos vetoriais, SVG para PNG, SVG para JPEG, gráficos escaláveis, gráficos XML, visualizador de logos, visualizador de ícones, processamento em lote',
         hero_title: 'Visualizador SVG Gratuito',
         hero_subtitle: 'Ver gráficos vetoriais escaláveis com zoom infinito e edição de código',
@@ -836,8 +836,8 @@ const resources: Record<string, SVGViewerTranslations> = {
   vi: {
     viewers: {
       svg: {
-        meta_title: 'Trình Xem SVG Miễn Phí - Trình Xem Đồ Họa Vector Có Thể Mở Rộng Trực Tuyến',
-        meta_description: 'Xem và chuyển đổi tệp SVG (Scalable Vector Graphics) trực tuyến miễn phí. Khả năng mở rộng vô hạn, chỉnh sửa dựa trên mã và các phần tử tương tác. Lên đến 20 tệp, 100MB tổng cộng. Không cần đăng ký.',
+        meta_title: 'Trình Xem SVG: Mở và Xem Tệp Vector SVG Trực Tuyến Miễn Phí',
+        meta_description: 'Xem tệp vector SVG ngay lập tức trong trình duyệt của bạn. Không cần phần mềm hoặc đăng ký. Trình xem SVG online nhanh, an toàn và 100% miễn phí. Thử ngay!',
         meta_keywords: 'trình xem SVG, đồ họa vector, SVG sang PNG, SVG sang JPEG, đồ họa có thể mở rộng, đồ họa XML, trình xem logo, trình xem biểu tượng, xử lý hàng loạt',
         hero_title: 'Trình Xem SVG Miễn Phí',
         hero_subtitle: 'Xem đồ họa vector có thể mở rộng với zoom vô hạn và chỉnh sửa mã',
@@ -931,8 +931,8 @@ const resources: Record<string, SVGViewerTranslations> = {
   tr: {
     viewers: {
       svg: {
-        meta_title: 'Ücretsiz SVG Görüntüleyici - Online Ölçeklenebilir Vektör Grafik Görüntüleyici',
-        meta_description: 'SVG (Scalable Vector Graphics) dosyalarını çevrimiçi görüntüleyin ve ücretsiz dönüştürün. Sonsuz ölçeklenebilirlik, kod tabanlı düzenleme ve etkileşimli öğeler. 20 dosyaya kadar, toplam 100MB. Kayıt gerekmez.',
+        meta_title: 'SVG Görüntüleyici: SVG Vektör Dosyalarını Çevrimiçi Ücretsiz Açın ve Görüntüleyin',
+        meta_description: 'SVG vektör dosyalarını tarayıcınızda anında görüntüleyin. Yazılım veya kayıt gerekmez. Hızlı, güvenli ve %100 ücretsiz çevrimiçi SVG görüntüleyici. Şimdi deneyin!',
         meta_keywords: 'SVG görüntüleyici, vektör grafikleri, SVG\'den PNG\'ye, SVG\'den JPEG\'ye, ölçeklenebilir grafikler, XML grafikleri, logo görüntüleyici, ikon görüntüleyici, toplu işleme',
         hero_title: 'Ücretsiz SVG Görüntüleyici',
         hero_subtitle: 'Sonsuz zoom ve kod düzenleme ile ölçeklenebilir vektör grafiklerini görüntüleyin',
@@ -1026,8 +1026,8 @@ const resources: Record<string, SVGViewerTranslations> = {
   ru: {
     viewers: {
       svg: {
-        meta_title: 'Бесплатный Просмотрщик SVG - Онлайн Просмотрщик Масштабируемой Векторной Графики',
-        meta_description: 'Просматривайте и конвертируйте файлы SVG (Scalable Vector Graphics) онлайн бесплатно. Бесконечная масштабируемость, редактирование на основе кода и интерактивные элементы. До 20 файлов, 100 МБ всего. Регистрация не требуется.',
+        meta_title: 'Просмотрщик SVG: Открывайте и Просматривайте Векторные Файлы SVG Онлайн Бесплатно',
+        meta_description: 'Просматривайте векторные файлы SVG мгновенно в браузере. Без программного обеспечения и регистрации. Быстрый, безопасный и 100% бесплатный онлайн-просмотрщик SVG. Попробуйте сейчас!',
         meta_keywords: 'просмотрщик SVG, векторная графика, SVG в PNG, SVG в JPEG, масштабируемая графика, XML графика, просмотрщик логотипов, просмотрщик иконок, пакетная обработка',
         hero_title: 'Бесплатный Просмотрщик SVG',
         hero_subtitle: 'Просматривайте масштабируемую векторную графику с бесконечным зумом и редактированием кода',
@@ -1121,8 +1121,8 @@ const resources: Record<string, SVGViewerTranslations> = {
   ar: {
     viewers: {
       svg: {
-        meta_title: 'عارض SVG مجاني - عارض الرسوم المتجهة القابلة للتوسيع عبر الإنترنت',
-        meta_description: 'اعرض واعرض ملفات SVG (Scalable Vector Graphics) عبر الإنترنت مجانًا. قابلية التوسيع اللانهائية، التحرير القائم على الكود والعناصر التفاعلية. حتى 20 ملفًا، 100 ميجابايت إجمالي. لا يلزم التسجيل.',
+        meta_title: 'عارض SVG: افتح وشاهد ملفات المتجهات SVG عبر الإنترنت مجاناً',
+        meta_description: 'اعرض ملفات المتجهات SVG فوراً في متصفحك. لا حاجة لبرامج أو تسجيل. عارض SVG عبر الإنترنت سريع وآمن ومجاني 100%. جربه الآن!',
         meta_keywords: 'عارض SVG، الرسوم المتجهة، SVG إلى PNG، SVG إلى JPEG، الرسوم القابلة للتوسيع، الرسوم XML، عارض الشعارات، عارض الأيقونات، المعالجة المجمعة',
         hero_title: 'عارض SVG مجاني',
         hero_subtitle: 'اعرض الرسوم المتجهة القابلة للتوسيع مع التكبير اللانهائي وتحرير الكود',
@@ -1216,8 +1216,8 @@ const resources: Record<string, SVGViewerTranslations> = {
   th: {
     viewers: {
       svg: {
-        meta_title: 'โปรแกรมดู SVG ฟรี - โปรแกรมดูกราฟิกเวกเตอร์ที่ปรับขนาดได้ออนไลน์',
-        meta_description: 'ดูและแปลงไฟล์ SVG (Scalable Vector Graphics) ออนไลน์ฟรี ความสามารถในการขยายไม่จำกัด การแก้ไขตามโค้ดและองค์ประกอบแบบโต้ตอบ สูงสุด 20 ไฟล์ 100MB รวม ไม่ต้องลงทะเบียน',
+        meta_title: 'โปรแกรมดู SVG: เปิดแลยดูไฟล์เวกเตอร์ SVG ออนไลน์ฟรี',
+        meta_description: 'ดูไฟล์เวกเตอร์ SVG ทันทีในเบราว์เซอร์ของคุณ ไม่ต้องใช้ซอฟต์แวร์หรือลงทะเบียน โปรแกรมดู SVG ออนไลน์ที่เร็ว ปลอดภัย และฟรี 100% ลองเลย!',
         meta_keywords: 'โปรแกรมดู SVG, กราฟิกเวกเตอร์, SVG เป็น PNG, SVG เป็น JPEG, กราฟิกที่ปรับขนาดได้, กราฟิก XML, โปรแกรมดูโลโก้, โปรแกรมดูไอคอน, การประมวลผลแบบกลุ่ม',
         hero_title: 'โปรแกรมดู SVG ฟรี',
         hero_subtitle: 'ดูกราฟิกเวกเตอร์ที่ปรับขนาดได้ด้วยการซูมไม่จำกัดและการแก้ไขโค้ด',
@@ -1311,8 +1311,8 @@ const resources: Record<string, SVGViewerTranslations> = {
   ja: {
     viewers: {
       svg: {
-        meta_title: '無料SVGビューアー - オンラインスケーラブルベクターグラフィックビューアー',
-        meta_description: 'SVG (Scalable Vector Graphics) ファイルをオンラインで無料で表示および変換します。無限のスケーラビリティ、コードベースの編集、インタラクティブ要素。最大20ファイル、合計100MB。登録不要。',
+        meta_title: 'SVGビューアー：SVGベクターファイルをオンラインで無料で開いて表示',
+        meta_description: 'SVGベクターファイルをブラウザで即座に表示。ソフトウェアや登録不要。高速、安全、100%無料のオンラインSVGビューアー。今すぐお試しください！',
         meta_keywords: 'SVGビューアー、ベクターグラフィック、SVGからPNG、SVGからJPEG、スケーラブルグラフィック、XMLグラフィック、ロゴビューアー、アイコンビューアー、バッチ処理',
         hero_title: '無料SVGビューアー',
         hero_subtitle: '無限のズームとコード編集でスケーラブルベクターグラフィックを表示',
@@ -1406,8 +1406,8 @@ const resources: Record<string, SVGViewerTranslations> = {
   zh: {
     viewers: {
       svg: {
-        meta_title: '免费SVG查看器 - 在线可缩放矢量图形查看器',
-        meta_description: '在线免费查看和转换SVG (Scalable Vector Graphics) 文件。无限可扩展性、基于代码的编辑和交互元素。最多20个文件，总计100MB。无需注册。',
+        meta_title: 'SVG查看器：在线免费打开和查看SVG矢量文件',
+        meta_description: '在浏览器中即时查看SVG矢量文件。无需软件或注册。快速、安全、100%免费的在线SVG查看器。立即试用！',
         meta_keywords: 'SVG查看器，矢量图形，SVG转PNG，SVG转JPEG，可缩放图形，XML图形，徽标查看器，图标查看器，批量处理',
         hero_title: '免费SVG查看器',
         hero_subtitle: '使用无限缩放和代码编辑查看可缩放矢量图形',
@@ -1501,8 +1501,8 @@ const resources: Record<string, SVGViewerTranslations> = {
   id: {
     viewers: {
       svg: {
-        meta_title: 'Penampil SVG Gratis - Penampil Grafik Vektor Skalabel Online',
-        meta_description: 'Lihat dan konversi file SVG (Scalable Vector Graphics) online gratis. Skalabilitas tak terbatas, pengeditan berbasis kode dan elemen interaktif. Hingga 20 file, 100MB total. Tidak perlu registrasi.',
+        meta_title: 'Penampil SVG: Buka & Lihat File Vektor SVG Online Gratis',
+        meta_description: 'Lihat file vektor SVG secara instan di browser Anda. Tidak perlu software atau pendaftaran. Penampil SVG online yang cepat, aman, dan 100% gratis. Coba sekarang!',
         meta_keywords: 'penampil SVG, grafik vektor, SVG ke PNG, SVG ke JPEG, grafik skalabel, grafik XML, penampil logo, penampil ikon, pemrosesan batch',
         hero_title: 'Penampil SVG Gratis',
         hero_subtitle: 'Lihat grafik vektor skalabel dengan zoom tak terbatas dan pengeditan kode',
@@ -1596,8 +1596,8 @@ const resources: Record<string, SVGViewerTranslations> = {
   sv: {
     viewers: {
       svg: {
-        meta_title: 'Gratis SVG-visare - Online Skalbar Vektorgrafik-visare',
-        meta_description: 'Visa och konvertera SVG (Scalable Vector Graphics) filer online gratis. Oändlig skalbarhet, kodbaserad redigering och interaktiva element. Upp till 20 filer, 100MB totalt. Ingen registrering krävs.',
+        meta_title: 'SVG-visare: Öppna & Visa SVG Vektorfiler Online Gratis',
+        meta_description: 'Visa SVG vektorfiler direkt i din webbläsare. Ingen programvara eller registrering krävs. En snabb, säker och 100% gratis online SVG-visare. Prova nu!',
         meta_keywords: 'SVG-visare, vektorgrafik, SVG till PNG, SVG till JPEG, skalbar grafik, XML-grafik, logotypvisare, ikonvisare, batchbearbetning',
         hero_title: 'Gratis SVG-visare',
         hero_subtitle: 'Visa skalbar vektorgrafik med oändlig zoom och kodredigering',
