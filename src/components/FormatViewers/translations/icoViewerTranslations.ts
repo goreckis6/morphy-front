@@ -76,8 +76,8 @@ const resources: Record<string, ICOViewerTranslations> = {
   en: {
     viewers: {
       ico: {
-        meta_title: 'ICO Viewer - Free Online Windows Icon File Viewer',
-        meta_description: 'View ICO (Windows Icon) files online for free. Multi-size icon viewer with transparency support and multiple resolution display. Up to 20 files, 100MB total. No registration required.',
+        meta_title: 'ICO Viewer: Open & View ICO Icon Files Online for Free',
+        meta_description: 'View ICO icon files instantly in your browser. No software or registration required. A fast, secure, and 100% free online ICO viewer. Try it now!',
         meta_keywords: 'ICO viewer, icon viewer, Windows icon, favicon viewer, CUR viewer, multi-size icon, ICO file viewer, batch viewing',
         hero_title: 'Free ICO Viewer',
         hero_subtitle: 'View Windows icon files with multiple size support and transparency',
@@ -171,8 +171,8 @@ const resources: Record<string, ICOViewerTranslations> = {
   pl: {
     viewers: {
       ico: {
-        meta_title: 'Podgląd ICO - Darmowy Online Podgląd Plików Ikony Windows',
-        meta_description: 'Przeglądaj pliki ICO (Ikona Windows) online za darmo. Podgląd ikon o wielu rozmiarach z obsługą przezroczystości i wyświetlaniem wielu rozdzielczości. Do 20 plików, 100MB łącznie. Bez rejestracji.',
+        meta_title: 'Przeglądarka ICO: Otwórz i Wyświetl Pliki Ikon ICO Online za Darmo',
+        meta_description: 'Wyświetlaj pliki ikon ICO natychmiast w przeglądarce. Bez oprogramowania i rejestracji. Szybka, bezpieczna i w 100% darmowa przeglądarka ICO online. Wypróbuj teraz!',
         meta_keywords: 'podgląd ICO, podgląd ikon, ikona Windows, podgląd favicon, podgląd CUR, ikona wielu rozmiarów, podgląd plików ICO, przetwarzanie wsadowe',
         hero_title: 'Darmowy Podgląd ICO',
         hero_subtitle: 'Przeglądaj pliki ikon Windows z obsługą wielu rozmiarów i przezroczystości',
@@ -266,8 +266,8 @@ const resources: Record<string, ICOViewerTranslations> = {
   de: {
     viewers: {
       ico: {
-        meta_title: 'ICO Viewer - Kostenloser Online Windows Icon Datei Viewer',
-        meta_description: 'ICO (Windows Icon) Dateien online kostenlos anzeigen. Multi-Größen Icon Viewer mit Transparenz-Unterstützung und mehreren Auflösungsanzeigen. Bis zu 20 Dateien, 100MB insgesamt. Keine Registrierung erforderlich.',
+        meta_title: 'ICO Viewer: ICO-Symboldateien Online Kostenlos Öffnen & Anzeigen',
+        meta_description: 'ICO-Symboldateien sofort in Ihrem Browser anzeigen. Keine Software oder Registrierung erforderlich. Ein schneller, sicherer und 100% kostenloser Online-ICO-Viewer. Jetzt ausprobieren!',
         meta_keywords: 'ICO Viewer, Icon Viewer, Windows Icon, Favicon Viewer, CUR Viewer, Multi-Größen Icon, ICO Datei Viewer, Stapelansicht',
         hero_title: 'Kostenloser ICO Viewer',
         hero_subtitle: 'Windows Icon-Dateien mit Multi-Größen-Unterstützung und Transparenz anzeigen',
@@ -361,8 +361,8 @@ const resources: Record<string, ICOViewerTranslations> = {
   es: {
     viewers: {
       ico: {
-        meta_title: 'Visor ICO - Visor Gratis de Archivos de Iconos de Windows Online',
-        meta_description: 'Ver archivos ICO (Icono de Windows) online gratis. Visor de iconos de múltiples tamaños con soporte de transparencia y visualización de múltiples resoluciones. Hasta 20 archivos, 100MB total. Sin registro requerido.',
+        meta_title: 'Visor ICO: Abre y Visualiza Archivos de Iconos ICO Online Gratis',
+        meta_description: 'Visualiza archivos de iconos ICO al instante en tu navegador. Sin software ni registro requerido. Un visor ICO online rápido, seguro y 100% gratis. ¡Pruébalo ahora!',
         meta_keywords: 'visor ICO, visor de iconos, icono Windows, visor favicon, visor CUR, icono múltiples tamaños, visor archivos ICO, visualización por lotes',
         hero_title: 'Visor ICO Gratis',
         hero_subtitle: 'Ver archivos de iconos de Windows con soporte de múltiples tamaños y transparencia',
@@ -456,8 +456,8 @@ const resources: Record<string, ICOViewerTranslations> = {
   fr: {
     viewers: {
       ico: {
-        meta_title: 'Visionneuse ICO - Visionneuse Gratuite de Fichiers d\'Icônes Windows en Ligne',
-        meta_description: 'Voir les fichiers ICO (Icône Windows) en ligne gratuitement. Visionneuse d\'icônes multi-tailles avec support de transparence et affichage de multiples résolutions. Jusqu\'à 20 fichiers, 100 Mo au total. Aucune inscription requise.',
+        meta_title: 'Visionneuse ICO: Ouvrez et Visualisez des Fichiers d\'Icônes ICO en Ligne Gratuitement',
+        meta_description: 'Visualisez des fichiers d\'icônes ICO instantanément dans votre navigateur. Aucun logiciel ou inscription requis. Une visionneuse ICO en ligne rapide, sécurisée et 100% gratuite. Essayez-la maintenant!',
         meta_keywords: 'visionneuse ICO, visionneuse d\'icônes, icône Windows, visionneuse favicon, visionneuse CUR, icône multi-tailles, visionneuse fichiers ICO, aperçu par lots',
         hero_title: 'Visionneuse ICO Gratuite',
         hero_subtitle: 'Voir les fichiers d\'icônes Windows avec support multi-tailles et transparence',
@@ -551,8 +551,8 @@ const resources: Record<string, ICOViewerTranslations> = {
   it: {
     viewers: {
       ico: {
-        meta_title: 'Visualizzatore ICO - Visualizzatore Gratuito di File Icona Windows Online',
-        meta_description: 'Visualizza file ICO (Icona Windows) online gratuitamente. Visualizzatore icone multi-dimensione con supporto trasparenza e visualizzazione multiple risoluzioni. Fino a 20 file, 100MB totali. Nessuna registrazione richiesta.',
+        meta_title: 'Visualizzatore ICO: Apri e Visualizza File Icone ICO Online Gratis',
+        meta_description: 'Visualizza file icone ICO istantaneamente nel tuo browser. Nessun software o registrazione richiesta. Un visualizzatore ICO online veloce, sicuro e 100% gratuito. Provalo ora!',
         meta_keywords: 'visualizzatore ICO, visualizzatore icone, icona Windows, visualizzatore favicon, visualizzatore CUR, icona multi-dimensione, visualizzatore file ICO, anteprima batch',
         hero_title: 'Visualizzatore ICO Gratuito',
         hero_subtitle: 'Visualizza file icone Windows con supporto multi-dimensione e trasparenza',
@@ -646,8 +646,8 @@ const resources: Record<string, ICOViewerTranslations> = {
   nl: {
     viewers: {
       ico: {
-        meta_title: 'ICO Viewer - Gratis Online Windows Icon Bestand Viewer',
-        meta_description: 'Bekijk ICO (Windows Icon) bestanden online gratis. Multi-grootte icon viewer met transparantie-ondersteuning en meerdere resolutieweergave. Tot 20 bestanden, 100MB totaal. Geen registratie vereist.',
+        meta_title: 'ICO Viewer: Open & Bekijk ICO Icoonbestanden Online Gratis',
+        meta_description: 'Bekijk ICO icoonbestanden direct in je browser. Geen software of registratie vereist. Een snelle, veilige en 100% gratis online ICO-viewer. Probeer het nu!',
         meta_keywords: 'ICO viewer, icon viewer, Windows icon, favicon viewer, CUR viewer, multi-grootte icon, ICO bestand viewer, batchweergave',
         hero_title: 'Gratis ICO Viewer',
         hero_subtitle: 'Bekijk Windows icon bestanden met multi-grootte ondersteuning en transparantie',
@@ -741,8 +741,8 @@ const resources: Record<string, ICOViewerTranslations> = {
   pt: {
     viewers: {
       ico: {
-        meta_title: 'Visualizador ICO - Visualizador Gratuito de Arquivos de Ícone Windows Online',
-        meta_description: 'Ver arquivos ICO (Ícone Windows) online gratuitamente. Visualizador de ícones de múltiplos tamanhos com suporte de transparência e exibição de múltiplas resoluções. Até 20 arquivos, 100MB total. Nenhum registro necessário.',
+        meta_title: 'Visualizador ICO: Abra e Visualize Arquivos de Ícones ICO Online Grátis',
+        meta_description: 'Visualize arquivos de ícones ICO instantaneamente no seu navegador. Sem software ou registro necessário. Um visualizador ICO online rápido, seguro e 100% gratuito. Experimente agora!',
         meta_keywords: 'visualizador ICO, visualizador de ícones, ícone Windows, visualizador favicon, visualizador CUR, ícone múltiplos tamanhos, visualizador arquivos ICO, visualização em lote',
         hero_title: 'Visualizador ICO Gratuito',
         hero_subtitle: 'Ver arquivos de ícones Windows com suporte de múltiplos tamanhos e transparência',
@@ -836,8 +836,8 @@ const resources: Record<string, ICOViewerTranslations> = {
   vi: {
     viewers: {
       ico: {
-        meta_title: 'Trình Xem ICO - Trình Xem File Biểu Tượng Windows Miễn Phí Trực Tuyến',
-        meta_description: 'Xem file ICO (Biểu Tượng Windows) trực tuyến miễn phí. Trình xem biểu tượng nhiều kích thước với hỗ trợ trong suốt và hiển thị nhiều độ phân giải. Lên đến 20 tệp, 100MB tổng cộng. Không cần đăng ký.',
+        meta_title: 'Trình Xem ICO: Mở và Xem Tệp Biểu Tượng ICO Trực Tuyến Miễn Phí',
+        meta_description: 'Xem tệp biểu tượng ICO ngay lập tức trong trình duyệt của bạn. Không cần phần mềm hoặc đăng ký. Trình xem ICO online nhanh, an toàn và 100% miễn phí. Thử ngay!',
         meta_keywords: 'trình xem ICO, trình xem biểu tượng, biểu tượng Windows, trình xem favicon, trình xem CUR, biểu tượng nhiều kích thước, trình xem file ICO, xem trước hàng loạt',
         hero_title: 'Trình Xem ICO Miễn Phí',
         hero_subtitle: 'Xem file biểu tượng Windows với hỗ trợ nhiều kích thước và trong suốt',
@@ -931,8 +931,8 @@ const resources: Record<string, ICOViewerTranslations> = {
   tr: {
     viewers: {
       ico: {
-        meta_title: 'ICO Görüntüleyici - Ücretsiz Online Windows İkon Dosyası Görüntüleyici',
-        meta_description: 'ICO (Windows İkon) dosyalarını çevrimiçi ücretsiz görüntüleyin. Şeffaflık desteği ve çoklu çözünürlük görüntüleme ile çoklu boyutlu ikon görüntüleyici. 20 dosyaya kadar, toplam 100MB. Kayıt gerekmez.',
+        meta_title: 'ICO Görüntüleyici: ICO İkon Dosyalarını Çevrimiçi Ücretsiz Açın ve Görüntüleyin',
+        meta_description: 'ICO ikon dosyalarını tarayıcınızda anında görüntüleyin. Yazılım veya kayıt gerekmez. Hızlı, güvenli ve %100 ücretsiz çevrimiçi ICO görüntüleyici. Şimdi deneyin!',
         meta_keywords: 'ICO görüntüleyici, ikon görüntüleyici, Windows ikon, favicon görüntüleyici, CUR görüntüleyici, çoklu boyutlu ikon, ICO dosya görüntüleyici, toplu görüntüleme',
         hero_title: 'Ücretsiz ICO Görüntüleyici',
         hero_subtitle: 'Çoklu boyut desteği ve şeffaflık ile Windows ikon dosyalarını görüntüleyin',
@@ -1026,8 +1026,8 @@ const resources: Record<string, ICOViewerTranslations> = {
   ru: {
     viewers: {
       ico: {
-        meta_title: 'Просмотрщик ICO - Бесплатный Онлайн Просмотрщик Файлов Иконок Windows',
-        meta_description: 'Просматривайте файлы ICO (Иконка Windows) онлайн бесплатно. Просмотрщик иконок нескольких размеров с поддержкой прозрачности и отображением нескольких разрешений. До 20 файлов, 100 МБ всего. Регистрация не требуется.',
+        meta_title: 'Просмотрщик ICO: Открывайте и Просматривайте Файлы Иконок ICO Онлайн Бесплатно',
+        meta_description: 'Просматривайте файлы иконок ICO мгновенно в браузере. Без программного обеспечения и регистрации. Быстрый, безопасный и 100% бесплатный онлайн-просмотрщик ICO. Попробуйте сейчас!',
         meta_keywords: 'просмотрщик ICO, просмотрщик иконок, иконка Windows, просмотрщик favicon, просмотрщик CUR, иконка нескольких размеров, просмотрщик файлов ICO, пакетный просмотр',
         hero_title: 'Бесплатный Просмотрщик ICO',
         hero_subtitle: 'Просматривайте файлы иконок Windows с поддержкой нескольких размеров и прозрачности',
@@ -1121,8 +1121,8 @@ const resources: Record<string, ICOViewerTranslations> = {
   ar: {
     viewers: {
       ico: {
-        meta_title: 'عارض ICO - عارض ملفات أيقونة Windows مجاني عبر الإنترنت',
-        meta_description: 'اعرض ملفات ICO (أيقونة Windows) عبر الإنترنت مجانًا. عارض أيقونات متعدد الأحجام مع دعم الشفافية وعرض دقات متعددة. حتى 20 ملفًا، 100 ميجابايت إجمالي. لا يلزم التسجيل.',
+        meta_title: 'عارض ICO: افتح وشاهد ملفات الأيقونات ICO عبر الإنترنت مجاناً',
+        meta_description: 'اعرض ملفات الأيقونات ICO فوراً في متصفحك. لا حاجة لبرامج أو تسجيل. عارض ICO عبر الإنترنت سريع وآمن ومجاني 100%. جربه الآن!',
         meta_keywords: 'عارض ICO، عارض الأيقونات، أيقونة Windows، عارض favicon، عارض CUR، أيقونة متعددة الأحجام، عارض ملفات ICO، العرض المجمع',
         hero_title: 'عارض ICO مجاني',
         hero_subtitle: 'اعرض ملفات أيقونة Windows مع دعم أحجام متعددة والشفافية',
@@ -1216,8 +1216,8 @@ const resources: Record<string, ICOViewerTranslations> = {
   th: {
     viewers: {
       ico: {
-        meta_title: 'โปรแกรมดู ICO - โปรแกรมดูไฟล์ไอคอน Windows ฟรีออนไลน์',
-        meta_description: 'ดูไฟล์ ICO (ไอคอน Windows) ออนไลน์ฟรี โปรแกรมดูไอคอนหลายขนาดพร้อมการรองรับความโปร่งใสและการแสดงหลายความละเอียด สูงสุด 20 ไฟล์ 100MB รวม ไม่ต้องลงทะเบียน',
+        meta_title: 'โปรแกรมดู ICO: เปิดและดูไฟล์ไอคอน ICO ออนไลน์ฟรี',
+        meta_description: 'ดูไฟล์ไอคอน ICO ทันทีในเบราว์เซอร์ของคุณ ไม่ต้องใช้ซอฟต์แวร์หรือลงทะเบียน โปรแกรมดู ICO ออนไลน์ที่เร็ว ปลอดภัย และฟรี 100% ลองเลย!',
         meta_keywords: 'โปรแกรมดู ICO, โปรแกรมดูไอคอน, ไอคอน Windows, โปรแกรมดู favicon, โปรแกรมดู CUR, ไอคอนหลายขนาด, โปรแกรมดูไฟล์ ICO, การดูแบบกลุ่ม',
         hero_title: 'โปรแกรมดู ICO ฟรี',
         hero_subtitle: 'ดูไฟล์ไอคอน Windows พร้อมการรองรับหลายขนาดและความโปร่งใส',
@@ -1311,8 +1311,8 @@ const resources: Record<string, ICOViewerTranslations> = {
   ja: {
     viewers: {
       ico: {
-        meta_title: 'ICOビューアー - 無料オンラインWindowsアイコンファイルビューアー',
-        meta_description: 'ICO (Windowsアイコン) ファイルをオンラインで無料で表示します。透明度サポートと複数解像度表示を備えたマルチサイズアイコンビューアー。最大20ファイル、合計100MB。登録不要。',
+        meta_title: 'ICOビューアー：ICOアイコンファイルをオンラインで無料で開いて表示',
+        meta_description: 'ICOアイコンファイルをブラウザで即座に表示。ソフトウェアや登録不要。高速、安全、100%無料のオンラインICOビューアー。今すぐお試しください！',
         meta_keywords: 'ICOビューアー、アイコンビューアー、Windowsアイコン、faviconビューアー、CURビューアー、マルチサイズアイコン、ICOファイルビューアー、バッチ表示',
         hero_title: '無料ICOビューアー',
         hero_subtitle: 'マルチサイズサポートと透明度でWindowsアイコンファイルを表示',
@@ -1406,8 +1406,8 @@ const resources: Record<string, ICOViewerTranslations> = {
   zh: {
     viewers: {
       ico: {
-        meta_title: 'ICO查看器 - 免费在线Windows图标文件查看器',
-        meta_description: '在线免费查看ICO (Windows图标) 文件。多尺寸图标查看器，支持透明度和多分辨率显示。最多20个文件，总计100MB。无需注册。',
+        meta_title: 'ICO查看器：在线免费打开和查看ICO图标文件',
+        meta_description: '在浏览器中即时查看ICO图标文件。无需软件或注册。快速、安全、100%免费的在线ICO查看器。立即试用！',
         meta_keywords: 'ICO查看器，图标查看器，Windows图标，favicon查看器，CUR查看器，多尺寸图标，ICO文件查看器，批量查看',
         hero_title: '免费ICO查看器',
         hero_subtitle: '使用多尺寸支持和透明度查看Windows图标文件',
@@ -1501,8 +1501,8 @@ const resources: Record<string, ICOViewerTranslations> = {
   id: {
     viewers: {
       ico: {
-        meta_title: 'Penampil ICO - Penampil File Ikon Windows Gratis Online',
-        meta_description: 'Lihat file ICO (Ikon Windows) online gratis. Penampil ikon multi-ukuran dengan dukungan transparansi dan tampilan resolusi ganda. Hingga 20 file, 100MB total. Tidak perlu registrasi.',
+        meta_title: 'Penampil ICO: Buka & Lihat File Ikon ICO Online Gratis',
+        meta_description: 'Lihat file ikon ICO secara instan di browser Anda. Tidak perlu software atau pendaftaran. Penampil ICO online yang cepat, aman, dan 100% gratis. Coba sekarang!',
         meta_keywords: 'penampil ICO, penampil ikon, ikon Windows, penampil favicon, penampil CUR, ikon multi-ukuran, penampil file ICO, tampilan batch',
         hero_title: 'Penampil ICO Gratis',
         hero_subtitle: 'Lihat file ikon Windows dengan dukungan multi-ukuran dan transparansi',
@@ -1596,8 +1596,8 @@ const resources: Record<string, ICOViewerTranslations> = {
   sv: {
     viewers: {
       ico: {
-        meta_title: 'ICO-visare - Gratis Online Windows Ikon-fil Visare',
-        meta_description: 'Visa ICO (Windows Ikon) filer online gratis. Multi-storlek ikon-visare med transparens-stöd och flera upplösningsvisningar. Upp till 20 filer, 100MB totalt. Ingen registrering krävs.',
+        meta_title: 'ICO-visare: Öppna & Visa ICO Ikonfiler Online Gratis',
+        meta_description: 'Visa ICO ikonfiler direkt i din webbläsare. Ingen programvara eller registrering krävs. En snabb, säker och 100% gratis online ICO-visare. Prova nu!',
         meta_keywords: 'ICO-visare, ikon-visare, Windows ikon, favicon-visare, CUR-visare, multi-storlek ikon, ICO fil-visare, batchvisning',
         hero_title: 'Gratis ICO-visare',
         hero_subtitle: 'Visa Windows ikon-filer med multi-storlek stöd och transparens',

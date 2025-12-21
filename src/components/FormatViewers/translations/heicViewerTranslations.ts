@@ -76,8 +76,8 @@ const resources: Record<string, HEICViewerTranslations> = {
   en: {
     viewers: {
       heic: {
-        meta_title: 'Free HEIC Viewer - View Apple HEIC/HEIF Images Online',
-        meta_description: 'View HEIC/HEIF (High Efficiency Image Container) images online for free. Apple iOS image viewer with HDR support and superior compression. Up to 20 files, 100MB total. No registration required.',
+        meta_title: 'HEIC Viewer: Open & View iPhone HEIC Photos Online for Free',
+        meta_description: 'Can\'t open an iPhone HEIC photo? View HEIC files instantly in your browser. No software or sign-up required. Fast, free, and secure. Try it now!',
         meta_keywords: 'HEIC viewer, HEIF viewer, Apple image viewer, iOS image viewer, iPhone photo viewer, HDR image viewer, batch viewing',
         hero_title: 'Free HEIC Viewer',
         hero_subtitle: 'View Apple HEIC/HEIF images with high efficiency compression and HDR support',
@@ -171,8 +171,8 @@ const resources: Record<string, HEICViewerTranslations> = {
   pl: {
     viewers: {
       heic: {
-        meta_title: 'Darmowy przeglądarka HEIC - Przeglądaj obrazy Apple HEIC/HEIF online',
-        meta_description: 'Przeglądaj obrazy HEIC/HEIF (High Efficiency Image Container) online za darmo. Przeglądarka obrazów Apple iOS z obsługą HDR i lepszą kompresją. Do 20 plików, łącznie 100MB. Bez rejestracji.',
+        meta_title: 'Przeglądarka HEIC: Otwórz i Wyświetl Zdjęcia HEIC z iPhone Online za Darmo',
+        meta_description: 'Nie możesz otworzyć zdjęcia HEIC z iPhone? Wyświetlaj pliki HEIC natychmiast w przeglądarce. Bez oprogramowania i rejestracji. Szybko, za darmo i bezpiecznie. Wypróbuj teraz!',
         meta_keywords: 'przeglądarka HEIC, przeglądarka HEIF, przeglądarka obrazów Apple, przeglądarka obrazów iOS, przeglądarka zdjęć iPhone, przeglądarka obrazów HDR, przeglądanie wsadowe',
         hero_title: 'Darmowy przeglądarka HEIC',
         hero_subtitle: 'Przeglądaj obrazy Apple HEIC/HEIF z wysoką efektywnością kompresji i obsługą HDR',
@@ -266,8 +266,8 @@ const resources: Record<string, HEICViewerTranslations> = {
   de: {
     viewers: {
       heic: {
-        meta_title: 'Kostenloser HEIC-Viewer - Apple HEIC/HEIF-Bilder online anzeigen',
-        meta_description: 'Zeigen Sie HEIC/HEIF (High Efficiency Image Container) Bilder online kostenlos an. Apple iOS Bildbetrachter mit HDR-Unterstützung und überlegener Kompression. Bis zu 20 Dateien, 100MB insgesamt. Keine Registrierung erforderlich.',
+        meta_title: 'HEIC Viewer: iPhone HEIC-Fotos Online Kostenlos Öffnen & Anzeigen',
+        meta_description: 'Können Sie ein iPhone HEIC-Foto nicht öffnen? HEIC-Dateien sofort in Ihrem Browser anzeigen. Keine Software oder Anmeldung erforderlich. Schnell, kostenlos und sicher. Jetzt ausprobieren!',
         meta_keywords: 'HEIC Viewer, HEIF Viewer, Apple Bildbetrachter, iOS Bildbetrachter, iPhone Foto Viewer, HDR Bildbetrachter, Batch-Ansicht',
         hero_title: 'Kostenloser HEIC-Viewer',
         hero_subtitle: 'Zeigen Sie Apple HEIC/HEIF-Bilder mit hoher Kompressionseffizienz und HDR-Unterstützung an',
@@ -361,8 +361,8 @@ const resources: Record<string, HEICViewerTranslations> = {
   es: {
     viewers: {
       heic: {
-        meta_title: 'Visor HEIC gratuito - Ver imágenes Apple HEIC/HEIF en línea',
-        meta_description: 'Ver imágenes HEIC/HEIF (High Efficiency Image Container) en línea gratis. Visor de imágenes Apple iOS con soporte HDR y compresión superior. Hasta 20 archivos, 100MB total. No se requiere registro.',
+        meta_title: 'Visor HEIC: Abre y Visualiza Fotos HEIC de iPhone Online Gratis',
+        meta_description: '¿No puedes abrir una foto HEIC de iPhone? Visualiza archivos HEIC al instante en tu navegador. Sin software ni registro requerido. Rápido, gratis y seguro. ¡Pruébalo ahora!',
         meta_keywords: 'visor HEIC, visor HEIF, visor de imágenes Apple, visor de imágenes iOS, visor de fotos iPhone, visor de imágenes HDR, visualización por lotes',
         hero_title: 'Visor HEIC gratuito',
         hero_subtitle: 'Ver imágenes Apple HEIC/HEIF con compresión de alta eficiencia y soporte HDR',
@@ -456,8 +456,8 @@ const resources: Record<string, HEICViewerTranslations> = {
   fr: {
     viewers: {
       heic: {
-        meta_title: 'Visionneuse HEIC gratuite - Voir les images Apple HEIC/HEIF en ligne',
-        meta_description: 'Voir les images HEIC/HEIF (High Efficiency Image Container) en ligne gratuitement. Visionneuse d\'images Apple iOS avec support HDR et compression supérieure. Jusqu\'à 20 fichiers, 100MB au total. Aucune inscription requise.',
+        meta_title: 'Visionneuse HEIC: Ouvrez et Visualisez des Photos HEIC iPhone en Ligne Gratuitement',
+        meta_description: 'Vous ne pouvez pas ouvrir une photo HEIC iPhone? Visualisez les fichiers HEIC instantanément dans votre navigateur. Aucun logiciel ou inscription requis. Rapide, gratuit et sécurisé. Essayez-le maintenant!',
         meta_keywords: 'visionneuse HEIC, visionneuse HEIF, visionneuse d\'images Apple, visionneuse d\'images iOS, visionneuse de photos iPhone, visionneuse d\'images HDR, visualisation par lots',
         hero_title: 'Visionneuse HEIC gratuite',
         hero_subtitle: 'Voir les images Apple HEIC/HEIF avec compression haute efficacité et support HDR',
@@ -551,8 +551,8 @@ const resources: Record<string, HEICViewerTranslations> = {
   it: {
     viewers: {
       heic: {
-        meta_title: 'Visualizzatore HEIC gratuito - Visualizza immagini Apple HEIC/HEIF online',
-        meta_description: 'Visualizza immagini HEIC/HEIF (High Efficiency Image Container) online gratuitamente. Visualizzatore di immagini Apple iOS con supporto HDR e compressione superiore. Fino a 20 file, 100MB totali. Nessuna registrazione richiesta.',
+        meta_title: 'Visualizzatore HEIC: Apri e Visualizza Foto HEIC iPhone Online Gratis',
+        meta_description: 'Non riesci ad aprire una foto HEIC iPhone? Visualizza file HEIC istantaneamente nel tuo browser. Nessun software o registrazione richiesta. Veloce, gratuito e sicuro. Provalo ora!',
         meta_keywords: 'visualizzatore HEIC, visualizzatore HEIF, visualizzatore immagini Apple, visualizzatore immagini iOS, visualizzatore foto iPhone, visualizzatore immagini HDR, visualizzazione batch',
         hero_title: 'Visualizzatore HEIC gratuito',
         hero_subtitle: 'Visualizza immagini Apple HEIC/HEIF con compressione ad alta efficienza e supporto HDR',
@@ -646,8 +646,8 @@ const resources: Record<string, HEICViewerTranslations> = {
   nl: {
     viewers: {
       heic: {
-        meta_title: 'Gratis HEIC-viewer - Bekijk Apple HEIC/HEIF-afbeeldingen online',
-        meta_description: 'Bekijk HEIC/HEIF (High Efficiency Image Container) afbeeldingen online gratis. Apple iOS afbeeldingsviewer met HDR-ondersteuning en superieure compressie. Tot 20 bestanden, 100MB totaal. Geen registratie vereist.',
+        meta_title: 'HEIC Viewer: Open & Bekijk iPhone HEIC Foto\'s Online Gratis',
+        meta_description: 'Kun je een iPhone HEIC foto niet openen? Bekijk HEIC bestanden direct in je browser. Geen software of aanmelding vereist. Snel, gratis en veilig. Probeer het nu!',
         meta_keywords: 'HEIC viewer, HEIF viewer, Apple afbeeldingsviewer, iOS afbeeldingsviewer, iPhone foto viewer, HDR afbeeldingsviewer, batch weergave',
         hero_title: 'Gratis HEIC-viewer',
         hero_subtitle: 'Bekijk Apple HEIC/HEIF-afbeeldingen met hoge compressie-efficiëntie en HDR-ondersteuning',
@@ -741,8 +741,8 @@ const resources: Record<string, HEICViewerTranslations> = {
   pt: {
     viewers: {
       heic: {
-        meta_title: 'Visualizador HEIC gratuito - Ver imagens Apple HEIC/HEIF online',
-        meta_description: 'Visualize imagens HEIC/HEIF (High Efficiency Image Container) online gratuitamente. Visualizador de imagens Apple iOS com suporte HDR e compressão superior. Até 20 arquivos, 100MB total. Não é necessário registro.',
+        meta_title: 'Visualizador HEIC: Abra e Visualize Fotos HEIC do iPhone Online Grátis',
+        meta_description: 'Não consegue abrir uma foto HEIC do iPhone? Visualize arquivos HEIC instantaneamente no seu navegador. Sem software ou cadastro necessário. Rápido, gratuito e seguro. Experimente agora!',
         meta_keywords: 'visualizador HEIC, visualizador HEIF, visualizador de imagens Apple, visualizador de imagens iOS, visualizador de fotos iPhone, visualizador de imagens HDR, visualização em lote',
         hero_title: 'Visualizador HEIC gratuito',
         hero_subtitle: 'Visualize imagens Apple HEIC/HEIF com compressão de alta eficiência e suporte HDR',
@@ -836,8 +836,8 @@ const resources: Record<string, HEICViewerTranslations> = {
   vi: {
     viewers: {
       heic: {
-        meta_title: 'Trình xem HEIC miễn phí - Xem hình ảnh Apple HEIC/HEIF trực tuyến',
-        meta_description: 'Xem hình ảnh HEIC/HEIF (High Efficiency Image Container) trực tuyến miễn phí. Trình xem hình ảnh Apple iOS với hỗ trợ HDR và nén vượt trội. Tối đa 20 tệp, tổng 100MB. Không cần đăng ký.',
+        meta_title: 'Trình Xem HEIC: Mở và Xem Ảnh HEIC iPhone Trực Tuyến Miễn Phí',
+        meta_description: 'Không thể mở ảnh HEIC iPhone? Xem tệp HEIC ngay lập tức trong trình duyệt của bạn. Không cần phần mềm hoặc đăng ký. Nhanh, miễn phí và an toàn. Thử ngay!',
         meta_keywords: 'trình xem HEIC, trình xem HEIF, trình xem hình ảnh Apple, trình xem hình ảnh iOS, trình xem ảnh iPhone, trình xem hình ảnh HDR, xem hàng loạt',
         hero_title: 'Trình xem HEIC miễn phí',
         hero_subtitle: 'Xem hình ảnh Apple HEIC/HEIF với nén hiệu quả cao và hỗ trợ HDR',
@@ -931,8 +931,8 @@ const resources: Record<string, HEICViewerTranslations> = {
   tr: {
     viewers: {
       heic: {
-        meta_title: 'Ücretsiz HEIC görüntüleyici - Apple HEIC/HEIF görüntülerini çevrimiçi görüntüle',
-        meta_description: 'HEIC/HEIF (High Efficiency Image Container) görüntülerini çevrimiçi ücretsiz görüntüleyin. HDR desteği ve üstün sıkıştırma ile Apple iOS görüntü görüntüleyici. En fazla 20 dosya, toplam 100MB. Kayıt gerekmez.',
+        meta_title: 'HEIC Görüntüleyici: iPhone HEIC Fotoğraflarını Çevrimiçi Ücretsiz Açın ve Görüntüleyin',
+        meta_description: 'Bir iPhone HEIC fotoğrafını açamıyor musunuz? HEIC dosyalarını tarayıcınızda anında görüntüleyin. Yazılım veya kayıt gerekmez. Hızlı, ücretsiz ve güvenli. Şimdi deneyin!',
         meta_keywords: 'HEIC görüntüleyici, HEIF görüntüleyici, Apple görüntü görüntüleyici, iOS görüntü görüntüleyici, iPhone foto görüntüleyici, HDR görüntü görüntüleyici, toplu görüntüleme',
         hero_title: 'Ücretsiz HEIC görüntüleyici',
         hero_subtitle: 'Yüksek verimli sıkıştırma ve HDR desteği ile Apple HEIC/HEIF görüntülerini görüntüleyin',
@@ -1026,8 +1026,8 @@ const resources: Record<string, HEICViewerTranslations> = {
   ru: {
     viewers: {
       heic: {
-        meta_title: 'Бесплатный просмотрщик HEIC - Просмотр изображений Apple HEIC/HEIF онлайн',
-        meta_description: 'Просматривайте изображения HEIC/HEIF (High Efficiency Image Container) онлайн бесплатно. Просмотрщик изображений Apple iOS с поддержкой HDR и превосходным сжатием. До 20 файлов, всего 100MB. Регистрация не требуется.',
+        meta_title: 'Просмотрщик HEIC: Открывайте и Просматривайте Фотографии HEIC с iPhone Онлайн Бесплатно',
+        meta_description: 'Не можете открыть фотографию HEIC с iPhone? Просматривайте файлы HEIC мгновенно в браузере. Без программного обеспечения и регистрации. Быстро, бесплатно и безопасно. Попробуйте сейчас!',
         meta_keywords: 'просмотрщик HEIC, просмотрщик HEIF, просмотрщик изображений Apple, просмотрщик изображений iOS, просмотрщик фотографий iPhone, просмотрщик изображений HDR, пакетный просмотр',
         hero_title: 'Бесплатный просмотрщик HEIC',
         hero_subtitle: 'Просматривайте изображения Apple HEIC/HEIF с высокоэффективным сжатием и поддержкой HDR',
@@ -1121,8 +1121,8 @@ const resources: Record<string, HEICViewerTranslations> = {
   ar: {
     viewers: {
       heic: {
-        meta_title: 'عارض HEIC مجاني - عرض صور Apple HEIC/HEIF عبر الإنترنت',
-        meta_description: 'اعرض صور HEIC/HEIF (High Efficiency Image Container) عبر الإنترنت مجانًا. عارض صور Apple iOS مع دعم HDR وضغط متفوق. حتى 20 ملفًا، 100MB إجمالي. لا يلزم التسجيل.',
+        meta_title: 'عارض HEIC: افتح وشاهد صور HEIC من iPhone عبر الإنترنت مجاناً',
+        meta_description: 'لا يمكنك فتح صورة HEIC من iPhone؟ اعرض ملفات HEIC فوراً في متصفحك. لا حاجة لبرامج أو تسجيل. سريع ومجاني وآمن. جربه الآن!',
         meta_keywords: 'عارض HEIC، عارض HEIF، عارض صور Apple، عارض صور iOS، عارض صور iPhone، عارض صور HDR، عرض مجمع',
         hero_title: 'عارض HEIC مجاني',
         hero_subtitle: 'اعرض صور Apple HEIC/HEIF مع ضغط عالي الكفاءة ودعم HDR',
@@ -1216,8 +1216,8 @@ const resources: Record<string, HEICViewerTranslations> = {
   th: {
     viewers: {
       heic: {
-        meta_title: 'โปรแกรมดู HEIC ฟรี - ดูรูปภาพ Apple HEIC/HEIF ออนไลน์',
-        meta_description: 'ดูรูปภาพ HEIC/HEIF (High Efficiency Image Container) ออนไลน์ฟรี โปรแกรมดูรูปภาพ Apple iOS พร้อมรองรับ HDR และการบีบอัดที่เหนือกว่า สูงสุด 20 ไฟล์ รวม 100MB ไม่ต้องลงทะเบียน',
+        meta_title: 'โปรแกรมดู HEIC: เปิดและดูรูปภาพ HEIC iPhone ออนไลน์ฟรี',
+        meta_description: 'เปิดรูปภาพ HEIC iPhone ไม่ได้? ดูไฟล์ HEIC ทันทีในเบราว์เซอร์ของคุณ ไม่ต้องใช้ซอฟต์แวร์หรือลงทะเบียน เร็ว ฟรี และปลอดภัย ลองเลย!',
         meta_keywords: 'โปรแกรมดู HEIC, โปรแกรมดู HEIF, โปรแกรมดูรูปภาพ Apple, โปรแกรมดูรูปภาพ iOS, โปรแกรมดูรูปภาพ iPhone, โปรแกรมดูรูปภาพ HDR, การดูแบบกลุ่ม',
         hero_title: 'โปรแกรมดู HEIC ฟรี',
         hero_subtitle: 'ดูรูปภาพ Apple HEIC/HEIF ด้วยการบีบอัดประสิทธิภาพสูงและการรองรับ HDR',
@@ -1311,8 +1311,8 @@ const resources: Record<string, HEICViewerTranslations> = {
   ja: {
     viewers: {
       heic: {
-        meta_title: '無料HEICビューア - Apple HEIC/HEIF画像をオンラインで表示',
-        meta_description: 'HEIC/HEIF（High Efficiency Image Container）画像をオンラインで無料表示。HDRサポートと優れた圧縮を備えたApple iOS画像ビューア。最大20ファイル、合計100MB。登録不要。',
+        meta_title: 'HEICビューア：iPhone HEIC写真をオンラインで無料で開いて表示',
+        meta_description: 'iPhone HEIC写真を開けない？HEICファイルをブラウザで即座に表示。ソフトウェアやサインアップ不要。高速、無料、安全。今すぐお試しください！',
         meta_keywords: 'HEICビューア、HEIFビューア、Apple画像ビューア、iOS画像ビューア、iPhone写真ビューア、HDR画像ビューア、一括表示',
         hero_title: '無料HEICビューア',
         hero_subtitle: '高効率圧縮とHDRサポートでApple HEIC/HEIF画像を表示',
@@ -1406,8 +1406,8 @@ const resources: Record<string, HEICViewerTranslations> = {
   zh: {
     viewers: {
       heic: {
-        meta_title: '免费HEIC查看器 - 在线查看Apple HEIC/HEIF图像',
-        meta_description: '免费在线查看HEIC/HEIF（高效图像容器）图像。支持HDR和卓越压缩的Apple iOS图像查看器。最多20个文件，总计100MB。无需注册。',
+        meta_title: 'HEIC查看器：在线免费打开和查看iPhone HEIC照片',
+        meta_description: '无法打开iPhone HEIC照片？在浏览器中即时查看HEIC文件。无需软件或注册。快速、免费、安全。立即试用！',
         meta_keywords: 'HEIC查看器，HEIF查看器，Apple图像查看器，iOS图像查看器，iPhone照片查看器，HDR图像查看器，批量查看',
         hero_title: '免费HEIC查看器',
         hero_subtitle: '以高效压缩和HDR支持查看Apple HEIC/HEIF图像',
@@ -1501,8 +1501,8 @@ const resources: Record<string, HEICViewerTranslations> = {
   id: {
     viewers: {
       heic: {
-        meta_title: 'Penampil HEIC Gratis - Lihat Gambar Apple HEIC/HEIF Online',
-        meta_description: 'Lihat gambar HEIC/HEIF (High Efficiency Image Container) online gratis. Penampil gambar Apple iOS dengan dukungan HDR dan kompresi superior. Hingga 20 file, total 100MB. Tidak perlu registrasi.',
+        meta_title: 'Penampil HEIC: Buka & Lihat Foto HEIC iPhone Online Gratis',
+        meta_description: 'Tidak bisa membuka foto HEIC iPhone? Lihat file HEIC secara instan di browser Anda. Tidak perlu software atau pendaftaran. Cepat, gratis, dan aman. Coba sekarang!',
         meta_keywords: 'penampil HEIC, penampil HEIF, penampil gambar Apple, penampil gambar iOS, penampil foto iPhone, penampil gambar HDR, tampilan batch',
         hero_title: 'Penampil HEIC Gratis',
         hero_subtitle: 'Lihat gambar Apple HEIC/HEIF dengan kompresi efisiensi tinggi dan dukungan HDR',
@@ -1596,8 +1596,8 @@ const resources: Record<string, HEICViewerTranslations> = {
   sv: {
     viewers: {
       heic: {
-        meta_title: 'Gratis HEIC-visare - Visa Apple HEIC/HEIF-bilder online',
-        meta_description: 'Visa HEIC/HEIF (High Efficiency Image Container) bilder online gratis. Apple iOS bildvisare med HDR-stöd och överlägsen komprimering. Upp till 20 filer, 100MB totalt. Ingen registrering krävs.',
+        meta_title: 'HEIC-visare: Öppna & Visa iPhone HEIC Foton Online Gratis',
+        meta_description: 'Kan inte öppna ett iPhone HEIC foto? Visa HEIC-filer direkt i din webbläsare. Ingen programvara eller registrering krävs. Snabb, gratis och säker. Prova nu!',
         meta_keywords: 'HEIC-visare, HEIF-visare, Apple bildvisare, iOS bildvisare, iPhone fotovisare, HDR bildvisare, batchvisning',
         hero_title: 'Gratis HEIC-visare',
         hero_subtitle: 'Visa Apple HEIC/HEIF-bilder med högeffektiv komprimering och HDR-stöd',
