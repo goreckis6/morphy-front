@@ -76,8 +76,8 @@ const resources: Record<string, BMPViewerTranslations> = {
   en: {
     viewers: {
       bmp: {
-        meta_title: 'Free BMP Viewer - View Bitmap Images Online',
-        meta_description: 'View BMP bitmap images online instantly. Free BMP viewer with color-depth support, pixel inspection tools, and batch preview for up to 20 files.',
+        meta_title: 'BMP Viewer: Open & View BMP Image Files Online for Free',
+        meta_description: 'Open and view BMP files instantly in your browser. No software or registration required. A fast, secure, and 100% free online BMP viewer. Try it now!',
         meta_keywords: 'bmp viewer, bitmap viewer, online bmp viewer, windows bitmap, bmp preview, free bmp viewer',
         hero_title: 'Free BMP Viewer',
         hero_subtitle: 'Inspect Windows Bitmap (BMP) images with true color fidelity, pixel-level zoom, and batch preview tools.',
@@ -171,8 +171,8 @@ const resources: Record<string, BMPViewerTranslations> = {
   pl: {
     viewers: {
       bmp: {
-        meta_title: 'Darmowy Podgląd BMP - Oglądaj Obrazy Bitmapowe Online',
-        meta_description: 'Oglądaj obrazy bitmapowe BMP online natychmiast. Darmowy podgląd BMP z obsługą głębi kolorów, narzędziami inspekcji pikseli i podglądem wsadowym do 20 plików.',
+        meta_title: 'Przeglądarka BMP: Otwórz i Wyświetl Pliki Obrazu BMP Online za Darmo',
+        meta_description: 'Otwieraj i wyświetlaj pliki BMP natychmiast w przeglądarce. Bez oprogramowania i rejestracji. Szybka, bezpieczna i w 100% darmowa przeglądarka BMP online. Wypróbuj teraz!',
         meta_keywords: 'podgląd BMP, podgląd bitmap, online podgląd BMP, bitmapa Windows, podgląd BMP, darmowy podgląd BMP',
         hero_title: 'Darmowy Podgląd BMP',
         hero_subtitle: 'Sprawdzaj obrazy Windows Bitmap (BMP) z wiernością kolorów, zoomem na poziomie pikseli i narzędziami podglądu wsadowego.',
@@ -266,8 +266,8 @@ const resources: Record<string, BMPViewerTranslations> = {
   de: {
     viewers: {
       bmp: {
-        meta_title: 'Kostenloser BMP Viewer – Bitmap-Bilder Online Anzeigen',
-        meta_description: 'BMP-Bitmap-Bilder sofort online anzeigen. Kostenloser BMP-Viewer mit Farbtiefenunterstützung, Pixel-Inspektionstools und Batch-Vorschau für bis zu 20 Dateien.',
+        meta_title: 'BMP Viewer: BMP-Bilddateien Online Kostenlos Öffnen & Anzeigen',
+        meta_description: 'BMP-Dateien sofort in Ihrem Browser öffnen und anzeigen. Keine Software oder Registrierung erforderlich. Ein schneller, sicherer und 100% kostenloser Online-BMP-Viewer. Jetzt ausprobieren!',
         meta_keywords: 'BMP Viewer, Bitmap Viewer, Online BMP Viewer, Windows Bitmap, BMP Vorschau, kostenloser BMP Viewer',
         hero_title: 'Kostenloser BMP Viewer',
         hero_subtitle: 'Windows Bitmap (BMP) Bilder mit echter Farbtreue, Pixel-Zoom und Batch-Vorschautools untersuchen.',
@@ -361,8 +361,8 @@ const resources: Record<string, BMPViewerTranslations> = {
   es: {
     viewers: {
       bmp: {
-        meta_title: 'Visor BMP Gratis - Ver Imágenes de Mapa de Bits Online',
-        meta_description: 'Ver imágenes de mapa de bits BMP online instantáneamente. Visor BMP gratis con soporte de profundidad de color, herramientas de inspección de píxeles y vista previa por lotes para hasta 20 archivos.',
+        meta_title: 'Visor BMP: Abre y Visualiza Archivos de Imagen BMP Online Gratis',
+        meta_description: 'Abre y visualiza archivos BMP al instante en tu navegador. Sin software ni registro requerido. Un visor BMP online rápido, seguro y 100% gratis. ¡Pruébalo ahora!',
         meta_keywords: 'visor BMP, visor de mapa de bits, visor BMP online, mapa de bits Windows, vista previa BMP, visor BMP gratis',
         hero_title: 'Visor BMP Gratis',
         hero_subtitle: 'Inspecciona imágenes Windows Bitmap (BMP) con fidelidad de color verdadera, zoom a nivel de píxel y herramientas de vista previa por lotes.',
@@ -456,8 +456,8 @@ const resources: Record<string, BMPViewerTranslations> = {
   fr: {
     viewers: {
       bmp: {
-        meta_title: 'Visionneuse BMP Gratuite - Voir les Images Bitmap en Ligne',
-        meta_description: 'Voir les images bitmap BMP en ligne instantanément. Visionneuse BMP gratuite avec support de profondeur de couleur, outils d\'inspection de pixels et aperçu par lots pour jusqu\'à 20 fichiers.',
+        meta_title: 'Visionneuse BMP: Ouvrez et Visualisez des Fichiers Image BMP en Ligne Gratuitement',
+        meta_description: 'Ouvrez et visualisez des fichiers BMP instantanément dans votre navigateur. Aucun logiciel ou inscription requis. Une visionneuse BMP en ligne rapide, sécurisée et 100% gratuite. Essayez-la maintenant!',
         meta_keywords: 'visionneuse BMP, visionneuse bitmap, visionneuse BMP en ligne, bitmap Windows, aperçu BMP, visionneuse BMP gratuite',
         hero_title: 'Visionneuse BMP Gratuite',
         hero_subtitle: 'Inspecter les images Windows Bitmap (BMP) avec une fidélité de couleur réelle, un zoom au niveau des pixels et des outils d\'aperçu par lots.',
@@ -551,8 +551,8 @@ const resources: Record<string, BMPViewerTranslations> = {
   it: {
     viewers: {
       bmp: {
-        meta_title: 'Visualizzatore BMP Gratuito - Visualizza Immagini Bitmap Online',
-        meta_description: 'Visualizza immagini bitmap BMP online istantaneamente. Visualizzatore BMP gratuito con supporto profondità colore, strumenti di ispezione pixel e anteprima batch per fino a 20 file.',
+        meta_title: 'Visualizzatore BMP: Apri e Visualizza File Immagine BMP Online Gratis',
+        meta_description: 'Apri e visualizza file BMP istantaneamente nel tuo browser. Nessun software o registrazione richiesta. Un visualizzatore BMP online veloce, sicuro e 100% gratuito. Provalo ora!',
         meta_keywords: 'visualizzatore BMP, visualizzatore bitmap, visualizzatore BMP online, bitmap Windows, anteprima BMP, visualizzatore BMP gratuito',
         hero_title: 'Visualizzatore BMP Gratuito',
         hero_subtitle: 'Ispeziona immagini Windows Bitmap (BMP) con fedeltà colore reale, zoom a livello pixel e strumenti di anteprima batch.',
@@ -646,8 +646,8 @@ const resources: Record<string, BMPViewerTranslations> = {
   nl: {
     viewers: {
       bmp: {
-        meta_title: 'Gratis BMP Viewer - Bekijk Bitmap Afbeeldingen Online',
-        meta_description: 'Bekijk BMP bitmap afbeeldingen online direct. Gratis BMP viewer met kleurdiepte-ondersteuning, pixel-inspectietools en batch-voorvertoning voor tot 20 bestanden.',
+        meta_title: 'BMP Viewer: Open & Bekijk BMP Afbeeldingsbestanden Online Gratis',
+        meta_description: 'Open en bekijk BMP-bestanden direct in je browser. Geen software of registratie vereist. Een snelle, veilige en 100% gratis online BMP-viewer. Probeer het nu!',
         meta_keywords: 'BMP viewer, bitmap viewer, online BMP viewer, Windows bitmap, BMP voorvertoning, gratis BMP viewer',
         hero_title: 'Gratis BMP Viewer',
         hero_subtitle: 'Inspecteer Windows Bitmap (BMP) afbeeldingen met echte kleurgetrouwheid, pixel-niveau zoom en batch-voorvertoningstools.',
@@ -741,8 +741,8 @@ const resources: Record<string, BMPViewerTranslations> = {
   pt: {
     viewers: {
       bmp: {
-        meta_title: 'Visualizador BMP Gratuito - Ver Imagens Bitmap Online',
-        meta_description: 'Ver imagens bitmap BMP online instantaneamente. Visualizador BMP gratuito com suporte de profundidade de cor, ferramentas de inspeção de pixels e visualização em lote para até 20 arquivos.',
+        meta_title: 'Visualizador BMP: Abra e Visualize Arquivos de Imagem BMP Online Grátis',
+        meta_description: 'Abra e visualize arquivos BMP instantaneamente no seu navegador. Sem software ou registro necessário. Um visualizador BMP online rápido, seguro e 100% gratuito. Experimente agora!',
         meta_keywords: 'visualizador BMP, visualizador bitmap, visualizador BMP online, bitmap Windows, visualização BMP, visualizador BMP gratuito',
         hero_title: 'Visualizador BMP Gratuito',
         hero_subtitle: 'Inspecione imagens Windows Bitmap (BMP) com fidelidade de cor verdadeira, zoom em nível de pixel e ferramentas de visualização em lote.',
@@ -836,8 +836,8 @@ const resources: Record<string, BMPViewerTranslations> = {
   vi: {
     viewers: {
       bmp: {
-        meta_title: 'Trình Xem BMP Miễn Phí - Xem Hình Ảnh Bitmap Trực Tuyến',
-        meta_description: 'Xem hình ảnh bitmap BMP trực tuyến ngay lập tức. Trình xem BMP miễn phí với hỗ trợ độ sâu màu, công cụ kiểm tra pixel và xem trước hàng loạt cho tối đa 20 tệp.',
+        meta_title: 'Trình Xem BMP: Mở và Xem Tệp Hình Ảnh BMP Trực Tuyến Miễn Phí',
+        meta_description: 'Mở và xem tệp BMP ngay lập tức trong trình duyệt của bạn. Không cần phần mềm hoặc đăng ký. Trình xem BMP online nhanh, an toàn và 100% miễn phí. Thử ngay!',
         meta_keywords: 'trình xem BMP, trình xem bitmap, trình xem BMP trực tuyến, bitmap Windows, xem trước BMP, trình xem BMP miễn phí',
         hero_title: 'Trình Xem BMP Miễn Phí',
         hero_subtitle: 'Kiểm tra hình ảnh Windows Bitmap (BMP) với độ trung thực màu sắc thực sự, zoom mức pixel và công cụ xem trước hàng loạt.',
@@ -931,8 +931,8 @@ const resources: Record<string, BMPViewerTranslations> = {
   tr: {
     viewers: {
       bmp: {
-        meta_title: 'Ücretsiz BMP Görüntüleyici - Bitmap Görüntüleri Online Görüntüle',
-        meta_description: 'BMP bitmap görüntülerini anında online görüntüleyin. Renk derinliği desteği, piksel inceleme araçları ve 20 dosyaya kadar toplu önizleme ile ücretsiz BMP görüntüleyici.',
+        meta_title: 'BMP Görüntüleyici: BMP Resim Dosyalarını Çevrimiçi Ücretsiz Açın ve Görüntüleyin',
+        meta_description: 'BMP dosyalarını tarayıcınızda anında açın ve görüntüleyin. Yazılım veya kayıt gerekmez. Hızlı, güvenli ve %100 ücretsiz çevrimiçi BMP görüntüleyici. Şimdi deneyin!',
         meta_keywords: 'BMP görüntüleyici, bitmap görüntüleyici, online BMP görüntüleyici, Windows bitmap, BMP önizleme, ücretsiz BMP görüntüleyici',
         hero_title: 'Ücretsiz BMP Görüntüleyici',
         hero_subtitle: 'Gerçek renk doğruluğu, piksel düzeyinde yakınlaştırma ve toplu önizleme araçları ile Windows Bitmap (BMP) görüntülerini inceleyin.',
@@ -1026,8 +1026,8 @@ const resources: Record<string, BMPViewerTranslations> = {
   ru: {
     viewers: {
       bmp: {
-        meta_title: 'Бесплатный Просмотрщик BMP - Просмотр Растровых Изображений Онлайн',
-        meta_description: 'Просматривайте растровые изображения BMP онлайн мгновенно. Бесплатный просмотрщик BMP с поддержкой глубины цвета, инструментами проверки пикселей и пакетным предпросмотром для до 20 файлов.',
+        meta_title: 'Просмотрщик BMP: Открывайте и Просматривайте Файлы Изображений BMP Онлайн Бесплатно',
+        meta_description: 'Открывайте и просматривайте файлы BMP мгновенно в браузере. Без программного обеспечения и регистрации. Быстрый, безопасный и 100% бесплатный онлайн-просмотрщик BMP. Попробуйте сейчас!',
         meta_keywords: 'просмотрщик BMP, просмотрщик bitmap, онлайн просмотрщик BMP, bitmap Windows, предпросмотр BMP, бесплатный просмотрщик BMP',
         hero_title: 'Бесплатный Просмотрщик BMP',
         hero_subtitle: 'Проверяйте изображения Windows Bitmap (BMP) с истинной точностью цветопередачи, масштабированием на уровне пикселей и инструментами пакетного предпросмотра.',
@@ -1121,8 +1121,8 @@ const resources: Record<string, BMPViewerTranslations> = {
   ar: {
     viewers: {
       bmp: {
-        meta_title: 'عارض BMP مجاني - عرض صور Bitmap عبر الإنترنت',
-        meta_description: 'اعرض صور bitmap BMP عبر الإنترنت على الفور. عارض BMP مجاني مع دعم عمق اللون وأدوات فحص البكسل ومعاينة الدُفعات لما يصل إلى 20 ملفًا.',
+        meta_title: 'عارض BMP: افتح وشاهد ملفات صور BMP عبر الإنترنت مجاناً',
+        meta_description: 'افتح وشاهد ملفات BMP فوراً في متصفحك. لا حاجة لبرامج أو تسجيل. عارض BMP عبر الإنترنت سريع وآمن ومجاني 100%. جربه الآن!',
         meta_keywords: 'عارض BMP، عارض bitmap، عارض BMP عبر الإنترنت، bitmap Windows، معاينة BMP، عارض BMP مجاني',
         hero_title: 'عارض BMP مجاني',
         hero_subtitle: 'افحص صور Windows Bitmap (BMP) بدقة ألوان حقيقية وتكبير على مستوى البكسل وأدوات معاينة الدُفعات.',
@@ -1216,8 +1216,8 @@ const resources: Record<string, BMPViewerTranslations> = {
   th: {
     viewers: {
       bmp: {
-        meta_title: 'โปรแกรมดู BMP ฟรี - ดูภาพ Bitmap ออนไลน์',
-        meta_description: 'ดูภาพ bitmap BMP ออนไลน์ทันที โปรแกรมดู BMP ฟรีพร้อมการรองรับความลึกของสี เครื่องมือตรวจสอบพิกเซลและการแสดงตัวอย่างแบบกลุ่มสำหรับสูงสุด 20 ไฟล์',
+        meta_title: 'โปรแกรมดู BMP: เปิดและดูไฟล์ภาพ BMP ออนไลน์ฟรี',
+        meta_description: 'เปิดและดูไฟล์ BMP ทันทีในเบราว์เซอร์ของคุณ ไม่ต้องใช้ซอฟต์แวร์หรือลงทะเบียน โปรแกรมดู BMP ออนไลน์ที่เร็ว ปลอดภัย และฟรี 100% ลองเลย!',
         meta_keywords: 'โปรแกรมดู BMP, โปรแกรมดู bitmap, โปรแกรมดู BMP ออนไลน์, bitmap Windows, ตัวอย่าง BMP, โปรแกรมดู BMP ฟรี',
         hero_title: 'โปรแกรมดู BMP ฟรี',
         hero_subtitle: 'ตรวจสอบภาพ Windows Bitmap (BMP) ด้วยความเที่ยงตรงของสีที่แท้จริง การซูมระดับพิกเซลและเครื่องมือแสดงตัวอย่างแบบกลุ่ม',
@@ -1311,8 +1311,8 @@ const resources: Record<string, BMPViewerTranslations> = {
   ja: {
     viewers: {
       bmp: {
-        meta_title: '無料BMPビューアー - オンラインビットマップ画像ビューアー',
-        meta_description: 'BMPビットマップ画像をオンラインで即座に表示します。色深度サポート、ピクセル検査ツール、最大20ファイルのバッチプレビューを備えた無料BMPビューアー。',
+        meta_title: 'BMPビューアー：BMP画像ファイルをオンラインで無料で開いて表示',
+        meta_description: 'BMPファイルをブラウザで即座に開いて表示。ソフトウェアや登録不要。高速、安全、100%無料のオンラインBMPビューアー。今すぐお試しください！',
         meta_keywords: 'BMPビューアー、ビットマップビューアー、オンラインBMPビューアー、Windowsビットマップ、BMPプレビュー、無料BMPビューアー',
         hero_title: '無料BMPビューアー',
         hero_subtitle: '真の色忠実度、ピクセルレベルのズーム、バッチプレビューツールでWindows Bitmap (BMP) 画像を検査します。',
@@ -1406,8 +1406,8 @@ const resources: Record<string, BMPViewerTranslations> = {
   zh: {
     viewers: {
       bmp: {
-        meta_title: '免费BMP查看器 - 在线查看位图图像',
-        meta_description: '立即在线查看BMP位图图像。免费BMP查看器，支持色深、像素检查工具和最多20个文件的批量预览。',
+        meta_title: 'BMP查看器：在线免费打开和查看BMP图像文件',
+        meta_description: '在浏览器中即时打开和查看BMP文件。无需软件或注册。快速、安全、100%免费的在线BMP查看器。立即试用！',
         meta_keywords: 'BMP查看器，位图查看器，在线BMP查看器，Windows位图，BMP预览，免费BMP查看器',
         hero_title: '免费BMP查看器',
         hero_subtitle: '使用真正的色彩保真度、像素级缩放和批量预览工具检查Windows Bitmap (BMP) 图像。',
@@ -1501,8 +1501,8 @@ const resources: Record<string, BMPViewerTranslations> = {
   id: {
     viewers: {
       bmp: {
-        meta_title: 'Penampil BMP Gratis - Lihat Gambar Bitmap Online',
-        meta_description: 'Lihat gambar bitmap BMP online secara instan. Penampil BMP gratis dengan dukungan kedalaman warna, alat inspeksi piksel dan pratinjau batch untuk hingga 20 file.',
+        meta_title: 'Penampil BMP: Buka & Lihat File Gambar BMP Online Gratis',
+        meta_description: 'Buka dan lihat file BMP secara instan di browser Anda. Tidak perlu software atau pendaftaran. Penampil BMP online yang cepat, aman, dan 100% gratis. Coba sekarang!',
         meta_keywords: 'penampil BMP, penampil bitmap, penampil BMP online, bitmap Windows, pratinjau BMP, penampil BMP gratis',
         hero_title: 'Penampil BMP Gratis',
         hero_subtitle: 'Periksa gambar Windows Bitmap (BMP) dengan kesetiaan warna sejati, zoom tingkat piksel dan alat pratinjau batch.',
@@ -1596,8 +1596,8 @@ const resources: Record<string, BMPViewerTranslations> = {
   sv: {
     viewers: {
       bmp: {
-        meta_title: 'Gratis BMP-visare - Visa Bitmap-bilder Online',
-        meta_description: 'Visa BMP bitmap-bilder online direkt. Gratis BMP-visare med färgdjup-stöd, pixelinspektionsverktyg och batch-förhandsvisning för upp till 20 filer.',
+        meta_title: 'BMP-visare: Öppna & Visa BMP Bildfiler Online Gratis',
+        meta_description: 'Öppna och visa BMP-filer direkt i din webbläsare. Ingen programvara eller registrering krävs. En snabb, säker och 100% gratis online BMP-visare. Prova nu!',
         meta_keywords: 'BMP-visare, bitmap-visare, online BMP-visare, Windows bitmap, BMP-förhandsvisning, gratis BMP-visare',
         hero_title: 'Gratis BMP-visare',
         hero_subtitle: 'Inspektera Windows Bitmap (BMP) bilder med sann färgtrohet, pixel-nivå zoom och batch-förhandsvisningsverktyg.',
