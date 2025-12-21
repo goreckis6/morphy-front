@@ -74,8 +74,8 @@ const resources: Record<string, AVIFViewerTranslations> = {
   en: {
     viewers: {
       avif: {
-        meta_title: 'Free AVIF Viewer - View AVIF Images Online',
-        meta_description: 'View AVIF (AV1 Image File Format) images online for free. Modern image format with superior compression and quality. Up to 20 files, 100MB total. No registration required.',
+        meta_title: 'AVIF Viewer: Open & View AVIF Image Files Online for Free',
+        meta_description: 'Can\'t open an AVIF file? View AVIF images instantly in your browser. No software or registration required. Fast, free, and secure. Try it now!',
         meta_keywords: 'AVIF viewer, AV1 image viewer, modern image format, high compression, web image viewer, batch viewing',
         hero_title: 'Free AVIF Viewer',
         hero_subtitle: 'View AVIF images with superior compression and modern image quality',
@@ -167,8 +167,8 @@ const resources: Record<string, AVIFViewerTranslations> = {
   pl: {
     viewers: {
       avif: {
-        meta_title: 'Darmowy przeglądarka AVIF - Przeglądaj obrazy AVIF online',
-        meta_description: 'Przeglądaj obrazy AVIF (AV1 Image File Format) online za darmo. Nowoczesny format obrazu z lepszą kompresją i jakością. Do 20 plików, łącznie 100MB. Bez rejestracji.',
+        meta_title: 'Przeglądarka AVIF: Otwórz i Wyświetl Pliki Obrazu AVIF Online za Darmo',
+        meta_description: 'Nie możesz otworzyć pliku AVIF? Wyświetlaj obrazy AVIF natychmiast w przeglądarce. Bez oprogramowania i rejestracji. Szybko, za darmo i bezpiecznie. Wypróbuj teraz!',
         meta_keywords: 'przeglądarka AVIF, przeglądarka AV1, nowoczesny format obrazu, wysoka kompresja, przeglądarka obrazów internetowa, przeglądanie wsadowe',
         hero_title: 'Darmowy przeglądarka AVIF',
         hero_subtitle: 'Przeglądaj obrazy AVIF z lepszą kompresją i nowoczesną jakością obrazu',
@@ -260,8 +260,8 @@ const resources: Record<string, AVIFViewerTranslations> = {
   de: {
     viewers: {
       avif: {
-        meta_title: 'Kostenloser AVIF-Viewer - AVIF-Bilder online anzeigen',
-        meta_description: 'Zeigen Sie AVIF (AV1 Image File Format) Bilder online kostenlos an. Modernes Bildformat mit überlegener Kompression und Qualität. Bis zu 20 Dateien, 100MB insgesamt. Keine Registrierung erforderlich.',
+        meta_title: 'AVIF Viewer: AVIF-Bilddateien Online Kostenlos Öffnen & Anzeigen',
+        meta_description: 'Können Sie eine AVIF-Datei nicht öffnen? AVIF-Bilder sofort in Ihrem Browser anzeigen. Keine Software oder Registrierung erforderlich. Schnell, kostenlos und sicher. Jetzt ausprobieren!',
         meta_keywords: 'AVIF Viewer, AV1 Bildbetrachter, modernes Bildformat, hohe Kompression, Web Bildbetrachter, Batch-Ansicht',
         hero_title: 'Kostenloser AVIF-Viewer',
         hero_subtitle: 'Zeigen Sie AVIF-Bilder mit überlegener Kompression und moderner Bildqualität an',
@@ -353,8 +353,8 @@ const resources: Record<string, AVIFViewerTranslations> = {
   es: {
     viewers: {
       avif: {
-        meta_title: 'Visor AVIF gratuito - Ver imágenes AVIF en línea',
-        meta_description: 'Ver imágenes AVIF (AV1 Image File Format) en línea gratis. Formato de imagen moderno con compresión superior y calidad. Hasta 20 archivos, 100MB total. No se requiere registro.',
+        meta_title: 'Visor AVIF: Abre y Visualiza Archivos de Imagen AVIF Online Gratis',
+        meta_description: '¿No puedes abrir un archivo AVIF? Visualiza imágenes AVIF al instante en tu navegador. Sin software ni registro requerido. Rápido, gratis y seguro. ¡Pruébalo ahora!',
         meta_keywords: 'visor AVIF, visor AV1, formato de imagen moderno, alta compresión, visor de imágenes web, visualización por lotes',
         hero_title: 'Visor AVIF gratuito',
         hero_subtitle: 'Ver imágenes AVIF con compresión superior y calidad de imagen moderna',
@@ -446,8 +446,8 @@ const resources: Record<string, AVIFViewerTranslations> = {
   fr: {
     viewers: {
       avif: {
-        meta_title: 'Visionneuse AVIF gratuite - Voir les images AVIF en ligne',
-        meta_description: 'Voir les images AVIF (AV1 Image File Format) en ligne gratuitement. Format d\'image moderne avec compression supérieure et qualité. Jusqu\'à 20 fichiers, 100MB au total. Aucune inscription requise.',
+        meta_title: 'Visionneuse AVIF: Ouvrez et Visualisez des Fichiers d\'Image AVIF en Ligne Gratuitement',
+        meta_description: 'Vous ne pouvez pas ouvrir un fichier AVIF? Visualisez les images AVIF instantanément dans votre navigateur. Aucun logiciel ou inscription requis. Rapide, gratuit et sécurisé. Essayez-le maintenant!',
         meta_keywords: 'visionneuse AVIF, visionneuse AV1, format d\'image moderne, haute compression, visionneuse d\'images web, visualisation par lots',
         hero_title: 'Visionneuse AVIF gratuite',
         hero_subtitle: 'Voir les images AVIF avec compression supérieure et qualité d\'image moderne',
@@ -539,8 +539,8 @@ const resources: Record<string, AVIFViewerTranslations> = {
   it: {
     viewers: {
       avif: {
-        meta_title: 'Visualizzatore AVIF gratuito - Visualizza immagini AVIF online',
-        meta_description: 'Visualizza immagini AVIF (AV1 Image File Format) online gratuitamente. Formato di immagine moderno con compressione superiore e qualità. Fino a 20 file, 100MB totali. Nessuna registrazione richiesta.',
+        meta_title: 'Visualizzatore AVIF: Apri e Visualizza File Immagine AVIF Online Gratis',
+        meta_description: 'Non riesci ad aprire un file AVIF? Visualizza immagini AVIF istantaneamente nel tuo browser. Nessun software o registrazione richiesta. Veloce, gratuito e sicuro. Provalo ora!',
         meta_keywords: 'visualizzatore AVIF, visualizzatore AV1, formato di immagine moderno, alta compressione, visualizzatore di immagini web, visualizzazione batch',
         hero_title: 'Visualizzatore AVIF gratuito',
         hero_subtitle: 'Visualizza immagini AVIF con compressione superiore e qualità di immagine moderna',
@@ -632,8 +632,8 @@ const resources: Record<string, AVIFViewerTranslations> = {
   nl: {
     viewers: {
       avif: {
-        meta_title: 'Gratis AVIF-viewer - Bekijk AVIF-afbeeldingen online',
-        meta_description: 'Bekijk AVIF (AV1 Image File Format) afbeeldingen online gratis. Modern afbeeldingsformaat met superieure compressie en kwaliteit. Tot 20 bestanden, 100MB totaal. Geen registratie vereist.',
+        meta_title: 'AVIF Viewer: Open & Bekijk AVIF Afbeeldingsbestanden Online Gratis',
+        meta_description: 'Kun je een AVIF bestand niet openen? Bekijk AVIF afbeeldingen direct in je browser. Geen software of registratie vereist. Snel, gratis en veilig. Probeer het nu!',
         meta_keywords: 'AVIF viewer, AV1 afbeeldingsviewer, modern afbeeldingsformaat, hoge compressie, web afbeeldingsviewer, batch weergave',
         hero_title: 'Gratis AVIF-viewer',
         hero_subtitle: 'Bekijk AVIF-afbeeldingen met superieure compressie en moderne beeldkwaliteit',
@@ -725,8 +725,8 @@ const resources: Record<string, AVIFViewerTranslations> = {
   pt: {
     viewers: {
       avif: {
-        meta_title: 'Visualizador AVIF gratuito - Ver imagens AVIF online',
-        meta_description: 'Visualize imagens AVIF (AV1 Image File Format) online gratuitamente. Formato de imagem moderno com compressão superior e qualidade. Até 20 arquivos, 100MB total. Não é necessário registro.',
+        meta_title: 'Visualizador AVIF: Abra e Visualize Arquivos de Imagem AVIF Online Grátis',
+        meta_description: 'Não consegue abrir um arquivo AVIF? Visualize imagens AVIF instantaneamente no seu navegador. Sem software ou registro necessário. Rápido, gratuito e seguro. Experimente agora!',
         meta_keywords: 'visualizador AVIF, visualizador AV1, formato de imagem moderno, alta compressão, visualizador de imagens web, visualização em lote',
         hero_title: 'Visualizador AVIF gratuito',
         hero_subtitle: 'Visualize imagens AVIF com compressão superior e qualidade de imagem moderna',
@@ -818,8 +818,8 @@ const resources: Record<string, AVIFViewerTranslations> = {
   vi: {
     viewers: {
       avif: {
-        meta_title: 'Trình xem AVIF miễn phí - Xem hình ảnh AVIF trực tuyến',
-        meta_description: 'Xem hình ảnh AVIF (AV1 Image File Format) trực tuyến miễn phí. Định dạng hình ảnh hiện đại với nén vượt trội và chất lượng. Tối đa 20 tệp, tổng 100MB. Không cần đăng ký.',
+        meta_title: 'Trình Xem AVIF: Mở và Xem Tệp Hình Ảnh AVIF Trực Tuyến Miễn Phí',
+        meta_description: 'Không thể mở tệp AVIF? Xem hình ảnh AVIF ngay lập tức trong trình duyệt của bạn. Không cần phần mềm hoặc đăng ký. Nhanh, miễn phí và an toàn. Thử ngay!',
         meta_keywords: 'trình xem AVIF, trình xem AV1, định dạng hình ảnh hiện đại, nén cao, trình xem hình ảnh web, xem hàng loạt',
         hero_title: 'Trình xem AVIF miễn phí',
         hero_subtitle: 'Xem hình ảnh AVIF với nén vượt trội và chất lượng hình ảnh hiện đại',
@@ -911,8 +911,8 @@ const resources: Record<string, AVIFViewerTranslations> = {
   tr: {
     viewers: {
       avif: {
-        meta_title: 'Ücretsiz AVIF görüntüleyici - AVIF görüntülerini çevrimiçi görüntüle',
-        meta_description: 'AVIF (AV1 Image File Format) görüntülerini çevrimiçi ücretsiz görüntüleyin. Üstün sıkıştırma ve kalite ile modern görüntü formatı. En fazla 20 dosya, toplam 100MB. Kayıt gerekmez.',
+        meta_title: 'AVIF Görüntüleyici: AVIF Görüntü Dosyalarını Çevrimiçi Ücretsiz Açın ve Görüntüleyin',
+        meta_description: 'Bir AVIF dosyasını açamıyor musunuz? AVIF görüntülerini tarayıcınızda anında görüntüleyin. Yazılım veya kayıt gerekmez. Hızlı, ücretsiz ve güvenli. Şimdi deneyin!',
         meta_keywords: 'AVIF görüntüleyici, AV1 görüntü görüntüleyici, modern görüntü formatı, yüksek sıkıştırma, web görüntü görüntüleyici, toplu görüntüleme',
         hero_title: 'Ücretsiz AVIF görüntüleyici',
         hero_subtitle: 'Üstün sıkıştırma ve modern görüntü kalitesi ile AVIF görüntülerini görüntüleyin',
@@ -1004,8 +1004,8 @@ const resources: Record<string, AVIFViewerTranslations> = {
   ru: {
     viewers: {
       avif: {
-        meta_title: 'Бесплатный просмотрщик AVIF - Просмотр изображений AVIF онлайн',
-        meta_description: 'Просматривайте изображения AVIF (AV1 Image File Format) онлайн бесплатно. Современный формат изображения с превосходным сжатием и качеством. До 20 файлов, всего 100MB. Регистрация не требуется.',
+        meta_title: 'Просмотрщик AVIF: Открывайте и Просматривайте Файлы Изображений AVIF Онлайн Бесплатно',
+        meta_description: 'Не можете открыть файл AVIF? Просматривайте изображения AVIF мгновенно в браузере. Без программного обеспечения и регистрации. Быстро, бесплатно и безопасно. Попробуйте сейчас!',
         meta_keywords: 'просмотрщик AVIF, просмотрщик AV1, современный формат изображения, высокая компрессия, веб просмотрщик изображений, пакетный просмотр',
         hero_title: 'Бесплатный просмотрщик AVIF',
         hero_subtitle: 'Просматривайте изображения AVIF с превосходным сжатием и современным качеством изображения',
@@ -1097,8 +1097,8 @@ const resources: Record<string, AVIFViewerTranslations> = {
   ar: {
     viewers: {
       avif: {
-        meta_title: 'عارض AVIF مجاني - عرض صور AVIF عبر الإنترنت',
-        meta_description: 'اعرض صور AVIF (AV1 Image File Format) عبر الإنترنت مجانًا. تنسيق صورة حديث مع ضغط متفوق وجودة. حتى 20 ملفًا، 100MB إجمالي. لا يلزم التسجيل.',
+        meta_title: 'عارض AVIF: افتح وشاهد ملفات صور AVIF عبر الإنترنت مجاناً',
+        meta_description: 'لا يمكنك فتح ملف AVIF؟ اعرض صور AVIF فوراً في متصفحك. لا حاجة لبرامج أو تسجيل. سريع ومجاني وآمن. جربه الآن!',
         meta_keywords: 'عارض AVIF، عارض AV1، تنسيق صورة حديث، ضغط عالي، عارض صور الويب، عرض مجمع',
         hero_title: 'عارض AVIF مجاني',
         hero_subtitle: 'اعرض صور AVIF مع ضغط متفوق وجودة صورة حديثة',
@@ -1190,8 +1190,8 @@ const resources: Record<string, AVIFViewerTranslations> = {
   th: {
     viewers: {
       avif: {
-        meta_title: 'โปรแกรมดู AVIF ฟรี - ดูรูปภาพ AVIF ออนไลน์',
-        meta_description: 'ดูรูปภาพ AVIF (AV1 Image File Format) ออนไลน์ฟรี รูปแบบรูปภาพสมัยใหม่ด้วยการบีบอัดที่เหนือกว่าและคุณภาพ สูงสุด 20 ไฟล์ รวม 100MB ไม่ต้องลงทะเบียน',
+        meta_title: 'โปรแกรมดู AVIF: เปิดและดูไฟล์รูปภาพ AVIF ออนไลน์ฟรี',
+        meta_description: 'เปิดไฟล์ AVIF ไม่ได้? ดูรูปภาพ AVIF ทันทีในเบราว์เซอร์ของคุณ ไม่ต้องใช้ซอฟต์แวร์หรือลงทะเบียน เร็ว ฟรี และปลอดภัย ลองเลย!',
         meta_keywords: 'โปรแกรมดู AVIF, โปรแกรมดู AV1, รูปแบบรูปภาพสมัยใหม่, การบีบอัดสูง, โปรแกรมดูรูปภาพเว็บ, การดูแบบกลุ่ม',
         hero_title: 'โปรแกรมดู AVIF ฟรี',
         hero_subtitle: 'ดูรูปภาพ AVIF ด้วยการบีบอัดที่เหนือกว่าและคุณภาพรูปภาพสมัยใหม่',
@@ -1283,8 +1283,8 @@ const resources: Record<string, AVIFViewerTranslations> = {
   ja: {
     viewers: {
       avif: {
-        meta_title: '無料AVIFビューア - AVIF画像をオンラインで表示',
-        meta_description: 'AVIF (AV1 Image File Format) 画像をオンラインで無料表示。優れた圧縮と品質を備えた現代的な画像形式。最大20ファイル、合計100MB。登録不要。',
+        meta_title: 'AVIFビューアー：AVIF画像ファイルをオンラインで無料で開いて表示',
+        meta_description: 'AVIFファイルを開けない？AVIF画像をブラウザで即座に表示。ソフトウェアや登録不要。高速、無料、安全。今すぐお試しください！',
         meta_keywords: 'AVIFビューア、AV1画像ビューア、現代的な画像形式、高圧縮、ウェブ画像ビューア、一括表示',
         hero_title: '無料AVIFビューア',
         hero_subtitle: '優れた圧縮と現代的な画像品質でAVIF画像を表示',
@@ -1376,8 +1376,8 @@ const resources: Record<string, AVIFViewerTranslations> = {
   zh: {
     viewers: {
       avif: {
-        meta_title: '免费AVIF查看器 - 在线查看AVIF图像',
-        meta_description: '免费在线查看AVIF (AV1 Image File Format) 图像。具有卓越压缩和质量的现代图像格式。最多20个文件，总计100MB。无需注册。',
+        meta_title: 'AVIF查看器：在线免费打开和查看AVIF图像文件',
+        meta_description: '无法打开AVIF文件？在浏览器中即时查看AVIF图像。无需软件或注册。快速、免费、安全。立即试用！',
         meta_keywords: 'AVIF查看器，AV1图像查看器，现代图像格式，高压缩，网络图像查看器，批量查看',
         hero_title: '免费AVIF查看器',
         hero_subtitle: '以卓越压缩和现代图像质量查看AVIF图像',
@@ -1469,8 +1469,8 @@ const resources: Record<string, AVIFViewerTranslations> = {
   id: {
     viewers: {
       avif: {
-        meta_title: 'Penampil AVIF Gratis - Lihat Gambar AVIF Online',
-        meta_description: 'Lihat gambar AVIF (AV1 Image File Format) online gratis. Format gambar modern dengan kompresi superior dan kualitas. Hingga 20 file, total 100MB. Tidak perlu registrasi.',
+        meta_title: 'Penampil AVIF: Buka & Lihat File Gambar AVIF Online Gratis',
+        meta_description: 'Tidak bisa membuka file AVIF? Lihat gambar AVIF secara instan di browser Anda. Tidak perlu software atau pendaftaran. Cepat, gratis, dan aman. Coba sekarang!',
         meta_keywords: 'penampil AVIF, penampil AV1, format gambar modern, kompresi tinggi, penampil gambar web, tampilan batch',
         hero_title: 'Penampil AVIF Gratis',
         hero_subtitle: 'Lihat gambar AVIF dengan kompresi superior dan kualitas gambar modern',
@@ -1562,8 +1562,8 @@ const resources: Record<string, AVIFViewerTranslations> = {
   sv: {
     viewers: {
       avif: {
-        meta_title: 'Gratis AVIF-visare - Visa AVIF-bilder online',
-        meta_description: 'Visa AVIF (AV1 Image File Format) bilder online gratis. Modern bildformat med överlägsen komprimering och kvalitet. Upp till 20 filer, 100MB totalt. Ingen registrering krävs.',
+        meta_title: 'AVIF-visare: Öppna & Visa AVIF Bildfiler Online Gratis',
+        meta_description: 'Kan inte öppna en AVIF fil? Visa AVIF-bilder direkt i din webbläsare. Ingen programvara eller registrering krävs. Snabb, gratis och säker. Prova nu!',
         meta_keywords: 'AVIF-visare, AV1 bildvisare, modern bildformat, hög komprimering, webb bildvisare, batchvisning',
         hero_title: 'Gratis AVIF-visare',
         hero_subtitle: 'Visa AVIF-bilder med överlägsen komprimering och modern bildkvalitet',
