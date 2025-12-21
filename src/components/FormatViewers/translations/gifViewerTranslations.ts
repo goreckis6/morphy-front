@@ -76,8 +76,8 @@ const resources: Record<string, GIFViewerTranslations> = {
   en: {
     viewers: {
       gif: {
-        meta_title: 'Free GIF Viewer - View Animated GIF Images Online',
-        meta_description: 'Free GIF viewer. View and convert animated GIF images online for free. Support for animations, transparency, and frame extraction. Up to 20 files, 100MB total. No registration required.',
+        meta_title: 'Open & Play Animated GIFs Online for Free',
+        meta_description: 'View and play animated GIFs instantly in your browser. No software or registration required. A fast, secure, and 100% free online GIF viewer. Try it now!',
         meta_keywords: 'GIF viewer, animated GIF, GIF to MP4, GIF to WebP, animation viewer, frame extraction, meme viewer, batch processing',
         hero_title: 'Free GIF Viewer',
         hero_subtitle: 'View and convert animated GIF images with playback controls',
@@ -171,8 +171,8 @@ const resources: Record<string, GIFViewerTranslations> = {
   pl: {
     viewers: {
       gif: {
-        meta_title: 'Darmowy Podgląd GIF - Oglądaj Animowane Obrazy GIF Online',
-        meta_description: 'Darmowy podgląd GIF. Oglądaj i konwertuj animowane obrazy GIF online za darmo. Obsługa animacji, przezroczystości i ekstrakcji klatek. Do 20 plików, 100MB łącznie. Bez rejestracji.',
+        meta_title: 'Otwórz i Odtwarzaj Animowane GIF-y Online za Darmo',
+        meta_description: 'Oglądaj i odtwarzaj animowane GIF-y natychmiast w przeglądarce. Bez oprogramowania i rejestracji. Szybka, bezpieczna i w 100% darmowa przeglądarka GIF online. Wypróbuj teraz!',
         meta_keywords: 'podgląd GIF, animowany GIF, GIF do MP4, GIF do WebP, podgląd animacji, ekstrakcja klatek, podgląd memów, przetwarzanie wsadowe',
         hero_title: 'Darmowy Podgląd GIF',
         hero_subtitle: 'Oglądaj i konwertuj animowane obrazy GIF z kontrolą odtwarzania',
@@ -266,8 +266,8 @@ const resources: Record<string, GIFViewerTranslations> = {
   de: {
     viewers: {
       gif: {
-        meta_title: 'Kostenloser GIF Viewer – Animierte GIF-Bilder Online Anzeigen',
-        meta_description: 'Kostenloser GIF-Viewer. Zeigen Sie animierte GIF-Bilder online an und konvertieren Sie sie kostenlos. Unterstützung für Animationen, Transparenz und Frame-Extraktion. Bis zu 20 Dateien, 100MB insgesamt. Keine Registrierung erforderlich.',
+        meta_title: 'Animierte GIFs Online Kostenlos Öffnen & Abspielen',
+        meta_description: 'Animierte GIFs sofort in Ihrem Browser anzeigen und abspielen. Keine Software oder Registrierung erforderlich. Ein schneller, sicherer und 100% kostenloser Online-GIF-Viewer. Jetzt ausprobieren!',
         meta_keywords: 'GIF Viewer, animiertes GIF, GIF zu MP4, GIF zu WebP, Animations-Viewer, Frame-Extraktion, Meme-Viewer, Stapelverarbeitung',
         hero_title: 'Kostenloser GIF Viewer',
         hero_subtitle: 'Animierte GIF-Bilder mit Wiedergabesteuerung anzeigen und konvertieren',
@@ -361,8 +361,8 @@ const resources: Record<string, GIFViewerTranslations> = {
   es: {
     viewers: {
       gif: {
-        meta_title: 'Visor GIF Gratis - Ver Imágenes GIF Animadas Online',
-        meta_description: 'Visor GIF gratis. Ver y convertir imágenes GIF animadas online gratis. Soporte para animaciones, transparencia y extracción de frames. Hasta 20 archivos, 100MB total. Sin registro requerido.',
+        meta_title: 'Abre y Reproduce GIFs Animados Online Gratis',
+        meta_description: 'Visualiza y reproduce GIFs animados al instante en tu navegador. Sin software ni registro requerido. Un visor GIF online rápido, seguro y 100% gratis. ¡Pruébalo ahora!',
         meta_keywords: 'visor GIF, GIF animado, GIF a MP4, GIF a WebP, visor de animaciones, extracción de frames, visor de memes, procesamiento por lotes',
         hero_title: 'Visor GIF Gratis',
         hero_subtitle: 'Ver y convertir imágenes GIF animadas con controles de reproducción',
@@ -456,8 +456,8 @@ const resources: Record<string, GIFViewerTranslations> = {
   fr: {
     viewers: {
       gif: {
-        meta_title: 'Visionneuse GIF Gratuite - Voir les Images GIF Animées en Ligne',
-        meta_description: 'Visionneuse GIF gratuite. Voir et convertir des images GIF animées en ligne gratuitement. Support pour animations, transparence et extraction de frames. Jusqu\'à 20 fichiers, 100 Mo au total. Aucune inscription requise.',
+        meta_title: 'Ouvrez et Lisez des GIFs Animés en Ligne Gratuitement',
+        meta_description: 'Visualisez et lisez des GIFs animés instantanément dans votre navigateur. Aucun logiciel ou inscription requis. Un lecteur GIF en ligne rapide, sécurisé et 100% gratuit. Essayez-le maintenant!',
         meta_keywords: 'visionneuse GIF, GIF animé, GIF vers MP4, GIF vers WebP, visionneuse d\'animations, extraction de frames, visionneuse de mèmes, traitement par lots',
         hero_title: 'Visionneuse GIF Gratuite',
         hero_subtitle: 'Voir et convertir des images GIF animées avec contrôles de lecture',
@@ -551,8 +551,8 @@ const resources: Record<string, GIFViewerTranslations> = {
   it: {
     viewers: {
       gif: {
-        meta_title: 'Visualizzatore GIF Gratuito - Visualizza Immagini GIF Animate Online',
-        meta_description: 'Visualizzatore GIF gratuito. Visualizza e converti immagini GIF animate online gratuitamente. Supporto per animazioni, trasparenza ed estrazione di frame. Fino a 20 file, 100MB totali. Nessuna registrazione richiesta.',
+        meta_title: 'Apri e Riproduci GIF Animate Online Gratis',
+        meta_description: 'Visualizza e riproduci GIF animate istantaneamente nel tuo browser. Nessun software o registrazione richiesta. Un visualizzatore GIF online veloce, sicuro e 100% gratuito. Provalo ora!',
         meta_keywords: 'visualizzatore GIF, GIF animato, GIF a MP4, GIF a WebP, visualizzatore animazioni, estrazione frame, visualizzatore meme, elaborazione batch',
         hero_title: 'Visualizzatore GIF Gratuito',
         hero_subtitle: 'Visualizza e converti immagini GIF animate con controlli di riproduzione',
@@ -646,8 +646,8 @@ const resources: Record<string, GIFViewerTranslations> = {
   nl: {
     viewers: {
       gif: {
-        meta_title: 'Gratis GIF Viewer - Bekijk Geanimeerde GIF Afbeeldingen Online',
-        meta_description: 'Gratis GIF viewer. Bekijk en converteer geanimeerde GIF afbeeldingen online gratis. Ondersteuning voor animaties, transparantie en frame-extractie. Tot 20 bestanden, 100MB totaal. Geen registratie vereist.',
+        meta_title: 'Open en Speel Geanimeerde GIFs Online Gratis',
+        meta_description: 'Bekijk en speel geanimeerde GIFs direct in je browser. Geen software of registratie vereist. Een snelle, veilige en 100% gratis online GIF-viewer. Probeer het nu!',
         meta_keywords: 'GIF viewer, geanimeerde GIF, GIF naar MP4, GIF naar WebP, animatie viewer, frame extractie, meme viewer, batchverwerking',
         hero_title: 'Gratis GIF Viewer',
         hero_subtitle: 'Bekijk en converteer geanimeerde GIF afbeeldingen met afspeelcontroles',
@@ -741,8 +741,8 @@ const resources: Record<string, GIFViewerTranslations> = {
   pt: {
     viewers: {
       gif: {
-        meta_title: 'Visualizador GIF Gratuito - Ver Imagens GIF Animadas Online',
-        meta_description: 'Visualizador GIF gratuito. Ver e converter imagens GIF animadas online gratuitamente. Suporte para animações, transparência e extração de frames. Até 20 arquivos, 100MB total. Nenhum registro necessário.',
+        meta_title: 'Abra e Reproduza GIFs Animados Online Grátis',
+        meta_description: 'Visualize e reproduza GIFs animados instantaneamente no seu navegador. Sem software ou registro necessário. Um visualizador GIF online rápido, seguro e 100% gratuito. Experimente agora!',
         meta_keywords: 'visualizador GIF, GIF animado, GIF para MP4, GIF para WebP, visualizador de animações, extração de frames, visualizador de memes, processamento em lote',
         hero_title: 'Visualizador GIF Gratuito',
         hero_subtitle: 'Ver e converter imagens GIF animadas com controles de reprodução',
@@ -836,8 +836,8 @@ const resources: Record<string, GIFViewerTranslations> = {
   vi: {
     viewers: {
       gif: {
-        meta_title: 'Trình Xem GIF Miễn Phí - Xem Hình Ảnh GIF Hoạt Hình Trực Tuyến',
-        meta_description: 'Trình xem GIF miễn phí. Xem và chuyển đổi hình ảnh GIF hoạt hình trực tuyến miễn phí. Hỗ trợ hoạt hình, trong suốt và trích xuất khung hình. Lên đến 20 tệp, 100MB tổng cộng. Không cần đăng ký.',
+        meta_title: 'Mở và Phát GIF Hoạt Hình Online Miễn Phí',
+        meta_description: 'Xem và phát GIF hoạt hình ngay lập tức trong trình duyệt của bạn. Không cần phần mềm hoặc đăng ký. Trình xem GIF online nhanh, an toàn và 100% miễn phí. Thử ngay!',
         meta_keywords: 'trình xem GIF, GIF hoạt hình, GIF sang MP4, GIF sang WebP, trình xem hoạt hình, trích xuất khung hình, trình xem meme, xử lý hàng loạt',
         hero_title: 'Trình Xem GIF Miễn Phí',
         hero_subtitle: 'Xem và chuyển đổi hình ảnh GIF hoạt hình với điều khiển phát lại',
@@ -931,8 +931,8 @@ const resources: Record<string, GIFViewerTranslations> = {
   tr: {
     viewers: {
       gif: {
-        meta_title: 'Ücretsiz GIF Görüntüleyici - Animasyonlu GIF Görsellerini Çevrimiçi Görüntüle',
-        meta_description: 'Ücretsiz GIF görüntüleyici. Animasyonlu GIF görsellerini çevrimiçi görüntüleyin ve ücretsiz dönüştürün. Animasyon, şeffaflık ve frame çıkarma desteği. 20 dosyaya kadar, toplam 100MB. Kayıt gerekmez.',
+        meta_title: 'Animasyonlu GIF\'leri Çevrimiçi Ücretsiz Açın ve Oynatın',
+        meta_description: 'Animasyonlu GIF\'leri tarayıcınızda anında görüntüleyin ve oynatın. Yazılım veya kayıt gerekmez. Hızlı, güvenli ve %100 ücretsiz çevrimiçi GIF görüntüleyici. Şimdi deneyin!',
         meta_keywords: 'GIF görüntüleyici, animasyonlu GIF, GIF\'den MP4\'e, GIF\'den WebP\'ye, animasyon görüntüleyici, frame çıkarma, meme görüntüleyici, toplu işleme',
         hero_title: 'Ücretsiz GIF Görüntüleyici',
         hero_subtitle: 'Oynatma kontrolleri ile animasyonlu GIF görsellerini görüntüleyin ve dönüştürün',
@@ -1026,8 +1026,8 @@ const resources: Record<string, GIFViewerTranslations> = {
   ru: {
     viewers: {
       gif: {
-        meta_title: 'Бесплатный Просмотрщик GIF - Просмотр Анимированных GIF Изображений Онлайн',
-        meta_description: 'Бесплатный просмотрщик GIF. Просматривайте и конвертируйте анимированные GIF изображения онлайн бесплатно. Поддержка анимации, прозрачности и извлечения кадров. До 20 файлов, 100 МБ всего. Регистрация не требуется.',
+        meta_title: 'Открывайте и Воспроизводите Анимированные GIF Онлайн Бесплатно',
+        meta_description: 'Просматривайте и воспроизводите анимированные GIF мгновенно в браузере. Без программного обеспечения и регистрации. Быстрый, безопасный и 100% бесплатный онлайн-просмотрщик GIF. Попробуйте сейчас!',
         meta_keywords: 'просмотрщик GIF, анимированный GIF, GIF в MP4, GIF в WebP, просмотрщик анимации, извлечение кадров, просмотрщик мемов, пакетная обработка',
         hero_title: 'Бесплатный Просмотрщик GIF',
         hero_subtitle: 'Просматривайте и конвертируйте анимированные GIF изображения с элементами управления воспроизведением',
@@ -1121,8 +1121,8 @@ const resources: Record<string, GIFViewerTranslations> = {
   ar: {
     viewers: {
       gif: {
-        meta_title: 'عارض GIF مجاني - عرض صور GIF المتحركة عبر الإنترنت',
-        meta_description: 'عارض GIF مجاني. اعرض واعرض صور GIF المتحركة عبر الإنترنت مجانًا. دعم للرسوم المتحركة والشفافية واستخراج الإطارات. حتى 20 ملفًا، 100 ميجابايت إجمالي. لا يلزم التسجيل.',
+        meta_title: 'افتح وشغّل صور GIF المتحركة عبر الإنترنت مجاناً',
+        meta_description: 'اعرض وشغّل صور GIF المتحركة فوراً في متصفحك. لا حاجة لبرامج أو تسجيل. عارض GIF عبر الإنترنت سريع وآمن ومجاني 100%. جربه الآن!',
         meta_keywords: 'عارض GIF، GIF متحرك، GIF إلى MP4، GIF إلى WebP، عارض الرسوم المتحركة، استخراج الإطارات، عارض الميمات، المعالجة المجمعة',
         hero_title: 'عارض GIF مجاني',
         hero_subtitle: 'اعرض واعرض صور GIF المتحركة مع عناصر التحكم في التشغيل',
@@ -1216,8 +1216,8 @@ const resources: Record<string, GIFViewerTranslations> = {
   th: {
     viewers: {
       gif: {
-        meta_title: 'โปรแกรมดู GIF ฟรี - ดูรูปภาพ GIF แบบเคลื่อนไหวออนไลน์',
-        meta_description: 'โปรแกรมดู GIF ฟรี ดูและแปลงรูปภาพ GIF แบบเคลื่อนไหวออนไลน์ฟรี รองรับการเคลื่อนไหว ความโปร่งใสและการดึงเฟรม สูงสุด 20 ไฟล์ 100MB รวม ไม่ต้องลงทะเบียน',
+        meta_title: 'เปิดและเล่น GIF แบบเคลื่อนไหวออนไลน์ฟรี',
+        meta_description: 'ดูและเล่น GIF แบบเคลื่อนไหวทันทีในเบราว์เซอร์ของคุณ ไม่ต้องใช้ซอฟต์แวร์หรือลงทะเบียน โปรแกรมดู GIF ออนไลน์ที่เร็ว ปลอดภัย และฟรี 100% ลองเลย!',
         meta_keywords: 'โปรแกรมดู GIF, GIF แบบเคลื่อนไหว, GIF เป็น MP4, GIF เป็น WebP, โปรแกรมดูแอนิเมชัน, การดึงเฟรม, โปรแกรมดูมีม, การประมวลผลแบบกลุ่ม',
         hero_title: 'โปรแกรมดู GIF ฟรี',
         hero_subtitle: 'ดูและแปลงรูปภาพ GIF แบบเคลื่อนไหวด้วยการควบคุมการเล่น',
@@ -1311,8 +1311,8 @@ const resources: Record<string, GIFViewerTranslations> = {
   ja: {
     viewers: {
       gif: {
-        meta_title: '無料GIFビューアー - アニメーションGIF画像をオンラインで表示',
-        meta_description: '無料GIFビューアー。アニメーションGIF画像をオンラインで無料で表示および変換します。アニメーション、透明度、フレーム抽出のサポート。最大20ファイル、合計100MB。登録不要。',
+        meta_title: 'アニメーションGIFをオンラインで無料で開いて再生',
+        meta_description: 'アニメーションGIFをブラウザで即座に表示・再生。ソフトウェアや登録不要。高速、安全、100%無料のオンラインGIFビューアー。今すぐお試しください！',
         meta_keywords: 'GIFビューアー、アニメーションGIF、GIFからMP4、GIFからWebP、アニメーションビューアー、フレーム抽出、ミームビューアー、バッチ処理',
         hero_title: '無料GIFビューアー',
         hero_subtitle: '再生コントロールでアニメーションGIF画像を表示および変換',
@@ -1406,8 +1406,8 @@ const resources: Record<string, GIFViewerTranslations> = {
   zh: {
     viewers: {
       gif: {
-        meta_title: '免费GIF查看器 - 在线查看动画GIF图片',
-        meta_description: '免费GIF查看器。在线免费查看和转换动画GIF图片。支持动画、透明度和帧提取。最多20个文件，总计100MB。无需注册。',
+        meta_title: '在线免费打开和播放动画GIF',
+        meta_description: '在浏览器中即时查看和播放动画GIF。无需软件或注册。快速、安全、100%免费的在线GIF查看器。立即试用！',
         meta_keywords: 'GIF查看器，动画GIF，GIF转MP4，GIF转WebP，动画查看器，帧提取，表情包查看器，批量处理',
         hero_title: '免费GIF查看器',
         hero_subtitle: '使用播放控制查看和转换动画GIF图片',
@@ -1501,8 +1501,8 @@ const resources: Record<string, GIFViewerTranslations> = {
   id: {
     viewers: {
       gif: {
-        meta_title: 'Penampil GIF Gratis - Lihat Gambar GIF Animasi Online',
-        meta_description: 'Penampil GIF gratis. Lihat dan konversi gambar GIF animasi online gratis. Dukungan untuk animasi, transparansi, dan ekstraksi frame. Hingga 20 file, 100MB total. Tidak perlu registrasi.',
+        meta_title: 'Buka & Putar GIF Animasi Online Gratis',
+        meta_description: 'Lihat dan putar GIF animasi secara instan di browser Anda. Tidak perlu software atau pendaftaran. Penampil GIF online yang cepat, aman, dan 100% gratis. Coba sekarang!',
         meta_keywords: 'penampil GIF, GIF animasi, GIF ke MP4, GIF ke WebP, penampil animasi, ekstraksi frame, penampil meme, pemrosesan batch',
         hero_title: 'Penampil GIF Gratis',
         hero_subtitle: 'Lihat dan konversi gambar GIF animasi dengan kontrol pemutaran',
@@ -1596,8 +1596,8 @@ const resources: Record<string, GIFViewerTranslations> = {
   sv: {
     viewers: {
       gif: {
-        meta_title: 'Gratis GIF-visare - Visa Animerade GIF-bilder Online',
-        meta_description: 'Gratis GIF-visare. Visa och konvertera animerade GIF-bilder online gratis. Stöd för animationer, transparens och frame-extraktion. Upp till 20 filer, 100MB totalt. Ingen registrering krävs.',
+        meta_title: 'Öppna och Spela Animerade GIFs Online Gratis',
+        meta_description: 'Visa och spela animerade GIFs direkt i din webbläsare. Ingen programvara eller registrering krävs. En snabb, säker och 100% gratis online GIF-visare. Prova nu!',
         meta_keywords: 'GIF-visare, animerad GIF, GIF till MP4, GIF till WebP, animationsvisare, frame-extraktion, meme-visare, batchbearbetning',
         hero_title: 'Gratis GIF-visare',
         hero_subtitle: 'Visa och konvertera animerade GIF-bilder med uppspelningskontroller',
