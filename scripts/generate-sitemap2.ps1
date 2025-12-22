@@ -53,10 +53,24 @@ function Get-UrlXml {
     
     $url = "$baseUrl$path"
     
-    # Determine base path (without language prefix)
+    # Determine base path (without language prefix) for hreflang alternates
     $langPattern = '(' + ($script:languages -join '|') + ')'
-    $basePath = $path -replace "^/$langPattern", ''
-    if ($basePath -eq '') { $basePath = '/' }
+    $basePath = $path
+    
+    # Check if path starts with a language code (e.g., /ja/viewers or /ja)
+    # Remove the language prefix if present
+    if ($path -match "^/$langPattern") {
+        # Use regex replacement to remove language prefix: /lang -> removed, /lang/path -> /path
+        $basePath = $path -replace "^/$langPattern", ''
+        # If we removed everything (path was just /lang), set to root
+        if ($basePath -eq '') {
+            $basePath = '/'
+        }
+        # Ensure remaining path starts with / (it should after replacement, but be safe)
+        if ($basePath -ne '/' -and -not $basePath.StartsWith('/')) {
+            $basePath = "/$basePath"
+        }
+    }
     
     # Remove trailing slash for consistency (except root)
     if ($basePath -ne '/' -and $basePath.EndsWith('/')) {
@@ -67,12 +81,14 @@ function Get-UrlXml {
     $xml += "    <loc>$url</loc>`n"
     
     if ($addHreflang) {
-        # Always add English
+        # Always add English version
         $enUrl = "$baseUrl$basePath"
         $xml += "    <xhtml:link rel=`"alternate`" hreflang=`"en`" href=`"$enUrl`" />`n"
         
         # Add all available language versions
         foreach ($lang in $availableLanguages) {
+            # Construct language URL: baseUrl + /lang + basePath
+            # basePath already starts with /, so we get /lang/basePath correctly
             $langUrl = "$baseUrl/$lang$basePath"
             $xml += "    <xhtml:link rel=`"alternate`" hreflang=`"$lang`" href=`"$langUrl`" />`n"
         }
@@ -183,10 +199,10 @@ foreach ($route in $uniqueRoutes) {
 $xmlContent += "</urlset>`n"
 
 # Save the sitemap
-$sitemapPath = Join-Path $PSScriptRoot '..\public\sitemap2.xml'
+$sitemapPath = Join-Path $PSScriptRoot '..\public\sitemap.xml'
 $xmlContent | Out-File -FilePath $sitemapPath -Encoding UTF8 -NoNewline
 
-Write-Host "`nSitemap2.xml generated successfully!" -ForegroundColor Green
+Write-Host "`nSitemap.xml generated successfully!" -ForegroundColor Green
 Write-Host "Location: $sitemapPath" -ForegroundColor Cyan
 
 # Count URLs
