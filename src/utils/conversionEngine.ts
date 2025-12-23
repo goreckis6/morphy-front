@@ -188,7 +188,7 @@ export class ConversionEngine {
       // Create EPS content
       const epsContent = `%!PS-Adobe-3.0 EPSF-3.0
 %%BoundingBox: 0 0 ${img.width} ${img.height}
-%%Creator: MorphyHub
+%%Creator: FomiPeek
 %%Title: ${file.name}
 %%CreationDate: ${new Date().toISOString()}
 %%EndComments
@@ -243,7 +243,7 @@ showpage
 
       // Create PostScript content
       const psContent = `%!PS-Adobe-3.0
-%%Creator: MorphyHub
+%%Creator: FomiPeek
 %%Title: ${file.name}
 %%CreationDate: ${new Date().toISOString()}
 %%Pages: 1

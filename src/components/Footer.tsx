@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
             <div className="p-2 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl">
               <RefreshCw className="w-6 h-6 text-white" />
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">MorphyHub</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">FomiPeek</h2>
           </div>
           
           <p className="text-gray-300 mb-6 text-base sm:text-lg max-w-2xl mx-auto">
@@ -26,7 +26,7 @@ export const Footer: React.FC = () => {
           </div>
           
           <div className="flex flex-wrap items-center justify-center gap-2 text-xs sm:text-sm text-gray-400">
-            <span>© 2025 MorphyHub</span>
+            <span>© 2025 FomiPeek</span>
             <span className="hidden sm:inline">•</span>
             <span>Built with</span>
             <Star className="w-4 h-4 text-yellow-400 fill-current" />

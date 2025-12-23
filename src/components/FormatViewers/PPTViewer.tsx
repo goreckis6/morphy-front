@@ -273,12 +273,12 @@ export const PPTViewer: React.FC = () => {
         <title>{t('viewers.ppt.meta_title')}</title>
         <meta name="description" content={t('viewers.ppt.meta_description')} />
         <meta name="keywords" content={t('viewers.ppt.meta_keywords')} />
-        <meta property="og:title" content="Free PPT/PPTX Viewer - View PowerPoint Files Online | MorphyHub" />
+        <meta property="og:title" content="Free PPT/PPTX Viewer - View PowerPoint Files Online | FomiPeek" />
         <meta property="og:description" content="Free professional PPT/PPTX (PowerPoint) viewer. Upload and preview Microsoft PowerPoint presentation files online." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://formipeek.com/viewers/ppt" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free PPT/PPTX Viewer - View PowerPoint Files Online | MorphyHub" />
+        <meta name="twitter:title" content="Free PPT/PPTX Viewer - View PowerPoint Files Online | FomiPeek" />
         <meta name="twitter:description" content="Free professional PPT/PPTX viewer. Upload and preview PowerPoint presentation files online." />
         <script type="application/ld+json">
           {JSON.stringify({

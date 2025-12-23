@@ -196,12 +196,12 @@ export const PythonViewer: React.FC = () => {
         <title>{t('viewers.python.meta_title')}</title>
         <meta name="description" content={t('viewers.python.meta_description')} />
         <meta name="keywords" content={t('viewers.python.meta_keywords')} />
-        <meta property="og:title" content="Free Python Viewer - View Python Files Online | MorphyHub" />
+        <meta property="og:title" content="Free Python Viewer - View Python Files Online | FomiPeek" />
         <meta property="og:description" content="Free professional Python viewer with syntax highlighting. Upload and preview Python files online with formatted display and code analysis." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://formipeek.com/viewers/python" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free Python Viewer - View Python Files Online | MorphyHub" />
+        <meta name="twitter:title" content="Free Python Viewer - View Python Files Online | FomiPeek" />
         <meta name="twitter:description" content="Free professional Python viewer with syntax highlighting. Upload and preview Python files online with formatted display." />
         <script type="application/ld+json">
           {JSON.stringify({

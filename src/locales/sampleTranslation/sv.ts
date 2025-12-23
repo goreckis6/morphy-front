@@ -34,7 +34,7 @@ export const sv: SamplePageTranslations = {
     formats: {
       docx: {
         meta: {
-          title: 'Ladda ner gratis DOCX-exempelfiler - Testfiler | MorphyHub',
+          title: 'Ladda ner gratis DOCX-exempelfiler - Testfiler | FomiPeek',
           description: 'Ladda ner gratis DOCX-exempelfiler för testning. Flera filstorlekar tillgängliga: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa dokumentkonverterings- och bearbetningsverktyg.',
           keywords: 'DOCX-exempelfiler, DOCX-testfiler, ladda ner DOCX-exempel, gratis DOCX-testfiler, dokumentexempel, Microsoft Word-exempel'
         },
@@ -50,7 +50,7 @@ export const sv: SamplePageTranslations = {
       },
       doc: {
         meta: {
-          title: 'Ladda ner gratis DOC-exempelfiler - Microsoft Word DOC testfiler | MorphyHub',
+          title: 'Ladda ner gratis DOC-exempelfiler - Microsoft Word DOC testfiler | FomiPeek',
           description: 'Ladda ner gratis DOC-exempelfiler för att testa dokumentkonverteringsverktyg. Flera filstorlekar tillgängliga: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa DOC till PDF, DOC till DOCX konverterare och legacy Microsoft Word dokumentbearbetning.',
           keywords: 'DOC-exempelfiler, DOC-testfiler, ladda ner DOC-exempel, gratis DOC-testfiler, Microsoft Word DOC-exempel, DOC till PDF konverterare test, DOC till DOCX konvertering, legacy Word dokumentexempel, .doc testfiler, dokumentkonverteringsexempel'
         },
@@ -66,7 +66,7 @@ export const sv: SamplePageTranslations = {
       },
       pdf: {
         meta: {
-          title: 'Ladda ner gratis PDF-exempelfiler - PDF testfiler för konverteringsverktyg | MorphyHub',
+          title: 'Ladda ner gratis PDF-exempelfiler - PDF testfiler för konverteringsverktyg | FomiPeek',
           description: 'Ladda ner gratis PDF-exempelfiler för att testa PDF-konverterare, visare och processorer. Flera filstorlekar tillgängliga: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa PDF till Word, PDF till JPG, PDF-komprimering och PDF-redigeringsverktyg.',
           keywords: 'PDF-exempelfiler, PDF-testfiler, ladda ner PDF-exempel, gratis PDF-testfiler, PDF-konverterare testfiler, PDF till Word exempel, PDF till JPG exempel, PDF-komprimering test, PDF-visare testfiler, .pdf testfiler, dokumentkonverteringsexempel'
         },
@@ -82,7 +82,7 @@ export const sv: SamplePageTranslations = {
       },
       odp: {
         meta: {
-          title: 'Ladda ner gratis ODP-exempelfiler - OpenDocument presentation testfiler | MorphyHub',
+          title: 'Ladda ner gratis ODP-exempelfiler - OpenDocument presentation testfiler | FomiPeek',
           description: 'Ladda ner gratis ODP-exempelfiler för att testa presentationskonverteringsverktyg. Flera filstorlekar tillgängliga: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa ODP till PPT, ODP till PDF konverterare, LibreOffice Impress filer och OpenDocument formatbearbetning.',
           keywords: 'ODP-exempelfiler, ODP-testfiler, ladda ner ODP-exempel, gratis ODP-testfiler, OpenDocument presentationsexempel, ODP till PPT konverterare, ODP till PDF konverterare, LibreOffice Impress exempel, .odp testfiler, presentationskonverteringsexempel, OpenDocument format test'
         },
@@ -98,7 +98,7 @@ export const sv: SamplePageTranslations = {
       },
       rtf: {
         meta: {
-          title: 'Ladda ner gratis RTF-exempelfiler - Rich Text Format testfiler | MorphyHub',
+          title: 'Ladda ner gratis RTF-exempelfiler - Rich Text Format testfiler | FomiPeek',
           description: 'Ladda ner gratis RTF-exempelfiler för att testa Rich Text Format konverteringsverktyg. Flera filstorlekar tillgängliga: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa RTF till DOC, RTF till PDF konverterare, ordbehandlarkompatibilitet och dokumentformatskonvertering.',
           keywords: 'RTF-exempelfiler, RTF-testfiler, ladda ner RTF-exempel, gratis RTF-testfiler, Rich Text Format exempel, RTF till DOC konverterare, RTF till PDF konverterare, .rtf testfiler, ordbehandlare testfiler, dokumentformatskonverteringsexempel'
         },
@@ -114,7 +114,7 @@ export const sv: SamplePageTranslations = {
       },
       epub: {
         meta: {
-          title: 'Ladda ner gratis EPUB-exempelfiler - eBook testfiler för läsare | MorphyHub',
+          title: 'Ladda ner gratis EPUB-exempelfiler - eBook testfiler för läsare | FomiPeek',
           description: 'Ladda ner gratis EPUB-exempelfiler för att testa eBook-läsare och konverteringsverktyg. Flera filstorlekar tillgängliga: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa EPUB-läsare, EPUB till PDF, EPUB till MOBI konverterare, digitala publiceringsverktyg och eBook-formatskompatibilitet.',
           keywords: 'EPUB-exempelfiler, EPUB-testfiler, ladda ner EPUB-exempel, gratis EPUB-testfiler, eBook-exempel, EPUB-läsare test, EPUB till PDF konverterare, EPUB till MOBI konverterare, .epub testfiler, digitala publiceringsexempel, eBook-format testfiler'
         },
@@ -130,7 +130,7 @@ export const sv: SamplePageTranslations = {
       },
       'invoice-pdf': {
         meta: {
-          title: 'Ladda ner gratis faktura PDF-exempelfiler - Fakturadokument testfiler | MorphyHub',
+          title: 'Ladda ner gratis faktura PDF-exempelfiler - Fakturadokument testfiler | FomiPeek',
           description: 'Ladda ner gratis faktura PDF-exempelfiler för att testa fakturabearbetnings- och parsningsverktyg. Flera filstorlekar tillgängliga: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa faktura OCR, fakturadataextraktion, fakturaautomatisering, faktura PDF-parsning och dokumenthanteringssystem.',
           keywords: 'faktura PDF-exempelfiler, faktura PDF-testfiler, ladda ner faktura PDF-exempel, gratis faktura PDF-testfiler, fakturadokumentexempel, faktura OCR test, fakturadataextraktion, fakturaautomatisering test, faktura PDF-parsning, fakturabearbetningsexempel, dokumenthantering testfiler'
         },
@@ -146,7 +146,7 @@ export const sv: SamplePageTranslations = {
       },
       mobi: {
         meta: {
-          title: 'Ladda ner gratis MOBI-exempelfiler - MOBI eBook testfiler för Kindle | MorphyHub',
+          title: 'Ladda ner gratis MOBI-exempelfiler - MOBI eBook testfiler för Kindle | FomiPeek',
           description: 'Ladda ner gratis MOBI-exempelfiler för att testa MOBI eBook-läsare och konverteringsverktyg. Flera filstorlekar tillgängliga: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Kindle-kompatibilitet, MOBI till EPUB, MOBI till PDF konverterare, eBook-formatskonvertering och digitala läsapplikationer.',
           keywords: 'MOBI-exempelfiler, MOBI-testfiler, ladda ner MOBI-exempel, gratis MOBI-testfiler, MOBI eBook-exempel, Kindle testfiler, MOBI till EPUB konverterare, MOBI till PDF konverterare, .mobi testfiler, eBook-konverteringsexempel, digitala läsning testfiler'
         },
@@ -162,7 +162,7 @@ export const sv: SamplePageTranslations = {
       },
       csv: {
         meta: {
-          title: 'Ladda ner gratis CSV-exempelfiler - CSV-testfiler för datahantering | MorphyHub',
+          title: 'Ladda ner gratis CSV-exempelfiler - CSV-testfiler för datahantering | FomiPeek',
           description: 'Ladda ner gratis CSV-exempelfiler för att testa datahanterings- och konverteringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa CSV till Excel, CSV till JSON konverterare, dataimportverktyg, kalkylbladsapplikationer och komma-separerade värden bearbetning.',
           keywords: 'CSV-exempelfiler, CSV-testfiler, ladda ner CSV-exempel, gratis CSV-testfiler, CSV till Excel konverterare, CSV till JSON konverterare, komma-separerade värden exempel, datahantering testfiler, kalkylblad import exempel, .csv testfiler, datakonvertering exempel'
         },
@@ -178,7 +178,7 @@ export const sv: SamplePageTranslations = {
       },
       xls: {
         meta: {
-          title: 'Ladda ner gratis XLS-exempelfiler - Microsoft Excel XLS-testfiler | MorphyHub',
+          title: 'Ladda ner gratis XLS-exempelfiler - Microsoft Excel XLS-testfiler | FomiPeek',
           description: 'Ladda ner gratis XLS-exempelfiler för att testa Excel-konverterings- och datahanteringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa XLS till XLSX, XLS till CSV, XLS till PDF konverterare, Excel-dataextraktion och äldre kalkylbladsbearbetning.',
           keywords: 'XLS-exempelfiler, XLS-testfiler, ladda ner XLS-exempel, gratis XLS-testfiler, Microsoft Excel XLS-exempel, XLS till XLSX konverterare, XLS till CSV konverterare, XLS till PDF konverterare, Excel-dataextraktion, .xls testfiler, kalkylblad konvertering exempel'
         },
@@ -194,7 +194,7 @@ export const sv: SamplePageTranslations = {
       },
       xlsx: {
         meta: {
-          title: 'Ladda ner gratis XLSX-exempelfiler - Excel XLSX-testfiler för konverteringsverktyg | MorphyHub',
+          title: 'Ladda ner gratis XLSX-exempelfiler - Excel XLSX-testfiler för konverteringsverktyg | FomiPeek',
           description: 'Ladda ner gratis XLSX-exempelfiler för att testa Excel-konverterings- och datahanteringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa XLSX till CSV, XLSX till PDF, XLSX till JSON konverterare, Excel-dataanalys, kalkylbladsautomatisering och Office Open XML-bearbetning.',
           keywords: 'XLSX-exempelfiler, XLSX-testfiler, ladda ner XLSX-exempel, gratis XLSX-testfiler, Excel XLSX-exempel, XLSX till CSV konverterare, XLSX till PDF konverterare, XLSX till JSON konverterare, Excel-dataanalys, .xlsx testfiler, kalkylbladsautomatisering exempel, Office Open XML-exempel'
         },
@@ -210,7 +210,7 @@ export const sv: SamplePageTranslations = {
       },
       xml: {
         meta: {
-          title: 'Ladda ner gratis XML-exempelfiler - XML-testfiler för parsing och konvertering | MorphyHub',
+          title: 'Ladda ner gratis XML-exempelfiler - XML-testfiler för parsing och konvertering | FomiPeek',
           description: 'Ladda ner gratis XML-exempelfiler för att testa XML-parsing, konvertering och datahanteringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa XML till JSON, XML till CSV konverterare, XML-validering, strukturerad datahantering och märkspråkparsing.',
           keywords: 'XML-exempelfiler, XML-testfiler, ladda ner XML-exempel, gratis XML-testfiler, XML till JSON konverterare, XML till CSV konverterare, XML-valideringstest, Extensible Markup Language-exempel, strukturerad data exempel, .xml testfiler, märkspråkparsing exempel'
         },
@@ -226,7 +226,7 @@ export const sv: SamplePageTranslations = {
       },
       html: {
         meta: {
-          title: 'Ladda ner gratis HTML-exempelfiler - HTML-testfiler för webbutveckling | MorphyHub',
+          title: 'Ladda ner gratis HTML-exempelfiler - HTML-testfiler för webbutveckling | FomiPeek',
           description: 'Ladda ner gratis HTML-exempelfiler för att testa webbutvecklings- och HTML-bearbetningsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa HTML till PDF, HTML till DOCX konverterare, HTML-validering, web scraping, webbläsarrendering och HyperText Markup Language-bearbetning.',
           keywords: 'HTML-exempelfiler, HTML-testfiler, ladda ner HTML-exempel, gratis HTML-testfiler, HTML till PDF konverterare, HTML till DOCX konverterare, HTML-valideringstest, HyperText Markup Language-exempel, webbutveckling exempel, .html testfiler, web scraping exempel, webbläsarrendering test'
         },
@@ -242,7 +242,7 @@ export const sv: SamplePageTranslations = {
       },
       ods: {
         meta: {
-          title: 'Ladda ner gratis ODS-exempelfiler - OpenDocument kalkylblad testfiler | MorphyHub',
+          title: 'Ladda ner gratis ODS-exempelfiler - OpenDocument kalkylblad testfiler | FomiPeek',
           description: 'Ladda ner gratis ODS-exempelfiler för att testa kalkylblads-konverterings- och datahanteringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa ODS till Excel, ODS till CSV konverterare, LibreOffice Calc-filer, OpenDocument-formatbearbetning och kalkylbladsdataextraktion.',
           keywords: 'ODS-exempelfiler, ODS-testfiler, ladda ner ODS-exempel, gratis ODS-testfiler, OpenDocument kalkylblad exempel, ODS till Excel konverterare, ODS till CSV konverterare, LibreOffice Calc-exempel, .ods testfiler, kalkylblad konvertering exempel, OpenDocument format test'
         },
@@ -258,7 +258,7 @@ export const sv: SamplePageTranslations = {
       },
       'ansible-yml': {
         meta: {
-          title: 'Ladda ner gratis Ansible YML-exempelfiler - YAML-konfiguration testfiler | MorphyHub',
+          title: 'Ladda ner gratis Ansible YML-exempelfiler - YAML-konfiguration testfiler | FomiPeek',
           description: 'Ladda ner gratis Ansible YML-exempelfiler för att testa YAML-parsing och konfigurationshanteringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Ansible playbooks, YAML-validering, DevOps-automatisering, konfigurationshanteringssystem och infrastructure as code-verktyg.',
           keywords: 'Ansible YML-exempelfiler, YML-testfiler, ladda ner YML-exempel, gratis YML-testfiler, Ansible playbook-exempel, YAML-konfiguration exempel, YAML-valideringstest, DevOps-automatisering exempel, .yml testfiler, konfigurationshantering exempel, infrastructure as code exempel'
         },
@@ -274,7 +274,7 @@ export const sv: SamplePageTranslations = {
       },
       'api-response-json': {
         meta: {
-          title: 'Ladda ner gratis API Response JSON-exempelfiler - JSON-testfiler för API-utveckling | MorphyHub',
+          title: 'Ladda ner gratis API Response JSON-exempelfiler - JSON-testfiler för API-utveckling | FomiPeek',
           description: 'Ladda ner gratis API Response JSON-exempelfiler för att testa JSON-parsing, API-integration och webbutvecklingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa REST API-svar, JSON-validadorer, API-mocking, webhook-tester och bearbetning av datautbytesformat.',
           keywords: 'API Response JSON-exempelfiler, JSON-testfiler, ladda ner JSON-exempel, gratis JSON-testfiler, API-svarsexempel, JSON-parsing-exempel, REST API-testfiler, JSON-validadortest, API-mocking-exempel, webhook-testfiler, .json testfiler, webb-API-exempel, datautbytesformatexempel'
         },
@@ -290,7 +290,7 @@ export const sv: SamplePageTranslations = {
       },
       'arduino-ino': {
         meta: {
-          title: 'Ladda ner gratis Arduino INO-exempelfiler - Arduino Sketch-testfiler för embedded-utveckling | MorphyHub',
+          title: 'Ladda ner gratis Arduino INO-exempelfiler - Arduino Sketch-testfiler för embedded-utveckling | FomiPeek',
           description: 'Ladda ner gratis Arduino INO-exempelfiler för att testa Arduino sketch-kompilering och embedded-programmeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Arduino IDE, sketch-validering, mikrokontrollerprogrammering, embedded-systemutveckling och IoT-enhetstester.',
           keywords: 'Arduino INO-exempelfiler, Arduino INO-testfiler, ladda ner Arduino INO-exempel, gratis Arduino INO-testfiler, Arduino sketch-exempel, embedded-kod-exempel, Arduino IDE-testfiler, .ino testfiler, mikrokontroller-exempel, IoT-utvecklingsexempel, embedded-programmeringsexempel'
         },
@@ -306,7 +306,7 @@ export const sv: SamplePageTranslations = {
       },
       bat: {
         meta: {
-          title: 'Ladda ner gratis BAT-exempelfiler - Batch-skript-testfiler för Windows-automatisering | MorphyHub',
+          title: 'Ladda ner gratis BAT-exempelfiler - Batch-skript-testfiler för Windows-automatisering | FomiPeek',
           description: 'Ladda ner gratis BAT batch-skript-exempelfiler för att testa Windows-automatisering och kommandoradbearbetningsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa batch-skriptkörning, Windows-uppgiftsautomatisering, kommandoradverktyg, skriptvalidadorer och systemadministrationsverktyg.',
           keywords: 'BAT-exempelfiler, BAT-testfiler, ladda ner BAT-exempel, gratis BAT-testfiler, batch-skript-exempel, Windows batch-filer, automationsskript-exempel, .bat testfiler, kommandoradskript-exempel, Windows-automatiseringsexempel, skriptkörningstestfiler'
         },
@@ -322,7 +322,7 @@ export const sv: SamplePageTranslations = {
       },
       asc: {
         meta: {
-          title: 'Ladda ner gratis ASC-exempelfiler - ASCII-text-testfiler för textbearbetning | MorphyHub',
+          title: 'Ladda ner gratis ASC-exempelfiler - ASCII-text-testfiler för textbearbetning | FomiPeek',
           description: 'Ladda ner gratis ASC ASCII-text-exempelfiler för att testa textbearbetnings- och kodningsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa ASCII-kodning, textfilparsing, textredigerare, teckenkodningsvalidering och textformatskonverteringsverktyg.',
           keywords: 'ASC-exempelfiler, ASC-testfiler, ladda ner ASC-exempel, gratis ASC-testfiler, ASCII-text-exempel, ren text-exempel, .asc testfiler, textformatexempel, ASCII-kodningstestfiler, textbearbetningsexempel, teckenkodningsexempel'
         },
@@ -338,7 +338,7 @@ export const sv: SamplePageTranslations = {
       },
       bib: {
         meta: {
-          title: 'Ladda ner gratis BIB-exempelfiler - Bibliografitestfiler för akademisk forskning | MorphyHub',
+          title: 'Ladda ner gratis BIB-exempelfiler - Bibliografitestfiler för akademisk forskning | FomiPeek',
           description: 'Ladda ner gratis BIB-bibliografiexempelfiler för att testa bibliografihanterings- och citeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa BibTeX-formatsbearbetning, referenshanterare, citatgeneratorer, akademiska skrivverktyg och LaTeX-bibliografiintegration.',
           keywords: 'BIB-exempelfiler, BIB-testfiler, ladda ner BIB-exempel, gratis BIB-testfiler, bibliografiexempel, BibTeX-filer, citatexempel, .bib testfiler, referenshanteringsexempel, akademiska citatexempel, LaTeX-bibliografiexempel'
         },
@@ -354,7 +354,7 @@ export const sv: SamplePageTranslations = {
       },
       c: {
         meta: {
-          title: 'Ladda ner gratis C-exempelfiler - C-programmeringsspråkstestfiler för utveckling | MorphyHub',
+          title: 'Ladda ner gratis C-exempelfiler - C-programmeringsspråkstestfiler för utveckling | FomiPeek',
           description: 'Ladda ner gratis C-källkodsexempelfiler för att testa C-kodkompilering och utvecklingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa C-kompilatorer, syntaxkontrollverktyg, kodanalysatorer, GCC-verktygskedja, embedded C-utveckling och systemprogrammeringsverktyg.',
           keywords: 'C-exempelfiler, C-testfiler, ladda ner C-exempel, gratis C-testfiler, C-källkodsexempel, C-programmeringsfiler, .c testfiler, C-kompileringstestfiler, GCC-testfiler, embedded C-exempel, systemprogrammeringsexempel'
         },
@@ -370,7 +370,7 @@ export const sv: SamplePageTranslations = {
       },
       'can-log': {
         meta: {
-          title: 'Ladda ner gratis CAN Log-exempelfiler - Controller Area Network-testfiler för bilindustri | MorphyHub',
+          title: 'Ladda ner gratis CAN Log-exempelfiler - Controller Area Network-testfiler för bilindustri | FomiPeek',
           description: 'Ladda ner gratis CAN Log-exempelfiler för att testa CAN-bussanalys och bilindustridiagnostikverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa CAN-bussanalysatorer, bilindustridiagnostikverktyg, fordonets nätverksprotokoll, OBD-II-tester och embedded bilindustrisystem.',
           keywords: 'CAN Log-exempelfiler, CAN Log-testfiler, ladda ner CAN Log-exempel, gratis CAN Log-testfiler, Controller Area Network-exempel, CAN-bussexempel, .log testfiler, bilindustridiagnostikexempel, OBD-II-testfiler, fordonets nätverksexempel, CAN-bussanalysatortest'
         },
@@ -386,7 +386,7 @@ export const sv: SamplePageTranslations = {
       },
       cmd: {
         meta: {
-          title: 'Ladda ner gratis CMD-exempelfiler - Windows-kommandoskript-testfiler för automatisering | MorphyHub',
+          title: 'Ladda ner gratis CMD-exempelfiler - Windows-kommandoskript-testfiler för automatisering | FomiPeek',
           description: 'Ladda ner gratis CMD Windows-kommandoskript-exempelfiler för att testa batch-skriptkörning och Windows-automatiseringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Windows-kommandotolken, batch-filkörning, skriptautomatisering, systemadministration och Windows-uppgiftsplaneringsverktyg.',
           keywords: 'CMD-exempelfiler, CMD-testfiler, ladda ner CMD-exempel, gratis CMD-testfiler, Windows-kommandoskript-exempel, batch-skript-exempel, .cmd testfiler, kommandoskript-exempel, Windows-automatiseringsexempel, systemadministrationsexempel'
         },
@@ -402,7 +402,7 @@ export const sv: SamplePageTranslations = {
       },
       conf: {
         meta: {
-          title: 'Ladda ner gratis CONF-exempelfiler - Konfigurationsfil-testfiler för systemkonfiguration | MorphyHub',
+          title: 'Ladda ner gratis CONF-exempelfiler - Konfigurationsfil-testfiler för systemkonfiguration | FomiPeek',
           description: 'Ladda ner gratis CONF-konfigurationsexempelfiler för att testa konfigurationsfilparsing och systemkonfigurationsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa serverkonfiguration, applikationsinställningar, konfigurationsfilvalidadorer, systemadministrationsverktyg och programvarudistributionsverktyg.',
           keywords: 'CONF-exempelfiler, CONF-testfiler, ladda ner CONF-exempel, gratis CONF-testfiler, konfigurationsfilexempel, serverkonfigurationsexempel, .conf testfiler, konfigurationsfilexempel, systemkonfigurationsexempel, applikationsinställningsexempel'
         },
@@ -418,7 +418,7 @@ export const sv: SamplePageTranslations = {
       },
       'config-ini': {
         meta: {
-          title: 'Ladda ner gratis Config INI-exempelfiler - INI-konfigurationstestfiler för applikationer | MorphyHub',
+          title: 'Ladda ner gratis Config INI-exempelfiler - INI-konfigurationstestfiler för applikationer | FomiPeek',
           description: 'Ladda ner gratis Config INI INI-konfigurationsexempelfiler för att testa INI-filparsing och konfigurationshanteringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa INI-parsers, applikationskonfiguration, inställningshantering, Windows INI-filer och programvarukonfigurationsverktyg.',
           keywords: 'Config INI-exempelfiler, INI-testfiler, ladda ner INI-exempel, gratis INI-testfiler, INI-konfigurationsexempel, INI-konfigurationsexempel, .ini testfiler, konfigurationsfilexempel, Windows INI-exempel, applikationsinställningsexempel'
         },
@@ -434,7 +434,7 @@ export const sv: SamplePageTranslations = {
       },
       cpp: {
         meta: {
-          title: 'Ladda ner gratis CPP-exempelfiler - C++-programmeringsspråkstestfiler för utveckling | MorphyHub',
+          title: 'Ladda ner gratis CPP-exempelfiler - C++-programmeringsspråkstestfiler för utveckling | FomiPeek',
           description: 'Ladda ner gratis CPP C++-källkodsexempelfiler för att testa C++-kodkompilering och utvecklingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa C++-kompilatorer, syntaxkontrollverktyg, kodanalysatorer, GCC/G++-verktygskedja, moderna C++-funktioner och objektorienterade programmeringsverktyg.',
           keywords: 'CPP-exempelfiler, CPP-testfiler, ladda ner CPP-exempel, gratis CPP-testfiler, C++-källkodsexempel, C++-kodfiler, .cpp testfiler, C++-programmeringsfiler, C++-kompileringsstestfiler, GCC-testfiler, moderna C++-exempel'
         },
@@ -450,7 +450,7 @@ export const sv: SamplePageTranslations = {
       },
       h: {
         meta: {
-          title: 'Ladda ner gratis H-exempelfiler - C/C++-headerfil-testfiler för programmering | MorphyHub',
+          title: 'Ladda ner gratis H-exempelfiler - C/C++-headerfil-testfiler för programmering | FomiPeek',
           description: 'Ladda ner gratis H C/C++-headerfilexempelfiler för att testa headerfilbearbetning och utvecklingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa C/C++-kompilatorer, headerfilinkludering, preprocesserverktyg, kodorganisation och plattformsoberoende utvecklingsverktyg.',
           keywords: 'H-exempelfiler, H-testfiler, ladda ner H-exempel, gratis H-testfiler, C-header-exempel, C++-header-exempel, headerfilexempel, .h testfiler, C/C++-headerfiler, programmeringsheader-exempel, kodheaderfiler'
         },
@@ -466,7 +466,7 @@ export const sv: SamplePageTranslations = {
       },
       hpp: {
         meta: {
-          title: 'Ladda ner gratis HPP-exempelfiler - C++-headerfil-testfiler för modern C++-utveckling | MorphyHub',
+          title: 'Ladda ner gratis HPP-exempelfiler - C++-headerfil-testfiler för modern C++-utveckling | FomiPeek',
           description: 'Ladda ner gratis HPP C++-headerfilexempelfiler för att testa C++-headerfilbearbetning och utvecklingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa C++-kompilatorer, header-only-bibliotek, mallmetaprogrammering, moderna C++-funktioner och avancerade C++-utvecklingsverktyg.',
           keywords: 'HPP-exempelfiler, HPP-testfiler, ladda ner HPP-exempel, gratis HPP-testfiler, C++-header-exempel, headerfilexempel, .hpp testfiler, C++-headerfiler, programmeringsheader-exempel, kodheaderfiler, C++-utvecklingsfiler, moderna C++-header-exempel'
         },
@@ -482,7 +482,7 @@ export const sv: SamplePageTranslations = {
       },
       hex: {
         meta: {
-          title: 'Ladda ner gratis HEX-exempelfiler - Hex-testfiler för firmware- och inbyggda systemutveckling | MorphyHub',
+          title: 'Ladda ner gratis HEX-exempelfiler - Hex-testfiler för firmware- och inbyggda systemutveckling | FomiPeek',
           description: 'Ladda ner gratis HEX hex-exempelfiler för att testa firmware-programmering, inbyggda systemutveckling och binärdataanalys. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa hex-redigerare, firmware-laddare, mikrokontrollerprogrammering och inbyggda utvecklingsverktyg.',
           keywords: 'HEX-exempelfiler, HEX-testfiler, ladda ner HEX-exempel, gratis HEX-testfiler, hex-filer, hex-firmwarefiler, .hex-testfiler, hex-inbyggda filer, hex-mikrokontrollerfiler, hex-redigerartestfiler, firmware-programmeringsexempel, hex-binära filer'
         },
@@ -498,7 +498,7 @@ export const sv: SamplePageTranslations = {
       },
       cs: {
         meta: {
-          title: 'Ladda ner gratis CS-exempelfiler - C#-källkodstestfiler för .NET-utveckling | MorphyHub',
+          title: 'Ladda ner gratis CS-exempelfiler - C#-källkodstestfiler för .NET-utveckling | FomiPeek',
           description: 'Ladda ner gratis CS C#-källkodsexempelfiler för att testa C#-kompilering, .NET-utveckling och Visual Studio-verktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa C#-kompilatorer, .NET-ramverk, Visual Studio IDE, kodanalysverktyg och C#-utvecklingsmiljöer.',
           keywords: 'CS-exempelfiler, CS-testfiler, ladda ner CS-exempel, gratis CS-testfiler, C#-källkodsexempel, .NET-kodfiler, .cs-testfiler, C#-programmeringsfiler, Visual Studio-testfiler, .NET-utvecklingsexempel, C#-kompileringstestfiler'
         },
@@ -514,7 +514,7 @@ export const sv: SamplePageTranslations = {
       },
       css: {
         meta: {
-          title: 'Ladda ner gratis CSS-exempelfiler - Stylesheet-testfiler för webbutveckling | MorphyHub',
+          title: 'Ladda ner gratis CSS-exempelfiler - Stylesheet-testfiler för webbutveckling | FomiPeek',
           description: 'Ladda ner gratis CSS-stylesheetexempelfiler för att testa webbstyling, CSS-tolkning och front-end-verktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa CSS-validerare, preprocessorer (SASS, LESS), CSS-minifierare, webbrowsers och front-end-utvecklingsramverk.',
           keywords: 'CSS-exempelfiler, CSS-testfiler, ladda ner CSS-exempel, gratis CSS-testfiler, stylesheet-exempel, CSS-stylesheetfiler, .css-testfiler, webbstylingfiler, CSS-parsertestfiler, front-end-utvecklingsexempel, CSS-ramverkstestfiler'
         },
@@ -530,7 +530,7 @@ export const sv: SamplePageTranslations = {
       },
       csr: {
         meta: {
-          title: 'Ladda ner gratis CSR-exempelfiler - Certifikatsigneringsförfrågan-testfiler för SSL/TLS | MorphyHub',
+          title: 'Ladda ner gratis CSR-exempelfiler - Certifikatsigneringsförfrågan-testfiler för SSL/TLS | FomiPeek',
           description: 'Ladda ner gratis CSR-certifikatsigneringsförfråganexempelfiler för att testa SSL/TLS-certifikatgenerering, PKI-hantering och säkerhetsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa certifikatutfärdare, OpenSSL, SSL-certifikatgenerering, PKI-infrastruktur och säkerhetscertifikathanteringsverktyg.',
           keywords: 'CSR-exempelfiler, CSR-testfiler, ladda ner CSR-exempel, gratis CSR-testfiler, certifikatsigneringsförfrågan-exempel, SSL-certifikatfiler, .csr-testfiler, PKI-certifikatfiler, OpenSSL-testfiler, SSL/TLS-certifikatexempel, certifikatutfärdartestfiler'
         },
@@ -546,7 +546,7 @@ export const sv: SamplePageTranslations = {
       },
       'customer-database-sql': {
         meta: {
-          title: 'Ladda ner gratis Customer Database SQL-exempelfiler - SQL-databastestfiler | MorphyHub',
+          title: 'Ladda ner gratis Customer Database SQL-exempelfiler - SQL-databastestfiler | FomiPeek',
           description: 'Ladda ner gratis Customer Database SQL-exempelfiler för att testa SQL-databasoperationer, frågekörning och databashanteringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa SQL-parsers, databasimportverktyg, SQLite, MySQL, PostgreSQL och databashanteringssystem.',
           keywords: 'Customer Database SQL-exempelfiler, SQL-databastestfiler, ladda ner SQL-exempel, gratis SQL-testfiler, SQL-databasfiler, .sql-testfiler, SQL-frågefiler, databasimportexempel, SQLite-testfiler, MySQL-exempel, PostgreSQL-testfiler'
         },
@@ -562,7 +562,7 @@ export const sv: SamplePageTranslations = {
       },
       dbf: {
         meta: {
-          title: 'Ladda ner gratis DBF-exempelfiler - dBASE-databastestfiler för datahantering | MorphyHub',
+          title: 'Ladda ner gratis DBF-exempelfiler - dBASE-databastestfiler för datahantering | FomiPeek',
           description: 'Ladda ner gratis DBF dBASE-databas-exempelfiler för att testa databasoperationer, dataimport/export och äldre databasformat. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa dBASE-kompatibilitet, databaskonverterare, datamigreringsverktyg, kalkylbladsapplikationer och databashanteringssystem.',
           keywords: 'DBF-exempelfiler, DBF-testfiler, ladda ner DBF-exempel, gratis DBF-testfiler, dBASE-databasfiler, .dbf-testfiler, databasformatfiler, äldre databas-exempel, dBASE-kompatibilitetstestfiler, dataimportexempel'
         },
@@ -578,7 +578,7 @@ export const sv: SamplePageTranslations = {
       },
       dem: {
         meta: {
-          title: 'Ladda ner gratis DEM-exempelfiler - Digitala höjdmodelltestfiler för GIS och kartläggning | MorphyHub',
+          title: 'Ladda ner gratis DEM-exempelfiler - Digitala höjdmodelltestfiler för GIS och kartläggning | FomiPeek',
           description: 'Ladda ner gratis DEM digitala höjdmodelexempelfiler för att testa GIS-applikationer, terrängkartläggning och geospatiala analysverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa GIS-programvara, terrängvisualisering, höjddatabearbetning, kartläggningsapplikationer och geospatiala analysverktyg.',
           keywords: 'DEM-exempelfiler, DEM-testfiler, ladda ner DEM-exempel, gratis DEM-testfiler, digitala höjdmodellfiler, .dem-testfiler, GIS-höjdfiler, terrängdataexempel, geospatiala datafiler, kartläggningstestfiler, höjdmodelexempel'
         },
@@ -594,7 +594,7 @@ export const sv: SamplePageTranslations = {
       },
       der: {
         meta: {
-          title: 'Ladda ner gratis DER-exempelfiler - Distinguished Encoding Rules-certifikattestfiler | MorphyHub',
+          title: 'Ladda ner gratis DER-exempelfiler - Distinguished Encoding Rules-certifikattestfiler | FomiPeek',
           description: 'Ladda ner gratis DER Distinguished Encoding Rules-certifikatexempelfiler för att testa SSL/TLS-certifikat, PKI-hantering och säkerhetsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa certifikattolkning, OpenSSL, PKI-infrastruktur, SSL-certifikatvalidering och säkerhetscertifikathanteringsverktyg.',
           keywords: 'DER-exempelfiler, DER-testfiler, ladda ner DER-exempel, gratis DER-testfiler, Distinguished Encoding Rules-filer, .der-testfiler, certifikatfiler, SSL-certifikatexempel, PKI-certifikatfiler, OpenSSL-testfiler, certifikattolknings-exempel'
         },
@@ -610,7 +610,7 @@ export const sv: SamplePageTranslations = {
       },
       dmp: {
         meta: {
-          title: 'Ladda ner gratis DMP-exempelfiler - Minnesdump-testfiler för felsökning och analys | MorphyHub',
+          title: 'Ladda ner gratis DMP-exempelfiler - Minnesdump-testfiler för felsökning och analys | FomiPeek',
           description: 'Ladda ner gratis DMP-minnesdumpexempelfiler för att testa kraschanalys, felsökningsverktyg och systemdiagnostik. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa felsökare, kraschanalysverktyg, minnesanalysatorer, systemdiagnostikverktyg och forensiska analysapplikationer.',
           keywords: 'DMP-exempelfiler, DMP-testfiler, ladda ner DMP-exempel, gratis DMP-testfiler, minnesdumpfiler, .dmp-testfiler, kraschdumpfiler, felsökningsfiler, systemdumpexempel, minnesanalysfiler, kraschanalys-testfiler'
         },
@@ -626,7 +626,7 @@ export const sv: SamplePageTranslations = {
       },
       'docker-compose-yml': {
         meta: {
-          title: 'Ladda ner gratis Docker Compose YML-exempelfiler - Docker Compose-konfigurationstestfiler | MorphyHub',
+          title: 'Ladda ner gratis Docker Compose YML-exempelfiler - Docker Compose-konfigurationstestfiler | FomiPeek',
           description: 'Ladda ner gratis Docker Compose YML-konfigurationsexempelfiler för att testa Docker-containerorkestrering, multi-containerapplikationer och DevOps-verktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Docker Compose, containerorkestrering, YAML-tolkning, DevOps-automatisering och containeriserade applikationsdistributionsverktyg.',
           keywords: 'Docker Compose YML-exempelfiler, docker-compose-testfiler, ladda ner docker-compose-exempel, gratis docker-compose-testfiler, Docker Compose YAML-filer, .yml-testfiler, containerorkestreringsfiler, DevOps-konfigurationsexempel, Docker Compose-testfiler, multi-container-konfigurationsexempel'
         },
@@ -642,7 +642,7 @@ export const sv: SamplePageTranslations = {
       },
       dockerfile: {
         meta: {
-          title: 'Ladda ner gratis Dockerfile-exempelfiler - Docker-containerbyggtestfiler | MorphyHub',
+          title: 'Ladda ner gratis Dockerfile-exempelfiler - Docker-containerbyggtestfiler | FomiPeek',
           description: 'Ladda ner gratis Dockerfile Docker-containerbygg-exempelfiler för att testa containerisering, Docker-bygg och DevOps-verktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Docker-bygg, containerimage-skapande, Dockerfile-tolkning, containeriseringsverktyg och DevOps-automatiseringsplattformar.',
           keywords: 'Dockerfile-exempelfiler, Dockerfile-testfiler, ladda ner Dockerfile-exempel, gratis Dockerfile-testfiler, Docker-containerfiler, Dockerfile-testfiler, containerbyggfiler, Docker-byggexempel, containeriseringstestfiler, DevOps Docker-exempel'
         },
@@ -658,7 +658,7 @@ export const sv: SamplePageTranslations = {
       },
       editorconfig: {
         meta: {
-          title: 'Ladda ner gratis EditorConfig-exempelfiler - Redigerarkonfigurationstestfiler | MorphyHub',
+          title: 'Ladda ner gratis EditorConfig-exempelfiler - Redigerarkonfigurationstestfiler | FomiPeek',
           description: 'Ladda ner gratis EditorConfig-redigerarkonfigurationsexempelfiler för att testa kodredigerarinställningar, formatkonsistens och utvecklingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa EditorConfig-parsers, kodredigerarplugins, formatverktyg, IDE-konfiguration och utvecklingsmiljöinställningsverktyg.',
           keywords: 'EditorConfig-exempelfiler, EditorConfig-testfiler, ladda ner EditorConfig-exempel, gratis EditorConfig-testfiler, redigerarkonfigurationsfiler, .editorconfig-testfiler, kodredigerarinställningsfiler, IDE-konfigurationsexempel, formatkonfigurationsfiler, redigerarinställningstestfiler'
         },
@@ -674,7 +674,7 @@ export const sv: SamplePageTranslations = {
       },
       ini: {
         meta: {
-          title: 'Ladda ner gratis INI-exempelfiler - INI-konfigurationstestfiler för applikationer | MorphyHub',
+          title: 'Ladda ner gratis INI-exempelfiler - INI-konfigurationstestfiler för applikationer | FomiPeek',
           description: 'Ladda ner gratis INI-konfigurationsexempelfiler för att testa applikationsinställningar, INI-filtolkning och konfigurationshanteringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa INI-parsers, applikationskonfiguration, inställningshantering, Windows INI-filer och programvarukonfigurationsverktyg.',
           keywords: 'INI-exempelfiler, INI-testfiler, ladda ner INI-exempel, gratis INI-testfiler, INI-konfigurationsfiler, .ini-testfiler, applikationsinställningsfiler, INI-konfigurationsexempel, Windows INI-filer, konfigurationsfil-exempel, INI-tolknings-testfiler'
         },
@@ -690,7 +690,7 @@ export const sv: SamplePageTranslations = {
       },
       intelhex: {
         meta: {
-          title: 'Ladda ner gratis IntelHex-exempelfiler - Intel hex-testfiler för firmware-utveckling | MorphyHub',
+          title: 'Ladda ner gratis IntelHex-exempelfiler - Intel hex-testfiler för firmware-utveckling | FomiPeek',
           description: 'Ladda ner gratis IntelHex Intel hex-exempelfiler för att testa firmware-programmering, inbyggda systemutveckling och mikrokontrollerverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa IntelHex-parsers, firmware-laddare, mikrokontrollerprogrammering, inbyggda utvecklingsverktyg och hex-filbearbetningsapplikationer.',
           keywords: 'IntelHex-exempelfiler, IntelHex-testfiler, ladda ner IntelHex-exempel, gratis IntelHex-testfiler, Intel hex-filer, .intelhex-testfiler, hex-firmwarefiler, hex-inbyggda filer, hex-mikrokontrollerfiler, IntelHex-parsertestfiler, firmware-programmeringsexempel'
         },
@@ -706,7 +706,7 @@ export const sv: SamplePageTranslations = {
       },
       ipynb: {
         meta: {
-          title: 'Ladda ner gratis IPYNB-exempelfiler - Jupyter Notebook-testfiler för datavetenskap | MorphyHub',
+          title: 'Ladda ner gratis IPYNB-exempelfiler - Jupyter Notebook-testfiler för datavetenskap | FomiPeek',
           description: 'Ladda ner gratis IPYNB Jupyter Notebook-exempelfiler för att testa datavetenskapsarbetsflöden, Python-körning och notebook-analysverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Jupyter Notebook, Python-datavetenskapsverktyg, notebook-visare, dataanalysapplikationer och vetenskapliga beräkningsplattformar.',
           keywords: 'IPYNB-exempelfiler, IPYNB-testfiler, ladda ner IPYNB-exempel, gratis IPYNB-testfiler, Jupyter Notebook-filer, .ipynb-testfiler, Python-notebookfiler, datavetenskapsnotebook-exempel, Jupyter-testfiler, notebook-analysfiler, datavetenskapsarbetsflödes-exempel'
         },
@@ -722,7 +722,7 @@ export const sv: SamplePageTranslations = {
       },
       java: {
         meta: {
-          title: 'Ladda ner gratis Java-exempelfiler - Java-källkodstestfiler för utveckling | MorphyHub',
+          title: 'Ladda ner gratis Java-exempelfiler - Java-källkodstestfiler för utveckling | FomiPeek',
           description: 'Ladda ner gratis Java Java-källkodsexempelfiler för att testa Java-kompilering, JVM-applikationer och utvecklingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Java-kompilatorer, JVM, IDE-stöd (Eclipse, IntelliJ), Java-byggverktyg (Maven, Gradle) och Java-utvecklingsmiljöer.',
           keywords: 'Java-exempelfiler, Java-testfiler, ladda ner Java-exempel, gratis Java-testfiler, Java-källkodsfiler, .java-testfiler, Java-programmeringsfiler, JVM-testfiler, Java-kompileringsexempel, Java IDE-testfiler, Java-utvecklingsexempel'
         },
@@ -738,7 +738,7 @@ export const sv: SamplePageTranslations = {
       },
       jks: {
         meta: {
-          title: 'Ladda ner gratis JKS-exempelfiler - Java KeyStore-testfiler för SSL/TLS-säkerhet | MorphyHub',
+          title: 'Ladda ner gratis JKS-exempelfiler - Java KeyStore-testfiler för SSL/TLS-säkerhet | FomiPeek',
           description: 'Ladda ner gratis JKS Java KeyStore-exempelfiler för att testa SSL/TLS-certifikatlagring, Java-säkerhet och PKI-hanteringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Java KeyStore-hantering, JKS-tolkning, SSL-certifikatlagring, Java-säkerhetsverktyg och PKI-infrastruktur.',
           keywords: 'JKS-exempelfiler, JKS-testfiler, ladda ner JKS-exempel, gratis JKS-testfiler, Java KeyStore-filer, .jks-testfiler, SSL-certifikatfiler, Java-säkerhetsfiler, keystore-testfiler, PKI-certifikatexempel, Java KeyStore-hanterings-testfiler'
         },
@@ -754,7 +754,7 @@ export const sv: SamplePageTranslations = {
       },
       json: {
         meta: {
-          title: 'Ladda ner gratis JSON-exempelfiler - JSON-datatestfiler för webbutveckling | MorphyHub',
+          title: 'Ladda ner gratis JSON-exempelfiler - JSON-datatestfiler för webbutveckling | FomiPeek',
           description: 'Ladda ner gratis JSON JSON-dataexempelfiler för att testa JSON-tolkning, API-integration och webbutvecklingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa JSON-parsers, API-svar, datautbytesformat, webbapplikationer och JSON-valideringsverktyg.',
           keywords: 'JSON-exempelfiler, JSON-testfiler, ladda ner JSON-exempel, gratis JSON-testfiler, JSON-datafiler, .json-testfiler, JSON API-filer, JSON-parsertestfiler, datautbytesexempel, JSON-webbfiler, JSON-valideringstestfiler'
         },
@@ -770,7 +770,7 @@ export const sv: SamplePageTranslations = {
       },
       jsonl: {
         meta: {
-          title: 'Ladda ner gratis JSONL-exempelfiler - JSON Lines-testfiler för databearbetning | MorphyHub',
+          title: 'Ladda ner gratis JSONL-exempelfiler - JSON Lines-testfiler för databearbetning | FomiPeek',
           description: 'Ladda ner gratis JSONL JSON Lines-exempelfiler för att testa databearbetning, JSON-strömning och big data-verktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa JSONL-parsers, dataströmningsapplikationer, ETL-verktyg, big data-bearbetning och loggfilanalysverktyg.',
           keywords: 'JSONL-exempelfiler, JSONL-testfiler, ladda ner JSONL-exempel, gratis JSONL-testfiler, JSON Lines-filer, .jsonl-testfiler, JSON-strömningsfiler, databearbetningsexempel, JSON ETL-filer, JSON big data-exempel, JSON-logganalysfiler'
         },
@@ -786,7 +786,7 @@ export const sv: SamplePageTranslations = {
       },
       js: {
         meta: {
-          title: 'Ladda ner gratis JS-exempelfiler - JavaScript-källkodstestfiler för webbutveckling | MorphyHub',
+          title: 'Ladda ner gratis JS-exempelfiler - JavaScript-källkodstestfiler för webbutveckling | FomiPeek',
           description: 'Ladda ner gratis JS JavaScript-källkodsexempelfiler för att testa JavaScript-körning, webbutveckling och front-end-verktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa JavaScript-motorer, Node.js, webbrowsers, JavaScript-minifierare, kodanalysverktyg och front-end-utvecklingsramverk.',
           keywords: 'JS-exempelfiler, JS-testfiler, ladda ner JS-exempel, gratis JS-testfiler, JavaScript-källkodsfiler, .js-testfiler, JavaScript-programmeringsfiler, Node.js-testfiler, JavaScript-webbfiler, JS-minifierartestfiler, front-end-utvecklingsexempel'
         },
@@ -802,7 +802,7 @@ export const sv: SamplePageTranslations = {
       },
       jsx: {
         meta: {
-          title: 'Ladda ner gratis JSX-exempelfiler - React JSX-testfiler för front-end-utveckling | MorphyHub',
+          title: 'Ladda ner gratis JSX-exempelfiler - React JSX-testfiler för front-end-utveckling | FomiPeek',
           description: 'Ladda ner gratis JSX React JSX-exempelfiler för att testa React-utveckling, JSX-kompilering och front-end-ramverk. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa React, JSX-transpilerare (Babel), front-end-byggverktyg, React-utvecklingsmiljöer och moderna JavaScript-ramverk.',
           keywords: 'JSX-exempelfiler, JSX-testfiler, ladda ner JSX-exempel, gratis JSX-testfiler, React JSX-filer, .jsx-testfiler, React-komponentfiler, JSX-transpilerartestfiler, JSX-front-end-filer, React-utvecklingsexempel, Babel JSX-testfiler'
         },
@@ -818,7 +818,7 @@ export const sv: SamplePageTranslations = {
       },
       jwt: {
         meta: {
-          title: 'Ladda ner gratis JWT-exempelfiler - JSON Web Token-testfiler för API-säkerhet | MorphyHub',
+          title: 'Ladda ner gratis JWT-exempelfiler - JSON Web Token-testfiler för API-säkerhet | FomiPeek',
           description: 'Ladda ner gratis JWT JSON Web Token-exempelfiler för att testa API-autentisering, JWT-tokentolkning och säkerhetsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa JWT-parsers, API-autentisering, tokenvalidering, OAuth 2.0 och säkerhetstestverktyg.',
           keywords: 'JWT-exempelfiler, JWT-testfiler, ladda ner JWT-exempel, gratis JWT-testfiler, JSON Web Token-filer, .jwt-testfiler, autentiseringstokenfiler, API-säkerhetsfiler, JWT-parsertestfiler, OAuth-tokenexempel, säkerhetstestfiler'
         },
@@ -834,7 +834,7 @@ export const sv: SamplePageTranslations = {
       },
       key: {
         meta: {
-          title: 'Ladda ner gratis KEY-exempelfiler - Privatnyckel-testfiler för SSL/TLS-säkerhet | MorphyHub',
+          title: 'Ladda ner gratis KEY-exempelfiler - Privatnyckel-testfiler för SSL/TLS-säkerhet | FomiPeek',
           description: 'Ladda ner gratis KEY-privatnyckelexempelfiler för att testa SSL/TLS-certifikat, kryptografiska operationer och säkerhetsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa privatnyckeltolkning, OpenSSL, SSL-certifikatgenerering, kryptografibibliotek och säkerhetscertifikathanteringsverktyg.',
           keywords: 'KEY-exempelfiler, KEY-testfiler, ladda ner KEY-exempel, gratis KEY-testfiler, privatnyckelfiler, .key-testfiler, SSL-nyckelfiler, kryptografiska nyckelfiler, OpenSSL-testfiler, säkerhetsnyckelexempel, certifikatnyckel-testfiler'
         },
@@ -850,7 +850,7 @@ export const sv: SamplePageTranslations = {
       },
       kml: {
         meta: {
-          title: 'Ladda ner gratis KML-exempelfiler - Keyhole Markup Language-testfiler för GIS och kartläggning | MorphyHub',
+          title: 'Ladda ner gratis KML-exempelfiler - Keyhole Markup Language-testfiler för GIS och kartläggning | FomiPeek',
           description: 'Ladda ner gratis KML Keyhole Markup Language-geodataexempelfiler för att testa GIS-applikationer, kartvisualisering och geospatiala verktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Google Earth, GIS-programvara, kartrendering, geodatabearbetning och geospatiala analysverktyg.',
           keywords: 'KML-exempelfiler, KML-testfiler, ladda ner KML-exempel, gratis KML-testfiler, Keyhole Markup Language-filer, .kml-testfiler, geodatafiler, kartdataexempel, KML GIS-filer, Google Earth-testfiler, geospatiala dataexempel'
         },
@@ -866,7 +866,7 @@ export const sv: SamplePageTranslations = {
       },
       kt: {
         meta: {
-          title: 'Ladda ner gratis KT-exempelfiler - Kotlin-källkodstestfiler för Android-utveckling | MorphyHub',
+          title: 'Ladda ner gratis KT-exempelfiler - Kotlin-källkodstestfiler för Android-utveckling | FomiPeek',
           description: 'Ladda ner gratis KT Kotlin-källkodsexempelfiler för att testa Kotlin-kompilering, Android-utveckling och JVM-applikationer. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Kotlin-kompilatorer, Android Studio, Kotlin/JVM, IDE-stöd och Kotlin-utvecklingsmiljöer.',
           keywords: 'KT-exempelfiler, KT-testfiler, ladda ner KT-exempel, gratis KT-testfiler, Kotlin-källkodsfiler, .kt-testfiler, Kotlin-programmeringsfiler, Android Kotlin-filer, Kotlin-kompilatorstestfiler, Kotlin JVM-exempel, Kotlin-utvecklingstestfiler'
         },
@@ -882,7 +882,7 @@ export const sv: SamplePageTranslations = {
       },
       log: {
         meta: {
-          title: 'Ladda ner gratis LOG-exempelfiler - Loggtestfiler för felsökning och systemanalys | MorphyHub',
+          title: 'Ladda ner gratis LOG-exempelfiler - Loggtestfiler för felsökning och systemanalys | FomiPeek',
           description: 'Ladda ner gratis LOG-loggexempelfiler för att testa loggtolkning, systemanalys och felsökningsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa logganalysatorer, systemövervakningsverktyg, felsökningsapplikationer, loggaggregeringssystem och systemdiagnostikverktyg.',
           keywords: 'LOG-exempelfiler, LOG-testfiler, ladda ner LOG-exempel, gratis LOG-testfiler, loggfiler, .log-testfiler, systemloggfiler, applikationsloggexempel, loggparsertestfiler, loggfelsökningsfiler, systemlogganalys-exempel'
         },
@@ -898,7 +898,7 @@ export const sv: SamplePageTranslations = {
       },
       lua: {
         meta: {
-          title: 'Ladda ner gratis LUA-exempelfiler - Lua-skripttestfiler för spelutveckling och automatisering | MorphyHub',
+          title: 'Ladda ner gratis LUA-exempelfiler - Lua-skripttestfiler för spelutveckling och automatisering | FomiPeek',
           description: 'Ladda ner gratis LUA Lua-skriptexempelfiler för att testa Lua-körning, spelutveckling och automatiseringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Lua-tolkar, spelmotorer, skriptmiljöer, automatiseringsverktyg och inbyggda Lua-applikationer.',
           keywords: 'LUA-exempelfiler, LUA-testfiler, ladda ner LUA-exempel, gratis LUA-testfiler, Lua-skriptfiler, .lua-testfiler, Lua-programmeringsfiler, spelskriptfiler, Lua-tolkarstestfiler, automatiseringsskriptexempel, inbyggda Lua-testfiler'
         },
@@ -914,7 +914,7 @@ export const sv: SamplePageTranslations = {
       },
       m3u: {
         meta: {
-          title: 'Ladda ner gratis M3U-exempelfiler - M3U-spellistetestfiler för mediaspelare | MorphyHub',
+          title: 'Ladda ner gratis M3U-exempelfiler - M3U-spellistetestfiler för mediaspelare | FomiPeek',
           description: 'Ladda ner gratis M3U M3U-spellistexempelfiler för att testa mediaspelare, spellistetolkning och audio/video-strömningsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa mediaspelare, spellistehanterare, strömningsapplikationer, audio-spelare och video-spelarprogramvara.',
           keywords: 'M3U-exempelfiler, M3U-testfiler, ladda ner M3U-exempel, gratis M3U-testfiler, M3U-spellistefiler, .m3u-testfiler, mediaspellistefiler, audio-spellistexempel, video-spellistefiler, mediaspelartestfiler, strömningsspellistexempel'
         },
@@ -930,7 +930,7 @@ export const sv: SamplePageTranslations = {
       },
       m3u8: {
         meta: {
-          title: 'Ladda ner gratis M3U8-exempelfiler - M3U8 HLS-spellistetestfiler för video-strömning | MorphyHub',
+          title: 'Ladda ner gratis M3U8-exempelfiler - M3U8 HLS-spellistetestfiler för video-strömning | FomiPeek',
           description: 'Ladda ner gratis M3U8 M3U8 HLS (HTTP Live Streaming) spellistexempelfiler för att testa video-strömning, HLS-spelare och medieleveransverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa HLS-spelare, video-strömningsplattformar, adaptiv bitrate-strömning, mediaservrar och video-leveranssystem.',
           keywords: 'M3U8-exempelfiler, M3U8-testfiler, ladda ner M3U8-exempel, gratis M3U8-testfiler, M3U8 HLS-spellistefiler, .m3u8-testfiler, HTTP Live Streaming-filer, video-strömningsspellistexempel, HLS-spelartestfiler, adaptiv strömningsexempel, mediaserverspellistefiler'
         },
@@ -946,7 +946,7 @@ export const sv: SamplePageTranslations = {
       },
       makefile: {
         meta: {
-          title: 'Ladda ner gratis Makefile-exempelfiler - Makefile-byggkonfigurationstestfiler | MorphyHub',
+          title: 'Ladda ner gratis Makefile-exempelfiler - Makefile-byggkonfigurationstestfiler | FomiPeek',
           description: 'Ladda ner gratis Makefile-byggkonfigurationsexempelfiler för att testa byggautomatisering, Make-byggsystem och utvecklingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Make-byggsystem, byggautomatiseringsverktyg, C/C++-kompilering, byggskript och utvecklingsbyggmiljöer.',
           keywords: 'Makefile-exempelfiler, Makefile-testfiler, ladda ner Makefile-exempel, gratis Makefile-testfiler, Makefile-byggfiler, Makefile-testfiler, byggkonfigurationsfiler, Make-byggsystemexempel, C/C++-byggfiler, byggautomatiseringstestfiler, Makefile-kompileringsexempel'
         },
@@ -962,7 +962,7 @@ export const sv: SamplePageTranslations = {
       },
       mbtiles: {
         meta: {
-          title: 'Ladda ner gratis MBTiles-exempelfiler - MBTiles-karttilesdatabastestfiler | MorphyHub',
+          title: 'Ladda ner gratis MBTiles-exempelfiler - MBTiles-karttilesdatabastestfiler | FomiPeek',
           description: 'Ladda ner gratis MBTiles-karttilesdatabas-exempelfiler för att testa kartrendering, GIS-applikationer och kartläggningsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa karttileservrar, GIS-programvara, kartrenderingmotorer, mobila kartläggningsapplikationer och offline-kartverktyg.',
           keywords: 'MBTiles-exempelfiler, MBTiles-testfiler, ladda ner MBTiles-exempel, gratis MBTiles-testfiler, MBTiles-karttilesfiler, .mbtiles-testfiler, kartdatabasfiler, GIS-tilesexempel, kartrenderingfiler, mobila karttestfiler, offline-karttilesexempel'
         },
@@ -978,7 +978,7 @@ export const sv: SamplePageTranslations = {
       },
       md: {
         meta: {
-          title: 'Ladda ner gratis MD-exempelfiler - Markdown-dokumentationstestfiler | MorphyHub',
+          title: 'Ladda ner gratis MD-exempelfiler - Markdown-dokumentationstestfiler | FomiPeek',
           description: 'Ladda ner gratis MD Markdown-dokumentationsexempelfiler för att testa Markdown-tolkning, dokumentationsverktyg och innehållshanteringssystem. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Markdown-parsers, dokumentationsgeneratorer, statiska webbplatsgeneratorer, GitHub Markdown och innehållshanteringsplattformar.',
           keywords: 'MD-exempelfiler, MD-testfiler, ladda ner MD-exempel, gratis MD-testfiler, Markdown-filer, .md-testfiler, Markdown-dokumentationsfiler, Markdown-parsertestfiler, GitHub Markdown-exempel, statiska webbplatsgeneratorfiler, dokumentationsgeneratorstestfiler'
         },
@@ -994,7 +994,7 @@ export const sv: SamplePageTranslations = {
       },
       mdx: {
         meta: {
-          title: 'Ladda ner gratis MDX-exempelfiler - MDX React Markdown-testfiler för dokumentation | MorphyHub',
+          title: 'Ladda ner gratis MDX-exempelfiler - MDX React Markdown-testfiler för dokumentation | FomiPeek',
           description: 'Ladda ner gratis MDX MDX (Markdown + JSX) exempelfiler för att testa React-dokumentation, statiska webbplatsgeneratorer och innehållshanteringssystem. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa MDX-parsers, React-dokumentationsverktyg, Next.js, Gatsby, statiska webbplatsgeneratorer och moderna dokumentationsplattformar.',
           keywords: 'MDX-exempelfiler, MDX-testfiler, ladda ner MDX-exempel, gratis MDX-testfiler, MDX React Markdown-filer, .mdx-testfiler, React-dokumentationsfiler, MDX-parsertestfiler, MDX Next.js-exempel, MDX Gatsby-filer, statiska webbplatsgenerator MDX-testfiler'
         },
@@ -1010,7 +1010,7 @@ export const sv: SamplePageTranslations = {
       },
       apk: {
         meta: {
-          title: 'Ladda ner gratis APK-exempelfiler - Android-applikationspaket testfiler | MorphyHub',
+          title: 'Ladda ner gratis APK-exempelfiler - Android-applikationspaket testfiler | FomiPeek',
           description: 'Ladda ner gratis APK Android-applikationspaket exempelfiler för att testa Android-appinstallation, APK-analys, reverse engineering och mobila utvecklingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa APK-installatörer, Android-emulatorer, app-analysatorer, säkerhetsskannrar och mobila apputvecklingsplattformar.',
           keywords: 'APK-exempelfiler, APK-testfiler, ladda ner APK-exempel, gratis APK-testfiler, Android APK-filer, .apk-testfiler, Android-apppaketfiler, APK-installatörstestfiler, Android-emulatortestfiler, mobila apputvecklingsexempel, APK reverse engineering-filer'
         },
@@ -1026,7 +1026,7 @@ export const sv: SamplePageTranslations = {
       },
       appimage: {
         meta: {
-          title: 'Ladda ner gratis AppImage-exempelfiler - Linux portabla applikationer testfiler | MorphyHub',
+          title: 'Ladda ner gratis AppImage-exempelfiler - Linux portabla applikationer testfiler | FomiPeek',
           description: 'Ladda ner gratis AppImage Linux portabla applikationer exempelfiler för att testa Linux-appdistribution, AppImage-körning och kompatibilitet mellan distributioner. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa AppImage-runners, Linux-applikationslanseringar, portabla appverktyg och universell Linux-mjukvarudistribution.',
           keywords: 'AppImage-exempelfiler, AppImage-testfiler, ladda ner AppImage-exempel, gratis AppImage-testfiler, Linux AppImage-filer, .AppImage-testfiler, portabla Linux-appar, AppImage-runner-testfiler, Linux-applikationsfiler, appar mellan distributioner, universell Linux-mjukvaruexempel'
         },
@@ -1042,7 +1042,7 @@ export const sv: SamplePageTranslations = {
       },
       elf: {
         meta: {
-          title: 'Ladda ner gratis ELF-exempelfiler - Executable and Linkable Format testfiler för Linux/Unix | MorphyHub',
+          title: 'Ladda ner gratis ELF-exempelfiler - Executable and Linkable Format testfiler för Linux/Unix | FomiPeek',
           description: 'Ladda ner gratis ELF Executable and Linkable Format exempelfiler för att testa Linux/Unix-binäranalys, ELF-parsing, reverse engineering och systemfelsökning. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa ELF-analysatorer, binära disassemblers, reverse engineering-verktyg, systemfelsökningsverktyg och Linux-executable-analysplattformar.',
           keywords: 'ELF-exempelfiler, ELF-testfiler, ladda ner ELF-exempel, gratis ELF-testfiler, Linux ELF-filer, .elf-testfiler, Unix-executable-filer, ELF-binäranalysfiler, reverse engineering ELF-filer, Linux-binära filer, ELF-disassembler-testfiler'
         },
@@ -1058,7 +1058,7 @@ export const sv: SamplePageTranslations = {
       },
       exe: {
         meta: {
-          title: 'Ladda ner gratis EXE-exempelfiler - Windows executable testfiler | MorphyHub',
+          title: 'Ladda ner gratis EXE-exempelfiler - Windows executable testfiler | FomiPeek',
           description: 'Ladda ner gratis EXE Windows executable exempelfiler för att testa Windows-applikationskörning, EXE-analys, binärparsing och Windows-utvecklingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Windows-executable-analysatorer, binära disassemblers, reverse engineering-verktyg, malware-analysplattformar och Windows-applikationsutveckling.',
           keywords: 'EXE-exempelfiler, EXE-testfiler, ladda ner EXE-exempel, gratis EXE-testfiler, Windows EXE-filer, .exe-testfiler, Windows-executable-filer, EXE-binäranalysfiler, Windows-applikationsfiler, reverse engineering EXE-filer, Windows-binära disassembler-testfiler'
         },
@@ -1074,7 +1074,7 @@ export const sv: SamplePageTranslations = {
       },
       ipa: {
         meta: {
-          title: 'Ladda ner gratis IPA-exempelfiler - iOS-applikationspaket testfiler | MorphyHub',
+          title: 'Ladda ner gratis IPA-exempelfiler - iOS-applikationspaket testfiler | FomiPeek',
           description: 'Ladda ner gratis IPA iOS-applikationspaket exempelfiler för att testa iOS-appinstallation, IPA-analys, iOS-appdistribution och mobila utvecklingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa IPA-installatörer, iOS-simulatorer, app-analysatorer, iOS-utvecklingsverktyg och mobila appdistributionsplattformar.',
           keywords: 'IPA-exempelfiler, IPA-testfiler, ladda ner IPA-exempel, gratis IPA-testfiler, iOS IPA-filer, .ipa-testfiler, iOS-apppaketfiler, IPA-installatörstestfiler, iOS-simulatortestfiler, mobila apputvecklingsexempel, iOS-appdistributionsfiler'
         },
@@ -1090,7 +1090,7 @@ export const sv: SamplePageTranslations = {
       },
       jar: {
         meta: {
-          title: 'Ladda ner gratis JAR-exempelfiler - Java-arkiv testfiler | MorphyHub',
+          title: 'Ladda ner gratis JAR-exempelfiler - Java-arkiv testfiler | FomiPeek',
           description: 'Ladda ner gratis JAR Java-arkiv exempelfiler för att testa Java-applikationskörning, JAR-extraktion, JAR-analys och Java-utvecklingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa JAR-extraktorer, Java-körningsmiljöer, JAR-analysatorer, Java-utvecklingsverktyg och Java-applikationsdistributionsplattformar.',
           keywords: 'JAR-exempelfiler, JAR-testfiler, ladda ner JAR-exempel, gratis JAR-testfiler, Java JAR-filer, .jar-testfiler, Java-arkivfiler, JAR-extraktortestfiler, Java-körningstestfiler, Java-utvecklingsexempel, JAR-analysfiler'
         },
@@ -1106,7 +1106,7 @@ export const sv: SamplePageTranslations = {
       },
       crx: {
         meta: {
-          title: 'Ladda ner gratis CRX-exempelfiler - Chrome-tilläggspaket testfiler | MorphyHub',
+          title: 'Ladda ner gratis CRX-exempelfiler - Chrome-tilläggspaket testfiler | FomiPeek',
           description: 'Ladda ner gratis CRX Chrome-tilläggspaket exempelfiler för att testa Chrome-tilläggsinstallation, CRX-analys, webbläsartilläggsutveckling och webbtilläggsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa CRX-installatörer, Chrome-tilläggsanalysatorer, webbläsartilläggsutvecklingsverktyg och webbtilläggsdistributionsplattformar.',
           keywords: 'CRX-exempelfiler, CRX-testfiler, ladda ner CRX-exempel, gratis CRX-testfiler, Chrome CRX-filer, .crx-testfiler, Chrome-tilläggsfiler, CRX-installatörstestfiler, webbläsartilläggsfiler, webbtilläggsutvecklingsexempel, Chrome-tilläggsanalysfiler'
         },
@@ -1122,7 +1122,7 @@ export const sv: SamplePageTranslations = {
       },
       '3ds': {
         meta: {
-          title: 'Ladda ner gratis 3DS-exempelfiler - 3D-modell testfiler för 3D-utskrift och modellering | MorphyHub',
+          title: 'Ladda ner gratis 3DS-exempelfiler - 3D-modell testfiler för 3D-utskrift och modellering | FomiPeek',
           description: 'Ladda ner gratis 3DS 3D-modell exempelfiler för att testa 3D-modelleringsprogram, 3D-utskriftsverktyg, mesh-konvertering och 3D-visualiseringsapplikationer. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa 3D-modellvisare, 3D-skrivare, CAD-program, mesh-redigerare och 3D-grafikapplikationer.',
           keywords: '3DS-exempelfiler, 3DS-testfiler, ladda ner 3DS-exempel, gratis 3DS-testfiler, 3D-modell 3DS-filer, .3ds-testfiler, 3D-modelleringsfiler, 3D-utskriftstestfiler, CAD 3DS-filer, mesh-modellfiler, 3D-grafikexempel'
         },
@@ -1138,7 +1138,7 @@ export const sv: SamplePageTranslations = {
       },
       '3mf': {
         meta: {
-          title: 'Ladda ner gratis 3MF-exempelfiler - 3D Manufacturing Format testfiler för 3D-utskrift | MorphyHub',
+          title: 'Ladda ner gratis 3MF-exempelfiler - 3D Manufacturing Format testfiler för 3D-utskrift | FomiPeek',
           description: 'Ladda ner gratis 3MF 3D Manufacturing Format exempelfiler för att testa 3D-utskrift, additiv tillverkning, 3D-modellslicing och 3D-skrivarkompatibilitet. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa 3D-skrivarslicers, additiv tillverkningsprogram, 3MF-visare, 3D-utskriftsarbetsflöden och moderna 3D-tillverkningsplattformar.',
           keywords: '3MF-exempelfiler, 3MF-testfiler, ladda ner 3MF-exempel, gratis 3MF-testfiler, 3D-utskrift 3MF-filer, .3mf-testfiler, additiv tillverkningsfiler, 3D-skrivarslicer-testfiler, 3MF-visartestfiler, 3D-tillverkningssexempel, moderna 3D-utskriftsfiler'
         },
@@ -1154,7 +1154,7 @@ export const sv: SamplePageTranslations = {
       },
       ai: {
         meta: {
-          title: 'Ladda ner gratis AI-exempelfiler - Adobe Illustrator vektorgrafik testfiler | MorphyHub',
+          title: 'Ladda ner gratis AI-exempelfiler - Adobe Illustrator vektorgrafik testfiler | FomiPeek',
           description: 'Ladda ner gratis AI Adobe Illustrator vektorgrafik exempelfiler för att testa vektorgrafikredigering, AI-filkonvertering, designprogramkompatibilitet och grafisk designverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Adobe Illustrator, vektorgrafikredigerare, AI-filkonverterare, designprogram och professionella grafisk designplattformar.',
           keywords: 'AI-exempelfiler, AI-testfiler, ladda ner AI-exempel, gratis AI-testfiler, Adobe Illustrator AI-filer, .ai-testfiler, vektorgrafikfiler, Illustrator-testfiler, designprogramfiler, vektorredigeringssexempel, grafisk design AI-filer'
         },
@@ -1170,7 +1170,7 @@ export const sv: SamplePageTranslations = {
       },
       ase: {
         meta: {
-          title: 'Ladda ner gratis ASE-exempelfiler - Aseprite sprite-animation testfiler | MorphyHub',
+          title: 'Ladda ner gratis ASE-exempelfiler - Aseprite sprite-animation testfiler | FomiPeek',
           description: 'Ladda ner gratis ASE Aseprite sprite-animation exempelfiler för att testa pixel art-redigering, sprite-animation, spelutvecklingsverktyg och 2D-animationsprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Aseprite, pixel art-redigerare, sprite-animationsverktyg, spelutvecklingsprogram och 2D-animationsplattformar.',
           keywords: 'ASE-exempelfiler, ASE-testfiler, ladda ner ASE-exempel, gratis ASE-testfiler, Aseprite ASE-filer, .ase-testfiler, sprite-animationsfiler, pixel art-testfiler, spelutvecklingsfiler, 2D-animationssexempel, Aseprite-testfiler'
         },
@@ -1186,7 +1186,7 @@ export const sv: SamplePageTranslations = {
       },
       'animation-fbx': {
         meta: {
-          title: 'Ladda ner gratis Animation FBX-exempelfiler - Autodesk FBX 3D-animation testfiler | MorphyHub',
+          title: 'Ladda ner gratis Animation FBX-exempelfiler - Autodesk FBX 3D-animation testfiler | FomiPeek',
           description: 'Ladda ner gratis Animation FBX Autodesk FBX 3D-animation exempelfiler för att testa 3D-animation, karaktärsrigging, motion capture-data och 3D-grafikprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa 3D-animationsprogram, spelmotorer, motion capture-verktyg, karaktärsanimationsplattformar och 3D-grafikapplikationer.',
           keywords: 'Animation FBX-exempelfiler, FBX-animation testfiler, ladda ner FBX-animation exempel, gratis FBX-animation testfiler, Autodesk FBX-filer, .fbx-animation testfiler, 3D-animationsfiler, karaktärsanimation testfiler, motion capture-filer, 3D-grafikanimationssexempel, spelmotor FBX-filer'
         },
@@ -1202,7 +1202,7 @@ export const sv: SamplePageTranslations = {
       },
       assetbundle: {
         meta: {
-          title: 'Ladda ner gratis AssetBundle-exempelfiler - Unity AssetBundle testfiler för spelutveckling | MorphyHub',
+          title: 'Ladda ner gratis AssetBundle-exempelfiler - Unity AssetBundle testfiler för spelutveckling | FomiPeek',
           description: 'Ladda ner gratis AssetBundle Unity AssetBundle exempelfiler för att testa Unity-spelutveckling, asset-laddning, spelmaterialhantering och Unity-motorverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Unity-motorn, spelmaterialladdare, Unity-utvecklingsverktyg, spelmaterialhanterare och Unity-spelutvecklingsplattformar.',
           keywords: 'AssetBundle-exempelfiler, AssetBundle-testfiler, ladda ner AssetBundle-exempel, gratis AssetBundle-testfiler, Unity AssetBundle-filer, Unity-assetfiler, spelutvecklingsfiler, Unity-motortestfiler, spelmaterialladdartestfiler, Unity-utvecklingsexempel, spelmaterialhanteringsfiler'
         },
@@ -1218,7 +1218,7 @@ export const sv: SamplePageTranslations = {
       },
       blend: {
         meta: {
-          title: 'Ladda ner gratis BLEND-exempelfiler - Blender 3D-projekt testfiler | MorphyHub',
+          title: 'Ladda ner gratis BLEND-exempelfiler - Blender 3D-projekt testfiler | FomiPeek',
           description: 'Ladda ner gratis BLEND Blender 3D-projekt exempelfiler för att testa 3D-modellering, Blender-projektkompatibilitet, 3D-animationsarbetsflöden och 3D-grafikprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Blender-program, 3D-modelleringsverktyg, Blender-projektvisare, 3D-animationsplattformar och professionella 3D-grafikapplikationer.',
           keywords: 'BLEND-exempelfiler, BLEND-testfiler, ladda ner BLEND-exempel, gratis BLEND-testfiler, Blender BLEND-filer, .blend-testfiler, Blender-projektfiler, 3D-modellerings-testfiler, Blender-testfiler, 3D-animationssexempel, 3D-grafik BLEND-filer'
         },
@@ -1234,7 +1234,7 @@ export const sv: SamplePageTranslations = {
       },
       bvh: {
         meta: {
-          title: 'Ladda ner gratis BVH-exempelfiler - Biovision Hierarchy motion capture testfiler | MorphyHub',
+          title: 'Ladda ner gratis BVH-exempelfiler - Biovision Hierarchy motion capture testfiler | FomiPeek',
           description: 'Ladda ner gratis BVH Biovision Hierarchy motion capture exempelfiler för att testa motion capture-data, karaktärsanimation, skelettanimationssystem och 3D-animationsprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa motion capture-visare, karaktärsanimationsverktyg, skelettanimationssystem, 3D-animationsplattformar och motion capture-analysprogram.',
           keywords: 'BVH-exempelfiler, BVH-testfiler, ladda ner BVH-exempel, gratis BVH-testfiler, Biovision Hierarchy BVH-filer, .bvh-testfiler, motion capture-filer, karaktärsanimation testfiler, skelettanimationsfiler, 3D-animation BVH-exempel, motion capture-analysfiler'
         },
@@ -1250,7 +1250,7 @@ export const sv: SamplePageTranslations = {
       },
       dwg: {
         meta: {
-          title: 'Ladda ner gratis DWG-exempelfiler - AutoCAD-ritning testfiler för CAD-design | MorphyHub',
+          title: 'Ladda ner gratis DWG-exempelfiler - AutoCAD-ritning testfiler för CAD-design | FomiPeek',
           description: 'Ladda ner gratis DWG AutoCAD-ritning exempelfiler för att testa CAD-program, AutoCAD-kompatibilitet, teknisk ritningsverktyg och ingenjörsdesignapplikationer. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa AutoCAD, CAD-visare, teknisk ritningsprogram, ingenjörsdesignverktyg och professionella CAD-plattformar.',
           keywords: 'DWG-exempelfiler, DWG-testfiler, ladda ner DWG-exempel, gratis DWG-testfiler, AutoCAD DWG-filer, .dwg-testfiler, CAD-ritningsfiler, AutoCAD-testfiler, teknisk ritningsfiler, ingenjörsdesignsexempel, CAD-program DWG-filer'
         },
@@ -1266,7 +1266,7 @@ export const sv: SamplePageTranslations = {
       },
       dxf: {
         meta: {
-          title: 'Ladda ner Gratis DXF Exempelfiler - Drawing Exchange Format Testfiler AutoCAD | MorphyHub',
+          title: 'Ladda ner Gratis DXF Exempelfiler - Drawing Exchange Format Testfiler AutoCAD | FomiPeek',
           description: 'Ladda ner gratis DXF Drawing Exchange Format exempelfiler för att testa CAD-program, DXF-konverterare och teknisk ritningsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa AutoCAD, CAD-visare, DXF-parsers och ritningsfil utbytesapplikationer.',
           keywords: 'DXF exempelfiler, DXF testfiler, ladda ner DXF exempel, gratis DXF testfiler, AutoCAD DXF-filer, Drawing Exchange Format filer, CAD DXF-filer, DXF-konverterare testfiler, teknisk ritningsfiler, DXF-parser testfiler, CAD-filutbyte exempel'
         },
@@ -1282,7 +1282,7 @@ export const sv: SamplePageTranslations = {
       },
       ifc: {
         meta: {
-          title: 'Ladda ner Gratis IFC Exempelfiler - Industry Foundation Classes BIM Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis IFC Exempelfiler - Industry Foundation Classes BIM Testfiler | FomiPeek',
           description: 'Ladda ner gratis IFC Industry Foundation Classes exempelfiler för att testa BIM-program, IFC-visare, byggnadsinformationsmodelleringsverktyg och byggförvaltningsapplikationer. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Revit, ArchiCAD, IFC-parsers, BIM-visare och byggnadsdesignprogram.',
           keywords: 'IFC exempelfiler, IFC testfiler, ladda ner IFC exempel, gratis IFC testfiler, Industry Foundation Classes filer, BIM IFC-filer, byggnadsinformationsmodellering filer, IFC-visare testfiler, byggprogram filer, IFC-parser testfiler, BIM-utbytesformat exempel'
         },
@@ -1298,7 +1298,7 @@ export const sv: SamplePageTranslations = {
       },
       iges: {
         meta: {
-          title: 'Ladda ner Gratis IGES Exempelfiler - Initial Graphics Exchange Specification CAD Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis IGES Exempelfiler - Initial Graphics Exchange Specification CAD Testfiler | FomiPeek',
           description: 'Ladda ner gratis IGES Initial Graphics Exchange Specification exempelfiler för att testa CAD-program, IGES-konverterare, 3D-modelleringsverktyg och ingenjörsdesignapplikationer. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa CAD-system, IGES-parsers, 3D-modellutbytesverktyg och ingenjörsprogram.',
           keywords: 'IGES exempelfiler, IGES testfiler, ladda ner IGES exempel, gratis IGES testfiler, Initial Graphics Exchange Specification filer, CAD IGES-filer, 3D-modellutbyte filer, IGES-konverterare testfiler, ingenjörsdesign filer, IGES-parser testfiler, CAD-utbytesformat exempel'
         },
@@ -1314,7 +1314,7 @@ export const sv: SamplePageTranslations = {
       },
       igs: {
         meta: {
-          title: 'Ladda ner Gratis IGS Exempelfiler - Initial Graphics Exchange Specification CAD Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis IGS Exempelfiler - Initial Graphics Exchange Specification CAD Testfiler | FomiPeek',
           description: 'Ladda ner gratis IGS Initial Graphics Exchange Specification exempelfiler för att testa CAD-program, IGS-konverterare, 3D-modelleringsverktyg och ingenjörsdesignapplikationer. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa CAD-system, IGS-parsers, 3D-modellutbytesverktyg och ingenjörsprogram.',
           keywords: 'IGS exempelfiler, IGS testfiler, ladda ner IGS exempel, gratis IGS testfiler, Initial Graphics Exchange Specification filer, CAD IGS-filer, 3D-modellutbyte filer, IGS-konverterare testfiler, ingenjörsdesign filer, IGS-parser testfiler, CAD-utbytesformat exempel'
         },
@@ -1330,7 +1330,7 @@ export const sv: SamplePageTranslations = {
       },
       las: {
         meta: {
-          title: 'Ladda ner Gratis LAS Exempelfiler - LiDAR Point Cloud Data Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis LAS Exempelfiler - LiDAR Point Cloud Data Testfiler | FomiPeek',
           description: 'Ladda ner gratis LAS LiDAR point cloud exempelfiler för att testa point cloud-bearbetning, LiDAR-analysverktyg, 3D-kartläggningsprogram och geospatiala applikationer. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa LAS-parsers, point cloud-visare, LiDAR-bearbetningsverktyg, 3D-kartläggningsprogram och geospatiala analysplattformar.',
           keywords: 'LAS exempelfiler, LAS testfiler, ladda ner LAS exempel, gratis LAS testfiler, LiDAR point cloud filer, LAS-format filer, point cloud-data filer, LAS-parser testfiler, geospatiala filer, LiDAR-analys testfiler, 3D-kartläggning exempel'
         },
@@ -1346,7 +1346,7 @@ export const sv: SamplePageTranslations = {
       },
       ma: {
         meta: {
-          title: 'Ladda ner Gratis MA Exempelfiler - Maya ASCII Scene Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis MA Exempelfiler - Maya ASCII Scene Testfiler | FomiPeek',
           description: 'Ladda ner gratis MA Maya ASCII scene exempelfiler för att testa Maya scene-konvertering, 3D-animeringsprogram, MA-filparsers och animationsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Autodesk Maya, MA-filvisare, scene-konverteringsverktyg, 3D-animationsplattformar och animationsarbetsflödesprogram.',
           keywords: 'MA exempelfiler, MA testfiler, ladda ner MA exempel, gratis MA testfiler, Maya ASCII scene filer, MA-format filer, 3D-animationsscene filer, MA-parser testfiler, animationsfiler, Maya scene testfiler, 3D-animation exempel'
         },
@@ -1362,7 +1362,7 @@ export const sv: SamplePageTranslations = {
       },
       max: {
         meta: {
-          title: 'Ladda ner Gratis MAX Exempelfiler - 3ds Max Scene Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis MAX Exempelfiler - 3ds Max Scene Testfiler | FomiPeek',
           description: 'Ladda ner gratis MAX 3ds Max scene exempelfiler för att testa 3ds Max scene-konvertering, 3D-modelleringsprogram, MAX-filparsers och 3D-designverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Autodesk 3ds Max, MAX-filvisare, scene-konverteringsverktyg, 3D-modelleringsplattformar och 3D-designarbetsflödesprogram.',
           keywords: 'MAX exempelfiler, MAX testfiler, ladda ner MAX exempel, gratis MAX testfiler, 3ds Max scene filer, MAX-format filer, 3D-modelleringsscene filer, MAX-parser testfiler, 3D-design filer, 3ds Max scene testfiler, 3D-modellering exempel'
         },
@@ -1378,7 +1378,7 @@ export const sv: SamplePageTranslations = {
       },
       mb: {
         meta: {
-          title: 'Ladda ner Gratis MB Exempelfiler - Maya Binary Scene Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis MB Exempelfiler - Maya Binary Scene Testfiler | FomiPeek',
           description: 'Ladda ner gratis MB Maya Binary scene exempelfiler för att testa Maya scene-konvertering, 3D-animeringsprogram, MB-filparsers och animationsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Autodesk Maya, MB-filvisare, scene-konverteringsverktyg, 3D-animationsplattformar och animationsarbetsflödesprogram.',
           keywords: 'MB exempelfiler, MB testfiler, ladda ner MB exempel, gratis MB testfiler, Maya Binary scene filer, MB-format filer, 3D-animationsscene filer, MB-parser testfiler, animationsfiler, Maya scene testfiler, 3D-animation exempel'
         },
@@ -1394,7 +1394,7 @@ export const sv: SamplePageTranslations = {
       },
       indd: {
         meta: {
-          title: 'Ladda ner Gratis INDD Exempelfiler - Adobe InDesign Dokument Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis INDD Exempelfiler - Adobe InDesign Dokument Testfiler | FomiPeek',
           description: 'Ladda ner gratis INDD Adobe InDesign dokument exempelfiler för att testa InDesign-kompatibilitet, INDD-konverterare, skrivbordsutgivningsprogram och layoutdesignverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Adobe InDesign, INDD-filvisare, dokumentkonverteringsverktyg, skrivbordsutgivningsplattformar och layoutdesignprogram.',
           keywords: 'INDD exempelfiler, INDD testfiler, ladda ner INDD exempel, gratis INDD testfiler, Adobe InDesign filer, INDD-format filer, skrivbordsutgivning filer, INDD-konverterare testfiler, layoutdesign filer, InDesign dokument testfiler, publiceringsprogram exempel'
         },
@@ -1410,7 +1410,7 @@ export const sv: SamplePageTranslations = {
       },
       'animated-gif': {
         meta: {
-          title: 'Ladda ner Gratis Animerade GIF Exempelfiler - Animerade Bild Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis Animerade GIF Exempelfiler - Animerade Bild Testfiler | FomiPeek',
           description: 'Ladda ner gratis animerade GIF exempelfiler för att testa GIF-animationsuppspelning, bildvisare, webbläsare och animationsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa GIF-visare, animationsspelare, bildbehandlingsverktyg, webbutvecklingsplattformar och multimediaapplikationer.',
           keywords: 'animerade GIF exempelfiler, animerade GIF testfiler, ladda ner animerade GIF exempel, gratis animerade GIF testfiler, GIF-animationsfiler, animerade bildfiler, GIF-spelare testfiler, animationsfiler, webbanimation testfiler, multimedia GIF exempel'
         },
@@ -1426,7 +1426,7 @@ export const sv: SamplePageTranslations = {
       },
       apng: {
         meta: {
-          title: 'Ladda ner Gratis APNG Exempelfiler - Animerade PNG Bild Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis APNG Exempelfiler - Animerade PNG Bild Testfiler | FomiPeek',
           description: 'Ladda ner gratis APNG Animated Portable Network Graphics exempelfiler för att testa APNG-animationsuppspelning, bildvisare, webbläsare och moderna bildverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa APNG-visare, animationsspelare, bildbehandlingsverktyg, webbutvecklingsplattformar och moderna multimediaapplikationer.',
           keywords: 'APNG exempelfiler, APNG testfiler, ladda ner APNG exempel, gratis APNG testfiler, Animated PNG filer, APNG-animationsfiler, APNG-spelare testfiler, animationsfiler, webbanimation testfiler, modernt bildformat exempel'
         },
@@ -1442,7 +1442,7 @@ export const sv: SamplePageTranslations = {
       },
       avif: {
         meta: {
-          title: 'Ladda ner Gratis AVIF Exempelfiler - AV1 Image File Format Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis AVIF Exempelfiler - AV1 Image File Format Testfiler | FomiPeek',
           description: 'Ladda ner gratis AVIF AV1 Image File Format exempelfiler för att testa modern bildkomprimering, AVIF-visare, webbläsare och bildverktyg av nästa generation. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa AVIF-visare, bildbehandlingsverktyg, webbutvecklingsplattformar, modernt bildformatstöd och multimediaapplikationer av nästa generation.',
           keywords: 'AVIF exempelfiler, AVIF testfiler, ladda ner AVIF exempel, gratis AVIF testfiler, AV1 Image File Format filer, AVIF bildfiler, AVIF-visare testfiler, moderna bildfiler, webb bildformat testfiler, bildformat nästa generation exempel'
         },
@@ -1458,7 +1458,7 @@ export const sv: SamplePageTranslations = {
       },
       bmp: {
         meta: {
-          title: 'Ladda ner Gratis BMP Exempelfiler - Bitmap Bild Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis BMP Exempelfiler - Bitmap Bild Testfiler | FomiPeek',
           description: 'Ladda ner gratis BMP bitmap exempelfiler för att testa bildvisare, BMP-konverterare, grafikprogram och bildbehandlingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa BMP-visare, bildredigerare, grafikomvandlingsverktyg, bildbehandlingsplattformar och bitmap-formatstöd.',
           keywords: 'BMP exempelfiler, BMP testfiler, ladda ner BMP exempel, gratis BMP testfiler, bitmap bildfiler, BMP-format filer, bildvisare testfiler, grafikfiler, bildomvandling testfiler, bitmap-format exempel'
         },
@@ -1474,7 +1474,7 @@ export const sv: SamplePageTranslations = {
       },
       'barcode-svg': {
         meta: {
-          title: 'Ladda ner Gratis Streckkod SVG Exempelfiler - Skalbara Vektor Streckkod Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis Streckkod SVG Exempelfiler - Skalbara Vektor Streckkod Testfiler | FomiPeek',
           description: 'Ladda ner gratis streckkod SVG exempelfiler för att testa streckkodsgenerering, SVG streckkodsläsare, vektorgrafikverktyg och streckkodsskanningsapplikationer. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa streckkodsgeneratorer, SVG-visare, streckkodsskanningsverktyg, vektorgrafikplattformar och streckkodsigenkänningsprogram.',
           keywords: 'streckkod SVG exempelfiler, streckkod SVG testfiler, ladda ner streckkod SVG exempel, gratis streckkod SVG testfiler, SVG streckkodsfiler, vektor streckkodsfiler, streckkodsgenerator testfiler, SVG-filer, streckkodsskanning testfiler, vektorgrafik exempel'
         },
@@ -1490,7 +1490,7 @@ export const sv: SamplePageTranslations = {
       },
       avi: {
         meta: {
-          title: 'Ladda ner Gratis AVI Exempelfiler - Audio Video Interleave Video Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis AVI Exempelfiler - Audio Video Interleave Video Testfiler | FomiPeek',
           description: 'Ladda ner gratis AVI Audio Video Interleave exempelfiler för att testa videospelare, AVI-konverterare, multimediaprogram och videobearbetningsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa AVI-spelare, videoredigerare, multimediakonverteringsverktyg, videobearbetningsplattformar och videoformatstöd.',
           keywords: 'AVI exempelfiler, AVI testfiler, ladda ner AVI exempel, gratis AVI testfiler, Audio Video Interleave filer, AVI videofiler, videospelare testfiler, multimediafiler, videokonvertering testfiler, videoformat exempel'
         },
@@ -1506,7 +1506,7 @@ export const sv: SamplePageTranslations = {
       },
       '3gp': {
         meta: {
-          title: 'Ladda ner Gratis 3GP Exempelfiler - 3GPP Mobile Video Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis 3GP Exempelfiler - 3GPP Mobile Video Testfiler | FomiPeek',
           description: 'Ladda ner gratis 3GP 3GPP mobile video exempelfiler för att testa mobila videospelare, 3GP-konverterare, multimediaprogram och mobila videobearbetningsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa 3GP-spelare, mobila videoredigerare, videokonverteringsverktyg, mobila multimediaplattformar och mobilt videoformatstöd.',
           keywords: '3GP exempelfiler, 3GP testfiler, ladda ner 3GP exempel, gratis 3GP testfiler, 3GPP mobile video filer, 3GP videofiler, mobil videospelare testfiler, multimediafiler, mobil videokonvertering testfiler, mobilt videoformat exempel'
         },
@@ -1522,7 +1522,7 @@ export const sv: SamplePageTranslations = {
       },
       dav: {
         meta: {
-          title: 'Ladda ner Gratis DAV Exempelfiler - DAV Video Testfiler för Säkerhetskameror | MorphyHub',
+          title: 'Ladda ner Gratis DAV Exempelfiler - DAV Video Testfiler för Säkerhetskameror | FomiPeek',
           description: 'Ladda ner gratis DAV exempelfiler för att testa DAV-videospelare, videobearbetning av säkerhetskameror, DAV-konverterare och videoövervakningsanalysverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa DAV-uppspelning, DAV-till-MP4-konverterare, säkerhetskamerorprogram, videoövervakningsverktyg och DAV-formatkompatibilitet.',
           keywords: 'DAV exempelfiler, DAV testfiler, ladda ner DAV exempel, gratis DAV testfiler, DAV videofiler, säkerhetskamera videofiler, DAV till MP4 konverterare, DAV-spelare test, videoövervakning exempel, DAV-format testfiler, videoövervakning testfiler'
         },
@@ -1538,7 +1538,7 @@ export const sv: SamplePageTranslations = {
       },
       dds: {
         meta: {
-          title: 'Ladda ner Gratis DDS Exempelfiler - DirectDraw Surface Textur Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis DDS Exempelfiler - DirectDraw Surface Textur Testfiler | FomiPeek',
           description: 'Ladda ner gratis DDS DirectDraw Surface exempelfiler för att testa texturbildkonvertering, DDS-visualisering, spelutvecklingsverktyg och grafikbearbetningsprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa DDS-texturladdning, DDS-till-PNG-konverterare, spelmotor kompatibilitet, texturkomprimeringsverktyg och DirectDraw Surface-formatstöd.',
           keywords: 'DDS exempelfiler, DDS testfiler, ladda ner DDS exempel, gratis DDS testfiler, DirectDraw Surface filer, DDS texturfiler, DDS till PNG konverterare, texturbild exempel, spelutveckling testfiler, DDS-format test, grafiktextur exempel'
         },
@@ -1554,7 +1554,7 @@ export const sv: SamplePageTranslations = {
       },
       dng: {
         meta: {
-          title: 'Ladda ner Gratis DNG Exempelfiler - Digital Negative Raw Bild Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis DNG Exempelfiler - Digital Negative Raw Bild Testfiler | FomiPeek',
           description: 'Ladda ner gratis DNG Digital Negative raw bildexempelfiler för att testa raw bildbearbetning, DNG-konvertering, fotoprogram och professionella bildredigeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa DNG-till-JPEG-konverterare, raw bildredigerare, DNG-visualisering, kameraraw-bearbetning och Adobe Digital Negative-formatstöd.',
           keywords: 'DNG exempelfiler, DNG testfiler, ladda ner DNG exempel, gratis DNG testfiler, Digital Negative filer, DNG raw bildefiler, DNG till JPEG konverterare, raw bildbearbetning, fotografi testfiler, DNG-format test, kameraraw exempel, Adobe DNG testfiler'
         },
@@ -1570,7 +1570,7 @@ export const sv: SamplePageTranslations = {
       },
       eps: {
         meta: {
-          title: 'Ladda ner Gratis EPS Exempelfiler - Encapsulated PostScript Vektorgrafik Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis EPS Exempelfiler - Encapsulated PostScript Vektorgrafik Testfiler | FomiPeek',
           description: 'Ladda ner gratis EPS Encapsulated PostScript exempelfiler för att testa vektorgrafikkonvertering, EPS-visualisering, PostScript-bearbetning och professionella designprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa EPS-till-PDF-konverterare, EPS-till-SVG-konverterare, vektorgrafikredigerare, PostScript-visualiseringar och Encapsulated PostScript-formatkompatibilitet.',
           keywords: 'EPS exempelfiler, EPS testfiler, ladda ner EPS exempel, gratis EPS testfiler, Encapsulated PostScript filer, EPS vektorgrafik, EPS till PDF konverterare, EPS till SVG konverterare, vektorgrafik exempel, PostScript testfiler, designprogram testfiler, EPS-format test'
         },
@@ -1586,7 +1586,7 @@ export const sv: SamplePageTranslations = {
       },
       exr: {
         meta: {
-          title: 'Ladda ner Gratis EXR Exempelfiler - OpenEXR High Dynamic Range Bild Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis EXR Exempelfiler - OpenEXR High Dynamic Range Bild Testfiler | FomiPeek',
           description: 'Ladda ner gratis EXR OpenEXR High Dynamic Range bildexempelfiler för att testa HDR-bildbearbetning, EXR-konvertering, professionella fotoprogram och visuella effektverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa EXR-till-JPEG-konverterare, HDR-bildredigerare, EXR-visualisering, High Dynamic Range-bearbetning och OpenEXR-formatstöd.',
           keywords: 'EXR exempelfiler, EXR testfiler, ladda ner EXR exempel, gratis EXR testfiler, OpenEXR filer, EXR HDR-bilder, EXR till JPEG konverterare, HDR-bildbearbetning, High Dynamic Range exempel, visuella effekter testfiler, EXR-format test, professionell fotografi testfiler'
         },
@@ -1602,7 +1602,7 @@ export const sv: SamplePageTranslations = {
       },
       hdr: {
         meta: {
-          title: 'Ladda ner Gratis HDR Exempelfiler - High Dynamic Range Bild Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis HDR Exempelfiler - High Dynamic Range Bild Testfiler | FomiPeek',
           description: 'Ladda ner gratis HDR High Dynamic Range bildexempelfiler för att testa HDR-bildbearbetning, HDR-konvertering, fotoprogram och bildredigeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa HDR-till-JPEG-konverterare, HDR-bildredigerare, HDR-visualisering, tonmappningsverktyg och High Dynamic Range-formatstöd.',
           keywords: 'HDR exempelfiler, HDR testfiler, ladda ner HDR exempel, gratis HDR testfiler, High Dynamic Range filer, HDR-bilder, HDR till JPEG konverterare, HDR-bildbearbetning, tonmappning testfiler, fotografi testfiler, HDR-format test, High Dynamic Range exempel'
         },
@@ -1618,7 +1618,7 @@ export const sv: SamplePageTranslations = {
       },
       heic: {
         meta: {
-          title: 'Ladda ner Gratis HEIC Exempelfiler - High Efficiency Image Container Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis HEIC Exempelfiler - High Efficiency Image Container Testfiler | FomiPeek',
           description: 'Ladda ner gratis HEIC High Efficiency Image Container exempelfiler för att testa HEIC-bildkonvertering, HEIC-visualisering, modern bildformatbearbetning och mobilfotoverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa HEIC-till-JPEG-konverterare, HEIC-till-PNG-konverterare, iOS-bildbearbetning, HEIC-visualiseringsprogram och High Efficiency Image Container-formatstöd.',
           keywords: 'HEIC exempelfiler, HEIC testfiler, ladda ner HEIC exempel, gratis HEIC testfiler, High Efficiency Image Container filer, HEIC-bilder, HEIC till JPEG konverterare, HEIC till PNG konverterare, iOS-bild exempel, mobilfotografi testfiler, HEIC-format test, moderna bildformat exempel'
         },
@@ -1634,7 +1634,7 @@ export const sv: SamplePageTranslations = {
       },
       heif: {
         meta: {
-          title: 'Ladda ner Gratis HEIF Exempelfiler - High Efficiency Image Format Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis HEIF Exempelfiler - High Efficiency Image Format Testfiler | FomiPeek',
           description: 'Ladda ner gratis HEIF High Efficiency Image Format exempelfiler för att testa HEIF-bildkonvertering, HEIF-visualisering, modern bildformatbearbetning och mobilfotoverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa HEIF-till-JPEG-konverterare, HEIF-till-PNG-konverterare, mobilbildbearbetning, HEIF-visualiseringsprogram och High Efficiency Image Format-stöd.',
           keywords: 'HEIF exempelfiler, HEIF testfiler, ladda ner HEIF exempel, gratis HEIF testfiler, High Efficiency Image Format filer, HEIF-bilder, HEIF till JPEG konverterare, HEIF till PNG konverterare, mobilbild exempel, moderna bildformat testfiler, HEIF-format test, bildkomprimering testfiler'
         },
@@ -1650,7 +1650,7 @@ export const sv: SamplePageTranslations = {
       },
       icns: {
         meta: {
-          title: 'Ladda ner Gratis ICNS Exempelfiler - macOS Ikon Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis ICNS Exempelfiler - macOS Ikon Testfiler | FomiPeek',
           description: 'Ladda ner gratis ICNS macOS-ikon exempelfiler för att testa macOS-ikonkonvertering, ICNS-visualisering, ikondesignverktyg och macOS-applikationsutveckling. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa ICNS-till-PNG-konverterare, ICNS-till-ICO-konverterare, macOS-ikonredigerare, ikondesignprogram och macOS-ikonformatstöd.',
           keywords: 'ICNS exempelfiler, ICNS testfiler, ladda ner ICNS exempel, gratis ICNS testfiler, macOS ikon filer, ICNS-ikoner, ICNS till PNG konverterare, ICNS till ICO konverterare, macOS ikondesign, ikonredigerare testfiler, ICNS-format test, Apple-ikon exempel'
         },
@@ -1666,7 +1666,7 @@ export const sv: SamplePageTranslations = {
       },
       ico: {
         meta: {
-          title: 'Ladda ner Gratis ICO Exempelfiler - Windows Ikon Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis ICO Exempelfiler - Windows Ikon Testfiler | FomiPeek',
           description: 'Ladda ner gratis ICO Windows-ikon exempelfiler för att testa Windows-ikonkonvertering, ICO-visualisering, ikondesignverktyg och Windows-applikationsutveckling. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa ICO-till-PNG-konverterare, ICO-till-ICNS-konverterare, Windows-ikonredigerare, ikondesignprogram och Windows-ikonformatstöd.',
           keywords: 'ICO exempelfiler, ICO testfiler, ladda ner ICO exempel, gratis ICO testfiler, Windows ikon filer, ICO-ikoner, ICO till PNG konverterare, ICO till ICNS konverterare, Windows ikondesign, ikonredigerare testfiler, ICO-format test, Windows-ikon exempel'
         },
@@ -1682,7 +1682,7 @@ export const sv: SamplePageTranslations = {
       },
       jpeg: {
         meta: {
-          title: 'Ladda ner Gratis JPEG Exempelfiler - JPEG Bild Testfiler för Konverteringsverktyg | MorphyHub',
+          title: 'Ladda ner Gratis JPEG Exempelfiler - JPEG Bild Testfiler för Konverteringsverktyg | FomiPeek',
           description: 'Ladda ner gratis JPEG exempelfiler för att testa JPEG-bildkonvertering, JPEG-komprimering, bildbearbetningsverktyg och fotoredigeringsprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa JPEG-till-PNG-konverterare, JPEG-till-PDF-konverterare, bildkomprimeringsverktyg, JPEG-optimering och Joint Photographic Experts Group-formatstöd.',
           keywords: 'JPEG exempelfiler, JPEG testfiler, ladda ner JPEG exempel, gratis JPEG testfiler, JPEG bildefiler, JPEG till PNG konverterare, JPEG till PDF konverterare, bildkomprimering testfiler, fotoredigering testfiler, JPEG-format test, bildbearbetning exempel'
         },
@@ -1698,7 +1698,7 @@ export const sv: SamplePageTranslations = {
       },
       jpg: {
         meta: {
-          title: 'Ladda ner Gratis JPG Exempelfiler - JPG Bild Testfiler för Konverteringsverktyg | MorphyHub',
+          title: 'Ladda ner Gratis JPG Exempelfiler - JPG Bild Testfiler för Konverteringsverktyg | FomiPeek',
           description: 'Ladda ner gratis JPG exempelfiler för att testa JPG-bildkonvertering, JPG-komprimering, bildbearbetningsverktyg och fotoredigeringsprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa JPG-till-PNG-konverterare, JPG-till-PDF-konverterare, bildkomprimeringsverktyg, JPG-optimering och Joint Photographic Experts Group-formatstöd.',
           keywords: 'JPG exempelfiler, JPG testfiler, ladda ner JPG exempel, gratis JPG testfiler, JPG bildefiler, JPG till PNG konverterare, JPG till PDF konverterare, bildkomprimering testfiler, fotoredigering testfiler, JPG-format test, bildbearbetning exempel'
         },
@@ -1714,7 +1714,7 @@ export const sv: SamplePageTranslations = {
       },
       m4v: {
         meta: {
-          title: 'Ladda ner Gratis M4V Exempelfiler - M4V Video Testfiler för Konverteringsverktyg | MorphyHub',
+          title: 'Ladda ner Gratis M4V Exempelfiler - M4V Video Testfiler för Konverteringsverktyg | FomiPeek',
           description: 'Ladda ner gratis M4V exempelfiler för att testa M4V-videokonvertering, M4V-uppspelning, videobearbetningsverktyg och multimediaprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa M4V-till-MP4-konverterare, M4V-till-AVI-konverterare, videospelare, M4V-uppspelningskompatibilitet och MPEG-4-videoformatstöd.',
           keywords: 'M4V exempelfiler, M4V testfiler, ladda ner M4V exempel, gratis M4V testfiler, M4V videofiler, M4V till MP4 konverterare, M4V till AVI konverterare, videospelare testfiler, M4V-uppspelning test, videokonvertering exempel, MPEG-4 videoformat test'
         },
@@ -1730,7 +1730,7 @@ export const sv: SamplePageTranslations = {
       },
       mkv: {
         meta: {
-          title: 'Ladda ner Gratis MKV Exempelfiler - Matroska Video Testfiler för Konverteringsverktyg | MorphyHub',
+          title: 'Ladda ner Gratis MKV Exempelfiler - Matroska Video Testfiler för Konverteringsverktyg | FomiPeek',
           description: 'Ladda ner gratis MKV Matroska exempelfiler för att testa MKV-videokonvertering, MKV-uppspelning, videobearbetningsverktyg och multimediaprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa MKV-till-MP4-konverterare, MKV-till-AVI-konverterare, videospelare, MKV-uppspelningskompatibilitet och Matroska-videoformatstöd.',
           keywords: 'MKV exempelfiler, MKV testfiler, ladda ner MKV exempel, gratis MKV testfiler, Matroska videofiler, MKV till MP4 konverterare, MKV till AVI konverterare, videospelare testfiler, MKV-uppspelning test, videokonvertering exempel, Matroska-format test'
         },
@@ -1746,7 +1746,7 @@ export const sv: SamplePageTranslations = {
       },
       aac: {
         meta: {
-          title: 'Ladda ner Gratis AAC Exempelfiler - Advanced Audio Coding Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis AAC Exempelfiler - Advanced Audio Coding Testfiler | FomiPeek',
           description: 'Ladda ner gratis AAC Advanced Audio Coding exempelfiler för att testa audiokonvertering, AAC-uppspelning, audiobearbetningsverktyg och multimediaprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa AAC-till-MP3-konverterare, AAC-till-WAV-konverterare, audiospelare, AAC-uppspelningskompatibilitet och Advanced Audio Coding-formatstöd.',
           keywords: 'AAC exempelfiler, AAC testfiler, ladda ner AAC exempel, gratis AAC testfiler, Advanced Audio Coding filer, AAC till MP3 konverterare, AAC till WAV konverterare, audiospelare testfiler, AAC-uppspelning test, audiokonvertering exempel, Advanced Audio Coding-format test'
         },
@@ -1762,7 +1762,7 @@ export const sv: SamplePageTranslations = {
       },
       ac3: {
         meta: {
-          title: 'Ladda ner Gratis AC3 Exempelfiler - Dolby Digital Audio Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis AC3 Exempelfiler - Dolby Digital Audio Testfiler | FomiPeek',
           description: 'Ladda ner gratis AC3 Dolby Digital exempelfiler för att testa audiokonvertering, AC3-uppspelning, audiobearbetningsverktyg och multimediaprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa AC3-till-MP3-konverterare, AC3-till-WAV-konverterare, audiospelare, AC3-uppspelningskompatibilitet och Dolby Digital-formatstöd.',
           keywords: 'AC3 exempelfiler, AC3 testfiler, ladda ner AC3 exempel, gratis AC3 testfiler, Dolby Digital filer, AC3 till MP3 konverterare, AC3 till WAV konverterare, audiospelare testfiler, AC3-uppspelning test, audiokonvertering exempel, Dolby Digital-format test'
         },
@@ -1778,7 +1778,7 @@ export const sv: SamplePageTranslations = {
       },
       aif: {
         meta: {
-          title: 'Ladda ner Gratis AIF Exempelfiler - Audio Interchange File Format Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis AIF Exempelfiler - Audio Interchange File Format Testfiler | FomiPeek',
           description: 'Ladda ner gratis AIF Audio Interchange File Format exempelfiler för att testa audiokonvertering, AIF-uppspelning, audiobearbetningsverktyg och multimediaprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa AIF-till-MP3-konverterare, AIF-till-WAV-konverterare, audiospelare, AIF-uppspelningskompatibilitet och Audio Interchange File Format-stöd.',
           keywords: 'AIF exempelfiler, AIF testfiler, ladda ner AIF exempel, gratis AIF testfiler, Audio Interchange File Format filer, AIF till MP3 konverterare, AIF till WAV konverterare, audiospelare testfiler, AIF-uppspelning test, audiokonvertering exempel, Audio Interchange File Format test'
         },
@@ -1794,7 +1794,7 @@ export const sv: SamplePageTranslations = {
       },
       aiff: {
         meta: {
-          title: 'Ladda ner Gratis AIFF Exempelfiler - Audio Interchange File Format Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis AIFF Exempelfiler - Audio Interchange File Format Testfiler | FomiPeek',
           description: 'Ladda ner gratis AIFF Audio Interchange File Format exempelfiler för att testa audiokonvertering, AIFF-uppspelning, audiobearbetningsverktyg och multimediaprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa AIFF-till-MP3-konverterare, AIFF-till-WAV-konverterare, audiospelare, AIFF-uppspelningskompatibilitet och Audio Interchange File Format-stöd.',
           keywords: 'AIFF exempelfiler, AIFF testfiler, ladda ner AIFF exempel, gratis AIFF testfiler, Audio Interchange File Format filer, AIFF till MP3 konverterare, AIFF till WAV konverterare, audiospelare testfiler, AIFF-uppspelning test, audiokonvertering exempel, Audio Interchange File Format test'
         },
@@ -1810,7 +1810,7 @@ export const sv: SamplePageTranslations = {
       },
       amr: {
         meta: {
-          title: 'Ladda ner Gratis AMR Exempelfiler - Adaptive Multi-Rate Audio Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis AMR Exempelfiler - Adaptive Multi-Rate Audio Testfiler | FomiPeek',
           description: 'Ladda ner gratis AMR Adaptive Multi-Rate exempelfiler för att testa audiokonvertering, AMR-uppspelning, audiobearbetningsverktyg och mobil multimediaprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa AMR-till-MP3-konverterare, AMR-till-WAV-konverterare, audiospelare, AMR-uppspelningskompatibilitet och Adaptive Multi-Rate-formatstöd.',
           keywords: 'AMR exempelfiler, AMR testfiler, ladda ner AMR exempel, gratis AMR testfiler, Adaptive Multi-Rate filer, AMR till MP3 konverterare, AMR till WAV konverterare, audiospelare testfiler, AMR-uppspelning test, audiokonvertering exempel, Adaptive Multi-Rate-format test'
         },
@@ -1826,7 +1826,7 @@ export const sv: SamplePageTranslations = {
       },
       caf: {
         meta: {
-          title: 'Ladda ner Gratis CAF Exempelfiler - Core Audio Format Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis CAF Exempelfiler - Core Audio Format Testfiler | FomiPeek',
           description: 'Ladda ner gratis CAF Core Audio Format exempelfiler för att testa audiokonvertering, CAF-uppspelning, audiobearbetningsverktyg och macOS multimediaprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa CAF-till-MP3-konverterare, CAF-till-WAV-konverterare, audiospelare, CAF-uppspelningskompatibilitet och Core Audio Format-stöd.',
           keywords: 'CAF exempelfiler, CAF testfiler, ladda ner CAF exempel, gratis CAF testfiler, Core Audio Format filer, CAF till MP3 konverterare, CAF till WAV konverterare, audiospelare testfiler, CAF-uppspelning test, audiokonvertering exempel, Core Audio Format test'
         },
@@ -1842,7 +1842,7 @@ export const sv: SamplePageTranslations = {
       },
       cue: {
         meta: {
-          title: 'Ladda ner Gratis CUE Exempelfiler - CUE Sheet Testfiler för Audio CD-bränning | MorphyHub',
+          title: 'Ladda ner Gratis CUE Exempelfiler - CUE Sheet Testfiler för Audio CD-bränning | FomiPeek',
           description: 'Ladda ner gratis CUE CUE sheet exempelfiler för att testa audio CD-bränningsverktyg och CUE sheet-parsingverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa CUE sheet-parsing, audio CD-bränningsprogram, CUE-filvalidering och CD-författarverktyg.',
           keywords: 'CUE exempelfiler, CUE testfiler, ladda ner CUE-exempel, gratis CUE testfiler, CUE sheet-filer, audio CD-bränningstest, CUE sheet-parser, CD-författarstestfiler, CUE-filvalidering, audio disk image-test'
         },
@@ -1858,7 +1858,7 @@ export const sv: SamplePageTranslations = {
       },
       m4a: {
         meta: {
-          title: 'Ladda ner Gratis M4A Exempelfiler - M4A Audio Testfiler för Konverteringsverktyg | MorphyHub',
+          title: 'Ladda ner Gratis M4A Exempelfiler - M4A Audio Testfiler för Konverteringsverktyg | FomiPeek',
           description: 'Ladda ner gratis M4A M4A audio exempelfiler för att testa M4A-audiokonvertering, M4A-uppspelning, audiobearbetningsverktyg och multimediaprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa M4A-till-MP3-konverterare, M4A-till-WAV-konverterare, audiospelare, M4A-uppspelningskompatibilitet och MPEG-4 audio format-stöd.',
           keywords: 'M4A exempelfiler, M4A testfiler, ladda ner M4A-exempel, gratis M4A testfiler, M4A audiofiler, M4A-till-MP3-konverterare, M4A-till-WAV-konverterare, audiospelartestfiler, M4A-uppspelningstest, audiokonverteringsexempel, MPEG-4 audio format-test'
         },
@@ -1874,7 +1874,7 @@ export const sv: SamplePageTranslations = {
       },
       midi: {
         meta: {
-          title: 'Ladda ner Gratis MIDI Exempelfiler - MIDI Music Testfiler för Musiksekvensering | MorphyHub',
+          title: 'Ladda ner Gratis MIDI Exempelfiler - MIDI Music Testfiler för Musiksekvensering | FomiPeek',
           description: 'Ladda ner gratis MIDI MIDI music exempelfiler för att testa MIDI-uppspelning, MIDI-konvertering, musiksekvenseringsverktyg och digitala audiostationer. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa MIDI-till-MP3-konverterare, MIDI-till-WAV-konverterare, MIDI-sekvenserare, musikproduktionsprogram och Musical Instrument Digital Interface format-stöd.',
           keywords: 'MIDI exempelfiler, MIDI testfiler, ladda ner MIDI-exempel, gratis MIDI testfiler, MIDI music-filer, MIDI-till-MP3-konverterare, MIDI-till-WAV-konverterare, MIDI-sekvenserartest, musikproduktionstestfiler, MIDI-uppspelningstest, musiksekvenseringsexempel'
         },
@@ -1890,7 +1890,7 @@ export const sv: SamplePageTranslations = {
       },
       ace: {
         meta: {
-          title: 'Ladda ner Gratis ACE Exempelfiler - ACE Archive Testfiler för Extraktionsverktyg | MorphyHub',
+          title: 'Ladda ner Gratis ACE Exempelfiler - ACE Archive Testfiler för Extraktionsverktyg | FomiPeek',
           description: 'Ladda ner gratis ACE archive exempelfiler för att testa arkivextraktions- och komprimeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa ACE-arkivextraktion, ACE-fildekomprimering, arkivhanteringsverktyg och filkomprimeringsprogram.',
           keywords: 'ACE exempelfiler, ACE testfiler, ladda ner ACE-exempel, gratis ACE testfiler, ACE archive-filer, ACE-extraktionstest, ACE-dekomprimeringstest, arkivhanteringstestfiler, filkomprimeringsprover'
         },
@@ -1906,7 +1906,7 @@ export const sv: SamplePageTranslations = {
       },
       arj: {
         meta: {
-          title: 'Ladda ner Gratis ARJ Exempelfiler - ARJ Archive Testfiler för Extraktionsverktyg | MorphyHub',
+          title: 'Ladda ner Gratis ARJ Exempelfiler - ARJ Archive Testfiler för Extraktionsverktyg | FomiPeek',
           description: 'Ladda ner gratis ARJ archive exempelfiler för att testa arkivextraktions- och komprimeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa ARJ-arkivextraktion, ARJ-fildekomprimering, arkivhanteringsverktyg och filkomprimeringsprogram.',
           keywords: 'ARJ exempelfiler, ARJ testfiler, ladda ner ARJ-exempel, gratis ARJ testfiler, ARJ archive-filer, ARJ-extraktionstest, ARJ-dekomprimeringstest, arkivhanteringstestfiler, filkomprimeringsprover'
         },
@@ -1922,7 +1922,7 @@ export const sv: SamplePageTranslations = {
       },
       bz2: {
         meta: {
-          title: 'Ladda ner Gratis BZ2 Exempelfiler - BZ2 Compressed Archive Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis BZ2 Exempelfiler - BZ2 Compressed Archive Testfiler | FomiPeek',
           description: 'Ladda ner gratis BZ2 bzip2 compressed archive exempelfiler för att testa arkivdekomprimerings- och komprimeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa BZ2-arkivdekomprimering, BZ2-filextraktion, bzip2-komprimeringsverktyg och arkivhanteringsprogram.',
           keywords: 'BZ2 exempelfiler, BZ2 testfiler, ladda ner BZ2-exempel, gratis BZ2 testfiler, BZ2 komprimerade filer, BZ2-dekomprimeringstest, bzip2-komprimeringsstest, arkivextraktionstestfiler, filkomprimeringsprover'
         },
@@ -1938,7 +1938,7 @@ export const sv: SamplePageTranslations = {
       },
       gz: {
         meta: {
-          title: 'Ladda ner Gratis GZ Exempelfiler - GZ Gzip Compressed Archive Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis GZ Exempelfiler - GZ Gzip Compressed Archive Testfiler | FomiPeek',
           description: 'Ladda ner gratis GZ gzip compressed archive exempelfiler för att testa gzip-dekomprimerings-, arkivextraktions- och filkomprimeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa GZ-arkivdekomprimering, GZ-filextraktion, gzip-komprimeringsverktyg och arkivhanteringsprogram.',
           keywords: 'GZ exempelfiler, GZ testfiler, ladda ner GZ-exempel, gratis GZ testfiler, GZ komprimerade filer, GZ-dekomprimeringstest, gzip-komprimeringsstest, arkivextraktionstestfiler, filkomprimeringsprover'
         },
@@ -1954,7 +1954,7 @@ export const sv: SamplePageTranslations = {
       },
       cab: {
         meta: {
-          title: 'Ladda ner Gratis CAB Exempelfiler - CAB Windows Cabinet Archive Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis CAB Exempelfiler - CAB Windows Cabinet Archive Testfiler | FomiPeek',
           description: 'Ladda ner gratis CAB Windows cabinet archive exempelfiler för att testa arkivextraktions- och komprimeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa CAB-arkivextraktion, CAB-fildekomprimering, Windows cabinet archive-verktyg och arkivhanteringsprogram.',
           keywords: 'CAB exempelfiler, CAB testfiler, ladda ner CAB-exempel, gratis CAB testfiler, CAB archive-filer, CAB-extraktionstest, Windows cabinet archive-test, arkivhanteringstestfiler, filkomprimeringsprover'
         },
@@ -1970,7 +1970,7 @@ export const sv: SamplePageTranslations = {
       },
       cpio: {
         meta: {
-          title: 'Ladda ner Gratis CPIO Exempelfiler - CPIO Archive Testfiler för Extraktionsverktyg | MorphyHub',
+          title: 'Ladda ner Gratis CPIO Exempelfiler - CPIO Archive Testfiler för Extraktionsverktyg | FomiPeek',
           description: 'Ladda ner gratis CPIO archive exempelfiler för att testa arkivextraktions- och komprimeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa CPIO-arkivextraktion, CPIO-fildekomprimering, arkivhanteringsverktyg och filkomprimeringsprogram.',
           keywords: 'CPIO exempelfiler, CPIO testfiler, ladda ner CPIO-exempel, gratis CPIO testfiler, CPIO archive-filer, CPIO-extraktionstest, CPIO-dekomprimeringstest, arkivhanteringstestfiler, filkomprimeringsprover'
         },
@@ -1986,7 +1986,7 @@ export const sv: SamplePageTranslations = {
       },
       zip: {
         meta: {
-          title: 'Ladda ner Gratis ZIP Exempelfiler - ZIP Archive Testfiler för Extraktionsverktyg | MorphyHub',
+          title: 'Ladda ner Gratis ZIP Exempelfiler - ZIP Archive Testfiler för Extraktionsverktyg | FomiPeek',
           description: 'Ladda ner gratis ZIP archive exempelfiler för att testa arkivextraktions- och komprimeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa ZIP-arkivextraktion, ZIP-fildekomprimering, arkivhanteringsverktyg och filkomprimeringsprogram.',
           keywords: 'ZIP exempelfiler, ZIP testfiler, ladda ner ZIP-exempel, gratis ZIP testfiler, ZIP archive-filer, ZIP-extraktionstest, ZIP-dekomprimeringstest, arkivhanteringstestfiler, filkomprimeringsprover'
         },
@@ -2002,7 +2002,7 @@ export const sv: SamplePageTranslations = {
       },
       dmg: {
         meta: {
-          title: 'Ladda ner Gratis DMG Exempelfiler - DMG macOS Disk Image Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis DMG Exempelfiler - DMG macOS Disk Image Testfiler | FomiPeek',
           description: 'Ladda ner gratis DMG macOS disk image exempelfiler för att testa disk image-monterings- och DMG-extraktionsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa DMG disk image-montering, DMG-filextraktion, macOS disk image-verktyg och disk image-bearbetningsprogram.',
           keywords: 'DMG exempelfiler, DMG testfiler, ladda ner DMG-exempel, gratis DMG testfiler, DMG disk image-filer, DMG-monteringstest, macOS disk image-test, disk image-extraktionstestfiler, disk image-bearbetningsprover'
         },
@@ -2018,7 +2018,7 @@ export const sv: SamplePageTranslations = {
       },
       img: {
         meta: {
-          title: 'Ladda ner Gratis IMG Exempelfiler - IMG Disk Image Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis IMG Exempelfiler - IMG Disk Image Testfiler | FomiPeek',
           description: 'Ladda ner gratis IMG disk image exempelfiler för att testa disk image-montering, IMG-extraktion och disk image-bearbetningsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa IMG disk image-montering, IMG-filextraktion, disk image-verktyg och disk image-bearbetningsprogram.',
           keywords: 'IMG exempelfiler, IMG testfiler, ladda ner IMG-exempel, gratis IMG testfiler, IMG disk image-filer, IMG-monteringstest, disk image-extraktionstest, disk image-bearbetningstestfiler, disk image-prover'
         },
@@ -2034,7 +2034,7 @@ export const sv: SamplePageTranslations = {
       },
       iso: {
         meta: {
-          title: 'Ladda ner Gratis ISO Exempelfiler - ISO Disk Image Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis ISO Exempelfiler - ISO Disk Image Testfiler | FomiPeek',
           description: 'Ladda ner gratis ISO ISO disk image exempelfiler för att testa ISO disk image-montering, ISO-extraktion och disk image-bearbetningsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa ISO disk image-montering, ISO-filextraktion, disk image-verktyg och disk image-bearbetningsprogram.',
           keywords: 'ISO exempelfiler, ISO testfiler, ladda ner ISO-exempel, gratis ISO testfiler, ISO disk image-filer, ISO-monteringstest, ISO-extraktionstest, disk image-bearbetningstestfiler, disk image-prover'
         },
@@ -2050,7 +2050,7 @@ export const sv: SamplePageTranslations = {
       },
       kmz: {
         meta: {
-          title: 'Ladda ner Gratis KMZ Exempelfiler - KMZ Compressed KML Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis KMZ Exempelfiler - KMZ Compressed KML Testfiler | FomiPeek',
           description: 'Ladda ner gratis KMZ compressed Keyhole Markup Language exempelfiler för att testa KMZ-extraktionsverktyg, geografisk databearbetning och Google Earth-integrationsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa KMZ-filextraktion, KMZ-till-KML-konvertering, Google Earth-kompatibilitet, geografisk databearbetning och kartläggningsprogram.',
           keywords: 'KMZ exempelfiler, KMZ testfiler, ladda ner KMZ-exempel, gratis KMZ testfiler, KMZ komprimerade filer, KMZ-extraktionstest, Google Earth-testfiler, geografisk databearbetningstest, kartläggningsprogramprover'
         },
@@ -2066,7 +2066,7 @@ export const sv: SamplePageTranslations = {
       },
       laz: {
         meta: {
-          title: 'Ladda ner Gratis LAZ Exempelfiler - LAZ Compressed LiDAR Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis LAZ Exempelfiler - LAZ Compressed LiDAR Testfiler | FomiPeek',
           description: 'Ladda ner gratis LAZ compressed LiDAR point cloud data exempelfiler för att testa LAZ-extraktionsverktyg, point cloud-bearbetning och 3D-kartläggningsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa LAZ-filextraktion, LAZ-till-LAS-konvertering, LiDAR point cloud-bearbetning, 3D-kartläggningsprogram och geografisk dataanalysverktyg.',
           keywords: 'LAZ exempelfiler, LAZ testfiler, ladda ner LAZ-exempel, gratis LAZ testfiler, LAZ komprimerade filer, LAZ-extraktionstest, LiDAR point cloud-test, 3D-kartläggningstestfiler, geografisk dataanalysprover'
         },
@@ -2082,7 +2082,7 @@ export const sv: SamplePageTranslations = {
       },
       lha: {
         meta: {
-          title: 'Ladda ner Gratis LHA Exempelfiler - LHA Archive Testfiler för Extraktionsverktyg | MorphyHub',
+          title: 'Ladda ner Gratis LHA Exempelfiler - LHA Archive Testfiler för Extraktionsverktyg | FomiPeek',
           description: 'Ladda ner gratis LHA LHA archive exempelfiler för att testa LHA-extraktionsverktyg, arkivdekomprimering och filarkiveringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa LHA-arkivextraktion, LHA-fildekomprimering, arkivhanteringsverktyg och filkomprimeringsprogram.',
           keywords: 'LHA exempelfiler, LHA testfiler, ladda ner LHA-exempel, gratis LHA testfiler, LHA archive-filer, LHA-extraktionstest, LHA-dekomprimeringstest, arkivhanteringstestfiler, filkomprimeringsprover'
         },
@@ -2098,7 +2098,7 @@ export const sv: SamplePageTranslations = {
       },
       lzh: {
         meta: {
-          title: 'Ladda ner Gratis LZH Exempelfiler - LZH Archive Testfiler för Extraktionsverktyg | MorphyHub',
+          title: 'Ladda ner Gratis LZH Exempelfiler - LZH Archive Testfiler för Extraktionsverktyg | FomiPeek',
           description: 'Ladda ner gratis LZH LZH archive exempelfiler för att testa LZH-extraktionsverktyg, arkivdekomprimering och filarkiveringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa LZH-arkivextraktion, LZH-fildekomprimering, arkivhanteringsverktyg och filkomprimeringsprogram.',
           keywords: 'LZH exempelfiler, LZH testfiler, ladda ner LZH-exempel, gratis LZH testfiler, LZH archive-filer, LZH-extraktionstest, LZH-dekomprimeringstest, arkivhanteringstestfiler, filkomprimeringsprover'
         },
@@ -2114,7 +2114,7 @@ export const sv: SamplePageTranslations = {
       },
       lzma: {
         meta: {
-          title: 'Ladda ner Gratis LZMA Exempelfiler - LZMA Compressed Archive Testfiler | MorphyHub',
+          title: 'Ladda ner Gratis LZMA Exempelfiler - LZMA Compressed Archive Testfiler | FomiPeek',
           description: 'Ladda ner gratis LZMA LZMA compressed exempelfiler för att testa LZMA-dekomprimerings-, arkivextraktions- och filkomprimeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa LZMA-arkivdekomprimering, LZMA-filextraktion, LZMA-komprimeringsverktyg och arkivhanteringsprogram.',
           keywords: 'LZMA exempelfiler, LZMA testfiler, ladda ner LZMA-exempel, gratis LZMA testfiler, LZMA komprimerade filer, LZMA-dekomprimeringstest, LZMA-komprimeringsstest, arkivextraktionstestfiler, filkomprimeringsprover'
         },
@@ -2130,7 +2130,7 @@ export const sv: SamplePageTranslations = {
       },
       '7z': {
         meta: {
-          title: 'Ladda ner Gratis 7Z Exempelfiler - 7Z Archive Testfiler för Extraktionsverktyg | MorphyHub',
+          title: 'Ladda ner Gratis 7Z Exempelfiler - 7Z Archive Testfiler för Extraktionsverktyg | FomiPeek',
           description: 'Ladda ner gratis 7Z archive exempelfiler för att testa arkivkonverterings- och extraktionsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa 7Z-arkivextraktion, 7Z-fildekomprimering, arkivhanteringsverktyg och filkomprimeringsprogram.',
           keywords: '7Z exempelfiler, 7Z testfiler, ladda ner 7Z-exempel, gratis 7Z testfiler, 7Z archive-filer, 7Z-extraktionstest, 7Z-dekomprimeringstest, arkivhanteringstestfiler, filkomprimeringsprover'
         },

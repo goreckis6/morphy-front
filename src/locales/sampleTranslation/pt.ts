@@ -34,7 +34,7 @@ export const pt: SamplePageTranslations = {
     formats: {
       docx: {
         meta: {
-          title: 'Baixar arquivos de exemplo DOCX gratuitos - Arquivos de teste | MorphyHub',
+          title: 'Baixar arquivos de exemplo DOCX gratuitos - Arquivos de teste | FomiPeek',
           description: 'Baixe arquivos de exemplo DOCX gratuitos para testes. Múltiplos tamanhos de arquivo disponíveis: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar ferramentas de conversão e processamento de documentos.',
           keywords: 'arquivos de exemplo DOCX, arquivos de teste DOCX, baixar exemplos DOCX, arquivos de teste DOCX gratuitos, exemplos de documentos, exemplos Microsoft Word'
         },
@@ -50,7 +50,7 @@ export const pt: SamplePageTranslations = {
       },
       doc: {
         meta: {
-          title: 'Baixar arquivos de exemplo DOC gratuitos - Arquivos de teste Microsoft Word DOC | MorphyHub',
+          title: 'Baixar arquivos de exemplo DOC gratuitos - Arquivos de teste Microsoft Word DOC | FomiPeek',
           description: 'Baixe arquivos de exemplo DOC gratuitos para testar ferramentas de conversão de documentos. Múltiplos tamanhos disponíveis: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores DOC para PDF, DOC para DOCX e processamento de documentos Microsoft Word legados.',
           keywords: 'arquivos de exemplo DOC, arquivos de teste DOC, baixar exemplos DOC, arquivos de teste DOC gratuitos, exemplos Microsoft Word DOC, teste conversor DOC para PDF, conversão DOC para DOCX, exemplos documentos Word legados, arquivos de teste .doc, exemplos conversão documentos'
         },
@@ -66,7 +66,7 @@ export const pt: SamplePageTranslations = {
       },
       pdf: {
         meta: {
-          title: 'Baixar arquivos de exemplo PDF gratuitos - Arquivos de teste PDF para ferramentas de conversão | MorphyHub',
+          title: 'Baixar arquivos de exemplo PDF gratuitos - Arquivos de teste PDF para ferramentas de conversão | FomiPeek',
           description: 'Baixe arquivos de exemplo PDF gratuitos para testar conversores PDF, visualizadores e processadores. Múltiplos tamanhos disponíveis: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar ferramentas PDF para Word, PDF para JPG, compressão PDF e edição PDF.',
           keywords: 'arquivos de exemplo PDF, arquivos de teste PDF, baixar exemplos PDF, arquivos de teste PDF gratuitos, arquivos de teste conversor PDF, exemplos PDF para Word, exemplos PDF para JPG, teste compressão PDF, arquivos de teste visualizador PDF, arquivos de teste .pdf, exemplos conversão documentos'
         },
@@ -82,7 +82,7 @@ export const pt: SamplePageTranslations = {
       },
       odp: {
         meta: {
-          title: 'Baixar arquivos de exemplo ODP gratuitos - Arquivos de teste apresentações OpenDocument | MorphyHub',
+          title: 'Baixar arquivos de exemplo ODP gratuitos - Arquivos de teste apresentações OpenDocument | FomiPeek',
           description: 'Baixe arquivos de exemplo ODP gratuitos para testar ferramentas de conversão de apresentações. Múltiplos tamanhos disponíveis: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores ODP para PPT, ODP para PDF, arquivos LibreOffice Impress e processamento de formatos OpenDocument.',
           keywords: 'arquivos de exemplo ODP, arquivos de teste ODP, baixar exemplos ODP, arquivos de teste ODP gratuitos, exemplos apresentações OpenDocument, conversor ODP para PPT, conversor ODP para PDF, exemplos LibreOffice Impress, arquivos de teste .odp, exemplos conversão apresentações, teste formato OpenDocument'
         },
@@ -98,7 +98,7 @@ export const pt: SamplePageTranslations = {
       },
       rtf: {
         meta: {
-          title: 'Baixar arquivos de exemplo RTF gratuitos - Arquivos de teste Rich Text Format | MorphyHub',
+          title: 'Baixar arquivos de exemplo RTF gratuitos - Arquivos de teste Rich Text Format | FomiPeek',
           description: 'Baixe arquivos de exemplo RTF gratuitos para testar ferramentas de conversão Rich Text Format. Múltiplos tamanhos disponíveis: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores RTF para DOC, RTF para PDF, compatibilidade processadores de texto e conversão de formatos de documentos.',
           keywords: 'arquivos de exemplo RTF, arquivos de teste RTF, baixar exemplos RTF, arquivos de teste RTF gratuitos, exemplos Rich Text Format, conversor RTF para DOC, conversor RTF para PDF, arquivos de teste .rtf, arquivos de teste processador de texto, exemplos conversão formatos documentos'
         },
@@ -114,7 +114,7 @@ export const pt: SamplePageTranslations = {
       },
       epub: {
         meta: {
-          title: 'Baixar arquivos de exemplo EPUB gratuitos - Arquivos de teste eBook para leitores | MorphyHub',
+          title: 'Baixar arquivos de exemplo EPUB gratuitos - Arquivos de teste eBook para leitores | FomiPeek',
           description: 'Baixe arquivos de exemplo EPUB gratuitos para testar leitores eBook e ferramentas de conversão. Múltiplos tamanhos disponíveis: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar leitores EPUB, conversores EPUB para PDF, EPUB para MOBI, ferramentas publicação digital e compatibilidade formatos eBook.',
           keywords: 'arquivos de exemplo EPUB, arquivos de teste EPUB, baixar exemplos EPUB, arquivos de teste EPUB gratuitos, exemplos eBook, teste leitor EPUB, conversor EPUB para PDF, conversor EPUB para MOBI, arquivos de teste .epub, exemplos publicação digital, arquivos de teste formatos eBook'
         },
@@ -130,7 +130,7 @@ export const pt: SamplePageTranslations = {
       },
       'invoice-pdf': {
         meta: {
-          title: 'Baixar arquivos de exemplo PDF faturas gratuitos - Arquivos de teste documentos faturas | MorphyHub',
+          title: 'Baixar arquivos de exemplo PDF faturas gratuitos - Arquivos de teste documentos faturas | FomiPeek',
           description: 'Baixe arquivos de exemplo PDF faturas gratuitos para testar ferramentas de processamento e análise de faturas. Múltiplos tamanhos disponíveis: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar OCR faturas, extração dados faturas, automação faturas, análise faturas PDF e sistemas gestão documentos.',
           keywords: 'arquivos de exemplo PDF faturas, arquivos de teste PDF faturas, baixar exemplos PDF faturas, arquivos de teste PDF faturas gratuitos, exemplos documentos faturas, teste OCR faturas, extração dados faturas, teste automação faturas, análise faturas PDF, exemplos processamento faturas, arquivos de teste gestão documentos'
         },
@@ -146,7 +146,7 @@ export const pt: SamplePageTranslations = {
       },
       mobi: {
         meta: {
-          title: 'Baixar arquivos de exemplo MOBI gratuitos - Arquivos de teste eBook MOBI para Kindle | MorphyHub',
+          title: 'Baixar arquivos de exemplo MOBI gratuitos - Arquivos de teste eBook MOBI para Kindle | FomiPeek',
           description: 'Baixe arquivos de exemplo MOBI gratuitos para testar leitores eBook MOBI e ferramentas de conversão. Múltiplos tamanhos disponíveis: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar compatibilidade Kindle, conversores MOBI para EPUB, MOBI para PDF, conversão formatos eBook e aplicações leitura digital.',
           keywords: 'arquivos de exemplo MOBI, arquivos de teste MOBI, baixar exemplos MOBI, arquivos de teste MOBI gratuitos, exemplos eBook MOBI, arquivos de teste Kindle, conversor MOBI para EPUB, conversor MOBI para PDF, arquivos de teste .mobi, exemplos conversão eBook, arquivos de teste leitura digital'
         },
@@ -162,7 +162,7 @@ export const pt: SamplePageTranslations = {
       },
       csv: {
         meta: {
-          title: 'Baixe arquivos de exemplo CSV grátis - Arquivos de teste CSV para processamento de dados | MorphyHub',
+          title: 'Baixe arquivos de exemplo CSV grátis - Arquivos de teste CSV para processamento de dados | FomiPeek',
           description: 'Baixe arquivos de exemplo CSV grátis para testar ferramentas de processamento e conversão de dados. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores CSV para Excel, CSV para JSON, ferramentas de importação de dados, aplicações de planilhas e processamento de valores separados por vírgula.',
           keywords: 'arquivos de exemplo CSV, arquivos de teste CSV, baixe exemplos CSV, arquivos de teste CSV grátis, conversor CSV para Excel, conversor CSV para JSON, exemplos valores separados por vírgula, arquivos de teste processamento de dados, exemplos importação planilhas, arquivos de teste .csv, exemplos conversão de dados'
         },
@@ -178,7 +178,7 @@ export const pt: SamplePageTranslations = {
       },
       xls: {
         meta: {
-          title: 'Baixe arquivos de exemplo XLS grátis - Arquivos de teste Microsoft Excel XLS | MorphyHub',
+          title: 'Baixe arquivos de exemplo XLS grátis - Arquivos de teste Microsoft Excel XLS | FomiPeek',
           description: 'Baixe arquivos de exemplo XLS grátis para testar ferramentas de conversão Excel e processamento de dados. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores XLS para XLSX, XLS para CSV, XLS para PDF, extração de dados Excel e processamento de planilhas legadas.',
           keywords: 'arquivos de exemplo XLS, arquivos de teste XLS, baixe exemplos XLS, arquivos de teste XLS grátis, exemplos Microsoft Excel XLS, conversor XLS para XLSX, conversor XLS para CSV, conversor XLS para PDF, extração de dados Excel, arquivos de teste .xls, exemplos conversão planilhas'
         },
@@ -194,7 +194,7 @@ export const pt: SamplePageTranslations = {
       },
       xlsx: {
         meta: {
-          title: 'Baixe arquivos de exemplo XLSX grátis - Arquivos de teste Excel XLSX para ferramentas de conversão | MorphyHub',
+          title: 'Baixe arquivos de exemplo XLSX grátis - Arquivos de teste Excel XLSX para ferramentas de conversão | FomiPeek',
           description: 'Baixe arquivos de exemplo XLSX grátis para testar ferramentas de conversão Excel e processamento de dados. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores XLSX para CSV, XLSX para PDF, XLSX para JSON, análise de dados Excel, automação de planilhas e processamento Office Open XML.',
           keywords: 'arquivos de exemplo XLSX, arquivos de teste XLSX, baixe exemplos XLSX, arquivos de teste XLSX grátis, exemplos Excel XLSX, conversor XLSX para CSV, conversor XLSX para PDF, conversor XLSX para JSON, análise de dados Excel, arquivos de teste .xlsx, exemplos automação planilhas, exemplos Office Open XML'
         },
@@ -210,7 +210,7 @@ export const pt: SamplePageTranslations = {
       },
       xml: {
         meta: {
-          title: 'Baixe arquivos de exemplo XML grátis - Arquivos de teste XML para análise e conversão | MorphyHub',
+          title: 'Baixe arquivos de exemplo XML grátis - Arquivos de teste XML para análise e conversão | FomiPeek',
           description: 'Baixe arquivos de exemplo XML grátis para testar ferramentas de análise, conversão e processamento de dados XML. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores XML para JSON, XML para CSV, validação XML, processamento de dados estruturados e análise de linguagens de marcação.',
           keywords: 'arquivos de exemplo XML, arquivos de teste XML, baixe exemplos XML, arquivos de teste XML grátis, conversor XML para JSON, conversor XML para CSV, teste validação XML, exemplos Extensible Markup Language, exemplos dados estruturados, arquivos de teste .xml, exemplos análise linguagens de marcação'
         },
@@ -226,7 +226,7 @@ export const pt: SamplePageTranslations = {
       },
       html: {
         meta: {
-          title: 'Baixe arquivos de exemplo HTML grátis - Arquivos de teste HTML para desenvolvimento web | MorphyHub',
+          title: 'Baixe arquivos de exemplo HTML grátis - Arquivos de teste HTML para desenvolvimento web | FomiPeek',
           description: 'Baixe arquivos de exemplo HTML grátis para testar ferramentas de desenvolvimento web e processamento HTML. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores HTML para PDF, HTML para DOCX, validação HTML, web scraping, renderização de navegador e processamento HyperText Markup Language.',
           keywords: 'arquivos de exemplo HTML, arquivos de teste HTML, baixe exemplos HTML, arquivos de teste HTML grátis, conversor HTML para PDF, conversor HTML para DOCX, teste validação HTML, exemplos HyperText Markup Language, exemplos desenvolvimento web, arquivos de teste .html, exemplos web scraping, teste renderização navegador'
         },
@@ -242,7 +242,7 @@ export const pt: SamplePageTranslations = {
       },
       ods: {
         meta: {
-          title: 'Baixe arquivos de exemplo ODS grátis - Arquivos de teste planilhas OpenDocument | MorphyHub',
+          title: 'Baixe arquivos de exemplo ODS grátis - Arquivos de teste planilhas OpenDocument | FomiPeek',
           description: 'Baixe arquivos de exemplo ODS grátis para testar ferramentas de conversão de planilhas e processamento de dados. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores ODS para Excel, ODS para CSV, arquivos LibreOffice Calc, processamento formato OpenDocument e extração de dados de planilhas.',
           keywords: 'arquivos de exemplo ODS, arquivos de teste ODS, baixe exemplos ODS, arquivos de teste ODS grátis, exemplos planilhas OpenDocument, conversor ODS para Excel, conversor ODS para CSV, exemplos LibreOffice Calc, arquivos de teste .ods, exemplos conversão planilhas, teste formato OpenDocument'
         },
@@ -258,7 +258,7 @@ export const pt: SamplePageTranslations = {
       },
       'ansible-yml': {
         meta: {
-          title: 'Baixe arquivos de exemplo Ansible YML grátis - Arquivos de teste configuração YAML | MorphyHub',
+          title: 'Baixe arquivos de exemplo Ansible YML grátis - Arquivos de teste configuração YAML | FomiPeek',
           description: 'Baixe arquivos de exemplo Ansible YML grátis para testar ferramentas de análise YAML e gerenciamento de configuração. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar playbooks Ansible, validação YAML, automação DevOps, sistemas de gerenciamento de configuração e ferramentas infrastructure as code.',
           keywords: 'arquivos de exemplo Ansible YML, arquivos de teste YML, baixe exemplos YML, arquivos de teste YML grátis, exemplos playbooks Ansible, exemplos configuração YAML, teste validação YAML, exemplos automação DevOps, arquivos de teste .yml, exemplos gerenciamento configuração, exemplos infrastructure as code'
         },
@@ -274,7 +274,7 @@ export const pt: SamplePageTranslations = {
       },
       'api-response-json': {
         meta: {
-          title: 'Baixar arquivos de exemplo API Response JSON grátis - Arquivos de teste JSON para desenvolvimento API | MorphyHub',
+          title: 'Baixar arquivos de exemplo API Response JSON grátis - Arquivos de teste JSON para desenvolvimento API | FomiPeek',
           description: 'Baixe arquivos de exemplo API Response JSON grátis para testar análise JSON, integração API e ferramentas de desenvolvimento web. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar respostas REST API, validadores JSON, mocking API, testes webhook e processamento de formatos de troca de dados.',
           keywords: 'arquivos de exemplo API Response JSON, arquivos de teste JSON, baixar exemplos JSON, arquivos de teste JSON grátis, exemplos resposta API, exemplos análise JSON, arquivos de teste REST API, teste validador JSON, exemplos mocking API, arquivos de teste webhook, arquivos de teste .json, exemplos web API, exemplos formatos troca dados'
         },
@@ -290,7 +290,7 @@ export const pt: SamplePageTranslations = {
       },
       'arduino-ino': {
         meta: {
-          title: 'Baixar arquivos de exemplo Arduino INO grátis - Arquivos de teste sketch Arduino para desenvolvimento embedded | MorphyHub',
+          title: 'Baixar arquivos de exemplo Arduino INO grátis - Arquivos de teste sketch Arduino para desenvolvimento embedded | FomiPeek',
           description: 'Baixe arquivos de exemplo Arduino INO grátis para testar compilação de sketch Arduino e ferramentas de programação embedded. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar Arduino IDE, validação de sketch, programação de microcontroladores, desenvolvimento de sistemas embedded e testes de dispositivos IoT.',
           keywords: 'arquivos de exemplo Arduino INO, arquivos de teste Arduino INO, baixar exemplos Arduino INO, arquivos de teste Arduino INO grátis, exemplos sketch Arduino, exemplos código embedded, arquivos de teste Arduino IDE, arquivos de teste .ino, exemplos microcontroladores, exemplos desenvolvimento IoT, exemplos programação embedded'
         },
@@ -306,7 +306,7 @@ export const pt: SamplePageTranslations = {
       },
       bat: {
         meta: {
-          title: 'Baixar arquivos de exemplo BAT grátis - Arquivos de teste script batch para automação Windows | MorphyHub',
+          title: 'Baixar arquivos de exemplo BAT grátis - Arquivos de teste script batch para automação Windows | FomiPeek',
           description: 'Baixe arquivos de exemplo BAT script batch grátis para testar automação Windows e ferramentas de processamento de linha de comando. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar execução de script batch, automação de tarefas Windows, ferramentas de linha de comando, validadores de script e utilitários de administração do sistema.',
           keywords: 'arquivos de exemplo BAT, arquivos de teste BAT, baixar exemplos BAT, arquivos de teste BAT grátis, exemplos script batch, exemplos arquivos batch Windows, exemplos script automação, arquivos de teste .bat, exemplos script linha comando, exemplos automação Windows, exemplos execução script'
         },
@@ -322,7 +322,7 @@ export const pt: SamplePageTranslations = {
       },
       asc: {
         meta: {
-          title: 'Baixar arquivos de exemplo ASC grátis - Arquivos de teste texto ASCII para processamento de texto | MorphyHub',
+          title: 'Baixar arquivos de exemplo ASC grátis - Arquivos de teste texto ASCII para processamento de texto | FomiPeek',
           description: 'Baixe arquivos de exemplo ASC texto ASCII grátis para testar ferramentas de processamento de texto e codificação. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar codificação ASCII, análise de arquivos de texto, editores de texto simples, validação de codificação de caracteres e ferramentas de conversão de formato de texto.',
           keywords: 'arquivos de exemplo ASC, arquivos de teste ASC, baixar exemplos ASC, arquivos de teste ASC grátis, exemplos texto ASCII, exemplos texto simples, arquivos de teste .asc, exemplos formato texto, arquivos de teste codificação ASCII, exemplos processamento texto, exemplos codificação caracteres'
         },
@@ -338,7 +338,7 @@ export const pt: SamplePageTranslations = {
       },
       bib: {
         meta: {
-          title: 'Baixar arquivos de exemplo BIB grátis - Arquivos de teste bibliografia para pesquisa acadêmica | MorphyHub',
+          title: 'Baixar arquivos de exemplo BIB grátis - Arquivos de teste bibliografia para pesquisa acadêmica | FomiPeek',
           description: 'Baixe arquivos de exemplo BIB bibliografia grátis para testar ferramentas de gerenciamento de bibliografia e citações. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar processamento de formato BibTeX, gerenciadores de referências, geradores de citações, ferramentas de escrita acadêmica e integração de bibliografia LaTeX.',
           keywords: 'arquivos de exemplo BIB, arquivos de teste BIB, baixar exemplos BIB, arquivos de teste BIB grátis, exemplos bibliografia, exemplos arquivos BibTeX, exemplos citações, arquivos de teste .bib, exemplos gerenciamento referências, exemplos citações acadêmicas, exemplos bibliografia LaTeX'
         },
@@ -354,7 +354,7 @@ export const pt: SamplePageTranslations = {
       },
       c: {
         meta: {
-          title: 'Baixar arquivos de exemplo C grátis - Arquivos de teste linguagem programação C para desenvolvimento | MorphyHub',
+          title: 'Baixar arquivos de exemplo C grátis - Arquivos de teste linguagem programação C para desenvolvimento | FomiPeek',
           description: 'Baixe arquivos de exemplo C código fonte grátis para testar compilação de código C e ferramentas de desenvolvimento. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar compiladores C, verificadores de sintaxe, analisadores de código, toolchain GCC, desenvolvimento C embedded e ferramentas de programação de sistemas.',
           keywords: 'arquivos de exemplo C, arquivos de teste C, baixar exemplos C, arquivos de teste C grátis, exemplos código fonte C, exemplos arquivos programação C, arquivos de teste .c, arquivos de teste compilação C, arquivos de teste GCC, exemplos C embedded, exemplos programação sistemas'
         },
@@ -370,7 +370,7 @@ export const pt: SamplePageTranslations = {
       },
       'can-log': {
         meta: {
-          title: 'Baixar arquivos de exemplo CAN Log grátis - Arquivos de teste Controller Area Network para automotivo | MorphyHub',
+          title: 'Baixar arquivos de exemplo CAN Log grátis - Arquivos de teste Controller Area Network para automotivo | FomiPeek',
           description: 'Baixe arquivos de exemplo CAN Log grátis para testar análise de barramento CAN e ferramentas de diagnóstico automotivo. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar analisadores de barramento CAN, ferramentas de diagnóstico automotivo, protocolos de rede de veículos, testes OBD-II e sistemas embedded automotivos.',
           keywords: 'arquivos de exemplo CAN Log, arquivos de teste log CAN, baixar exemplos log CAN, arquivos de teste log CAN grátis, exemplos Controller Area Network, exemplos barramento CAN, arquivos de teste .log, exemplos diagnóstico automotivo, arquivos de teste OBD-II, exemplos rede veículos, teste analisador barramento CAN'
         },
@@ -386,7 +386,7 @@ export const pt: SamplePageTranslations = {
       },
       cmd: {
         meta: {
-          title: 'Baixar arquivos de exemplo CMD grátis - Arquivos de teste script comando Windows para automação | MorphyHub',
+          title: 'Baixar arquivos de exemplo CMD grátis - Arquivos de teste script comando Windows para automação | FomiPeek',
           description: 'Baixe arquivos de exemplo CMD script comando Windows grátis para testar execução de script batch e ferramentas de automação Windows. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar prompt de comando Windows, execução de arquivos batch, automação de scripts, administração do sistema e ferramentas de agendamento de tarefas Windows.',
           keywords: 'arquivos de exemplo CMD, arquivos de teste CMD, baixar exemplos CMD, arquivos de teste CMD grátis, exemplos script comando Windows, exemplos script batch, arquivos de teste .cmd, exemplos script comando, exemplos automação Windows, exemplos administração sistema'
         },
@@ -402,7 +402,7 @@ export const pt: SamplePageTranslations = {
       },
       conf: {
         meta: {
-          title: 'Baixar arquivos de exemplo CONF grátis - Arquivos de teste configuração para configuração sistema | MorphyHub',
+          title: 'Baixar arquivos de exemplo CONF grátis - Arquivos de teste configuração para configuração sistema | FomiPeek',
           description: 'Baixe arquivos de exemplo CONF configuração grátis para testar análise de arquivos de configuração e ferramentas de configuração do sistema. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar configuração de servidores, configurações de aplicações, validadores de arquivos de configuração, ferramentas de administração do sistema e utilitários de implantação de software.',
           keywords: 'arquivos de exemplo CONF, arquivos de teste CONF, baixar exemplos CONF, arquivos de teste CONF grátis, exemplos arquivos configuração, exemplos configuração servidores, arquivos de teste .conf, exemplos arquivos configuração, exemplos configuração sistema, exemplos configurações aplicação'
         },
@@ -418,7 +418,7 @@ export const pt: SamplePageTranslations = {
       },
       'config-ini': {
         meta: {
-          title: 'Baixar arquivos de exemplo Config INI grátis - Arquivos de teste configuração INI para aplicações | MorphyHub',
+          title: 'Baixar arquivos de exemplo Config INI grátis - Arquivos de teste configuração INI para aplicações | FomiPeek',
           description: 'Baixe arquivos de exemplo Config INI configuração INI grátis para testar análise de arquivos INI e ferramentas de gerenciamento de configuração. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar analisadores INI, configuração de aplicações, gerenciamento de configurações, arquivos INI Windows e utilitários de configuração de software.',
           keywords: 'arquivos de exemplo Config INI, arquivos de teste INI, baixar exemplos INI, arquivos de teste INI grátis, exemplos configuração INI, exemplos configuração INI, arquivos de teste .ini, exemplos arquivos configuração, exemplos INI Windows, exemplos configurações aplicação'
         },
@@ -434,7 +434,7 @@ export const pt: SamplePageTranslations = {
       },
       cpp: {
         meta: {
-          title: 'Baixar arquivos de exemplo CPP grátis - Arquivos de teste linguagem programação C++ para desenvolvimento | MorphyHub',
+          title: 'Baixar arquivos de exemplo CPP grátis - Arquivos de teste linguagem programação C++ para desenvolvimento | FomiPeek',
           description: 'Baixe arquivos de exemplo CPP código fonte C++ grátis para testar compilação de código C++ e ferramentas de desenvolvimento. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar compiladores C++, verificadores de sintaxe, analisadores de código, toolchain GCC/G++, recursos C++ modernos e ferramentas de programação orientada a objetos.',
           keywords: 'arquivos de exemplo CPP, arquivos de teste CPP, baixar exemplos CPP, arquivos de teste CPP grátis, exemplos código fonte C++, exemplos arquivos código C++, arquivos de teste .cpp, exemplos arquivos programação C++, arquivos de teste compilação C++, arquivos de teste GCC, exemplos C++ moderno'
         },
@@ -450,7 +450,7 @@ export const pt: SamplePageTranslations = {
       },
       h: {
         meta: {
-          title: 'Baixar arquivos de exemplo H grátis - Arquivos de teste header C/C++ para programação | MorphyHub',
+          title: 'Baixar arquivos de exemplo H grátis - Arquivos de teste header C/C++ para programação | FomiPeek',
           description: 'Baixe arquivos de exemplo H header C/C++ grátis para testar processamento de arquivos header e ferramentas de desenvolvimento. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar compiladores C/C++, inclusão de arquivos header, ferramentas de pré-processador, organização de código e utilitários de desenvolvimento multiplataforma.',
           keywords: 'arquivos de exemplo H, arquivos de teste H, baixar exemplos H, arquivos de teste H grátis, exemplos header C, exemplos header C++, exemplos arquivos header, arquivos de teste .h, arquivos header C/C++, exemplos header programação, exemplos arquivos header código'
         },
@@ -466,7 +466,7 @@ export const pt: SamplePageTranslations = {
       },
       hpp: {
         meta: {
-          title: 'Baixar arquivos de exemplo HPP grátis - Arquivos de teste header C++ para desenvolvimento C++ moderno | MorphyHub',
+          title: 'Baixar arquivos de exemplo HPP grátis - Arquivos de teste header C++ para desenvolvimento C++ moderno | FomiPeek',
           description: 'Baixe arquivos de exemplo HPP header C++ grátis para testar processamento de arquivos header C++ e ferramentas de desenvolvimento. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar compiladores C++, bibliotecas header-only, metaprogramação de templates, recursos C++ modernos e utilitários de desenvolvimento C++ avançados.',
           keywords: 'arquivos de exemplo HPP, arquivos de teste HPP, baixar exemplos HPP, arquivos de teste HPP grátis, exemplos header C++, exemplos arquivos header, arquivos de teste .hpp, arquivos header C++, exemplos header programação, exemplos arquivos header código, exemplos arquivos desenvolvimento C++, exemplos header C++ moderno'
         },
@@ -482,7 +482,7 @@ export const pt: SamplePageTranslations = {
       },
       hex: {
         meta: {
-          title: 'Baixar arquivos de exemplo HEX grátis - Arquivos de teste hexadecimais para desenvolvimento firmware e sistemas embarcados | MorphyHub',
+          title: 'Baixar arquivos de exemplo HEX grátis - Arquivos de teste hexadecimais para desenvolvimento firmware e sistemas embarcados | FomiPeek',
           description: 'Baixe arquivos de exemplo HEX hexadecimais grátis para testar programação de firmware, desenvolvimento de sistemas embarcados e análise de dados binários. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar editores hex, carregadores de firmware, programação de microcontroladores e ferramentas de desenvolvimento embarcado.',
           keywords: 'arquivos de exemplo HEX, arquivos de teste HEX, baixar exemplos HEX, arquivos de teste HEX grátis, arquivos hexadecimais, arquivos hex firmware, arquivos de teste .hex, arquivos hex embarcados, arquivos hex microcontroladores, arquivos de teste editor hex, exemplos programação firmware, arquivos binários hex'
         },
@@ -498,7 +498,7 @@ export const pt: SamplePageTranslations = {
       },
       cs: {
         meta: {
-          title: 'Baixar arquivos de exemplo CS grátis - Arquivos de teste código fonte C# para desenvolvimento .NET | MorphyHub',
+          title: 'Baixar arquivos de exemplo CS grátis - Arquivos de teste código fonte C# para desenvolvimento .NET | FomiPeek',
           description: 'Baixe arquivos de exemplo CS código fonte C# grátis para testar compilação C#, desenvolvimento .NET e ferramentas Visual Studio. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar compiladores C#, frameworks .NET, IDE Visual Studio, ferramentas de análise de código e ambientes de desenvolvimento C#.',
           keywords: 'arquivos de exemplo CS, arquivos de teste CS, baixar exemplos CS, arquivos de teste CS grátis, exemplos código fonte C#, arquivos código .NET, arquivos de teste .cs, arquivos programação C#, arquivos de teste Visual Studio, exemplos desenvolvimento .NET, arquivos de teste compilação C#'
         },
@@ -514,7 +514,7 @@ export const pt: SamplePageTranslations = {
       },
       css: {
         meta: {
-          title: 'Baixar arquivos de exemplo CSS grátis - Arquivos de teste folhas de estilo para desenvolvimento web | MorphyHub',
+          title: 'Baixar arquivos de exemplo CSS grátis - Arquivos de teste folhas de estilo para desenvolvimento web | FomiPeek',
           description: 'Baixe arquivos de exemplo CSS folhas de estilo grátis para testar estilos web, parsing CSS e ferramentas front-end. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar validadores CSS, pré-processadores (SASS, LESS), minificadores CSS, navegadores web e frameworks de desenvolvimento front-end.',
           keywords: 'arquivos de exemplo CSS, arquivos de teste CSS, baixar exemplos CSS, arquivos de teste CSS grátis, exemplos folhas de estilo, arquivos folhas CSS, arquivos de teste .css, arquivos estilos web, arquivos de teste parser CSS, exemplos desenvolvimento front-end, arquivos de teste frameworks CSS'
         },
@@ -530,7 +530,7 @@ export const pt: SamplePageTranslations = {
       },
       csr: {
         meta: {
-          title: 'Baixar arquivos de exemplo CSR grátis - Arquivos de teste solicitações de assinatura de certificado para SSL/TLS | MorphyHub',
+          title: 'Baixar arquivos de exemplo CSR grátis - Arquivos de teste solicitações de assinatura de certificado para SSL/TLS | FomiPeek',
           description: 'Baixe arquivos de exemplo CSR solicitações de assinatura de certificado grátis para testar geração de certificados SSL/TLS, gestão PKI e ferramentas de segurança. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar autoridades de certificação, OpenSSL, geração de certificados SSL, infraestrutura PKI e ferramentas de gestão de certificados de segurança.',
           keywords: 'arquivos de exemplo CSR, arquivos de teste CSR, baixar exemplos CSR, arquivos de teste CSR grátis, exemplos solicitações de assinatura de certificado, arquivos certificados SSL, arquivos de teste .csr, arquivos certificados PKI, arquivos de teste OpenSSL, exemplos certificados SSL/TLS, arquivos de teste autoridades de certificação'
         },
@@ -546,7 +546,7 @@ export const pt: SamplePageTranslations = {
       },
       'customer-database-sql': {
         meta: {
-          title: 'Baixar arquivos de exemplo Customer Database SQL grátis - Arquivos de teste base de dados SQL | MorphyHub',
+          title: 'Baixar arquivos de exemplo Customer Database SQL grátis - Arquivos de teste base de dados SQL | FomiPeek',
           description: 'Baixe arquivos de exemplo Customer Database SQL grátis para testar operações de base de dados SQL, execução de consultas e ferramentas de gestão de bases de dados. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar parsers SQL, ferramentas de importação de bases de dados, SQLite, MySQL, PostgreSQL e sistemas de gestão de bases de dados.',
           keywords: 'arquivos de exemplo Customer Database SQL, arquivos de teste base de dados SQL, baixar exemplos SQL, arquivos de teste SQL grátis, arquivos base de dados SQL, arquivos de teste .sql, arquivos consultas SQL, exemplos importação de bases de dados, arquivos de teste SQLite, exemplos MySQL, arquivos de teste PostgreSQL'
         },
@@ -562,7 +562,7 @@ export const pt: SamplePageTranslations = {
       },
       dbf: {
         meta: {
-          title: 'Baixar arquivos de exemplo DBF grátis - Arquivos de teste base de dados dBASE para gestão de dados | MorphyHub',
+          title: 'Baixar arquivos de exemplo DBF grátis - Arquivos de teste base de dados dBASE para gestão de dados | FomiPeek',
           description: 'Baixe arquivos de exemplo DBF base de dados dBASE grátis para testar operações de base de dados, importação/exportação de dados e formatos de base de dados legacy. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar compatibilidade dBASE, conversores de bases de dados, ferramentas de migração de dados, aplicações de folhas de cálculo e sistemas de gestão de bases de dados.',
           keywords: 'arquivos de exemplo DBF, arquivos de teste DBF, baixar exemplos DBF, arquivos de teste DBF grátis, arquivos base de dados dBASE, arquivos de teste .dbf, arquivos formato base de dados, exemplos bases de dados legacy, arquivos de teste compatibilidade dBASE, exemplos importação de dados'
         },
@@ -578,7 +578,7 @@ export const pt: SamplePageTranslations = {
       },
       dem: {
         meta: {
-          title: 'Baixar arquivos de exemplo DEM grátis - Arquivos de teste modelos de elevação digital para GIS e mapeamento | MorphyHub',
+          title: 'Baixar arquivos de exemplo DEM grátis - Arquivos de teste modelos de elevação digital para GIS e mapeamento | FomiPeek',
           description: 'Baixe arquivos de exemplo DEM modelos de elevação digital grátis para testar aplicações GIS, mapeamento de terreno e ferramentas de análise geoespacial. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar software GIS, visualização de terreno, processamento de dados de elevação, aplicações de mapeamento e ferramentas de análise geoespacial.',
           keywords: 'arquivos de exemplo DEM, arquivos de teste DEM, baixar exemplos DEM, arquivos de teste DEM grátis, arquivos modelos de elevação digital, arquivos de teste .dem, arquivos elevação GIS, exemplos dados de terreno, arquivos dados geoespaciais, arquivos de teste mapeamento, exemplos modelos de elevação'
         },
@@ -594,7 +594,7 @@ export const pt: SamplePageTranslations = {
       },
       der: {
         meta: {
-          title: 'Baixar arquivos de exemplo DER grátis - Arquivos de teste certificados Distinguished Encoding Rules | MorphyHub',
+          title: 'Baixar arquivos de exemplo DER grátis - Arquivos de teste certificados Distinguished Encoding Rules | FomiPeek',
           description: 'Baixe arquivos de exemplo DER certificados Distinguished Encoding Rules grátis para testar certificados SSL/TLS, gestão PKI e ferramentas de segurança. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar parsing de certificados, OpenSSL, infraestrutura PKI, validação de certificados SSL e ferramentas de gestão de certificados de segurança.',
           keywords: 'arquivos de exemplo DER, arquivos de teste DER, baixar exemplos DER, arquivos de teste DER grátis, arquivos Distinguished Encoding Rules, arquivos de teste .der, arquivos certificados, exemplos certificados SSL, arquivos certificados PKI, arquivos de teste OpenSSL, exemplos parsing de certificados'
         },
@@ -610,7 +610,7 @@ export const pt: SamplePageTranslations = {
       },
       dmp: {
         meta: {
-          title: 'Baixar arquivos de exemplo DMP grátis - Arquivos de teste despejo de memória para depuração e análise | MorphyHub',
+          title: 'Baixar arquivos de exemplo DMP grátis - Arquivos de teste despejo de memória para depuração e análise | FomiPeek',
           description: 'Baixe arquivos de exemplo DMP despejo de memória grátis para testar análise de falhas, ferramentas de depuração e diagnóstico do sistema. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar depuradores, ferramentas de análise de falhas, analisadores de memória, ferramentas de diagnóstico do sistema e aplicações de análise forense.',
           keywords: 'arquivos de exemplo DMP, arquivos de teste DMP, baixar exemplos DMP, arquivos de teste DMP grátis, arquivos despejo de memória, arquivos de teste .dmp, arquivos despejo de falhas, arquivos depuração, exemplos despejo do sistema, arquivos análise de memória, arquivos de teste análise de falhas'
         },
@@ -626,7 +626,7 @@ export const pt: SamplePageTranslations = {
       },
       'docker-compose-yml': {
         meta: {
-          title: 'Baixar arquivos de exemplo Docker Compose YML grátis - Arquivos de teste configuração Docker Compose | MorphyHub',
+          title: 'Baixar arquivos de exemplo Docker Compose YML grátis - Arquivos de teste configuração Docker Compose | FomiPeek',
           description: 'Baixe arquivos de exemplo Docker Compose YML configuração grátis para testar orquestração de contêineres Docker, aplicações multi-contêiner e ferramentas DevOps. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar Docker Compose, orquestração de contêineres, parsing YAML, automação DevOps e ferramentas de implantação de aplicações containerizadas.',
           keywords: 'arquivos de exemplo Docker Compose YML, arquivos de teste docker-compose, baixar exemplos docker-compose, arquivos de teste docker-compose grátis, arquivos YAML Docker Compose, arquivos de teste .yml, arquivos orquestração de contêineres, exemplos configuração DevOps, arquivos de teste Docker Compose, exemplos configuração multi-contêiner'
         },
@@ -642,7 +642,7 @@ export const pt: SamplePageTranslations = {
       },
       dockerfile: {
         meta: {
-          title: 'Baixar arquivos de exemplo Dockerfile grátis - Arquivos de teste build de contêineres Docker | MorphyHub',
+          title: 'Baixar arquivos de exemplo Dockerfile grátis - Arquivos de teste build de contêineres Docker | FomiPeek',
           description: 'Baixe arquivos de exemplo Dockerfile build de contêineres Docker grátis para testar containerização, build de Docker e ferramentas DevOps. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar build de Docker, criação de imagens de contêineres, parsing de Dockerfile, ferramentas de containerização e plataformas de automação DevOps.',
           keywords: 'arquivos de exemplo Dockerfile, arquivos de teste Dockerfile, baixar exemplos Dockerfile, arquivos de teste Dockerfile grátis, arquivos contêineres Docker, arquivos de teste Dockerfile, arquivos build de contêineres, exemplos build de Docker, arquivos de teste containerização, exemplos DevOps Docker'
         },
@@ -658,7 +658,7 @@ export const pt: SamplePageTranslations = {
       },
       editorconfig: {
         meta: {
-          title: 'Baixar arquivos de exemplo EditorConfig grátis - Arquivos de teste configuração de editor | MorphyHub',
+          title: 'Baixar arquivos de exemplo EditorConfig grátis - Arquivos de teste configuração de editor | FomiPeek',
           description: 'Baixe arquivos de exemplo EditorConfig configuração de editor grátis para testar configurações de editor de código, consistência de formato e ferramentas de desenvolvimento. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar parsers EditorConfig, plugins de editor de código, ferramentas de formato, configuração de IDE e ferramentas de configuração de ambiente de desenvolvimento.',
           keywords: 'arquivos de exemplo EditorConfig, arquivos de teste EditorConfig, baixar exemplos EditorConfig, arquivos de teste EditorConfig grátis, arquivos configuração de editor, arquivos de teste .editorconfig, arquivos configurações de editor de código, exemplos configuração de IDE, arquivos configuração de formato, arquivos de teste configurações de editor'
         },
@@ -674,7 +674,7 @@ export const pt: SamplePageTranslations = {
       },
       ini: {
         meta: {
-          title: 'Baixar arquivos de exemplo INI grátis - Arquivos de teste configuração INI para aplicações | MorphyHub',
+          title: 'Baixar arquivos de exemplo INI grátis - Arquivos de teste configuração INI para aplicações | FomiPeek',
           description: 'Baixe arquivos de exemplo INI configuração grátis para testar configurações de aplicações, parsing de arquivos INI e ferramentas de gestão de configuração. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar parsers INI, configuração de aplicações, gestão de configurações, arquivos INI do Windows e utilitários de configuração de software.',
           keywords: 'arquivos de exemplo INI, arquivos de teste INI, baixar exemplos INI, arquivos de teste INI grátis, arquivos configuração INI, arquivos de teste .ini, arquivos configurações de aplicações, exemplos configuração INI, arquivos INI do Windows, exemplos arquivos de configuração, arquivos de teste parsing INI'
         },
@@ -690,7 +690,7 @@ export const pt: SamplePageTranslations = {
       },
       intelhex: {
         meta: {
-          title: 'Baixar arquivos de exemplo IntelHex grátis - Arquivos de teste hexadecimais Intel para desenvolvimento de firmware | MorphyHub',
+          title: 'Baixar arquivos de exemplo IntelHex grátis - Arquivos de teste hexadecimais Intel para desenvolvimento de firmware | FomiPeek',
           description: 'Baixe arquivos de exemplo IntelHex hexadecimais Intel grátis para testar programação de firmware, desenvolvimento de sistemas embarcados e ferramentas de microcontroladores. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar parsers IntelHex, carregadores de firmware, programação de microcontroladores, ferramentas de desenvolvimento embarcado e aplicações de processamento de arquivos hex.',
           keywords: 'arquivos de exemplo IntelHex, arquivos de teste IntelHex, baixar exemplos IntelHex, arquivos de teste IntelHex grátis, arquivos hexadecimais Intel, arquivos de teste .intelhex, arquivos hex firmware, arquivos hex embarcados, arquivos hex microcontroladores, arquivos de teste parser IntelHex, exemplos programação de firmware'
         },
@@ -706,7 +706,7 @@ export const pt: SamplePageTranslations = {
       },
       ipynb: {
         meta: {
-          title: 'Baixar arquivos de exemplo IPYNB grátis - Arquivos de teste Jupyter Notebook para ciência de dados | MorphyHub',
+          title: 'Baixar arquivos de exemplo IPYNB grátis - Arquivos de teste Jupyter Notebook para ciência de dados | FomiPeek',
           description: 'Baixe arquivos de exemplo IPYNB Jupyter Notebook grátis para testar fluxos de trabalho de ciência de dados, execução Python e ferramentas de análise de notebooks. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar Jupyter Notebook, ferramentas de ciência de dados Python, visualizadores de notebooks, aplicações de análise de dados e plataformas de computação científica.',
           keywords: 'arquivos de exemplo IPYNB, arquivos de teste IPYNB, baixar exemplos IPYNB, arquivos de teste IPYNB grátis, arquivos Jupyter Notebook, arquivos de teste .ipynb, arquivos notebook Python, exemplos notebook ciência de dados, arquivos de teste Jupyter, arquivos análise de notebooks, exemplos fluxos de trabalho de ciência de dados'
         },
@@ -722,7 +722,7 @@ export const pt: SamplePageTranslations = {
       },
       java: {
         meta: {
-          title: 'Baixar arquivos de exemplo Java grátis - Arquivos de teste código fonte Java para desenvolvimento | MorphyHub',
+          title: 'Baixar arquivos de exemplo Java grátis - Arquivos de teste código fonte Java para desenvolvimento | FomiPeek',
           description: 'Baixe arquivos de exemplo Java código fonte Java grátis para testar compilação Java, aplicações JVM e ferramentas de desenvolvimento. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar compiladores Java, JVM, suporte de IDE (Eclipse, IntelliJ), ferramentas de build Java (Maven, Gradle) e ambientes de desenvolvimento Java.',
           keywords: 'arquivos de exemplo Java, arquivos de teste Java, baixar exemplos Java, arquivos de teste Java grátis, arquivos código fonte Java, arquivos de teste .java, arquivos programação Java, arquivos de teste JVM, exemplos compilação Java, arquivos de teste IDE Java, exemplos desenvolvimento Java'
         },
@@ -738,7 +738,7 @@ export const pt: SamplePageTranslations = {
       },
       jks: {
         meta: {
-          title: 'Baixar arquivos de exemplo JKS grátis - Arquivos de teste Java KeyStore para segurança SSL/TLS | MorphyHub',
+          title: 'Baixar arquivos de exemplo JKS grátis - Arquivos de teste Java KeyStore para segurança SSL/TLS | FomiPeek',
           description: 'Baixe arquivos de exemplo JKS Java KeyStore grátis para testar armazenamento de certificados SSL/TLS, segurança Java e ferramentas de gestão PKI. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar gestão de Java KeyStore, parsing de JKS, armazenamento de certificados SSL, ferramentas de segurança Java e infraestrutura PKI.',
           keywords: 'arquivos de exemplo JKS, arquivos de teste JKS, baixar exemplos JKS, arquivos de teste JKS grátis, arquivos Java KeyStore, arquivos de teste .jks, arquivos certificados SSL, arquivos segurança Java, arquivos de teste keystore, exemplos certificados PKI, arquivos de teste gestão de Java KeyStore'
         },
@@ -754,7 +754,7 @@ export const pt: SamplePageTranslations = {
       },
       json: {
         meta: {
-          title: 'Baixar arquivos de exemplo JSON grátis - Arquivos de teste dados JSON para desenvolvimento web | MorphyHub',
+          title: 'Baixar arquivos de exemplo JSON grátis - Arquivos de teste dados JSON para desenvolvimento web | FomiPeek',
           description: 'Baixe arquivos de exemplo JSON dados JSON grátis para testar parsing JSON, integração API e ferramentas de desenvolvimento web. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar parsers JSON, respostas API, formatos de intercâmbio de dados, aplicações web e ferramentas de validação JSON.',
           keywords: 'arquivos de exemplo JSON, arquivos de teste JSON, baixar exemplos JSON, arquivos de teste JSON grátis, arquivos dados JSON, arquivos de teste .json, arquivos JSON API, arquivos de teste parser JSON, exemplos intercâmbio de dados, arquivos JSON web, arquivos de teste validação JSON'
         },
@@ -770,7 +770,7 @@ export const pt: SamplePageTranslations = {
       },
       jsonl: {
         meta: {
-          title: 'Baixar arquivos de exemplo JSONL grátis - Arquivos de teste JSON Lines para processamento de dados | MorphyHub',
+          title: 'Baixar arquivos de exemplo JSONL grátis - Arquivos de teste JSON Lines para processamento de dados | FomiPeek',
           description: 'Baixe arquivos de exemplo JSONL JSON Lines grátis para testar processamento de dados, streaming JSON e ferramentas de big data. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar parsers JSONL, aplicações de streaming de dados, ferramentas ETL, processamento de big data e ferramentas de análise de arquivos de log.',
           keywords: 'arquivos de exemplo JSONL, arquivos de teste JSONL, baixar exemplos JSONL, arquivos de teste JSONL grátis, arquivos JSON Lines, arquivos de teste .jsonl, arquivos streaming JSON, exemplos processamento de dados, arquivos JSON ETL, exemplos JSON big data, arquivos análise de log JSON'
         },
@@ -786,7 +786,7 @@ export const pt: SamplePageTranslations = {
       },
       js: {
         meta: {
-          title: 'Baixar arquivos de exemplo JS grátis - Arquivos de teste código fonte JavaScript para desenvolvimento web | MorphyHub',
+          title: 'Baixar arquivos de exemplo JS grátis - Arquivos de teste código fonte JavaScript para desenvolvimento web | FomiPeek',
           description: 'Baixe arquivos de exemplo JS código fonte JavaScript grátis para testar execução JavaScript, desenvolvimento web e ferramentas front-end. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar motores JavaScript, Node.js, navegadores web, minificadores JavaScript, ferramentas de análise de código e frameworks de desenvolvimento front-end.',
           keywords: 'arquivos de exemplo JS, arquivos de teste JS, baixar exemplos JS, arquivos de teste JS grátis, arquivos código fonte JavaScript, arquivos de teste .js, arquivos programação JavaScript, arquivos de teste Node.js, arquivos JavaScript web, arquivos de teste minificador JS, exemplos desenvolvimento front-end'
         },
@@ -802,7 +802,7 @@ export const pt: SamplePageTranslations = {
       },
       jsx: {
         meta: {
-          title: 'Baixar arquivos de exemplo JSX grátis - Arquivos de teste React JSX para desenvolvimento front-end | MorphyHub',
+          title: 'Baixar arquivos de exemplo JSX grátis - Arquivos de teste React JSX para desenvolvimento front-end | FomiPeek',
           description: 'Baixe arquivos de exemplo JSX React JSX grátis para testar desenvolvimento React, compilação JSX e frameworks front-end. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar React, transpiladores JSX (Babel), ferramentas de build front-end, ambientes de desenvolvimento React e frameworks JavaScript modernos.',
           keywords: 'arquivos de exemplo JSX, arquivos de teste JSX, baixar exemplos JSX, arquivos de teste JSX grátis, arquivos React JSX, arquivos de teste .jsx, arquivos componentes React, arquivos de teste transpilador JSX, arquivos JSX front-end, exemplos desenvolvimento React, arquivos de teste Babel JSX'
         },
@@ -818,7 +818,7 @@ export const pt: SamplePageTranslations = {
       },
       jwt: {
         meta: {
-          title: 'Baixar arquivos de exemplo JWT grátis - Arquivos de teste JSON Web Token para segurança API | MorphyHub',
+          title: 'Baixar arquivos de exemplo JWT grátis - Arquivos de teste JSON Web Token para segurança API | FomiPeek',
           description: 'Baixe arquivos de exemplo JWT JSON Web Token grátis para testar autenticação API, parsing de tokens JWT e ferramentas de segurança. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar parsers JWT, autenticação API, validação de tokens, OAuth 2.0 e ferramentas de teste de segurança.',
           keywords: 'arquivos de exemplo JWT, arquivos de teste JWT, baixar exemplos JWT, arquivos de teste JWT grátis, arquivos JSON Web Token, arquivos de teste .jwt, arquivos tokens de autenticação, arquivos segurança API, arquivos de teste parser JWT, exemplos tokens OAuth, arquivos teste de segurança'
         },
@@ -834,7 +834,7 @@ export const pt: SamplePageTranslations = {
       },
       key: {
         meta: {
-          title: 'Baixar arquivos de exemplo KEY grátis - Arquivos de teste chaves privadas para segurança SSL/TLS | MorphyHub',
+          title: 'Baixar arquivos de exemplo KEY grátis - Arquivos de teste chaves privadas para segurança SSL/TLS | FomiPeek',
           description: 'Baixe arquivos de exemplo KEY chaves privadas grátis para testar certificados SSL/TLS, operações criptográficas e ferramentas de segurança. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar parsing de chaves privadas, OpenSSL, geração de certificados SSL, bibliotecas criptográficas e ferramentas de gestão de certificados de segurança.',
           keywords: 'arquivos de exemplo KEY, arquivos de teste KEY, baixar exemplos KEY, arquivos de teste KEY grátis, arquivos chaves privadas, arquivos de teste .key, arquivos chaves SSL, arquivos chaves criptográficas, arquivos de teste OpenSSL, exemplos chaves de segurança, arquivos de teste chaves de certificados'
         },
@@ -850,7 +850,7 @@ export const pt: SamplePageTranslations = {
       },
       kml: {
         meta: {
-          title: 'Baixar arquivos de exemplo KML grátis - Arquivos de teste Keyhole Markup Language para GIS e mapeamento | MorphyHub',
+          title: 'Baixar arquivos de exemplo KML grátis - Arquivos de teste Keyhole Markup Language para GIS e mapeamento | FomiPeek',
           description: 'Baixe arquivos de exemplo KML Keyhole Markup Language dados geográficos grátis para testar aplicações GIS, visualização de mapas e ferramentas geoespaciais. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar Google Earth, software GIS, renderização de mapas, processamento de dados geográficos e ferramentas de análise geoespacial.',
           keywords: 'arquivos de exemplo KML, arquivos de teste KML, baixar exemplos KML, arquivos de teste KML grátis, arquivos Keyhole Markup Language, arquivos de teste .kml, arquivos dados geográficos, exemplos dados de mapas, arquivos KML GIS, arquivos de teste Google Earth, exemplos dados geoespaciais'
         },
@@ -866,7 +866,7 @@ export const pt: SamplePageTranslations = {
       },
       kt: {
         meta: {
-          title: 'Baixar arquivos de exemplo KT grátis - Arquivos de teste código fonte Kotlin para desenvolvimento Android | MorphyHub',
+          title: 'Baixar arquivos de exemplo KT grátis - Arquivos de teste código fonte Kotlin para desenvolvimento Android | FomiPeek',
           description: 'Baixe arquivos de exemplo KT código fonte Kotlin grátis para testar compilação Kotlin, desenvolvimento Android e aplicações JVM. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar compiladores Kotlin, Android Studio, Kotlin/JVM, suporte de IDE e ambientes de desenvolvimento Kotlin.',
           keywords: 'arquivos de exemplo KT, arquivos de teste KT, baixar exemplos KT, arquivos de teste KT grátis, arquivos código fonte Kotlin, arquivos de teste .kt, arquivos programação Kotlin, arquivos Android Kotlin, arquivos de teste compilador Kotlin, exemplos Kotlin JVM, arquivos de teste desenvolvimento Kotlin'
         },
@@ -882,7 +882,7 @@ export const pt: SamplePageTranslations = {
       },
       log: {
         meta: {
-          title: 'Baixar arquivos de exemplo LOG grátis - Arquivos de teste logs para depuração e análise do sistema | MorphyHub',
+          title: 'Baixar arquivos de exemplo LOG grátis - Arquivos de teste logs para depuração e análise do sistema | FomiPeek',
           description: 'Baixe arquivos de exemplo LOG logs grátis para testar parsing de logs, análise do sistema e ferramentas de depuração. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar analisadores de logs, ferramentas de monitoramento do sistema, aplicações de depuração, sistemas de agregação de logs e ferramentas de diagnóstico do sistema.',
           keywords: 'arquivos de exemplo LOG, arquivos de teste LOG, baixar exemplos LOG, arquivos de teste LOG grátis, arquivos logs, arquivos de teste .log, arquivos logs do sistema, exemplos logs de aplicações, arquivos de teste parser de logs, arquivos depuração de logs, exemplos análise de logs do sistema'
         },
@@ -898,7 +898,7 @@ export const pt: SamplePageTranslations = {
       },
       lua: {
         meta: {
-          title: 'Baixar arquivos de exemplo LUA grátis - Arquivos de teste scripts Lua para desenvolvimento de jogos e automação | MorphyHub',
+          title: 'Baixar arquivos de exemplo LUA grátis - Arquivos de teste scripts Lua para desenvolvimento de jogos e automação | FomiPeek',
           description: 'Baixe arquivos de exemplo LUA scripts Lua grátis para testar execução Lua, desenvolvimento de jogos e ferramentas de automação. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar interpretadores Lua, motores de jogos, ambientes de scripting, ferramentas de automação e aplicações embarcadas Lua.',
           keywords: 'arquivos de exemplo LUA, arquivos de teste LUA, baixar exemplos LUA, arquivos de teste LUA grátis, arquivos scripts Lua, arquivos de teste .lua, arquivos programação Lua, arquivos scripts de jogos, arquivos de teste interpretador Lua, exemplos scripts de automação, arquivos de teste embarcados Lua'
         },
@@ -914,7 +914,7 @@ export const pt: SamplePageTranslations = {
       },
       m3u: {
         meta: {
-          title: 'Baixar arquivos de exemplo M3U grátis - Arquivos de teste playlist M3U para reprodutores multimídia | MorphyHub',
+          title: 'Baixar arquivos de exemplo M3U grátis - Arquivos de teste playlist M3U para reprodutores multimídia | FomiPeek',
           description: 'Baixe arquivos de exemplo M3U playlist M3U grátis para testar reprodutores multimídia, parsing de playlists e ferramentas de streaming de áudio/vídeo. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar reprodutores multimídia, gestores de playlists, aplicações de streaming, reprodutores de áudio e software de reprodutores de vídeo.',
           keywords: 'arquivos de exemplo M3U, arquivos de teste M3U, baixar exemplos M3U, arquivos de teste M3U grátis, arquivos playlist M3U, arquivos de teste .m3u, arquivos playlists multimídia, exemplos playlists de áudio, arquivos playlists de vídeo, arquivos de teste reprodutores multimídia, exemplos playlists de streaming'
         },
@@ -930,7 +930,7 @@ export const pt: SamplePageTranslations = {
       },
       m3u8: {
         meta: {
-          title: 'Baixar arquivos de exemplo M3U8 grátis - Arquivos de teste playlist M3U8 HLS para streaming de vídeo | MorphyHub',
+          title: 'Baixar arquivos de exemplo M3U8 grátis - Arquivos de teste playlist M3U8 HLS para streaming de vídeo | FomiPeek',
           description: 'Baixe arquivos de exemplo M3U8 playlist M3U8 HLS (HTTP Live Streaming) grátis para testar streaming de vídeo, reprodutores HLS e ferramentas de entrega multimídia. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar reprodutores HLS, plataformas de streaming de vídeo, streaming de bitrate adaptativo, servidores multimídia e sistemas de entrega de vídeo.',
           keywords: 'arquivos de exemplo M3U8, arquivos de teste M3U8, baixar exemplos M3U8, arquivos de teste M3U8 grátis, arquivos playlist M3U8 HLS, arquivos de teste .m3u8, arquivos HTTP Live Streaming, exemplos playlists de streaming de vídeo, arquivos de teste reprodutor HLS, exemplos streaming adaptativo, arquivos playlists de servidores multimídia'
         },
@@ -946,7 +946,7 @@ export const pt: SamplePageTranslations = {
       },
       makefile: {
         meta: {
-          title: 'Baixar arquivos de exemplo Makefile grátis - Arquivos de teste configuração de build Makefile | MorphyHub',
+          title: 'Baixar arquivos de exemplo Makefile grátis - Arquivos de teste configuração de build Makefile | FomiPeek',
           description: 'Baixe arquivos de exemplo Makefile configuração de build grátis para testar automação de build, sistema de build Make e ferramentas de desenvolvimento. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar sistema de build Make, ferramentas de automação de build, compilação C/C++, scripts de build e ambientes de build de desenvolvimento.',
           keywords: 'arquivos de exemplo Makefile, arquivos de teste Makefile, baixar exemplos Makefile, arquivos de teste Makefile grátis, arquivos build Makefile, arquivos de teste Makefile, arquivos configuração de build, exemplos sistema de build Make, arquivos build C/C++, arquivos de teste automação de build, exemplos compilação Makefile'
         },
@@ -962,7 +962,7 @@ export const pt: SamplePageTranslations = {
       },
       mbtiles: {
         meta: {
-          title: 'Baixar arquivos de exemplo MBTiles grátis - Arquivos de teste base de dados de tiles de mapas MBTiles | MorphyHub',
+          title: 'Baixar arquivos de exemplo MBTiles grátis - Arquivos de teste base de dados de tiles de mapas MBTiles | FomiPeek',
           description: 'Baixe arquivos de exemplo MBTiles base de dados de tiles de mapas grátis para testar renderização de mapas, aplicações GIS e ferramentas de mapeamento. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar servidores de tiles de mapas, software GIS, motores de renderização de mapas, aplicações de mapeamento móvel e ferramentas de mapas offline.',
           keywords: 'arquivos de exemplo MBTiles, arquivos de teste MBTiles, baixar exemplos MBTiles, arquivos de teste MBTiles grátis, arquivos tiles de mapas MBTiles, arquivos de teste .mbtiles, arquivos base de dados de mapas, exemplos tiles GIS, arquivos renderização de mapas, arquivos de teste mapas móveis, exemplos tiles de mapas offline'
         },
@@ -978,7 +978,7 @@ export const pt: SamplePageTranslations = {
       },
       md: {
         meta: {
-          title: 'Baixar arquivos de exemplo MD grátis - Arquivos de teste documentação Markdown | MorphyHub',
+          title: 'Baixar arquivos de exemplo MD grátis - Arquivos de teste documentação Markdown | FomiPeek',
           description: 'Baixe arquivos de exemplo MD documentação Markdown grátis para testar parsing Markdown, ferramentas de documentação e sistemas de gestão de conteúdos. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar parsers Markdown, geradores de documentação, geradores de sites estáticos, GitHub Markdown e plataformas de gestão de conteúdos.',
           keywords: 'arquivos de exemplo MD, arquivos de teste MD, baixar exemplos MD, arquivos de teste MD grátis, arquivos Markdown, arquivos de teste .md, arquivos documentação Markdown, arquivos de teste parser Markdown, exemplos GitHub Markdown, arquivos geradores de sites estáticos, arquivos de teste geradores de documentação'
         },
@@ -994,7 +994,7 @@ export const pt: SamplePageTranslations = {
       },
       mdx: {
         meta: {
-          title: 'Baixar arquivos de exemplo MDX grátis - Arquivos de teste MDX React Markdown para documentação | MorphyHub',
+          title: 'Baixar arquivos de exemplo MDX grátis - Arquivos de teste MDX React Markdown para documentação | FomiPeek',
           description: 'Baixe arquivos de exemplo MDX MDX (Markdown + JSX) grátis para testar documentação React, geradores de sites estáticos e sistemas de gestão de conteúdos. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar parsers MDX, ferramentas de documentação React, Next.js, Gatsby, geradores de sites estáticos e plataformas de documentação modernas.',
           keywords: 'arquivos de exemplo MDX, arquivos de teste MDX, baixar exemplos MDX, arquivos de teste MDX grátis, arquivos MDX React Markdown, arquivos de teste .mdx, arquivos documentação React, arquivos de teste parser MDX, exemplos MDX Next.js, arquivos MDX Gatsby, arquivos de teste geradores de sites estáticos MDX'
         },
@@ -1010,7 +1010,7 @@ export const pt: SamplePageTranslations = {
       },
       apk: {
         meta: {
-          title: 'Baixar arquivos de exemplo APK grátis - Arquivos de teste pacotes aplicação Android | MorphyHub',
+          title: 'Baixar arquivos de exemplo APK grátis - Arquivos de teste pacotes aplicação Android | FomiPeek',
           description: 'Baixe arquivos de exemplo APK pacotes aplicação Android grátis para testar instalação aplicações Android, análise APK, engenharia reversa e ferramentas desenvolvimento móvel. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar instaladores APK, emuladores Android, analisadores aplicações, scanners segurança e plataformas desenvolvimento aplicações móveis.',
           keywords: 'arquivos de exemplo APK, arquivos de teste APK, baixar exemplos APK, arquivos de teste APK grátis, arquivos APK Android, arquivos de teste .apk, arquivos pacotes aplicação Android, arquivos de teste instalador APK, arquivos de teste emulador Android, exemplos desenvolvimento aplicações móveis, arquivos engenharia reversa APK'
         },
@@ -1026,7 +1026,7 @@ export const pt: SamplePageTranslations = {
       },
       appimage: {
         meta: {
-          title: 'Baixar arquivos de exemplo AppImage grátis - Arquivos de teste aplicações portáteis Linux | MorphyHub',
+          title: 'Baixar arquivos de exemplo AppImage grátis - Arquivos de teste aplicações portáteis Linux | FomiPeek',
           description: 'Baixe arquivos de exemplo AppImage aplicações portáteis Linux grátis para testar distribuição aplicações Linux, execução AppImage e compatibilidade cross-distribuição. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar runners AppImage, lançadores aplicações Linux, ferramentas aplicações portáteis e distribuição software Linux universal.',
           keywords: 'arquivos de exemplo AppImage, arquivos de teste AppImage, baixar exemplos AppImage, arquivos de teste AppImage grátis, arquivos AppImage Linux, arquivos de teste .AppImage, aplicações portáteis Linux, arquivos de teste runner AppImage, arquivos aplicações Linux, aplicações cross-distribuição, exemplos software Linux universal'
         },
@@ -1042,7 +1042,7 @@ export const pt: SamplePageTranslations = {
       },
       elf: {
         meta: {
-          title: 'Baixar arquivos de exemplo ELF grátis - Arquivos de teste Executable and Linkable Format para Linux/Unix | MorphyHub',
+          title: 'Baixar arquivos de exemplo ELF grátis - Arquivos de teste Executable and Linkable Format para Linux/Unix | FomiPeek',
           description: 'Baixe arquivos de exemplo ELF Executable and Linkable Format grátis para testar análise binários Linux/Unix, parsing ELF, engenharia reversa e depuração sistema. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar analisadores ELF, desmontadores binários, ferramentas engenharia reversa, depuradores sistema e plataformas análise executáveis Linux.',
           keywords: 'arquivos de exemplo ELF, arquivos de teste ELF, baixar exemplos ELF, arquivos de teste ELF grátis, arquivos ELF Linux, arquivos de teste .elf, arquivos executáveis Unix, arquivos análise binária ELF, arquivos engenharia reversa ELF, arquivos binários Linux, arquivos de teste desmontador ELF'
         },
@@ -1058,7 +1058,7 @@ export const pt: SamplePageTranslations = {
       },
       exe: {
         meta: {
-          title: 'Baixar arquivos de exemplo EXE grátis - Arquivos de teste executáveis Windows | MorphyHub',
+          title: 'Baixar arquivos de exemplo EXE grátis - Arquivos de teste executáveis Windows | FomiPeek',
           description: 'Baixe arquivos de exemplo EXE executáveis Windows grátis para testar execução aplicações Windows, análise EXE, parsing binários e ferramentas desenvolvimento Windows. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar analisadores executáveis Windows, desmontadores binários, ferramentas engenharia reversa, plataformas análise malware e desenvolvimento aplicações Windows.',
           keywords: 'arquivos de exemplo EXE, arquivos de teste EXE, baixar exemplos EXE, arquivos de teste EXE grátis, arquivos EXE Windows, arquivos de teste .exe, arquivos executáveis Windows, arquivos análise binária EXE, arquivos aplicações Windows, arquivos engenharia reversa EXE, arquivos de teste desmontador binários Windows'
         },
@@ -1074,7 +1074,7 @@ export const pt: SamplePageTranslations = {
       },
       ipa: {
         meta: {
-          title: 'Baixar arquivos de exemplo IPA grátis - Arquivos de teste pacotes aplicação iOS | MorphyHub',
+          title: 'Baixar arquivos de exemplo IPA grátis - Arquivos de teste pacotes aplicação iOS | FomiPeek',
           description: 'Baixe arquivos de exemplo IPA pacotes aplicação iOS grátis para testar instalação aplicações iOS, análise IPA, distribuição aplicações iOS e ferramentas desenvolvimento móvel. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar instaladores IPA, simuladores iOS, analisadores aplicações, ferramentas desenvolvimento iOS e plataformas distribuição aplicações móveis.',
           keywords: 'arquivos de exemplo IPA, arquivos de teste IPA, baixar exemplos IPA, arquivos de teste IPA grátis, arquivos IPA iOS, arquivos de teste .ipa, arquivos pacotes aplicação iOS, arquivos de teste instalador IPA, arquivos de teste simulador iOS, exemplos desenvolvimento aplicações móveis, arquivos distribuição aplicação iOS'
         },
@@ -1090,7 +1090,7 @@ export const pt: SamplePageTranslations = {
       },
       jar: {
         meta: {
-          title: 'Baixar arquivos de exemplo JAR grátis - Arquivos de teste arquivos Java | MorphyHub',
+          title: 'Baixar arquivos de exemplo JAR grátis - Arquivos de teste arquivos Java | FomiPeek',
           description: 'Baixe arquivos de exemplo JAR arquivos Java grátis para testar execução aplicações Java, extração JAR, análise JAR e ferramentas desenvolvimento Java. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extratores JAR, ambientes execução Java, analisadores JAR, ferramentas desenvolvimento Java e plataformas implantação aplicações Java.',
           keywords: 'arquivos de exemplo JAR, arquivos de teste JAR, baixar exemplos JAR, arquivos de teste JAR grátis, arquivos JAR Java, arquivos de teste .jar, arquivos arquivos Java, arquivos de teste extrator JAR, arquivos de teste runtime Java, exemplos desenvolvimento Java, arquivos análise JAR'
         },
@@ -1106,7 +1106,7 @@ export const pt: SamplePageTranslations = {
       },
       crx: {
         meta: {
-          title: 'Baixar arquivos de exemplo CRX grátis - Arquivos de teste pacotes extensões Chrome | MorphyHub',
+          title: 'Baixar arquivos de exemplo CRX grátis - Arquivos de teste pacotes extensões Chrome | FomiPeek',
           description: 'Baixe arquivos de exemplo CRX pacotes extensões Chrome grátis para testar instalação extensões Chrome, análise CRX, desenvolvimento extensões navegador e ferramentas extensões web. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar instaladores CRX, analisadores extensões Chrome, ferramentas desenvolvimento extensões navegador e plataformas distribuição extensões web.',
           keywords: 'arquivos de exemplo CRX, arquivos de teste CRX, baixar exemplos CRX, arquivos de teste CRX grátis, arquivos CRX Chrome, arquivos de teste .crx, arquivos extensões Chrome, arquivos de teste instalador CRX, arquivos extensões navegador, exemplos desenvolvimento extensões web, arquivos análise extensões Chrome'
         },
@@ -1122,7 +1122,7 @@ export const pt: SamplePageTranslations = {
       },
       '3ds': {
         meta: {
-          title: 'Baixar arquivos de exemplo 3DS grátis - Arquivos de teste modelos 3D para impressão 3D e modelagem | MorphyHub',
+          title: 'Baixar arquivos de exemplo 3DS grátis - Arquivos de teste modelos 3D para impressão 3D e modelagem | FomiPeek',
           description: 'Baixe arquivos de exemplo 3DS modelos 3D grátis para testar softwares modelagem 3D, ferramentas impressão 3D, conversão malhas e aplicações visualização 3D. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar visualizadores modelos 3D, impressoras 3D, softwares CAD, editores malhas e aplicações gráficos 3D.',
           keywords: 'arquivos de exemplo 3DS, arquivos de teste 3DS, baixar exemplos 3DS, arquivos de teste 3DS grátis, arquivos modelos 3D 3DS, arquivos de teste .3ds, arquivos modelagem 3D, arquivos de teste impressão 3D, arquivos CAD 3DS, arquivos modelos malhas, exemplos gráficos 3D'
         },
@@ -1138,7 +1138,7 @@ export const pt: SamplePageTranslations = {
       },
       '3mf': {
         meta: {
-          title: 'Baixar arquivos de exemplo 3MF grátis - Arquivos de teste 3D Manufacturing Format para impressão 3D | MorphyHub',
+          title: 'Baixar arquivos de exemplo 3MF grátis - Arquivos de teste 3D Manufacturing Format para impressão 3D | FomiPeek',
           description: 'Baixe arquivos de exemplo 3MF 3D Manufacturing Format grátis para testar impressão 3D, fabricação aditiva, corte modelos 3D e compatibilidade impressoras 3D. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar cortadores impressoras 3D, softwares fabricação aditiva, visualizadores 3MF, fluxos trabalho impressão 3D e plataformas fabricação 3D modernas.',
           keywords: 'arquivos de exemplo 3MF, arquivos de teste 3MF, baixar exemplos 3MF, arquivos de teste 3MF grátis, arquivos impressão 3D 3MF, arquivos de teste .3mf, arquivos fabricação aditiva, arquivos de teste cortador impressora 3D, arquivos de teste visualizador 3MF, exemplos fabricação 3D, arquivos impressão 3D moderna'
         },
@@ -1154,7 +1154,7 @@ export const pt: SamplePageTranslations = {
       },
       ai: {
         meta: {
-          title: 'Baixar arquivos de exemplo AI grátis - Arquivos de teste gráficos vetoriais Adobe Illustrator | MorphyHub',
+          title: 'Baixar arquivos de exemplo AI grátis - Arquivos de teste gráficos vetoriais Adobe Illustrator | FomiPeek',
           description: 'Baixe arquivos de exemplo AI gráficos vetoriais Adobe Illustrator grátis para testar edição gráficos vetoriais, conversão arquivos AI, compatibilidade softwares design e ferramentas design gráfico. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar Adobe Illustrator, editores gráficos vetoriais, conversores arquivos AI, softwares design e plataformas design gráfico profissionais.',
           keywords: 'arquivos de exemplo AI, arquivos de teste AI, baixar exemplos AI, arquivos de teste AI grátis, arquivos AI Adobe Illustrator, arquivos de teste .ai, arquivos gráficos vetoriais, arquivos de teste Illustrator, arquivos softwares design, exemplos edição vetorial, arquivos design gráfico AI'
         },
@@ -1170,7 +1170,7 @@ export const pt: SamplePageTranslations = {
       },
       ase: {
         meta: {
-          title: 'Baixar arquivos de exemplo ASE grátis - Arquivos de teste animações sprite Aseprite | MorphyHub',
+          title: 'Baixar arquivos de exemplo ASE grátis - Arquivos de teste animações sprite Aseprite | FomiPeek',
           description: 'Baixe arquivos de exemplo ASE animações sprite Aseprite grátis para testar edição pixel art, animação sprites, ferramentas desenvolvimento jogos e softwares animação 2D. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar Aseprite, editores pixel art, ferramentas animação sprites, softwares desenvolvimento jogos e plataformas animação 2D.',
           keywords: 'arquivos de exemplo ASE, arquivos de teste ASE, baixar exemplos ASE, arquivos de teste ASE grátis, arquivos ASE Aseprite, arquivos de teste .ase, arquivos animação sprite, arquivos de teste pixel art, arquivos desenvolvimento jogos, exemplos animação 2D, arquivos de teste Aseprite'
         },
@@ -1186,7 +1186,7 @@ export const pt: SamplePageTranslations = {
       },
       'animation-fbx': {
         meta: {
-          title: 'Baixar arquivos de exemplo Animation FBX grátis - Arquivos de teste animações 3D Autodesk FBX | MorphyHub',
+          title: 'Baixar arquivos de exemplo Animation FBX grátis - Arquivos de teste animações 3D Autodesk FBX | FomiPeek',
           description: 'Baixe arquivos de exemplo Animation FBX animações 3D Autodesk FBX grátis para testar animação 3D, rigging personagens, dados motion capture e softwares gráficos 3D. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar softwares animação 3D, motores jogos, ferramentas motion capture, plataformas animação personagens e aplicações gráficos 3D.',
           keywords: 'arquivos de exemplo Animation FBX, arquivos de teste animação FBX, baixar exemplos animação FBX, arquivos de teste animação FBX grátis, arquivos Autodesk FBX, arquivos de teste animação .fbx, arquivos animação 3D, arquivos de teste animação personagens, arquivos motion capture, exemplos animação gráficos 3D, arquivos FBX motor jogos'
         },
@@ -1202,7 +1202,7 @@ export const pt: SamplePageTranslations = {
       },
       assetbundle: {
         meta: {
-          title: 'Baixar arquivos de exemplo AssetBundle grátis - Arquivos de teste Unity AssetBundle para desenvolvimento jogos | MorphyHub',
+          title: 'Baixar arquivos de exemplo AssetBundle grátis - Arquivos de teste Unity AssetBundle para desenvolvimento jogos | FomiPeek',
           description: 'Baixe arquivos de exemplo AssetBundle Unity AssetBundle grátis para testar desenvolvimento jogos Unity, carregamento assets, gestão recursos jogos e ferramentas motor Unity. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar motor Unity, carregadores assets jogos, ferramentas desenvolvimento Unity, gestores recursos jogos e plataformas desenvolvimento jogos Unity.',
           keywords: 'arquivos de exemplo AssetBundle, arquivos de teste AssetBundle, baixar exemplos AssetBundle, arquivos de teste AssetBundle grátis, arquivos Unity AssetBundle, arquivos assets Unity, arquivos desenvolvimento jogos, arquivos de teste motor Unity, arquivos de teste carregador assets jogos, exemplos desenvolvimento Unity, arquivos gestão recursos jogos'
         },
@@ -1218,7 +1218,7 @@ export const pt: SamplePageTranslations = {
       },
       blend: {
         meta: {
-          title: 'Baixar arquivos de exemplo BLEND grátis - Arquivos de teste projetos 3D Blender | MorphyHub',
+          title: 'Baixar arquivos de exemplo BLEND grátis - Arquivos de teste projetos 3D Blender | FomiPeek',
           description: 'Baixe arquivos de exemplo BLEND projetos 3D Blender grátis para testar modelagem 3D, compatibilidade projetos Blender, fluxos trabalho animação 3D e softwares gráficos 3D. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar software Blender, ferramentas modelagem 3D, visualizadores projetos Blender, plataformas animação 3D e aplicações gráficos 3D profissionais.',
           keywords: 'arquivos de exemplo BLEND, arquivos de teste BLEND, baixar exemplos BLEND, arquivos de teste BLEND grátis, arquivos BLEND Blender, arquivos de teste .blend, arquivos projetos Blender, arquivos de teste modelagem 3D, arquivos de teste Blender, exemplos animação 3D, arquivos gráficos 3D BLEND'
         },
@@ -1234,7 +1234,7 @@ export const pt: SamplePageTranslations = {
       },
       bvh: {
         meta: {
-          title: 'Baixar arquivos de exemplo BVH grátis - Arquivos de teste motion capture Biovision Hierarchy | MorphyHub',
+          title: 'Baixar arquivos de exemplo BVH grátis - Arquivos de teste motion capture Biovision Hierarchy | FomiPeek',
           description: 'Baixe arquivos de exemplo BVH motion capture Biovision Hierarchy grátis para testar dados motion capture, animação personagens, sistemas animação esquelética e softwares animação 3D. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar visualizadores motion capture, ferramentas animação personagens, sistemas animação esquelética, plataformas animação 3D e softwares análise motion capture.',
           keywords: 'arquivos de exemplo BVH, arquivos de teste BVH, baixar exemplos BVH, arquivos de teste BVH grátis, arquivos BVH Biovision Hierarchy, arquivos de teste .bvh, arquivos motion capture, arquivos de teste animação personagens, arquivos animação esquelética, exemplos animação 3D BVH, arquivos análise motion capture'
         },
@@ -1250,7 +1250,7 @@ export const pt: SamplePageTranslations = {
       },
       dwg: {
         meta: {
-          title: 'Baixar arquivos de exemplo DWG grátis - Arquivos de teste desenhos AutoCAD para design CAD | MorphyHub',
+          title: 'Baixar arquivos de exemplo DWG grátis - Arquivos de teste desenhos AutoCAD para design CAD | FomiPeek',
           description: 'Baixe arquivos de exemplo DWG desenhos AutoCAD grátis para testar softwares CAD, compatibilidade AutoCAD, ferramentas desenho técnico e aplicações design engenharia. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar AutoCAD, visualizadores CAD, softwares desenho técnico, ferramentas design engenharia e plataformas CAD profissionais.',
           keywords: 'arquivos de exemplo DWG, arquivos de teste DWG, baixar exemplos DWG, arquivos de teste DWG grátis, arquivos DWG AutoCAD, arquivos de teste .dwg, arquivos desenhos CAD, arquivos de teste AutoCAD, arquivos desenho técnico, exemplos design engenharia, arquivos softwares CAD DWG'
         },
@@ -1266,7 +1266,7 @@ export const pt: SamplePageTranslations = {
       },
       dxf: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo DXF Grátis - Arquivos de Teste Drawing Exchange Format AutoCAD | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo DXF Grátis - Arquivos de Teste Drawing Exchange Format AutoCAD | FomiPeek',
           description: 'Baixe arquivos de exemplo DXF Drawing Exchange Format grátis para testar softwares CAD, conversores DXF e ferramentas de desenho técnico. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar AutoCAD, visualizadores CAD, analisadores DXF e aplicativos de troca de arquivos de desenho.',
           keywords: 'arquivos de exemplo DXF, arquivos de teste DXF, baixar exemplos DXF, arquivos de teste DXF grátis, arquivos AutoCAD DXF, arquivos Drawing Exchange Format, arquivos CAD DXF, arquivos de teste conversor DXF, arquivos de desenho técnico, arquivos de teste analisador DXF, exemplos de troca de arquivos CAD'
         },
@@ -1282,7 +1282,7 @@ export const pt: SamplePageTranslations = {
       },
       ifc: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo IFC Grátis - Arquivos de Teste Industry Foundation Classes BIM | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo IFC Grátis - Arquivos de Teste Industry Foundation Classes BIM | FomiPeek',
           description: 'Baixe arquivos de exemplo IFC Industry Foundation Classes grátis para testar softwares BIM, visualizadores IFC, ferramentas de modelagem de informações da construção e aplicativos de gerenciamento de construção. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar Revit, ArchiCAD, analisadores IFC, visualizadores BIM e softwares de design de edifícios.',
           keywords: 'arquivos de exemplo IFC, arquivos de teste IFC, baixar exemplos IFC, arquivos de teste IFC grátis, arquivos Industry Foundation Classes, arquivos BIM IFC, arquivos de modelagem de informações da construção, arquivos de teste visualizador IFC, arquivos de software de construção, arquivos de teste analisador IFC, exemplos de formato de troca BIM'
         },
@@ -1298,7 +1298,7 @@ export const pt: SamplePageTranslations = {
       },
       iges: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo IGES Grátis - Arquivos de Teste Initial Graphics Exchange Specification CAD | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo IGES Grátis - Arquivos de Teste Initial Graphics Exchange Specification CAD | FomiPeek',
           description: 'Baixe arquivos de exemplo IGES Initial Graphics Exchange Specification grátis para testar softwares CAD, conversores IGES, ferramentas de modelagem 3D e aplicativos de design de engenharia. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar sistemas CAD, analisadores IGES, ferramentas de troca de modelos 3D e softwares de engenharia.',
           keywords: 'arquivos de exemplo IGES, arquivos de teste IGES, baixar exemplos IGES, arquivos de teste IGES grátis, arquivos Initial Graphics Exchange Specification, arquivos CAD IGES, arquivos de troca de modelos 3D, arquivos de teste conversor IGES, arquivos de design de engenharia, arquivos de teste analisador IGES, exemplos de formato de troca CAD'
         },
@@ -1314,7 +1314,7 @@ export const pt: SamplePageTranslations = {
       },
       igs: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo IGS Grátis - Arquivos de Teste Initial Graphics Exchange Specification CAD | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo IGS Grátis - Arquivos de Teste Initial Graphics Exchange Specification CAD | FomiPeek',
           description: 'Baixe arquivos de exemplo IGS Initial Graphics Exchange Specification grátis para testar softwares CAD, conversores IGS, ferramentas de modelagem 3D e aplicativos de design de engenharia. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar sistemas CAD, analisadores IGS, ferramentas de troca de modelos 3D e softwares de engenharia.',
           keywords: 'arquivos de exemplo IGS, arquivos de teste IGS, baixar exemplos IGS, arquivos de teste IGS grátis, arquivos Initial Graphics Exchange Specification, arquivos CAD IGS, arquivos de troca de modelos 3D, arquivos de teste conversor IGS, arquivos de design de engenharia, arquivos de teste analisador IGS, exemplos de formato de troca CAD'
         },
@@ -1330,7 +1330,7 @@ export const pt: SamplePageTranslations = {
       },
       las: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo LAS Grátis - Arquivos de Teste Dados Nuvem de Pontos LiDAR | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo LAS Grátis - Arquivos de Teste Dados Nuvem de Pontos LiDAR | FomiPeek',
           description: 'Baixe arquivos de exemplo LAS nuvem de pontos LiDAR grátis para testar processamento de nuvens de pontos, ferramentas de análise LiDAR, softwares de mapeamento 3D e aplicativos geoespaciais. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar analisadores LAS, visualizadores de nuvens de pontos, ferramentas de processamento LiDAR, softwares de mapeamento 3D e plataformas de análise geoespacial.',
           keywords: 'arquivos de exemplo LAS, arquivos de teste LAS, baixar exemplos LAS, arquivos de teste LAS grátis, arquivos nuvem de pontos LiDAR, arquivos formato LAS, arquivos dados nuvem de pontos, arquivos de teste analisador LAS, arquivos geoespaciais, arquivos de teste análise LiDAR, exemplos de mapeamento 3D'
         },
@@ -1346,7 +1346,7 @@ export const pt: SamplePageTranslations = {
       },
       ma: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo MA Grátis - Arquivos de Teste Cena Maya ASCII | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo MA Grátis - Arquivos de Teste Cena Maya ASCII | FomiPeek',
           description: 'Baixe arquivos de exemplo MA cena Maya ASCII grátis para testar conversão de cenas Maya, softwares de animação 3D, analisadores de arquivos MA e ferramentas de animação. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar Autodesk Maya, visualizadores de arquivos MA, ferramentas de conversão de cenas, plataformas de animação 3D e softwares de fluxo de trabalho de animação.',
           keywords: 'arquivos de exemplo MA, arquivos de teste MA, baixar exemplos MA, arquivos de teste MA grátis, arquivos cena Maya ASCII, arquivos formato MA, arquivos cena animação 3D, arquivos de teste analisador MA, arquivos animação, arquivos de teste cena Maya, exemplos animação 3D'
         },
@@ -1362,7 +1362,7 @@ export const pt: SamplePageTranslations = {
       },
       max: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo MAX Grátis - Arquivos de Teste Cena 3ds Max | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo MAX Grátis - Arquivos de Teste Cena 3ds Max | FomiPeek',
           description: 'Baixe arquivos de exemplo MAX cena 3ds Max grátis para testar conversão de cenas 3ds Max, softwares de modelagem 3D, analisadores de arquivos MAX e ferramentas de design 3D. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar Autodesk 3ds Max, visualizadores de arquivos MAX, ferramentas de conversão de cenas, plataformas de modelagem 3D e softwares de fluxo de trabalho de design 3D.',
           keywords: 'arquivos de exemplo MAX, arquivos de teste MAX, baixar exemplos MAX, arquivos de teste MAX grátis, arquivos cena 3ds Max, arquivos formato MAX, arquivos cena modelagem 3D, arquivos de teste analisador MAX, arquivos design 3D, arquivos de teste cena 3ds Max, exemplos modelagem 3D'
         },
@@ -1378,7 +1378,7 @@ export const pt: SamplePageTranslations = {
       },
       mb: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo MB Grátis - Arquivos de Teste Cena Maya Binary | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo MB Grátis - Arquivos de Teste Cena Maya Binary | FomiPeek',
           description: 'Baixe arquivos de exemplo MB cena Maya Binary grátis para testar conversão de cenas Maya, softwares de animação 3D, analisadores de arquivos MB e ferramentas de animação. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar Autodesk Maya, visualizadores de arquivos MB, ferramentas de conversão de cenas, plataformas de animação 3D e softwares de fluxo de trabalho de animação.',
           keywords: 'arquivos de exemplo MB, arquivos de teste MB, baixar exemplos MB, arquivos de teste MB grátis, arquivos cena Maya Binary, arquivos formato MB, arquivos cena animação 3D, arquivos de teste analisador MB, arquivos animação, arquivos de teste cena Maya, exemplos animação 3D'
         },
@@ -1394,7 +1394,7 @@ export const pt: SamplePageTranslations = {
       },
       indd: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo INDD Grátis - Arquivos de Teste Documento Adobe InDesign | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo INDD Grátis - Arquivos de Teste Documento Adobe InDesign | FomiPeek',
           description: 'Baixe arquivos de exemplo INDD documento Adobe InDesign grátis para testar compatibilidade InDesign, conversores INDD, softwares de editoração eletrônica e ferramentas de design de layout. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar Adobe InDesign, visualizadores de arquivos INDD, ferramentas de conversão de documentos, plataformas de editoração eletrônica e softwares de design de layout.',
           keywords: 'arquivos de exemplo INDD, arquivos de teste INDD, baixar exemplos INDD, arquivos de teste INDD grátis, arquivos Adobe InDesign, arquivos formato INDD, arquivos editoração eletrônica, arquivos de teste conversor INDD, arquivos design layout, arquivos de teste documento InDesign, exemplos software publicação'
         },
@@ -1410,7 +1410,7 @@ export const pt: SamplePageTranslations = {
       },
       'animated-gif': {
         meta: {
-          title: 'Baixar Arquivos de Exemplo GIF Animado Grátis - Arquivos de Teste Imagens Animadas | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo GIF Animado Grátis - Arquivos de Teste Imagens Animadas | FomiPeek',
           description: 'Baixe arquivos de exemplo GIF animado grátis para testar reprodução de animações GIF, visualizadores de imagens, navegadores web e ferramentas de animação. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar visualizadores GIF, reprodutores de animação, ferramentas de processamento de imagens, plataformas de desenvolvimento web e aplicativos multimídia.',
           keywords: 'arquivos de exemplo GIF animado, arquivos de teste GIF animado, baixar exemplos GIF animado, arquivos de teste GIF animado grátis, arquivos animação GIF, arquivos imagens animadas, arquivos de teste reprodutor GIF, arquivos animação, arquivos de teste animação web, exemplos GIF multimídia'
         },
@@ -1426,7 +1426,7 @@ export const pt: SamplePageTranslations = {
       },
       apng: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo APNG Grátis - Arquivos de Teste Imagens PNG Animadas | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo APNG Grátis - Arquivos de Teste Imagens PNG Animadas | FomiPeek',
           description: 'Baixe arquivos de exemplo APNG Animated Portable Network Graphics grátis para testar reprodução de animações APNG, visualizadores de imagens, navegadores web e ferramentas de imagens modernas. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar visualizadores APNG, reprodutores de animação, ferramentas de processamento de imagens, plataformas de desenvolvimento web e aplicativos multimídia modernos.',
           keywords: 'arquivos de exemplo APNG, arquivos de teste APNG, baixar exemplos APNG, arquivos de teste APNG grátis, arquivos Animated PNG, arquivos animação APNG, arquivos de teste reprodutor APNG, arquivos animação, arquivos de teste animação web, exemplos formato imagem moderno'
         },
@@ -1442,7 +1442,7 @@ export const pt: SamplePageTranslations = {
       },
       avif: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo AVIF Grátis - Arquivos de Teste Formato Imagem AV1 | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo AVIF Grátis - Arquivos de Teste Formato Imagem AV1 | FomiPeek',
           description: 'Baixe arquivos de exemplo AVIF AV1 Image File Format grátis para testar compressão de imagens moderna, visualizadores AVIF, navegadores web e ferramentas de imagens de próxima geração. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar visualizadores AVIF, ferramentas de processamento de imagens, plataformas de desenvolvimento web, suporte formato imagem moderno e aplicativos multimídia de próxima geração.',
           keywords: 'arquivos de exemplo AVIF, arquivos de teste AVIF, baixar exemplos AVIF, arquivos de teste AVIF grátis, arquivos AV1 Image File Format, arquivos imagens AVIF, arquivos de teste visualizador AVIF, arquivos imagens modernas, arquivos de teste formato imagem web, exemplos formato imagem próxima geração'
         },
@@ -1458,7 +1458,7 @@ export const pt: SamplePageTranslations = {
       },
       bmp: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo BMP Grátis - Arquivos de Teste Imagens Bitmap | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo BMP Grátis - Arquivos de Teste Imagens Bitmap | FomiPeek',
           description: 'Baixe arquivos de exemplo BMP bitmap grátis para testar visualizadores de imagens, conversores BMP, softwares gráficos e ferramentas de processamento de imagens. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar visualizadores BMP, editores de imagens, ferramentas de conversão gráfica, plataformas de processamento de imagens e suporte formato bitmap.',
           keywords: 'arquivos de exemplo BMP, arquivos de teste BMP, baixar exemplos BMP, arquivos de teste BMP grátis, arquivos imagens bitmap, arquivos formato BMP, arquivos de teste visualizador imagens, arquivos gráficos, arquivos de teste conversão imagens, exemplos formato bitmap'
         },
@@ -1474,7 +1474,7 @@ export const pt: SamplePageTranslations = {
       },
       'barcode-svg': {
         meta: {
-          title: 'Baixar Arquivos de Exemplo Código de Barras SVG Grátis - Arquivos de Teste Códigos de Barras Vetoriais Escaláveis | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo Código de Barras SVG Grátis - Arquivos de Teste Códigos de Barras Vetoriais Escaláveis | FomiPeek',
           description: 'Baixe arquivos de exemplo código de barras SVG grátis para testar geração de códigos de barras, leitores de códigos de barras SVG, ferramentas de gráficos vetoriais e aplicativos de escaneamento de códigos de barras. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar geradores de códigos de barras, visualizadores SVG, ferramentas de escaneamento de códigos de barras, plataformas de gráficos vetoriais e softwares de reconhecimento de códigos de barras.',
           keywords: 'arquivos de exemplo código de barras SVG, arquivos de teste código de barras SVG, baixar exemplos código de barras SVG, arquivos de teste código de barras SVG grátis, arquivos códigos de barras SVG, arquivos códigos de barras vetoriais, arquivos de teste gerador código de barras, arquivos SVG, arquivos de teste escaneamento código de barras, exemplos gráficos vetoriais'
         },
@@ -1490,7 +1490,7 @@ export const pt: SamplePageTranslations = {
       },
       avi: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo AVI Grátis - Arquivos de Teste Vídeo Audio Video Interleave | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo AVI Grátis - Arquivos de Teste Vídeo Audio Video Interleave | FomiPeek',
           description: 'Baixe arquivos de exemplo AVI Audio Video Interleave grátis para testar reprodutores de vídeo, conversores AVI, softwares multimídia e ferramentas de processamento de vídeo. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar reprodutores AVI, editores de vídeo, ferramentas de conversão multimídia, plataformas de processamento de vídeo e suporte formato vídeo.',
           keywords: 'arquivos de exemplo AVI, arquivos de teste AVI, baixar exemplos AVI, arquivos de teste AVI grátis, arquivos Audio Video Interleave, arquivos vídeo AVI, arquivos de teste reprodutor vídeo, arquivos multimídia, arquivos de teste conversão vídeo, exemplos formato vídeo'
         },
@@ -1506,7 +1506,7 @@ export const pt: SamplePageTranslations = {
       },
       '3gp': {
         meta: {
-          title: 'Baixar Arquivos de Exemplo 3GP Grátis - Arquivos de Teste Vídeo Mobile 3GPP | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo 3GP Grátis - Arquivos de Teste Vídeo Mobile 3GPP | FomiPeek',
           description: 'Baixe arquivos de exemplo 3GP vídeo mobile 3GPP grátis para testar reprodutores de vídeo móveis, conversores 3GP, softwares multimídia e ferramentas de processamento de vídeo móvel. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar reprodutores 3GP, editores de vídeo móveis, ferramentas de conversão de vídeo, plataformas multimídia móveis e suporte formato vídeo móvel.',
           keywords: 'arquivos de exemplo 3GP, arquivos de teste 3GP, baixar exemplos 3GP, arquivos de teste 3GP grátis, arquivos vídeo mobile 3GPP, arquivos vídeo 3GP, arquivos de teste reprodutor vídeo móvel, arquivos multimídia, arquivos de teste conversão vídeo móvel, exemplos formato vídeo móvel'
         },
@@ -1522,7 +1522,7 @@ export const pt: SamplePageTranslations = {
       },
       dav: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo DAV Grátis - Arquivos de Teste Vídeo DAV para Câmeras de Segurança | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo DAV Grátis - Arquivos de Teste Vídeo DAV para Câmeras de Segurança | FomiPeek',
           description: 'Baixe arquivos de exemplo DAV grátis para testar reprodutores de vídeo DAV, processamento de vídeo de câmeras de segurança, conversores DAV e ferramentas de análise de vídeo de vigilância. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar reprodução DAV, conversores DAV para MP4, softwares de câmeras de segurança, ferramentas de vigilância de vídeo e compatibilidade formato DAV.',
           keywords: 'arquivos de exemplo DAV, arquivos de teste DAV, baixar exemplos DAV, arquivos de teste DAV grátis, arquivos vídeo DAV, arquivos vídeo câmeras segurança, conversor DAV para MP4, teste reprodutor DAV, exemplos vídeo vigilância, arquivos de teste formato DAV, arquivos de teste vigilância vídeo'
         },
@@ -1538,7 +1538,7 @@ export const pt: SamplePageTranslations = {
       },
       dds: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo DDS Grátis - Arquivos de Teste Texturas DirectDraw Surface | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo DDS Grátis - Arquivos de Teste Texturas DirectDraw Surface | FomiPeek',
           description: 'Baixe arquivos de exemplo DDS DirectDraw Surface grátis para testar conversão de imagens de textura, visualização DDS, ferramentas de desenvolvimento de jogos e softwares de processamento de gráficos. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar carregamento de texturas DDS, conversores DDS para PNG, compatibilidade de motores de jogos, ferramentas de compressão de texturas e suporte formato DirectDraw Surface.',
           keywords: 'arquivos de exemplo DDS, arquivos de teste DDS, baixar exemplos DDS, arquivos de teste DDS grátis, arquivos DirectDraw Surface, arquivos textura DDS, conversor DDS para PNG, exemplos imagens textura, arquivos de teste desenvolvimento jogos, teste formato DDS, exemplos texturas gráficos'
         },
@@ -1554,7 +1554,7 @@ export const pt: SamplePageTranslations = {
       },
       dng: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo DNG Grátis - Arquivos de Teste Imagens Raw Digital Negative | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo DNG Grátis - Arquivos de Teste Imagens Raw Digital Negative | FomiPeek',
           description: 'Baixe arquivos de exemplo DNG Digital Negative de imagens raw grátis para testar processamento de imagens raw, conversão DNG, softwares fotográficos e ferramentas de edição de imagens profissionais. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores DNG para JPEG, editores de imagens raw, visualização DNG, processamento raw de câmera e suporte formato Adobe Digital Negative.',
           keywords: 'arquivos de exemplo DNG, arquivos de teste DNG, baixar exemplos DNG, arquivos de teste DNG grátis, arquivos Digital Negative, arquivos imagens raw DNG, conversor DNG para JPEG, processamento imagens raw, arquivos de teste fotografia, teste formato DNG, exemplos raw câmera, arquivos de teste Adobe DNG'
         },
@@ -1570,7 +1570,7 @@ export const pt: SamplePageTranslations = {
       },
       eps: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo EPS Grátis - Arquivos de Teste Gráficos Vetoriais Encapsulated PostScript | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo EPS Grátis - Arquivos de Teste Gráficos Vetoriais Encapsulated PostScript | FomiPeek',
           description: 'Baixe arquivos de exemplo EPS Encapsulated PostScript grátis para testar conversão de gráficos vetoriais, visualização EPS, processamento PostScript e softwares de design profissionais. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores EPS para PDF, conversores EPS para SVG, editores de gráficos vetoriais, visualizadores PostScript e compatibilidade formato Encapsulated PostScript.',
           keywords: 'arquivos de exemplo EPS, arquivos de teste EPS, baixar exemplos EPS, arquivos de teste EPS grátis, arquivos Encapsulated PostScript, gráficos vetoriais EPS, conversor EPS para PDF, conversor EPS para SVG, exemplos gráficos vetoriais, arquivos de teste PostScript, arquivos de teste softwares design, teste formato EPS'
         },
@@ -1586,7 +1586,7 @@ export const pt: SamplePageTranslations = {
       },
       exr: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo EXR Grátis - Arquivos de Teste Imagens High Dynamic Range OpenEXR | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo EXR Grátis - Arquivos de Teste Imagens High Dynamic Range OpenEXR | FomiPeek',
           description: 'Baixe arquivos de exemplo EXR OpenEXR de imagens High Dynamic Range grátis para testar processamento de imagens HDR, conversão EXR, softwares fotográficos profissionais e ferramentas de efeitos visuais. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores EXR para JPEG, editores de imagens HDR, visualização EXR, processamento High Dynamic Range e suporte formato OpenEXR.',
           keywords: 'arquivos de exemplo EXR, arquivos de teste EXR, baixar exemplos EXR, arquivos de teste EXR grátis, arquivos OpenEXR, imagens HDR EXR, conversor EXR para JPEG, processamento imagens HDR, exemplos High Dynamic Range, arquivos de teste efeitos visuais, teste formato EXR, arquivos de teste fotografia profissional'
         },
@@ -1602,7 +1602,7 @@ export const pt: SamplePageTranslations = {
       },
       hdr: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo HDR Grátis - Arquivos de Teste Imagens High Dynamic Range | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo HDR Grátis - Arquivos de Teste Imagens High Dynamic Range | FomiPeek',
           description: 'Baixe arquivos de exemplo HDR de imagens High Dynamic Range grátis para testar processamento de imagens HDR, conversão HDR, softwares fotográficos e ferramentas de edição de imagens. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores HDR para JPEG, editores de imagens HDR, visualização HDR, ferramentas de mapeamento de tons e suporte formato High Dynamic Range.',
           keywords: 'arquivos de exemplo HDR, arquivos de teste HDR, baixar exemplos HDR, arquivos de teste HDR grátis, arquivos High Dynamic Range, imagens HDR, conversor HDR para JPEG, processamento imagens HDR, arquivos de teste mapeamento tons, arquivos de teste fotografia, teste formato HDR, exemplos High Dynamic Range'
         },
@@ -1618,7 +1618,7 @@ export const pt: SamplePageTranslations = {
       },
       heic: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo HEIC Grátis - Arquivos de Teste High Efficiency Image Container | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo HEIC Grátis - Arquivos de Teste High Efficiency Image Container | FomiPeek',
           description: 'Baixe arquivos de exemplo HEIC High Efficiency Image Container grátis para testar conversão de imagens HEIC, visualização HEIC, processamento de formatos de imagem modernos e ferramentas de fotografia móvel. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores HEIC para JPEG, conversores HEIC para PNG, processamento de imagens iOS, softwares de visualização HEIC e suporte formato High Efficiency Image Container.',
           keywords: 'arquivos de exemplo HEIC, arquivos de teste HEIC, baixar exemplos HEIC, arquivos de teste HEIC grátis, arquivos High Efficiency Image Container, imagens HEIC, conversor HEIC para JPEG, conversor HEIC para PNG, exemplos imagens iOS, arquivos de teste fotografia móvel, teste formato HEIC, exemplos formatos imagem modernos'
         },
@@ -1634,7 +1634,7 @@ export const pt: SamplePageTranslations = {
       },
       heif: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo HEIF Grátis - Arquivos de Teste High Efficiency Image Format | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo HEIF Grátis - Arquivos de Teste High Efficiency Image Format | FomiPeek',
           description: 'Baixe arquivos de exemplo HEIF High Efficiency Image Format grátis para testar conversão de imagens HEIF, visualização HEIF, processamento de formatos de imagem modernos e ferramentas de fotografia móvel. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores HEIF para JPEG, conversores HEIF para PNG, processamento de imagens móveis, softwares de visualização HEIF e suporte formato High Efficiency Image Format.',
           keywords: 'arquivos de exemplo HEIF, arquivos de teste HEIF, baixar exemplos HEIF, arquivos de teste HEIF grátis, arquivos High Efficiency Image Format, imagens HEIF, conversor HEIF para JPEG, conversor HEIF para PNG, exemplos imagens móveis, arquivos de teste formatos imagem modernos, teste formato HEIF, arquivos de teste compressão imagens'
         },
@@ -1650,7 +1650,7 @@ export const pt: SamplePageTranslations = {
       },
       icns: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo ICNS Grátis - Arquivos de Teste Ícones macOS | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo ICNS Grátis - Arquivos de Teste Ícones macOS | FomiPeek',
           description: 'Baixe arquivos de exemplo ICNS de ícones macOS grátis para testar conversão de ícones macOS, visualização ICNS, ferramentas de design de ícones e desenvolvimento de aplicações macOS. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores ICNS para PNG, conversores ICNS para ICO, editores de ícones macOS, softwares de design de ícones e suporte formato ícones macOS.',
           keywords: 'arquivos de exemplo ICNS, arquivos de teste ICNS, baixar exemplos ICNS, arquivos de teste ICNS grátis, arquivos ícones macOS, ícones ICNS, conversor ICNS para PNG, conversor ICNS para ICO, design ícones macOS, arquivos de teste editor ícones, teste formato ICNS, exemplos ícones Apple'
         },
@@ -1666,7 +1666,7 @@ export const pt: SamplePageTranslations = {
       },
       ico: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo ICO Grátis - Arquivos de Teste Ícones Windows | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo ICO Grátis - Arquivos de Teste Ícones Windows | FomiPeek',
           description: 'Baixe arquivos de exemplo ICO de ícones Windows grátis para testar conversão de ícones Windows, visualização ICO, ferramentas de design de ícones e desenvolvimento de aplicações Windows. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores ICO para PNG, conversores ICO para ICNS, editores de ícones Windows, softwares de design de ícones e suporte formato ícones Windows.',
           keywords: 'arquivos de exemplo ICO, arquivos de teste ICO, baixar exemplos ICO, arquivos de teste ICO grátis, arquivos ícones Windows, ícones ICO, conversor ICO para PNG, conversor ICO para ICNS, design ícones Windows, arquivos de teste editor ícones, teste formato ICO, exemplos ícones Windows'
         },
@@ -1682,7 +1682,7 @@ export const pt: SamplePageTranslations = {
       },
       jpeg: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo JPEG Grátis - Arquivos de Teste Imagens JPEG para Ferramentas de Conversão | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo JPEG Grátis - Arquivos de Teste Imagens JPEG para Ferramentas de Conversão | FomiPeek',
           description: 'Baixe arquivos de exemplo JPEG grátis para testar conversão de imagens JPEG, compressão JPEG, ferramentas de processamento de imagens e softwares de edição de fotos. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores JPEG para PNG, conversores JPEG para PDF, ferramentas de compressão de imagens, otimização JPEG e suporte formato Joint Photographic Experts Group.',
           keywords: 'arquivos de exemplo JPEG, arquivos de teste JPEG, baixar exemplos JPEG, arquivos de teste JPEG grátis, arquivos imagens JPEG, conversor JPEG para PNG, conversor JPEG para PDF, arquivos de teste compressão imagens, arquivos de teste edição fotos, teste formato JPEG, exemplos processamento imagens'
         },
@@ -1698,7 +1698,7 @@ export const pt: SamplePageTranslations = {
       },
       jpg: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo JPG Grátis - Arquivos de Teste Imagens JPG para Ferramentas de Conversão | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo JPG Grátis - Arquivos de Teste Imagens JPG para Ferramentas de Conversão | FomiPeek',
           description: 'Baixe arquivos de exemplo JPG grátis para testar conversão de imagens JPG, compressão JPG, ferramentas de processamento de imagens e softwares de edição de fotos. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores JPG para PNG, conversores JPG para PDF, ferramentas de compressão de imagens, otimização JPG e suporte formato Joint Photographic Experts Group.',
           keywords: 'arquivos de exemplo JPG, arquivos de teste JPG, baixar exemplos JPG, arquivos de teste JPG grátis, arquivos imagens JPG, conversor JPG para PNG, conversor JPG para PDF, arquivos de teste compressão imagens, arquivos de teste edição fotos, teste formato JPG, exemplos processamento imagens'
         },
@@ -1714,7 +1714,7 @@ export const pt: SamplePageTranslations = {
       },
       m4v: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo M4V Grátis - Arquivos de Teste Vídeo M4V para Ferramentas de Conversão | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo M4V Grátis - Arquivos de Teste Vídeo M4V para Ferramentas de Conversão | FomiPeek',
           description: 'Baixe arquivos de exemplo M4V grátis para testar conversão de vídeo M4V, reprodução M4V, ferramentas de processamento de vídeo e softwares multimídia. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores M4V para MP4, conversores M4V para AVI, reprodutores de vídeo, compatibilidade de reprodução M4V e suporte formato vídeo MPEG-4.',
           keywords: 'arquivos de exemplo M4V, arquivos de teste M4V, baixar exemplos M4V, arquivos de teste M4V grátis, arquivos vídeo M4V, conversor M4V para MP4, conversor M4V para AVI, arquivos de teste reprodutor vídeo, teste reprodução M4V, exemplos conversão vídeo, teste formato vídeo MPEG-4'
         },
@@ -1730,7 +1730,7 @@ export const pt: SamplePageTranslations = {
       },
       mkv: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo MKV Grátis - Arquivos de Teste Vídeo Matroska para Ferramentas de Conversão | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo MKV Grátis - Arquivos de Teste Vídeo Matroska para Ferramentas de Conversão | FomiPeek',
           description: 'Baixe arquivos de exemplo MKV Matroska grátis para testar conversão de vídeo MKV, reprodução MKV, ferramentas de processamento de vídeo e softwares multimídia. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores MKV para MP4, conversores MKV para AVI, reprodutores de vídeo, compatibilidade de reprodução MKV e suporte formato vídeo Matroska.',
           keywords: 'arquivos de exemplo MKV, arquivos de teste MKV, baixar exemplos MKV, arquivos de teste MKV grátis, arquivos vídeo Matroska, conversor MKV para MP4, conversor MKV para AVI, arquivos de teste reprodutor vídeo, teste reprodução MKV, exemplos conversão vídeo, teste formato Matroska'
         },
@@ -1746,7 +1746,7 @@ export const pt: SamplePageTranslations = {
       },
       aac: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo AAC Grátis - Arquivos de Teste Advanced Audio Coding | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo AAC Grátis - Arquivos de Teste Advanced Audio Coding | FomiPeek',
           description: 'Baixe arquivos de exemplo AAC Advanced Audio Coding grátis para testar conversão de áudio, reprodução AAC, ferramentas de processamento de áudio e softwares multimídia. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores AAC para MP3, conversores AAC para WAV, reprodutores de áudio, compatibilidade de reprodução AAC e suporte formato Advanced Audio Coding.',
           keywords: 'arquivos de exemplo AAC, arquivos de teste AAC, baixar exemplos AAC, arquivos de teste AAC grátis, arquivos Advanced Audio Coding, conversor AAC para MP3, conversor AAC para WAV, arquivos de teste reprodutor áudio, teste reprodução AAC, exemplos conversão áudio, teste formato Advanced Audio Coding'
         },
@@ -1762,7 +1762,7 @@ export const pt: SamplePageTranslations = {
       },
       ac3: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo AC3 Grátis - Arquivos de Teste Áudio Dolby Digital | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo AC3 Grátis - Arquivos de Teste Áudio Dolby Digital | FomiPeek',
           description: 'Baixe arquivos de exemplo AC3 Dolby Digital grátis para testar conversão de áudio, reprodução AC3, ferramentas de processamento de áudio e softwares multimídia. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores AC3 para MP3, conversores AC3 para WAV, reprodutores de áudio, compatibilidade de reprodução AC3 e suporte formato Dolby Digital.',
           keywords: 'arquivos de exemplo AC3, arquivos de teste AC3, baixar exemplos AC3, arquivos de teste AC3 grátis, arquivos Dolby Digital, conversor AC3 para MP3, conversor AC3 para WAV, arquivos de teste reprodutor áudio, teste reprodução AC3, exemplos conversão áudio, teste formato Dolby Digital'
         },
@@ -1778,7 +1778,7 @@ export const pt: SamplePageTranslations = {
       },
       aif: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo AIF Grátis - Arquivos de Teste Audio Interchange File Format | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo AIF Grátis - Arquivos de Teste Audio Interchange File Format | FomiPeek',
           description: 'Baixe arquivos de exemplo AIF Audio Interchange File Format grátis para testar conversão de áudio, reprodução AIF, ferramentas de processamento de áudio e softwares multimídia. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores AIF para MP3, conversores AIF para WAV, reprodutores de áudio, compatibilidade de reprodução AIF e suporte formato Audio Interchange File Format.',
           keywords: 'arquivos de exemplo AIF, arquivos de teste AIF, baixar exemplos AIF, arquivos de teste AIF grátis, arquivos Audio Interchange File Format, conversor AIF para MP3, conversor AIF para WAV, arquivos de teste reprodutor áudio, teste reprodução AIF, exemplos conversão áudio, teste formato Audio Interchange File Format'
         },
@@ -1794,7 +1794,7 @@ export const pt: SamplePageTranslations = {
       },
       aiff: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo AIFF Grátis - Arquivos de Teste Audio Interchange File Format | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo AIFF Grátis - Arquivos de Teste Audio Interchange File Format | FomiPeek',
           description: 'Baixe arquivos de exemplo AIFF Audio Interchange File Format grátis para testar conversão de áudio, reprodução AIFF, ferramentas de processamento de áudio e softwares multimídia. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores AIFF para MP3, conversores AIFF para WAV, reprodutores de áudio, compatibilidade de reprodução AIFF e suporte formato Audio Interchange File Format.',
           keywords: 'arquivos de exemplo AIFF, arquivos de teste AIFF, baixar exemplos AIFF, arquivos de teste AIFF grátis, arquivos Audio Interchange File Format, conversor AIFF para MP3, conversor AIFF para WAV, arquivos de teste reprodutor áudio, teste reprodução AIFF, exemplos conversão áudio, teste formato Audio Interchange File Format'
         },
@@ -1810,7 +1810,7 @@ export const pt: SamplePageTranslations = {
       },
       amr: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo AMR Grátis - Arquivos de Teste Adaptive Multi-Rate Audio | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo AMR Grátis - Arquivos de Teste Adaptive Multi-Rate Audio | FomiPeek',
           description: 'Baixe arquivos de exemplo AMR Adaptive Multi-Rate grátis para testar conversão de áudio, reprodução AMR, ferramentas de processamento de áudio e softwares multimídia móveis. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores AMR para MP3, conversores AMR para WAV, reprodutores de áudio, compatibilidade de reprodução AMR e suporte formato Adaptive Multi-Rate.',
           keywords: 'arquivos de exemplo AMR, arquivos de teste AMR, baixar exemplos AMR, arquivos de teste AMR grátis, arquivos Adaptive Multi-Rate, conversor AMR para MP3, conversor AMR para WAV, arquivos de teste reprodutor áudio, teste reprodução AMR, exemplos conversão áudio, teste formato Adaptive Multi-Rate'
         },
@@ -1826,7 +1826,7 @@ export const pt: SamplePageTranslations = {
       },
       caf: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo CAF Grátis - Arquivos de Teste Core Audio Format | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo CAF Grátis - Arquivos de Teste Core Audio Format | FomiPeek',
           description: 'Baixe arquivos de exemplo CAF Core Audio Format grátis para testar conversão de áudio, reprodução CAF, ferramentas de processamento de áudio e softwares multimídia macOS. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores CAF para MP3, conversores CAF para WAV, reprodutores de áudio, compatibilidade de reprodução CAF e suporte formato Core Audio Format.',
           keywords: 'arquivos de exemplo CAF, arquivos de teste CAF, baixar exemplos CAF, arquivos de teste CAF grátis, arquivos Core Audio Format, conversor CAF para MP3, conversor CAF para WAV, arquivos de teste reprodutor áudio, teste reprodução CAF, exemplos conversão áudio, teste formato Core Audio Format'
         },
@@ -1842,7 +1842,7 @@ export const pt: SamplePageTranslations = {
       },
       cue: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo CUE Gratuitos - Arquivos de Teste CUE Sheet para Gravação de CD de Áudio | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo CUE Gratuitos - Arquivos de Teste CUE Sheet para Gravação de CD de Áudio | FomiPeek',
           description: 'Baixe arquivos de exemplo CUE CUE sheet gratuitos para testar ferramentas de gravação de CD de áudio e análise de CUE sheet. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar análise de CUE sheet, software de gravação de CD de áudio, validação de arquivos CUE e ferramentas de autoria de CD.',
           keywords: 'arquivos de exemplo CUE, arquivos de teste CUE, baixar exemplos CUE, arquivos de teste CUE gratuitos, arquivos CUE sheet, teste de gravação de CD de áudio, analisador de CUE sheet, arquivos de teste de autoria de CD, validação de arquivos CUE, teste de imagem de disco de áudio'
         },
@@ -1858,7 +1858,7 @@ export const pt: SamplePageTranslations = {
       },
       m4a: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo M4A Gratuitos - Arquivos de Teste M4A Audio para Ferramentas de Conversão | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo M4A Gratuitos - Arquivos de Teste M4A Audio para Ferramentas de Conversão | FomiPeek',
           description: 'Baixe arquivos de exemplo M4A M4A audio gratuitos para testar conversão de áudio M4A, reprodução M4A, ferramentas de processamento de áudio e software multimídia. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores M4A para MP3, conversores M4A para WAV, players de áudio, compatibilidade de reprodução M4A e suporte de formato de áudio MPEG-4.',
           keywords: 'arquivos de exemplo M4A, arquivos de teste M4A, baixar exemplos M4A, arquivos de teste M4A gratuitos, arquivos de áudio M4A, conversor M4A para MP3, conversor M4A para WAV, arquivos de teste de player de áudio, teste de reprodução M4A, exemplos de conversão de áudio, teste de formato de áudio MPEG-4'
         },
@@ -1874,7 +1874,7 @@ export const pt: SamplePageTranslations = {
       },
       midi: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo MIDI Gratuitos - Arquivos de Teste MIDI Music para Sequenciamento Musical | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo MIDI Gratuitos - Arquivos de Teste MIDI Music para Sequenciamento Musical | FomiPeek',
           description: 'Baixe arquivos de exemplo MIDI MIDI music gratuitos para testar reprodução MIDI, conversão MIDI, ferramentas de sequenciamento musical e estações de trabalho de áudio digital. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores MIDI para MP3, conversores MIDI para WAV, sequenciadores MIDI, software de produção musical e suporte de formato Musical Instrument Digital Interface.',
           keywords: 'arquivos de exemplo MIDI, arquivos de teste MIDI, baixar exemplos MIDI, arquivos de teste MIDI gratuitos, arquivos de música MIDI, conversor MIDI para MP3, conversor MIDI para WAV, teste de sequenciador MIDI, arquivos de teste de produção musical, teste de reprodução MIDI, exemplos de sequenciamento musical'
         },
@@ -1890,7 +1890,7 @@ export const pt: SamplePageTranslations = {
       },
       ace: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo ACE Gratuitos - Arquivos de Teste ACE Archive para Ferramentas de Extração | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo ACE Gratuitos - Arquivos de Teste ACE Archive para Ferramentas de Extração | FomiPeek',
           description: 'Baixe arquivos de exemplo ACE archive gratuitos para testar ferramentas de extração e compactação de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extração de arquivos ACE, descompactação de arquivos ACE, ferramentas de gerenciamento de arquivos e software de compactação de arquivos.',
           keywords: 'arquivos de exemplo ACE, arquivos de teste ACE, baixar exemplos ACE, arquivos de teste ACE gratuitos, arquivos archive ACE, teste de extração ACE, teste de descompactação ACE, arquivos de teste de gerenciamento de arquivos, exemplos de compactação de arquivos'
         },
@@ -1906,7 +1906,7 @@ export const pt: SamplePageTranslations = {
       },
       arj: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo ARJ Gratuitos - Arquivos de Teste ARJ Archive para Ferramentas de Extração | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo ARJ Gratuitos - Arquivos de Teste ARJ Archive para Ferramentas de Extração | FomiPeek',
           description: 'Baixe arquivos de exemplo ARJ archive gratuitos para testar ferramentas de extração e compactação de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extração de arquivos ARJ, descompactação de arquivos ARJ, ferramentas de gerenciamento de arquivos e software de compactação de arquivos.',
           keywords: 'arquivos de exemplo ARJ, arquivos de teste ARJ, baixar exemplos ARJ, arquivos de teste ARJ gratuitos, arquivos archive ARJ, teste de extração ARJ, teste de descompactação ARJ, arquivos de teste de gerenciamento de arquivos, exemplos de compactação de arquivos'
         },
@@ -1922,7 +1922,7 @@ export const pt: SamplePageTranslations = {
       },
       bz2: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo BZ2 Gratuitos - Arquivos de Teste BZ2 Compressed Archive | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo BZ2 Gratuitos - Arquivos de Teste BZ2 Compressed Archive | FomiPeek',
           description: 'Baixe arquivos de exemplo BZ2 bzip2 compressed archive gratuitos para testar ferramentas de descompactação e compactação de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar descompactação de arquivos BZ2, extração de arquivos BZ2, ferramentas de compactação bzip2 e software de gerenciamento de arquivos.',
           keywords: 'arquivos de exemplo BZ2, arquivos de teste BZ2, baixar exemplos BZ2, arquivos de teste BZ2 gratuitos, arquivos compactados BZ2, teste de descompactação BZ2, teste de compactação bzip2, arquivos de teste de extração de arquivos, exemplos de compactação de arquivos'
         },
@@ -1938,7 +1938,7 @@ export const pt: SamplePageTranslations = {
       },
       gz: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo GZ Gratuitos - Arquivos de Teste GZ Gzip Compressed Archive | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo GZ Gratuitos - Arquivos de Teste GZ Gzip Compressed Archive | FomiPeek',
           description: 'Baixe arquivos de exemplo GZ gzip compressed archive gratuitos para testar ferramentas de descompactação gzip, extração de arquivos e compactação de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar descompactação de arquivos GZ, extração de arquivos GZ, ferramentas de compactação gzip e software de gerenciamento de arquivos.',
           keywords: 'arquivos de exemplo GZ, arquivos de teste GZ, baixar exemplos GZ, arquivos de teste GZ gratuitos, arquivos compactados GZ, teste de descompactação GZ, teste de compactação gzip, arquivos de teste de extração de arquivos, exemplos de compactação de arquivos'
         },
@@ -1954,7 +1954,7 @@ export const pt: SamplePageTranslations = {
       },
       cab: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo CAB Gratuitos - Arquivos de Teste CAB Windows Cabinet Archive | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo CAB Gratuitos - Arquivos de Teste CAB Windows Cabinet Archive | FomiPeek',
           description: 'Baixe arquivos de exemplo CAB Windows cabinet archive gratuitos para testar ferramentas de extração e compactação de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extração de arquivos CAB, descompactação de arquivos CAB, ferramentas Windows cabinet archive e software de gerenciamento de arquivos.',
           keywords: 'arquivos de exemplo CAB, arquivos de teste CAB, baixar exemplos CAB, arquivos de teste CAB gratuitos, arquivos archive CAB, teste de extração CAB, teste Windows cabinet archive, arquivos de teste de gerenciamento de arquivos, exemplos de compactação de arquivos'
         },
@@ -1970,7 +1970,7 @@ export const pt: SamplePageTranslations = {
       },
       cpio: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo CPIO Gratuitos - Arquivos de Teste CPIO Archive para Ferramentas de Extração | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo CPIO Gratuitos - Arquivos de Teste CPIO Archive para Ferramentas de Extração | FomiPeek',
           description: 'Baixe arquivos de exemplo CPIO archive gratuitos para testar ferramentas de extração e compactação de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extração de arquivos CPIO, descompactação de arquivos CPIO, ferramentas de gerenciamento de arquivos e software de compactação de arquivos.',
           keywords: 'arquivos de exemplo CPIO, arquivos de teste CPIO, baixar exemplos CPIO, arquivos de teste CPIO gratuitos, arquivos archive CPIO, teste de extração CPIO, teste de descompactação CPIO, arquivos de teste de gerenciamento de arquivos, exemplos de compactação de arquivos'
         },
@@ -1986,7 +1986,7 @@ export const pt: SamplePageTranslations = {
       },
       zip: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo ZIP Gratuitos - Arquivos de Teste ZIP Archive para Ferramentas de Extração | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo ZIP Gratuitos - Arquivos de Teste ZIP Archive para Ferramentas de Extração | FomiPeek',
           description: 'Baixe arquivos de exemplo ZIP archive gratuitos para testar ferramentas de extração e compactação de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extração de arquivos ZIP, descompactação de arquivos ZIP, ferramentas de gerenciamento de arquivos e software de compactação de arquivos.',
           keywords: 'arquivos de exemplo ZIP, arquivos de teste ZIP, baixar exemplos ZIP, arquivos de teste ZIP gratuitos, arquivos archive ZIP, teste de extração ZIP, teste de descompactação ZIP, arquivos de teste de gerenciamento de arquivos, exemplos de compactação de arquivos'
         },
@@ -2002,7 +2002,7 @@ export const pt: SamplePageTranslations = {
       },
       dmg: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo DMG Gratuitos - Arquivos de Teste DMG macOS Disk Image | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo DMG Gratuitos - Arquivos de Teste DMG macOS Disk Image | FomiPeek',
           description: 'Baixe arquivos de exemplo DMG macOS disk image gratuitos para testar ferramentas de montagem de disk image e extração DMG. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar montagem de disk image DMG, extração de arquivos DMG, ferramentas disk image macOS e software de processamento de disk image.',
           keywords: 'arquivos de exemplo DMG, arquivos de teste DMG, baixar exemplos DMG, arquivos de teste DMG gratuitos, arquivos disk image DMG, teste de montagem DMG, teste disk image macOS, arquivos de teste de extração de disk image, exemplos de processamento de disk image'
         },
@@ -2018,7 +2018,7 @@ export const pt: SamplePageTranslations = {
       },
       img: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo IMG Gratuitos - Arquivos de Teste IMG Disk Image | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo IMG Gratuitos - Arquivos de Teste IMG Disk Image | FomiPeek',
           description: 'Baixe arquivos de exemplo IMG disk image gratuitos para testar ferramentas de montagem de disk image, extração IMG e processamento de disk image. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar montagem de disk image IMG, extração de arquivos IMG, ferramentas disk image e software de processamento de disk image.',
           keywords: 'arquivos de exemplo IMG, arquivos de teste IMG, baixar exemplos IMG, arquivos de teste IMG gratuitos, arquivos disk image IMG, teste de montagem IMG, teste de extração de disk image, arquivos de teste de processamento de disk image, exemplos de disk image'
         },
@@ -2034,7 +2034,7 @@ export const pt: SamplePageTranslations = {
       },
       iso: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo ISO Gratuitos - Arquivos de Teste ISO Disk Image | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo ISO Gratuitos - Arquivos de Teste ISO Disk Image | FomiPeek',
           description: 'Baixe arquivos de exemplo ISO ISO disk image gratuitos para testar ferramentas de montagem de disk image ISO, extração ISO e processamento de disk image. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar montagem de disk image ISO, extração de arquivos ISO, ferramentas disk image e software de processamento de disk image.',
           keywords: 'arquivos de exemplo ISO, arquivos de teste ISO, baixar exemplos ISO, arquivos de teste ISO gratuitos, arquivos disk image ISO, teste de montagem ISO, teste de extração ISO, arquivos de teste de processamento de disk image, exemplos de disk image'
         },
@@ -2050,7 +2050,7 @@ export const pt: SamplePageTranslations = {
       },
       kmz: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo KMZ Gratuitos - Arquivos de Teste KMZ Compressed KML | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo KMZ Gratuitos - Arquivos de Teste KMZ Compressed KML | FomiPeek',
           description: 'Baixe arquivos de exemplo KMZ compressed Keyhole Markup Language gratuitos para testar ferramentas de extração KMZ, processamento de dados geográficos e integração Google Earth. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extração de arquivos KMZ, conversão KMZ para KML, compatibilidade Google Earth, processamento de dados geográficos e software de mapeamento.',
           keywords: 'arquivos de exemplo KMZ, arquivos de teste KMZ, baixar exemplos KMZ, arquivos de teste KMZ gratuitos, arquivos compactados KMZ, teste de extração KMZ, arquivos de teste Google Earth, teste de processamento de dados geográficos, exemplos de software de mapeamento'
         },
@@ -2066,7 +2066,7 @@ export const pt: SamplePageTranslations = {
       },
       laz: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo LAZ Gratuitos - Arquivos de Teste LAZ Compressed LiDAR | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo LAZ Gratuitos - Arquivos de Teste LAZ Compressed LiDAR | FomiPeek',
           description: 'Baixe arquivos de exemplo LAZ compressed LiDAR point cloud data gratuitos para testar ferramentas de extração LAZ, processamento de point cloud e mapeamento 3D. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extração de arquivos LAZ, conversão LAZ para LAS, processamento de point cloud LiDAR, software de mapeamento 3D e ferramentas de análise de dados geográficos.',
           keywords: 'arquivos de exemplo LAZ, arquivos de teste LAZ, baixar exemplos LAZ, arquivos de teste LAZ gratuitos, arquivos compactados LAZ, teste de extração LAZ, teste point cloud LiDAR, arquivos de teste de mapeamento 3D, exemplos de análise de dados geográficos'
         },
@@ -2082,7 +2082,7 @@ export const pt: SamplePageTranslations = {
       },
       lha: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo LHA Gratuitos - Arquivos de Teste LHA Archive para Ferramentas de Extração | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo LHA Gratuitos - Arquivos de Teste LHA Archive para Ferramentas de Extração | FomiPeek',
           description: 'Baixe arquivos de exemplo LHA LHA archive gratuitos para testar ferramentas de extração LHA, descompactação de arquivos e arquivamento de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extração de arquivos LHA, descompactação de arquivos LHA, ferramentas de gerenciamento de arquivos e software de compactação de arquivos.',
           keywords: 'arquivos de exemplo LHA, arquivos de teste LHA, baixar exemplos LHA, arquivos de teste LHA gratuitos, arquivos archive LHA, teste de extração LHA, teste de descompactação LHA, arquivos de teste de gerenciamento de arquivos, exemplos de compactação de arquivos'
         },
@@ -2098,7 +2098,7 @@ export const pt: SamplePageTranslations = {
       },
       lzh: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo LZH Gratuitos - Arquivos de Teste LZH Archive para Ferramentas de Extração | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo LZH Gratuitos - Arquivos de Teste LZH Archive para Ferramentas de Extração | FomiPeek',
           description: 'Baixe arquivos de exemplo LZH LZH archive gratuitos para testar ferramentas de extração LZH, descompactação de arquivos e arquivamento de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extração de arquivos LZH, descompactação de arquivos LZH, ferramentas de gerenciamento de arquivos e software de compactação de arquivos.',
           keywords: 'arquivos de exemplo LZH, arquivos de teste LZH, baixar exemplos LZH, arquivos de teste LZH gratuitos, arquivos archive LZH, teste de extração LZH, teste de descompactação LZH, arquivos de teste de gerenciamento de arquivos, exemplos de compactação de arquivos'
         },
@@ -2114,7 +2114,7 @@ export const pt: SamplePageTranslations = {
       },
       lzma: {
         meta: {
-          title: 'Baixar Arquivos de Exemplo LZMA Gratuitos - Arquivos de Teste LZMA Compressed Archive | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo LZMA Gratuitos - Arquivos de Teste LZMA Compressed Archive | FomiPeek',
           description: 'Baixe arquivos de exemplo LZMA LZMA compressed gratuitos para testar ferramentas de descompactação LZMA, extração de arquivos e compactação de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar descompactação de arquivos LZMA, extração de arquivos LZMA, ferramentas de compactação LZMA e software de gerenciamento de arquivos.',
           keywords: 'arquivos de exemplo LZMA, arquivos de teste LZMA, baixar exemplos LZMA, arquivos de teste LZMA gratuitos, arquivos compactados LZMA, teste de descompactação LZMA, teste de compactação LZMA, arquivos de teste de extração de arquivos, exemplos de compactação de arquivos'
         },
@@ -2130,7 +2130,7 @@ export const pt: SamplePageTranslations = {
       },
       '7z': {
         meta: {
-          title: 'Baixar Arquivos de Exemplo 7Z Gratuitos - Arquivos de Teste 7Z Archive para Ferramentas de Extração | MorphyHub',
+          title: 'Baixar Arquivos de Exemplo 7Z Gratuitos - Arquivos de Teste 7Z Archive para Ferramentas de Extração | FomiPeek',
           description: 'Baixe arquivos de exemplo 7Z archive gratuitos para testar ferramentas de conversão e extração de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extração de arquivos 7Z, descompactação de arquivos 7Z, ferramentas de gerenciamento de arquivos e software de compactação de arquivos.',
           keywords: 'arquivos de exemplo 7Z, arquivos de teste 7Z, baixar exemplos 7Z, arquivos de teste 7Z gratuitos, arquivos archive 7Z, teste de extração 7Z, teste de descompactação 7Z, arquivos de teste de gerenciamento de arquivos, exemplos de compactação de arquivos'
         },

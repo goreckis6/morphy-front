@@ -273,12 +273,12 @@ export const SDDViewer: React.FC = () => {
         <title>{t('viewers.sdd.meta_title')}</title>
         <meta name="description" content={t('viewers.sdd.meta_description')} />
         <meta name="keywords" content={t('viewers.sdd.meta_keywords')} />
-        <meta property="og:title" content="Free SDD Viewer - View StarOffice Presentation Files Online | MorphyHub" />
+        <meta property="og:title" content="Free SDD Viewer - View StarOffice Presentation Files Online | FomiPeek" />
         <meta property="og:description" content="Free professional SDD (StarOffice Presentation) viewer. Upload and preview legacy StarOffice presentation files online." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://formipeek.com/viewers/sdd" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free SDD Viewer - View StarOffice Presentation Files Online | MorphyHub" />
+        <meta name="twitter:title" content="Free SDD Viewer - View StarOffice Presentation Files Online | FomiPeek" />
         <meta name="twitter:description" content="Free professional SDD viewer. Upload and preview StarOffice Presentation files online." />
         <script type="application/ld+json">
           {JSON.stringify({

@@ -1276,7 +1276,7 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
           <div className="flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-lg p-1 sm:p-1.5 border border-white/20">
             <img 
               src="/logo.png" 
-              alt="MorphyHub" 
+              alt="FomiPeek" 
               className="h-6 sm:h-8 w-auto object-contain"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
@@ -1286,7 +1286,7 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
               }}
             />
           </div>
-          <span className="font-bold text-sm sm:text-lg tracking-tight hidden sm:inline">MorphyHub</span>
+          <span className="font-bold text-sm sm:text-lg tracking-tight hidden sm:inline">FomiPeek</span>
         </div>
         <div className="flex items-center gap-2">
           <LanguageSwitcher />

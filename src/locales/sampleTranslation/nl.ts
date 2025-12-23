@@ -34,7 +34,7 @@ export const nl: SamplePageTranslations = {
     formats: {
       docx: {
         meta: {
-          title: 'Gratis DOCX voorbeeldbestanden downloaden - Testbestanden | MorphyHub',
+          title: 'Gratis DOCX voorbeeldbestanden downloaden - Testbestanden | FomiPeek',
           description: 'Download gratis DOCX voorbeeldbestanden voor testen. Meerdere bestandsformaten beschikbaar: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van documentconversie- en verwerkingstools.',
           keywords: 'DOCX voorbeeldbestanden, DOCX testbestanden, DOCX voorbeelden downloaden, gratis DOCX testbestanden, documentvoorbeelden, Microsoft Word voorbeelden'
         },
@@ -50,7 +50,7 @@ export const nl: SamplePageTranslations = {
       },
       doc: {
         meta: {
-          title: 'Gratis DOC voorbeeldbestanden downloaden - Microsoft Word DOC testbestanden | MorphyHub',
+          title: 'Gratis DOC voorbeeldbestanden downloaden - Microsoft Word DOC testbestanden | FomiPeek',
           description: 'Download gratis DOC voorbeeldbestanden om documentconversietools te testen. Meerdere bestandsformaten beschikbaar: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van DOC naar PDF, DOC naar DOCX converters en legacy Microsoft Word documentverwerking.',
           keywords: 'DOC voorbeeldbestanden, DOC testbestanden, DOC voorbeelden downloaden, gratis DOC testbestanden, Microsoft Word DOC voorbeelden, DOC naar PDF converter test, DOC naar DOCX conversie, legacy Word documentvoorbeelden, .doc testbestanden, documentconversievoorbeelden'
         },
@@ -66,7 +66,7 @@ export const nl: SamplePageTranslations = {
       },
       pdf: {
         meta: {
-          title: 'Gratis PDF voorbeeldbestanden downloaden - PDF testbestanden voor conversietools | MorphyHub',
+          title: 'Gratis PDF voorbeeldbestanden downloaden - PDF testbestanden voor conversietools | FomiPeek',
           description: 'Download gratis PDF voorbeeldbestanden om PDF converters, viewers en processors te testen. Meerdere bestandsformaten beschikbaar: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van PDF naar Word, PDF naar JPG, PDF compressie en PDF bewerkingstools.',
           keywords: 'PDF voorbeeldbestanden, PDF testbestanden, PDF voorbeelden downloaden, gratis PDF testbestanden, PDF converter testbestanden, PDF naar Word voorbeelden, PDF naar JPG voorbeelden, PDF compressie test, PDF viewer testbestanden, .pdf testbestanden, documentconversievoorbeelden'
         },
@@ -82,7 +82,7 @@ export const nl: SamplePageTranslations = {
       },
       odp: {
         meta: {
-          title: 'Gratis ODP voorbeeldbestanden downloaden - OpenDocument presentatie testbestanden | MorphyHub',
+          title: 'Gratis ODP voorbeeldbestanden downloaden - OpenDocument presentatie testbestanden | FomiPeek',
           description: 'Download gratis ODP voorbeeldbestanden om presentatieconversietools te testen. Meerdere bestandsformaten beschikbaar: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van ODP naar PPT, ODP naar PDF converters, LibreOffice Impress bestanden en OpenDocument formaatverwerking.',
           keywords: 'ODP voorbeeldbestanden, ODP testbestanden, ODP voorbeelden downloaden, gratis ODP testbestanden, OpenDocument presentatievoorbeelden, ODP naar PPT converter, ODP naar PDF converter, LibreOffice Impress voorbeelden, .odp testbestanden, presentatieconversievoorbeelden, OpenDocument formaat test'
         },
@@ -98,7 +98,7 @@ export const nl: SamplePageTranslations = {
       },
       rtf: {
         meta: {
-          title: 'Gratis RTF voorbeeldbestanden downloaden - Rich Text Format testbestanden | MorphyHub',
+          title: 'Gratis RTF voorbeeldbestanden downloaden - Rich Text Format testbestanden | FomiPeek',
           description: 'Download gratis RTF voorbeeldbestanden om Rich Text Format conversietools te testen. Meerdere bestandsformaten beschikbaar: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van RTF naar DOC, RTF naar PDF converters, tekstverwerker compatibiliteit en documentformaatconversie.',
           keywords: 'RTF voorbeeldbestanden, RTF testbestanden, RTF voorbeelden downloaden, gratis RTF testbestanden, Rich Text Format voorbeelden, RTF naar DOC converter, RTF naar PDF converter, .rtf testbestanden, tekstverwerker testbestanden, documentformaatconversievoorbeelden'
         },
@@ -114,7 +114,7 @@ export const nl: SamplePageTranslations = {
       },
       epub: {
         meta: {
-          title: 'Gratis EPUB voorbeeldbestanden downloaden - eBook testbestanden voor lezers | MorphyHub',
+          title: 'Gratis EPUB voorbeeldbestanden downloaden - eBook testbestanden voor lezers | FomiPeek',
           description: 'Download gratis EPUB voorbeeldbestanden om eBook lezers en conversietools te testen. Meerdere bestandsformaten beschikbaar: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van EPUB lezers, EPUB naar PDF, EPUB naar MOBI converters, digitale publicatietools en eBook formaatcompatibiliteit.',
           keywords: 'EPUB voorbeeldbestanden, EPUB testbestanden, EPUB voorbeelden downloaden, gratis EPUB testbestanden, eBook voorbeelden, EPUB lezer test, EPUB naar PDF converter, EPUB naar MOBI converter, .epub testbestanden, digitale publicatievoorbeelden, eBook formaat testbestanden'
         },
@@ -130,7 +130,7 @@ export const nl: SamplePageTranslations = {
       },
       'invoice-pdf': {
         meta: {
-          title: 'Gratis factuur PDF voorbeeldbestanden downloaden - Factuurdocument testbestanden | MorphyHub',
+          title: 'Gratis factuur PDF voorbeeldbestanden downloaden - Factuurdocument testbestanden | FomiPeek',
           description: 'Download gratis factuur PDF voorbeeldbestanden om factuurverwerking en parsing tools te testen. Meerdere bestandsformaten beschikbaar: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van factuur OCR, factuurdata extractie, factuur automatisering, factuur PDF parsing en documentbeheersystemen.',
           keywords: 'factuur PDF voorbeeldbestanden, factuur PDF testbestanden, factuur PDF voorbeelden downloaden, gratis factuur PDF testbestanden, factuurdocumentvoorbeelden, factuur OCR test, factuurdata extractie, factuur automatisering test, factuur PDF parsing, factuurverwerkingsvoorbeelden, documentbeheer testbestanden'
         },
@@ -146,7 +146,7 @@ export const nl: SamplePageTranslations = {
       },
       mobi: {
         meta: {
-          title: 'Gratis MOBI voorbeeldbestanden downloaden - MOBI eBook testbestanden voor Kindle | MorphyHub',
+          title: 'Gratis MOBI voorbeeldbestanden downloaden - MOBI eBook testbestanden voor Kindle | FomiPeek',
           description: 'Download gratis MOBI voorbeeldbestanden om MOBI eBook lezers en conversietools te testen. Meerdere bestandsformaten beschikbaar: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Kindle compatibiliteit, MOBI naar EPUB, MOBI naar PDF converters, eBook formaatconversie en digitale leesapplicaties.',
           keywords: 'MOBI voorbeeldbestanden, MOBI testbestanden, MOBI voorbeelden downloaden, gratis MOBI testbestanden, MOBI eBook voorbeelden, Kindle testbestanden, MOBI naar EPUB converter, MOBI naar PDF converter, .mobi testbestanden, eBook conversievoorbeelden, digitale lezing testbestanden'
         },
@@ -162,7 +162,7 @@ export const nl: SamplePageTranslations = {
       },
       csv: {
         meta: {
-          title: 'Download gratis CSV voorbeeldbestanden - CSV testbestanden voor gegevensverwerking | MorphyHub',
+          title: 'Download gratis CSV voorbeeldbestanden - CSV testbestanden voor gegevensverwerking | FomiPeek',
           description: 'Download gratis CSV voorbeeldbestanden om gegevensverwerking en conversietools te testen. Meerdere bestandsformaten: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van CSV naar Excel, CSV naar JSON converters, gegevensimporttools, spreadsheetapplicaties en komma-gescheiden waarden verwerking.',
           keywords: 'CSV voorbeeldbestanden, CSV testbestanden, download CSV voorbeelden, gratis CSV testbestanden, CSV naar Excel converter, CSV naar JSON converter, komma-gescheiden waarden voorbeelden, gegevensverwerking testbestanden, spreadsheet import voorbeelden, .csv testbestanden, gegevensconversie voorbeelden'
         },
@@ -178,7 +178,7 @@ export const nl: SamplePageTranslations = {
       },
       xls: {
         meta: {
-          title: 'Download gratis XLS voorbeeldbestanden - Microsoft Excel XLS testbestanden | MorphyHub',
+          title: 'Download gratis XLS voorbeeldbestanden - Microsoft Excel XLS testbestanden | FomiPeek',
           description: 'Download gratis XLS voorbeeldbestanden om Excel conversie en gegevensverwerkingstools te testen. Meerdere bestandsformaten: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van XLS naar XLSX, XLS naar CSV, XLS naar PDF converters, Excel gegevensextractie en legacy spreadsheet verwerking.',
           keywords: 'XLS voorbeeldbestanden, XLS testbestanden, download XLS voorbeelden, gratis XLS testbestanden, Microsoft Excel XLS voorbeelden, XLS naar XLSX converter, XLS naar CSV converter, XLS naar PDF converter, Excel gegevensextractie, .xls testbestanden, spreadsheet conversie voorbeelden'
         },
@@ -194,7 +194,7 @@ export const nl: SamplePageTranslations = {
       },
       xlsx: {
         meta: {
-          title: 'Download gratis XLSX voorbeeldbestanden - Excel XLSX testbestanden voor conversietools | MorphyHub',
+          title: 'Download gratis XLSX voorbeeldbestanden - Excel XLSX testbestanden voor conversietools | FomiPeek',
           description: 'Download gratis XLSX voorbeeldbestanden om Excel conversie en gegevensverwerkingstools te testen. Meerdere bestandsformaten: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van XLSX naar CSV, XLSX naar PDF, XLSX naar JSON converters, Excel gegevensanalyse, spreadsheet automatisering en Office Open XML verwerking.',
           keywords: 'XLSX voorbeeldbestanden, XLSX testbestanden, download XLSX voorbeelden, gratis XLSX testbestanden, Excel XLSX voorbeelden, XLSX naar CSV converter, XLSX naar PDF converter, XLSX naar JSON converter, Excel gegevensanalyse, .xlsx testbestanden, spreadsheet automatisering voorbeelden, Office Open XML voorbeelden'
         },
@@ -210,7 +210,7 @@ export const nl: SamplePageTranslations = {
       },
       xml: {
         meta: {
-          title: 'Download gratis XML voorbeeldbestanden - XML testbestanden voor parsing en conversie | MorphyHub',
+          title: 'Download gratis XML voorbeeldbestanden - XML testbestanden voor parsing en conversie | FomiPeek',
           description: 'Download gratis XML voorbeeldbestanden om XML parsing, conversie en gegevensverwerkingstools te testen. Meerdere bestandsformaten: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van XML naar JSON, XML naar CSV converters, XML validatie, gestructureerde gegevensverwerking en markup taal parsing.',
           keywords: 'XML voorbeeldbestanden, XML testbestanden, download XML voorbeelden, gratis XML testbestanden, XML naar JSON converter, XML naar CSV converter, XML validatietest, Extensible Markup Language voorbeelden, gestructureerde gegevens voorbeelden, .xml testbestanden, markup taal parsing voorbeelden'
         },
@@ -226,7 +226,7 @@ export const nl: SamplePageTranslations = {
       },
       html: {
         meta: {
-          title: 'Download gratis HTML voorbeeldbestanden - HTML testbestanden voor webontwikkeling | MorphyHub',
+          title: 'Download gratis HTML voorbeeldbestanden - HTML testbestanden voor webontwikkeling | FomiPeek',
           description: 'Download gratis HTML voorbeeldbestanden om webontwikkeling en HTML verwerkingstools te testen. Meerdere bestandsformaten: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van HTML naar PDF, HTML naar DOCX converters, HTML validatie, web scraping, browser rendering en HyperText Markup Language verwerking.',
           keywords: 'HTML voorbeeldbestanden, HTML testbestanden, download HTML voorbeelden, gratis HTML testbestanden, HTML naar PDF converter, HTML naar DOCX converter, HTML validatietest, HyperText Markup Language voorbeelden, webontwikkeling voorbeelden, .html testbestanden, web scraping voorbeelden, browser rendering test'
         },
@@ -242,7 +242,7 @@ export const nl: SamplePageTranslations = {
       },
       ods: {
         meta: {
-          title: 'Download gratis ODS voorbeeldbestanden - OpenDocument spreadsheet testbestanden | MorphyHub',
+          title: 'Download gratis ODS voorbeeldbestanden - OpenDocument spreadsheet testbestanden | FomiPeek',
           description: 'Download gratis ODS voorbeeldbestanden om spreadsheet conversie en gegevensverwerkingstools te testen. Meerdere bestandsformaten: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van ODS naar Excel, ODS naar CSV converters, LibreOffice Calc bestanden, OpenDocument formaat verwerking en spreadsheet gegevensextractie.',
           keywords: 'ODS voorbeeldbestanden, ODS testbestanden, download ODS voorbeelden, gratis ODS testbestanden, OpenDocument spreadsheet voorbeelden, ODS naar Excel converter, ODS naar CSV converter, LibreOffice Calc voorbeelden, .ods testbestanden, spreadsheet conversie voorbeelden, OpenDocument formaat test'
         },
@@ -258,7 +258,7 @@ export const nl: SamplePageTranslations = {
       },
       'ansible-yml': {
         meta: {
-          title: 'Download gratis Ansible YML voorbeeldbestanden - YAML configuratie testbestanden | MorphyHub',
+          title: 'Download gratis Ansible YML voorbeeldbestanden - YAML configuratie testbestanden | FomiPeek',
           description: 'Download gratis Ansible YML voorbeeldbestanden om YAML parsing en configuratiebeheertools te testen. Meerdere bestandsformaten: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Ansible playbooks, YAML validatie, DevOps automatisering, configuratiebeheersystemen en infrastructure as code tools.',
           keywords: 'Ansible YML voorbeeldbestanden, YML testbestanden, download YML voorbeelden, gratis YML testbestanden, Ansible playbook voorbeelden, YAML configuratie voorbeelden, YAML validatietest, DevOps automatisering voorbeelden, .yml testbestanden, configuratiebeheer voorbeelden, infrastructure as code voorbeelden'
         },
@@ -274,7 +274,7 @@ export const nl: SamplePageTranslations = {
       },
       'api-response-json': {
         meta: {
-          title: 'Gratis API Response JSON voorbeeldbestanden downloaden - JSON testbestanden voor API ontwikkeling | MorphyHub',
+          title: 'Gratis API Response JSON voorbeeldbestanden downloaden - JSON testbestanden voor API ontwikkeling | FomiPeek',
           description: 'Download gratis API Response JSON voorbeeldbestanden om JSON parsing, API integratie en webontwikkelingstools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van REST API antwoorden, JSON validators, API mocking, webhook tests en gegevensuitwisselingsformaat verwerking.',
           keywords: 'API Response JSON voorbeeldbestanden, JSON testbestanden, JSON voorbeelden downloaden, gratis JSON testbestanden, API antwoord voorbeelden, JSON parsing voorbeelden, REST API testbestanden, JSON validator test, API mocking voorbeelden, webhook testbestanden, .json testbestanden, web API voorbeelden, gegevensuitwisselingsformaat voorbeelden'
         },
@@ -290,7 +290,7 @@ export const nl: SamplePageTranslations = {
       },
       'arduino-ino': {
         meta: {
-          title: 'Gratis Arduino INO voorbeeldbestanden downloaden - Arduino Sketch testbestanden voor embedded ontwikkeling | MorphyHub',
+          title: 'Gratis Arduino INO voorbeeldbestanden downloaden - Arduino Sketch testbestanden voor embedded ontwikkeling | FomiPeek',
           description: 'Download gratis Arduino INO voorbeeldbestanden om Arduino sketch compilatie en embedded programmeertools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Arduino IDE, sketch validatie, microcontroller programmering, embedded systemen ontwikkeling en IoT apparaat tests.',
           keywords: 'Arduino INO voorbeeldbestanden, Arduino INO testbestanden, Arduino INO voorbeelden downloaden, gratis Arduino INO testbestanden, Arduino sketch voorbeelden, embedded code voorbeelden, Arduino IDE testbestanden, .ino testbestanden, microcontroller voorbeelden, IoT ontwikkeling voorbeelden, embedded programmering voorbeelden'
         },
@@ -306,7 +306,7 @@ export const nl: SamplePageTranslations = {
       },
       bat: {
         meta: {
-          title: 'Gratis BAT voorbeeldbestanden downloaden - Batch script testbestanden voor Windows automatisering | MorphyHub',
+          title: 'Gratis BAT voorbeeldbestanden downloaden - Batch script testbestanden voor Windows automatisering | FomiPeek',
           description: 'Download gratis BAT batch script voorbeeldbestanden om Windows automatisering en opdrachtregel verwerkingstools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van batch script uitvoering, Windows taak automatisering, opdrachtregel tools, script validators en systeembeheer utilities.',
           keywords: 'BAT voorbeeldbestanden, BAT testbestanden, BAT voorbeelden downloaden, gratis BAT testbestanden, batch script voorbeelden, Windows batch bestanden, automatisering script voorbeelden, .bat testbestanden, opdrachtregel script voorbeelden, Windows automatisering voorbeelden, script uitvoering testbestanden'
         },
@@ -322,7 +322,7 @@ export const nl: SamplePageTranslations = {
       },
       asc: {
         meta: {
-          title: 'Gratis ASC voorbeeldbestanden downloaden - ASCII tekst testbestanden voor tekstverwerking | MorphyHub',
+          title: 'Gratis ASC voorbeeldbestanden downloaden - ASCII tekst testbestanden voor tekstverwerking | FomiPeek',
           description: 'Download gratis ASC ASCII tekst voorbeeldbestanden om tekstverwerking en coderings tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van ASCII codering, tekstbestand parsing, tekst editors, teken codering validatie en tekstformaat conversie tools.',
           keywords: 'ASC voorbeeldbestanden, ASC testbestanden, ASC voorbeelden downloaden, gratis ASC testbestanden, ASCII tekst voorbeelden, platte tekst voorbeelden, .asc testbestanden, tekstformaat voorbeelden, ASCII codering testbestanden, tekstverwerking voorbeelden, teken codering voorbeelden'
         },
@@ -338,7 +338,7 @@ export const nl: SamplePageTranslations = {
       },
       bib: {
         meta: {
-          title: 'Gratis BIB voorbeeldbestanden downloaden - Bibliografie testbestanden voor academisch onderzoek | MorphyHub',
+          title: 'Gratis BIB voorbeeldbestanden downloaden - Bibliografie testbestanden voor academisch onderzoek | FomiPeek',
           description: 'Download gratis BIB bibliografie voorbeeldbestanden om bibliografie beheer en citatie tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van BibTeX formaat verwerking, referentie managers, citatie generators, academisch schrijven tools en LaTeX bibliografie integratie.',
           keywords: 'BIB voorbeeldbestanden, BIB testbestanden, BIB voorbeelden downloaden, gratis BIB testbestanden, bibliografie voorbeelden, BibTeX bestanden, citatie voorbeelden, .bib testbestanden, referentie beheer voorbeelden, academische citatie voorbeelden, LaTeX bibliografie voorbeelden'
         },
@@ -354,7 +354,7 @@ export const nl: SamplePageTranslations = {
       },
       c: {
         meta: {
-          title: 'Gratis C voorbeeldbestanden downloaden - C programmeertaal testbestanden voor ontwikkeling | MorphyHub',
+          title: 'Gratis C voorbeeldbestanden downloaden - C programmeertaal testbestanden voor ontwikkeling | FomiPeek',
           description: 'Download gratis C broncode voorbeeldbestanden om C code compilatie en ontwikkelingstools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van C compilers, syntax checkers, code analyzers, GCC toolchain, embedded C ontwikkeling en systeem programmeertools.',
           keywords: 'C voorbeeldbestanden, C testbestanden, C voorbeelden downloaden, gratis C testbestanden, C broncode voorbeelden, C programmeer bestanden, .c testbestanden, C compilatie testbestanden, GCC testbestanden, embedded C voorbeelden, systeem programmering voorbeelden'
         },
@@ -370,7 +370,7 @@ export const nl: SamplePageTranslations = {
       },
       'can-log': {
         meta: {
-          title: 'Gratis CAN Log voorbeeldbestanden downloaden - Controller Area Network testbestanden voor automobiel | MorphyHub',
+          title: 'Gratis CAN Log voorbeeldbestanden downloaden - Controller Area Network testbestanden voor automobiel | FomiPeek',
           description: 'Download gratis CAN Log voorbeeldbestanden om CAN bus analyse en automobiel diagnostiek tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van CAN bus analyzers, automobiel diagnostiek tools, voertuig netwerk protocollen, OBD-II tests en embedded automobiel systemen.',
           keywords: 'CAN Log voorbeeldbestanden, CAN Log testbestanden, CAN Log voorbeelden downloaden, gratis CAN Log testbestanden, Controller Area Network voorbeelden, CAN bus voorbeelden, .log testbestanden, automobiel diagnostiek voorbeelden, OBD-II testbestanden, voertuig netwerk voorbeelden, CAN bus analyzer test'
         },
@@ -386,7 +386,7 @@ export const nl: SamplePageTranslations = {
       },
       cmd: {
         meta: {
-          title: 'Gratis CMD voorbeeldbestanden downloaden - Windows opdracht script testbestanden voor automatisering | MorphyHub',
+          title: 'Gratis CMD voorbeeldbestanden downloaden - Windows opdracht script testbestanden voor automatisering | FomiPeek',
           description: 'Download gratis CMD Windows opdracht script voorbeeldbestanden om batch script uitvoering en Windows automatisering tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Windows opdrachtprompt, batch bestand uitvoering, script automatisering, systeembeheer en Windows taak planning tools.',
           keywords: 'CMD voorbeeldbestanden, CMD testbestanden, CMD voorbeelden downloaden, gratis CMD testbestanden, Windows opdracht script voorbeelden, batch script voorbeelden, .cmd testbestanden, opdracht script voorbeelden, Windows automatisering voorbeelden, systeembeheer voorbeelden'
         },
@@ -402,7 +402,7 @@ export const nl: SamplePageTranslations = {
       },
       conf: {
         meta: {
-          title: 'Gratis CONF voorbeeldbestanden downloaden - Configuratie testbestanden voor systeem configuratie | MorphyHub',
+          title: 'Gratis CONF voorbeeldbestanden downloaden - Configuratie testbestanden voor systeem configuratie | FomiPeek',
           description: 'Download gratis CONF configuratie voorbeeldbestanden om configuratiebestand parsing en systeem configuratie tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van server configuratie, applicatie instellingen, configuratiebestand validators, systeembeheer tools en software implementatie utilities.',
           keywords: 'CONF voorbeeldbestanden, CONF testbestanden, CONF voorbeelden downloaden, gratis CONF testbestanden, configuratiebestand voorbeelden, server configuratie voorbeelden, .conf testbestanden, configuratiebestand voorbeelden, systeem configuratie voorbeelden, applicatie instellingen voorbeelden'
         },
@@ -418,7 +418,7 @@ export const nl: SamplePageTranslations = {
       },
       'config-ini': {
         meta: {
-          title: 'Gratis Config INI voorbeeldbestanden downloaden - INI configuratie testbestanden voor applicaties | MorphyHub',
+          title: 'Gratis Config INI voorbeeldbestanden downloaden - INI configuratie testbestanden voor applicaties | FomiPeek',
           description: 'Download gratis Config INI INI configuratie voorbeeldbestanden om INI bestand parsing en configuratie beheer tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van INI parsers, applicatie configuratie, instellingen beheer, Windows INI bestanden en software configuratie utilities.',
           keywords: 'Config INI voorbeeldbestanden, INI testbestanden, INI voorbeelden downloaden, gratis INI testbestanden, INI configuratie voorbeelden, INI configuratie voorbeelden, .ini testbestanden, configuratiebestand voorbeelden, Windows INI voorbeelden, applicatie instellingen voorbeelden'
         },
@@ -434,7 +434,7 @@ export const nl: SamplePageTranslations = {
       },
       cpp: {
         meta: {
-          title: 'Gratis CPP voorbeeldbestanden downloaden - C++ programmeertaal testbestanden voor ontwikkeling | MorphyHub',
+          title: 'Gratis CPP voorbeeldbestanden downloaden - C++ programmeertaal testbestanden voor ontwikkeling | FomiPeek',
           description: 'Download gratis CPP C++ broncode voorbeeldbestanden om C++ code compilatie en ontwikkelingstools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van C++ compilers, syntax checkers, code analyzers, GCC/G++ toolchain, moderne C++ functies en objectgeoriënteerde programmeertools.',
           keywords: 'CPP voorbeeldbestanden, CPP testbestanden, CPP voorbeelden downloaden, gratis CPP testbestanden, C++ broncode voorbeelden, C++ code bestanden, .cpp testbestanden, C++ programmeer bestanden, C++ compilatie testbestanden, GCC testbestanden, moderne C++ voorbeelden'
         },
@@ -450,7 +450,7 @@ export const nl: SamplePageTranslations = {
       },
       h: {
         meta: {
-          title: 'Gratis H voorbeeldbestanden downloaden - C/C++ header bestand testbestanden voor programmering | MorphyHub',
+          title: 'Gratis H voorbeeldbestanden downloaden - C/C++ header bestand testbestanden voor programmering | FomiPeek',
           description: 'Download gratis H C/C++ header bestand voorbeeldbestanden om header bestand verwerking en ontwikkelingstools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van C/C++ compilers, header bestand inclusie, preprocessor tools, code organisatie en cross-platform ontwikkeling utilities.',
           keywords: 'H voorbeeldbestanden, H testbestanden, H voorbeelden downloaden, gratis H testbestanden, C header voorbeelden, C++ header voorbeelden, header bestand voorbeelden, .h testbestanden, C/C++ header bestanden, programmeer header voorbeelden, code header bestanden'
         },
@@ -466,7 +466,7 @@ export const nl: SamplePageTranslations = {
       },
       hpp: {
         meta: {
-          title: 'Gratis HPP voorbeeldbestanden downloaden - C++ header bestand testbestanden voor moderne C++ ontwikkeling | MorphyHub',
+          title: 'Gratis HPP voorbeeldbestanden downloaden - C++ header bestand testbestanden voor moderne C++ ontwikkeling | FomiPeek',
           description: 'Download gratis HPP C++ header bestand voorbeeldbestanden om C++ header bestand verwerking en ontwikkelingstools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van C++ compilers, header-only bibliotheken, template metaprogrammering, moderne C++ functies en geavanceerde C++ ontwikkeling utilities.',
           keywords: 'HPP voorbeeldbestanden, HPP testbestanden, HPP voorbeelden downloaden, gratis HPP testbestanden, C++ header voorbeelden, header bestand voorbeelden, .hpp testbestanden, C++ header bestanden, programmeer header voorbeelden, code header bestanden, C++ ontwikkeling bestanden, moderne C++ header voorbeelden'
         },
@@ -482,7 +482,7 @@ export const nl: SamplePageTranslations = {
       },
       hex: {
         meta: {
-          title: 'Gratis HEX voorbeeldbestanden downloaden - Hexadecimale testbestanden voor firmware ontwikkeling en embedded systemen | MorphyHub',
+          title: 'Gratis HEX voorbeeldbestanden downloaden - Hexadecimale testbestanden voor firmware ontwikkeling en embedded systemen | FomiPeek',
           description: 'Download gratis HEX hexadecimale voorbeeldbestanden om firmware programmering, embedded systeem ontwikkeling en binaire data analyse te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van hex editors, firmware loaders, microcontroller programmering en embedded ontwikkeling tools.',
           keywords: 'HEX voorbeeldbestanden, HEX testbestanden, HEX voorbeelden downloaden, gratis HEX testbestanden, hexadecimale bestanden, hex firmware bestanden, .hex testbestanden, hex embedded bestanden, hex microcontroller bestanden, hex editor testbestanden, firmware programmering voorbeelden, hex binaire bestanden'
         },
@@ -498,7 +498,7 @@ export const nl: SamplePageTranslations = {
       },
       cs: {
         meta: {
-          title: 'Gratis CS voorbeeldbestanden downloaden - C# broncode testbestanden voor .NET ontwikkeling | MorphyHub',
+          title: 'Gratis CS voorbeeldbestanden downloaden - C# broncode testbestanden voor .NET ontwikkeling | FomiPeek',
           description: 'Download gratis CS C# broncode voorbeeldbestanden om C# compilatie, .NET ontwikkeling en Visual Studio tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van C# compilers, .NET frameworks, Visual Studio IDE, code analyse tools en C# ontwikkeling omgevingen.',
           keywords: 'CS voorbeeldbestanden, CS testbestanden, CS voorbeelden downloaden, gratis CS testbestanden, C# broncode voorbeelden, .NET code bestanden, .cs testbestanden, C# programmeer bestanden, Visual Studio testbestanden, .NET ontwikkeling voorbeelden, C# compilatie testbestanden'
         },
@@ -514,7 +514,7 @@ export const nl: SamplePageTranslations = {
       },
       css: {
         meta: {
-          title: 'Gratis CSS voorbeeldbestanden downloaden - Stylesheet testbestanden voor web ontwikkeling | MorphyHub',
+          title: 'Gratis CSS voorbeeldbestanden downloaden - Stylesheet testbestanden voor web ontwikkeling | FomiPeek',
           description: 'Download gratis CSS stylesheet voorbeeldbestanden om web styling, CSS parsing en front-end tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van CSS validators, preprocessors (SASS, LESS), CSS minifiers, web browsers en front-end ontwikkeling frameworks.',
           keywords: 'CSS voorbeeldbestanden, CSS testbestanden, CSS voorbeelden downloaden, gratis CSS testbestanden, stylesheet voorbeelden, CSS stylesheet bestanden, .css testbestanden, web styling bestanden, CSS parser testbestanden, front-end ontwikkeling voorbeelden, CSS framework testbestanden'
         },
@@ -530,7 +530,7 @@ export const nl: SamplePageTranslations = {
       },
       csr: {
         meta: {
-          title: 'Gratis CSR voorbeeldbestanden downloaden - Certificaat ondertekeningsverzoek testbestanden voor SSL/TLS | MorphyHub',
+          title: 'Gratis CSR voorbeeldbestanden downloaden - Certificaat ondertekeningsverzoek testbestanden voor SSL/TLS | FomiPeek',
           description: 'Download gratis CSR certificaat ondertekeningsverzoek voorbeeldbestanden om SSL/TLS certificaat generatie, PKI beheer en beveiliging tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van certificeringsautoriteiten, OpenSSL, SSL certificaat generatie, PKI infrastructuur en beveiligingscertificaat beheer tools.',
           keywords: 'CSR voorbeeldbestanden, CSR testbestanden, CSR voorbeelden downloaden, gratis CSR testbestanden, certificaat ondertekeningsverzoek voorbeelden, SSL certificaat bestanden, .csr testbestanden, PKI certificaat bestanden, OpenSSL testbestanden, SSL/TLS certificaat voorbeelden, certificeringsautoriteit testbestanden'
         },
@@ -546,7 +546,7 @@ export const nl: SamplePageTranslations = {
       },
       'customer-database-sql': {
         meta: {
-          title: 'Gratis Customer Database SQL voorbeeldbestanden downloaden - SQL database testbestanden | MorphyHub',
+          title: 'Gratis Customer Database SQL voorbeeldbestanden downloaden - SQL database testbestanden | FomiPeek',
           description: 'Download gratis Customer Database SQL voorbeeldbestanden om SQL database operaties, query uitvoering en database beheer tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van SQL parsers, database import tools, SQLite, MySQL, PostgreSQL en database beheer systemen.',
           keywords: 'Customer Database SQL voorbeeldbestanden, SQL database testbestanden, SQL voorbeelden downloaden, gratis SQL testbestanden, SQL database bestanden, .sql testbestanden, SQL query bestanden, database import voorbeelden, SQLite testbestanden, MySQL voorbeelden, PostgreSQL testbestanden'
         },
@@ -562,7 +562,7 @@ export const nl: SamplePageTranslations = {
       },
       dbf: {
         meta: {
-          title: 'Gratis DBF voorbeeldbestanden downloaden - dBASE database testbestanden voor data beheer | MorphyHub',
+          title: 'Gratis DBF voorbeeldbestanden downloaden - dBASE database testbestanden voor data beheer | FomiPeek',
           description: 'Download gratis DBF dBASE database voorbeeldbestanden om database operaties, data import/export en legacy database formaten te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van dBASE compatibiliteit, database converters, data migratie tools, spreadsheet applicaties en database beheer systemen.',
           keywords: 'DBF voorbeeldbestanden, DBF testbestanden, DBF voorbeelden downloaden, gratis DBF testbestanden, dBASE database bestanden, .dbf testbestanden, database formaat bestanden, legacy database voorbeelden, dBASE compatibiliteit testbestanden, data import voorbeelden'
         },
@@ -578,7 +578,7 @@ export const nl: SamplePageTranslations = {
       },
       dem: {
         meta: {
-          title: 'Gratis DEM voorbeeldbestanden downloaden - Digitaal hoogtemodel testbestanden voor GIS en mapping | MorphyHub',
+          title: 'Gratis DEM voorbeeldbestanden downloaden - Digitaal hoogtemodel testbestanden voor GIS en mapping | FomiPeek',
           description: 'Download gratis DEM digitaal hoogtemodel voorbeeldbestanden om GIS applicaties, terrein mapping en geospatiale analyse tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van GIS software, terrein visualisatie, hoogte data verwerking, mapping applicaties en geospatiale analyse tools.',
           keywords: 'DEM voorbeeldbestanden, DEM testbestanden, DEM voorbeelden downloaden, gratis DEM testbestanden, digitaal hoogtemodel bestanden, .dem testbestanden, GIS hoogte bestanden, terrein data voorbeelden, geospatiale data bestanden, mapping testbestanden, hoogtemodel voorbeelden'
         },
@@ -594,7 +594,7 @@ export const nl: SamplePageTranslations = {
       },
       der: {
         meta: {
-          title: 'Gratis DER voorbeeldbestanden downloaden - Distinguished Encoding Rules certificaat testbestanden | MorphyHub',
+          title: 'Gratis DER voorbeeldbestanden downloaden - Distinguished Encoding Rules certificaat testbestanden | FomiPeek',
           description: 'Download gratis DER Distinguished Encoding Rules certificaat voorbeeldbestanden om SSL/TLS certificaten, PKI beheer en beveiliging tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van certificaat parsing, OpenSSL, PKI infrastructuur, SSL certificaat validatie en beveiligingscertificaat beheer tools.',
           keywords: 'DER voorbeeldbestanden, DER testbestanden, DER voorbeelden downloaden, gratis DER testbestanden, Distinguished Encoding Rules bestanden, .der testbestanden, certificaat bestanden, SSL certificaat voorbeelden, PKI certificaat bestanden, OpenSSL testbestanden, certificaat parsing voorbeelden'
         },
@@ -610,7 +610,7 @@ export const nl: SamplePageTranslations = {
       },
       dmp: {
         meta: {
-          title: 'Gratis DMP voorbeeldbestanden downloaden - Geheugen dump testbestanden voor debugging en analyse | MorphyHub',
+          title: 'Gratis DMP voorbeeldbestanden downloaden - Geheugen dump testbestanden voor debugging en analyse | FomiPeek',
           description: 'Download gratis DMP geheugen dump voorbeeldbestanden om crash analyse, debugging tools en systeem diagnostiek te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van debuggers, crash analyse tools, geheugen analysers, systeem diagnostiek tools en forensische analyse applicaties.',
           keywords: 'DMP voorbeeldbestanden, DMP testbestanden, DMP voorbeelden downloaden, gratis DMP testbestanden, geheugen dump bestanden, .dmp testbestanden, crash dump bestanden, debugging bestanden, systeem dump voorbeelden, geheugen analyse bestanden, crash analyse testbestanden'
         },
@@ -626,7 +626,7 @@ export const nl: SamplePageTranslations = {
       },
       'docker-compose-yml': {
         meta: {
-          title: 'Gratis Docker Compose YML voorbeeldbestanden downloaden - Docker Compose configuratie testbestanden | MorphyHub',
+          title: 'Gratis Docker Compose YML voorbeeldbestanden downloaden - Docker Compose configuratie testbestanden | FomiPeek',
           description: 'Download gratis Docker Compose YML configuratie voorbeeldbestanden om Docker container orkestratie, multi-container applicaties en DevOps tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Docker Compose, container orkestratie, YAML parsing, DevOps automatisering en gecontaineriseerde applicatie deployment tools.',
           keywords: 'Docker Compose YML voorbeeldbestanden, docker-compose testbestanden, docker-compose voorbeelden downloaden, gratis docker-compose testbestanden, Docker Compose YAML bestanden, .yml testbestanden, container orkestratie bestanden, DevOps configuratie voorbeelden, Docker Compose testbestanden, multi-container configuratie voorbeelden'
         },
@@ -642,7 +642,7 @@ export const nl: SamplePageTranslations = {
       },
       dockerfile: {
         meta: {
-          title: 'Gratis Dockerfile voorbeeldbestanden downloaden - Docker container build testbestanden | MorphyHub',
+          title: 'Gratis Dockerfile voorbeeldbestanden downloaden - Docker container build testbestanden | FomiPeek',
           description: 'Download gratis Dockerfile Docker container build voorbeeldbestanden om containerisatie, Docker build en DevOps tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Docker build, container image creatie, Dockerfile parsing, containerisatie tools en DevOps automatisering platforms.',
           keywords: 'Dockerfile voorbeeldbestanden, Dockerfile testbestanden, Dockerfile voorbeelden downloaden, gratis Dockerfile testbestanden, Docker container bestanden, Dockerfile testbestanden, container build bestanden, Docker build voorbeelden, containerisatie testbestanden, DevOps Docker voorbeelden'
         },
@@ -658,7 +658,7 @@ export const nl: SamplePageTranslations = {
       },
       editorconfig: {
         meta: {
-          title: 'Gratis EditorConfig voorbeeldbestanden downloaden - Editor configuratie testbestanden | MorphyHub',
+          title: 'Gratis EditorConfig voorbeeldbestanden downloaden - Editor configuratie testbestanden | FomiPeek',
           description: 'Download gratis EditorConfig editor configuratie voorbeeldbestanden om code editor instellingen, formaat consistentie en ontwikkeling tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van EditorConfig parsers, code editor plugins, formaat tools, IDE configuratie en ontwikkeling omgeving setup tools.',
           keywords: 'EditorConfig voorbeeldbestanden, EditorConfig testbestanden, EditorConfig voorbeelden downloaden, gratis EditorConfig testbestanden, editor configuratie bestanden, .editorconfig testbestanden, code editor instelling bestanden, IDE configuratie voorbeelden, formaat configuratie bestanden, editor instelling testbestanden'
         },
@@ -674,7 +674,7 @@ export const nl: SamplePageTranslations = {
       },
       ini: {
         meta: {
-          title: 'Gratis INI voorbeeldbestanden downloaden - INI configuratie testbestanden voor applicaties | MorphyHub',
+          title: 'Gratis INI voorbeeldbestanden downloaden - INI configuratie testbestanden voor applicaties | FomiPeek',
           description: 'Download gratis INI configuratie voorbeeldbestanden om applicatie instellingen, INI bestand parsing en configuratie beheer tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van INI parsers, applicatie configuratie, instelling beheer, Windows INI bestanden en software configuratie utilities.',
           keywords: 'INI voorbeeldbestanden, INI testbestanden, INI voorbeelden downloaden, gratis INI testbestanden, INI configuratie bestanden, .ini testbestanden, applicatie instelling bestanden, INI configuratie voorbeelden, Windows INI bestanden, configuratie bestand voorbeelden, INI parsing testbestanden'
         },
@@ -690,7 +690,7 @@ export const nl: SamplePageTranslations = {
       },
       intelhex: {
         meta: {
-          title: 'Gratis IntelHex voorbeeldbestanden downloaden - Intel hexadecimale testbestanden voor firmware ontwikkeling | MorphyHub',
+          title: 'Gratis IntelHex voorbeeldbestanden downloaden - Intel hexadecimale testbestanden voor firmware ontwikkeling | FomiPeek',
           description: 'Download gratis IntelHex Intel hexadecimale voorbeeldbestanden om firmware programmering, embedded systeem ontwikkeling en microcontroller tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van IntelHex parsers, firmware loaders, microcontroller programmering, embedded ontwikkeling tools en hex bestand verwerking applicaties.',
           keywords: 'IntelHex voorbeeldbestanden, IntelHex testbestanden, IntelHex voorbeelden downloaden, gratis IntelHex testbestanden, Intel hexadecimale bestanden, .intelhex testbestanden, hex firmware bestanden, hex embedded bestanden, hex microcontroller bestanden, IntelHex parser testbestanden, firmware programmering voorbeelden'
         },
@@ -706,7 +706,7 @@ export const nl: SamplePageTranslations = {
       },
       ipynb: {
         meta: {
-          title: 'Gratis IPYNB voorbeeldbestanden downloaden - Jupyter Notebook testbestanden voor data science | MorphyHub',
+          title: 'Gratis IPYNB voorbeeldbestanden downloaden - Jupyter Notebook testbestanden voor data science | FomiPeek',
           description: 'Download gratis IPYNB Jupyter Notebook voorbeeldbestanden om data science workflows, Python uitvoering en notebook analyse tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Jupyter Notebook, Python data science tools, notebook viewers, data analyse applicaties en wetenschappelijke computing platforms.',
           keywords: 'IPYNB voorbeeldbestanden, IPYNB testbestanden, IPYNB voorbeelden downloaden, gratis IPYNB testbestanden, Jupyter Notebook bestanden, .ipynb testbestanden, Python notebook bestanden, data science notebook voorbeelden, Jupyter testbestanden, notebook analyse bestanden, data science workflow voorbeelden'
         },
@@ -722,7 +722,7 @@ export const nl: SamplePageTranslations = {
       },
       java: {
         meta: {
-          title: 'Gratis Java voorbeeldbestanden downloaden - Java broncode testbestanden voor ontwikkeling | MorphyHub',
+          title: 'Gratis Java voorbeeldbestanden downloaden - Java broncode testbestanden voor ontwikkeling | FomiPeek',
           description: 'Download gratis Java Java broncode voorbeeldbestanden om Java compilatie, JVM applicaties en ontwikkeling tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Java compilers, JVM, IDE ondersteuning (Eclipse, IntelliJ), Java build tools (Maven, Gradle) en Java ontwikkeling omgevingen.',
           keywords: 'Java voorbeeldbestanden, Java testbestanden, Java voorbeelden downloaden, gratis Java testbestanden, Java broncode bestanden, .java testbestanden, Java programmeer bestanden, JVM testbestanden, Java compilatie voorbeelden, Java IDE testbestanden, Java ontwikkeling voorbeelden'
         },
@@ -738,7 +738,7 @@ export const nl: SamplePageTranslations = {
       },
       jks: {
         meta: {
-          title: 'Gratis JKS voorbeeldbestanden downloaden - Java KeyStore testbestanden voor SSL/TLS beveiliging | MorphyHub',
+          title: 'Gratis JKS voorbeeldbestanden downloaden - Java KeyStore testbestanden voor SSL/TLS beveiliging | FomiPeek',
           description: 'Download gratis JKS Java KeyStore voorbeeldbestanden om SSL/TLS certificaat opslag, Java beveiliging en PKI beheer tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Java KeyStore beheer, JKS parsing, SSL certificaat opslag, Java beveiliging tools en PKI infrastructuur.',
           keywords: 'JKS voorbeeldbestanden, JKS testbestanden, JKS voorbeelden downloaden, gratis JKS testbestanden, Java KeyStore bestanden, .jks testbestanden, SSL certificaat bestanden, Java beveiliging bestanden, keystore testbestanden, PKI certificaat voorbeelden, Java KeyStore beheer testbestanden'
         },
@@ -754,7 +754,7 @@ export const nl: SamplePageTranslations = {
       },
       json: {
         meta: {
-          title: 'Gratis JSON voorbeeldbestanden downloaden - JSON data testbestanden voor web ontwikkeling | MorphyHub',
+          title: 'Gratis JSON voorbeeldbestanden downloaden - JSON data testbestanden voor web ontwikkeling | FomiPeek',
           description: 'Download gratis JSON JSON data voorbeeldbestanden om JSON parsing, API integratie en web ontwikkeling tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van JSON parsers, API responses, data uitwisseling formaten, web applicaties en JSON validatie tools.',
           keywords: 'JSON voorbeeldbestanden, JSON testbestanden, JSON voorbeelden downloaden, gratis JSON testbestanden, JSON data bestanden, .json testbestanden, JSON API bestanden, JSON parser testbestanden, data uitwisseling voorbeelden, JSON web bestanden, JSON validatie testbestanden'
         },
@@ -770,7 +770,7 @@ export const nl: SamplePageTranslations = {
       },
       jsonl: {
         meta: {
-          title: 'Gratis JSONL voorbeeldbestanden downloaden - JSON Lines testbestanden voor data verwerking | MorphyHub',
+          title: 'Gratis JSONL voorbeeldbestanden downloaden - JSON Lines testbestanden voor data verwerking | FomiPeek',
           description: 'Download gratis JSONL JSON Lines voorbeeldbestanden om data verwerking, JSON streaming en big data tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van JSONL parsers, data streaming applicaties, ETL tools, big data verwerking en log bestand analyse tools.',
           keywords: 'JSONL voorbeeldbestanden, JSONL testbestanden, JSONL voorbeelden downloaden, gratis JSONL testbestanden, JSON Lines bestanden, .jsonl testbestanden, JSON streaming bestanden, data verwerking voorbeelden, JSON ETL bestanden, JSON big data voorbeelden, JSON log analyse bestanden'
         },
@@ -786,7 +786,7 @@ export const nl: SamplePageTranslations = {
       },
       js: {
         meta: {
-          title: 'Gratis JS voorbeeldbestanden downloaden - JavaScript broncode testbestanden voor web ontwikkeling | MorphyHub',
+          title: 'Gratis JS voorbeeldbestanden downloaden - JavaScript broncode testbestanden voor web ontwikkeling | FomiPeek',
           description: 'Download gratis JS JavaScript broncode voorbeeldbestanden om JavaScript uitvoering, web ontwikkeling en front-end tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van JavaScript engines, Node.js, web browsers, JavaScript minifiers, code analyse tools en front-end ontwikkeling frameworks.',
           keywords: 'JS voorbeeldbestanden, JS testbestanden, JS voorbeelden downloaden, gratis JS testbestanden, JavaScript broncode bestanden, .js testbestanden, JavaScript programmeer bestanden, Node.js testbestanden, JavaScript web bestanden, JS minifier testbestanden, front-end ontwikkeling voorbeelden'
         },
@@ -802,7 +802,7 @@ export const nl: SamplePageTranslations = {
       },
       jsx: {
         meta: {
-          title: 'Gratis JSX voorbeeldbestanden downloaden - React JSX testbestanden voor front-end ontwikkeling | MorphyHub',
+          title: 'Gratis JSX voorbeeldbestanden downloaden - React JSX testbestanden voor front-end ontwikkeling | FomiPeek',
           description: 'Download gratis JSX React JSX voorbeeldbestanden om React ontwikkeling, JSX compilatie en front-end frameworks te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van React, JSX transpilers (Babel), front-end build tools, React ontwikkeling omgevingen en moderne JavaScript frameworks.',
           keywords: 'JSX voorbeeldbestanden, JSX testbestanden, JSX voorbeelden downloaden, gratis JSX testbestanden, React JSX bestanden, .jsx testbestanden, React component bestanden, JSX transpiler testbestanden, JSX front-end bestanden, React ontwikkeling voorbeelden, Babel JSX testbestanden'
         },
@@ -818,7 +818,7 @@ export const nl: SamplePageTranslations = {
       },
       jwt: {
         meta: {
-          title: 'Gratis JWT voorbeeldbestanden downloaden - JSON Web Token testbestanden voor API beveiliging | MorphyHub',
+          title: 'Gratis JWT voorbeeldbestanden downloaden - JSON Web Token testbestanden voor API beveiliging | FomiPeek',
           description: 'Download gratis JWT JSON Web Token voorbeeldbestanden om API authenticatie, JWT token parsing en beveiliging tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van JWT parsers, API authenticatie, token validatie, OAuth 2.0 en beveiliging test tools.',
           keywords: 'JWT voorbeeldbestanden, JWT testbestanden, JWT voorbeelden downloaden, gratis JWT testbestanden, JSON Web Token bestanden, .jwt testbestanden, authenticatie token bestanden, API beveiliging bestanden, JWT parser testbestanden, OAuth token voorbeelden, beveiliging test bestanden'
         },
@@ -834,7 +834,7 @@ export const nl: SamplePageTranslations = {
       },
       key: {
         meta: {
-          title: 'Gratis KEY voorbeeldbestanden downloaden - Privésleutel testbestanden voor SSL/TLS beveiliging | MorphyHub',
+          title: 'Gratis KEY voorbeeldbestanden downloaden - Privésleutel testbestanden voor SSL/TLS beveiliging | FomiPeek',
           description: 'Download gratis KEY privésleutel voorbeeldbestanden om SSL/TLS certificaten, cryptografische operaties en beveiliging tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van privésleutel parsing, OpenSSL, SSL certificaat generatie, cryptografische bibliotheken en beveiligingscertificaat beheer tools.',
           keywords: 'KEY voorbeeldbestanden, KEY testbestanden, KEY voorbeelden downloaden, gratis KEY testbestanden, privésleutel bestanden, .key testbestanden, SSL sleutel bestanden, cryptografische sleutel bestanden, OpenSSL testbestanden, beveiliging sleutel voorbeelden, certificaat sleutel testbestanden'
         },
@@ -850,7 +850,7 @@ export const nl: SamplePageTranslations = {
       },
       kml: {
         meta: {
-          title: 'Gratis KML voorbeeldbestanden downloaden - Keyhole Markup Language testbestanden voor GIS en mapping | MorphyHub',
+          title: 'Gratis KML voorbeeldbestanden downloaden - Keyhole Markup Language testbestanden voor GIS en mapping | FomiPeek',
           description: 'Download gratis KML Keyhole Markup Language geografische data voorbeeldbestanden om GIS applicaties, kaart visualisatie en geospatiale tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Google Earth, GIS software, kaart rendering, geografische data verwerking en geospatiale analyse tools.',
           keywords: 'KML voorbeeldbestanden, KML testbestanden, KML voorbeelden downloaden, gratis KML testbestanden, Keyhole Markup Language bestanden, .kml testbestanden, geografische data bestanden, kaart data voorbeelden, KML GIS bestanden, Google Earth testbestanden, geospatiale data voorbeelden'
         },
@@ -866,7 +866,7 @@ export const nl: SamplePageTranslations = {
       },
       kt: {
         meta: {
-          title: 'Gratis KT voorbeeldbestanden downloaden - Kotlin broncode testbestanden voor Android ontwikkeling | MorphyHub',
+          title: 'Gratis KT voorbeeldbestanden downloaden - Kotlin broncode testbestanden voor Android ontwikkeling | FomiPeek',
           description: 'Download gratis KT Kotlin broncode voorbeeldbestanden om Kotlin compilatie, Android ontwikkeling en JVM applicaties te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Kotlin compilers, Android Studio, Kotlin/JVM, IDE ondersteuning en Kotlin ontwikkeling omgevingen.',
           keywords: 'KT voorbeeldbestanden, KT testbestanden, KT voorbeelden downloaden, gratis KT testbestanden, Kotlin broncode bestanden, .kt testbestanden, Kotlin programmeer bestanden, Android Kotlin bestanden, Kotlin compiler testbestanden, Kotlin JVM voorbeelden, Kotlin ontwikkeling testbestanden'
         },
@@ -882,7 +882,7 @@ export const nl: SamplePageTranslations = {
       },
       log: {
         meta: {
-          title: 'Gratis LOG voorbeeldbestanden downloaden - Log testbestanden voor debugging en systeem analyse | MorphyHub',
+          title: 'Gratis LOG voorbeeldbestanden downloaden - Log testbestanden voor debugging en systeem analyse | FomiPeek',
           description: 'Download gratis LOG log voorbeeldbestanden om log parsing, systeem analyse en debugging tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van log analysers, systeem monitoring tools, debugging applicaties, log aggregatie systemen en systeem diagnostiek tools.',
           keywords: 'LOG voorbeeldbestanden, LOG testbestanden, LOG voorbeelden downloaden, gratis LOG testbestanden, log bestanden, .log testbestanden, systeem log bestanden, applicatie log voorbeelden, log parser testbestanden, log debugging bestanden, systeem log analyse voorbeelden'
         },
@@ -898,7 +898,7 @@ export const nl: SamplePageTranslations = {
       },
       lua: {
         meta: {
-          title: 'Gratis LUA voorbeeldbestanden downloaden - Lua script testbestanden voor game ontwikkeling en automatisering | MorphyHub',
+          title: 'Gratis LUA voorbeeldbestanden downloaden - Lua script testbestanden voor game ontwikkeling en automatisering | FomiPeek',
           description: 'Download gratis LUA Lua script voorbeeldbestanden om Lua uitvoering, game ontwikkeling en automatisering tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Lua interpreters, game engines, scripting omgevingen, automatisering tools en embedded Lua applicaties.',
           keywords: 'LUA voorbeeldbestanden, LUA testbestanden, LUA voorbeelden downloaden, gratis LUA testbestanden, Lua script bestanden, .lua testbestanden, Lua programmeer bestanden, game script bestanden, Lua interpreter testbestanden, automatisering script voorbeelden, embedded Lua testbestanden'
         },
@@ -914,7 +914,7 @@ export const nl: SamplePageTranslations = {
       },
       m3u: {
         meta: {
-          title: 'Gratis M3U voorbeeldbestanden downloaden - M3U playlist testbestanden voor media spelers | MorphyHub',
+          title: 'Gratis M3U voorbeeldbestanden downloaden - M3U playlist testbestanden voor media spelers | FomiPeek',
           description: 'Download gratis M3U M3U playlist voorbeeldbestanden om media spelers, playlist parsing en audio/video streaming tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van media spelers, playlist managers, streaming applicaties, audio spelers en video speler software.',
           keywords: 'M3U voorbeeldbestanden, M3U testbestanden, M3U voorbeelden downloaden, gratis M3U testbestanden, M3U playlist bestanden, .m3u testbestanden, media playlist bestanden, audio playlist voorbeelden, video playlist bestanden, media speler testbestanden, streaming playlist voorbeelden'
         },
@@ -930,7 +930,7 @@ export const nl: SamplePageTranslations = {
       },
       m3u8: {
         meta: {
-          title: 'Gratis M3U8 voorbeeldbestanden downloaden - M3U8 HLS playlist testbestanden voor video streaming | MorphyHub',
+          title: 'Gratis M3U8 voorbeeldbestanden downloaden - M3U8 HLS playlist testbestanden voor video streaming | FomiPeek',
           description: 'Download gratis M3U8 M3U8 HLS (HTTP Live Streaming) playlist voorbeeldbestanden om video streaming, HLS spelers en media delivery tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van HLS spelers, video streaming platforms, adaptieve bitrate streaming, media servers en video delivery systemen.',
           keywords: 'M3U8 voorbeeldbestanden, M3U8 testbestanden, M3U8 voorbeelden downloaden, gratis M3U8 testbestanden, M3U8 HLS playlist bestanden, .m3u8 testbestanden, HTTP Live Streaming bestanden, video streaming playlist voorbeelden, HLS speler testbestanden, adaptieve streaming voorbeelden, media server playlist bestanden'
         },
@@ -946,7 +946,7 @@ export const nl: SamplePageTranslations = {
       },
       makefile: {
         meta: {
-          title: 'Gratis Makefile voorbeeldbestanden downloaden - Makefile build configuratie testbestanden | MorphyHub',
+          title: 'Gratis Makefile voorbeeldbestanden downloaden - Makefile build configuratie testbestanden | FomiPeek',
           description: 'Download gratis Makefile build configuratie voorbeeldbestanden om build automatisering, Make build systeem en ontwikkeling tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Make build systeem, build automatisering tools, C/C++ compilatie, build scripts en ontwikkeling build omgevingen.',
           keywords: 'Makefile voorbeeldbestanden, Makefile testbestanden, Makefile voorbeelden downloaden, gratis Makefile testbestanden, Makefile build bestanden, Makefile testbestanden, build configuratie bestanden, Make build systeem voorbeelden, C/C++ build bestanden, build automatisering testbestanden, Makefile compilatie voorbeelden'
         },
@@ -962,7 +962,7 @@ export const nl: SamplePageTranslations = {
       },
       mbtiles: {
         meta: {
-          title: 'Gratis MBTiles voorbeeldbestanden downloaden - MBTiles kaart tile database testbestanden | MorphyHub',
+          title: 'Gratis MBTiles voorbeeldbestanden downloaden - MBTiles kaart tile database testbestanden | FomiPeek',
           description: 'Download gratis MBTiles kaart tile database voorbeeldbestanden om kaart rendering, GIS applicaties en mapping tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van kaart tile servers, GIS software, kaart rendering engines, mobiele mapping applicaties en offline kaart tools.',
           keywords: 'MBTiles voorbeeldbestanden, MBTiles testbestanden, MBTiles voorbeelden downloaden, gratis MBTiles testbestanden, MBTiles kaart tile bestanden, .mbtiles testbestanden, kaart database bestanden, GIS tile voorbeelden, kaart rendering bestanden, mobiele kaart testbestanden, offline kaart tile voorbeelden'
         },
@@ -978,7 +978,7 @@ export const nl: SamplePageTranslations = {
       },
       md: {
         meta: {
-          title: 'Gratis MD voorbeeldbestanden downloaden - Markdown documentatie testbestanden | MorphyHub',
+          title: 'Gratis MD voorbeeldbestanden downloaden - Markdown documentatie testbestanden | FomiPeek',
           description: 'Download gratis MD Markdown documentatie voorbeeldbestanden om Markdown parsing, documentatie tools en content management systemen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Markdown parsers, documentatie generators, statische site generators, GitHub Markdown en content management platforms.',
           keywords: 'MD voorbeeldbestanden, MD testbestanden, MD voorbeelden downloaden, gratis MD testbestanden, Markdown bestanden, .md testbestanden, Markdown documentatie bestanden, Markdown parser testbestanden, GitHub Markdown voorbeelden, statische site generator bestanden, documentatie generator testbestanden'
         },
@@ -994,7 +994,7 @@ export const nl: SamplePageTranslations = {
       },
       mdx: {
         meta: {
-          title: 'Gratis MDX voorbeeldbestanden downloaden - MDX React Markdown testbestanden voor documentatie | MorphyHub',
+          title: 'Gratis MDX voorbeeldbestanden downloaden - MDX React Markdown testbestanden voor documentatie | FomiPeek',
           description: 'Download gratis MDX MDX (Markdown + JSX) voorbeeldbestanden om React documentatie, statische site generators en content management systemen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van MDX parsers, React documentatie tools, Next.js, Gatsby, statische site generators en moderne documentatie platforms.',
           keywords: 'MDX voorbeeldbestanden, MDX testbestanden, MDX voorbeelden downloaden, gratis MDX testbestanden, MDX React Markdown bestanden, .mdx testbestanden, React documentatie bestanden, MDX parser testbestanden, MDX Next.js voorbeelden, MDX Gatsby bestanden, statische site generator MDX testbestanden'
         },
@@ -1010,7 +1010,7 @@ export const nl: SamplePageTranslations = {
       },
       apk: {
         meta: {
-          title: 'Gratis APK voorbeeldbestanden downloaden - Android applicatiepakket testbestanden | MorphyHub',
+          title: 'Gratis APK voorbeeldbestanden downloaden - Android applicatiepakket testbestanden | FomiPeek',
           description: 'Download gratis APK Android applicatiepakket voorbeeldbestanden om Android app installatie, APK analyse, reverse engineering en mobiele ontwikkeling tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van APK installers, Android emulators, app analysers, beveiligingsscanners en mobiele app ontwikkeling platforms.',
           keywords: 'APK voorbeeldbestanden, APK testbestanden, APK voorbeelden downloaden, gratis APK testbestanden, Android APK bestanden, .apk testbestanden, Android app pakket bestanden, APK installer testbestanden, Android emulator testbestanden, mobiele app ontwikkeling voorbeelden, APK reverse engineering bestanden'
         },
@@ -1026,7 +1026,7 @@ export const nl: SamplePageTranslations = {
       },
       appimage: {
         meta: {
-          title: 'Gratis AppImage voorbeeldbestanden downloaden - Linux draagbare applicatie testbestanden | MorphyHub',
+          title: 'Gratis AppImage voorbeeldbestanden downloaden - Linux draagbare applicatie testbestanden | FomiPeek',
           description: 'Download gratis AppImage Linux draagbare applicatie voorbeeldbestanden om Linux app distributie, AppImage uitvoering en cross-distributie compatibiliteit te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van AppImage runners, Linux applicatie launchers, draagbare app tools en universele Linux software distributie.',
           keywords: 'AppImage voorbeeldbestanden, AppImage testbestanden, AppImage voorbeelden downloaden, gratis AppImage testbestanden, Linux AppImage bestanden, .AppImage testbestanden, draagbare Linux apps, AppImage runner testbestanden, Linux applicatie bestanden, cross-distributie apps, universele Linux software voorbeelden'
         },
@@ -1042,7 +1042,7 @@ export const nl: SamplePageTranslations = {
       },
       elf: {
         meta: {
-          title: 'Gratis ELF voorbeeldbestanden downloaden - Executable and Linkable Format testbestanden voor Linux/Unix | MorphyHub',
+          title: 'Gratis ELF voorbeeldbestanden downloaden - Executable and Linkable Format testbestanden voor Linux/Unix | FomiPeek',
           description: 'Download gratis ELF Executable and Linkable Format voorbeeldbestanden om Linux/Unix binaire analyse, ELF parsing, reverse engineering en systeem debugging te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van ELF analysers, binaire disassemblers, reverse engineering tools, systeem debuggers en Linux executable analyse platforms.',
           keywords: 'ELF voorbeeldbestanden, ELF testbestanden, ELF voorbeelden downloaden, gratis ELF testbestanden, Linux ELF bestanden, .elf testbestanden, Unix executable bestanden, ELF binaire analyse bestanden, reverse engineering ELF bestanden, Linux binaire bestanden, ELF disassembler testbestanden'
         },
@@ -1058,7 +1058,7 @@ export const nl: SamplePageTranslations = {
       },
       exe: {
         meta: {
-          title: 'Gratis EXE voorbeeldbestanden downloaden - Windows executable testbestanden | MorphyHub',
+          title: 'Gratis EXE voorbeeldbestanden downloaden - Windows executable testbestanden | FomiPeek',
           description: 'Download gratis EXE Windows executable voorbeeldbestanden om Windows applicatie uitvoering, EXE analyse, binaire parsing en Windows ontwikkeling tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Windows executable analysers, binaire disassemblers, reverse engineering tools, malware analyse platforms en Windows applicatie ontwikkeling.',
           keywords: 'EXE voorbeeldbestanden, EXE testbestanden, EXE voorbeelden downloaden, gratis EXE testbestanden, Windows EXE bestanden, .exe testbestanden, Windows executable bestanden, EXE binaire analyse bestanden, Windows applicatie bestanden, reverse engineering EXE bestanden, Windows binaire disassembler testbestanden'
         },
@@ -1074,7 +1074,7 @@ export const nl: SamplePageTranslations = {
       },
       ipa: {
         meta: {
-          title: 'Gratis IPA voorbeeldbestanden downloaden - iOS applicatiepakket testbestanden | MorphyHub',
+          title: 'Gratis IPA voorbeeldbestanden downloaden - iOS applicatiepakket testbestanden | FomiPeek',
           description: 'Download gratis IPA iOS applicatiepakket voorbeeldbestanden om iOS app installatie, IPA analyse, iOS app distributie en mobiele ontwikkeling tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van IPA installers, iOS simulators, app analysers, iOS ontwikkeling tools en mobiele app distributie platforms.',
           keywords: 'IPA voorbeeldbestanden, IPA testbestanden, IPA voorbeelden downloaden, gratis IPA testbestanden, iOS IPA bestanden, .ipa testbestanden, iOS app pakket bestanden, IPA installer testbestanden, iOS simulator testbestanden, mobiele app ontwikkeling voorbeelden, iOS app distributie bestanden'
         },
@@ -1090,7 +1090,7 @@ export const nl: SamplePageTranslations = {
       },
       jar: {
         meta: {
-          title: 'Gratis JAR voorbeeldbestanden downloaden - Java archief testbestanden | MorphyHub',
+          title: 'Gratis JAR voorbeeldbestanden downloaden - Java archief testbestanden | FomiPeek',
           description: 'Download gratis JAR Java archief voorbeeldbestanden om Java applicatie uitvoering, JAR extractie, JAR analyse en Java ontwikkeling tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van JAR extractors, Java runtime omgevingen, JAR analysers, Java ontwikkeling tools en Java applicatie deployment platforms.',
           keywords: 'JAR voorbeeldbestanden, JAR testbestanden, JAR voorbeelden downloaden, gratis JAR testbestanden, Java JAR bestanden, .jar testbestanden, Java archief bestanden, JAR extractor testbestanden, Java runtime testbestanden, Java ontwikkeling voorbeelden, JAR analyse bestanden'
         },
@@ -1106,7 +1106,7 @@ export const nl: SamplePageTranslations = {
       },
       crx: {
         meta: {
-          title: 'Gratis CRX voorbeeldbestanden downloaden - Chrome extensie pakket testbestanden | MorphyHub',
+          title: 'Gratis CRX voorbeeldbestanden downloaden - Chrome extensie pakket testbestanden | FomiPeek',
           description: 'Download gratis CRX Chrome extensie pakket voorbeeldbestanden om Chrome extensie installatie, CRX analyse, browser extensie ontwikkeling en web extensie tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van CRX installers, Chrome extensie analysers, browser extensie ontwikkeling tools en web extensie distributie platforms.',
           keywords: 'CRX voorbeeldbestanden, CRX testbestanden, CRX voorbeelden downloaden, gratis CRX testbestanden, Chrome CRX bestanden, .crx testbestanden, Chrome extensie bestanden, CRX installer testbestanden, browser extensie bestanden, web extensie ontwikkeling voorbeelden, Chrome extensie analyse bestanden'
         },
@@ -1122,7 +1122,7 @@ export const nl: SamplePageTranslations = {
       },
       '3ds': {
         meta: {
-          title: 'Gratis 3DS voorbeeldbestanden downloaden - 3D model testbestanden voor 3D printen en modelleren | MorphyHub',
+          title: 'Gratis 3DS voorbeeldbestanden downloaden - 3D model testbestanden voor 3D printen en modelleren | FomiPeek',
           description: 'Download gratis 3DS 3D model voorbeeldbestanden om 3D modelleringssoftware, 3D print tools, mesh conversie en 3D visualisatie applicaties te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van 3D model viewers, 3D printers, CAD software, mesh editors en 3D graphics applicaties.',
           keywords: '3DS voorbeeldbestanden, 3DS testbestanden, 3DS voorbeelden downloaden, gratis 3DS testbestanden, 3D model 3DS bestanden, .3ds testbestanden, 3D modellering bestanden, 3D print testbestanden, CAD 3DS bestanden, mesh model bestanden, 3D graphics voorbeelden'
         },
@@ -1138,7 +1138,7 @@ export const nl: SamplePageTranslations = {
       },
       '3mf': {
         meta: {
-          title: 'Gratis 3MF voorbeeldbestanden downloaden - 3D Manufacturing Format testbestanden voor 3D printen | MorphyHub',
+          title: 'Gratis 3MF voorbeeldbestanden downloaden - 3D Manufacturing Format testbestanden voor 3D printen | FomiPeek',
           description: 'Download gratis 3MF 3D Manufacturing Format voorbeeldbestanden om 3D printen, additieve productie, 3D model slicing en 3D printer compatibiliteit te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van 3D printer slicers, additieve productie software, 3MF viewers, 3D print workflows en moderne 3D productie platforms.',
           keywords: '3MF voorbeeldbestanden, 3MF testbestanden, 3MF voorbeelden downloaden, gratis 3MF testbestanden, 3D print 3MF bestanden, .3mf testbestanden, additieve productie bestanden, 3D printer slicer testbestanden, 3MF viewer testbestanden, 3D productie voorbeelden, moderne 3D print bestanden'
         },
@@ -1154,7 +1154,7 @@ export const nl: SamplePageTranslations = {
       },
       ai: {
         meta: {
-          title: 'Gratis AI voorbeeldbestanden downloaden - Adobe Illustrator vector graphics testbestanden | MorphyHub',
+          title: 'Gratis AI voorbeeldbestanden downloaden - Adobe Illustrator vector graphics testbestanden | FomiPeek',
           description: 'Download gratis AI Adobe Illustrator vector graphics voorbeeldbestanden om vector graphics editing, AI bestand conversie, design software compatibiliteit en grafisch design tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Adobe Illustrator, vector graphics editors, AI bestand converters, design software en professionele grafisch design platforms.',
           keywords: 'AI voorbeeldbestanden, AI testbestanden, AI voorbeelden downloaden, gratis AI testbestanden, Adobe Illustrator AI bestanden, .ai testbestanden, vector graphics bestanden, Illustrator testbestanden, design software bestanden, vector editing voorbeelden, grafisch design AI bestanden'
         },
@@ -1170,7 +1170,7 @@ export const nl: SamplePageTranslations = {
       },
       ase: {
         meta: {
-          title: 'Gratis ASE voorbeeldbestanden downloaden - Aseprite sprite animatie testbestanden | MorphyHub',
+          title: 'Gratis ASE voorbeeldbestanden downloaden - Aseprite sprite animatie testbestanden | FomiPeek',
           description: 'Download gratis ASE Aseprite sprite animatie voorbeeldbestanden om pixel art editing, sprite animatie, game ontwikkeling tools en 2D animatie software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Aseprite, pixel art editors, sprite animatie tools, game ontwikkeling software en 2D animatie platforms.',
           keywords: 'ASE voorbeeldbestanden, ASE testbestanden, ASE voorbeelden downloaden, gratis ASE testbestanden, Aseprite ASE bestanden, .ase testbestanden, sprite animatie bestanden, pixel art testbestanden, game ontwikkeling bestanden, 2D animatie voorbeelden, Aseprite testbestanden'
         },
@@ -1186,7 +1186,7 @@ export const nl: SamplePageTranslations = {
       },
       'animation-fbx': {
         meta: {
-          title: 'Gratis Animation FBX voorbeeldbestanden downloaden - Autodesk FBX 3D animatie testbestanden | MorphyHub',
+          title: 'Gratis Animation FBX voorbeeldbestanden downloaden - Autodesk FBX 3D animatie testbestanden | FomiPeek',
           description: 'Download gratis Animation FBX Autodesk FBX 3D animatie voorbeeldbestanden om 3D animatie, character rigging, motion capture data en 3D graphics software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van 3D animatie software, game engines, motion capture tools, character animatie platforms en 3D graphics applicaties.',
           keywords: 'Animation FBX voorbeeldbestanden, FBX animatie testbestanden, FBX animatie voorbeelden downloaden, gratis FBX animatie testbestanden, Autodesk FBX bestanden, .fbx animatie testbestanden, 3D animatie bestanden, character animatie testbestanden, motion capture bestanden, 3D graphics animatie voorbeelden, game engine FBX bestanden'
         },
@@ -1202,7 +1202,7 @@ export const nl: SamplePageTranslations = {
       },
       assetbundle: {
         meta: {
-          title: 'Gratis AssetBundle voorbeeldbestanden downloaden - Unity AssetBundle testbestanden voor game ontwikkeling | MorphyHub',
+          title: 'Gratis AssetBundle voorbeeldbestanden downloaden - Unity AssetBundle testbestanden voor game ontwikkeling | FomiPeek',
           description: 'Download gratis AssetBundle Unity AssetBundle voorbeeldbestanden om Unity game ontwikkeling, asset loading, game resource management en Unity engine tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Unity engine, game asset loaders, Unity ontwikkeling tools, game resource managers en Unity game ontwikkeling platforms.',
           keywords: 'AssetBundle voorbeeldbestanden, AssetBundle testbestanden, AssetBundle voorbeelden downloaden, gratis AssetBundle testbestanden, Unity AssetBundle bestanden, Unity asset bestanden, game ontwikkeling bestanden, Unity engine testbestanden, game asset loader testbestanden, Unity ontwikkeling voorbeelden, game resource management bestanden'
         },
@@ -1218,7 +1218,7 @@ export const nl: SamplePageTranslations = {
       },
       blend: {
         meta: {
-          title: 'Gratis BLEND voorbeeldbestanden downloaden - Blender 3D project testbestanden | MorphyHub',
+          title: 'Gratis BLEND voorbeeldbestanden downloaden - Blender 3D project testbestanden | FomiPeek',
           description: 'Download gratis BLEND Blender 3D project voorbeeldbestanden om 3D modellering, Blender project compatibiliteit, 3D animatie workflows en 3D graphics software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Blender software, 3D modellering tools, Blender project viewers, 3D animatie platforms en professionele 3D graphics applicaties.',
           keywords: 'BLEND voorbeeldbestanden, BLEND testbestanden, BLEND voorbeelden downloaden, gratis BLEND testbestanden, Blender BLEND bestanden, .blend testbestanden, Blender project bestanden, 3D modellering testbestanden, Blender testbestanden, 3D animatie voorbeelden, 3D graphics BLEND bestanden'
         },
@@ -1234,7 +1234,7 @@ export const nl: SamplePageTranslations = {
       },
       bvh: {
         meta: {
-          title: 'Gratis BVH voorbeeldbestanden downloaden - Biovision Hierarchy motion capture testbestanden | MorphyHub',
+          title: 'Gratis BVH voorbeeldbestanden downloaden - Biovision Hierarchy motion capture testbestanden | FomiPeek',
           description: 'Download gratis BVH Biovision Hierarchy motion capture voorbeeldbestanden om motion capture data, character animatie, skeletale animatie systemen en 3D animatie software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van motion capture viewers, character animatie tools, skeletale animatie systemen, 3D animatie platforms en motion capture analyse software.',
           keywords: 'BVH voorbeeldbestanden, BVH testbestanden, BVH voorbeelden downloaden, gratis BVH testbestanden, Biovision Hierarchy BVH bestanden, .bvh testbestanden, motion capture bestanden, character animatie testbestanden, skeletale animatie bestanden, 3D animatie BVH voorbeelden, motion capture analyse bestanden'
         },
@@ -1250,7 +1250,7 @@ export const nl: SamplePageTranslations = {
       },
       dwg: {
         meta: {
-          title: 'Gratis DWG voorbeeldbestanden downloaden - AutoCAD tekening testbestanden voor CAD design | MorphyHub',
+          title: 'Gratis DWG voorbeeldbestanden downloaden - AutoCAD tekening testbestanden voor CAD design | FomiPeek',
           description: 'Download gratis DWG AutoCAD tekening voorbeeldbestanden om CAD software, AutoCAD compatibiliteit, technische tekening tools en engineering design applicaties te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van AutoCAD, CAD viewers, technische tekening software, engineering design tools en professionele CAD platforms.',
           keywords: 'DWG voorbeeldbestanden, DWG testbestanden, DWG voorbeelden downloaden, gratis DWG testbestanden, AutoCAD DWG bestanden, .dwg testbestanden, CAD tekening bestanden, AutoCAD testbestanden, technische tekening bestanden, engineering design voorbeelden, CAD software DWG bestanden'
         },
@@ -1266,7 +1266,7 @@ export const nl: SamplePageTranslations = {
       },
       dxf: {
         meta: {
-          title: 'Gratis DXF Voorbeeldbestanden Downloaden - Drawing Exchange Format Testbestanden AutoCAD | MorphyHub',
+          title: 'Gratis DXF Voorbeeldbestanden Downloaden - Drawing Exchange Format Testbestanden AutoCAD | FomiPeek',
           description: 'Download gratis DXF Drawing Exchange Format voorbeeldbestanden om CAD-software, DXF-converters en technische tekenhulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van AutoCAD, CAD-viewers, DXF-parsers en tekenbestand uitwisselingsapplicaties.',
           keywords: 'DXF voorbeeldbestanden, DXF testbestanden, DXF voorbeelden downloaden, gratis DXF testbestanden, AutoCAD DXF bestanden, Drawing Exchange Format bestanden, CAD DXF bestanden, DXF converter testbestanden, technische tekenbestanden, DXF parser testbestanden, CAD bestandsuitwisseling voorbeelden'
         },
@@ -1282,7 +1282,7 @@ export const nl: SamplePageTranslations = {
       },
       ifc: {
         meta: {
-          title: 'Gratis IFC Voorbeeldbestanden Downloaden - Industry Foundation Classes BIM Testbestanden | MorphyHub',
+          title: 'Gratis IFC Voorbeeldbestanden Downloaden - Industry Foundation Classes BIM Testbestanden | FomiPeek',
           description: 'Download gratis IFC Industry Foundation Classes voorbeeldbestanden om BIM-software, IFC-viewers, bouwinformatie modelleringshulpmiddelen en bouwbeheerapplicaties te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Revit, ArchiCAD, IFC-parsers, BIM-viewers en gebouwontwerpsoftware.',
           keywords: 'IFC voorbeeldbestanden, IFC testbestanden, IFC voorbeelden downloaden, gratis IFC testbestanden, Industry Foundation Classes bestanden, BIM IFC bestanden, bouwinformatie modellering bestanden, IFC viewer testbestanden, bouwsoftware bestanden, IFC parser testbestanden, BIM uitwisselingsformaat voorbeelden'
         },
@@ -1298,7 +1298,7 @@ export const nl: SamplePageTranslations = {
       },
       iges: {
         meta: {
-          title: 'Gratis IGES Voorbeeldbestanden Downloaden - Initial Graphics Exchange Specification CAD Testbestanden | MorphyHub',
+          title: 'Gratis IGES Voorbeeldbestanden Downloaden - Initial Graphics Exchange Specification CAD Testbestanden | FomiPeek',
           description: 'Download gratis IGES Initial Graphics Exchange Specification voorbeeldbestanden om CAD-software, IGES-converters, 3D-modelleringshulpmiddelen en engineering design applicaties te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van CAD-systemen, IGES-parsers, 3D-model uitwisselingshulpmiddelen en engineering software.',
           keywords: 'IGES voorbeeldbestanden, IGES testbestanden, IGES voorbeelden downloaden, gratis IGES testbestanden, Initial Graphics Exchange Specification bestanden, CAD IGES bestanden, 3D-model uitwisseling bestanden, IGES converter testbestanden, engineering design bestanden, IGES parser testbestanden, CAD uitwisselingsformaat voorbeelden'
         },
@@ -1314,7 +1314,7 @@ export const nl: SamplePageTranslations = {
       },
       igs: {
         meta: {
-          title: 'Gratis IGS Voorbeeldbestanden Downloaden - Initial Graphics Exchange Specification CAD Testbestanden | MorphyHub',
+          title: 'Gratis IGS Voorbeeldbestanden Downloaden - Initial Graphics Exchange Specification CAD Testbestanden | FomiPeek',
           description: 'Download gratis IGS Initial Graphics Exchange Specification voorbeeldbestanden om CAD-software, IGS-converters, 3D-modelleringshulpmiddelen en engineering design applicaties te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van CAD-systemen, IGS-parsers, 3D-model uitwisselingshulpmiddelen en engineering software.',
           keywords: 'IGS voorbeeldbestanden, IGS testbestanden, IGS voorbeelden downloaden, gratis IGS testbestanden, Initial Graphics Exchange Specification bestanden, CAD IGS bestanden, 3D-model uitwisseling bestanden, IGS converter testbestanden, engineering design bestanden, IGS parser testbestanden, CAD uitwisselingsformaat voorbeelden'
         },
@@ -1330,7 +1330,7 @@ export const nl: SamplePageTranslations = {
       },
       las: {
         meta: {
-          title: 'Gratis LAS Voorbeeldbestanden Downloaden - LiDAR Point Cloud Data Testbestanden | MorphyHub',
+          title: 'Gratis LAS Voorbeeldbestanden Downloaden - LiDAR Point Cloud Data Testbestanden | FomiPeek',
           description: 'Download gratis LAS LiDAR point cloud voorbeeldbestanden om point cloud verwerking, LiDAR-analysehulpmiddelen, 3D-mapping software en geo-ruimtelijke applicaties te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van LAS-parsers, point cloud viewers, LiDAR-verwerkingshulpmiddelen, 3D-mapping software en geo-ruimtelijke analyseplatforms.',
           keywords: 'LAS voorbeeldbestanden, LAS testbestanden, LAS voorbeelden downloaden, gratis LAS testbestanden, LiDAR point cloud bestanden, LAS formaat bestanden, point cloud data bestanden, LAS parser testbestanden, geo-ruimtelijke bestanden, LiDAR analyse testbestanden, 3D-mapping voorbeelden'
         },
@@ -1346,7 +1346,7 @@ export const nl: SamplePageTranslations = {
       },
       ma: {
         meta: {
-          title: 'Gratis MA Voorbeeldbestanden Downloaden - Maya ASCII Scene Testbestanden | MorphyHub',
+          title: 'Gratis MA Voorbeeldbestanden Downloaden - Maya ASCII Scene Testbestanden | FomiPeek',
           description: 'Download gratis MA Maya ASCII scene voorbeeldbestanden om Maya scene conversie, 3D-animatiesoftware, MA-bestandsparsers en animatiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Autodesk Maya, MA-bestandsviewers, scene conversiehulpmiddelen, 3D-animatieplatforms en animatieworkflow software.',
           keywords: 'MA voorbeeldbestanden, MA testbestanden, MA voorbeelden downloaden, gratis MA testbestanden, Maya ASCII scene bestanden, MA formaat bestanden, 3D-animatie scene bestanden, MA parser testbestanden, animatie bestanden, Maya scene testbestanden, 3D-animatie voorbeelden'
         },
@@ -1362,7 +1362,7 @@ export const nl: SamplePageTranslations = {
       },
       max: {
         meta: {
-          title: 'Gratis MAX Voorbeeldbestanden Downloaden - 3ds Max Scene Testbestanden | MorphyHub',
+          title: 'Gratis MAX Voorbeeldbestanden Downloaden - 3ds Max Scene Testbestanden | FomiPeek',
           description: 'Download gratis MAX 3ds Max scene voorbeeldbestanden om 3ds Max scene conversie, 3D-modelleringssoftware, MAX-bestandsparsers en 3D-designhulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Autodesk 3ds Max, MAX-bestandsviewers, scene conversiehulpmiddelen, 3D-modelleringsplatforms en 3D-design workflow software.',
           keywords: 'MAX voorbeeldbestanden, MAX testbestanden, MAX voorbeelden downloaden, gratis MAX testbestanden, 3ds Max scene bestanden, MAX formaat bestanden, 3D-modellering scene bestanden, MAX parser testbestanden, 3D-design bestanden, 3ds Max scene testbestanden, 3D-modellering voorbeelden'
         },
@@ -1378,7 +1378,7 @@ export const nl: SamplePageTranslations = {
       },
       mb: {
         meta: {
-          title: 'Gratis MB Voorbeeldbestanden Downloaden - Maya Binary Scene Testbestanden | MorphyHub',
+          title: 'Gratis MB Voorbeeldbestanden Downloaden - Maya Binary Scene Testbestanden | FomiPeek',
           description: 'Download gratis MB Maya Binary scene voorbeeldbestanden om Maya scene conversie, 3D-animatiesoftware, MB-bestandsparsers en animatiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Autodesk Maya, MB-bestandsviewers, scene conversiehulpmiddelen, 3D-animatieplatforms en animatieworkflow software.',
           keywords: 'MB voorbeeldbestanden, MB testbestanden, MB voorbeelden downloaden, gratis MB testbestanden, Maya Binary scene bestanden, MB formaat bestanden, 3D-animatie scene bestanden, MB parser testbestanden, animatie bestanden, Maya scene testbestanden, 3D-animatie voorbeelden'
         },
@@ -1394,7 +1394,7 @@ export const nl: SamplePageTranslations = {
       },
       indd: {
         meta: {
-          title: 'Gratis INDD Voorbeeldbestanden Downloaden - Adobe InDesign Document Testbestanden | MorphyHub',
+          title: 'Gratis INDD Voorbeeldbestanden Downloaden - Adobe InDesign Document Testbestanden | FomiPeek',
           description: 'Download gratis INDD Adobe InDesign document voorbeeldbestanden om InDesign-compatibiliteit, INDD-converters, desktop publishing software en layout designhulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Adobe InDesign, INDD-bestandsviewers, document conversiehulpmiddelen, desktop publishing platforms en layout design software.',
           keywords: 'INDD voorbeeldbestanden, INDD testbestanden, INDD voorbeelden downloaden, gratis INDD testbestanden, Adobe InDesign bestanden, INDD formaat bestanden, desktop publishing bestanden, INDD converter testbestanden, layout design bestanden, InDesign document testbestanden, publicatiesoftware voorbeelden'
         },
@@ -1410,7 +1410,7 @@ export const nl: SamplePageTranslations = {
       },
       'animated-gif': {
         meta: {
-          title: 'Gratis Geanimeerde GIF Voorbeeldbestanden Downloaden - Geanimeerde Afbeelding Testbestanden | MorphyHub',
+          title: 'Gratis Geanimeerde GIF Voorbeeldbestanden Downloaden - Geanimeerde Afbeelding Testbestanden | FomiPeek',
           description: 'Download gratis geanimeerde GIF voorbeeldbestanden om GIF-animatieweergave, afbeeldingsviewers, webbrowsers en animatiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van GIF-viewers, animatiespelers, afbeeldingsverwerkingshulpmiddelen, webontwikkelingsplatforms en multimediatoepassingen.',
           keywords: 'geanimeerde GIF voorbeeldbestanden, geanimeerde GIF testbestanden, geanimeerde GIF voorbeelden downloaden, gratis geanimeerde GIF testbestanden, GIF-animatie bestanden, geanimeerde afbeeldingsbestanden, GIF-speler testbestanden, animatie bestanden, web-animatie testbestanden, multimedi GIF voorbeelden'
         },
@@ -1426,7 +1426,7 @@ export const nl: SamplePageTranslations = {
       },
       apng: {
         meta: {
-          title: 'Gratis APNG Voorbeeldbestanden Downloaden - Geanimeerde PNG Afbeelding Testbestanden | MorphyHub',
+          title: 'Gratis APNG Voorbeeldbestanden Downloaden - Geanimeerde PNG Afbeelding Testbestanden | FomiPeek',
           description: 'Download gratis APNG Animated Portable Network Graphics voorbeeldbestanden om APNG-animatieweergave, afbeeldingsviewers, webbrowsers en moderne afbeeldingshulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van APNG-viewers, animatiespelers, afbeeldingsverwerkingshulpmiddelen, webontwikkelingsplatforms en moderne multimediatoepassingen.',
           keywords: 'APNG voorbeeldbestanden, APNG testbestanden, APNG voorbeelden downloaden, gratis APNG testbestanden, Animated PNG bestanden, APNG-animatie bestanden, APNG-speler testbestanden, animatie bestanden, web-animatie testbestanden, modern afbeeldingsformaat voorbeelden'
         },
@@ -1442,7 +1442,7 @@ export const nl: SamplePageTranslations = {
       },
       avif: {
         meta: {
-          title: 'Gratis AVIF Voorbeeldbestanden Downloaden - AV1 Image File Format Testbestanden | MorphyHub',
+          title: 'Gratis AVIF Voorbeeldbestanden Downloaden - AV1 Image File Format Testbestanden | FomiPeek',
           description: 'Download gratis AVIF AV1 Image File Format voorbeeldbestanden om moderne afbeeldingscompressie, AVIF-viewers, webbrowsers en afbeeldingshulpmiddelen van de volgende generatie te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van AVIF-viewers, afbeeldingsverwerkingshulpmiddelen, webontwikkelingsplatforms, modern afbeeldingsformaat ondersteuning en multimediatoepassingen van de volgende generatie.',
           keywords: 'AVIF voorbeeldbestanden, AVIF testbestanden, AVIF voorbeelden downloaden, gratis AVIF testbestanden, AV1 Image File Format bestanden, AVIF afbeeldingsbestanden, AVIF viewer testbestanden, moderne afbeeldingsbestanden, web afbeeldingsformaat testbestanden, afbeeldingsformaat volgende generatie voorbeelden'
         },
@@ -1458,7 +1458,7 @@ export const nl: SamplePageTranslations = {
       },
       bmp: {
         meta: {
-          title: 'Gratis BMP Voorbeeldbestanden Downloaden - Bitmap Afbeelding Testbestanden | MorphyHub',
+          title: 'Gratis BMP Voorbeeldbestanden Downloaden - Bitmap Afbeelding Testbestanden | FomiPeek',
           description: 'Download gratis BMP bitmap voorbeeldbestanden om afbeeldingsviewers, BMP-converters, grafische software en afbeeldingsverwerkingshulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van BMP-viewers, afbeeldingseditors, grafische conversiehulpmiddelen, afbeeldingsverwerkingsplatforms en bitmap formaat ondersteuning.',
           keywords: 'BMP voorbeeldbestanden, BMP testbestanden, BMP voorbeelden downloaden, gratis BMP testbestanden, bitmap afbeeldingsbestanden, BMP formaat bestanden, afbeeldingsviewer testbestanden, grafische bestanden, afbeeldingsconversie testbestanden, bitmap formaat voorbeelden'
         },
@@ -1474,7 +1474,7 @@ export const nl: SamplePageTranslations = {
       },
       'barcode-svg': {
         meta: {
-          title: 'Gratis Barcode SVG Voorbeeldbestanden Downloaden - Schaalbare Vector Barcode Testbestanden | MorphyHub',
+          title: 'Gratis Barcode SVG Voorbeeldbestanden Downloaden - Schaalbare Vector Barcode Testbestanden | FomiPeek',
           description: 'Download gratis barcode SVG voorbeeldbestanden om barcode-generatie, SVG barcode-lezers, vector grafische hulpmiddelen en barcode-scanapplicaties te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van barcode-generatoren, SVG-viewers, barcode-scanhulpmiddelen, vector grafische platforms en barcode-herkenningssoftware.',
           keywords: 'barcode SVG voorbeeldbestanden, barcode SVG testbestanden, barcode SVG voorbeelden downloaden, gratis barcode SVG testbestanden, SVG barcode bestanden, vector barcode bestanden, barcode generator testbestanden, SVG bestanden, barcode scan testbestanden, vector grafische voorbeelden'
         },
@@ -1490,7 +1490,7 @@ export const nl: SamplePageTranslations = {
       },
       avi: {
         meta: {
-          title: 'Gratis AVI Voorbeeldbestanden Downloaden - Audio Video Interleave Video Testbestanden | MorphyHub',
+          title: 'Gratis AVI Voorbeeldbestanden Downloaden - Audio Video Interleave Video Testbestanden | FomiPeek',
           description: 'Download gratis AVI Audio Video Interleave voorbeeldbestanden om videospelers, AVI-converters, multimedi software en videoverwerkingshulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van AVI-spelers, video-editors, multimediaconversiehulpmiddelen, videoverwerkingsplatforms en video formaat ondersteuning.',
           keywords: 'AVI voorbeeldbestanden, AVI testbestanden, AVI voorbeelden downloaden, gratis AVI testbestanden, Audio Video Interleave bestanden, AVI videobestanden, videospeler testbestanden, multimediabestanden, videoconversie testbestanden, video formaat voorbeelden'
         },
@@ -1506,7 +1506,7 @@ export const nl: SamplePageTranslations = {
       },
       '3gp': {
         meta: {
-          title: 'Gratis 3GP Voorbeeldbestanden Downloaden - 3GPP Mobile Video Testbestanden | MorphyHub',
+          title: 'Gratis 3GP Voorbeeldbestanden Downloaden - 3GPP Mobile Video Testbestanden | FomiPeek',
           description: 'Download gratis 3GP 3GPP mobile video voorbeeldbestanden om mobiele videospelers, 3GP-converters, multimedi software en mobiele videoverwerkingshulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van 3GP-spelers, mobiele video-editors, videoconversiehulpmiddelen, mobiele multimediplatforms en mobiel video formaat ondersteuning.',
           keywords: '3GP voorbeeldbestanden, 3GP testbestanden, 3GP voorbeelden downloaden, gratis 3GP testbestanden, 3GPP mobile video bestanden, 3GP videobestanden, mobiele videospeler testbestanden, multimediabestanden, mobiele videoconversie testbestanden, mobiel video formaat voorbeelden'
         },
@@ -1522,7 +1522,7 @@ export const nl: SamplePageTranslations = {
       },
       dav: {
         meta: {
-          title: 'Gratis DAV Voorbeeldbestanden Downloaden - DAV Video Testbestanden voor Beveiligingscamera\'s | MorphyHub',
+          title: 'Gratis DAV Voorbeeldbestanden Downloaden - DAV Video Testbestanden voor Beveiligingscamera\'s | FomiPeek',
           description: 'Download gratis DAV voorbeeldbestanden om DAV-videospelers, videoverwerking van beveiligingscamera\'s, DAV-converters en video-bewakingsanalysehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van DAV-afspelen, DAV-naar-MP4-converters, beveiligingscamera-software, video-bewakingshulpmiddelen en DAV-formaatcompatibiliteit.',
           keywords: 'DAV voorbeeldbestanden, DAV testbestanden, DAV voorbeelden downloaden, gratis DAV testbestanden, DAV videobestanden, beveiligingscamera videobestanden, DAV naar MP4 converter, DAV-speler test, video-bewaking voorbeelden, DAV-formaat testbestanden, video-bewaking testbestanden'
         },
@@ -1538,7 +1538,7 @@ export const nl: SamplePageTranslations = {
       },
       dds: {
         meta: {
-          title: 'Gratis DDS Voorbeeldbestanden Downloaden - DirectDraw Surface Textuur Testbestanden | MorphyHub',
+          title: 'Gratis DDS Voorbeeldbestanden Downloaden - DirectDraw Surface Textuur Testbestanden | FomiPeek',
           description: 'Download gratis DDS DirectDraw Surface voorbeeldbestanden om textuurafbeeldingsconversie, DDS-weergave, spelontwikkelingshulpmiddelen en grafische verwerkingssoftware te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van DDS-textuurladen, DDS-naar-PNG-converters, spel-engine-compatibiliteit, textuurcompressiehulpmiddelen en DirectDraw Surface-formaatondersteuning.',
           keywords: 'DDS voorbeeldbestanden, DDS testbestanden, DDS voorbeelden downloaden, gratis DDS testbestanden, DirectDraw Surface bestanden, DDS textuurbestanden, DDS naar PNG converter, textuurafbeelding voorbeelden, spelontwikkeling testbestanden, DDS-formaat test, grafische textuur voorbeelden'
         },
@@ -1554,7 +1554,7 @@ export const nl: SamplePageTranslations = {
       },
       dng: {
         meta: {
-          title: 'Gratis DNG Voorbeeldbestanden Downloaden - Digital Negative Raw Afbeelding Testbestanden | MorphyHub',
+          title: 'Gratis DNG Voorbeeldbestanden Downloaden - Digital Negative Raw Afbeelding Testbestanden | FomiPeek',
           description: 'Download gratis DNG Digital Negative raw afbeeldingsvoorbeeldbestanden om raw afbeeldingsverwerking, DNG-conversie, fotosoftware en professionele afbeeldingsbewerkingshulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van DNG-naar-JPEG-converters, raw afbeeldingseditors, DNG-weergave, camera raw-verwerking en Adobe Digital Negative-formaatondersteuning.',
           keywords: 'DNG voorbeeldbestanden, DNG testbestanden, DNG voorbeelden downloaden, gratis DNG testbestanden, Digital Negative bestanden, DNG raw afbeeldingsbestanden, DNG naar JPEG converter, raw afbeeldingsverwerking, fotografie testbestanden, DNG-formaat test, camera raw voorbeelden, Adobe DNG testbestanden'
         },
@@ -1570,7 +1570,7 @@ export const nl: SamplePageTranslations = {
       },
       eps: {
         meta: {
-          title: 'Gratis EPS Voorbeeldbestanden Downloaden - Encapsulated PostScript Vectorafbeelding Testbestanden | MorphyHub',
+          title: 'Gratis EPS Voorbeeldbestanden Downloaden - Encapsulated PostScript Vectorafbeelding Testbestanden | FomiPeek',
           description: 'Download gratis EPS Encapsulated PostScript voorbeeldbestanden om vectorafbeeldingsconversie, EPS-weergave, PostScript-verwerking en professionele designsoftware te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van EPS-naar-PDF-converters, EPS-naar-SVG-converters, vectorafbeeldingseditors, PostScript-viewers en Encapsulated PostScript-formaatcompatibiliteit.',
           keywords: 'EPS voorbeeldbestanden, EPS testbestanden, EPS voorbeelden downloaden, gratis EPS testbestanden, Encapsulated PostScript bestanden, EPS vectorafbeeldingen, EPS naar PDF converter, EPS naar SVG converter, vectorafbeelding voorbeelden, PostScript testbestanden, designsoftware testbestanden, EPS-formaat test'
         },
@@ -1586,7 +1586,7 @@ export const nl: SamplePageTranslations = {
       },
       exr: {
         meta: {
-          title: 'Gratis EXR Voorbeeldbestanden Downloaden - OpenEXR High Dynamic Range Afbeelding Testbestanden | MorphyHub',
+          title: 'Gratis EXR Voorbeeldbestanden Downloaden - OpenEXR High Dynamic Range Afbeelding Testbestanden | FomiPeek',
           description: 'Download gratis EXR OpenEXR High Dynamic Range afbeeldingsvoorbeeldbestanden om HDR-afbeeldingsverwerking, EXR-conversie, professionele fotosoftware en visuele effectenhulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van EXR-naar-JPEG-converters, HDR-afbeeldingseditors, EXR-weergave, High Dynamic Range-verwerking en OpenEXR-formaatondersteuning.',
           keywords: 'EXR voorbeeldbestanden, EXR testbestanden, EXR voorbeelden downloaden, gratis EXR testbestanden, OpenEXR bestanden, EXR HDR-afbeeldingen, EXR naar JPEG converter, HDR-afbeeldingsverwerking, High Dynamic Range voorbeelden, visuele effecten testbestanden, EXR-formaat test, professionele fotografie testbestanden'
         },
@@ -1602,7 +1602,7 @@ export const nl: SamplePageTranslations = {
       },
       hdr: {
         meta: {
-          title: 'Gratis HDR Voorbeeldbestanden Downloaden - High Dynamic Range Afbeelding Testbestanden | MorphyHub',
+          title: 'Gratis HDR Voorbeeldbestanden Downloaden - High Dynamic Range Afbeelding Testbestanden | FomiPeek',
           description: 'Download gratis HDR High Dynamic Range afbeeldingsvoorbeeldbestanden om HDR-afbeeldingsverwerking, HDR-conversie, fotosoftware en afbeeldingsbewerkingshulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van HDR-naar-JPEG-converters, HDR-afbeeldingseditors, HDR-weergave, tone mapping-hulpmiddelen en High Dynamic Range-formaatondersteuning.',
           keywords: 'HDR voorbeeldbestanden, HDR testbestanden, HDR voorbeelden downloaden, gratis HDR testbestanden, High Dynamic Range bestanden, HDR-afbeeldingen, HDR naar JPEG converter, HDR-afbeeldingsverwerking, tone mapping testbestanden, fotografie testbestanden, HDR-formaat test, High Dynamic Range voorbeelden'
         },
@@ -1618,7 +1618,7 @@ export const nl: SamplePageTranslations = {
       },
       heic: {
         meta: {
-          title: 'Gratis HEIC Voorbeeldbestanden Downloaden - High Efficiency Image Container Testbestanden | MorphyHub',
+          title: 'Gratis HEIC Voorbeeldbestanden Downloaden - High Efficiency Image Container Testbestanden | FomiPeek',
           description: 'Download gratis HEIC High Efficiency Image Container voorbeeldbestanden om HEIC-afbeeldingsconversie, HEIC-weergave, moderne afbeeldingsformaatverwerking en mobiele fotografiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van HEIC-naar-JPEG-converters, HEIC-naar-PNG-converters, iOS-afbeeldingsverwerking, HEIC-weergavesoftware en High Efficiency Image Container-formaatondersteuning.',
           keywords: 'HEIC voorbeeldbestanden, HEIC testbestanden, HEIC voorbeelden downloaden, gratis HEIC testbestanden, High Efficiency Image Container bestanden, HEIC-afbeeldingen, HEIC naar JPEG converter, HEIC naar PNG converter, iOS-afbeelding voorbeelden, mobiele fotografie testbestanden, HEIC-formaat test, moderne afbeeldingsformaat voorbeelden'
         },
@@ -1634,7 +1634,7 @@ export const nl: SamplePageTranslations = {
       },
       heif: {
         meta: {
-          title: 'Gratis HEIF Voorbeeldbestanden Downloaden - High Efficiency Image Format Testbestanden | MorphyHub',
+          title: 'Gratis HEIF Voorbeeldbestanden Downloaden - High Efficiency Image Format Testbestanden | FomiPeek',
           description: 'Download gratis HEIF High Efficiency Image Format voorbeeldbestanden om HEIF-afbeeldingsconversie, HEIF-weergave, moderne afbeeldingsformaatverwerking en mobiele fotografiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van HEIF-naar-JPEG-converters, HEIF-naar-PNG-converters, mobiele afbeeldingsverwerking, HEIF-weergavesoftware en High Efficiency Image Format-ondersteuning.',
           keywords: 'HEIF voorbeeldbestanden, HEIF testbestanden, HEIF voorbeelden downloaden, gratis HEIF testbestanden, High Efficiency Image Format bestanden, HEIF-afbeeldingen, HEIF naar JPEG converter, HEIF naar PNG converter, mobiele afbeelding voorbeelden, moderne afbeeldingsformaat testbestanden, HEIF-formaat test, afbeeldingscompressie testbestanden'
         },
@@ -1650,7 +1650,7 @@ export const nl: SamplePageTranslations = {
       },
       icns: {
         meta: {
-          title: 'Gratis ICNS Voorbeeldbestanden Downloaden - macOS Pictogram Testbestanden | MorphyHub',
+          title: 'Gratis ICNS Voorbeeldbestanden Downloaden - macOS Pictogram Testbestanden | FomiPeek',
           description: 'Download gratis ICNS macOS-pictogramvoorbeeldbestanden om macOS-pictogramconversie, ICNS-weergave, pictogramontwerphulpmiddelen en macOS-applicatieontwikkeling te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van ICNS-naar-PNG-converters, ICNS-naar-ICO-converters, macOS-pictogrameditors, pictogramontwerpsoftware en macOS-pictogramformaatondersteuning.',
           keywords: 'ICNS voorbeeldbestanden, ICNS testbestanden, ICNS voorbeelden downloaden, gratis ICNS testbestanden, macOS pictogram bestanden, ICNS-pictogrammen, ICNS naar PNG converter, ICNS naar ICO converter, macOS pictogramontwerp, pictogrameditor testbestanden, ICNS-formaat test, Apple-pictogram voorbeelden'
         },
@@ -1666,7 +1666,7 @@ export const nl: SamplePageTranslations = {
       },
       ico: {
         meta: {
-          title: 'Gratis ICO Voorbeeldbestanden Downloaden - Windows Pictogram Testbestanden | MorphyHub',
+          title: 'Gratis ICO Voorbeeldbestanden Downloaden - Windows Pictogram Testbestanden | FomiPeek',
           description: 'Download gratis ICO Windows-pictogramvoorbeeldbestanden om Windows-pictogramconversie, ICO-weergave, pictogramontwerphulpmiddelen en Windows-applicatieontwikkeling te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van ICO-naar-PNG-converters, ICO-naar-ICNS-converters, Windows-pictogrameditors, pictogramontwerpsoftware en Windows-pictogramformaatondersteuning.',
           keywords: 'ICO voorbeeldbestanden, ICO testbestanden, ICO voorbeelden downloaden, gratis ICO testbestanden, Windows pictogram bestanden, ICO-pictogrammen, ICO naar PNG converter, ICO naar ICNS converter, Windows pictogramontwerp, pictogrameditor testbestanden, ICO-formaat test, Windows-pictogram voorbeelden'
         },
@@ -1682,7 +1682,7 @@ export const nl: SamplePageTranslations = {
       },
       jpeg: {
         meta: {
-          title: 'Gratis JPEG Voorbeeldbestanden Downloaden - JPEG Afbeelding Testbestanden voor Conversiehulpmiddelen | MorphyHub',
+          title: 'Gratis JPEG Voorbeeldbestanden Downloaden - JPEG Afbeelding Testbestanden voor Conversiehulpmiddelen | FomiPeek',
           description: 'Download gratis JPEG voorbeeldbestanden om JPEG-afbeeldingsconversie, JPEG-compressie, afbeeldingsverwerkingshulpmiddelen en foto-bewerkingssoftware te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van JPEG-naar-PNG-converters, JPEG-naar-PDF-converters, afbeeldingscompressiehulpmiddelen, JPEG-optimalisatie en Joint Photographic Experts Group-formaatondersteuning.',
           keywords: 'JPEG voorbeeldbestanden, JPEG testbestanden, JPEG voorbeelden downloaden, gratis JPEG testbestanden, JPEG afbeeldingsbestanden, JPEG naar PNG converter, JPEG naar PDF converter, afbeeldingscompressie testbestanden, foto-bewerking testbestanden, JPEG-formaat test, afbeeldingsverwerking voorbeelden'
         },
@@ -1698,7 +1698,7 @@ export const nl: SamplePageTranslations = {
       },
       jpg: {
         meta: {
-          title: 'Gratis JPG Voorbeeldbestanden Downloaden - JPG Afbeelding Testbestanden voor Conversiehulpmiddelen | MorphyHub',
+          title: 'Gratis JPG Voorbeeldbestanden Downloaden - JPG Afbeelding Testbestanden voor Conversiehulpmiddelen | FomiPeek',
           description: 'Download gratis JPG voorbeeldbestanden om JPG-afbeeldingsconversie, JPG-compressie, afbeeldingsverwerkingshulpmiddelen en foto-bewerkingssoftware te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van JPG-naar-PNG-converters, JPG-naar-PDF-converters, afbeeldingscompressiehulpmiddelen, JPG-optimalisatie en Joint Photographic Experts Group-formaatondersteuning.',
           keywords: 'JPG voorbeeldbestanden, JPG testbestanden, JPG voorbeelden downloaden, gratis JPG testbestanden, JPG afbeeldingsbestanden, JPG naar PNG converter, JPG naar PDF converter, afbeeldingscompressie testbestanden, foto-bewerking testbestanden, JPG-formaat test, afbeeldingsverwerking voorbeelden'
         },
@@ -1714,7 +1714,7 @@ export const nl: SamplePageTranslations = {
       },
       m4v: {
         meta: {
-          title: 'Gratis M4V Voorbeeldbestanden Downloaden - M4V Video Testbestanden voor Conversiehulpmiddelen | MorphyHub',
+          title: 'Gratis M4V Voorbeeldbestanden Downloaden - M4V Video Testbestanden voor Conversiehulpmiddelen | FomiPeek',
           description: 'Download gratis M4V voorbeeldbestanden om M4V-videoconversie, M4V-afspelen, videoverwerkingshulpmiddelen en multimedi software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van M4V-naar-MP4-converters, M4V-naar-AVI-converters, videospelers, M4V-afspeelcompatibiliteit en MPEG-4-videoformaatondersteuning.',
           keywords: 'M4V voorbeeldbestanden, M4V testbestanden, M4V voorbeelden downloaden, gratis M4V testbestanden, M4V videobestanden, M4V naar MP4 converter, M4V naar AVI converter, videospeler testbestanden, M4V-afspelen test, videoconversie voorbeelden, MPEG-4 videoformaat test'
         },
@@ -1730,7 +1730,7 @@ export const nl: SamplePageTranslations = {
       },
       mkv: {
         meta: {
-          title: 'Gratis MKV Voorbeeldbestanden Downloaden - Matroska Video Testbestanden voor Conversiehulpmiddelen | MorphyHub',
+          title: 'Gratis MKV Voorbeeldbestanden Downloaden - Matroska Video Testbestanden voor Conversiehulpmiddelen | FomiPeek',
           description: 'Download gratis MKV Matroska voorbeeldbestanden om MKV-videoconversie, MKV-afspelen, videoverwerkingshulpmiddelen en multimedi software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van MKV-naar-MP4-converters, MKV-naar-AVI-converters, videospelers, MKV-afspeelcompatibiliteit en Matroska-videoformaatondersteuning.',
           keywords: 'MKV voorbeeldbestanden, MKV testbestanden, MKV voorbeelden downloaden, gratis MKV testbestanden, Matroska videobestanden, MKV naar MP4 converter, MKV naar AVI converter, videospeler testbestanden, MKV-afspelen test, videoconversie voorbeelden, Matroska-formaat test'
         },
@@ -1746,7 +1746,7 @@ export const nl: SamplePageTranslations = {
       },
       aac: {
         meta: {
-          title: 'Gratis AAC Voorbeeldbestanden Downloaden - Advanced Audio Coding Testbestanden | MorphyHub',
+          title: 'Gratis AAC Voorbeeldbestanden Downloaden - Advanced Audio Coding Testbestanden | FomiPeek',
           description: 'Download gratis AAC Advanced Audio Coding voorbeeldbestanden om audioconversie, AAC-afspelen, audioverwerkingshulpmiddelen en multimedi software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van AAC-naar-MP3-converters, AAC-naar-WAV-converters, audioplayers, AAC-afspeelcompatibiliteit en Advanced Audio Coding-formaatondersteuning.',
           keywords: 'AAC voorbeeldbestanden, AAC testbestanden, AAC voorbeelden downloaden, gratis AAC testbestanden, Advanced Audio Coding bestanden, AAC naar MP3 converter, AAC naar WAV converter, audioplayer testbestanden, AAC-afspelen test, audioconversie voorbeelden, Advanced Audio Coding-formaat test'
         },
@@ -1762,7 +1762,7 @@ export const nl: SamplePageTranslations = {
       },
       ac3: {
         meta: {
-          title: 'Gratis AC3 Voorbeeldbestanden Downloaden - Dolby Digital Audio Testbestanden | MorphyHub',
+          title: 'Gratis AC3 Voorbeeldbestanden Downloaden - Dolby Digital Audio Testbestanden | FomiPeek',
           description: 'Download gratis AC3 Dolby Digital voorbeeldbestanden om audioconversie, AC3-afspelen, audioverwerkingshulpmiddelen en multimedi software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van AC3-naar-MP3-converters, AC3-naar-WAV-converters, audioplayers, AC3-afspeelcompatibiliteit en Dolby Digital-formaatondersteuning.',
           keywords: 'AC3 voorbeeldbestanden, AC3 testbestanden, AC3 voorbeelden downloaden, gratis AC3 testbestanden, Dolby Digital bestanden, AC3 naar MP3 converter, AC3 naar WAV converter, audioplayer testbestanden, AC3-afspelen test, audioconversie voorbeelden, Dolby Digital-formaat test'
         },
@@ -1778,7 +1778,7 @@ export const nl: SamplePageTranslations = {
       },
       aif: {
         meta: {
-          title: 'Gratis AIF Voorbeeldbestanden Downloaden - Audio Interchange File Format Testbestanden | MorphyHub',
+          title: 'Gratis AIF Voorbeeldbestanden Downloaden - Audio Interchange File Format Testbestanden | FomiPeek',
           description: 'Download gratis AIF Audio Interchange File Format voorbeeldbestanden om audioconversie, AIF-afspelen, audioverwerkingshulpmiddelen en multimedi software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van AIF-naar-MP3-converters, AIF-naar-WAV-converters, audioplayers, AIF-afspeelcompatibiliteit en Audio Interchange File Format-ondersteuning.',
           keywords: 'AIF voorbeeldbestanden, AIF testbestanden, AIF voorbeelden downloaden, gratis AIF testbestanden, Audio Interchange File Format bestanden, AIF naar MP3 converter, AIF naar WAV converter, audioplayer testbestanden, AIF-afspelen test, audioconversie voorbeelden, Audio Interchange File Format test'
         },
@@ -1794,7 +1794,7 @@ export const nl: SamplePageTranslations = {
       },
       aiff: {
         meta: {
-          title: 'Gratis AIFF Voorbeeldbestanden Downloaden - Audio Interchange File Format Testbestanden | MorphyHub',
+          title: 'Gratis AIFF Voorbeeldbestanden Downloaden - Audio Interchange File Format Testbestanden | FomiPeek',
           description: 'Download gratis AIFF Audio Interchange File Format voorbeeldbestanden om audioconversie, AIFF-afspelen, audioverwerkingshulpmiddelen en multimedi software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van AIFF-naar-MP3-converters, AIFF-naar-WAV-converters, audioplayers, AIFF-afspeelcompatibiliteit en Audio Interchange File Format-ondersteuning.',
           keywords: 'AIFF voorbeeldbestanden, AIFF testbestanden, AIFF voorbeelden downloaden, gratis AIFF testbestanden, Audio Interchange File Format bestanden, AIFF naar MP3 converter, AIFF naar WAV converter, audioplayer testbestanden, AIFF-afspelen test, audioconversie voorbeelden, Audio Interchange File Format test'
         },
@@ -1810,7 +1810,7 @@ export const nl: SamplePageTranslations = {
       },
       amr: {
         meta: {
-          title: 'Gratis AMR Voorbeeldbestanden Downloaden - Adaptive Multi-Rate Audio Testbestanden | MorphyHub',
+          title: 'Gratis AMR Voorbeeldbestanden Downloaden - Adaptive Multi-Rate Audio Testbestanden | FomiPeek',
           description: 'Download gratis AMR Adaptive Multi-Rate voorbeeldbestanden om audioconversie, AMR-afspelen, audioverwerkingshulpmiddelen en mobiele multimedi software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van AMR-naar-MP3-converters, AMR-naar-WAV-converters, audioplayers, AMR-afspeelcompatibiliteit en Adaptive Multi-Rate-formaatondersteuning.',
           keywords: 'AMR voorbeeldbestanden, AMR testbestanden, AMR voorbeelden downloaden, gratis AMR testbestanden, Adaptive Multi-Rate bestanden, AMR naar MP3 converter, AMR naar WAV converter, audioplayer testbestanden, AMR-afspelen test, audioconversie voorbeelden, Adaptive Multi-Rate-formaat test'
         },
@@ -1826,7 +1826,7 @@ export const nl: SamplePageTranslations = {
       },
       caf: {
         meta: {
-          title: 'Gratis CAF Voorbeeldbestanden Downloaden - Core Audio Format Testbestanden | MorphyHub',
+          title: 'Gratis CAF Voorbeeldbestanden Downloaden - Core Audio Format Testbestanden | FomiPeek',
           description: 'Download gratis CAF Core Audio Format voorbeeldbestanden om audioconversie, CAF-afspelen, audioverwerkingshulpmiddelen en macOS multimedi software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van CAF-naar-MP3-converters, CAF-naar-WAV-converters, audioplayers, CAF-afspeelcompatibiliteit en Core Audio Format-ondersteuning.',
           keywords: 'CAF voorbeeldbestanden, CAF testbestanden, CAF voorbeelden downloaden, gratis CAF testbestanden, Core Audio Format bestanden, CAF naar MP3 converter, CAF naar WAV converter, audioplayer testbestanden, CAF-afspelen test, audioconversie voorbeelden, Core Audio Format test'
         },
@@ -1842,7 +1842,7 @@ export const nl: SamplePageTranslations = {
       },
       cue: {
         meta: {
-          title: 'Gratis CUE Voorbeeldbestanden Downloaden - CUE Sheet Testbestanden voor Audio CD Branden | MorphyHub',
+          title: 'Gratis CUE Voorbeeldbestanden Downloaden - CUE Sheet Testbestanden voor Audio CD Branden | FomiPeek',
           description: 'Download gratis CUE CUE sheet voorbeeldbestanden om audio CD-brandhulpmiddelen en CUE sheet-parsinghulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van CUE sheet-parsing, audio CD-brandsoftware, CUE-bestandsvalidatie en CD-authoringhulpmiddelen.',
           keywords: 'CUE voorbeeldbestanden, CUE testbestanden, CUE voorbeelden downloaden, gratis CUE testbestanden, CUE sheet bestanden, audio CD branden test, CUE sheet parser, CD authoring testbestanden, CUE-bestandsvalidatie, audio disc image test'
         },
@@ -1858,7 +1858,7 @@ export const nl: SamplePageTranslations = {
       },
       m4a: {
         meta: {
-          title: 'Gratis M4A Voorbeeldbestanden Downloaden - M4A Audio Testbestanden voor Conversiehulpmiddelen | MorphyHub',
+          title: 'Gratis M4A Voorbeeldbestanden Downloaden - M4A Audio Testbestanden voor Conversiehulpmiddelen | FomiPeek',
           description: 'Download gratis M4A M4A audio voorbeeldbestanden om M4A-audioconversie, M4A-afspelen, audioverwerkingshulpmiddelen en multimedi software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van M4A-naar-MP3-converters, M4A-naar-WAV-converters, audioplayers, M4A-afspeelcompatibiliteit en MPEG-4 audioformaat-ondersteuning.',
           keywords: 'M4A voorbeeldbestanden, M4A testbestanden, M4A voorbeelden downloaden, gratis M4A testbestanden, M4A audiobestanden, M4A naar MP3 converter, M4A naar WAV converter, audioplayer testbestanden, M4A-afspelen test, audioconversie voorbeelden, MPEG-4 audioformaat test'
         },
@@ -1874,7 +1874,7 @@ export const nl: SamplePageTranslations = {
       },
       midi: {
         meta: {
-          title: 'Gratis MIDI Voorbeeldbestanden Downloaden - MIDI Music Testbestanden voor Muzieksequencing | MorphyHub',
+          title: 'Gratis MIDI Voorbeeldbestanden Downloaden - MIDI Music Testbestanden voor Muzieksequencing | FomiPeek',
           description: 'Download gratis MIDI MIDI music voorbeeldbestanden om MIDI-afspelen, MIDI-conversie, muzieksequencinghulpmiddelen en digitale audio-werkstations te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van MIDI-naar-MP3-converters, MIDI-naar-WAV-converters, MIDI-sequencers, muziekproductiesoftware en Musical Instrument Digital Interface-formaatondersteuning.',
           keywords: 'MIDI voorbeeldbestanden, MIDI testbestanden, MIDI voorbeelden downloaden, gratis MIDI testbestanden, MIDI music bestanden, MIDI naar MP3 converter, MIDI naar WAV converter, MIDI sequencer test, muziekproductie testbestanden, MIDI-afspelen test, muzieksequencing voorbeelden'
         },
@@ -1890,7 +1890,7 @@ export const nl: SamplePageTranslations = {
       },
       ace: {
         meta: {
-          title: 'Gratis ACE Voorbeeldbestanden Downloaden - ACE Archief Testbestanden voor Extractiehulpmiddelen | MorphyHub',
+          title: 'Gratis ACE Voorbeeldbestanden Downloaden - ACE Archief Testbestanden voor Extractiehulpmiddelen | FomiPeek',
           description: 'Download gratis ACE archief voorbeeldbestanden om archiefextractie- en compressiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van ACE-archiefextractie, ACE-bestandsdecompressie, archiefbeheerhulpmiddelen en bestandscompressiesoftware.',
           keywords: 'ACE voorbeeldbestanden, ACE testbestanden, ACE voorbeelden downloaden, gratis ACE testbestanden, ACE archiefbestanden, ACE extractie test, ACE decompressie test, archiefbeheer testbestanden, bestandscompressie voorbeelden'
         },
@@ -1906,7 +1906,7 @@ export const nl: SamplePageTranslations = {
       },
       arj: {
         meta: {
-          title: 'Gratis ARJ Voorbeeldbestanden Downloaden - ARJ Archief Testbestanden voor Extractiehulpmiddelen | MorphyHub',
+          title: 'Gratis ARJ Voorbeeldbestanden Downloaden - ARJ Archief Testbestanden voor Extractiehulpmiddelen | FomiPeek',
           description: 'Download gratis ARJ archief voorbeeldbestanden om archiefextractie- en compressiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van ARJ-archiefextractie, ARJ-bestandsdecompressie, archiefbeheerhulpmiddelen en bestandscompressiesoftware.',
           keywords: 'ARJ voorbeeldbestanden, ARJ testbestanden, ARJ voorbeelden downloaden, gratis ARJ testbestanden, ARJ archiefbestanden, ARJ extractie test, ARJ decompressie test, archiefbeheer testbestanden, bestandscompressie voorbeelden'
         },
@@ -1922,7 +1922,7 @@ export const nl: SamplePageTranslations = {
       },
       bz2: {
         meta: {
-          title: 'Gratis BZ2 Voorbeeldbestanden Downloaden - BZ2 Gecomprimeerd Archief Testbestanden | MorphyHub',
+          title: 'Gratis BZ2 Voorbeeldbestanden Downloaden - BZ2 Gecomprimeerd Archief Testbestanden | FomiPeek',
           description: 'Download gratis BZ2 bzip2 gecomprimeerd archief voorbeeldbestanden om archiefdecompressie- en compressiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van BZ2-archiefdecompressie, BZ2-bestandsextractie, bzip2-compressiehulpmiddelen en archiefbeheersoftware.',
           keywords: 'BZ2 voorbeeldbestanden, BZ2 testbestanden, BZ2 voorbeelden downloaden, gratis BZ2 testbestanden, BZ2 gecomprimeerde bestanden, BZ2 decompressie test, bzip2 compressie test, archiefextractie testbestanden, bestandscompressie voorbeelden'
         },
@@ -1938,7 +1938,7 @@ export const nl: SamplePageTranslations = {
       },
       gz: {
         meta: {
-          title: 'Gratis GZ Voorbeeldbestanden Downloaden - GZ Gzip Gecomprimeerd Archief Testbestanden | MorphyHub',
+          title: 'Gratis GZ Voorbeeldbestanden Downloaden - GZ Gzip Gecomprimeerd Archief Testbestanden | FomiPeek',
           description: 'Download gratis GZ gzip gecomprimeerd archief voorbeeldbestanden om gzip-decompressie, archiefextractie en bestandscompressiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van GZ-archiefdecompressie, GZ-bestandsextractie, gzip-compressiehulpmiddelen en archiefbeheersoftware.',
           keywords: 'GZ voorbeeldbestanden, GZ testbestanden, GZ voorbeelden downloaden, gratis GZ testbestanden, GZ gecomprimeerde bestanden, GZ decompressie test, gzip compressie test, archiefextractie testbestanden, bestandscompressie voorbeelden'
         },
@@ -1954,7 +1954,7 @@ export const nl: SamplePageTranslations = {
       },
       cab: {
         meta: {
-          title: 'Gratis CAB Voorbeeldbestanden Downloaden - CAB Windows Cabinet Archief Testbestanden | MorphyHub',
+          title: 'Gratis CAB Voorbeeldbestanden Downloaden - CAB Windows Cabinet Archief Testbestanden | FomiPeek',
           description: 'Download gratis CAB Windows cabinet archief voorbeeldbestanden om archiefextractie- en compressiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van CAB-archiefextractie, CAB-bestandsdecompressie, Windows cabinet archiefhulpmiddelen en archiefbeheersoftware.',
           keywords: 'CAB voorbeeldbestanden, CAB testbestanden, CAB voorbeelden downloaden, gratis CAB testbestanden, CAB archiefbestanden, CAB extractie test, Windows cabinet archief test, archiefbeheer testbestanden, bestandscompressie voorbeelden'
         },
@@ -1970,7 +1970,7 @@ export const nl: SamplePageTranslations = {
       },
       cpio: {
         meta: {
-          title: 'Gratis CPIO Voorbeeldbestanden Downloaden - CPIO Archief Testbestanden voor Extractiehulpmiddelen | MorphyHub',
+          title: 'Gratis CPIO Voorbeeldbestanden Downloaden - CPIO Archief Testbestanden voor Extractiehulpmiddelen | FomiPeek',
           description: 'Download gratis CPIO archief voorbeeldbestanden om archiefextractie- en compressiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van CPIO-archiefextractie, CPIO-bestandsdecompressie, archiefbeheerhulpmiddelen en bestandscompressiesoftware.',
           keywords: 'CPIO voorbeeldbestanden, CPIO testbestanden, CPIO voorbeelden downloaden, gratis CPIO testbestanden, CPIO archiefbestanden, CPIO extractie test, CPIO decompressie test, archiefbeheer testbestanden, bestandscompressie voorbeelden'
         },
@@ -1986,7 +1986,7 @@ export const nl: SamplePageTranslations = {
       },
       zip: {
         meta: {
-          title: 'Gratis ZIP Voorbeeldbestanden Downloaden - ZIP Archief Testbestanden voor Extractiehulpmiddelen | MorphyHub',
+          title: 'Gratis ZIP Voorbeeldbestanden Downloaden - ZIP Archief Testbestanden voor Extractiehulpmiddelen | FomiPeek',
           description: 'Download gratis ZIP archief voorbeeldbestanden om archiefextractie- en compressiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van ZIP-archiefextractie, ZIP-bestandsdecompressie, archiefbeheerhulpmiddelen en bestandscompressiesoftware.',
           keywords: 'ZIP voorbeeldbestanden, ZIP testbestanden, ZIP voorbeelden downloaden, gratis ZIP testbestanden, ZIP archiefbestanden, ZIP extractie test, ZIP decompressie test, archiefbeheer testbestanden, bestandscompressie voorbeelden'
         },
@@ -2002,7 +2002,7 @@ export const nl: SamplePageTranslations = {
       },
       dmg: {
         meta: {
-          title: 'Gratis DMG Voorbeeldbestanden Downloaden - DMG macOS Disk Image Testbestanden | MorphyHub',
+          title: 'Gratis DMG Voorbeeldbestanden Downloaden - DMG macOS Disk Image Testbestanden | FomiPeek',
           description: 'Download gratis DMG macOS disk image voorbeeldbestanden om disk image-mounting- en DMG-extractiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van DMG-disk image-mounting, DMG-bestandsextractie, macOS disk image-hulpmiddelen en disk image-verwerkingssoftware.',
           keywords: 'DMG voorbeeldbestanden, DMG testbestanden, DMG voorbeelden downloaden, gratis DMG testbestanden, DMG disk image bestanden, DMG mounting test, macOS disk image test, disk image extractie testbestanden, disk image verwerking voorbeelden'
         },
@@ -2018,7 +2018,7 @@ export const nl: SamplePageTranslations = {
       },
       img: {
         meta: {
-          title: 'Gratis IMG Voorbeeldbestanden Downloaden - IMG Disk Image Testbestanden | MorphyHub',
+          title: 'Gratis IMG Voorbeeldbestanden Downloaden - IMG Disk Image Testbestanden | FomiPeek',
           description: 'Download gratis IMG disk image voorbeeldbestanden om disk image-mounting, IMG-extractie en disk image-verwerkingshulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van IMG-disk image-mounting, IMG-bestandsextractie, disk image-hulpmiddelen en disk image-verwerkingssoftware.',
           keywords: 'IMG voorbeeldbestanden, IMG testbestanden, IMG voorbeelden downloaden, gratis IMG testbestanden, IMG disk image bestanden, IMG mounting test, disk image extractie test, disk image verwerking testbestanden, disk image voorbeelden'
         },
@@ -2034,7 +2034,7 @@ export const nl: SamplePageTranslations = {
       },
       iso: {
         meta: {
-          title: 'Gratis ISO Voorbeeldbestanden Downloaden - ISO Disk Image Testbestanden | MorphyHub',
+          title: 'Gratis ISO Voorbeeldbestanden Downloaden - ISO Disk Image Testbestanden | FomiPeek',
           description: 'Download gratis ISO ISO disk image voorbeeldbestanden om ISO disk image-mounting, ISO-extractie en disk image-verwerkingshulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van ISO disk image-mounting, ISO-bestandsextractie, disk image-hulpmiddelen en disk image-verwerkingssoftware.',
           keywords: 'ISO voorbeeldbestanden, ISO testbestanden, ISO voorbeelden downloaden, gratis ISO testbestanden, ISO disk image bestanden, ISO mounting test, ISO extractie test, disk image verwerking testbestanden, disk image voorbeelden'
         },
@@ -2050,7 +2050,7 @@ export const nl: SamplePageTranslations = {
       },
       kmz: {
         meta: {
-          title: 'Gratis KMZ Voorbeeldbestanden Downloaden - KMZ Gecomprimeerd KML Testbestanden | MorphyHub',
+          title: 'Gratis KMZ Voorbeeldbestanden Downloaden - KMZ Gecomprimeerd KML Testbestanden | FomiPeek',
           description: 'Download gratis KMZ gecomprimeerd Keyhole Markup Language voorbeeldbestanden om KMZ-extractiehulpmiddelen, geografische gegevensverwerking en Google Earth-integratiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van KMZ-bestandsextractie, KMZ-naar-KML-conversie, Google Earth-compatibiliteit, geografische gegevensverwerking en mappingsoftware.',
           keywords: 'KMZ voorbeeldbestanden, KMZ testbestanden, KMZ voorbeelden downloaden, gratis KMZ testbestanden, KMZ gecomprimeerde bestanden, KMZ extractie test, Google Earth testbestanden, geografische gegevensverwerking test, mappingsoftware voorbeelden'
         },
@@ -2066,7 +2066,7 @@ export const nl: SamplePageTranslations = {
       },
       laz: {
         meta: {
-          title: 'Gratis LAZ Voorbeeldbestanden Downloaden - LAZ Gecomprimeerd LiDAR Testbestanden | MorphyHub',
+          title: 'Gratis LAZ Voorbeeldbestanden Downloaden - LAZ Gecomprimeerd LiDAR Testbestanden | FomiPeek',
           description: 'Download gratis LAZ gecomprimeerd LiDAR point cloud data voorbeeldbestanden om LAZ-extractiehulpmiddelen, point cloud-verwerking en 3D-mappinghulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van LAZ-bestandsextractie, LAZ-naar-LAS-conversie, LiDAR point cloud-verwerking, 3D-mappingsoftware en geografische gegevensanalysetools.',
           keywords: 'LAZ voorbeeldbestanden, LAZ testbestanden, LAZ voorbeelden downloaden, gratis LAZ testbestanden, LAZ gecomprimeerde bestanden, LAZ extractie test, LiDAR point cloud test, 3D-mapping testbestanden, geografische gegevensanalyse voorbeelden'
         },
@@ -2082,7 +2082,7 @@ export const nl: SamplePageTranslations = {
       },
       lha: {
         meta: {
-          title: 'Gratis LHA Voorbeeldbestanden Downloaden - LHA Archief Testbestanden voor Extractiehulpmiddelen | MorphyHub',
+          title: 'Gratis LHA Voorbeeldbestanden Downloaden - LHA Archief Testbestanden voor Extractiehulpmiddelen | FomiPeek',
           description: 'Download gratis LHA LHA archief voorbeeldbestanden om LHA-extractiehulpmiddelen, archiefdecompressie en bestandsarchiveringshulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van LHA-archiefextractie, LHA-bestandsdecompressie, archiefbeheerhulpmiddelen en bestandscompressiesoftware.',
           keywords: 'LHA voorbeeldbestanden, LHA testbestanden, LHA voorbeelden downloaden, gratis LHA testbestanden, LHA archiefbestanden, LHA extractie test, LHA decompressie test, archiefbeheer testbestanden, bestandscompressie voorbeelden'
         },
@@ -2098,7 +2098,7 @@ export const nl: SamplePageTranslations = {
       },
       lzh: {
         meta: {
-          title: 'Gratis LZH Voorbeeldbestanden Downloaden - LZH Archief Testbestanden voor Extractiehulpmiddelen | MorphyHub',
+          title: 'Gratis LZH Voorbeeldbestanden Downloaden - LZH Archief Testbestanden voor Extractiehulpmiddelen | FomiPeek',
           description: 'Download gratis LZH LZH archief voorbeeldbestanden om LZH-extractiehulpmiddelen, archiefdecompressie en bestandsarchiveringshulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van LZH-archiefextractie, LZH-bestandsdecompressie, archiefbeheerhulpmiddelen en bestandscompressiesoftware.',
           keywords: 'LZH voorbeeldbestanden, LZH testbestanden, LZH voorbeelden downloaden, gratis LZH testbestanden, LZH archiefbestanden, LZH extractie test, LZH decompressie test, archiefbeheer testbestanden, bestandscompressie voorbeelden'
         },
@@ -2114,7 +2114,7 @@ export const nl: SamplePageTranslations = {
       },
       lzma: {
         meta: {
-          title: 'Gratis LZMA Voorbeeldbestanden Downloaden - LZMA Gecomprimeerd Archief Testbestanden | MorphyHub',
+          title: 'Gratis LZMA Voorbeeldbestanden Downloaden - LZMA Gecomprimeerd Archief Testbestanden | FomiPeek',
           description: 'Download gratis LZMA LZMA gecomprimeerd voorbeeldbestanden om LZMA-decompressiehulpmiddelen, archiefextractie en bestandscompressiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van LZMA-archiefdecompressie, LZMA-bestandsextractie, LZMA-compressiehulpmiddelen en archiefbeheersoftware.',
           keywords: 'LZMA voorbeeldbestanden, LZMA testbestanden, LZMA voorbeelden downloaden, gratis LZMA testbestanden, LZMA gecomprimeerde bestanden, LZMA decompressie test, LZMA compressie test, archiefextractie testbestanden, bestandscompressie voorbeelden'
         },
@@ -2130,7 +2130,7 @@ export const nl: SamplePageTranslations = {
       },
       '7z': {
         meta: {
-          title: 'Gratis 7Z Voorbeeldbestanden Downloaden - 7Z Archief Testbestanden voor Extractiehulpmiddelen | MorphyHub',
+          title: 'Gratis 7Z Voorbeeldbestanden Downloaden - 7Z Archief Testbestanden voor Extractiehulpmiddelen | FomiPeek',
           description: 'Download gratis 7Z archief voorbeeldbestanden om conversie- en extractiehulpmiddelen voor archieven te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van 7Z-archiefextractie, 7Z-bestandsdecompressie, archiefbeheerhulpmiddelen en bestandscompressiesoftware.',
           keywords: '7Z voorbeeldbestanden, 7Z testbestanden, 7Z voorbeelden downloaden, gratis 7Z testbestanden, 7Z archiefbestanden, 7Z extractie test, 7Z decompressie test, archiefbeheer testbestanden, bestandscompressie voorbeelden'
         },

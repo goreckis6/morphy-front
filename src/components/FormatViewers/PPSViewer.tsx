@@ -273,12 +273,12 @@ export const PPSViewer: React.FC = () => {
         <title>{t('viewers.pps.meta_title')}</title>
         <meta name="description" content={t('viewers.pps.meta_description')} />
         <meta name="keywords" content={t('viewers.pps.meta_keywords')} />
-        <meta property="og:title" content="Free PPS/PPSX Viewer - View PowerPoint Slide Show Files Online | MorphyHub" />
+        <meta property="og:title" content="Free PPS/PPSX Viewer - View PowerPoint Slide Show Files Online | FomiPeek" />
         <meta property="og:description" content="Free professional PPS/PPSX (PowerPoint Slide Show) viewer. Upload and preview Microsoft PowerPoint slide show files online." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://formipeek.com/viewers/pps" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free PPS/PPSX Viewer - View PowerPoint Slide Show Files Online | MorphyHub" />
+        <meta name="twitter:title" content="Free PPS/PPSX Viewer - View PowerPoint Slide Show Files Online | FomiPeek" />
         <meta name="twitter:description" content="Free professional PPS/PPSX viewer. Upload and preview PowerPoint Slide Show files online." />
         <script type="application/ld+json">
           {JSON.stringify({

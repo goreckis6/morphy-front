@@ -60,8 +60,8 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   en: {
     samples_page: {
       meta: {
-        title: 'Free Sample Files – Download Test Files | MorphyHub',
-        description: 'Get free sample images, documents, and archives to test MorphyHub converters, compressors, and viewers.',
+        title: 'Free Sample Files – Download Test Files | FomiPeek',
+        description: 'Get free sample images, documents, and archives to test FomiPeek converters, compressors, and viewers.',
         keywords: 'sample files, test files, download samples, free test files, DOCX samples, file samples, test files for conversion'
       },
       schema: {
@@ -649,8 +649,8 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   pl: {
     samples_page: {
       meta: {
-        title: 'Darmowe pliki przykładowe – Pobierz pliki testowe | MorphyHub',
-        description: 'Pobierz darmowe przykładowe pliki obrazów, dokumentów i archiwów do testowania konwerterów, kompresorów i przeglądarek MorphyHub.',
+        title: 'Darmowe pliki przykładowe – Pobierz pliki testowe | FomiPeek',
+        description: 'Pobierz darmowe przykładowe pliki obrazów, dokumentów i archiwów do testowania konwerterów, kompresorów i przeglądarek FomiPeek.',
         keywords: 'pliki przykładowe, pliki testowe, pobierz przykłady, darmowe pliki testowe, przykłady DOCX, przykłady plików, pliki testowe do konwersji'
       },
       schema: {
@@ -1238,8 +1238,8 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   de: {
     samples_page: {
       meta: {
-        title: 'Kostenlose Beispieldateien – Testdateien herunterladen | MorphyHub',
-        description: 'Kostenlose Beispieldateien für Bilder, Dokumente und Archive herunterladen, um MorphyHub-Konverter, Komprimierer und Viewer zu testen.',
+        title: 'Kostenlose Beispieldateien – Testdateien herunterladen | FomiPeek',
+        description: 'Kostenlose Beispieldateien für Bilder, Dokumente und Archive herunterladen, um FomiPeek-Konverter, Komprimierer und Viewer zu testen.',
         keywords: 'Beispieldateien, Testdateien, Beispiele herunterladen, kostenlose Testdateien, DOCX-Beispiele, Dateibeispiele, Testdateien für Konvertierung'
       },
       schema: {
@@ -1827,8 +1827,8 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   es: {
     samples_page: {
       meta: {
-        title: 'Archivos de muestra gratuitos – Descargar archivos de prueba | MorphyHub',
-        description: 'Obtén archivos de muestra gratuitos de imágenes, documentos y archivos para probar los convertidores, compresores y visores de MorphyHub.',
+        title: 'Archivos de muestra gratuitos – Descargar archivos de prueba | FomiPeek',
+        description: 'Obtén archivos de muestra gratuitos de imágenes, documentos y archivos para probar los convertidores, compresores y visores de FomiPeek.',
         keywords: 'archivos de muestra, archivos de prueba, descargar muestras, archivos de prueba gratuitos, muestras DOCX, muestras de archivos, archivos de prueba para conversión'
       },
       schema: {
@@ -2301,8 +2301,8 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   fr: {
     samples_page: {
       meta: {
-        title: 'Fichiers d\'échantillon gratuits – Télécharger des fichiers de test | MorphyHub',
-        description: 'Obtenez des fichiers d\'échantillon gratuits d\'images, documents et archives pour tester les convertisseurs, compresseurs et visionneuses de MorphyHub.',
+        title: 'Fichiers d\'échantillon gratuits – Télécharger des fichiers de test | FomiPeek',
+        description: 'Obtenez des fichiers d\'échantillon gratuits d\'images, documents et archives pour tester les convertisseurs, compresseurs et visionneuses de FomiPeek.',
         keywords: 'fichiers d\'échantillon, fichiers de test, télécharger des échantillons, fichiers de test gratuits, échantillons DOCX, échantillons de fichiers, fichiers de test pour conversion'
       },
       schema: {
@@ -2517,8 +2517,8 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   it: {
     samples_page: {
       meta: {
-        title: 'File di esempio gratuiti – Scarica file di test | MorphyHub',
-        description: 'Ottieni file di esempio gratuiti di immagini, documenti e archivi per testare i convertitori, compressori e visualizzatori di MorphyHub.',
+        title: 'File di esempio gratuiti – Scarica file di test | FomiPeek',
+        description: 'Ottieni file di esempio gratuiti di immagini, documenti e archivi per testare i convertitori, compressori e visualizzatori di FomiPeek.',
         keywords: 'file di esempio, file di test, scarica esempi, file di test gratuiti, esempi DOCX, esempi di file, file di test per conversione'
       },
       schema: {
@@ -2722,8 +2722,8 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   nl: {
     samples_page: {
       meta: {
-        title: 'Gratis voorbeeldbestanden – Download testbestanden | MorphyHub',
-        description: 'Krijg gratis voorbeeldbestanden van afbeeldingen, documenten en archieven om MorphyHub converters, compressors en viewers te testen.',
+        title: 'Gratis voorbeeldbestanden – Download testbestanden | FomiPeek',
+        description: 'Krijg gratis voorbeeldbestanden van afbeeldingen, documenten en archieven om FomiPeek converters, compressors en viewers te testen.',
         keywords: 'voorbeeldbestanden, testbestanden, download voorbeelden, gratis testbestanden, DOCX voorbeelden, bestandsvoorbeelden, testbestanden voor conversie'
       },
       schema: {
@@ -2859,8 +2859,8 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   pt: {
     samples_page: {
       meta: {
-        title: 'Arquivos de exemplo gratuitos – Baixar arquivos de teste | MorphyHub',
-        description: 'Obtenha arquivos de exemplo gratuitos de imagens, documentos e arquivos para testar os conversores, compressores e visualizadores do MorphyHub.',
+        title: 'Arquivos de exemplo gratuitos – Baixar arquivos de teste | FomiPeek',
+        description: 'Obtenha arquivos de exemplo gratuitos de imagens, documentos e arquivos para testar os conversores, compressores e visualizadores do FomiPeek.',
         keywords: 'arquivos de exemplo, arquivos de teste, baixar exemplos, arquivos de teste gratuitos, exemplos DOCX, exemplos de arquivos, arquivos de teste para conversão'
       },
       schema: {
@@ -3064,8 +3064,8 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   vi: {
     samples_page: {
       meta: {
-        title: 'Tệp mẫu miễn phí – Tải xuống tệp thử nghiệm | MorphyHub',
-        description: 'Nhận tệp mẫu miễn phí của hình ảnh, tài liệu và tệp nén để kiểm tra các công cụ chuyển đổi, nén và xem của MorphyHub.',
+        title: 'Tệp mẫu miễn phí – Tải xuống tệp thử nghiệm | FomiPeek',
+        description: 'Nhận tệp mẫu miễn phí của hình ảnh, tài liệu và tệp nén để kiểm tra các công cụ chuyển đổi, nén và xem của FomiPeek.',
         keywords: 'tệp mẫu, tệp thử nghiệm, tải xuống mẫu, tệp thử nghiệm miễn phí, mẫu DOCX, mẫu tệp, tệp thử nghiệm để chuyển đổi'
       },
       schema: {
@@ -3266,8 +3266,8 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   tr: {
     samples_page: {
       meta: {
-        title: 'Ücretsiz örnek dosyalar – Test dosyalarını indir | MorphyHub',
-        description: 'MorphyHub dönüştürücülerini, sıkıştırıcılarını ve görüntüleyicilerini test etmek için ücretsiz örnek görüntü, belge ve arşiv dosyaları alın.',
+        title: 'Ücretsiz örnek dosyalar – Test dosyalarını indir | FomiPeek',
+        description: 'FomiPeek dönüştürücülerini, sıkıştırıcılarını ve görüntüleyicilerini test etmek için ücretsiz örnek görüntü, belge ve arşiv dosyaları alın.',
         keywords: 'örnek dosyalar, test dosyaları, örnekleri indir, ücretsiz test dosyaları, DOCX örnekleri, dosya örnekleri, dönüştürme için test dosyaları'
       },
       schema: {
@@ -3471,8 +3471,8 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   ru: {
     samples_page: {
       meta: {
-        title: 'Бесплатные примеры файлов – Скачать тестовые файлы | MorphyHub',
-        description: 'Получите бесплатные примеры файлов изображений, документов и архивов для тестирования конвертеров, компрессоров и просмотрщиков MorphyHub.',
+        title: 'Бесплатные примеры файлов – Скачать тестовые файлы | FomiPeek',
+        description: 'Получите бесплатные примеры файлов изображений, документов и архивов для тестирования конвертеров, компрессоров и просмотрщиков FomiPeek.',
         keywords: 'примеры файлов, тестовые файлы, скачать примеры, бесплатные тестовые файлы, примеры DOCX, примеры файлов, тестовые файлы для конвертации'
       },
       schema: {
@@ -3676,8 +3676,8 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   ar: {
     samples_page: {
       meta: {
-        title: 'ملفات عينة مجانية – تنزيل ملفات الاختبار | MorphyHub',
-        description: 'احصل على ملفات عينة مجانية للصور والمستندات والأرشيفات لاختبار محولات وضواغط وعارضات MorphyHub.',
+        title: 'ملفات عينة مجانية – تنزيل ملفات الاختبار | FomiPeek',
+        description: 'احصل على ملفات عينة مجانية للصور والمستندات والأرشيفات لاختبار محولات وضواغط وعارضات FomiPeek.',
         keywords: 'ملفات عينة، ملفات اختبار، تنزيل عينات، ملفات اختبار مجانية، عينات DOCX، عينات ملفات، ملفات اختبار للتحويل'
       },
       schema: {
@@ -3813,8 +3813,8 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   th: {
     samples_page: {
       meta: {
-        title: 'ไฟล์ตัวอย่างฟรี – ดาวน์โหลดไฟล์ทดสอบ | MorphyHub',
-        description: 'รับไฟล์ตัวอย่างฟรีของรูปภาพ เอกสาร และไฟล์เก็บถาวรเพื่อทดสอบเครื่องมือแปลง บีบอัด และดูของ MorphyHub',
+        title: 'ไฟล์ตัวอย่างฟรี – ดาวน์โหลดไฟล์ทดสอบ | FomiPeek',
+        description: 'รับไฟล์ตัวอย่างฟรีของรูปภาพ เอกสาร และไฟล์เก็บถาวรเพื่อทดสอบเครื่องมือแปลง บีบอัด และดูของ FomiPeek',
         keywords: 'ไฟล์ตัวอย่าง, ไฟล์ทดสอบ, ดาวน์โหลดตัวอย่าง, ไฟล์ทดสอบฟรี, ตัวอย่าง DOCX, ตัวอย่างไฟล์, ไฟล์ทดสอบสำหรับการแปลง'
       },
       schema: {
@@ -4018,8 +4018,8 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   ja: {
     samples_page: {
       meta: {
-        title: '無料サンプルファイル – テストファイルをダウンロード | MorphyHub',
-        description: 'MorphyHubのコンバーター、コンプレッサー、ビューアーをテストするための無料のサンプル画像、ドキュメント、アーカイブファイルを取得します。',
+        title: '無料サンプルファイル – テストファイルをダウンロード | FomiPeek',
+        description: 'FomiPeekのコンバーター、コンプレッサー、ビューアーをテストするための無料のサンプル画像、ドキュメント、アーカイブファイルを取得します。',
         keywords: 'サンプルファイル, テストファイル, サンプルをダウンロード, 無料テストファイル, DOCXサンプル, ファイルサンプル, 変換用テストファイル'
       },
       schema: {
@@ -4223,8 +4223,8 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   zh: {
     samples_page: {
       meta: {
-        title: '免费示例文件 – 下载测试文件 | MorphyHub',
-        description: '获取免费的示例图像、文档和存档文件，用于测试 MorphyHub 转换器、压缩器和查看器。',
+        title: '免费示例文件 – 下载测试文件 | FomiPeek',
+        description: '获取免费的示例图像、文档和存档文件，用于测试 FomiPeek 转换器、压缩器和查看器。',
         keywords: '示例文件, 测试文件, 下载示例, 免费测试文件, DOCX 示例, 文件示例, 转换测试文件'
       },
       schema: {
@@ -4360,8 +4360,8 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   id: {
     samples_page: {
       meta: {
-        title: 'File Contoh Gratis – Unduh File Uji | MorphyHub',
-        description: 'Dapatkan file contoh gratis gambar, dokumen, dan arsip untuk menguji konverter, kompresor, dan penampil MorphyHub.',
+        title: 'File Contoh Gratis – Unduh File Uji | FomiPeek',
+        description: 'Dapatkan file contoh gratis gambar, dokumen, dan arsip untuk menguji konverter, kompresor, dan penampil FomiPeek.',
         keywords: 'file contoh, file uji, unduh contoh, file uji gratis, contoh DOCX, contoh file, file uji untuk konversi'
       },
       schema: {
@@ -4565,8 +4565,8 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   sv: {
     samples_page: {
       meta: {
-        title: 'Gratis exempelfiler – Ladda ner testfiler | MorphyHub',
-        description: 'Få gratis exempelfiler av bilder, dokument och arkiv för att testa MorphyHub-konverterare, komprimerare och visare.',
+        title: 'Gratis exempelfiler – Ladda ner testfiler | FomiPeek',
+        description: 'Få gratis exempelfiler av bilder, dokument och arkiv för att testa FomiPeek-konverterare, komprimerare och visare.',
         keywords: 'exempelfiler, testfiler, ladda ner exempel, gratis testfiler, DOCX-exempel, filexempel, testfiler för konvertering'
       },
       schema: {

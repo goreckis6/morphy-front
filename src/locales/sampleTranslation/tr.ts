@@ -34,7 +34,7 @@ export const tr: SamplePageTranslations = {
     formats: {
       docx: {
         meta: {
-          title: 'Ücretsiz DOCX örnek dosyaları indir - Test dosyaları | MorphyHub',
+          title: 'Ücretsiz DOCX örnek dosyaları indir - Test dosyaları | FomiPeek',
           description: 'Test için ücretsiz DOCX örnek dosyalarını indirin. Birden fazla dosya boyutu mevcut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Belge dönüştürme ve işleme araçlarını test etmek için mükemmel.',
           keywords: 'DOCX örnek dosyaları, DOCX test dosyaları, DOCX örnekleri indir, ücretsiz DOCX test dosyaları, belge örnekleri, Microsoft Word örnekleri'
         },
@@ -50,7 +50,7 @@ export const tr: SamplePageTranslations = {
       },
       doc: {
         meta: {
-          title: 'Ücretsiz DOC örnek dosyaları indir - Microsoft Word DOC test dosyaları | MorphyHub',
+          title: 'Ücretsiz DOC örnek dosyaları indir - Microsoft Word DOC test dosyaları | FomiPeek',
           description: 'Belge dönüştürme araçlarını test etmek için ücretsiz DOC örnek dosyalarını indirin. Birden fazla dosya boyutu mevcut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. DOC\'dan PDF\'e, DOC\'dan DOCX\'e dönüştürücüleri ve eski Microsoft Word belge işlemeyi test etmek için mükemmel.',
           keywords: 'DOC örnek dosyaları, DOC test dosyaları, DOC örnekleri indir, ücretsiz DOC test dosyaları, Microsoft Word DOC örnekleri, DOC\'dan PDF\'e dönüştürücü testi, DOC\'dan DOCX\'e dönüştürme, eski Word belge örnekleri, .doc test dosyaları, belge dönüştürme örnekleri'
         },
@@ -66,7 +66,7 @@ export const tr: SamplePageTranslations = {
       },
       pdf: {
         meta: {
-          title: 'Ücretsiz PDF örnek dosyaları indir - Dönüştürme araçları için PDF test dosyaları | MorphyHub',
+          title: 'Ücretsiz PDF örnek dosyaları indir - Dönüştürme araçları için PDF test dosyaları | FomiPeek',
           description: 'PDF dönüştürücüleri, görüntüleyicileri ve işlemcileri test etmek için ücretsiz PDF örnek dosyalarını indirin. Birden fazla dosya boyutu mevcut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. PDF\'den Word\'e, PDF\'den JPG\'ye, PDF sıkıştırma ve PDF düzenleme araçlarını test etmek için mükemmel.',
           keywords: 'PDF örnek dosyaları, PDF test dosyaları, PDF örnekleri indir, ücretsiz PDF test dosyaları, PDF dönüştürücü test dosyaları, PDF\'den Word\'e örnekler, PDF\'den JPG\'ye örnekler, PDF sıkıştırma testi, PDF görüntüleyici test dosyaları, .pdf test dosyaları, belge dönüştürme örnekleri'
         },
@@ -82,7 +82,7 @@ export const tr: SamplePageTranslations = {
       },
       odp: {
         meta: {
-          title: 'Ücretsiz ODP örnek dosyaları indir - OpenDocument sunum test dosyaları | MorphyHub',
+          title: 'Ücretsiz ODP örnek dosyaları indir - OpenDocument sunum test dosyaları | FomiPeek',
           description: 'Sunum dönüştürme araçlarını test etmek için ücretsiz ODP örnek dosyalarını indirin. Birden fazla dosya boyutu mevcut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. ODP\'den PPT\'ye, ODP\'den PDF\'e dönüştürücüleri, LibreOffice Impress dosyalarını ve OpenDocument format işlemeyi test etmek için mükemmel.',
           keywords: 'ODP örnek dosyaları, ODP test dosyaları, ODP örnekleri indir, ücretsiz ODP test dosyaları, OpenDocument sunum örnekleri, ODP\'den PPT\'ye dönüştürücü, ODP\'den PDF\'e dönüştürücü, LibreOffice Impress örnekleri, .odp test dosyaları, sunum dönüştürme örnekleri, OpenDocument format testi'
         },
@@ -98,7 +98,7 @@ export const tr: SamplePageTranslations = {
       },
       rtf: {
         meta: {
-          title: 'Ücretsiz RTF örnek dosyaları indir - Rich Text Format test dosyaları | MorphyHub',
+          title: 'Ücretsiz RTF örnek dosyaları indir - Rich Text Format test dosyaları | FomiPeek',
           description: 'Rich Text Format dönüştürme araçlarını test etmek için ücretsiz RTF örnek dosyalarını indirin. Birden fazla dosya boyutu mevcut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. RTF\'den DOC\'a, RTF\'den PDF\'e dönüştürücüleri, kelime işlemci uyumluluğunu ve belge format dönüştürmeyi test etmek için mükemmel.',
           keywords: 'RTF örnek dosyaları, RTF test dosyaları, RTF örnekleri indir, ücretsiz RTF test dosyaları, Rich Text Format örnekleri, RTF\'den DOC\'a dönüştürücü, RTF\'den PDF\'e dönüştürücü, .rtf test dosyaları, kelime işlemci test dosyaları, belge format dönüştürme örnekleri'
         },
@@ -114,7 +114,7 @@ export const tr: SamplePageTranslations = {
       },
       epub: {
         meta: {
-          title: 'Ücretsiz EPUB örnek dosyaları indir - Okuyucular için eBook test dosyaları | MorphyHub',
+          title: 'Ücretsiz EPUB örnek dosyaları indir - Okuyucular için eBook test dosyaları | FomiPeek',
           description: 'eBook okuyucuları ve dönüştürme araçlarını test etmek için ücretsiz EPUB örnek dosyalarını indirin. Birden fazla dosya boyutu mevcut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. EPUB okuyucuları, EPUB\'dan PDF\'e, EPUB\'dan MOBI\'ye dönüştürücüleri, dijital yayıncılık araçlarını ve eBook format uyumluluğunu test etmek için mükemmel.',
           keywords: 'EPUB örnek dosyaları, EPUB test dosyaları, EPUB örnekleri indir, ücretsiz EPUB test dosyaları, eBook örnekleri, EPUB okuyucu testi, EPUB\'dan PDF\'e dönüştürücü, EPUB\'dan MOBI\'ye dönüştürücü, .epub test dosyaları, dijital yayıncılık örnekleri, eBook format test dosyaları'
         },
@@ -130,7 +130,7 @@ export const tr: SamplePageTranslations = {
       },
       'invoice-pdf': {
         meta: {
-          title: 'Ücretsiz fatura PDF örnek dosyaları indir - Fatura belge test dosyaları | MorphyHub',
+          title: 'Ücretsiz fatura PDF örnek dosyaları indir - Fatura belge test dosyaları | FomiPeek',
           description: 'Fatura işleme ve ayrıştırma araçlarını test etmek için ücretsiz fatura PDF örnek dosyalarını indirin. Birden fazla dosya boyutu mevcut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Fatura OCR, fatura veri çıkarma, fatura otomasyonu, fatura PDF ayrıştırma ve belge yönetim sistemlerini test etmek için mükemmel.',
           keywords: 'fatura PDF örnek dosyaları, fatura PDF test dosyaları, fatura PDF örnekleri indir, ücretsiz fatura PDF test dosyaları, fatura belge örnekleri, fatura OCR testi, fatura veri çıkarma, fatura otomasyonu testi, fatura PDF ayrıştırma, fatura işleme örnekleri, belge yönetimi test dosyaları'
         },
@@ -146,7 +146,7 @@ export const tr: SamplePageTranslations = {
       },
       mobi: {
         meta: {
-          title: 'Ücretsiz MOBI örnek dosyaları indir - Kindle için MOBI eBook test dosyaları | MorphyHub',
+          title: 'Ücretsiz MOBI örnek dosyaları indir - Kindle için MOBI eBook test dosyaları | FomiPeek',
           description: 'MOBI eBook okuyucuları ve dönüştürme araçlarını test etmek için ücretsiz MOBI örnek dosyalarını indirin. Birden fazla dosya boyutu mevcut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Kindle uyumluluğu, MOBI\'den EPUB\'a, MOBI\'den PDF\'e dönüştürücüleri, eBook format dönüştürmeyi ve dijital okuma uygulamalarını test etmek için mükemmel.',
           keywords: 'MOBI örnek dosyaları, MOBI test dosyaları, MOBI örnekleri indir, ücretsiz MOBI test dosyaları, MOBI eBook örnekleri, Kindle test dosyaları, MOBI\'den EPUB\'a dönüştürücü, MOBI\'den PDF\'e dönüştürücü, .mobi test dosyaları, eBook dönüştürme örnekleri, dijital okuma test dosyaları'
         },
@@ -162,7 +162,7 @@ export const tr: SamplePageTranslations = {
       },
       csv: {
         meta: {
-          title: 'Ücretsiz CSV örnek dosyalarını indirin - Veri işleme için CSV test dosyaları | MorphyHub',
+          title: 'Ücretsiz CSV örnek dosyalarını indirin - Veri işleme için CSV test dosyaları | FomiPeek',
           description: 'Veri işleme ve dönüştürme araçlarını test etmek için ücretsiz CSV örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. CSV\'den Excel\'e, CSV\'den JSON\'a dönüştürücüleri, veri içe aktarma araçlarını, elektronik tablo uygulamalarını ve virgülle ayrılmış değer işlemeyi test etmek için mükemmel.',
           keywords: 'CSV örnek dosyaları, CSV test dosyaları, CSV örneklerini indirin, ücretsiz CSV test dosyaları, CSV\'den Excel\'e dönüştürücü, CSV\'den JSON\'a dönüştürücü, virgülle ayrılmış değer örnekleri, veri işleme test dosyaları, elektronik tablo içe aktarma örnekleri, .csv test dosyaları, veri dönüştürme örnekleri'
         },
@@ -178,7 +178,7 @@ export const tr: SamplePageTranslations = {
       },
       xls: {
         meta: {
-          title: 'Ücretsiz XLS örnek dosyalarını indirin - Microsoft Excel XLS test dosyaları | MorphyHub',
+          title: 'Ücretsiz XLS örnek dosyalarını indirin - Microsoft Excel XLS test dosyaları | FomiPeek',
           description: 'Excel dönüştürme ve veri işleme araçlarını test etmek için ücretsiz XLS örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. XLS\'den XLSX\'e, XLS\'den CSV\'ye, XLS\'den PDF\'e dönüştürücüleri, Excel veri çıkarma ve eski elektronik tablo işlemeyi test etmek için mükemmel.',
           keywords: 'XLS örnek dosyaları, XLS test dosyaları, XLS örneklerini indirin, ücretsiz XLS test dosyaları, Microsoft Excel XLS örnekleri, XLS\'den XLSX\'e dönüştürücü, XLS\'den CSV\'ye dönüştürücü, XLS\'den PDF\'e dönüştürücü, Excel veri çıkarma, .xls test dosyaları, elektronik tablo dönüştürme örnekleri'
         },
@@ -194,7 +194,7 @@ export const tr: SamplePageTranslations = {
       },
       xlsx: {
         meta: {
-          title: 'Ücretsiz XLSX örnek dosyalarını indirin - Dönüştürme araçları için Excel XLSX test dosyaları | MorphyHub',
+          title: 'Ücretsiz XLSX örnek dosyalarını indirin - Dönüştürme araçları için Excel XLSX test dosyaları | FomiPeek',
           description: 'Excel dönüştürme ve veri işleme araçlarını test etmek için ücretsiz XLSX örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. XLSX\'den CSV\'ye, XLSX\'den PDF\'e, XLSX\'den JSON\'a dönüştürücüleri, Excel veri analizi, elektronik tablo otomasyonu ve Office Open XML işlemeyi test etmek için mükemmel.',
           keywords: 'XLSX örnek dosyaları, XLSX test dosyaları, XLSX örneklerini indirin, ücretsiz XLSX test dosyaları, Excel XLSX örnekleri, XLSX\'den CSV\'ye dönüştürücü, XLSX\'den PDF\'e dönüştürücü, XLSX\'den JSON\'a dönüştürücü, Excel veri analizi, .xlsx test dosyaları, elektronik tablo otomasyonu örnekleri, Office Open XML örnekleri'
         },
@@ -210,7 +210,7 @@ export const tr: SamplePageTranslations = {
       },
       xml: {
         meta: {
-          title: 'Ücretsiz XML örnek dosyalarını indirin - Ayrıştırma ve dönüştürme için XML test dosyaları | MorphyHub',
+          title: 'Ücretsiz XML örnek dosyalarını indirin - Ayrıştırma ve dönüştürme için XML test dosyaları | FomiPeek',
           description: 'XML ayrıştırma, dönüştürme ve veri işleme araçlarını test etmek için ücretsiz XML örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. XML\'den JSON\'a, XML\'den CSV\'ye dönüştürücüleri, XML doğrulama, yapılandırılmış veri işleme ve işaretleme dili ayrıştırmayı test etmek için mükemmel.',
           keywords: 'XML örnek dosyaları, XML test dosyaları, XML örneklerini indirin, ücretsiz XML test dosyaları, XML\'den JSON\'a dönüştürücü, XML\'den CSV\'ye dönüştürücü, XML doğrulama testi, Extensible Markup Language örnekleri, yapılandırılmış veri örnekleri, .xml test dosyaları, işaretleme dili ayrıştırma örnekleri'
         },
@@ -226,7 +226,7 @@ export const tr: SamplePageTranslations = {
       },
       html: {
         meta: {
-          title: 'Ücretsiz HTML örnek dosyalarını indirin - Web geliştirme için HTML test dosyaları | MorphyHub',
+          title: 'Ücretsiz HTML örnek dosyalarını indirin - Web geliştirme için HTML test dosyaları | FomiPeek',
           description: 'Web geliştirme ve HTML işleme araçlarını test etmek için ücretsiz HTML örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. HTML\'den PDF\'e, HTML\'den DOCX\'e dönüştürücüleri, HTML doğrulama, web kazıma, tarayıcı oluşturma ve HyperText Markup Language işlemeyi test etmek için mükemmel.',
           keywords: 'HTML örnek dosyaları, HTML test dosyaları, HTML örneklerini indirin, ücretsiz HTML test dosyaları, HTML\'den PDF\'e dönüştürücü, HTML\'den DOCX\'e dönüştürücü, HTML doğrulama testi, HyperText Markup Language örnekleri, web geliştirme örnekleri, .html test dosyaları, web kazıma örnekleri, tarayıcı oluşturma testi'
         },
@@ -242,7 +242,7 @@ export const tr: SamplePageTranslations = {
       },
       ods: {
         meta: {
-          title: 'Ücretsiz ODS örnek dosyalarını indirin - OpenDocument elektronik tablo test dosyaları | MorphyHub',
+          title: 'Ücretsiz ODS örnek dosyalarını indirin - OpenDocument elektronik tablo test dosyaları | FomiPeek',
           description: 'Elektronik tablo dönüştürme ve veri işleme araçlarını test etmek için ücretsiz ODS örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. ODS\'den Excel\'e, ODS\'den CSV\'ye dönüştürücüleri, LibreOffice Calc dosyalarını, OpenDocument format işlemeyi ve elektronik tablo veri çıkarmayı test etmek için mükemmel.',
           keywords: 'ODS örnek dosyaları, ODS test dosyaları, ODS örneklerini indirin, ücretsiz ODS test dosyaları, OpenDocument elektronik tablo örnekleri, ODS\'den Excel\'e dönüştürücü, ODS\'den CSV\'ye dönüştürücü, LibreOffice Calc örnekleri, .ods test dosyaları, elektronik tablo dönüştürme örnekleri, OpenDocument format testi'
         },
@@ -258,7 +258,7 @@ export const tr: SamplePageTranslations = {
       },
       'ansible-yml': {
         meta: {
-          title: 'Ücretsiz Ansible YML örnek dosyalarını indirin - YAML yapılandırma test dosyaları | MorphyHub',
+          title: 'Ücretsiz Ansible YML örnek dosyalarını indirin - YAML yapılandırma test dosyaları | FomiPeek',
           description: 'YAML ayrıştırma ve yapılandırma yönetimi araçlarını test etmek için ücretsiz Ansible YML örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Ansible playbook\'larını, YAML doğrulama, DevOps otomasyonu, yapılandırma yönetimi sistemlerini ve infrastructure as code araçlarını test etmek için mükemmel.',
           keywords: 'Ansible YML örnek dosyaları, YML test dosyaları, YML örneklerini indirin, ücretsiz YML test dosyaları, Ansible playbook örnekleri, YAML yapılandırma örnekleri, YAML doğrulama testi, DevOps otomasyonu örnekleri, .yml test dosyaları, yapılandırma yönetimi örnekleri, infrastructure as code örnekleri'
         },
@@ -274,7 +274,7 @@ export const tr: SamplePageTranslations = {
       },
       'api-response-json': {
         meta: {
-          title: 'Ücretsiz API Response JSON örnek dosyaları indir - API geliştirme için JSON test dosyaları | MorphyHub',
+          title: 'Ücretsiz API Response JSON örnek dosyaları indir - API geliştirme için JSON test dosyaları | FomiPeek',
           description: 'JSON ayrıştırma, API entegrasyonu ve web geliştirme araçlarını test etmek için ücretsiz API Response JSON örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. REST API yanıtları, JSON doğrulayıcıları, API mocking, webhook testleri ve veri değişim formatı işleme testleri için mükemmel.',
           keywords: 'API Response JSON örnek dosyaları, JSON test dosyaları, JSON örnekleri indir, ücretsiz JSON test dosyaları, API yanıt örnekleri, JSON ayrıştırma örnekleri, REST API test dosyaları, JSON doğrulayıcı testi, API mocking örnekleri, webhook test dosyaları, .json test dosyaları, web API örnekleri, veri değişim formatı örnekleri'
         },
@@ -290,7 +290,7 @@ export const tr: SamplePageTranslations = {
       },
       'arduino-ino': {
         meta: {
-          title: 'Ücretsiz Arduino INO örnek dosyaları indir - Gömülü geliştirme için Arduino Sketch test dosyaları | MorphyHub',
+          title: 'Ücretsiz Arduino INO örnek dosyaları indir - Gömülü geliştirme için Arduino Sketch test dosyaları | FomiPeek',
           description: 'Arduino sketch derleme ve gömülü programlama araçlarını test etmek için ücretsiz Arduino INO örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Arduino IDE, sketch doğrulama, mikrodenetleyici programlama, gömülü sistem geliştirme ve IoT cihaz testleri için mükemmel.',
           keywords: 'Arduino INO örnek dosyaları, Arduino INO test dosyaları, Arduino INO örnekleri indir, ücretsiz Arduino INO test dosyaları, Arduino sketch örnekleri, gömülü kod örnekleri, Arduino IDE test dosyaları, .ino test dosyaları, mikrodenetleyici örnekleri, IoT geliştirme örnekleri, gömülü programlama örnekleri'
         },
@@ -306,7 +306,7 @@ export const tr: SamplePageTranslations = {
       },
       bat: {
         meta: {
-          title: 'Ücretsiz BAT örnek dosyaları indir - Windows otomasyonu için toplu işlem betiği test dosyaları | MorphyHub',
+          title: 'Ücretsiz BAT örnek dosyaları indir - Windows otomasyonu için toplu işlem betiği test dosyaları | FomiPeek',
           description: 'Windows otomasyonu ve komut satırı işleme araçlarını test etmek için ücretsiz BAT toplu işlem betiği örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Toplu işlem betiği yürütme, Windows görev otomasyonu, komut satırı araçları, betik doğrulayıcıları ve sistem yönetimi yardımcı programları testleri için mükemmel.',
           keywords: 'BAT örnek dosyaları, BAT test dosyaları, BAT örnekleri indir, ücretsiz BAT test dosyaları, toplu işlem betiği örnekleri, Windows toplu işlem dosyaları, otomasyon betiği örnekleri, .bat test dosyaları, komut satırı betiği örnekleri, Windows otomasyon örnekleri, betik yürütme test dosyaları'
         },
@@ -322,7 +322,7 @@ export const tr: SamplePageTranslations = {
       },
       asc: {
         meta: {
-          title: 'Ücretsiz ASC örnek dosyaları indir - Metin işleme için ASCII metin test dosyaları | MorphyHub',
+          title: 'Ücretsiz ASC örnek dosyaları indir - Metin işleme için ASCII metin test dosyaları | FomiPeek',
           description: 'Metin işleme ve kodlama araçlarını test etmek için ücretsiz ASC ASCII metin örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. ASCII kodlama, metin dosyası ayrıştırma, düz metin düzenleyicileri, karakter kodlama doğrulama ve metin formatı dönüştürme araçları testleri için mükemmel.',
           keywords: 'ASC örnek dosyaları, ASC test dosyaları, ASC örnekleri indir, ücretsiz ASC test dosyaları, ASCII metin örnekleri, düz metin örnekleri, .asc test dosyaları, metin formatı örnekleri, ASCII kodlama test dosyaları, metin işleme örnekleri, karakter kodlama örnekleri'
         },
@@ -338,7 +338,7 @@ export const tr: SamplePageTranslations = {
       },
       bib: {
         meta: {
-          title: 'Ücretsiz BIB örnek dosyaları indir - Akademik araştırma için bibliyografya test dosyaları | MorphyHub',
+          title: 'Ücretsiz BIB örnek dosyaları indir - Akademik araştırma için bibliyografya test dosyaları | FomiPeek',
           description: 'Bibliyografya yönetimi ve alıntı araçlarını test etmek için ücretsiz BIB bibliyografya örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. BibTeX format işleme, referans yöneticileri, alıntı oluşturucular, akademik yazma araçları ve LaTeX bibliyografya entegrasyonu testleri için mükemmel.',
           keywords: 'BIB örnek dosyaları, BIB test dosyaları, BIB örnekleri indir, ücretsiz BIB test dosyaları, bibliyografya örnekleri, BibTeX dosyaları, alıntı örnekleri, .bib test dosyaları, referans yönetimi örnekleri, akademik alıntı örnekleri, LaTeX bibliyografya örnekleri'
         },
@@ -354,7 +354,7 @@ export const tr: SamplePageTranslations = {
       },
       c: {
         meta: {
-          title: 'Ücretsiz C örnek dosyaları indir - Geliştirme için C programlama dili test dosyaları | MorphyHub',
+          title: 'Ücretsiz C örnek dosyaları indir - Geliştirme için C programlama dili test dosyaları | FomiPeek',
           description: 'C kodu derleme ve geliştirme araçlarını test etmek için ücretsiz C kaynak kodu örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. C derleyicileri, sözdizimi kontrol araçları, kod analizörleri, GCC araç zinciri, gömülü C geliştirme ve sistem programlama araçları testleri için mükemmel.',
           keywords: 'C örnek dosyaları, C test dosyaları, C örnekleri indir, ücretsiz C test dosyaları, C kaynak kodu örnekleri, C programlama dosyaları, .c test dosyaları, C derleme test dosyaları, GCC test dosyaları, gömülü C örnekleri, sistem programlama örnekleri'
         },
@@ -370,7 +370,7 @@ export const tr: SamplePageTranslations = {
       },
       'can-log': {
         meta: {
-          title: 'Ücretsiz CAN Log örnek dosyaları indir - Otomotiv için Controller Area Network test dosyaları | MorphyHub',
+          title: 'Ücretsiz CAN Log örnek dosyaları indir - Otomotiv için Controller Area Network test dosyaları | FomiPeek',
           description: 'CAN veri yolu analizi ve otomotiv tanılama araçlarını test etmek için ücretsiz CAN Log örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. CAN veri yolu analizörleri, otomotiv tanılama araçları, araç ağ protokolleri, OBD-II testleri ve gömülü otomotiv sistemleri testleri için mükemmel.',
           keywords: 'CAN Log örnek dosyaları, CAN Log test dosyaları, CAN Log örnekleri indir, ücretsiz CAN Log test dosyaları, Controller Area Network örnekleri, CAN veri yolu örnekleri, .log test dosyaları, otomotiv tanılama örnekleri, OBD-II test dosyaları, araç ağ örnekleri, CAN veri yolu analizör testi'
         },
@@ -386,7 +386,7 @@ export const tr: SamplePageTranslations = {
       },
       cmd: {
         meta: {
-          title: 'Ücretsiz CMD örnek dosyaları indir - Otomasyon için Windows komut betiği test dosyaları | MorphyHub',
+          title: 'Ücretsiz CMD örnek dosyaları indir - Otomasyon için Windows komut betiği test dosyaları | FomiPeek',
           description: 'Toplu işlem betiği yürütme ve Windows otomasyon araçlarını test etmek için ücretsiz CMD Windows komut betiği örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Windows komut istemi, toplu işlem dosyası yürütme, betik otomasyonu, sistem yönetimi ve Windows görev zamanlama araçları testleri için mükemmel.',
           keywords: 'CMD örnek dosyaları, CMD test dosyaları, CMD örnekleri indir, ücretsiz CMD test dosyaları, Windows komut betiği örnekleri, toplu işlem betiği örnekleri, .cmd test dosyaları, komut betiği örnekleri, Windows otomasyon örnekleri, sistem yönetimi örnekleri'
         },
@@ -402,7 +402,7 @@ export const tr: SamplePageTranslations = {
       },
       conf: {
         meta: {
-          title: 'Ücretsiz CONF örnek dosyaları indir - Sistem yapılandırması için yapılandırma test dosyaları | MorphyHub',
+          title: 'Ücretsiz CONF örnek dosyaları indir - Sistem yapılandırması için yapılandırma test dosyaları | FomiPeek',
           description: 'Yapılandırma dosyası ayrıştırma ve sistem yapılandırma araçlarını test etmek için ücretsiz CONF yapılandırma örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Sunucu yapılandırması, uygulama ayarları, yapılandırma dosyası doğrulayıcıları, sistem yönetimi araçları ve yazılım dağıtım yardımcı programları testleri için mükemmel.',
           keywords: 'CONF örnek dosyaları, CONF test dosyaları, CONF örnekleri indir, ücretsiz CONF test dosyaları, yapılandırma dosyası örnekleri, sunucu yapılandırması örnekleri, .conf test dosyaları, yapılandırma dosyası örnekleri, sistem yapılandırması örnekleri, uygulama ayarları örnekleri'
         },
@@ -418,7 +418,7 @@ export const tr: SamplePageTranslations = {
       },
       'config-ini': {
         meta: {
-          title: 'Ücretsiz Config INI örnek dosyaları indir - Uygulamalar için INI yapılandırma test dosyaları | MorphyHub',
+          title: 'Ücretsiz Config INI örnek dosyaları indir - Uygulamalar için INI yapılandırma test dosyaları | FomiPeek',
           description: 'INI dosyası ayrıştırma ve yapılandırma yönetimi araçlarını test etmek için ücretsiz Config INI INI yapılandırma örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. INI ayrıştırıcıları, uygulama yapılandırması, ayar yönetimi, Windows INI dosyaları ve yazılım yapılandırma yardımcı programları testleri için mükemmel.',
           keywords: 'Config INI örnek dosyaları, INI test dosyaları, INI örnekleri indir, ücretsiz INI test dosyaları, INI yapılandırma örnekleri, INI yapılandırma örnekleri, .ini test dosyaları, yapılandırma dosyası örnekleri, Windows INI örnekleri, uygulama ayarları örnekleri'
         },
@@ -434,7 +434,7 @@ export const tr: SamplePageTranslations = {
       },
       cpp: {
         meta: {
-          title: 'Ücretsiz CPP örnek dosyaları indir - Geliştirme için C++ programlama dili test dosyaları | MorphyHub',
+          title: 'Ücretsiz CPP örnek dosyaları indir - Geliştirme için C++ programlama dili test dosyaları | FomiPeek',
           description: 'C++ kodu derleme ve geliştirme araçlarını test etmek için ücretsiz CPP C++ kaynak kodu örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. C++ derleyicileri, sözdizimi kontrol araçları, kod analizörleri, GCC/G++ araç zinciri, modern C++ özellikleri ve nesne yönelimli programlama araçları testleri için mükemmel.',
           keywords: 'CPP örnek dosyaları, CPP test dosyaları, CPP örnekleri indir, ücretsiz CPP test dosyaları, C++ kaynak kodu örnekleri, C++ kod dosyaları, .cpp test dosyaları, C++ programlama dosyaları, C++ derleme test dosyaları, GCC test dosyaları, modern C++ örnekleri'
         },
@@ -450,7 +450,7 @@ export const tr: SamplePageTranslations = {
       },
       h: {
         meta: {
-          title: 'Ücretsiz H örnek dosyaları indir - Programlama için C/C++ başlık dosyası test dosyaları | MorphyHub',
+          title: 'Ücretsiz H örnek dosyaları indir - Programlama için C/C++ başlık dosyası test dosyaları | FomiPeek',
           description: 'Başlık dosyası işleme ve geliştirme araçlarını test etmek için ücretsiz H C/C++ başlık dosyası örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. C/C++ derleyicileri, başlık dosyası dahil etme, ön işlemci araçları, kod organizasyonu ve çapraz platform geliştirme yardımcı programları testleri için mükemmel.',
           keywords: 'H örnek dosyaları, H test dosyaları, H örnekleri indir, ücretsiz H test dosyaları, C başlık örnekleri, C++ başlık örnekleri, başlık dosyası örnekleri, .h test dosyaları, C/C++ başlık dosyaları, programlama başlık örnekleri, kod başlık dosyaları'
         },
@@ -466,7 +466,7 @@ export const tr: SamplePageTranslations = {
       },
       hpp: {
         meta: {
-          title: 'Ücretsiz HPP örnek dosyaları indir - Modern C++ geliştirme için C++ başlık dosyası test dosyaları | MorphyHub',
+          title: 'Ücretsiz HPP örnek dosyaları indir - Modern C++ geliştirme için C++ başlık dosyası test dosyaları | FomiPeek',
           description: 'C++ başlık dosyası işleme ve geliştirme araçlarını test etmek için ücretsiz HPP C++ başlık dosyası örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. C++ derleyicileri, yalnızca başlık kitaplıkları, şablon metaprogramlama, modern C++ özellikleri ve gelişmiş C++ geliştirme yardımcı programları testleri için mükemmel.',
           keywords: 'HPP örnek dosyaları, HPP test dosyaları, HPP örnekleri indir, ücretsiz HPP test dosyaları, C++ başlık örnekleri, başlık dosyası örnekleri, .hpp test dosyaları, C++ başlık dosyaları, programlama başlık örnekleri, kod başlık dosyaları, C++ geliştirme dosyaları, modern C++ başlık örnekleri'
         },
@@ -482,7 +482,7 @@ export const tr: SamplePageTranslations = {
       },
       hex: {
         meta: {
-          title: 'Ücretsiz HEX örnek dosyaları indirin - Firmware ve gömülü sistem geliştirme için hex test dosyaları | MorphyHub',
+          title: 'Ücretsiz HEX örnek dosyaları indirin - Firmware ve gömülü sistem geliştirme için hex test dosyaları | FomiPeek',
           description: 'Firmware programlama, gömülü sistem geliştirme ve ikili veri analizini test etmek için ücretsiz HEX hex örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Hex editörler, firmware yükleyiciler, mikrodenetleyici programlama ve gömülü geliştirme araçlarını test etmek için mükemmel.',
           keywords: 'HEX örnek dosyaları, HEX test dosyaları, HEX örnekleri indir, ücretsiz HEX test dosyaları, hex dosyaları, hex firmware dosyaları, .hex test dosyaları, hex gömülü dosyalar, hex mikrodenetleyici dosyaları, hex editör test dosyaları, firmware programlama örnekleri, hex ikili dosyalar'
         },
@@ -498,7 +498,7 @@ export const tr: SamplePageTranslations = {
       },
       cs: {
         meta: {
-          title: 'Ücretsiz CS örnek dosyaları indirin - .NET geliştirme için C# kaynak kodu test dosyaları | MorphyHub',
+          title: 'Ücretsiz CS örnek dosyaları indirin - .NET geliştirme için C# kaynak kodu test dosyaları | FomiPeek',
           description: 'C# derleme, .NET geliştirme ve Visual Studio araçlarını test etmek için ücretsiz CS C# kaynak kodu örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. C# derleyicileri, .NET framework\'leri, Visual Studio IDE, kod analiz araçları ve C# geliştirme ortamlarını test etmek için mükemmel.',
           keywords: 'CS örnek dosyaları, CS test dosyaları, CS örnekleri indir, ücretsiz CS test dosyaları, C# kaynak kodu örnekleri, .NET kod dosyaları, .cs test dosyaları, C# programlama dosyaları, Visual Studio test dosyaları, .NET geliştirme örnekleri, C# derleme test dosyaları'
         },
@@ -514,7 +514,7 @@ export const tr: SamplePageTranslations = {
       },
       css: {
         meta: {
-          title: 'Ücretsiz CSS örnek dosyaları indirin - Web geliştirme için stylesheet test dosyaları | MorphyHub',
+          title: 'Ücretsiz CSS örnek dosyaları indirin - Web geliştirme için stylesheet test dosyaları | FomiPeek',
           description: 'Web stillendirme, CSS ayrıştırma ve front-end araçlarını test etmek için ücretsiz CSS stylesheet örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. CSS doğrulayıcıları, ön işlemciler (SASS, LESS), CSS küçültücüleri, web tarayıcıları ve front-end geliştirme framework\'lerini test etmek için mükemmel.',
           keywords: 'CSS örnek dosyaları, CSS test dosyaları, CSS örnekleri indir, ücretsiz CSS test dosyaları, stylesheet örnekleri, CSS stylesheet dosyaları, .css test dosyaları, web stillendirme dosyaları, CSS parser test dosyaları, front-end geliştirme örnekleri, CSS framework test dosyaları'
         },
@@ -530,7 +530,7 @@ export const tr: SamplePageTranslations = {
       },
       csr: {
         meta: {
-          title: 'Ücretsiz CSR örnek dosyaları indirin - SSL/TLS için sertifika imza isteği test dosyaları | MorphyHub',
+          title: 'Ücretsiz CSR örnek dosyaları indirin - SSL/TLS için sertifika imza isteği test dosyaları | FomiPeek',
           description: 'SSL/TLS sertifika oluşturma, PKI yönetimi ve güvenlik araçlarını test etmek için ücretsiz CSR sertifika imza isteği örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Sertifika yetkilileri, OpenSSL, SSL sertifika oluşturma, PKI altyapısı ve güvenlik sertifika yönetim araçlarını test etmek için mükemmel.',
           keywords: 'CSR örnek dosyaları, CSR test dosyaları, CSR örnekleri indir, ücretsiz CSR test dosyaları, sertifika imza isteği örnekleri, SSL sertifika dosyaları, .csr test dosyaları, PKI sertifika dosyaları, OpenSSL test dosyaları, SSL/TLS sertifika örnekleri, sertifika yetkisi test dosyaları'
         },
@@ -546,7 +546,7 @@ export const tr: SamplePageTranslations = {
       },
       'customer-database-sql': {
         meta: {
-          title: 'Ücretsiz Customer Database SQL örnek dosyaları indirin - SQL veritabanı test dosyaları | MorphyHub',
+          title: 'Ücretsiz Customer Database SQL örnek dosyaları indirin - SQL veritabanı test dosyaları | FomiPeek',
           description: 'SQL veritabanı işlemlerini, sorgu yürütmeyi ve veritabanı yönetim araçlarını test etmek için ücretsiz Customer Database SQL örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. SQL parser\'ları, veritabanı içe aktarma araçları, SQLite, MySQL, PostgreSQL ve veritabanı yönetim sistemlerini test etmek için mükemmel.',
           keywords: 'Customer Database SQL örnek dosyaları, SQL veritabanı test dosyaları, SQL örnekleri indir, ücretsiz SQL test dosyaları, SQL veritabanı dosyaları, .sql test dosyaları, SQL sorgu dosyaları, veritabanı içe aktarma örnekleri, SQLite test dosyaları, MySQL örnekleri, PostgreSQL test dosyaları'
         },
@@ -562,7 +562,7 @@ export const tr: SamplePageTranslations = {
       },
       dbf: {
         meta: {
-          title: 'Ücretsiz DBF örnek dosyaları indirin - Veri yönetimi için dBASE veritabanı test dosyaları | MorphyHub',
+          title: 'Ücretsiz DBF örnek dosyaları indirin - Veri yönetimi için dBASE veritabanı test dosyaları | FomiPeek',
           description: 'Veritabanı işlemlerini, veri içe/dışa aktarmayı ve eski veritabanı formatlarını test etmek için ücretsiz DBF dBASE veritabanı örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. dBASE uyumluluğu, veritabanı dönüştürücüleri, veri migrasyon araçları, elektronik tablo uygulamaları ve veritabanı yönetim sistemlerini test etmek için mükemmel.',
           keywords: 'DBF örnek dosyaları, DBF test dosyaları, DBF örnekleri indir, ücretsiz DBF test dosyaları, dBASE veritabanı dosyaları, .dbf test dosyaları, veritabanı format dosyaları, eski veritabanı örnekleri, dBASE uyumluluk test dosyaları, veri içe aktarma örnekleri'
         },
@@ -578,7 +578,7 @@ export const tr: SamplePageTranslations = {
       },
       dem: {
         meta: {
-          title: 'Ücretsiz DEM örnek dosyaları indirin - GIS ve haritalama için dijital yükseklik modeli test dosyaları | MorphyHub',
+          title: 'Ücretsiz DEM örnek dosyaları indirin - GIS ve haritalama için dijital yükseklik modeli test dosyaları | FomiPeek',
           description: 'GIS uygulamalarını, arazi haritalamayı ve coğrafi uzamsal analiz araçlarını test etmek için ücretsiz DEM dijital yükseklik modeli örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. GIS yazılımları, arazi görselleştirme, yükseklik verisi işleme, haritalama uygulamaları ve coğrafi uzamsal analiz araçlarını test etmek için mükemmel.',
           keywords: 'DEM örnek dosyaları, DEM test dosyaları, DEM örnekleri indir, ücretsiz DEM test dosyaları, dijital yükseklik modeli dosyaları, .dem test dosyaları, GIS yükseklik dosyaları, arazi verisi örnekleri, coğrafi uzamsal veri dosyaları, haritalama test dosyaları, yükseklik modeli örnekleri'
         },
@@ -594,7 +594,7 @@ export const tr: SamplePageTranslations = {
       },
       der: {
         meta: {
-          title: 'Ücretsiz DER örnek dosyaları indirin - Distinguished Encoding Rules sertifika test dosyaları | MorphyHub',
+          title: 'Ücretsiz DER örnek dosyaları indirin - Distinguished Encoding Rules sertifika test dosyaları | FomiPeek',
           description: 'SSL/TLS sertifikalarını, PKI yönetimini ve güvenlik araçlarını test etmek için ücretsiz DER Distinguished Encoding Rules sertifika örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Sertifika ayrıştırma, OpenSSL, PKI altyapısı, SSL sertifika doğrulama ve güvenlik sertifika yönetim araçlarını test etmek için mükemmel.',
           keywords: 'DER örnek dosyaları, DER test dosyaları, DER örnekleri indir, ücretsiz DER test dosyaları, Distinguished Encoding Rules dosyaları, .der test dosyaları, sertifika dosyaları, SSL sertifika örnekleri, PKI sertifika dosyaları, OpenSSL test dosyaları, sertifika ayrıştırma örnekleri'
         },
@@ -610,7 +610,7 @@ export const tr: SamplePageTranslations = {
       },
       dmp: {
         meta: {
-          title: 'Ücretsiz DMP örnek dosyaları indirin - Hata ayıklama ve analiz için bellek dökümü test dosyaları | MorphyHub',
+          title: 'Ücretsiz DMP örnek dosyaları indirin - Hata ayıklama ve analiz için bellek dökümü test dosyaları | FomiPeek',
           description: 'Çökme analizi, hata ayıklama araçları ve sistem tanılamayı test etmek için ücretsiz DMP bellek dökümü örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Hata ayıklayıcılar, çökme analiz araçları, bellek analizörleri, sistem tanılama araçları ve adli analiz uygulamalarını test etmek için mükemmel.',
           keywords: 'DMP örnek dosyaları, DMP test dosyaları, DMP örnekleri indir, ücretsiz DMP test dosyaları, bellek dökümü dosyaları, .dmp test dosyaları, çökme dökümü dosyaları, hata ayıklama dosyaları, sistem dökümü örnekleri, bellek analizi dosyaları, çökme analizi test dosyaları'
         },
@@ -626,7 +626,7 @@ export const tr: SamplePageTranslations = {
       },
       'docker-compose-yml': {
         meta: {
-          title: 'Ücretsiz Docker Compose YML örnek dosyaları indirin - Docker Compose yapılandırma test dosyaları | MorphyHub',
+          title: 'Ücretsiz Docker Compose YML örnek dosyaları indirin - Docker Compose yapılandırma test dosyaları | FomiPeek',
           description: 'Docker container orkestrasyonunu, çoklu container uygulamalarını ve DevOps araçlarını test etmek için ücretsiz Docker Compose YML yapılandırma örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Docker Compose, container orkestrasyonu, YAML ayrıştırma, DevOps otomasyonu ve containerize edilmiş uygulama dağıtım araçlarını test etmek için mükemmel.',
           keywords: 'Docker Compose YML örnek dosyaları, docker-compose test dosyaları, docker-compose örnekleri indir, ücretsiz docker-compose test dosyaları, Docker Compose YAML dosyaları, .yml test dosyaları, container orkestrasyonu dosyaları, DevOps yapılandırma örnekleri, Docker Compose test dosyaları, çoklu container yapılandırma örnekleri'
         },
@@ -642,7 +642,7 @@ export const tr: SamplePageTranslations = {
       },
       dockerfile: {
         meta: {
-          title: 'Ücretsiz Dockerfile örnek dosyaları indirin - Docker container build test dosyaları | MorphyHub',
+          title: 'Ücretsiz Dockerfile örnek dosyaları indirin - Docker container build test dosyaları | FomiPeek',
           description: 'Containerizasyonu, Docker build\'i ve DevOps araçlarını test etmek için ücretsiz Dockerfile Docker container build örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Docker build, container image oluşturma, Dockerfile ayrıştırma, containerizasyon araçları ve DevOps otomasyon platformlarını test etmek için mükemmel.',
           keywords: 'Dockerfile örnek dosyaları, Dockerfile test dosyaları, Dockerfile örnekleri indir, ücretsiz Dockerfile test dosyaları, Docker container dosyaları, Dockerfile test dosyaları, container build dosyaları, Docker build örnekleri, containerizasyon test dosyaları, DevOps Docker örnekleri'
         },
@@ -658,7 +658,7 @@ export const tr: SamplePageTranslations = {
       },
       editorconfig: {
         meta: {
-          title: 'Ücretsiz EditorConfig örnek dosyaları indirin - Editör yapılandırma test dosyaları | MorphyHub',
+          title: 'Ücretsiz EditorConfig örnek dosyaları indirin - Editör yapılandırma test dosyaları | FomiPeek',
           description: 'Kod editörü ayarlarını, format tutarlılığını ve geliştirme araçlarını test etmek için ücretsiz EditorConfig editör yapılandırma örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. EditorConfig parser\'ları, kod editörü eklentileri, format araçları, IDE yapılandırması ve geliştirme ortamı kurulum araçlarını test etmek için mükemmel.',
           keywords: 'EditorConfig örnek dosyaları, EditorConfig test dosyaları, EditorConfig örnekleri indir, ücretsiz EditorConfig test dosyaları, editör yapılandırma dosyaları, .editorconfig test dosyaları, kod editörü ayar dosyaları, IDE yapılandırma örnekleri, format yapılandırma dosyaları, editör ayar test dosyaları'
         },
@@ -674,7 +674,7 @@ export const tr: SamplePageTranslations = {
       },
       ini: {
         meta: {
-          title: 'Ücretsiz INI örnek dosyaları indirin - Uygulamalar için INI yapılandırma test dosyaları | MorphyHub',
+          title: 'Ücretsiz INI örnek dosyaları indirin - Uygulamalar için INI yapılandırma test dosyaları | FomiPeek',
           description: 'Uygulama ayarlarını, INI dosya ayrıştırmayı ve yapılandırma yönetim araçlarını test etmek için ücretsiz INI yapılandırma örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. INI parser\'ları, uygulama yapılandırması, ayar yönetimi, Windows INI dosyaları ve yazılım yapılandırma yardımcı programlarını test etmek için mükemmel.',
           keywords: 'INI örnek dosyaları, INI test dosyaları, INI örnekleri indir, ücretsiz INI test dosyaları, INI yapılandırma dosyaları, .ini test dosyaları, uygulama ayar dosyaları, INI yapılandırma örnekleri, Windows INI dosyaları, yapılandırma dosyası örnekleri, INI ayrıştırma test dosyaları'
         },
@@ -690,7 +690,7 @@ export const tr: SamplePageTranslations = {
       },
       intelhex: {
         meta: {
-          title: 'Ücretsiz IntelHex örnek dosyaları indirin - Firmware geliştirme için Intel hex test dosyaları | MorphyHub',
+          title: 'Ücretsiz IntelHex örnek dosyaları indirin - Firmware geliştirme için Intel hex test dosyaları | FomiPeek',
           description: 'Firmware programlamayı, gömülü sistem geliştirmeyi ve mikrodenetleyici araçlarını test etmek için ücretsiz IntelHex Intel hex örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. IntelHex parser\'ları, firmware yükleyiciler, mikrodenetleyici programlama, gömülü geliştirme araçları ve hex dosya işleme uygulamalarını test etmek için mükemmel.',
           keywords: 'IntelHex örnek dosyaları, IntelHex test dosyaları, IntelHex örnekleri indir, ücretsiz IntelHex test dosyaları, Intel hex dosyaları, .intelhex test dosyaları, hex firmware dosyaları, hex gömülü dosyalar, hex mikrodenetleyici dosyaları, IntelHex parser test dosyaları, firmware programlama örnekleri'
         },
@@ -706,7 +706,7 @@ export const tr: SamplePageTranslations = {
       },
       ipynb: {
         meta: {
-          title: 'Ücretsiz IPYNB örnek dosyaları indirin - Veri bilimi için Jupyter Notebook test dosyaları | MorphyHub',
+          title: 'Ücretsiz IPYNB örnek dosyaları indirin - Veri bilimi için Jupyter Notebook test dosyaları | FomiPeek',
           description: 'Veri bilimi iş akışlarını, Python yürütmeyi ve notebook analiz araçlarını test etmek için ücretsiz IPYNB Jupyter Notebook örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Jupyter Notebook, Python veri bilimi araçları, notebook görüntüleyiciler, veri analiz uygulamaları ve bilimsel hesaplama platformlarını test etmek için mükemmel.',
           keywords: 'IPYNB örnek dosyaları, IPYNB test dosyaları, IPYNB örnekleri indir, ücretsiz IPYNB test dosyaları, Jupyter Notebook dosyaları, .ipynb test dosyaları, Python notebook dosyaları, veri bilimi notebook örnekleri, Jupyter test dosyaları, notebook analiz dosyaları, veri bilimi iş akışı örnekleri'
         },
@@ -722,7 +722,7 @@ export const tr: SamplePageTranslations = {
       },
       java: {
         meta: {
-          title: 'Ücretsiz Java örnek dosyaları indirin - Geliştirme için Java kaynak kodu test dosyaları | MorphyHub',
+          title: 'Ücretsiz Java örnek dosyaları indirin - Geliştirme için Java kaynak kodu test dosyaları | FomiPeek',
           description: 'Java derlemeyi, JVM uygulamalarını ve geliştirme araçlarını test etmek için ücretsiz Java Java kaynak kodu örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Java derleyicileri, JVM, IDE desteği (Eclipse, IntelliJ), Java build araçları (Maven, Gradle) ve Java geliştirme ortamlarını test etmek için mükemmel.',
           keywords: 'Java örnek dosyaları, Java test dosyaları, Java örnekleri indir, ücretsiz Java test dosyaları, Java kaynak kodu dosyaları, .java test dosyaları, Java programlama dosyaları, JVM test dosyaları, Java derleme örnekleri, Java IDE test dosyaları, Java geliştirme örnekleri'
         },
@@ -738,7 +738,7 @@ export const tr: SamplePageTranslations = {
       },
       jks: {
         meta: {
-          title: 'Ücretsiz JKS örnek dosyaları indirin - SSL/TLS güvenliği için Java KeyStore test dosyaları | MorphyHub',
+          title: 'Ücretsiz JKS örnek dosyaları indirin - SSL/TLS güvenliği için Java KeyStore test dosyaları | FomiPeek',
           description: 'SSL/TLS sertifika depolamayı, Java güvenliğini ve PKI yönetim araçlarını test etmek için ücretsiz JKS Java KeyStore örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Java KeyStore yönetimi, JKS ayrıştırma, SSL sertifika depolama, Java güvenlik araçları ve PKI altyapısını test etmek için mükemmel.',
           keywords: 'JKS örnek dosyaları, JKS test dosyaları, JKS örnekleri indir, ücretsiz JKS test dosyaları, Java KeyStore dosyaları, .jks test dosyaları, SSL sertifika dosyaları, Java güvenlik dosyaları, keystore test dosyaları, PKI sertifika örnekleri, Java KeyStore yönetimi test dosyaları'
         },
@@ -754,7 +754,7 @@ export const tr: SamplePageTranslations = {
       },
       json: {
         meta: {
-          title: 'Ücretsiz JSON örnek dosyaları indirin - Web geliştirme için JSON veri test dosyaları | MorphyHub',
+          title: 'Ücretsiz JSON örnek dosyaları indirin - Web geliştirme için JSON veri test dosyaları | FomiPeek',
           description: 'JSON ayrıştırmayı, API entegrasyonunu ve web geliştirme araçlarını test etmek için ücretsiz JSON JSON veri örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. JSON parser\'ları, API yanıtları, veri değişim formatları, web uygulamaları ve JSON doğrulama araçlarını test etmek için mükemmel.',
           keywords: 'JSON örnek dosyaları, JSON test dosyaları, JSON örnekleri indir, ücretsiz JSON test dosyaları, JSON veri dosyaları, .json test dosyaları, JSON API dosyaları, JSON parser test dosyaları, veri değişim örnekleri, JSON web dosyaları, JSON doğrulama test dosyaları'
         },
@@ -770,7 +770,7 @@ export const tr: SamplePageTranslations = {
       },
       jsonl: {
         meta: {
-          title: 'Ücretsiz JSONL örnek dosyaları indirin - Veri işleme için JSON Lines test dosyaları | MorphyHub',
+          title: 'Ücretsiz JSONL örnek dosyaları indirin - Veri işleme için JSON Lines test dosyaları | FomiPeek',
           description: 'Veri işlemeyi, JSON streaming\'i ve big data araçlarını test etmek için ücretsiz JSONL JSON Lines örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. JSONL parser\'ları, veri streaming uygulamaları, ETL araçları, big data işleme ve log dosyası analiz araçlarını test etmek için mükemmel.',
           keywords: 'JSONL örnek dosyaları, JSONL test dosyaları, JSONL örnekleri indir, ücretsiz JSONL test dosyaları, JSON Lines dosyaları, .jsonl test dosyaları, JSON streaming dosyaları, veri işleme örnekleri, JSON ETL dosyaları, JSON big data örnekleri, JSON log analiz dosyaları'
         },
@@ -786,7 +786,7 @@ export const tr: SamplePageTranslations = {
       },
       js: {
         meta: {
-          title: 'Ücretsiz JS örnek dosyaları indirin - Web geliştirme için JavaScript kaynak kodu test dosyaları | MorphyHub',
+          title: 'Ücretsiz JS örnek dosyaları indirin - Web geliştirme için JavaScript kaynak kodu test dosyaları | FomiPeek',
           description: 'JavaScript yürütmeyi, web geliştirmeyi ve front-end araçlarını test etmek için ücretsiz JS JavaScript kaynak kodu örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. JavaScript motorları, Node.js, web tarayıcıları, JavaScript küçültücüleri, kod analiz araçları ve front-end geliştirme framework\'lerini test etmek için mükemmel.',
           keywords: 'JS örnek dosyaları, JS test dosyaları, JS örnekleri indir, ücretsiz JS test dosyaları, JavaScript kaynak kodu dosyaları, .js test dosyaları, JavaScript programlama dosyaları, Node.js test dosyaları, JavaScript web dosyaları, JS küçültücü test dosyaları, front-end geliştirme örnekleri'
         },
@@ -802,7 +802,7 @@ export const tr: SamplePageTranslations = {
       },
       jsx: {
         meta: {
-          title: 'Ücretsiz JSX örnek dosyaları indirin - Front-end geliştirme için React JSX test dosyaları | MorphyHub',
+          title: 'Ücretsiz JSX örnek dosyaları indirin - Front-end geliştirme için React JSX test dosyaları | FomiPeek',
           description: 'React geliştirmeyi, JSX derlemeyi ve front-end framework\'lerini test etmek için ücretsiz JSX React JSX örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. React, JSX transpiler\'ları (Babel), front-end build araçları, React geliştirme ortamları ve modern JavaScript framework\'lerini test etmek için mükemmel.',
           keywords: 'JSX örnek dosyaları, JSX test dosyaları, JSX örnekleri indir, ücretsiz JSX test dosyaları, React JSX dosyaları, .jsx test dosyaları, React component dosyaları, JSX transpiler test dosyaları, JSX front-end dosyaları, React geliştirme örnekleri, Babel JSX test dosyaları'
         },
@@ -818,7 +818,7 @@ export const tr: SamplePageTranslations = {
       },
       jwt: {
         meta: {
-          title: 'Ücretsiz JWT örnek dosyaları indirin - API güvenliği için JSON Web Token test dosyaları | MorphyHub',
+          title: 'Ücretsiz JWT örnek dosyaları indirin - API güvenliği için JSON Web Token test dosyaları | FomiPeek',
           description: 'API kimlik doğrulamayı, JWT token ayrıştırmayı ve güvenlik araçlarını test etmek için ücretsiz JWT JSON Web Token örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. JWT parser\'ları, API kimlik doğrulama, token doğrulama, OAuth 2.0 ve güvenlik test araçlarını test etmek için mükemmel.',
           keywords: 'JWT örnek dosyaları, JWT test dosyaları, JWT örnekleri indir, ücretsiz JWT test dosyaları, JSON Web Token dosyaları, .jwt test dosyaları, kimlik doğrulama token dosyaları, API güvenlik dosyaları, JWT parser test dosyaları, OAuth token örnekleri, güvenlik test dosyaları'
         },
@@ -834,7 +834,7 @@ export const tr: SamplePageTranslations = {
       },
       key: {
         meta: {
-          title: 'Ücretsiz KEY örnek dosyaları indirin - SSL/TLS güvenliği için özel anahtar test dosyaları | MorphyHub',
+          title: 'Ücretsiz KEY örnek dosyaları indirin - SSL/TLS güvenliği için özel anahtar test dosyaları | FomiPeek',
           description: 'SSL/TLS sertifikalarını, kriptografik işlemleri ve güvenlik araçlarını test etmek için ücretsiz KEY özel anahtar örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Özel anahtar ayrıştırma, OpenSSL, SSL sertifika oluşturma, kriptografik kütüphaneler ve güvenlik sertifika yönetim araçlarını test etmek için mükemmel.',
           keywords: 'KEY örnek dosyaları, KEY test dosyaları, KEY örnekleri indir, ücretsiz KEY test dosyaları, özel anahtar dosyaları, .key test dosyaları, SSL anahtar dosyaları, kriptografik anahtar dosyaları, OpenSSL test dosyaları, güvenlik anahtarı örnekleri, sertifika anahtarı test dosyaları'
         },
@@ -850,7 +850,7 @@ export const tr: SamplePageTranslations = {
       },
       kml: {
         meta: {
-          title: 'Ücretsiz KML örnek dosyaları indirin - GIS ve haritalama için Keyhole Markup Language test dosyaları | MorphyHub',
+          title: 'Ücretsiz KML örnek dosyaları indirin - GIS ve haritalama için Keyhole Markup Language test dosyaları | FomiPeek',
           description: 'GIS uygulamalarını, harita görselleştirmeyi ve coğrafi uzamsal araçları test etmek için ücretsiz KML Keyhole Markup Language coğrafi veri örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Google Earth, GIS yazılımları, harita renderleme, coğrafi veri işleme ve coğrafi uzamsal analiz araçlarını test etmek için mükemmel.',
           keywords: 'KML örnek dosyaları, KML test dosyaları, KML örnekleri indir, ücretsiz KML test dosyaları, Keyhole Markup Language dosyaları, .kml test dosyaları, coğrafi veri dosyaları, harita verisi örnekleri, KML GIS dosyaları, Google Earth test dosyaları, coğrafi uzamsal veri örnekleri'
         },
@@ -866,7 +866,7 @@ export const tr: SamplePageTranslations = {
       },
       kt: {
         meta: {
-          title: 'Ücretsiz KT örnek dosyaları indirin - Android geliştirme için Kotlin kaynak kodu test dosyaları | MorphyHub',
+          title: 'Ücretsiz KT örnek dosyaları indirin - Android geliştirme için Kotlin kaynak kodu test dosyaları | FomiPeek',
           description: 'Kotlin derlemeyi, Android geliştirmeyi ve JVM uygulamalarını test etmek için ücretsiz KT Kotlin kaynak kodu örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Kotlin derleyicileri, Android Studio, Kotlin/JVM, IDE desteği ve Kotlin geliştirme ortamlarını test etmek için mükemmel.',
           keywords: 'KT örnek dosyaları, KT test dosyaları, KT örnekleri indir, ücretsiz KT test dosyaları, Kotlin kaynak kodu dosyaları, .kt test dosyaları, Kotlin programlama dosyaları, Android Kotlin dosyaları, Kotlin derleyici test dosyaları, Kotlin JVM örnekleri, Kotlin geliştirme test dosyaları'
         },
@@ -882,7 +882,7 @@ export const tr: SamplePageTranslations = {
       },
       log: {
         meta: {
-          title: 'Ücretsiz LOG örnek dosyaları indirin - Hata ayıklama ve sistem analizi için log test dosyaları | MorphyHub',
+          title: 'Ücretsiz LOG örnek dosyaları indirin - Hata ayıklama ve sistem analizi için log test dosyaları | FomiPeek',
           description: 'Log ayrıştırmayı, sistem analizini ve hata ayıklama araçlarını test etmek için ücretsiz LOG log örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Log analizörleri, sistem izleme araçları, hata ayıklama uygulamaları, log toplama sistemleri ve sistem tanılama araçlarını test etmek için mükemmel.',
           keywords: 'LOG örnek dosyaları, LOG test dosyaları, LOG örnekleri indir, ücretsiz LOG test dosyaları, log dosyaları, .log test dosyaları, sistem log dosyaları, uygulama log örnekleri, log parser test dosyaları, log hata ayıklama dosyaları, sistem log analizi örnekleri'
         },
@@ -898,7 +898,7 @@ export const tr: SamplePageTranslations = {
       },
       lua: {
         meta: {
-          title: 'Ücretsiz LUA örnek dosyaları indirin - Oyun geliştirme ve otomasyon için Lua script test dosyaları | MorphyHub',
+          title: 'Ücretsiz LUA örnek dosyaları indirin - Oyun geliştirme ve otomasyon için Lua script test dosyaları | FomiPeek',
           description: 'Lua yürütmeyi, oyun geliştirmeyi ve otomasyon araçlarını test etmek için ücretsiz LUA Lua script örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Lua yorumlayıcıları, oyun motorları, script ortamları, otomasyon araçları ve gömülü Lua uygulamalarını test etmek için mükemmel.',
           keywords: 'LUA örnek dosyaları, LUA test dosyaları, LUA örnekleri indir, ücretsiz LUA test dosyaları, Lua script dosyaları, .lua test dosyaları, Lua programlama dosyaları, oyun script dosyaları, Lua yorumlayıcı test dosyaları, otomasyon script örnekleri, gömülü Lua test dosyaları'
         },
@@ -914,7 +914,7 @@ export const tr: SamplePageTranslations = {
       },
       m3u: {
         meta: {
-          title: 'Ücretsiz M3U örnek dosyaları indirin - Medya oynatıcılar için M3U playlist test dosyaları | MorphyHub',
+          title: 'Ücretsiz M3U örnek dosyaları indirin - Medya oynatıcılar için M3U playlist test dosyaları | FomiPeek',
           description: 'Medya oynatıcıları, playlist ayrıştırmayı ve ses/video streaming araçlarını test etmek için ücretsiz M3U M3U playlist örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Medya oynatıcıları, playlist yöneticileri, streaming uygulamaları, ses oynatıcıları ve video oynatıcı yazılımlarını test etmek için mükemmel.',
           keywords: 'M3U örnek dosyaları, M3U test dosyaları, M3U örnekleri indir, ücretsiz M3U test dosyaları, M3U playlist dosyaları, .m3u test dosyaları, medya playlist dosyaları, ses playlist örnekleri, video playlist dosyaları, medya oynatıcı test dosyaları, streaming playlist örnekleri'
         },
@@ -930,7 +930,7 @@ export const tr: SamplePageTranslations = {
       },
       m3u8: {
         meta: {
-          title: 'Ücretsiz M3U8 örnek dosyaları indirin - Video streaming için M3U8 HLS playlist test dosyaları | MorphyHub',
+          title: 'Ücretsiz M3U8 örnek dosyaları indirin - Video streaming için M3U8 HLS playlist test dosyaları | FomiPeek',
           description: 'Video streaming\'i, HLS oynatıcıları ve medya dağıtım araçlarını test etmek için ücretsiz M3U8 M3U8 HLS (HTTP Live Streaming) playlist örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. HLS oynatıcıları, video streaming platformları, uyarlanabilir bitrate streaming, medya sunucuları ve video dağıtım sistemlerini test etmek için mükemmel.',
           keywords: 'M3U8 örnek dosyaları, M3U8 test dosyaları, M3U8 örnekleri indir, ücretsiz M3U8 test dosyaları, M3U8 HLS playlist dosyaları, .m3u8 test dosyaları, HTTP Live Streaming dosyaları, video streaming playlist örnekleri, HLS oynatıcı test dosyaları, uyarlanabilir streaming örnekleri, medya sunucu playlist dosyaları'
         },
@@ -946,7 +946,7 @@ export const tr: SamplePageTranslations = {
       },
       makefile: {
         meta: {
-          title: 'Ücretsiz Makefile örnek dosyaları indirin - Makefile build yapılandırma test dosyaları | MorphyHub',
+          title: 'Ücretsiz Makefile örnek dosyaları indirin - Makefile build yapılandırma test dosyaları | FomiPeek',
           description: 'Build otomasyonunu, Make build sistemini ve geliştirme araçlarını test etmek için ücretsiz Makefile build yapılandırma örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Make build sistemi, build otomasyon araçları, C/C++ derleme, build script\'leri ve geliştirme build ortamlarını test etmek için mükemmel.',
           keywords: 'Makefile örnek dosyaları, Makefile test dosyaları, Makefile örnekleri indir, ücretsiz Makefile test dosyaları, Makefile build dosyaları, Makefile test dosyaları, build yapılandırma dosyaları, Make build sistemi örnekleri, C/C++ build dosyaları, build otomasyon test dosyaları, Makefile derleme örnekleri'
         },
@@ -962,7 +962,7 @@ export const tr: SamplePageTranslations = {
       },
       mbtiles: {
         meta: {
-          title: 'Ücretsiz MBTiles örnek dosyaları indirin - MBTiles harita tile veritabanı test dosyaları | MorphyHub',
+          title: 'Ücretsiz MBTiles örnek dosyaları indirin - MBTiles harita tile veritabanı test dosyaları | FomiPeek',
           description: 'Harita renderlamayı, GIS uygulamalarını ve haritalama araçlarını test etmek için ücretsiz MBTiles harita tile veritabanı örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Harita tile sunucuları, GIS yazılımları, harita renderlama motorları, mobil haritalama uygulamaları ve offline harita araçlarını test etmek için mükemmel.',
           keywords: 'MBTiles örnek dosyaları, MBTiles test dosyaları, MBTiles örnekleri indir, ücretsiz MBTiles test dosyaları, MBTiles harita tile dosyaları, .mbtiles test dosyaları, harita veritabanı dosyaları, GIS tile örnekleri, harita renderlama dosyaları, mobil harita test dosyaları, offline harita tile örnekleri'
         },
@@ -978,7 +978,7 @@ export const tr: SamplePageTranslations = {
       },
       md: {
         meta: {
-          title: 'Ücretsiz MD örnek dosyaları indirin - Markdown dokümantasyon test dosyaları | MorphyHub',
+          title: 'Ücretsiz MD örnek dosyaları indirin - Markdown dokümantasyon test dosyaları | FomiPeek',
           description: 'Markdown ayrıştırmayı, dokümantasyon araçlarını ve içerik yönetim sistemlerini test etmek için ücretsiz MD Markdown dokümantasyon örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Markdown parser\'ları, dokümantasyon oluşturucuları, statik site oluşturucuları, GitHub Markdown ve içerik yönetim platformlarını test etmek için mükemmel.',
           keywords: 'MD örnek dosyaları, MD test dosyaları, MD örnekleri indir, ücretsiz MD test dosyaları, Markdown dosyaları, .md test dosyaları, Markdown dokümantasyon dosyaları, Markdown parser test dosyaları, GitHub Markdown örnekleri, statik site oluşturucu dosyaları, dokümantasyon oluşturucu test dosyaları'
         },
@@ -994,7 +994,7 @@ export const tr: SamplePageTranslations = {
       },
       mdx: {
         meta: {
-          title: 'Ücretsiz MDX örnek dosyaları indirin - Dokümantasyon için MDX React Markdown test dosyaları | MorphyHub',
+          title: 'Ücretsiz MDX örnek dosyaları indirin - Dokümantasyon için MDX React Markdown test dosyaları | FomiPeek',
           description: 'React dokümantasyonunu, statik site oluşturucularını ve içerik yönetim sistemlerini test etmek için ücretsiz MDX MDX (Markdown + JSX) örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. MDX parser\'ları, React dokümantasyon araçları, Next.js, Gatsby, statik site oluşturucuları ve modern dokümantasyon platformlarını test etmek için mükemmel.',
           keywords: 'MDX örnek dosyaları, MDX test dosyaları, MDX örnekleri indir, ücretsiz MDX test dosyaları, MDX React Markdown dosyaları, .mdx test dosyaları, React dokümantasyon dosyaları, MDX parser test dosyaları, MDX Next.js örnekleri, MDX Gatsby dosyaları, statik site oluşturucu MDX test dosyaları'
         },
@@ -1010,7 +1010,7 @@ export const tr: SamplePageTranslations = {
       },
       apk: {
         meta: {
-          title: 'Ücretsiz APK örnek dosyaları indirin - Android uygulama paketi test dosyaları | MorphyHub',
+          title: 'Ücretsiz APK örnek dosyaları indirin - Android uygulama paketi test dosyaları | FomiPeek',
           description: 'Android uygulama kurulumu, APK analizi, tersine mühendislik ve mobil geliştirme araçlarını test etmek için ücretsiz APK Android uygulama paketi örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. APK yükleyiciler, Android emülatörler, uygulama analizörleri, güvenlik tarayıcıları ve mobil uygulama geliştirme platformlarını test etmek için mükemmel.',
           keywords: 'APK örnek dosyaları, APK test dosyaları, APK örnekleri indir, ücretsiz APK test dosyaları, Android APK dosyaları, .apk test dosyaları, Android uygulama paketi dosyaları, APK yükleyici test dosyaları, Android emülatör test dosyaları, mobil uygulama geliştirme örnekleri, APK tersine mühendislik dosyaları'
         },
@@ -1026,7 +1026,7 @@ export const tr: SamplePageTranslations = {
       },
       appimage: {
         meta: {
-          title: 'Ücretsiz AppImage örnek dosyaları indirin - Linux taşınabilir uygulama test dosyaları | MorphyHub',
+          title: 'Ücretsiz AppImage örnek dosyaları indirin - Linux taşınabilir uygulama test dosyaları | FomiPeek',
           description: 'Linux uygulama dağıtımı, AppImage yürütme ve dağıtımlar arası uyumluluğu test etmek için ücretsiz AppImage Linux taşınabilir uygulama örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. AppImage çalıştırıcıları, Linux uygulama başlatıcıları, taşınabilir uygulama araçları ve evrensel Linux yazılım dağıtımını test etmek için mükemmel.',
           keywords: 'AppImage örnek dosyaları, AppImage test dosyaları, AppImage örnekleri indir, ücretsiz AppImage test dosyaları, Linux AppImage dosyaları, .AppImage test dosyaları, taşınabilir Linux uygulamaları, AppImage çalıştırıcı test dosyaları, Linux uygulama dosyaları, dağıtımlar arası uygulamalar, evrensel Linux yazılım örnekleri'
         },
@@ -1042,7 +1042,7 @@ export const tr: SamplePageTranslations = {
       },
       elf: {
         meta: {
-          title: 'Ücretsiz ELF örnek dosyaları indirin - Linux/Unix için Executable and Linkable Format test dosyaları | MorphyHub',
+          title: 'Ücretsiz ELF örnek dosyaları indirin - Linux/Unix için Executable and Linkable Format test dosyaları | FomiPeek',
           description: 'Linux/Unix ikili analizi, ELF ayrıştırma, tersine mühendislik ve sistem hata ayıklamayı test etmek için ücretsiz ELF Executable and Linkable Format örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. ELF analizörleri, ikili ayrıştırıcılar, tersine mühendislik araçları, sistem hata ayıklayıcıları ve Linux çalıştırılabilir analiz platformlarını test etmek için mükemmel.',
           keywords: 'ELF örnek dosyaları, ELF test dosyaları, ELF örnekleri indir, ücretsiz ELF test dosyaları, Linux ELF dosyaları, .elf test dosyaları, Unix çalıştırılabilir dosyalar, ELF ikili analiz dosyaları, tersine mühendislik ELF dosyaları, Linux ikili dosyalar, ELF ayrıştırıcı test dosyaları'
         },
@@ -1058,7 +1058,7 @@ export const tr: SamplePageTranslations = {
       },
       exe: {
         meta: {
-          title: 'Ücretsiz EXE örnek dosyaları indirin - Windows çalıştırılabilir test dosyaları | MorphyHub',
+          title: 'Ücretsiz EXE örnek dosyaları indirin - Windows çalıştırılabilir test dosyaları | FomiPeek',
           description: 'Windows uygulama yürütme, EXE analizi, ikili ayrıştırma ve Windows geliştirme araçlarını test etmek için ücretsiz EXE Windows çalıştırılabilir örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Windows çalıştırılabilir analizörleri, ikili ayrıştırıcılar, tersine mühendislik araçları, kötü amaçlı yazılım analiz platformları ve Windows uygulama geliştirmeyi test etmek için mükemmel.',
           keywords: 'EXE örnek dosyaları, EXE test dosyaları, EXE örnekleri indir, ücretsiz EXE test dosyaları, Windows EXE dosyaları, .exe test dosyaları, Windows çalıştırılabilir dosyalar, EXE ikili analiz dosyaları, Windows uygulama dosyaları, tersine mühendislik EXE dosyaları, Windows ikili ayrıştırıcı test dosyaları'
         },
@@ -1074,7 +1074,7 @@ export const tr: SamplePageTranslations = {
       },
       ipa: {
         meta: {
-          title: 'Ücretsiz IPA örnek dosyaları indirin - iOS uygulama paketi test dosyaları | MorphyHub',
+          title: 'Ücretsiz IPA örnek dosyaları indirin - iOS uygulama paketi test dosyaları | FomiPeek',
           description: 'iOS uygulama kurulumu, IPA analizi, iOS uygulama dağıtımı ve mobil geliştirme araçlarını test etmek için ücretsiz IPA iOS uygulama paketi örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. IPA yükleyiciler, iOS simülatörleri, uygulama analizörleri, iOS geliştirme araçları ve mobil uygulama dağıtım platformlarını test etmek için mükemmel.',
           keywords: 'IPA örnek dosyaları, IPA test dosyaları, IPA örnekleri indir, ücretsiz IPA test dosyaları, iOS IPA dosyaları, .ipa test dosyaları, iOS uygulama paketi dosyaları, IPA yükleyici test dosyaları, iOS simülatör test dosyaları, mobil uygulama geliştirme örnekleri, iOS uygulama dağıtım dosyaları'
         },
@@ -1090,7 +1090,7 @@ export const tr: SamplePageTranslations = {
       },
       jar: {
         meta: {
-          title: 'Ücretsiz JAR örnek dosyaları indirin - Java arşiv test dosyaları | MorphyHub',
+          title: 'Ücretsiz JAR örnek dosyaları indirin - Java arşiv test dosyaları | FomiPeek',
           description: 'Java uygulama yürütme, JAR çıkarma, JAR analizi ve Java geliştirme araçlarını test etmek için ücretsiz JAR Java arşiv örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. JAR çıkarıcıları, Java çalışma zamanı ortamları, JAR analizörleri, Java geliştirme araçları ve Java uygulama dağıtım platformlarını test etmek için mükemmel.',
           keywords: 'JAR örnek dosyaları, JAR test dosyaları, JAR örnekleri indir, ücretsiz JAR test dosyaları, Java JAR dosyaları, .jar test dosyaları, Java arşiv dosyaları, JAR çıkarıcı test dosyaları, Java çalışma zamanı test dosyaları, Java geliştirme örnekleri, JAR analiz dosyaları'
         },
@@ -1106,7 +1106,7 @@ export const tr: SamplePageTranslations = {
       },
       crx: {
         meta: {
-          title: 'Ücretsiz CRX örnek dosyaları indirin - Chrome uzantı paketi test dosyaları | MorphyHub',
+          title: 'Ücretsiz CRX örnek dosyaları indirin - Chrome uzantı paketi test dosyaları | FomiPeek',
           description: 'Chrome uzantı kurulumu, CRX analizi, tarayıcı uzantı geliştirme ve web uzantı araçlarını test etmek için ücretsiz CRX Chrome uzantı paketi örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. CRX yükleyiciler, Chrome uzantı analizörleri, tarayıcı uzantı geliştirme araçları ve web uzantı dağıtım platformlarını test etmek için mükemmel.',
           keywords: 'CRX örnek dosyaları, CRX test dosyaları, CRX örnekleri indir, ücretsiz CRX test dosyaları, Chrome CRX dosyaları, .crx test dosyaları, Chrome uzantı dosyaları, CRX yükleyici test dosyaları, tarayıcı uzantı dosyaları, web uzantı geliştirme örnekleri, Chrome uzantı analiz dosyaları'
         },
@@ -1122,7 +1122,7 @@ export const tr: SamplePageTranslations = {
       },
       '3ds': {
         meta: {
-          title: 'Ücretsiz 3DS örnek dosyaları indirin - 3D yazdırma ve modelleme için 3D model test dosyaları | MorphyHub',
+          title: 'Ücretsiz 3DS örnek dosyaları indirin - 3D yazdırma ve modelleme için 3D model test dosyaları | FomiPeek',
           description: '3D modelleme yazılımı, 3D yazdırma araçları, mesh dönüştürme ve 3D görselleştirme uygulamalarını test etmek için ücretsiz 3DS 3D model örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. 3D model görüntüleyiciler, 3D yazıcılar, CAD yazılımı, mesh düzenleyiciler ve 3D grafik uygulamalarını test etmek için mükemmel.',
           keywords: '3DS örnek dosyaları, 3DS test dosyaları, 3DS örnekleri indir, ücretsiz 3DS test dosyaları, 3D model 3DS dosyaları, .3ds test dosyaları, 3D modelleme dosyaları, 3D yazdırma test dosyaları, CAD 3DS dosyaları, mesh model dosyaları, 3D grafik örnekleri'
         },
@@ -1138,7 +1138,7 @@ export const tr: SamplePageTranslations = {
       },
       '3mf': {
         meta: {
-          title: 'Ücretsiz 3MF örnek dosyaları indirin - 3D yazdırma için 3D Manufacturing Format test dosyaları | MorphyHub',
+          title: 'Ücretsiz 3MF örnek dosyaları indirin - 3D yazdırma için 3D Manufacturing Format test dosyaları | FomiPeek',
           description: '3D yazdırma, eklemeli üretim, 3D model dilimleme ve 3D yazıcı uyumluluğunu test etmek için ücretsiz 3MF 3D Manufacturing Format örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. 3D yazıcı dilimleyiciler, eklemeli üretim yazılımı, 3MF görüntüleyiciler, 3D yazdırma iş akışları ve modern 3D üretim platformlarını test etmek için mükemmel.',
           keywords: '3MF örnek dosyaları, 3MF test dosyaları, 3MF örnekleri indir, ücretsiz 3MF test dosyaları, 3D yazdırma 3MF dosyaları, .3mf test dosyaları, eklemeli üretim dosyaları, 3D yazıcı dilimleyici test dosyaları, 3MF görüntüleyici test dosyaları, 3D üretim örnekleri, modern 3D yazdırma dosyaları'
         },
@@ -1154,7 +1154,7 @@ export const tr: SamplePageTranslations = {
       },
       ai: {
         meta: {
-          title: 'Ücretsiz AI örnek dosyaları indirin - Adobe Illustrator vektör grafik test dosyaları | MorphyHub',
+          title: 'Ücretsiz AI örnek dosyaları indirin - Adobe Illustrator vektör grafik test dosyaları | FomiPeek',
           description: 'Vektör grafik düzenleme, AI dosya dönüştürme, tasarım yazılımı uyumluluğu ve grafik tasarım araçlarını test etmek için ücretsiz AI Adobe Illustrator vektör grafik örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Adobe Illustrator, vektör grafik düzenleyiciler, AI dosya dönüştürücüler, tasarım yazılımı ve profesyonel grafik tasarım platformlarını test etmek için mükemmel.',
           keywords: 'AI örnek dosyaları, AI test dosyaları, AI örnekleri indir, ücretsiz AI test dosyaları, Adobe Illustrator AI dosyaları, .ai test dosyaları, vektör grafik dosyaları, Illustrator test dosyaları, tasarım yazılımı dosyaları, vektör düzenleme örnekleri, grafik tasarım AI dosyaları'
         },
@@ -1170,7 +1170,7 @@ export const tr: SamplePageTranslations = {
       },
       ase: {
         meta: {
-          title: 'Ücretsiz ASE örnek dosyaları indirin - Aseprite sprite animasyon test dosyaları | MorphyHub',
+          title: 'Ücretsiz ASE örnek dosyaları indirin - Aseprite sprite animasyon test dosyaları | FomiPeek',
           description: 'Pixel art düzenleme, sprite animasyon, oyun geliştirme araçları ve 2D animasyon yazılımını test etmek için ücretsiz ASE Aseprite sprite animasyon örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Aseprite, pixel art düzenleyiciler, sprite animasyon araçları, oyun geliştirme yazılımı ve 2D animasyon platformlarını test etmek için mükemmel.',
           keywords: 'ASE örnek dosyaları, ASE test dosyaları, ASE örnekleri indir, ücretsiz ASE test dosyaları, Aseprite ASE dosyaları, .ase test dosyaları, sprite animasyon dosyaları, pixel art test dosyaları, oyun geliştirme dosyaları, 2D animasyon örnekleri, Aseprite test dosyaları'
         },
@@ -1186,7 +1186,7 @@ export const tr: SamplePageTranslations = {
       },
       'animation-fbx': {
         meta: {
-          title: 'Ücretsiz Animation FBX örnek dosyaları indirin - Autodesk FBX 3D animasyon test dosyaları | MorphyHub',
+          title: 'Ücretsiz Animation FBX örnek dosyaları indirin - Autodesk FBX 3D animasyon test dosyaları | FomiPeek',
           description: '3D animasyon, karakter rigging, hareket yakalama verileri ve 3D grafik yazılımını test etmek için ücretsiz Animation FBX Autodesk FBX 3D animasyon örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. 3D animasyon yazılımı, oyun motorları, hareket yakalama araçları, karakter animasyon platformları ve 3D grafik uygulamalarını test etmek için mükemmel.',
           keywords: 'Animation FBX örnek dosyaları, FBX animasyon test dosyaları, FBX animasyon örnekleri indir, ücretsiz FBX animasyon test dosyaları, Autodesk FBX dosyaları, .fbx animasyon test dosyaları, 3D animasyon dosyaları, karakter animasyon test dosyaları, hareket yakalama dosyaları, 3D grafik animasyon örnekleri, oyun motoru FBX dosyaları'
         },
@@ -1202,7 +1202,7 @@ export const tr: SamplePageTranslations = {
       },
       assetbundle: {
         meta: {
-          title: 'Ücretsiz AssetBundle örnek dosyaları indirin - Oyun geliştirme için Unity AssetBundle test dosyaları | MorphyHub',
+          title: 'Ücretsiz AssetBundle örnek dosyaları indirin - Oyun geliştirme için Unity AssetBundle test dosyaları | FomiPeek',
           description: 'Unity oyun geliştirme, varlık yükleme, oyun kaynak yönetimi ve Unity motor araçlarını test etmek için ücretsiz AssetBundle Unity AssetBundle örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Unity motoru, oyun varlık yükleyicileri, Unity geliştirme araçları, oyun kaynak yöneticileri ve Unity oyun geliştirme platformlarını test etmek için mükemmel.',
           keywords: 'AssetBundle örnek dosyaları, AssetBundle test dosyaları, AssetBundle örnekleri indir, ücretsiz AssetBundle test dosyaları, Unity AssetBundle dosyaları, Unity varlık dosyaları, oyun geliştirme dosyaları, Unity motor test dosyaları, oyun varlık yükleyici test dosyaları, Unity geliştirme örnekleri, oyun kaynak yönetimi dosyaları'
         },
@@ -1218,7 +1218,7 @@ export const tr: SamplePageTranslations = {
       },
       blend: {
         meta: {
-          title: 'Ücretsiz BLEND örnek dosyaları indirin - Blender 3D proje test dosyaları | MorphyHub',
+          title: 'Ücretsiz BLEND örnek dosyaları indirin - Blender 3D proje test dosyaları | FomiPeek',
           description: '3D modelleme, Blender proje uyumluluğu, 3D animasyon iş akışları ve 3D grafik yazılımını test etmek için ücretsiz BLEND Blender 3D proje örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Blender yazılımı, 3D modelleme araçları, Blender proje görüntüleyiciler, 3D animasyon platformları ve profesyonel 3D grafik uygulamalarını test etmek için mükemmel.',
           keywords: 'BLEND örnek dosyaları, BLEND test dosyaları, BLEND örnekleri indir, ücretsiz BLEND test dosyaları, Blender BLEND dosyaları, .blend test dosyaları, Blender proje dosyaları, 3D modelleme test dosyaları, Blender test dosyaları, 3D animasyon örnekleri, 3D grafik BLEND dosyaları'
         },
@@ -1234,7 +1234,7 @@ export const tr: SamplePageTranslations = {
       },
       bvh: {
         meta: {
-          title: 'Ücretsiz BVH örnek dosyaları indirin - Biovision Hierarchy hareket yakalama test dosyaları | MorphyHub',
+          title: 'Ücretsiz BVH örnek dosyaları indirin - Biovision Hierarchy hareket yakalama test dosyaları | FomiPeek',
           description: 'Hareket yakalama verileri, karakter animasyon, iskelet animasyon sistemleri ve 3D animasyon yazılımını test etmek için ücretsiz BVH Biovision Hierarchy hareket yakalama örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Hareket yakalama görüntüleyiciler, karakter animasyon araçları, iskelet animasyon sistemleri, 3D animasyon platformları ve hareket yakalama analiz yazılımını test etmek için mükemmel.',
           keywords: 'BVH örnek dosyaları, BVH test dosyaları, BVH örnekleri indir, ücretsiz BVH test dosyaları, Biovision Hierarchy BVH dosyaları, .bvh test dosyaları, hareket yakalama dosyaları, karakter animasyon test dosyaları, iskelet animasyon dosyaları, 3D animasyon BVH örnekleri, hareket yakalama analiz dosyaları'
         },
@@ -1250,7 +1250,7 @@ export const tr: SamplePageTranslations = {
       },
       dwg: {
         meta: {
-          title: 'Ücretsiz DWG örnek dosyaları indirin - CAD tasarım için AutoCAD çizim test dosyaları | MorphyHub',
+          title: 'Ücretsiz DWG örnek dosyaları indirin - CAD tasarım için AutoCAD çizim test dosyaları | FomiPeek',
           description: 'CAD yazılımı, AutoCAD uyumluluğu, teknik çizim araçları ve mühendislik tasarım uygulamalarını test etmek için ücretsiz DWG AutoCAD çizim örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. AutoCAD, CAD görüntüleyiciler, teknik çizim yazılımı, mühendislik tasarım araçları ve profesyonel CAD platformlarını test etmek için mükemmel.',
           keywords: 'DWG örnek dosyaları, DWG test dosyaları, DWG örnekleri indir, ücretsiz DWG test dosyaları, AutoCAD DWG dosyaları, .dwg test dosyaları, CAD çizim dosyaları, AutoCAD test dosyaları, teknik çizim dosyaları, mühendislik tasarım örnekleri, CAD yazılımı DWG dosyaları'
         },
@@ -1266,7 +1266,7 @@ export const tr: SamplePageTranslations = {
       },
       dxf: {
         meta: {
-          title: 'Ücretsiz DXF Örnek Dosyaları İndir - Drawing Exchange Format Test Dosyaları AutoCAD | MorphyHub',
+          title: 'Ücretsiz DXF Örnek Dosyaları İndir - Drawing Exchange Format Test Dosyaları AutoCAD | FomiPeek',
           description: 'CAD yazılımlarını, DXF dönüştürücülerini ve teknik çizim araçlarını test etmek için ücretsiz DXF Drawing Exchange Format örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. AutoCAD, CAD görüntüleyicileri, DXF ayrıştırıcıları ve çizim dosyası değişim uygulamalarını test etmek için mükemmel.',
           keywords: 'DXF örnek dosyaları, DXF test dosyaları, DXF örnekleri indir, ücretsiz DXF test dosyaları, AutoCAD DXF dosyaları, Drawing Exchange Format dosyaları, CAD DXF dosyaları, DXF dönüştürücü test dosyaları, teknik çizim dosyaları, DXF ayrıştırıcı test dosyaları, CAD dosya değişimi örnekleri'
         },
@@ -1282,7 +1282,7 @@ export const tr: SamplePageTranslations = {
       },
       ifc: {
         meta: {
-          title: 'Ücretsiz IFC Örnek Dosyaları İndir - Industry Foundation Classes BIM Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz IFC Örnek Dosyaları İndir - Industry Foundation Classes BIM Test Dosyaları | FomiPeek',
           description: 'BIM yazılımlarını, IFC görüntüleyicilerini, bina bilgi modelleme araçlarını ve inşaat yönetimi uygulamalarını test etmek için ücretsiz IFC Industry Foundation Classes örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Revit, ArchiCAD, IFC ayrıştırıcıları, BIM görüntüleyicileri ve bina tasarım yazılımlarını test etmek için mükemmel.',
           keywords: 'IFC örnek dosyaları, IFC test dosyaları, IFC örnekleri indir, ücretsiz IFC test dosyaları, Industry Foundation Classes dosyaları, BIM IFC dosyaları, bina bilgi modelleme dosyaları, IFC görüntüleyici test dosyaları, inşaat yazılımı dosyaları, IFC ayrıştırıcı test dosyaları, BIM değişim formatı örnekleri'
         },
@@ -1298,7 +1298,7 @@ export const tr: SamplePageTranslations = {
       },
       iges: {
         meta: {
-          title: 'Ücretsiz IGES Örnek Dosyaları İndir - Initial Graphics Exchange Specification CAD Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz IGES Örnek Dosyaları İndir - Initial Graphics Exchange Specification CAD Test Dosyaları | FomiPeek',
           description: 'CAD yazılımlarını, IGES dönüştürücülerini, 3D modelleme araçlarını ve mühendislik tasarım uygulamalarını test etmek için ücretsiz IGES Initial Graphics Exchange Specification örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. CAD sistemlerini, IGES ayrıştırıcılarını, 3D model değişim araçlarını ve mühendislik yazılımlarını test etmek için mükemmel.',
           keywords: 'IGES örnek dosyaları, IGES test dosyaları, IGES örnekleri indir, ücretsiz IGES test dosyaları, Initial Graphics Exchange Specification dosyaları, CAD IGES dosyaları, 3D model değişim dosyaları, IGES dönüştürücü test dosyaları, mühendislik tasarım dosyaları, IGES ayrıştırıcı test dosyaları, CAD değişim formatı örnekleri'
         },
@@ -1314,7 +1314,7 @@ export const tr: SamplePageTranslations = {
       },
       igs: {
         meta: {
-          title: 'Ücretsiz IGS Örnek Dosyaları İndir - Initial Graphics Exchange Specification CAD Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz IGS Örnek Dosyaları İndir - Initial Graphics Exchange Specification CAD Test Dosyaları | FomiPeek',
           description: 'CAD yazılımlarını, IGS dönüştürücülerini, 3D modelleme araçlarını ve mühendislik tasarım uygulamalarını test etmek için ücretsiz IGS Initial Graphics Exchange Specification örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. CAD sistemlerini, IGS ayrıştırıcılarını, 3D model değişim araçlarını ve mühendislik yazılımlarını test etmek için mükemmel.',
           keywords: 'IGS örnek dosyaları, IGS test dosyaları, IGS örnekleri indir, ücretsiz IGS test dosyaları, Initial Graphics Exchange Specification dosyaları, CAD IGS dosyaları, 3D model değişim dosyaları, IGS dönüştürücü test dosyaları, mühendislik tasarım dosyaları, IGS ayrıştırıcı test dosyaları, CAD değişim formatı örnekleri'
         },
@@ -1330,7 +1330,7 @@ export const tr: SamplePageTranslations = {
       },
       las: {
         meta: {
-          title: 'Ücretsiz LAS Örnek Dosyaları İndir - LiDAR Point Cloud Veri Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz LAS Örnek Dosyaları İndir - LiDAR Point Cloud Veri Test Dosyaları | FomiPeek',
           description: 'Point cloud işlemeyi, LiDAR analiz araçlarını, 3D haritalama yazılımlarını ve coğrafi uzamsal uygulamaları test etmek için ücretsiz LAS LiDAR point cloud örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. LAS ayrıştırıcıları, point cloud görüntüleyicileri, LiDAR işleme araçlarını, 3D haritalama yazılımlarını ve coğrafi uzamsal analiz platformlarını test etmek için mükemmel.',
           keywords: 'LAS örnek dosyaları, LAS test dosyaları, LAS örnekleri indir, ücretsiz LAS test dosyaları, LiDAR point cloud dosyaları, LAS format dosyaları, point cloud veri dosyaları, LAS ayrıştırıcı test dosyaları, coğrafi uzamsal dosyalar, LiDAR analiz test dosyaları, 3D haritalama örnekleri'
         },
@@ -1346,7 +1346,7 @@ export const tr: SamplePageTranslations = {
       },
       ma: {
         meta: {
-          title: 'Ücretsiz MA Örnek Dosyaları İndir - Maya ASCII Scene Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz MA Örnek Dosyaları İndir - Maya ASCII Scene Test Dosyaları | FomiPeek',
           description: 'Maya scene dönüşümünü, 3D animasyon yazılımlarını, MA dosya ayrıştırıcılarını ve animasyon araçlarını test etmek için ücretsiz MA Maya ASCII scene örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Autodesk Maya, MA dosya görüntüleyicileri, scene dönüşüm araçlarını, 3D animasyon platformlarını ve animasyon iş akışı yazılımlarını test etmek için mükemmel.',
           keywords: 'MA örnek dosyaları, MA test dosyaları, MA örnekleri indir, ücretsiz MA test dosyaları, Maya ASCII scene dosyaları, MA format dosyaları, 3D animasyon scene dosyaları, MA ayrıştırıcı test dosyaları, animasyon dosyaları, Maya scene test dosyaları, 3D animasyon örnekleri'
         },
@@ -1362,7 +1362,7 @@ export const tr: SamplePageTranslations = {
       },
       max: {
         meta: {
-          title: 'Ücretsiz MAX Örnek Dosyaları İndir - 3ds Max Scene Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz MAX Örnek Dosyaları İndir - 3ds Max Scene Test Dosyaları | FomiPeek',
           description: '3ds Max scene dönüşümünü, 3D modelleme yazılımlarını, MAX dosya ayrıştırıcılarını ve 3D tasarım araçlarını test etmek için ücretsiz MAX 3ds Max scene örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Autodesk 3ds Max, MAX dosya görüntüleyicileri, scene dönüşüm araçlarını, 3D modelleme platformlarını ve 3D tasarım iş akışı yazılımlarını test etmek için mükemmel.',
           keywords: 'MAX örnek dosyaları, MAX test dosyaları, MAX örnekleri indir, ücretsiz MAX test dosyaları, 3ds Max scene dosyaları, MAX format dosyaları, 3D modelleme scene dosyaları, MAX ayrıştırıcı test dosyaları, 3D tasarım dosyaları, 3ds Max scene test dosyaları, 3D modelleme örnekleri'
         },
@@ -1378,7 +1378,7 @@ export const tr: SamplePageTranslations = {
       },
       mb: {
         meta: {
-          title: 'Ücretsiz MB Örnek Dosyaları İndir - Maya Binary Scene Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz MB Örnek Dosyaları İndir - Maya Binary Scene Test Dosyaları | FomiPeek',
           description: 'Maya scene dönüşümünü, 3D animasyon yazılımlarını, MB dosya ayrıştırıcılarını ve animasyon araçlarını test etmek için ücretsiz MB Maya Binary scene örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Autodesk Maya, MB dosya görüntüleyicileri, scene dönüşüm araçlarını, 3D animasyon platformlarını ve animasyon iş akışı yazılımlarını test etmek için mükemmel.',
           keywords: 'MB örnek dosyaları, MB test dosyaları, MB örnekleri indir, ücretsiz MB test dosyaları, Maya Binary scene dosyaları, MB format dosyaları, 3D animasyon scene dosyaları, MB ayrıştırıcı test dosyaları, animasyon dosyaları, Maya scene test dosyaları, 3D animasyon örnekleri'
         },
@@ -1394,7 +1394,7 @@ export const tr: SamplePageTranslations = {
       },
       indd: {
         meta: {
-          title: 'Ücretsiz INDD Örnek Dosyaları İndir - Adobe InDesign Belge Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz INDD Örnek Dosyaları İndir - Adobe InDesign Belge Test Dosyaları | FomiPeek',
           description: 'InDesign uyumluluğunu, INDD dönüştürücülerini, masaüstü yayıncılık yazılımlarını ve düzen tasarım araçlarını test etmek için ücretsiz INDD Adobe InDesign belge örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Adobe InDesign, INDD dosya görüntüleyicileri, belge dönüşüm araçlarını, masaüstü yayıncılık platformlarını ve düzen tasarım yazılımlarını test etmek için mükemmel.',
           keywords: 'INDD örnek dosyaları, INDD test dosyaları, INDD örnekleri indir, ücretsiz INDD test dosyaları, Adobe InDesign dosyaları, INDD format dosyaları, masaüstü yayıncılık dosyaları, INDD dönüştürücü test dosyaları, düzen tasarım dosyaları, InDesign belge test dosyaları, yayıncılık yazılımı örnekleri'
         },
@@ -1410,7 +1410,7 @@ export const tr: SamplePageTranslations = {
       },
       'animated-gif': {
         meta: {
-          title: 'Ücretsiz Animasyonlu GIF Örnek Dosyaları İndir - Animasyonlu Görüntü Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz Animasyonlu GIF Örnek Dosyaları İndir - Animasyonlu Görüntü Test Dosyaları | FomiPeek',
           description: 'GIF animasyon oynatmayı, görüntü görüntüleyicilerini, web tarayıcılarını ve animasyon araçlarını test etmek için ücretsiz animasyonlu GIF örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. GIF görüntüleyicileri, animasyon oynatıcıları, görüntü işleme araçlarını, web geliştirme platformlarını ve multimedya uygulamalarını test etmek için mükemmel.',
           keywords: 'animasyonlu GIF örnek dosyaları, animasyonlu GIF test dosyaları, animasyonlu GIF örnekleri indir, ücretsiz animasyonlu GIF test dosyaları, GIF animasyon dosyaları, animasyonlu görüntü dosyaları, GIF oynatıcı test dosyaları, animasyon dosyaları, web animasyon test dosyaları, multimedya GIF örnekleri'
         },
@@ -1426,7 +1426,7 @@ export const tr: SamplePageTranslations = {
       },
       apng: {
         meta: {
-          title: 'Ücretsiz APNG Örnek Dosyaları İndir - Animasyonlu PNG Görüntü Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz APNG Örnek Dosyaları İndir - Animasyonlu PNG Görüntü Test Dosyaları | FomiPeek',
           description: 'APNG animasyon oynatmayı, görüntü görüntüleyicilerini, web tarayıcılarını ve modern görüntü araçlarını test etmek için ücretsiz APNG Animated Portable Network Graphics örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. APNG görüntüleyicileri, animasyon oynatıcıları, görüntü işleme araçlarını, web geliştirme platformlarını ve modern multimedya uygulamalarını test etmek için mükemmel.',
           keywords: 'APNG örnek dosyaları, APNG test dosyaları, APNG örnekleri indir, ücretsiz APNG test dosyaları, Animated PNG dosyaları, APNG animasyon dosyaları, APNG oynatıcı test dosyaları, animasyon dosyaları, web animasyon test dosyaları, modern görüntü formatı örnekleri'
         },
@@ -1442,7 +1442,7 @@ export const tr: SamplePageTranslations = {
       },
       avif: {
         meta: {
-          title: 'Ücretsiz AVIF Örnek Dosyaları İndir - AV1 Image File Format Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz AVIF Örnek Dosyaları İndir - AV1 Image File Format Test Dosyaları | FomiPeek',
           description: 'Modern görüntü sıkıştırmasını, AVIF görüntüleyicilerini, web tarayıcılarını ve yeni nesil görüntü araçlarını test etmek için ücretsiz AVIF AV1 Image File Format örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. AVIF görüntüleyicileri, görüntü işleme araçlarını, web geliştirme platformlarını, modern görüntü formatı desteğini ve yeni nesil multimedya uygulamalarını test etmek için mükemmel.',
           keywords: 'AVIF örnek dosyaları, AVIF test dosyaları, AVIF örnekleri indir, ücretsiz AVIF test dosyaları, AV1 Image File Format dosyaları, AVIF görüntü dosyaları, AVIF görüntüleyici test dosyaları, modern görüntü dosyaları, web görüntü formatı test dosyaları, yeni nesil görüntü formatı örnekleri'
         },
@@ -1458,7 +1458,7 @@ export const tr: SamplePageTranslations = {
       },
       bmp: {
         meta: {
-          title: 'Ücretsiz BMP Örnek Dosyaları İndir - Bitmap Görüntü Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz BMP Örnek Dosyaları İndir - Bitmap Görüntü Test Dosyaları | FomiPeek',
           description: 'Görüntü görüntüleyicilerini, BMP dönüştürücülerini, grafik yazılımlarını ve görüntü işleme araçlarını test etmek için ücretsiz BMP bitmap örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. BMP görüntüleyicileri, görüntü düzenleyicileri, grafik dönüşüm araçlarını, görüntü işleme platformlarını ve bitmap format desteğini test etmek için mükemmel.',
           keywords: 'BMP örnek dosyaları, BMP test dosyaları, BMP örnekleri indir, ücretsiz BMP test dosyaları, bitmap görüntü dosyaları, BMP format dosyaları, görüntü görüntüleyici test dosyaları, grafik dosyaları, görüntü dönüşüm test dosyaları, bitmap format örnekleri'
         },
@@ -1474,7 +1474,7 @@ export const tr: SamplePageTranslations = {
       },
       'barcode-svg': {
         meta: {
-          title: 'Ücretsiz Barkod SVG Örnek Dosyaları İndir - Ölçeklenebilir Vektör Barkod Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz Barkod SVG Örnek Dosyaları İndir - Ölçeklenebilir Vektör Barkod Test Dosyaları | FomiPeek',
           description: 'Barkod oluşturmayı, SVG barkod okuyucularını, vektör grafik araçlarını ve barkod tarama uygulamalarını test etmek için ücretsiz barkod SVG örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Barkod oluşturucuları, SVG görüntüleyicileri, barkod tarama araçlarını, vektör grafik platformlarını ve barkod tanıma yazılımlarını test etmek için mükemmel.',
           keywords: 'barkod SVG örnek dosyaları, barkod SVG test dosyaları, barkod SVG örnekleri indir, ücretsiz barkod SVG test dosyaları, SVG barkod dosyaları, vektör barkod dosyaları, barkod oluşturucu test dosyaları, SVG dosyaları, barkod tarama test dosyaları, vektör grafik örnekleri'
         },
@@ -1490,7 +1490,7 @@ export const tr: SamplePageTranslations = {
       },
       avi: {
         meta: {
-          title: 'Ücretsiz AVI Örnek Dosyaları İndir - Audio Video Interleave Video Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz AVI Örnek Dosyaları İndir - Audio Video Interleave Video Test Dosyaları | FomiPeek',
           description: 'Video oynatıcıları, AVI dönüştürücülerini, multimedya yazılımlarını ve video işleme araçlarını test etmek için ücretsiz AVI Audio Video Interleave örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. AVI oynatıcıları, video düzenleyicileri, multimedya dönüşüm araçlarını, video işleme platformlarını ve video format desteğini test etmek için mükemmel.',
           keywords: 'AVI örnek dosyaları, AVI test dosyaları, AVI örnekleri indir, ücretsiz AVI test dosyaları, Audio Video Interleave dosyaları, AVI video dosyaları, video oynatıcı test dosyaları, multimedya dosyaları, video dönüşüm test dosyaları, video format örnekleri'
         },
@@ -1506,7 +1506,7 @@ export const tr: SamplePageTranslations = {
       },
       '3gp': {
         meta: {
-          title: 'Ücretsiz 3GP Örnek Dosyaları İndir - 3GPP Mobile Video Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz 3GP Örnek Dosyaları İndir - 3GPP Mobile Video Test Dosyaları | FomiPeek',
           description: 'Mobil video oynatıcıları, 3GP dönüştürücülerini, multimedya yazılımlarını ve mobil video işleme araçlarını test etmek için ücretsiz 3GP 3GPP mobile video örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. 3GP oynatıcıları, mobil video düzenleyicileri, video dönüşüm araçlarını, mobil multimedya platformlarını ve mobil video format desteğini test etmek için mükemmel.',
           keywords: '3GP örnek dosyaları, 3GP test dosyaları, 3GP örnekleri indir, ücretsiz 3GP test dosyaları, 3GPP mobile video dosyaları, 3GP video dosyaları, mobil video oynatıcı test dosyaları, multimedya dosyaları, mobil video dönüşüm test dosyaları, mobil video format örnekleri'
         },
@@ -1522,7 +1522,7 @@ export const tr: SamplePageTranslations = {
       },
       dav: {
         meta: {
-          title: 'Ücretsiz DAV Örnek Dosyaları İndir - Güvenlik Kameraları için DAV Video Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz DAV Örnek Dosyaları İndir - Güvenlik Kameraları için DAV Video Test Dosyaları | FomiPeek',
           description: 'DAV video oynatıcıları, güvenlik kamerası video işleme, DAV dönüştürücüleri ve video gözetim analiz araçlarını test etmek için ücretsiz DAV örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. DAV oynatma, DAV\'dan MP4\'e dönüştürücüler, güvenlik kamerası yazılımları, video gözetim araçları ve DAV format uyumluluğunu test etmek için mükemmel.',
           keywords: 'DAV örnek dosyaları, DAV test dosyaları, DAV örnekleri indir, ücretsiz DAV test dosyaları, DAV video dosyaları, güvenlik kamerası video dosyaları, DAV\'dan MP4\'e dönüştürücü, DAV oynatıcı test, video gözetim örnekleri, DAV format test dosyaları, video gözetim test dosyaları'
         },
@@ -1538,7 +1538,7 @@ export const tr: SamplePageTranslations = {
       },
       dds: {
         meta: {
-          title: 'Ücretsiz DDS Örnek Dosyaları İndir - DirectDraw Surface Doku Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz DDS Örnek Dosyaları İndir - DirectDraw Surface Doku Test Dosyaları | FomiPeek',
           description: 'Doku görüntü dönüşümü, DDS görselleştirme, oyun geliştirme araçları ve grafik işleme yazılımlarını test etmek için ücretsiz DDS DirectDraw Surface örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. DDS doku yükleme, DDS\'den PNG\'ye dönüştürücüler, oyun motoru uyumluluğu, doku sıkıştırma araçları ve DirectDraw Surface format desteğini test etmek için mükemmel.',
           keywords: 'DDS örnek dosyaları, DDS test dosyaları, DDS örnekleri indir, ücretsiz DDS test dosyaları, DirectDraw Surface dosyaları, DDS doku dosyaları, DDS\'den PNG\'ye dönüştürücü, doku görüntü örnekleri, oyun geliştirme test dosyaları, DDS format test, grafik doku örnekleri'
         },
@@ -1554,7 +1554,7 @@ export const tr: SamplePageTranslations = {
       },
       dng: {
         meta: {
-          title: 'Ücretsiz DNG Örnek Dosyaları İndir - Digital Negative Raw Görüntü Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz DNG Örnek Dosyaları İndir - Digital Negative Raw Görüntü Test Dosyaları | FomiPeek',
           description: 'Raw görüntü işleme, DNG dönüşümü, fotoğraf yazılımları ve profesyonel görüntü düzenleme araçlarını test etmek için ücretsiz DNG Digital Negative raw görüntü örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. DNG\'den JPEG\'e dönüştürücüler, raw görüntü düzenleyicileri, DNG görselleştirme, kamera raw işleme ve Adobe Digital Negative format desteğini test etmek için mükemmel.',
           keywords: 'DNG örnek dosyaları, DNG test dosyaları, DNG örnekleri indir, ücretsiz DNG test dosyaları, Digital Negative dosyaları, DNG raw görüntü dosyaları, DNG\'den JPEG\'e dönüştürücü, raw görüntü işleme, fotoğraf test dosyaları, DNG format test, kamera raw örnekleri, Adobe DNG test dosyaları'
         },
@@ -1570,7 +1570,7 @@ export const tr: SamplePageTranslations = {
       },
       eps: {
         meta: {
-          title: 'Ücretsiz EPS Örnek Dosyaları İndir - Encapsulated PostScript Vektör Grafik Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz EPS Örnek Dosyaları İndir - Encapsulated PostScript Vektör Grafik Test Dosyaları | FomiPeek',
           description: 'Vektör grafik dönüşümü, EPS görselleştirme, PostScript işleme ve profesyonel tasarım yazılımlarını test etmek için ücretsiz EPS Encapsulated PostScript örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. EPS\'den PDF\'e dönüştürücüler, EPS\'den SVG\'ye dönüştürücüler, vektör grafik düzenleyicileri, PostScript görüntüleyicileri ve Encapsulated PostScript format uyumluluğunu test etmek için mükemmel.',
           keywords: 'EPS örnek dosyaları, EPS test dosyaları, EPS örnekleri indir, ücretsiz EPS test dosyaları, Encapsulated PostScript dosyaları, EPS vektör grafikleri, EPS\'den PDF\'e dönüştürücü, EPS\'den SVG\'ye dönüştürücü, vektör grafik örnekleri, PostScript test dosyaları, tasarım yazılımı test dosyaları, EPS format test'
         },
@@ -1586,7 +1586,7 @@ export const tr: SamplePageTranslations = {
       },
       exr: {
         meta: {
-          title: 'Ücretsiz EXR Örnek Dosyaları İndir - OpenEXR High Dynamic Range Görüntü Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz EXR Örnek Dosyaları İndir - OpenEXR High Dynamic Range Görüntü Test Dosyaları | FomiPeek',
           description: 'HDR görüntü işleme, EXR dönüşümü, profesyonel fotoğraf yazılımları ve görsel efekt araçlarını test etmek için ücretsiz EXR OpenEXR High Dynamic Range görüntü örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. EXR\'den JPEG\'e dönüştürücüler, HDR görüntü düzenleyicileri, EXR görselleştirme, High Dynamic Range işleme ve OpenEXR format desteğini test etmek için mükemmel.',
           keywords: 'EXR örnek dosyaları, EXR test dosyaları, EXR örnekleri indir, ücretsiz EXR test dosyaları, OpenEXR dosyaları, EXR HDR görüntüleri, EXR\'den JPEG\'e dönüştürücü, HDR görüntü işleme, High Dynamic Range örnekleri, görsel efekt test dosyaları, EXR format test, profesyonel fotoğraf test dosyaları'
         },
@@ -1602,7 +1602,7 @@ export const tr: SamplePageTranslations = {
       },
       hdr: {
         meta: {
-          title: 'Ücretsiz HDR Örnek Dosyaları İndir - High Dynamic Range Görüntü Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz HDR Örnek Dosyaları İndir - High Dynamic Range Görüntü Test Dosyaları | FomiPeek',
           description: 'HDR görüntü işleme, HDR dönüşümü, fotoğraf yazılımları ve görüntü düzenleme araçlarını test etmek için ücretsiz HDR High Dynamic Range görüntü örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. HDR\'den JPEG\'e dönüştürücüler, HDR görüntü düzenleyicileri, HDR görselleştirme, ton eşleme araçları ve High Dynamic Range format desteğini test etmek için mükemmel.',
           keywords: 'HDR örnek dosyaları, HDR test dosyaları, HDR örnekleri indir, ücretsiz HDR test dosyaları, High Dynamic Range dosyaları, HDR görüntüleri, HDR\'den JPEG\'e dönüştürücü, HDR görüntü işleme, ton eşleme test dosyaları, fotoğraf test dosyaları, HDR format test, High Dynamic Range örnekleri'
         },
@@ -1618,7 +1618,7 @@ export const tr: SamplePageTranslations = {
       },
       heic: {
         meta: {
-          title: 'Ücretsiz HEIC Örnek Dosyaları İndir - High Efficiency Image Container Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz HEIC Örnek Dosyaları İndir - High Efficiency Image Container Test Dosyaları | FomiPeek',
           description: 'HEIC görüntü dönüşümü, HEIC görselleştirme, modern görüntü formatı işleme ve mobil fotoğraf araçlarını test etmek için ücretsiz HEIC High Efficiency Image Container örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. HEIC\'den JPEG\'e dönüştürücüler, HEIC\'den PNG\'ye dönüştürücüler, iOS görüntü işleme, HEIC görselleştirme yazılımları ve High Efficiency Image Container format desteğini test etmek için mükemmel.',
           keywords: 'HEIC örnek dosyaları, HEIC test dosyaları, HEIC örnekleri indir, ücretsiz HEIC test dosyaları, High Efficiency Image Container dosyaları, HEIC görüntüleri, HEIC\'den JPEG\'e dönüştürücü, HEIC\'den PNG\'ye dönüştürücü, iOS görüntü örnekleri, mobil fotoğraf test dosyaları, HEIC format test, modern görüntü formatı örnekleri'
         },
@@ -1634,7 +1634,7 @@ export const tr: SamplePageTranslations = {
       },
       heif: {
         meta: {
-          title: 'Ücretsiz HEIF Örnek Dosyaları İndir - High Efficiency Image Format Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz HEIF Örnek Dosyaları İndir - High Efficiency Image Format Test Dosyaları | FomiPeek',
           description: 'HEIF görüntü dönüşümü, HEIF görselleştirme, modern görüntü formatı işleme ve mobil fotoğraf araçlarını test etmek için ücretsiz HEIF High Efficiency Image Format örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. HEIF\'den JPEG\'e dönüştürücüler, HEIF\'den PNG\'ye dönüştürücüler, mobil görüntü işleme, HEIF görselleştirme yazılımları ve High Efficiency Image Format desteğini test etmek için mükemmel.',
           keywords: 'HEIF örnek dosyaları, HEIF test dosyaları, HEIF örnekleri indir, ücretsiz HEIF test dosyaları, High Efficiency Image Format dosyaları, HEIF görüntüleri, HEIF\'den JPEG\'e dönüştürücü, HEIF\'den PNG\'ye dönüştürücü, mobil görüntü örnekleri, modern görüntü formatı test dosyaları, HEIF format test, görüntü sıkıştırma test dosyaları'
         },
@@ -1650,7 +1650,7 @@ export const tr: SamplePageTranslations = {
       },
       icns: {
         meta: {
-          title: 'Ücretsiz ICNS Örnek Dosyaları İndir - macOS İkon Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz ICNS Örnek Dosyaları İndir - macOS İkon Test Dosyaları | FomiPeek',
           description: 'macOS ikon dönüşümü, ICNS görselleştirme, ikon tasarım araçları ve macOS uygulama geliştirmeyi test etmek için ücretsiz ICNS macOS ikon örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. ICNS\'den PNG\'ye dönüştürücüler, ICNS\'den ICO\'ya dönüştürücüler, macOS ikon düzenleyicileri, ikon tasarım yazılımları ve macOS ikon format desteğini test etmek için mükemmel.',
           keywords: 'ICNS örnek dosyaları, ICNS test dosyaları, ICNS örnekleri indir, ücretsiz ICNS test dosyaları, macOS ikon dosyaları, ICNS ikonları, ICNS\'den PNG\'ye dönüştürücü, ICNS\'den ICO\'ya dönüştürücü, macOS ikon tasarımı, ikon düzenleyici test dosyaları, ICNS format test, Apple ikon örnekleri'
         },
@@ -1666,7 +1666,7 @@ export const tr: SamplePageTranslations = {
       },
       ico: {
         meta: {
-          title: 'Ücretsiz ICO Örnek Dosyaları İndir - Windows İkon Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz ICO Örnek Dosyaları İndir - Windows İkon Test Dosyaları | FomiPeek',
           description: 'Windows ikon dönüşümü, ICO görselleştirme, ikon tasarım araçları ve Windows uygulama geliştirmeyi test etmek için ücretsiz ICO Windows ikon örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. ICO\'dan PNG\'ye dönüştürücüler, ICO\'dan ICNS\'ye dönüştürücüler, Windows ikon düzenleyicileri, ikon tasarım yazılımları ve Windows ikon format desteğini test etmek için mükemmel.',
           keywords: 'ICO örnek dosyaları, ICO test dosyaları, ICO örnekleri indir, ücretsiz ICO test dosyaları, Windows ikon dosyaları, ICO ikonları, ICO\'dan PNG\'ye dönüştürücü, ICO\'dan ICNS\'ye dönüştürücü, Windows ikon tasarımı, ikon düzenleyici test dosyaları, ICO format test, Windows ikon örnekleri'
         },
@@ -1682,7 +1682,7 @@ export const tr: SamplePageTranslations = {
       },
       jpeg: {
         meta: {
-          title: 'Ücretsiz JPEG Örnek Dosyaları İndir - Dönüştürme Araçları için JPEG Görüntü Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz JPEG Örnek Dosyaları İndir - Dönüştürme Araçları için JPEG Görüntü Test Dosyaları | FomiPeek',
           description: 'JPEG görüntü dönüşümü, JPEG sıkıştırma, görüntü işleme araçları ve fotoğraf düzenleme yazılımlarını test etmek için ücretsiz JPEG örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. JPEG\'den PNG\'ye dönüştürücüler, JPEG\'den PDF\'e dönüştürücüler, görüntü sıkıştırma araçları, JPEG optimizasyonu ve Joint Photographic Experts Group format desteğini test etmek için mükemmel.',
           keywords: 'JPEG örnek dosyaları, JPEG test dosyaları, JPEG örnekleri indir, ücretsiz JPEG test dosyaları, JPEG görüntü dosyaları, JPEG\'den PNG\'ye dönüştürücü, JPEG\'den PDF\'e dönüştürücü, görüntü sıkıştırma test dosyaları, fotoğraf düzenleme test dosyaları, JPEG format test, görüntü işleme örnekleri'
         },
@@ -1698,7 +1698,7 @@ export const tr: SamplePageTranslations = {
       },
       jpg: {
         meta: {
-          title: 'Ücretsiz JPG Örnek Dosyaları İndir - Dönüştürme Araçları için JPG Görüntü Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz JPG Örnek Dosyaları İndir - Dönüştürme Araçları için JPG Görüntü Test Dosyaları | FomiPeek',
           description: 'JPG görüntü dönüşümü, JPG sıkıştırma, görüntü işleme araçları ve fotoğraf düzenleme yazılımlarını test etmek için ücretsiz JPG örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. JPG\'den PNG\'ye dönüştürücüler, JPG\'den PDF\'e dönüştürücüler, görüntü sıkıştırma araçları, JPG optimizasyonu ve Joint Photographic Experts Group format desteğini test etmek için mükemmel.',
           keywords: 'JPG örnek dosyaları, JPG test dosyaları, JPG örnekleri indir, ücretsiz JPG test dosyaları, JPG görüntü dosyaları, JPG\'den PNG\'ye dönüştürücü, JPG\'den PDF\'e dönüştürücü, görüntü sıkıştırma test dosyaları, fotoğraf düzenleme test dosyaları, JPG format test, görüntü işleme örnekleri'
         },
@@ -1714,7 +1714,7 @@ export const tr: SamplePageTranslations = {
       },
       m4v: {
         meta: {
-          title: 'Ücretsiz M4V Örnek Dosyaları İndir - Dönüştürme Araçları için M4V Video Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz M4V Örnek Dosyaları İndir - Dönüştürme Araçları için M4V Video Test Dosyaları | FomiPeek',
           description: 'M4V video dönüşümü, M4V oynatma, video işleme araçları ve multimedya yazılımlarını test etmek için ücretsiz M4V örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. M4V\'den MP4\'e dönüştürücüler, M4V\'den AVI\'ye dönüştürücüler, video oynatıcıları, M4V oynatma uyumluluğu ve MPEG-4 video format desteğini test etmek için mükemmel.',
           keywords: 'M4V örnek dosyaları, M4V test dosyaları, M4V örnekleri indir, ücretsiz M4V test dosyaları, M4V video dosyaları, M4V\'den MP4\'e dönüştürücü, M4V\'den AVI\'ye dönüştürücü, video oynatıcı test dosyaları, M4V oynatma test, video dönüşüm örnekleri, MPEG-4 video format test'
         },
@@ -1730,7 +1730,7 @@ export const tr: SamplePageTranslations = {
       },
       mkv: {
         meta: {
-          title: 'Ücretsiz MKV Örnek Dosyaları İndir - Dönüştürme Araçları için Matroska Video Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz MKV Örnek Dosyaları İndir - Dönüştürme Araçları için Matroska Video Test Dosyaları | FomiPeek',
           description: 'MKV video dönüşümü, MKV oynatma, video işleme araçları ve multimedya yazılımlarını test etmek için ücretsiz MKV Matroska örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. MKV\'den MP4\'e dönüştürücüler, MKV\'den AVI\'ye dönüştürücüler, video oynatıcıları, MKV oynatma uyumluluğu ve Matroska video format desteğini test etmek için mükemmel.',
           keywords: 'MKV örnek dosyaları, MKV test dosyaları, MKV örnekleri indir, ücretsiz MKV test dosyaları, Matroska video dosyaları, MKV\'den MP4\'e dönüştürücü, MKV\'den AVI\'ye dönüştürücü, video oynatıcı test dosyaları, MKV oynatma test, video dönüşüm örnekleri, Matroska format test'
         },
@@ -1746,7 +1746,7 @@ export const tr: SamplePageTranslations = {
       },
       aac: {
         meta: {
-          title: 'Ücretsiz AAC Örnek Dosyaları İndir - Advanced Audio Coding Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz AAC Örnek Dosyaları İndir - Advanced Audio Coding Test Dosyaları | FomiPeek',
           description: 'Ses dönüşümü, AAC oynatma, ses işleme araçları ve multimedya yazılımlarını test etmek için ücretsiz AAC Advanced Audio Coding örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. AAC\'den MP3\'e dönüştürücüler, AAC\'den WAV\'a dönüştürücüler, ses oynatıcıları, AAC oynatma uyumluluğu ve Advanced Audio Coding format desteğini test etmek için mükemmel.',
           keywords: 'AAC örnek dosyaları, AAC test dosyaları, AAC örnekleri indir, ücretsiz AAC test dosyaları, Advanced Audio Coding dosyaları, AAC\'den MP3\'e dönüştürücü, AAC\'den WAV\'a dönüştürücü, ses oynatıcı test dosyaları, AAC oynatma test, ses dönüşüm örnekleri, Advanced Audio Coding format test'
         },
@@ -1762,7 +1762,7 @@ export const tr: SamplePageTranslations = {
       },
       ac3: {
         meta: {
-          title: 'Ücretsiz AC3 Örnek Dosyaları İndir - Dolby Digital Ses Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz AC3 Örnek Dosyaları İndir - Dolby Digital Ses Test Dosyaları | FomiPeek',
           description: 'Ses dönüşümü, AC3 oynatma, ses işleme araçları ve multimedya yazılımlarını test etmek için ücretsiz AC3 Dolby Digital örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. AC3\'den MP3\'e dönüştürücüler, AC3\'den WAV\'a dönüştürücüler, ses oynatıcıları, AC3 oynatma uyumluluğu ve Dolby Digital format desteğini test etmek için mükemmel.',
           keywords: 'AC3 örnek dosyaları, AC3 test dosyaları, AC3 örnekleri indir, ücretsiz AC3 test dosyaları, Dolby Digital dosyaları, AC3\'den MP3\'e dönüştürücü, AC3\'den WAV\'a dönüştürücü, ses oynatıcı test dosyaları, AC3 oynatma test, ses dönüşüm örnekleri, Dolby Digital format test'
         },
@@ -1778,7 +1778,7 @@ export const tr: SamplePageTranslations = {
       },
       aif: {
         meta: {
-          title: 'Ücretsiz AIF Örnek Dosyaları İndir - Audio Interchange File Format Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz AIF Örnek Dosyaları İndir - Audio Interchange File Format Test Dosyaları | FomiPeek',
           description: 'Ses dönüşümü, AIF oynatma, ses işleme araçları ve multimedya yazılımlarını test etmek için ücretsiz AIF Audio Interchange File Format örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. AIF\'den MP3\'e dönüştürücüler, AIF\'den WAV\'a dönüştürücüler, ses oynatıcıları, AIF oynatma uyumluluğu ve Audio Interchange File Format desteğini test etmek için mükemmel.',
           keywords: 'AIF örnek dosyaları, AIF test dosyaları, AIF örnekleri indir, ücretsiz AIF test dosyaları, Audio Interchange File Format dosyaları, AIF\'den MP3\'e dönüştürücü, AIF\'den WAV\'a dönüştürücü, ses oynatıcı test dosyaları, AIF oynatma test, ses dönüşüm örnekleri, Audio Interchange File Format test'
         },
@@ -1794,7 +1794,7 @@ export const tr: SamplePageTranslations = {
       },
       aiff: {
         meta: {
-          title: 'Ücretsiz AIFF Örnek Dosyaları İndir - Audio Interchange File Format Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz AIFF Örnek Dosyaları İndir - Audio Interchange File Format Test Dosyaları | FomiPeek',
           description: 'Ses dönüşümü, AIFF oynatma, ses işleme araçları ve multimedya yazılımlarını test etmek için ücretsiz AIFF Audio Interchange File Format örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. AIFF\'den MP3\'e dönüştürücüler, AIFF\'den WAV\'a dönüştürücüler, ses oynatıcıları, AIFF oynatma uyumluluğu ve Audio Interchange File Format desteğini test etmek için mükemmel.',
           keywords: 'AIFF örnek dosyaları, AIFF test dosyaları, AIFF örnekleri indir, ücretsiz AIFF test dosyaları, Audio Interchange File Format dosyaları, AIFF\'den MP3\'e dönüştürücü, AIFF\'den WAV\'a dönüştürücü, ses oynatıcı test dosyaları, AIFF oynatma test, ses dönüşüm örnekleri, Audio Interchange File Format test'
         },
@@ -1810,7 +1810,7 @@ export const tr: SamplePageTranslations = {
       },
       amr: {
         meta: {
-          title: 'Ücretsiz AMR Örnek Dosyaları İndir - Adaptive Multi-Rate Audio Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz AMR Örnek Dosyaları İndir - Adaptive Multi-Rate Audio Test Dosyaları | FomiPeek',
           description: 'Ses dönüşümü, AMR oynatma, ses işleme araçları ve mobil multimedya yazılımlarını test etmek için ücretsiz AMR Adaptive Multi-Rate örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. AMR\'den MP3\'e dönüştürücüler, AMR\'den WAV\'a dönüştürücüler, ses oynatıcıları, AMR oynatma uyumluluğu ve Adaptive Multi-Rate format desteğini test etmek için mükemmel.',
           keywords: 'AMR örnek dosyaları, AMR test dosyaları, AMR örnekleri indir, ücretsiz AMR test dosyaları, Adaptive Multi-Rate dosyaları, AMR\'den MP3\'e dönüştürücü, AMR\'den WAV\'a dönüştürücü, ses oynatıcı test dosyaları, AMR oynatma test, ses dönüşüm örnekleri, Adaptive Multi-Rate format test'
         },
@@ -1826,7 +1826,7 @@ export const tr: SamplePageTranslations = {
       },
       caf: {
         meta: {
-          title: 'Ücretsiz CAF Örnek Dosyaları İndir - Core Audio Format Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz CAF Örnek Dosyaları İndir - Core Audio Format Test Dosyaları | FomiPeek',
           description: 'Ses dönüşümü, CAF oynatma, ses işleme araçları ve macOS multimedya yazılımlarını test etmek için ücretsiz CAF Core Audio Format örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. CAF\'den MP3\'e dönüştürücüler, CAF\'den WAV\'a dönüştürücüler, ses oynatıcıları, CAF oynatma uyumluluğu ve Core Audio Format desteğini test etmek için mükemmel.',
           keywords: 'CAF örnek dosyaları, CAF test dosyaları, CAF örnekleri indir, ücretsiz CAF test dosyaları, Core Audio Format dosyaları, CAF\'den MP3\'e dönüştürücü, CAF\'den WAV\'a dönüştürücü, ses oynatıcı test dosyaları, CAF oynatma test, ses dönüşüm örnekleri, Core Audio Format test'
         },
@@ -1842,7 +1842,7 @@ export const tr: SamplePageTranslations = {
       },
       cue: {
         meta: {
-          title: 'Ücretsiz CUE Örnek Dosyaları İndir - Ses CD Yakma için CUE Sheet Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz CUE Örnek Dosyaları İndir - Ses CD Yakma için CUE Sheet Test Dosyaları | FomiPeek',
           description: 'Ses CD yakma araçlarını ve CUE sheet ayrıştırma araçlarını test etmek için ücretsiz CUE CUE sheet örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. CUE sheet ayrıştırmayı, ses CD yakma yazılımlarını, CUE dosya doğrulamayı ve CD yazma araçlarını test etmek için mükemmel.',
           keywords: 'CUE örnek dosyaları, CUE test dosyaları, CUE örnekleri indir, ücretsiz CUE test dosyaları, CUE sheet dosyaları, ses CD yakma test, CUE sheet ayrıştırıcı, CD yazma test dosyaları, CUE dosya doğrulama, ses disk görüntü test'
         },
@@ -1858,7 +1858,7 @@ export const tr: SamplePageTranslations = {
       },
       m4a: {
         meta: {
-          title: 'Ücretsiz M4A Örnek Dosyaları İndir - Dönüştürme Araçları için M4A Ses Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz M4A Örnek Dosyaları İndir - Dönüştürme Araçları için M4A Ses Test Dosyaları | FomiPeek',
           description: 'M4A ses dönüşümünü, M4A oynatmayı, ses işleme araçlarını ve multimedya yazılımlarını test etmek için ücretsiz M4A M4A ses örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. M4A\'dan MP3\'e dönüştürücüler, M4A\'dan WAV\'a dönüştürücüler, ses oynatıcıları, M4A oynatma uyumluluğu ve MPEG-4 ses formatı desteğini test etmek için mükemmel.',
           keywords: 'M4A örnek dosyaları, M4A test dosyaları, M4A örnekleri indir, ücretsiz M4A test dosyaları, M4A ses dosyaları, M4A\'dan MP3\'e dönüştürücü, M4A\'dan WAV\'a dönüştürücü, ses oynatıcı test dosyaları, M4A oynatma test, ses dönüşüm örnekleri, MPEG-4 ses formatı test'
         },
@@ -1874,7 +1874,7 @@ export const tr: SamplePageTranslations = {
       },
       midi: {
         meta: {
-          title: 'Ücretsiz MIDI Örnek Dosyaları İndir - Müzik Sıralama için MIDI Music Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz MIDI Örnek Dosyaları İndir - Müzik Sıralama için MIDI Music Test Dosyaları | FomiPeek',
           description: 'MIDI oynatmayı, MIDI dönüşümünü, müzik sıralama araçlarını ve dijital ses iş istasyonlarını test etmek için ücretsiz MIDI MIDI music örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. MIDI\'den MP3\'e dönüştürücüler, MIDI\'den WAV\'a dönüştürücüler, MIDI sıralayıcıları, müzik üretim yazılımlarını ve Musical Instrument Digital Interface format desteğini test etmek için mükemmel.',
           keywords: 'MIDI örnek dosyaları, MIDI test dosyaları, MIDI örnekleri indir, ücretsiz MIDI test dosyaları, MIDI music dosyaları, MIDI\'den MP3\'e dönüştürücü, MIDI\'den WAV\'a dönüştürücü, MIDI sıralayıcı test, müzik üretim test dosyaları, MIDI oynatma test, müzik sıralama örnekleri'
         },
@@ -1890,7 +1890,7 @@ export const tr: SamplePageTranslations = {
       },
       ace: {
         meta: {
-          title: 'Ücretsiz ACE Örnek Dosyaları İndir - Çıkarma Araçları için ACE Arşiv Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz ACE Örnek Dosyaları İndir - Çıkarma Araçları için ACE Arşiv Test Dosyaları | FomiPeek',
           description: 'Arşiv çıkarma ve sıkıştırma araçlarını test etmek için ücretsiz ACE arşiv örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. ACE arşiv çıkarmayı, ACE dosya açmayı, arşiv yönetim araçlarını ve dosya sıkıştırma yazılımlarını test etmek için mükemmel.',
           keywords: 'ACE örnek dosyaları, ACE test dosyaları, ACE örnekleri indir, ücretsiz ACE test dosyaları, ACE arşiv dosyaları, ACE çıkarma test, ACE açma test, arşiv yönetim test dosyaları, dosya sıkıştırma örnekleri'
         },
@@ -1906,7 +1906,7 @@ export const tr: SamplePageTranslations = {
       },
       arj: {
         meta: {
-          title: 'Ücretsiz ARJ Örnek Dosyaları İndir - Çıkarma Araçları için ARJ Arşiv Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz ARJ Örnek Dosyaları İndir - Çıkarma Araçları için ARJ Arşiv Test Dosyaları | FomiPeek',
           description: 'Arşiv çıkarma ve sıkıştırma araçlarını test etmek için ücretsiz ARJ arşiv örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. ARJ arşiv çıkarmayı, ARJ dosya açmayı, arşiv yönetim araçlarını ve dosya sıkıştırma yazılımlarını test etmek için mükemmel.',
           keywords: 'ARJ örnek dosyaları, ARJ test dosyaları, ARJ örnekleri indir, ücretsiz ARJ test dosyaları, ARJ arşiv dosyaları, ARJ çıkarma test, ARJ açma test, arşiv yönetim test dosyaları, dosya sıkıştırma örnekleri'
         },
@@ -1922,7 +1922,7 @@ export const tr: SamplePageTranslations = {
       },
       bz2: {
         meta: {
-          title: 'Ücretsiz BZ2 Örnek Dosyaları İndir - BZ2 Sıkıştırılmış Arşiv Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz BZ2 Örnek Dosyaları İndir - BZ2 Sıkıştırılmış Arşiv Test Dosyaları | FomiPeek',
           description: 'Arşiv açma ve sıkıştırma araçlarını test etmek için ücretsiz BZ2 bzip2 sıkıştırılmış arşiv örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. BZ2 arşiv açmayı, BZ2 dosya çıkarmayı, bzip2 sıkıştırma araçlarını ve arşiv yönetim yazılımlarını test etmek için mükemmel.',
           keywords: 'BZ2 örnek dosyaları, BZ2 test dosyaları, BZ2 örnekleri indir, ücretsiz BZ2 test dosyaları, BZ2 sıkıştırılmış dosyalar, BZ2 açma test, bzip2 sıkıştırma test, arşiv çıkarma test dosyaları, dosya sıkıştırma örnekleri'
         },
@@ -1938,7 +1938,7 @@ export const tr: SamplePageTranslations = {
       },
       gz: {
         meta: {
-          title: 'Ücretsiz GZ Örnek Dosyaları İndir - GZ Gzip Sıkıştırılmış Arşiv Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz GZ Örnek Dosyaları İndir - GZ Gzip Sıkıştırılmış Arşiv Test Dosyaları | FomiPeek',
           description: 'gzip açma, arşiv çıkarma ve dosya sıkıştırma araçlarını test etmek için ücretsiz GZ gzip sıkıştırılmış arşiv örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. GZ arşiv açmayı, GZ dosya çıkarmayı, gzip sıkıştırma araçlarını ve arşiv yönetim yazılımlarını test etmek için mükemmel.',
           keywords: 'GZ örnek dosyaları, GZ test dosyaları, GZ örnekleri indir, ücretsiz GZ test dosyaları, GZ sıkıştırılmış dosyalar, GZ açma test, gzip sıkıştırma test, arşiv çıkarma test dosyaları, dosya sıkıştırma örnekleri'
         },
@@ -1954,7 +1954,7 @@ export const tr: SamplePageTranslations = {
       },
       cab: {
         meta: {
-          title: 'Ücretsiz CAB Örnek Dosyaları İndir - CAB Windows Cabinet Arşiv Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz CAB Örnek Dosyaları İndir - CAB Windows Cabinet Arşiv Test Dosyaları | FomiPeek',
           description: 'Arşiv çıkarma ve sıkıştırma araçlarını test etmek için ücretsiz CAB Windows cabinet arşiv örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. CAB arşiv çıkarmayı, CAB dosya açmayı, Windows cabinet arşiv araçlarını ve arşiv yönetim yazılımlarını test etmek için mükemmel.',
           keywords: 'CAB örnek dosyaları, CAB test dosyaları, CAB örnekleri indir, ücretsiz CAB test dosyaları, CAB arşiv dosyaları, CAB çıkarma test, Windows cabinet arşiv test, arşiv yönetim test dosyaları, dosya sıkıştırma örnekleri'
         },
@@ -1970,7 +1970,7 @@ export const tr: SamplePageTranslations = {
       },
       cpio: {
         meta: {
-          title: 'Ücretsiz CPIO Örnek Dosyaları İndir - Çıkarma Araçları için CPIO Arşiv Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz CPIO Örnek Dosyaları İndir - Çıkarma Araçları için CPIO Arşiv Test Dosyaları | FomiPeek',
           description: 'Arşiv çıkarma ve sıkıştırma araçlarını test etmek için ücretsiz CPIO arşiv örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. CPIO arşiv çıkarmayı, CPIO dosya açmayı, arşiv yönetim araçlarını ve dosya sıkıştırma yazılımlarını test etmek için mükemmel.',
           keywords: 'CPIO örnek dosyaları, CPIO test dosyaları, CPIO örnekleri indir, ücretsiz CPIO test dosyaları, CPIO arşiv dosyaları, CPIO çıkarma test, CPIO açma test, arşiv yönetim test dosyaları, dosya sıkıştırma örnekleri'
         },
@@ -1986,7 +1986,7 @@ export const tr: SamplePageTranslations = {
       },
       zip: {
         meta: {
-          title: 'Ücretsiz ZIP Örnek Dosyaları İndir - Çıkarma Araçları için ZIP Arşiv Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz ZIP Örnek Dosyaları İndir - Çıkarma Araçları için ZIP Arşiv Test Dosyaları | FomiPeek',
           description: 'Arşiv çıkarma ve sıkıştırma araçlarını test etmek için ücretsiz ZIP arşiv örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. ZIP arşiv çıkarmayı, ZIP dosya açmayı, arşiv yönetim araçlarını ve dosya sıkıştırma yazılımlarını test etmek için mükemmel.',
           keywords: 'ZIP örnek dosyaları, ZIP test dosyaları, ZIP örnekleri indir, ücretsiz ZIP test dosyaları, ZIP arşiv dosyaları, ZIP çıkarma test, ZIP açma test, arşiv yönetim test dosyaları, dosya sıkıştırma örnekleri'
         },
@@ -2002,7 +2002,7 @@ export const tr: SamplePageTranslations = {
       },
       dmg: {
         meta: {
-          title: 'Ücretsiz DMG Örnek Dosyaları İndir - DMG macOS Disk Image Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz DMG Örnek Dosyaları İndir - DMG macOS Disk Image Test Dosyaları | FomiPeek',
           description: 'Disk image bağlama ve DMG çıkarma araçlarını test etmek için ücretsiz DMG macOS disk image örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. DMG disk image bağlamayı, DMG dosya çıkarmayı, macOS disk image araçlarını ve disk image işleme yazılımlarını test etmek için mükemmel.',
           keywords: 'DMG örnek dosyaları, DMG test dosyaları, DMG örnekleri indir, ücretsiz DMG test dosyaları, DMG disk image dosyaları, DMG bağlama test, macOS disk image test, disk image çıkarma test dosyaları, disk image işleme örnekleri'
         },
@@ -2018,7 +2018,7 @@ export const tr: SamplePageTranslations = {
       },
       img: {
         meta: {
-          title: 'Ücretsiz IMG Örnek Dosyaları İndir - IMG Disk Image Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz IMG Örnek Dosyaları İndir - IMG Disk Image Test Dosyaları | FomiPeek',
           description: 'Disk image bağlama, IMG çıkarma ve disk image işleme araçlarını test etmek için ücretsiz IMG disk image örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. IMG disk image bağlamayı, IMG dosya çıkarmayı, disk image araçlarını ve disk image işleme yazılımlarını test etmek için mükemmel.',
           keywords: 'IMG örnek dosyaları, IMG test dosyaları, IMG örnekleri indir, ücretsiz IMG test dosyaları, IMG disk image dosyaları, IMG bağlama test, disk image çıkarma test, disk image işleme test dosyaları, disk image örnekleri'
         },
@@ -2034,7 +2034,7 @@ export const tr: SamplePageTranslations = {
       },
       iso: {
         meta: {
-          title: 'Ücretsiz ISO Örnek Dosyaları İndir - ISO Disk Image Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz ISO Örnek Dosyaları İndir - ISO Disk Image Test Dosyaları | FomiPeek',
           description: 'ISO disk image bağlama, ISO çıkarma ve disk image işleme araçlarını test etmek için ücretsiz ISO ISO disk image örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. ISO disk image bağlamayı, ISO dosya çıkarmayı, disk image araçlarını ve disk image işleme yazılımlarını test etmek için mükemmel.',
           keywords: 'ISO örnek dosyaları, ISO test dosyaları, ISO örnekleri indir, ücretsiz ISO test dosyaları, ISO disk image dosyaları, ISO bağlama test, ISO çıkarma test, disk image işleme test dosyaları, disk image örnekleri'
         },
@@ -2050,7 +2050,7 @@ export const tr: SamplePageTranslations = {
       },
       kmz: {
         meta: {
-          title: 'Ücretsiz KMZ Örnek Dosyaları İndir - KMZ Sıkıştırılmış KML Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz KMZ Örnek Dosyaları İndir - KMZ Sıkıştırılmış KML Test Dosyaları | FomiPeek',
           description: 'KMZ çıkarma, coğrafi veri işleme ve Google Earth entegrasyon araçlarını test etmek için ücretsiz KMZ sıkıştırılmış Keyhole Markup Language örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. KMZ dosya çıkarmayı, KMZ\'den KML\'e dönüştürmeyi, Google Earth uyumluluğunu, coğrafi veri işlemeyi ve haritalama yazılımlarını test etmek için mükemmel.',
           keywords: 'KMZ örnek dosyaları, KMZ test dosyaları, KMZ örnekleri indir, ücretsiz KMZ test dosyaları, KMZ sıkıştırılmış dosyalar, KMZ çıkarma test, Google Earth test dosyaları, coğrafi veri işleme test, haritalama yazılım örnekleri'
         },
@@ -2066,7 +2066,7 @@ export const tr: SamplePageTranslations = {
       },
       laz: {
         meta: {
-          title: 'Ücretsiz LAZ Örnek Dosyaları İndir - LAZ Sıkıştırılmış LiDAR Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz LAZ Örnek Dosyaları İndir - LAZ Sıkıştırılmış LiDAR Test Dosyaları | FomiPeek',
           description: 'LAZ çıkarma, point cloud işleme ve 3D haritalama araçlarını test etmek için ücretsiz LAZ sıkıştırılmış LiDAR point cloud data örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. LAZ dosya çıkarmayı, LAZ\'dan LAS\'a dönüştürmeyi, LiDAR point cloud işlemeyi, 3D haritalama yazılımlarını ve coğrafi veri analiz araçlarını test etmek için mükemmel.',
           keywords: 'LAZ örnek dosyaları, LAZ test dosyaları, LAZ örnekleri indir, ücretsiz LAZ test dosyaları, LAZ sıkıştırılmış dosyalar, LAZ çıkarma test, LiDAR point cloud test, 3D haritalama test dosyaları, coğrafi veri analiz örnekleri'
         },
@@ -2082,7 +2082,7 @@ export const tr: SamplePageTranslations = {
       },
       lha: {
         meta: {
-          title: 'Ücretsiz LHA Örnek Dosyaları İndir - Çıkarma Araçları için LHA Arşiv Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz LHA Örnek Dosyaları İndir - Çıkarma Araçları için LHA Arşiv Test Dosyaları | FomiPeek',
           description: 'LHA çıkarma, arşiv açma ve dosya arşivleme araçlarını test etmek için ücretsiz LHA LHA arşiv örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. LHA arşiv çıkarmayı, LHA dosya açmayı, arşiv yönetim araçlarını ve dosya sıkıştırma yazılımlarını test etmek için mükemmel.',
           keywords: 'LHA örnek dosyaları, LHA test dosyaları, LHA örnekleri indir, ücretsiz LHA test dosyaları, LHA arşiv dosyaları, LHA çıkarma test, LHA açma test, arşiv yönetim test dosyaları, dosya sıkıştırma örnekleri'
         },
@@ -2098,7 +2098,7 @@ export const tr: SamplePageTranslations = {
       },
       lzh: {
         meta: {
-          title: 'Ücretsiz LZH Örnek Dosyaları İndir - Çıkarma Araçları için LZH Arşiv Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz LZH Örnek Dosyaları İndir - Çıkarma Araçları için LZH Arşiv Test Dosyaları | FomiPeek',
           description: 'LZH çıkarma, arşiv açma ve dosya arşivleme araçlarını test etmek için ücretsiz LZH LZH arşiv örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. LZH arşiv çıkarmayı, LZH dosya açmayı, arşiv yönetim araçlarını ve dosya sıkıştırma yazılımlarını test etmek için mükemmel.',
           keywords: 'LZH örnek dosyaları, LZH test dosyaları, LZH örnekleri indir, ücretsiz LZH test dosyaları, LZH arşiv dosyaları, LZH çıkarma test, LZH açma test, arşiv yönetim test dosyaları, dosya sıkıştırma örnekleri'
         },
@@ -2114,7 +2114,7 @@ export const tr: SamplePageTranslations = {
       },
       lzma: {
         meta: {
-          title: 'Ücretsiz LZMA Örnek Dosyaları İndir - LZMA Sıkıştırılmış Arşiv Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz LZMA Örnek Dosyaları İndir - LZMA Sıkıştırılmış Arşiv Test Dosyaları | FomiPeek',
           description: 'LZMA açma, arşiv çıkarma ve dosya sıkıştırma araçlarını test etmek için ücretsiz LZMA LZMA sıkıştırılmış örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. LZMA arşiv açmayı, LZMA dosya çıkarmayı, LZMA sıkıştırma araçlarını ve arşiv yönetim yazılımlarını test etmek için mükemmel.',
           keywords: 'LZMA örnek dosyaları, LZMA test dosyaları, LZMA örnekleri indir, ücretsiz LZMA test dosyaları, LZMA sıkıştırılmış dosyalar, LZMA açma test, LZMA sıkıştırma test, arşiv çıkarma test dosyaları, dosya sıkıştırma örnekleri'
         },
@@ -2130,7 +2130,7 @@ export const tr: SamplePageTranslations = {
       },
       '7z': {
         meta: {
-          title: 'Ücretsiz 7Z Örnek Dosyaları İndir - Çıkarma Araçları için 7Z Arşiv Test Dosyaları | MorphyHub',
+          title: 'Ücretsiz 7Z Örnek Dosyaları İndir - Çıkarma Araçları için 7Z Arşiv Test Dosyaları | FomiPeek',
           description: 'Arşiv dönüştürme ve çıkarma araçlarını test etmek için ücretsiz 7Z arşiv örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. 7Z arşiv çıkarmayı, 7Z dosya açmayı, arşiv yönetim araçlarını ve dosya sıkıştırma yazılımlarını test etmek için mükemmel.',
           keywords: '7Z örnek dosyaları, 7Z test dosyaları, 7Z örnekleri indir, ücretsiz 7Z test dosyaları, 7Z arşiv dosyaları, 7Z çıkarma test, 7Z açma test, arşiv yönetim test dosyaları, dosya sıkıştırma örnekleri'
         },

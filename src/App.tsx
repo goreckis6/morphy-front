@@ -252,11 +252,11 @@ function App() {
   // Make addToConversionCounter available globally
   React.useEffect(() => {
     const addToConversionCounter = (fileSizeInBytes: number) => {
-    const storedData = localStorage.getItem('MorphyHub_total_processed');
+    const storedData = localStorage.getItem('FomiPeek_total_processed');
       const baseGB = storedData ? parseFloat(storedData) : 500;
     const sizeInGB = fileSizeInBytes / (1024 * 1024 * 1024);
       const newValue = baseGB + sizeInGB;
-      localStorage.setItem('MorphyHub_total_processed', newValue.toString());
+      localStorage.setItem('FomiPeek_total_processed', newValue.toString());
   };
     (window as any).addToConversionCounter = addToConversionCounter;
   }, []);
