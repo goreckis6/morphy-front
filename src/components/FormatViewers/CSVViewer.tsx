@@ -17,7 +17,7 @@ export const CSVViewer: React.FC = () => {
   usePathLanguageSync(i18n);
 
   const localizedPath = getLocalizedUrl('/viewers/csv', i18n.language);
-  const canonicalUrl = `https://morphyhub.com${localizedPath}`;
+  const canonicalUrl = `https://formipeek.com${localizedPath}`;
 
   const getFallbackArray = <T,>(key: string) => {
     const value = t(key, { returnObjects: true });
@@ -121,7 +121,7 @@ export const CSVViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyhub.com/api/preview/csv', {
+      const response = await fetch('https://api.formipeek.com/api/preview/csv', {
         method: 'POST',
         body: formData,
       });

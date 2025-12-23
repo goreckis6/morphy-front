@@ -108,7 +108,7 @@ export const SXViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyhub.com/api/preview/sx', {
+      const response = await fetch('https://api.formipeek.com/api/preview/sx', {
         method: 'POST',
         body: formData,
       });
@@ -268,7 +268,7 @@ export const SXViewer: React.FC = () => {
         <meta property="og:title" content={t('viewers.sx.meta_title')} />
         <meta property="og:description" content={t('viewers.sx.meta_description')} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyhub.com/viewers/sx" />
+        <meta property="og:url" content="https://formipeek.com/viewers/sx" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('viewers.sx.meta_title')} />
         <meta name="twitter:description" content={t('viewers.sx.meta_description')} />
@@ -278,7 +278,7 @@ export const SXViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free SX Viewer",
             "description": "Free professional SX (Stat Studio Program) viewer",
-            "url": "https://morphyhub.com/viewers/sx",
+            "url": "https://formipeek.com/viewers/sx",
             "applicationCategory": "DocumentViewer",
             "operatingSystem": "Web Browser",
             "offers": {

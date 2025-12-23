@@ -63,7 +63,7 @@ jobs:
             sudo chown -R $USER:$USER letsencrypt
             
             # Set environment variable
-            export VITE_API_BASE_URL=https://api.morphyhub.com
+            export VITE_API_BASE_URL=https://api.formipeek.com
             
             # Stop and remove old containers
             docker stop morphy-frontend 2>/dev/null || true
@@ -76,16 +76,16 @@ jobs:
             docker run -d \
               --name morphy-frontend \
               --label "traefik.enable=true" \
-              --label "traefik.http.routers.morphy.rule=Host(\`morphyhub.com\`)" \
+              --label "traefik.http.routers.morphy.rule=Host(\`formipeek.com\`)" \
               --label "traefik.http.routers.morphy.tls=true" \
               --label "traefik.http.routers.morphy.tls.certresolver=letsencrypt" \
-              --label "traefik.http.routers.morphy-www.rule=Host(\`www.morphyhub.com\`)" \
+              --label "traefik.http.routers.morphy-www.rule=Host(\`www.formipeek.com\`)" \
               --label "traefik.http.routers.morphy-www.tls=true" \
               --label "traefik.http.routers.morphy-www.tls.certresolver=letsencrypt" \
               --label "traefik.http.services.morphy.loadbalancer.server.port=80" \
               --network traefik \
               --restart unless-stopped \
-              -e VITE_API_BASE_URL=https://api.morphyhub.com\
+              -e VITE_API_BASE_URL=https://api.formipeek.com\
               ${{ secrets.DOCKERHUB_USERNAME }}/morphy-frontend:latest
             
             # Verify deployment

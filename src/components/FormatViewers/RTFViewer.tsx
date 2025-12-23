@@ -115,7 +115,7 @@ export const RTFViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyhub.com/api/preview/rtf', {
+      const response = await fetch('https://api.formipeek.com/api/preview/rtf', {
         method: 'POST',
         body: formData,
       });
@@ -189,7 +189,7 @@ export const RTFViewer: React.FC = () => {
         <meta property="og:title" content="Free RTF Viewer - View Rich Text Format Documents Online | MorphyHub" />
         <meta property="og:description" content="Free professional RTF viewer for viewing Rich Text Format documents online. Upload and preview RTF files with formatting preservation and cross-platform compatibility." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyhub.com/viewers/rtf" />
+        <meta property="og:url" content="https://formipeek.com/viewers/rtf" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free RTF Viewer - View Rich Text Format Documents Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional RTF viewer for viewing Rich Text Format documents online. Upload and preview RTF files with formatting preservation and cross-platform compatibility." />
@@ -199,7 +199,7 @@ export const RTFViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free RTF Viewer",
             "description": "Free professional RTF viewer for viewing Rich Text Format documents online",
-            "url": "https://morphyhub.com/viewers/rtf",
+            "url": "https://formipeek.com/viewers/rtf",
             "applicationCategory": "DocumentViewer",
             "operatingSystem": "Web Browser",
             "offers": {

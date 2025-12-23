@@ -124,7 +124,7 @@ export const JSONViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyhub.com/api/preview/json', {
+      const response = await fetch('https://api.formipeek.com/api/preview/json', {
         method: 'POST',
         body: formData,
       });
@@ -197,7 +197,7 @@ export const JSONViewer: React.FC = () => {
         <meta property="og:title" content={t('viewers.json.meta_title')} />
         <meta property="og:description" content={t('viewers.json.meta_description')} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyhub.com/viewers/json" />
+        <meta property="og:url" content="https://formipeek.com/viewers/json" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('viewers.json.meta_title')} />
         <meta name="twitter:description" content={t('viewers.json.meta_description')} />
@@ -207,7 +207,7 @@ export const JSONViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": t('viewers.json.hero_title'),
             "description": t('viewers.json.meta_description'),
-            "url": "https://morphyhub.com/viewers/json",
+            "url": "https://formipeek.com/viewers/json",
             "applicationCategory": "DataViewer",
             "operatingSystem": "Web Browser",
             "offers": {

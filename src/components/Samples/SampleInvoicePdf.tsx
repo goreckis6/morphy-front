@@ -82,8 +82,8 @@ export default function SampleInvoicePdf() {
     "name": t(`sample_page.formats.${formatKey}.schema.name`),
     "url": canonicalUrl,
     "description": t(`sample_page.formats.${formatKey}.schema.description`),
-    "isPartOf": { "@id": "https://morphyhub.com#website" },
-    "publisher": { "@id": "https://morphyhub.com#organization" }
+    "isPartOf": { "@id": "https://formipeek.com#website" },
+    "publisher": { "@id": "https://formipeek.com#organization" }
   };
 
   const handleBack = () => {

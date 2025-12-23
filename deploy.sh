@@ -9,7 +9,7 @@ echo "🚀 Starting deployment..."
 mkdir -p letsencrypt
 
 # Set environment variable
-export VITE_API_BASE_URL=https://api.morphyhub.com
+export VITE_API_BASE_URL=https://api.formipeek.com
 
 # Stop old containers
 echo "🛑 Stopping old containers..."
@@ -29,4 +29,4 @@ sleep 10
 docker compose -f docker-compose.prod.yml ps
 
 echo "🎉 Deployment complete!"
-echo "Your site should be available at: https://morphyhub.com"
+echo "Your site should be available at: https://formipeek.com"

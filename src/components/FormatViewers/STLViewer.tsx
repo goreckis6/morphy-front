@@ -266,20 +266,20 @@ export const STLViewer: React.FC = () => {
         <title>{t('viewers.stl.meta_title')}</title>
         <meta name="description" content={t('viewers.stl.meta_description')} />
         <meta name="keywords" content={t('viewers.stl.meta_keywords')} />
-        <link rel="canonical" href="https://morphyhub.com/viewers/stl" />
+        <link rel="canonical" href="https://formipeek.com/viewers/stl" />
         
         {/* Open Graph */}
         <meta property="og:title" content={t('viewers.stl.meta_title')} />
         <meta property="og:description" content={t('viewers.stl.meta_description')} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyhub.com/viewers/stl" />
-        <meta property="og:image" content="https://morphyhub.com/og-stl-viewer.jpg" />
+        <meta property="og:url" content="https://formipeek.com/viewers/stl" />
+        <meta property="og:image" content="https://formipeek.com/og-stl-viewer.jpg" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('viewers.stl.meta_title')} />
         <meta name="twitter:description" content={t('viewers.stl.meta_description')} />
-        <meta name="twitter:image" content="https://morphyhub.com/og-stl-viewer.jpg" />
+        <meta name="twitter:image" content="https://formipeek.com/og-stl-viewer.jpg" />
 
         {/* JSON-LD Structured Data */}
         <script type="application/ld+json">
@@ -288,7 +288,7 @@ export const STLViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free STL Viewer",
             "description": "Free online STL file viewer for 3D models and 3D printing files with interactive rendering",
-            "url": "https://morphyhub.com/viewers/stl",
+            "url": "https://formipeek.com/viewers/stl",
             "applicationCategory": "UtilityApplication",
             "operatingSystem": "Any",
             "browserRequirements": "Requires WebGL",

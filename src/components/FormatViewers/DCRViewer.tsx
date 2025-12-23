@@ -131,7 +131,7 @@ export const DCRViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyhub.com/api/preview/dcr', {
+      const response = await fetch('https://api.formipeek.com/api/preview/dcr', {
         method: 'POST',
         body: formData,
       });
@@ -445,7 +445,7 @@ export const DCRViewer: React.FC = () => {
         <meta property="og:title" content={t('viewers.dcr.meta_title')} />
         <meta property="og:description" content={t('viewers.dcr.meta_description')} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyhub.com/viewers/dcr" />
+        <meta property="og:url" content="https://formipeek.com/viewers/dcr" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('viewers.dcr.meta_title')} />
         <meta name="twitter:description" content={t('viewers.dcr.meta_description')} />
@@ -455,7 +455,7 @@ export const DCRViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free DCR Viewer",
             "description": "Free professional DCR (Kodak RAW) viewer with high-quality rendering",
-            "url": "https://morphyhub.com/viewers/dcr",
+            "url": "https://formipeek.com/viewers/dcr",
             "applicationCategory": "ImageViewer",
             "operatingSystem": "Web Browser",
             "offers": {

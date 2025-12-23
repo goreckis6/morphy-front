@@ -44,7 +44,7 @@ export const TIFFViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyhub.com/api/preview/tiff', {
+      const response = await fetch('https://api.formipeek.com/api/preview/tiff', {
         method: 'POST',
         body: formData,
       });

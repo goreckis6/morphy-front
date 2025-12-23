@@ -130,7 +130,7 @@ export const X3FViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyhub.com/api/preview/x3f', {
+      const response = await fetch('https://api.formipeek.com/api/preview/x3f', {
         method: 'POST',
         body: formData,
       });
@@ -453,7 +453,7 @@ export const X3FViewer: React.FC = () => {
         <meta property="og:title" content={t('viewers.x3f.meta_title')} />
         <meta property="og:description" content={t('viewers.x3f.meta_description')} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyhub.com/viewers/x3f" />
+        <meta property="og:url" content="https://formipeek.com/viewers/x3f" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('viewers.x3f.meta_title')} />
         <meta name="twitter:description" content={t('viewers.x3f.meta_description')} />
@@ -463,7 +463,7 @@ export const X3FViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free X3F Viewer",
             "description": "Free professional X3F (Sigma RAW) viewer with high-quality rendering",
-            "url": "https://morphyhub.com/viewers/x3f",
+            "url": "https://formipeek.com/viewers/x3f",
             "applicationCategory": "ImageViewer",
             "operatingSystem": "Web Browser",
             "offers": {

@@ -265,7 +265,7 @@ export const YTThumbnailDownloader: React.FC = () => {
     name: 'YouTube Thumbnail Downloader',
     description:
       'Free online tool to extract and download YouTube video thumbnails in multiple resolutions. Get high-quality thumbnails from any YouTube video instantly.',
-    url: 'https://morphyhub.com/yt-thumbnail-downloader',
+    url: 'https://formipeek.com/yt-thumbnail-downloader',
     applicationCategory: 'UtilityApplication',
     operatingSystem: 'Web Browser',
     offers: {
@@ -300,14 +300,14 @@ export const YTThumbnailDownloader: React.FC = () => {
           content="Download YouTube video thumbnails in multiple resolutions. Extract high-quality thumbnails from any YouTube video instantly."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyhub.com/yt-thumbnail-downloader" />
+        <meta property="og:url" content="https://formipeek.com/yt-thumbnail-downloader" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="YouTube Thumbnail Downloader - Free Online Tool" />
         <meta
           name="twitter:description"
           content="Download YouTube video thumbnails in multiple resolutions. Extract high-quality thumbnails from any YouTube video instantly."
         />
-        <link rel="canonical" href="https://morphyhub.com/yt-thumbnail-downloader" />
+        <link rel="canonical" href="https://formipeek.com/yt-thumbnail-downloader" />
         <meta name="robots" content="noindex, nofollow" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }} />
       </Helmet>

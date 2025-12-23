@@ -1,7 +1,7 @@
 
 // API service for backend communication
 const PRODUCTION_DEFAULTS = [
-  'https://api.morphyhub.com' // Production backend
+  'https://api.formipeek.com' // Production backend
 ];
 
 const normalizeBaseUrl = (url: string | undefined) => {

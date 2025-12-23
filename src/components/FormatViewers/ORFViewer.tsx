@@ -120,7 +120,7 @@ export const ORFViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyhub.com/api/preview/orf', {
+      const response = await fetch('https://api.formipeek.com/api/preview/orf', {
         method: 'POST',
         body: formData,
       });
@@ -434,7 +434,7 @@ export const ORFViewer: React.FC = () => {
         <meta property="og:title" content={t('viewers.orf.meta_title')} />
         <meta property="og:description" content={t('viewers.orf.meta_description')} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyhub.com/viewers/orf" />
+        <meta property="og:url" content="https://formipeek.com/viewers/orf" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('viewers.orf.meta_title')} />
         <meta name="twitter:description" content={t('viewers.orf.meta_description')} />
@@ -444,7 +444,7 @@ export const ORFViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": t('viewers.orf.hero_title'),
             "description": t('viewers.orf.meta_description'),
-            "url": "https://morphyhub.com/viewers/orf",
+            "url": "https://formipeek.com/viewers/orf",
             "applicationCategory": "ImageViewer",
             "operatingSystem": "Web Browser",
             "offers": {

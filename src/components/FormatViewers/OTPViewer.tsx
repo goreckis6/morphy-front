@@ -114,7 +114,7 @@ export const OTPViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyhub.com/api/preview/otp', {
+      const response = await fetch('https://api.formipeek.com/api/preview/otp', {
         method: 'POST',
         body: formData,
       });
@@ -274,7 +274,7 @@ export const OTPViewer: React.FC = () => {
         <meta property="og:title" content={t('viewers.otp.meta_title')} />
         <meta property="og:description" content={t('viewers.otp.meta_description')} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyhub.com/viewers/otp" />
+        <meta property="og:url" content="https://formipeek.com/viewers/otp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('viewers.otp.meta_title')} />
         <meta name="twitter:description" content={t('viewers.otp.meta_description')} />
@@ -284,7 +284,7 @@ export const OTPViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": t('viewers.otp.hero_title'),
             "description": t('viewers.otp.meta_description'),
-            "url": "https://morphyhub.com/viewers/otp",
+            "url": "https://formipeek.com/viewers/otp",
             "applicationCategory": "DocumentViewer",
             "operatingSystem": "Web Browser",
             "offers": {

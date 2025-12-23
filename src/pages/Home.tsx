@@ -75,7 +75,7 @@ export default function Home() {
   const isEnglish = locale === 'en';
   const getLocalizedPath = (path: string) => (isEnglish ? path : `/${locale}${path}`);
   const localizedBasePath = getLocalizedPath('');
-  const canonicalUrl = `https://morphyhub.com${localizedBasePath}`;
+  const canonicalUrl = `https://formipeek.com${localizedBasePath}`;
 
   const metaTitle = t('home.meta.title');
   const metaDescription = t('home.meta.description');
@@ -90,10 +90,10 @@ export default function Home() {
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://morphyhub.com#organization",
+        "@id": "https://formipeek.com#organization",
         "name": "MorphyHub",
-        "url": "https://morphyhub.com",
-        "logo": "https://morphyhub.com/logo.png",
+        "url": "https://formipeek.com",
+        "logo": "https://formipeek.com/logo.png",
         "sameAs": []
       },
       {
@@ -102,7 +102,7 @@ export default function Home() {
         "url": canonicalUrl,
         "name": schemaWebsiteName,
         "description": schemaWebsiteDescription,
-        "publisher": { "@id": "https://morphyhub.com#organization" }
+        "publisher": { "@id": "https://formipeek.com#organization" }
       },
       {
         "@type": "WebPage",
@@ -111,7 +111,7 @@ export default function Home() {
         "name": schemaWebpageName,
         "description": schemaWebpageDescription,
         "isPartOf": { "@id": `${canonicalUrl}#website` },
-        "publisher": { "@id": "https://morphyhub.com#organization" }
+        "publisher": { "@id": "https://formipeek.com#organization" }
       }
     ]
   };

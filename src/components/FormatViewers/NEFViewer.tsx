@@ -120,7 +120,7 @@ export const NEFViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyhub.com/api/preview/nef', {
+      const response = await fetch('https://api.formipeek.com/api/preview/nef', {
         method: 'POST',
         body: formData,
       });
@@ -194,7 +194,7 @@ export const NEFViewer: React.FC = () => {
         <meta property="og:title" content={t('viewers.nef.meta_title')} />
         <meta property="og:description" content={t('viewers.nef.meta_description')} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyhub.com/viewers/nef" />
+        <meta property="og:url" content="https://formipeek.com/viewers/nef" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('viewers.nef.meta_title')} />
         <meta name="twitter:description" content={t('viewers.nef.meta_description')} />
@@ -204,7 +204,7 @@ export const NEFViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": t('viewers.nef.hero_title'),
             "description": t('viewers.nef.meta_description'),
-            "url": "https://morphyhub.com/viewers/nef",
+            "url": "https://formipeek.com/viewers/nef",
             "applicationCategory": "ImageViewer",
             "operatingSystem": "Web Browser",
             "offers": {

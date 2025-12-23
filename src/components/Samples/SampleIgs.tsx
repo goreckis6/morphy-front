@@ -82,8 +82,8 @@ export default function SampleIgs() {
     "name": t(`sample_page.formats.${formatKey}.schema.name`),
     "url": canonicalUrl,
     "description": t(`sample_page.formats.${formatKey}.schema.description`),
-    "isPartOf": { "@id": "https://morphyhub.com#website" },
-    "publisher": { "@id": "https://morphyhub.com#organization" }
+    "isPartOf": { "@id": "https://formipeek.com#website" },
+    "publisher": { "@id": "https://formipeek.com#organization" }
   };
 
   const handleBack = () => {
@@ -101,7 +101,7 @@ export default function SampleIgs() {
         <meta property="og:title" content={t(`sample_page.formats.${formatKey}.meta.title`)} />
         <meta property="og:description" content={t(`sample_page.formats.${formatKey}.hero.description`)} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyhub.com/samples/sample-igs" />
+        <meta property="og:url" content="https://formipeek.com/samples/sample-igs" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content={t(`sample_page.formats.${formatKey}.meta.title`)} />
         <meta name="twitter:description" content={t(`sample_page.formats.${formatKey}.hero.description`)} />

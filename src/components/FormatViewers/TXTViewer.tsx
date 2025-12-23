@@ -118,7 +118,7 @@ export const TXTViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyhub.com/api/preview/txt', {
+      const response = await fetch('https://api.formipeek.com/api/preview/txt', {
         method: 'POST',
         body: formData,
       });
@@ -191,7 +191,7 @@ export const TXTViewer: React.FC = () => {
         <meta property="og:title" content={t('viewers.txt.meta_title')} />
         <meta property="og:description" content={t('viewers.txt.meta_description')} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyhub.com/viewers/txt" />
+        <meta property="og:url" content="https://formipeek.com/viewers/txt" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('viewers.txt.meta_title')} />
         <meta name="twitter:description" content={t('viewers.txt.meta_description')} />
@@ -201,7 +201,7 @@ export const TXTViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free TXT Viewer",
             "description": "Free professional TXT viewer for viewing text files online",
-            "url": "https://morphyhub.com/viewers/txt",
+            "url": "https://formipeek.com/viewers/txt",
             "applicationCategory": "DocumentViewer",
             "operatingSystem": "Web Browser",
             "offers": {

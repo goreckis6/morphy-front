@@ -153,7 +153,7 @@ export const DOCXViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyhub.com/api/preview/docx', {
+      const response = await fetch('https://api.formipeek.com/api/preview/docx', {
         method: 'POST',
         body: formData,
       });
@@ -316,7 +316,7 @@ export const DOCXViewer: React.FC = () => {
         <meta property="og:title" content="Free DOCX Viewer - View Microsoft Word Documents Online | MorphyHub" />
         <meta property="og:description" content="Free professional DOCX viewer for Microsoft Word documents. Upload and preview DOCX, DOC, DOCM files online with advanced document viewing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyhub.com/viewers/docx" />
+        <meta property="og:url" content="https://formipeek.com/viewers/docx" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free DOCX Viewer - View Microsoft Word Documents Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional DOCX viewer for Microsoft Word documents. Upload and preview DOCX, DOC, DOCM files online with advanced document viewing tools." />
@@ -326,7 +326,7 @@ export const DOCXViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free DOCX Viewer",
             "description": "Free professional DOCX viewer for Microsoft Word documents",
-            "url": "https://morphyhub.com/viewers/docx",
+            "url": "https://formipeek.com/viewers/docx",
             "applicationCategory": "DocumentViewer",
             "operatingSystem": "Web Browser",
             "offers": {

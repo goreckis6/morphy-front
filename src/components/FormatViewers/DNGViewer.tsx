@@ -128,7 +128,7 @@ export const DNGViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyhub.com/api/preview/dng', {
+      const response = await fetch('https://api.formipeek.com/api/preview/dng', {
         method: 'POST',
         body: formData,
       });
@@ -442,7 +442,7 @@ export const DNGViewer: React.FC = () => {
         <meta property="og:title" content={t('viewers.dng.meta_title')} />
         <meta property="og:description" content={t('viewers.dng.meta_description')} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyhub.com/viewers/dng" />
+        <meta property="og:url" content="https://formipeek.com/viewers/dng" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('viewers.dng.meta_title')} />
         <meta name="twitter:description" content={t('viewers.dng.meta_description')} />
@@ -452,7 +452,7 @@ export const DNGViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free DNG Viewer",
             "description": "Free professional DNG (Digital Negative) viewer with high-quality rendering",
-            "url": "https://morphyhub.com/viewers/dng",
+            "url": "https://formipeek.com/viewers/dng",
             "applicationCategory": "ImageViewer",
             "operatingSystem": "Web Browser",
             "offers": {

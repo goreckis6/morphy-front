@@ -120,7 +120,7 @@ export const JSViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyhub.com/api/preview/js', {
+      const response = await fetch('https://api.formipeek.com/api/preview/js', {
         method: 'POST',
         body: formData,
       });
@@ -193,7 +193,7 @@ export const JSViewer: React.FC = () => {
         <meta property="og:title" content={t('viewers.js.meta_title')} />
         <meta property="og:description" content={t('viewers.js.meta_description')} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyhub.com/viewers/js" />
+        <meta property="og:url" content="https://formipeek.com/viewers/js" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('viewers.js.meta_title')} />
         <meta name="twitter:description" content={t('viewers.js.meta_description')} />
@@ -203,7 +203,7 @@ export const JSViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": t('viewers.js.hero_title'),
             "description": t('viewers.js.meta_description'),
-            "url": "https://morphyhub.com/viewers/js",
+            "url": "https://formipeek.com/viewers/js",
             "applicationCategory": "DeveloperTool",
             "operatingSystem": "Web Browser",
             "offers": {

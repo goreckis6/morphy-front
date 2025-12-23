@@ -112,7 +112,7 @@ export const SDDViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyhub.com/api/preview/sdd', {
+      const response = await fetch('https://api.formipeek.com/api/preview/sdd', {
         method: 'POST',
         body: formData,
       });
@@ -276,7 +276,7 @@ export const SDDViewer: React.FC = () => {
         <meta property="og:title" content="Free SDD Viewer - View StarOffice Presentation Files Online | MorphyHub" />
         <meta property="og:description" content="Free professional SDD (StarOffice Presentation) viewer. Upload and preview legacy StarOffice presentation files online." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyhub.com/viewers/sdd" />
+        <meta property="og:url" content="https://formipeek.com/viewers/sdd" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free SDD Viewer - View StarOffice Presentation Files Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional SDD viewer. Upload and preview StarOffice Presentation files online." />
@@ -286,7 +286,7 @@ export const SDDViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free SDD Viewer",
             "description": "Free professional SDD (StarOffice Presentation) viewer",
-            "url": "https://morphyhub.com/viewers/sdd",
+            "url": "https://formipeek.com/viewers/sdd",
             "applicationCategory": "DocumentViewer",
             "operatingSystem": "Web Browser",
             "offers": {

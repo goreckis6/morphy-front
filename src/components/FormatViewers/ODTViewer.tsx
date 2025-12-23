@@ -123,7 +123,7 @@ export const ODTViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyhub.com/api/preview/odt', {
+      const response = await fetch('https://api.formipeek.com/api/preview/odt', {
         method: 'POST',
         body: formData,
       });
@@ -194,7 +194,7 @@ export const ODTViewer: React.FC = () => {
         <meta property="og:title" content={t('viewers.odt.meta_title')} />
         <meta property="og:description" content={t('viewers.odt.meta_description')} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyhub.com/viewers/odt" />
+        <meta property="og:url" content="https://formipeek.com/viewers/odt" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('viewers.odt.meta_title')} />
         <meta name="twitter:description" content={t('viewers.odt.meta_description')} />
@@ -204,7 +204,7 @@ export const ODTViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": t('viewers.odt.hero_title'),
             "description": t('viewers.odt.meta_description'),
-            "url": "https://morphyhub.com/viewers/odt",
+            "url": "https://formipeek.com/viewers/odt",
             "applicationCategory": "DocumentViewer",
             "operatingSystem": "Web Browser",
             "offers": {

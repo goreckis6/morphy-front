@@ -10,7 +10,7 @@ export default function Converters() {
   usePathLanguageSync(i18n);
 
   const localizedPath = getLocalizedUrl('/converters', i18n.language);
-  const canonicalUrl = `https://morphyhub.com${localizedPath}`;
+  const canonicalUrl = `https://formipeek.com${localizedPath}`;
 
   const pageJsonLd = {
     '@context': 'https://schema.org',
@@ -18,8 +18,8 @@ export default function Converters() {
     name: t('converters_page.schema.name'),
     url: canonicalUrl,
     description: t('converters_page.schema.description'),
-    isPartOf: { '@id': 'https://morphyhub.com#website' },
-    publisher: { '@id': 'https://morphyhub.com#organization' }
+    isPartOf: { '@id': 'https://formipeek.com#website' },
+    publisher: { '@id': 'https://formipeek.com#organization' }
   };
 
   return (

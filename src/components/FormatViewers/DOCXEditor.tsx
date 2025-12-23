@@ -144,7 +144,7 @@ export const DOCXEditor: React.FC<DOCXEditorProps> = ({ files, onClose, onAddFil
         const formData = new FormData();
         formData.append('file', file);
 
-        const response = await fetch('https://api.morphyhub.com/api/preview/docx', {
+        const response = await fetch('https://api.formipeek.com/api/preview/docx', {
           method: 'POST',
           body: formData,
         });

@@ -16,8 +16,8 @@ export default function Samples() {
     "name": t('samples_page.schema.name'),
     "url": getLocalizedUrl('/samples', i18n.language, true),
     "description": t('samples_page.schema.description'),
-    "isPartOf": { "@id": "https://morphyhub.com#website" },
-    "publisher": { "@id": "https://morphyhub.com#organization" },
+    "isPartOf": { "@id": "https://formipeek.com#website" },
+    "publisher": { "@id": "https://formipeek.com#organization" },
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": getLocalizedUrl('/samples', i18n.language, true)

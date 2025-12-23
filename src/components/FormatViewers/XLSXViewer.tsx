@@ -102,7 +102,7 @@ export const XLSXViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyhub.com/api/preview/xlsx', {
+      const response = await fetch('https://api.formipeek.com/api/preview/xlsx', {
         method: 'POST',
         body: formData,
       });
@@ -172,7 +172,7 @@ export const XLSXViewer: React.FC = () => {
         <meta property="og:title" content="Free Excel Viewer - View XLSX, XLS & Spreadsheets Online | MorphyHub" />
         <meta property="og:description" content="Free professional Excel viewer for spreadsheets. Upload and preview XLSX, XLS, XLSM, ODS files online with table formatting and data analysis." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyhub.com/viewers/xlsx" />
+        <meta property="og:url" content="https://formipeek.com/viewers/xlsx" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free Excel Viewer - View XLSX, XLS & Spreadsheets Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional Excel viewer for spreadsheets. Upload and preview XLSX, XLS, XLSM, ODS files online with table formatting and data analysis." />
@@ -182,7 +182,7 @@ export const XLSXViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free Excel Viewer",
             "description": "Free professional Excel viewer for spreadsheets",
-            "url": "https://morphyhub.com/viewers/xlsx",
+            "url": "https://formipeek.com/viewers/xlsx",
             "applicationCategory": "SpreadsheetViewer",
             "operatingSystem": "Web Browser",
             "offers": {

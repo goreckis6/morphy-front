@@ -125,7 +125,7 @@ export const PythonViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyhub.com/api/preview/python', {
+      const response = await fetch('https://api.formipeek.com/api/preview/python', {
         method: 'POST',
         body: formData,
       });
@@ -199,7 +199,7 @@ export const PythonViewer: React.FC = () => {
         <meta property="og:title" content="Free Python Viewer - View Python Files Online | MorphyHub" />
         <meta property="og:description" content="Free professional Python viewer with syntax highlighting. Upload and preview Python files online with formatted display and code analysis." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyhub.com/viewers/python" />
+        <meta property="og:url" content="https://formipeek.com/viewers/python" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free Python Viewer - View Python Files Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional Python viewer with syntax highlighting. Upload and preview Python files online with formatted display." />
@@ -209,7 +209,7 @@ export const PythonViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free Python Viewer",
             "description": "Free professional Python viewer with syntax highlighting",
-            "url": "https://morphyhub.com/viewers/python",
+            "url": "https://formipeek.com/viewers/python",
             "applicationCategory": "DeveloperTool",
             "operatingSystem": "Web Browser",
             "offers": {

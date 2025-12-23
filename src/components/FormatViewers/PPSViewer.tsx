@@ -112,7 +112,7 @@ export const PPSViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyhub.com/api/preview/pps', {
+      const response = await fetch('https://api.formipeek.com/api/preview/pps', {
         method: 'POST',
         body: formData,
       });
@@ -276,7 +276,7 @@ export const PPSViewer: React.FC = () => {
         <meta property="og:title" content="Free PPS/PPSX Viewer - View PowerPoint Slide Show Files Online | MorphyHub" />
         <meta property="og:description" content="Free professional PPS/PPSX (PowerPoint Slide Show) viewer. Upload and preview Microsoft PowerPoint slide show files online." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyhub.com/viewers/pps" />
+        <meta property="og:url" content="https://formipeek.com/viewers/pps" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free PPS/PPSX Viewer - View PowerPoint Slide Show Files Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional PPS/PPSX viewer. Upload and preview PowerPoint Slide Show files online." />
@@ -286,7 +286,7 @@ export const PPSViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free PPS/PPSX Viewer",
             "description": "Free professional PPS/PPSX (PowerPoint Slide Show) viewer",
-            "url": "https://morphyhub.com/viewers/pps",
+            "url": "https://formipeek.com/viewers/pps",
             "applicationCategory": "DocumentViewer",
             "operatingSystem": "Web Browser",
             "offers": {

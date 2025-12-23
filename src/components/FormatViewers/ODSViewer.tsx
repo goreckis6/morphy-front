@@ -119,7 +119,7 @@ export const ODSViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyhub.com/api/preview/ods', {
+      const response = await fetch('https://api.formipeek.com/api/preview/ods', {
         method: 'POST',
         body: formData,
       });
@@ -192,7 +192,7 @@ export const ODSViewer: React.FC = () => {
         <meta property="og:title" content={t('viewers.ods.meta_title')} />
         <meta property="og:description" content={t('viewers.ods.meta_description')} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyhub.com/viewers/ods" />
+        <meta property="og:url" content="https://formipeek.com/viewers/ods" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('viewers.ods.meta_title')} />
         <meta name="twitter:description" content={t('viewers.ods.meta_description')} />
@@ -202,7 +202,7 @@ export const ODSViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": t('viewers.ods.hero_title'),
             "description": t('viewers.ods.meta_description'),
-            "url": "https://morphyhub.com/viewers/ods",
+            "url": "https://formipeek.com/viewers/ods",
             "applicationCategory": "SpreadsheetViewer",
             "operatingSystem": "Web Browser",
             "offers": {

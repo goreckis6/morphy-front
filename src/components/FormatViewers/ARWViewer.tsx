@@ -128,7 +128,7 @@ export const ARWViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyhub.com/api/preview/arw', {
+      const response = await fetch('https://api.formipeek.com/api/preview/arw', {
         method: 'POST',
         body: formData,
       });
@@ -442,7 +442,7 @@ export const ARWViewer: React.FC = () => {
         <meta property="og:title" content={t('viewers.arw.meta_title')} />
         <meta property="og:description" content={t('viewers.arw.meta_description')} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyhub.com/viewers/arw" />
+        <meta property="og:url" content="https://formipeek.com/viewers/arw" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('viewers.arw.meta_title')} />
         <meta name="twitter:description" content={t('viewers.arw.meta_description')} />
@@ -452,7 +452,7 @@ export const ARWViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free ARW Viewer",
             "description": "Free professional ARW (Sony RAW) viewer with high-quality rendering",
-            "url": "https://morphyhub.com/viewers/arw",
+            "url": "https://formipeek.com/viewers/arw",
             "applicationCategory": "ImageViewer",
             "operatingSystem": "Web Browser",
             "offers": {

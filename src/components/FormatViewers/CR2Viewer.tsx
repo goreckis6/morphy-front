@@ -131,7 +131,7 @@ export const CR2Viewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyhub.com/api/preview/cr2', {
+      const response = await fetch('https://api.formipeek.com/api/preview/cr2', {
         method: 'POST',
         body: formData,
       });
@@ -445,7 +445,7 @@ export const CR2Viewer: React.FC = () => {
         <meta property="og:title" content={t('viewers.cr2.meta_title')} />
         <meta property="og:description" content={t('viewers.cr2.meta_description')} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyhub.com/viewers/cr2" />
+        <meta property="og:url" content="https://formipeek.com/viewers/cr2" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('viewers.cr2.meta_title')} />
         <meta name="twitter:description" content={t('viewers.cr2.meta_description')} />
@@ -455,7 +455,7 @@ export const CR2Viewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free CR2 Viewer",
             "description": "Free professional CR2 (Canon RAW) viewer with high-quality rendering",
-            "url": "https://morphyhub.com/viewers/cr2",
+            "url": "https://formipeek.com/viewers/cr2",
             "applicationCategory": "ImageViewer",
             "operatingSystem": "Web Browser",
             "offers": {

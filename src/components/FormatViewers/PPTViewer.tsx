@@ -112,7 +112,7 @@ export const PPTViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyhub.com/api/preview/ppt', {
+      const response = await fetch('https://api.formipeek.com/api/preview/ppt', {
         method: 'POST',
         body: formData,
       });
@@ -276,7 +276,7 @@ export const PPTViewer: React.FC = () => {
         <meta property="og:title" content="Free PPT/PPTX Viewer - View PowerPoint Files Online | MorphyHub" />
         <meta property="og:description" content="Free professional PPT/PPTX (PowerPoint) viewer. Upload and preview Microsoft PowerPoint presentation files online." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyhub.com/viewers/ppt" />
+        <meta property="og:url" content="https://formipeek.com/viewers/ppt" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free PPT/PPTX Viewer - View PowerPoint Files Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional PPT/PPTX viewer. Upload and preview PowerPoint presentation files online." />
@@ -286,7 +286,7 @@ export const PPTViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free PPT/PPTX Viewer",
             "description": "Free professional PPT/PPTX (PowerPoint) viewer",
-            "url": "https://morphyhub.com/viewers/ppt",
+            "url": "https://formipeek.com/viewers/ppt",
             "applicationCategory": "DocumentViewer",
             "operatingSystem": "Web Browser",
             "offers": {

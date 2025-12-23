@@ -31,15 +31,15 @@ services:
     container_name: morphy-frontend
     labels:
       - traefik.enable=true
-      - traefik.http.routers.morphy.rule=Host(`morphyhub.com`)
+      - traefik.http.routers.morphy.rule=Host(`formipeek.com`)
       - traefik.http.routers.morphy.tls=true
       - traefik.http.routers.morphy.tls.certresolver=letsencrypt
-      - traefik.http.routers.morphy-www.rule=Host(`www.morphyhub.com`)
+      - traefik.http.routers.morphy-www.rule=Host(`www.formipeek.com`)
       - traefik.http.routers.morphy-www.tls=true
       - traefik.http.routers.morphy-www.tls.certresolver=letsencrypt
       - traefik.http.services.morphy.loadbalancer.server.port=5173
     environment:
-      - VITE_API_BASE_URL=https://api.morphyhub.com
+      - VITE_API_BASE_URL=https://api.formipeek.com
     networks:
       - traefik
     restart: unless-stopped

@@ -112,7 +112,7 @@ export const POTViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyhub.com/api/preview/pot', {
+      const response = await fetch('https://api.formipeek.com/api/preview/pot', {
         method: 'POST',
         body: formData,
       });
@@ -276,7 +276,7 @@ export const POTViewer: React.FC = () => {
         <meta property="og:title" content="Free POT Viewer - View PowerPoint Template Files Online | MorphyHub" />
         <meta property="og:description" content="Free professional POT (PowerPoint Template) viewer. Upload and preview Microsoft PowerPoint template files online." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyhub.com/viewers/pot" />
+        <meta property="og:url" content="https://formipeek.com/viewers/pot" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free POT Viewer - View PowerPoint Template Files Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional POT viewer. Upload and preview PowerPoint Template files online." />
@@ -286,7 +286,7 @@ export const POTViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free POT Viewer",
             "description": "Free professional POT (PowerPoint Template) viewer",
-            "url": "https://morphyhub.com/viewers/pot",
+            "url": "https://formipeek.com/viewers/pot",
             "applicationCategory": "DocumentViewer",
             "operatingSystem": "Web Browser",
             "offers": {

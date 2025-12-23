@@ -99,7 +99,7 @@ export const XMLViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyhub.com/api/preview/xml', {
+      const response = await fetch('https://api.formipeek.com/api/preview/xml', {
         method: 'POST',
         body: formData,
       });
@@ -169,7 +169,7 @@ export const XMLViewer: React.FC = () => {
         <meta property="og:title" content="Free XML Viewer - View & Validate XML Files Online | MorphyHub" />
         <meta property="og:description" content="Free professional XML viewer with syntax highlighting and validation. Upload and preview XML files online with formatted display and error detection." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyhub.com/viewers/xml" />
+        <meta property="og:url" content="https://formipeek.com/viewers/xml" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free XML Viewer - View & Validate XML Files Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional XML viewer with syntax highlighting and validation. Upload and preview XML files online with formatted display." />
@@ -179,7 +179,7 @@ export const XMLViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free XML Viewer",
             "description": "Free professional XML viewer with syntax highlighting",
-            "url": "https://morphyhub.com/viewers/xml",
+            "url": "https://formipeek.com/viewers/xml",
             "applicationCategory": "DataViewer",
             "operatingSystem": "Web Browser",
             "offers": {

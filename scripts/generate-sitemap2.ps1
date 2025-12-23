@@ -1,6 +1,6 @@
 $ErrorActionPreference = 'Stop'
 
-$baseUrl = 'https://morphyhub.com'
+$baseUrl = 'https://formipeek.com'
 $today = Get-Date -Format 'yyyy-MM-dd'
 
 # All supported language codes

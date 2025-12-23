@@ -17,7 +17,7 @@ export const CSSViewer: React.FC = () => {
   usePathLanguageSync(i18n);
 
   const localizedPath = getLocalizedUrl('/viewers/css', i18n.language);
-  const canonicalUrl = `https://morphyhub.com${localizedPath}`;
+  const canonicalUrl = `https://formipeek.com${localizedPath}`;
 
   const getFallbackArray = <T,>(key: string) => {
     const value = t(key, { returnObjects: true });
@@ -121,7 +121,7 @@ export const CSSViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyhub.com/api/preview/css', {
+      const response = await fetch('https://api.formipeek.com/api/preview/css', {
         method: 'POST',
         body: formData,
       });
