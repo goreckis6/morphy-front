@@ -46,7 +46,7 @@ export default function Home() {
 
   // Load and track total data processed
   useEffect(() => {
-    const storedData = localStorage.getItem('FomiPeek_total_processed');
+    const storedData = localStorage.getItem('FormiPeek_total_processed');
     const baseGB = storedData ? parseFloat(storedData) : 500;
     
     setTotalDataProcessed(baseGB);
@@ -54,7 +54,7 @@ export default function Home() {
     const liveIncrement = setInterval(() => {
       setTotalDataProcessed(prev => {
         const newValue = prev + Math.random() * 0.05;
-        localStorage.setItem('FomiPeek_total_processed', newValue.toString());
+        localStorage.setItem('FormiPeek_total_processed', newValue.toString());
         return newValue;
       });
     }, 10000);
@@ -91,7 +91,7 @@ export default function Home() {
       {
         "@type": "Organization",
         "@id": "https://formipeek.com#organization",
-        "name": "FomiPeek",
+        "name": "FormiPeek",
         "url": "https://formipeek.com",
         "logo": "https://formipeek.com/logo.png",
         "sameAs": []

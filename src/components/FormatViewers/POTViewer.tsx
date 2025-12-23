@@ -273,12 +273,12 @@ export const POTViewer: React.FC = () => {
         <title>{t('viewers.pot.meta_title')}</title>
         <meta name="description" content={t('viewers.pot.meta_description')} />
         <meta name="keywords" content={t('viewers.pot.meta_keywords')} />
-        <meta property="og:title" content="Free POT Viewer - View PowerPoint Template Files Online | FomiPeek" />
+        <meta property="og:title" content="Free POT Viewer - View PowerPoint Template Files Online | FormiPeek" />
         <meta property="og:description" content="Free professional POT (PowerPoint Template) viewer. Upload and preview Microsoft PowerPoint template files online." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://formipeek.com/viewers/pot" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free POT Viewer - View PowerPoint Template Files Online | FomiPeek" />
+        <meta name="twitter:title" content="Free POT Viewer - View PowerPoint Template Files Online | FormiPeek" />
         <meta name="twitter:description" content="Free professional POT viewer. Upload and preview PowerPoint Template files online." />
         <script type="application/ld+json">
           {JSON.stringify({

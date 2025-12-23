@@ -294,7 +294,7 @@ export const YTThumbnailDownloader: React.FC = () => {
           name="keywords"
           content="youtube thumbnail downloader, download youtube thumbnail, youtube thumbnail extractor, youtube thumbnail grabber, free youtube thumbnail, youtube thumbnail download, extract youtube thumbnail, youtube thumbnail url, youtube video thumbnail"
         />
-        <meta property="og:title" content="YouTube Thumbnail Downloader - Free Online Tool | FomiPeek" />
+        <meta property="og:title" content="YouTube Thumbnail Downloader - Free Online Tool | FormiPeek" />
         <meta
           property="og:description"
           content="Download YouTube video thumbnails in multiple resolutions. Extract high-quality thumbnails from any YouTube video instantly."

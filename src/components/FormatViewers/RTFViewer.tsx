@@ -186,12 +186,12 @@ export const RTFViewer: React.FC = () => {
         <title>{t('viewers.rtf.meta_title')}</title>
         <meta name="description" content={t('viewers.rtf.meta_description')} />
         <meta name="keywords" content={t('viewers.rtf.meta_keywords')} />
-        <meta property="og:title" content="Free RTF Viewer - View Rich Text Format Documents Online | FomiPeek" />
+        <meta property="og:title" content="Free RTF Viewer - View Rich Text Format Documents Online | FormiPeek" />
         <meta property="og:description" content="Free professional RTF viewer for viewing Rich Text Format documents online. Upload and preview RTF files with formatting preservation and cross-platform compatibility." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://formipeek.com/viewers/rtf" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free RTF Viewer - View Rich Text Format Documents Online | FomiPeek" />
+        <meta name="twitter:title" content="Free RTF Viewer - View Rich Text Format Documents Online | FormiPeek" />
         <meta name="twitter:description" content="Free professional RTF viewer for viewing Rich Text Format documents online. Upload and preview RTF files with formatting preservation and cross-platform compatibility." />
         <script type="application/ld+json">
           {JSON.stringify({

@@ -34,7 +34,7 @@ export const fr: SamplePageTranslations = {
     formats: {
       docx: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple DOCX gratuits - Fichiers de test | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple DOCX gratuits - Fichiers de test | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple DOCX gratuits pour les tests. Plusieurs tailles de fichiers disponibles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les outils de conversion et de traitement de documents.',
           keywords: 'fichiers d\'exemple DOCX, fichiers de test DOCX, télécharger des exemples DOCX, fichiers de test DOCX gratuits, exemples de documents, exemples Microsoft Word'
         },
@@ -50,7 +50,7 @@ export const fr: SamplePageTranslations = {
       },
       doc: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple DOC gratuits - Fichiers de test Microsoft Word DOC | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple DOC gratuits - Fichiers de test Microsoft Word DOC | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple DOC gratuits pour tester les outils de conversion de documents. Plusieurs tailles disponibles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs DOC vers PDF, DOC vers DOCX et le traitement des documents Microsoft Word legacy.',
           keywords: 'fichiers d\'exemple DOC, fichiers de test DOC, télécharger des exemples DOC, fichiers de test DOC gratuits, exemples Microsoft Word DOC, test convertisseur DOC vers PDF, conversion DOC vers DOCX, exemples documents Word legacy, fichiers de test .doc, exemples conversion documents'
         },
@@ -66,7 +66,7 @@ export const fr: SamplePageTranslations = {
       },
       pdf: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple PDF gratuits - Fichiers de test PDF pour outils de conversion | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple PDF gratuits - Fichiers de test PDF pour outils de conversion | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple PDF gratuits pour tester les convertisseurs PDF, visualiseurs et processeurs. Plusieurs tailles disponibles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les outils PDF vers Word, PDF vers JPG, compression PDF et édition PDF.',
           keywords: 'fichiers d\'exemple PDF, fichiers de test PDF, télécharger des exemples PDF, fichiers de test PDF gratuits, fichiers de test convertisseur PDF, exemples PDF vers Word, exemples PDF vers JPG, test compression PDF, fichiers de test visualiseur PDF, fichiers de test .pdf, exemples conversion documents'
         },
@@ -82,7 +82,7 @@ export const fr: SamplePageTranslations = {
       },
       odp: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple ODP gratuits - Fichiers de test présentations OpenDocument | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple ODP gratuits - Fichiers de test présentations OpenDocument | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple ODP gratuits pour tester les outils de conversion de présentations. Plusieurs tailles disponibles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs ODP vers PPT, ODP vers PDF, fichiers LibreOffice Impress et traitement des formats OpenDocument.',
           keywords: 'fichiers d\'exemple ODP, fichiers de test ODP, télécharger des exemples ODP, fichiers de test ODP gratuits, exemples présentations OpenDocument, convertisseur ODP vers PPT, convertisseur ODP vers PDF, exemples LibreOffice Impress, fichiers de test .odp, exemples conversion présentations, test format OpenDocument'
         },
@@ -98,7 +98,7 @@ export const fr: SamplePageTranslations = {
       },
       rtf: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple RTF gratuits - Fichiers de test Rich Text Format | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple RTF gratuits - Fichiers de test Rich Text Format | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple RTF gratuits pour tester les outils de conversion Rich Text Format. Plusieurs tailles disponibles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs RTF vers DOC, RTF vers PDF, compatibilité traitements de texte et conversion de formats de documents.',
           keywords: 'fichiers d\'exemple RTF, fichiers de test RTF, télécharger des exemples RTF, fichiers de test RTF gratuits, exemples Rich Text Format, convertisseur RTF vers DOC, convertisseur RTF vers PDF, fichiers de test .rtf, fichiers de test traitement de texte, exemples conversion formats documents'
         },
@@ -114,7 +114,7 @@ export const fr: SamplePageTranslations = {
       },
       epub: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple EPUB gratuits - Fichiers de test eBook pour lecteurs | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple EPUB gratuits - Fichiers de test eBook pour lecteurs | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple EPUB gratuits pour tester les lecteurs eBook et outils de conversion. Plusieurs tailles disponibles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les lecteurs EPUB, convertisseurs EPUB vers PDF, EPUB vers MOBI, outils publication numérique et compatibilité formats eBook.',
           keywords: 'fichiers d\'exemple EPUB, fichiers de test EPUB, télécharger des exemples EPUB, fichiers de test EPUB gratuits, exemples eBook, test lecteur EPUB, convertisseur EPUB vers PDF, convertisseur EPUB vers MOBI, fichiers de test .epub, exemples publication numérique, fichiers de test formats eBook'
         },
@@ -130,7 +130,7 @@ export const fr: SamplePageTranslations = {
       },
       'invoice-pdf': {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple PDF factures gratuits - Fichiers de test documents factures | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple PDF factures gratuits - Fichiers de test documents factures | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple PDF factures gratuits pour tester les outils de traitement et analyse de factures. Plusieurs tailles disponibles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester l\'OCR factures, extraction données factures, automatisation factures, analyse factures PDF et systèmes gestion documents.',
           keywords: 'fichiers d\'exemple PDF factures, fichiers de test PDF factures, télécharger des exemples PDF factures, fichiers de test PDF factures gratuits, exemples documents factures, test OCR factures, extraction données factures, test automatisation factures, analyse factures PDF, exemples traitement factures, fichiers de test gestion documents'
         },
@@ -146,7 +146,7 @@ export const fr: SamplePageTranslations = {
       },
       mobi: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple MOBI gratuits - Fichiers de test eBook MOBI pour Kindle | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple MOBI gratuits - Fichiers de test eBook MOBI pour Kindle | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple MOBI gratuits pour tester les lecteurs eBook MOBI et outils de conversion. Plusieurs tailles disponibles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester la compatibilité Kindle, convertisseurs MOBI vers EPUB, MOBI vers PDF, conversion formats eBook et applications lecture numérique.',
           keywords: 'fichiers d\'exemple MOBI, fichiers de test MOBI, télécharger des exemples MOBI, fichiers de test MOBI gratuits, exemples eBook MOBI, fichiers de test Kindle, convertisseur MOBI vers EPUB, convertisseur MOBI vers PDF, fichiers de test .mobi, exemples conversion eBook, fichiers de test lecture numérique'
         },
@@ -162,7 +162,7 @@ export const fr: SamplePageTranslations = {
       },
       csv: {
         meta: {
-          title: 'Téléchargez des fichiers d\'exemple CSV gratuits - Fichiers de test CSV pour traitement de données | FomiPeek',
+          title: 'Téléchargez des fichiers d\'exemple CSV gratuits - Fichiers de test CSV pour traitement de données | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple CSV gratuits pour tester les outils de traitement et conversion de données. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs CSV vers Excel, CSV vers JSON, outils d\'importation de données, applications tableur et traitement valeurs séparées par virgules.',
           keywords: 'fichiers d\'exemple CSV, fichiers de test CSV, téléchargez exemples CSV, fichiers de test CSV gratuits, convertisseur CSV vers Excel, convertisseur CSV vers JSON, exemples valeurs séparées par virgules, fichiers de test traitement de données, exemples importation tableur, fichiers de test .csv, exemples conversion de données'
         },
@@ -178,7 +178,7 @@ export const fr: SamplePageTranslations = {
       },
       xls: {
         meta: {
-          title: 'Téléchargez des fichiers d\'exemple XLS gratuits - Fichiers de test Microsoft Excel XLS | FomiPeek',
+          title: 'Téléchargez des fichiers d\'exemple XLS gratuits - Fichiers de test Microsoft Excel XLS | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple XLS gratuits pour tester les outils de conversion Excel et traitement de données. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs XLS vers XLSX, XLS vers CSV, XLS vers PDF, extraction de données Excel et traitement tableur legacy.',
           keywords: 'fichiers d\'exemple XLS, fichiers de test XLS, téléchargez exemples XLS, fichiers de test XLS gratuits, exemples Microsoft Excel XLS, convertisseur XLS vers XLSX, convertisseur XLS vers CSV, convertisseur XLS vers PDF, extraction de données Excel, fichiers de test .xls, exemples conversion tableur'
         },
@@ -194,7 +194,7 @@ export const fr: SamplePageTranslations = {
       },
       xlsx: {
         meta: {
-          title: 'Téléchargez des fichiers d\'exemple XLSX gratuits - Fichiers de test Excel XLSX pour outils de conversion | FomiPeek',
+          title: 'Téléchargez des fichiers d\'exemple XLSX gratuits - Fichiers de test Excel XLSX pour outils de conversion | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple XLSX gratuits pour tester les outils de conversion Excel et traitement de données. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs XLSX vers CSV, XLSX vers PDF, XLSX vers JSON, analyse de données Excel, automatisation tableur et traitement Office Open XML.',
           keywords: 'fichiers d\'exemple XLSX, fichiers de test XLSX, téléchargez exemples XLSX, fichiers de test XLSX gratuits, exemples Excel XLSX, convertisseur XLSX vers CSV, convertisseur XLSX vers PDF, convertisseur XLSX vers JSON, analyse de données Excel, fichiers de test .xlsx, exemples automatisation tableur, exemples Office Open XML'
         },
@@ -210,7 +210,7 @@ export const fr: SamplePageTranslations = {
       },
       xml: {
         meta: {
-          title: 'Téléchargez des fichiers d\'exemple XML gratuits - Fichiers de test XML pour analyse et conversion | FomiPeek',
+          title: 'Téléchargez des fichiers d\'exemple XML gratuits - Fichiers de test XML pour analyse et conversion | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple XML gratuits pour tester les outils d\'analyse, conversion et traitement de données XML. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs XML vers JSON, XML vers CSV, validation XML, traitement de données structurées et analyse de langages de balisage.',
           keywords: 'fichiers d\'exemple XML, fichiers de test XML, téléchargez exemples XML, fichiers de test XML gratuits, convertisseur XML vers JSON, convertisseur XML vers CSV, test validation XML, exemples Extensible Markup Language, exemples données structurées, fichiers de test .xml, exemples analyse langages de balisage'
         },
@@ -226,7 +226,7 @@ export const fr: SamplePageTranslations = {
       },
       html: {
         meta: {
-          title: 'Téléchargez des fichiers d\'exemple HTML gratuits - Fichiers de test HTML pour développement web | FomiPeek',
+          title: 'Téléchargez des fichiers d\'exemple HTML gratuits - Fichiers de test HTML pour développement web | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple HTML gratuits pour tester les outils de développement web et traitement HTML. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs HTML vers PDF, HTML vers DOCX, validation HTML, web scraping, rendu navigateur et traitement HyperText Markup Language.',
           keywords: 'fichiers d\'exemple HTML, fichiers de test HTML, téléchargez exemples HTML, fichiers de test HTML gratuits, convertisseur HTML vers PDF, convertisseur HTML vers DOCX, test validation HTML, exemples HyperText Markup Language, exemples développement web, fichiers de test .html, exemples web scraping, test rendu navigateur'
         },
@@ -242,7 +242,7 @@ export const fr: SamplePageTranslations = {
       },
       ods: {
         meta: {
-          title: 'Téléchargez des fichiers d\'exemple ODS gratuits - Fichiers de test tableur OpenDocument | FomiPeek',
+          title: 'Téléchargez des fichiers d\'exemple ODS gratuits - Fichiers de test tableur OpenDocument | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple ODS gratuits pour tester les outils de conversion de tableur et traitement de données. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs ODS vers Excel, ODS vers CSV, fichiers LibreOffice Calc, traitement format OpenDocument et extraction de données tableur.',
           keywords: 'fichiers d\'exemple ODS, fichiers de test ODS, téléchargez exemples ODS, fichiers de test ODS gratuits, exemples tableur OpenDocument, convertisseur ODS vers Excel, convertisseur ODS vers CSV, exemples LibreOffice Calc, fichiers de test .ods, exemples conversion tableur, test format OpenDocument'
         },
@@ -258,7 +258,7 @@ export const fr: SamplePageTranslations = {
       },
       'ansible-yml': {
         meta: {
-          title: 'Téléchargez des fichiers d\'exemple Ansible YML gratuits - Fichiers de test configuration YAML | FomiPeek',
+          title: 'Téléchargez des fichiers d\'exemple Ansible YML gratuits - Fichiers de test configuration YAML | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple Ansible YML gratuits pour tester les outils d\'analyse YAML et gestion de configuration. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les playbooks Ansible, validation YAML, automatisation DevOps, systèmes de gestion de configuration et outils infrastructure as code.',
           keywords: 'fichiers d\'exemple Ansible YML, fichiers de test YML, téléchargez exemples YML, fichiers de test YML gratuits, exemples playbooks Ansible, exemples configuration YAML, test validation YAML, exemples automatisation DevOps, fichiers de test .yml, exemples gestion configuration, exemples infrastructure as code'
         },
@@ -274,7 +274,7 @@ export const fr: SamplePageTranslations = {
       },
       'api-response-json': {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple API Response JSON gratuits - Fichiers de test JSON pour développement API | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple API Response JSON gratuits - Fichiers de test JSON pour développement API | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple API Response JSON gratuits pour tester l\'analyse JSON, l\'intégration API et les outils de développement web. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les réponses REST API, les validateurs JSON, le mocking API, les tests webhook et le traitement des formats d\'échange de données.',
           keywords: 'fichiers d\'exemple API Response JSON, fichiers de test JSON, télécharger exemples JSON, fichiers de test JSON gratuits, exemples réponse API, exemples analyse JSON, fichiers de test REST API, test validateur JSON, exemples mocking API, fichiers de test webhook, fichiers de test .json, exemples web API, exemples formats échange données'
         },
@@ -290,7 +290,7 @@ export const fr: SamplePageTranslations = {
       },
       'arduino-ino': {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple Arduino INO gratuits - Fichiers de test sketch Arduino pour développement embedded | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple Arduino INO gratuits - Fichiers de test sketch Arduino pour développement embedded | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple Arduino INO gratuits pour tester la compilation de sketch Arduino et les outils de programmation embedded. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester Arduino IDE, validation de sketch, programmation de microcontrôleurs, développement de systèmes embedded et tests de dispositifs IoT.',
           keywords: 'fichiers d\'exemple Arduino INO, fichiers de test Arduino INO, télécharger exemples Arduino INO, fichiers de test Arduino INO gratuits, exemples sketch Arduino, exemples code embedded, fichiers de test Arduino IDE, fichiers de test .ino, exemples microcontrôleurs, exemples développement IoT, exemples programmation embedded'
         },
@@ -306,7 +306,7 @@ export const fr: SamplePageTranslations = {
       },
       bat: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple BAT gratuits - Fichiers de test script batch pour automatisation Windows | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple BAT gratuits - Fichiers de test script batch pour automatisation Windows | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple BAT script batch gratuits pour tester l\'automatisation Windows et les outils de traitement de ligne de commande. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester l\'exécution de script batch, l\'automatisation de tâches Windows, les outils de ligne de commande, les validateurs de script et les utilitaires d\'administration système.',
           keywords: 'fichiers d\'exemple BAT, fichiers de test BAT, télécharger exemples BAT, fichiers de test BAT gratuits, exemples script batch, exemples fichiers batch Windows, exemples script automatisation, fichiers de test .bat, exemples script ligne commande, exemples automatisation Windows, exemples exécution script'
         },
@@ -322,7 +322,7 @@ export const fr: SamplePageTranslations = {
       },
       asc: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple ASC gratuits - Fichiers de test texte ASCII pour traitement texte | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple ASC gratuits - Fichiers de test texte ASCII pour traitement texte | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple ASC texte ASCII gratuits pour tester les outils de traitement de texte et d\'encodage. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester l\'encodage ASCII, l\'analyse de fichiers texte, les éditeurs de texte brut, la validation d\'encodage de caractères et les outils de conversion de format texte.',
           keywords: 'fichiers d\'exemple ASC, fichiers de test ASC, télécharger exemples ASC, fichiers de test ASC gratuits, exemples texte ASCII, exemples texte brut, fichiers de test .asc, exemples format texte, fichiers de test encodage ASCII, exemples traitement texte, exemples encodage caractères'
         },
@@ -338,7 +338,7 @@ export const fr: SamplePageTranslations = {
       },
       bib: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple BIB gratuits - Fichiers de test bibliographie pour recherche académique | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple BIB gratuits - Fichiers de test bibliographie pour recherche académique | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple BIB bibliographie gratuits pour tester les outils de gestion de bibliographie et de citations. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester le traitement de format BibTeX, les gestionnaires de références, les générateurs de citations, les outils d\'écriture académique et l\'intégration de bibliographie LaTeX.',
           keywords: 'fichiers d\'exemple BIB, fichiers de test BIB, télécharger exemples BIB, fichiers de test BIB gratuits, exemples bibliographie, exemples fichiers BibTeX, exemples citations, fichiers de test .bib, exemples gestion références, exemples citations académiques, exemples bibliographie LaTeX'
         },
@@ -354,7 +354,7 @@ export const fr: SamplePageTranslations = {
       },
       c: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple C gratuits - Fichiers de test langage programmation C pour développement | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple C gratuits - Fichiers de test langage programmation C pour développement | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple C code source gratuits pour tester la compilation de code C et les outils de développement. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les compilateurs C, les vérificateurs de syntaxe, les analyseurs de code, la toolchain GCC, le développement C embedded et les outils de programmation système.',
           keywords: 'fichiers d\'exemple C, fichiers de test C, télécharger exemples C, fichiers de test C gratuits, exemples code source C, exemples fichiers programmation C, fichiers de test .c, fichiers de test compilation C, fichiers de test GCC, exemples C embedded, exemples programmation système'
         },
@@ -370,7 +370,7 @@ export const fr: SamplePageTranslations = {
       },
       'can-log': {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple CAN Log gratuits - Fichiers de test Controller Area Network pour automobile | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple CAN Log gratuits - Fichiers de test Controller Area Network pour automobile | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple CAN Log gratuits pour tester l\'analyse de bus CAN et les outils de diagnostic automobile. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les analyseurs de bus CAN, les outils de diagnostic automobile, les protocoles de réseau véhicule, les tests OBD-II et les systèmes embedded automobiles.',
           keywords: 'fichiers d\'exemple CAN Log, fichiers de test log CAN, télécharger exemples log CAN, fichiers de test log CAN gratuits, exemples Controller Area Network, exemples bus CAN, fichiers de test .log, exemples diagnostic automobile, fichiers de test OBD-II, exemples réseau véhicule, test analyseur bus CAN'
         },
@@ -386,7 +386,7 @@ export const fr: SamplePageTranslations = {
       },
       cmd: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple CMD gratuits - Fichiers de test script commande Windows pour automatisation | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple CMD gratuits - Fichiers de test script commande Windows pour automatisation | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple CMD script commande Windows gratuits pour tester l\'exécution de script batch et les outils d\'automatisation Windows. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester l\'invite de commande Windows, l\'exécution de fichiers batch, l\'automatisation de scripts, l\'administration système et les outils de planification de tâches Windows.',
           keywords: 'fichiers d\'exemple CMD, fichiers de test CMD, télécharger exemples CMD, fichiers de test CMD gratuits, exemples script commande Windows, exemples script batch, fichiers de test .cmd, exemples script commande, exemples automatisation Windows, exemples administration système'
         },
@@ -402,7 +402,7 @@ export const fr: SamplePageTranslations = {
       },
       conf: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple CONF gratuits - Fichiers de test configuration pour configuration système | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple CONF gratuits - Fichiers de test configuration pour configuration système | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple CONF configuration gratuits pour tester l\'analyse de fichiers de configuration et les outils de configuration système. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester la configuration de serveurs, les paramètres d\'application, les validateurs de fichiers de configuration, les outils d\'administration système et les utilitaires de déploiement logiciel.',
           keywords: 'fichiers d\'exemple CONF, fichiers de test CONF, télécharger exemples CONF, fichiers de test CONF gratuits, exemples fichiers configuration, exemples configuration serveurs, fichiers de test .conf, exemples fichiers configuration, exemples configuration système, exemples paramètres application'
         },
@@ -418,7 +418,7 @@ export const fr: SamplePageTranslations = {
       },
       'config-ini': {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple Config INI gratuits - Fichiers de test configuration INI pour applications | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple Config INI gratuits - Fichiers de test configuration INI pour applications | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple Config INI configuration INI gratuits pour tester l\'analyse de fichiers INI et les outils de gestion de configuration. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les analyseurs INI, la configuration d\'application, la gestion des paramètres, les fichiers INI Windows et les utilitaires de configuration logicielle.',
           keywords: 'fichiers d\'exemple Config INI, fichiers de test INI, télécharger exemples INI, fichiers de test INI gratuits, exemples configuration INI, exemples configuration INI, fichiers de test .ini, exemples fichiers configuration, exemples INI Windows, exemples paramètres application'
         },
@@ -434,7 +434,7 @@ export const fr: SamplePageTranslations = {
       },
       cpp: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple CPP gratuits - Fichiers de test langage programmation C++ pour développement | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple CPP gratuits - Fichiers de test langage programmation C++ pour développement | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple CPP code source C++ gratuits pour tester la compilation de code C++ et les outils de développement. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les compilateurs C++, les vérificateurs de syntaxe, les analyseurs de code, la toolchain GCC/G++, les fonctionnalités C++ modernes et les outils de programmation orientée objet.',
           keywords: 'fichiers d\'exemple CPP, fichiers de test CPP, télécharger exemples CPP, fichiers de test CPP gratuits, exemples code source C++, exemples fichiers code C++, fichiers de test .cpp, exemples fichiers programmation C++, fichiers de test compilation C++, fichiers de test GCC, exemples C++ moderne'
         },
@@ -450,7 +450,7 @@ export const fr: SamplePageTranslations = {
       },
       h: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple H gratuits - Fichiers de test header C/C++ pour programmation | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple H gratuits - Fichiers de test header C/C++ pour programmation | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple H header C/C++ gratuits pour tester le traitement de fichiers header et les outils de développement. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les compilateurs C/C++, l\'inclusion de fichiers header, les outils de préprocesseur, l\'organisation de code et les utilitaires de développement multiplateforme.',
           keywords: 'fichiers d\'exemple H, fichiers de test H, télécharger exemples H, fichiers de test H gratuits, exemples header C, exemples header C++, exemples fichiers header, fichiers de test .h, fichiers header C/C++, exemples header programmation, exemples fichiers header code'
         },
@@ -466,7 +466,7 @@ export const fr: SamplePageTranslations = {
       },
       hpp: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple HPP gratuits - Fichiers de test header C++ pour développement C++ moderne | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple HPP gratuits - Fichiers de test header C++ pour développement C++ moderne | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple HPP header C++ gratuits pour tester le traitement de fichiers header C++ et les outils de développement. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les compilateurs C++, les bibliothèques header-only, la métaprogrammation de templates, les fonctionnalités C++ modernes et les utilitaires de développement C++ avancés.',
           keywords: 'fichiers d\'exemple HPP, fichiers de test HPP, télécharger exemples HPP, fichiers de test HPP gratuits, exemples header C++, exemples fichiers header, fichiers de test .hpp, fichiers header C++, exemples header programmation, exemples fichiers header code, exemples fichiers développement C++, exemples header C++ moderne'
         },
@@ -482,7 +482,7 @@ export const fr: SamplePageTranslations = {
       },
       hex: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple HEX gratuits - Fichiers de test hexadécimaux pour développement firmware et systèmes embarqués | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple HEX gratuits - Fichiers de test hexadécimaux pour développement firmware et systèmes embarqués | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple HEX hexadécimaux gratuits pour tester la programmation de firmware, le développement de systèmes embarqués et l\'analyse de données binaires. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les éditeurs hex, les chargeurs de firmware, la programmation de microcontrôleurs et les outils de développement embarqué.',
           keywords: 'fichiers d\'exemple HEX, fichiers de test HEX, télécharger exemples HEX, fichiers de test HEX gratuits, fichiers hexadécimaux, fichiers hex firmware, fichiers de test .hex, fichiers hex embarqués, fichiers hex microcontrôleurs, fichiers de test éditeur hex, exemples programmation firmware, fichiers binaires hex'
         },
@@ -498,7 +498,7 @@ export const fr: SamplePageTranslations = {
       },
       cs: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple CS gratuits - Fichiers de test code source C# pour développement .NET | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple CS gratuits - Fichiers de test code source C# pour développement .NET | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple CS code source C# gratuits pour tester la compilation C#, le développement .NET et les outils Visual Studio. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les compilateurs C#, les frameworks .NET, l\'IDE Visual Studio, les outils d\'analyse de code et les environnements de développement C#.',
           keywords: 'fichiers d\'exemple CS, fichiers de test CS, télécharger exemples CS, fichiers de test CS gratuits, exemples code source C#, fichiers code .NET, fichiers de test .cs, fichiers programmation C#, fichiers de test Visual Studio, exemples développement .NET, fichiers de test compilation C#'
         },
@@ -514,7 +514,7 @@ export const fr: SamplePageTranslations = {
       },
       css: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple CSS gratuits - Fichiers de test feuilles de style pour développement web | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple CSS gratuits - Fichiers de test feuilles de style pour développement web | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple CSS feuilles de style gratuits pour tester les styles web, le parsing CSS et les outils front-end. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les validateurs CSS, les préprocesseurs (SASS, LESS), les minificateurs CSS, les navigateurs web et les frameworks de développement front-end.',
           keywords: 'fichiers d\'exemple CSS, fichiers de test CSS, télécharger exemples CSS, fichiers de test CSS gratuits, exemples feuilles de style, fichiers feuilles CSS, fichiers de test .css, fichiers styles web, fichiers de test parser CSS, exemples développement front-end, fichiers de test frameworks CSS'
         },
@@ -530,7 +530,7 @@ export const fr: SamplePageTranslations = {
       },
       csr: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple CSR gratuits - Fichiers de test demandes de signature de certificat pour SSL/TLS | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple CSR gratuits - Fichiers de test demandes de signature de certificat pour SSL/TLS | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple CSR demandes de signature de certificat gratuits pour tester la génération de certificats SSL/TLS, la gestion PKI et les outils de sécurité. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les autorités de certification, OpenSSL, la génération de certificats SSL, l\'infrastructure PKI et les outils de gestion de certificats de sécurité.',
           keywords: 'fichiers d\'exemple CSR, fichiers de test CSR, télécharger exemples CSR, fichiers de test CSR gratuits, exemples demandes de signature de certificat, fichiers certificats SSL, fichiers de test .csr, fichiers certificats PKI, fichiers de test OpenSSL, exemples certificats SSL/TLS, fichiers de test autorités de certification'
         },
@@ -546,7 +546,7 @@ export const fr: SamplePageTranslations = {
       },
       'customer-database-sql': {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple Customer Database SQL gratuits - Fichiers de test base de données SQL | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple Customer Database SQL gratuits - Fichiers de test base de données SQL | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple Customer Database SQL gratuits pour tester les opérations de base de données SQL, l\'exécution de requêtes et les outils de gestion de bases de données. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les parsers SQL, les outils d\'importation de bases de données, SQLite, MySQL, PostgreSQL et les systèmes de gestion de bases de données.',
           keywords: 'fichiers d\'exemple Customer Database SQL, fichiers de test base de données SQL, télécharger exemples SQL, fichiers de test SQL gratuits, fichiers base de données SQL, fichiers de test .sql, fichiers requêtes SQL, exemples importation de bases de données, fichiers de test SQLite, exemples MySQL, fichiers de test PostgreSQL'
         },
@@ -562,7 +562,7 @@ export const fr: SamplePageTranslations = {
       },
       dbf: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple DBF gratuits - Fichiers de test base de données dBASE pour gestion de données | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple DBF gratuits - Fichiers de test base de données dBASE pour gestion de données | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple DBF base de données dBASE gratuits pour tester les opérations de base de données, l\'importation/exportation de données et les formats de base de données legacy. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester la compatibilité dBASE, les convertisseurs de bases de données, les outils de migration de données, les applications de feuilles de calcul et les systèmes de gestion de bases de données.',
           keywords: 'fichiers d\'exemple DBF, fichiers de test DBF, télécharger exemples DBF, fichiers de test DBF gratuits, fichiers base de données dBASE, fichiers de test .dbf, fichiers format base de données, exemples bases de données legacy, fichiers de test compatibilité dBASE, exemples importation de données'
         },
@@ -578,7 +578,7 @@ export const fr: SamplePageTranslations = {
       },
       dem: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple DEM gratuits - Fichiers de test modèles d\'élévation numérique pour GIS et cartographie | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple DEM gratuits - Fichiers de test modèles d\'élévation numérique pour GIS et cartographie | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple DEM modèles d\'élévation numérique gratuits pour tester les applications GIS, la cartographie de terrain et les outils d\'analyse géospatiale. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les logiciels GIS, la visualisation de terrain, le traitement de données d\'élévation, les applications de cartographie et les outils d\'analyse géospatiale.',
           keywords: 'fichiers d\'exemple DEM, fichiers de test DEM, télécharger exemples DEM, fichiers de test DEM gratuits, fichiers modèles d\'élévation numérique, fichiers de test .dem, fichiers élévation GIS, exemples données de terrain, fichiers données géospatiales, fichiers de test cartographie, exemples modèles d\'élévation'
         },
@@ -594,7 +594,7 @@ export const fr: SamplePageTranslations = {
       },
       der: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple DER gratuits - Fichiers de test certificats Distinguished Encoding Rules | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple DER gratuits - Fichiers de test certificats Distinguished Encoding Rules | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple DER certificats Distinguished Encoding Rules gratuits pour tester les certificats SSL/TLS, la gestion PKI et les outils de sécurité. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester le parsing de certificats, OpenSSL, l\'infrastructure PKI, la validation de certificats SSL et les outils de gestion de certificats de sécurité.',
           keywords: 'fichiers d\'exemple DER, fichiers de test DER, télécharger exemples DER, fichiers de test DER gratuits, fichiers Distinguished Encoding Rules, fichiers de test .der, fichiers certificats, exemples certificats SSL, fichiers certificats PKI, fichiers de test OpenSSL, exemples parsing de certificats'
         },
@@ -610,7 +610,7 @@ export const fr: SamplePageTranslations = {
       },
       dmp: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple DMP gratuits - Fichiers de test vidage mémoire pour débogage et analyse | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple DMP gratuits - Fichiers de test vidage mémoire pour débogage et analyse | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple DMP vidage mémoire gratuits pour tester l\'analyse de crash, les outils de débogage et le diagnostic système. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les débogueurs, les outils d\'analyse de crash, les analyseurs de mémoire, les outils de diagnostic système et les applications d\'analyse forensique.',
           keywords: 'fichiers d\'exemple DMP, fichiers de test DMP, télécharger exemples DMP, fichiers de test DMP gratuits, fichiers vidage mémoire, fichiers de test .dmp, fichiers vidage crash, fichiers débogage, exemples vidage système, fichiers analyse mémoire, fichiers de test analyse de crash'
         },
@@ -626,7 +626,7 @@ export const fr: SamplePageTranslations = {
       },
       'docker-compose-yml': {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple Docker Compose YML gratuits - Fichiers de test configuration Docker Compose | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple Docker Compose YML gratuits - Fichiers de test configuration Docker Compose | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple Docker Compose YML configuration gratuits pour tester l\'orchestration de conteneurs Docker, les applications multi-conteneurs et les outils DevOps. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester Docker Compose, l\'orchestration de conteneurs, le parsing YAML, l\'automatisation DevOps et les outils de déploiement d\'applications containerisées.',
           keywords: 'fichiers d\'exemple Docker Compose YML, fichiers de test docker-compose, télécharger exemples docker-compose, fichiers de test docker-compose gratuits, fichiers YAML Docker Compose, fichiers de test .yml, fichiers orchestration de conteneurs, exemples configuration DevOps, fichiers de test Docker Compose, exemples configuration multi-conteneurs'
         },
@@ -642,7 +642,7 @@ export const fr: SamplePageTranslations = {
       },
       dockerfile: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple Dockerfile gratuits - Fichiers de test build de conteneurs Docker | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple Dockerfile gratuits - Fichiers de test build de conteneurs Docker | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple Dockerfile build de conteneurs Docker gratuits pour tester la containerisation, le build Docker et les outils DevOps. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester le build Docker, la création d\'images de conteneurs, le parsing de Dockerfile, les outils de containerisation et les plateformes d\'automatisation DevOps.',
           keywords: 'fichiers d\'exemple Dockerfile, fichiers de test Dockerfile, télécharger exemples Dockerfile, fichiers de test Dockerfile gratuits, fichiers conteneurs Docker, fichiers de test Dockerfile, fichiers build de conteneurs, exemples build de Docker, fichiers de test containerisation, exemples DevOps Docker'
         },
@@ -658,7 +658,7 @@ export const fr: SamplePageTranslations = {
       },
       editorconfig: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple EditorConfig gratuits - Fichiers de test configuration d\'éditeur | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple EditorConfig gratuits - Fichiers de test configuration d\'éditeur | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple EditorConfig configuration d\'éditeur gratuits pour tester les configurations d\'éditeur de code, la cohérence de format et les outils de développement. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les parsers EditorConfig, les plugins d\'éditeur de code, les outils de format, la configuration d\'IDE et les outils de configuration d\'environnement de développement.',
           keywords: 'fichiers d\'exemple EditorConfig, fichiers de test EditorConfig, télécharger exemples EditorConfig, fichiers de test EditorConfig gratuits, fichiers configuration d\'éditeur, fichiers de test .editorconfig, fichiers configurations d\'éditeur de code, exemples configuration d\'IDE, fichiers configuration de format, fichiers de test configurations d\'éditeur'
         },
@@ -674,7 +674,7 @@ export const fr: SamplePageTranslations = {
       },
       ini: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple INI gratuits - Fichiers de test configuration INI pour applications | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple INI gratuits - Fichiers de test configuration INI pour applications | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple INI configuration gratuits pour tester les configurations d\'applications, le parsing de fichiers INI et les outils de gestion de configuration. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les parsers INI, la configuration d\'applications, la gestion de configurations, les fichiers INI Windows et les utilitaires de configuration de logiciels.',
           keywords: 'fichiers d\'exemple INI, fichiers de test INI, télécharger exemples INI, fichiers de test INI gratuits, fichiers configuration INI, fichiers de test .ini, fichiers configurations d\'applications, exemples configuration INI, fichiers INI Windows, exemples fichiers de configuration, fichiers de test parsing INI'
         },
@@ -690,7 +690,7 @@ export const fr: SamplePageTranslations = {
       },
       intelhex: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple IntelHex gratuits - Fichiers de test hexadécimaux Intel pour développement firmware | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple IntelHex gratuits - Fichiers de test hexadécimaux Intel pour développement firmware | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple IntelHex hexadécimaux Intel gratuits pour tester la programmation de firmware, le développement de systèmes embarqués et les outils de microcontrôleurs. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les parsers IntelHex, les chargeurs de firmware, la programmation de microcontrôleurs, les outils de développement embarqué et les applications de traitement de fichiers hex.',
           keywords: 'fichiers d\'exemple IntelHex, fichiers de test IntelHex, télécharger exemples IntelHex, fichiers de test IntelHex gratuits, fichiers hexadécimaux Intel, fichiers de test .intelhex, fichiers hex firmware, fichiers hex embarqués, fichiers hex microcontrôleurs, fichiers de test parser IntelHex, exemples programmation de firmware'
         },
@@ -706,7 +706,7 @@ export const fr: SamplePageTranslations = {
       },
       ipynb: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple IPYNB gratuits - Fichiers de test Jupyter Notebook pour science des données | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple IPYNB gratuits - Fichiers de test Jupyter Notebook pour science des données | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple IPYNB Jupyter Notebook gratuits pour tester les workflows de science des données, l\'exécution Python et les outils d\'analyse de notebooks. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester Jupyter Notebook, les outils de science des données Python, les visualiseurs de notebooks, les applications d\'analyse de données et les plateformes de calcul scientifique.',
           keywords: 'fichiers d\'exemple IPYNB, fichiers de test IPYNB, télécharger exemples IPYNB, fichiers de test IPYNB gratuits, fichiers Jupyter Notebook, fichiers de test .ipynb, fichiers notebook Python, exemples notebook science des données, fichiers de test Jupyter, fichiers analyse de notebooks, exemples workflows de science des données'
         },
@@ -722,7 +722,7 @@ export const fr: SamplePageTranslations = {
       },
       java: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple Java gratuits - Fichiers de test code source Java pour développement | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple Java gratuits - Fichiers de test code source Java pour développement | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple Java code source Java gratuits pour tester la compilation Java, les applications JVM et les outils de développement. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les compilateurs Java, JVM, le support IDE (Eclipse, IntelliJ), les outils de build Java (Maven, Gradle) et les environnements de développement Java.',
           keywords: 'fichiers d\'exemple Java, fichiers de test Java, télécharger exemples Java, fichiers de test Java gratuits, fichiers code source Java, fichiers de test .java, fichiers programmation Java, fichiers de test JVM, exemples compilation Java, fichiers de test IDE Java, exemples développement Java'
         },
@@ -738,7 +738,7 @@ export const fr: SamplePageTranslations = {
       },
       jks: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple JKS gratuits - Fichiers de test Java KeyStore pour sécurité SSL/TLS | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple JKS gratuits - Fichiers de test Java KeyStore pour sécurité SSL/TLS | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple JKS Java KeyStore gratuits pour tester le stockage de certificats SSL/TLS, la sécurité Java et les outils de gestion PKI. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester la gestion de Java KeyStore, le parsing de JKS, le stockage de certificats SSL, les outils de sécurité Java et l\'infrastructure PKI.',
           keywords: 'fichiers d\'exemple JKS, fichiers de test JKS, télécharger exemples JKS, fichiers de test JKS gratuits, fichiers Java KeyStore, fichiers de test .jks, fichiers certificats SSL, fichiers sécurité Java, fichiers de test keystore, exemples certificats PKI, fichiers de test gestion de Java KeyStore'
         },
@@ -754,7 +754,7 @@ export const fr: SamplePageTranslations = {
       },
       json: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple JSON gratuits - Fichiers de test données JSON pour développement web | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple JSON gratuits - Fichiers de test données JSON pour développement web | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple JSON données JSON gratuits pour tester le parsing JSON, l\'intégration API et les outils de développement web. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les parsers JSON, les réponses API, les formats d\'échange de données, les applications web et les outils de validation JSON.',
           keywords: 'fichiers d\'exemple JSON, fichiers de test JSON, télécharger exemples JSON, fichiers de test JSON gratuits, fichiers données JSON, fichiers de test .json, fichiers JSON API, fichiers de test parser JSON, exemples échange de données, fichiers JSON web, fichiers de test validation JSON'
         },
@@ -770,7 +770,7 @@ export const fr: SamplePageTranslations = {
       },
       jsonl: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple JSONL gratuits - Fichiers de test JSON Lines pour traitement de données | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple JSONL gratuits - Fichiers de test JSON Lines pour traitement de données | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple JSONL JSON Lines gratuits pour tester le traitement de données, le streaming JSON et les outils big data. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les parsers JSONL, les applications de streaming de données, les outils ETL, le traitement big data et les outils d\'analyse de fichiers de log.',
           keywords: 'fichiers d\'exemple JSONL, fichiers de test JSONL, télécharger exemples JSONL, fichiers de test JSONL gratuits, fichiers JSON Lines, fichiers de test .jsonl, fichiers streaming JSON, exemples traitement de données, fichiers JSON ETL, exemples JSON big data, fichiers analyse de log JSON'
         },
@@ -786,7 +786,7 @@ export const fr: SamplePageTranslations = {
       },
       js: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple JS gratuits - Fichiers de test code source JavaScript pour développement web | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple JS gratuits - Fichiers de test code source JavaScript pour développement web | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple JS code source JavaScript gratuits pour tester l\'exécution JavaScript, le développement web et les outils front-end. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les moteurs JavaScript, Node.js, les navigateurs web, les minificateurs JavaScript, les outils d\'analyse de code et les frameworks de développement front-end.',
           keywords: 'fichiers d\'exemple JS, fichiers de test JS, télécharger exemples JS, fichiers de test JS gratuits, fichiers code source JavaScript, fichiers de test .js, fichiers programmation JavaScript, fichiers de test Node.js, fichiers JavaScript web, fichiers de test minificateur JS, exemples développement front-end'
         },
@@ -802,7 +802,7 @@ export const fr: SamplePageTranslations = {
       },
       jsx: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple JSX gratuits - Fichiers de test React JSX pour développement front-end | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple JSX gratuits - Fichiers de test React JSX pour développement front-end | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple JSX React JSX gratuits pour tester le développement React, la compilation JSX et les frameworks front-end. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester React, les transpileurs JSX (Babel), les outils de build front-end, les environnements de développement React et les frameworks JavaScript modernes.',
           keywords: 'fichiers d\'exemple JSX, fichiers de test JSX, télécharger exemples JSX, fichiers de test JSX gratuits, fichiers React JSX, fichiers de test .jsx, fichiers composants React, fichiers de test transpileur JSX, fichiers JSX front-end, exemples développement React, fichiers de test Babel JSX'
         },
@@ -818,7 +818,7 @@ export const fr: SamplePageTranslations = {
       },
       jwt: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple JWT gratuits - Fichiers de test JSON Web Token pour sécurité API | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple JWT gratuits - Fichiers de test JSON Web Token pour sécurité API | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple JWT JSON Web Token gratuits pour tester l\'authentification API, le parsing de tokens JWT et les outils de sécurité. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les parsers JWT, l\'authentification API, la validation de tokens, OAuth 2.0 et les outils de test de sécurité.',
           keywords: 'fichiers d\'exemple JWT, fichiers de test JWT, télécharger exemples JWT, fichiers de test JWT gratuits, fichiers JSON Web Token, fichiers de test .jwt, fichiers tokens d\'authentification, fichiers sécurité API, fichiers de test parser JWT, exemples tokens OAuth, fichiers test de sécurité'
         },
@@ -834,7 +834,7 @@ export const fr: SamplePageTranslations = {
       },
       key: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple KEY gratuits - Fichiers de test clés privées pour sécurité SSL/TLS | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple KEY gratuits - Fichiers de test clés privées pour sécurité SSL/TLS | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple KEY clés privées gratuits pour tester les certificats SSL/TLS, les opérations cryptographiques et les outils de sécurité. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester le parsing de clés privées, OpenSSL, la génération de certificats SSL, les bibliothèques cryptographiques et les outils de gestion de certificats de sécurité.',
           keywords: 'fichiers d\'exemple KEY, fichiers de test KEY, télécharger exemples KEY, fichiers de test KEY gratuits, fichiers clés privées, fichiers de test .key, fichiers clés SSL, fichiers clés cryptographiques, fichiers de test OpenSSL, exemples clés de sécurité, fichiers de test clés de certificats'
         },
@@ -850,7 +850,7 @@ export const fr: SamplePageTranslations = {
       },
       kml: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple KML gratuits - Fichiers de test Keyhole Markup Language pour GIS et cartographie | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple KML gratuits - Fichiers de test Keyhole Markup Language pour GIS et cartographie | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple KML Keyhole Markup Language données géographiques gratuits pour tester les applications GIS, la visualisation de cartes et les outils géospatiaux. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester Google Earth, les logiciels GIS, le rendu de cartes, le traitement de données géographiques et les outils d\'analyse géospatiale.',
           keywords: 'fichiers d\'exemple KML, fichiers de test KML, télécharger exemples KML, fichiers de test KML gratuits, fichiers Keyhole Markup Language, fichiers de test .kml, fichiers données géographiques, exemples données de cartes, fichiers KML GIS, fichiers de test Google Earth, exemples données géospatiales'
         },
@@ -866,7 +866,7 @@ export const fr: SamplePageTranslations = {
       },
       kt: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple KT gratuits - Fichiers de test code source Kotlin pour développement Android | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple KT gratuits - Fichiers de test code source Kotlin pour développement Android | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple KT code source Kotlin gratuits pour tester la compilation Kotlin, le développement Android et les applications JVM. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les compilateurs Kotlin, Android Studio, Kotlin/JVM, le support IDE et les environnements de développement Kotlin.',
           keywords: 'fichiers d\'exemple KT, fichiers de test KT, télécharger exemples KT, fichiers de test KT gratuits, fichiers code source Kotlin, fichiers de test .kt, fichiers programmation Kotlin, fichiers Android Kotlin, fichiers de test compilateur Kotlin, exemples Kotlin JVM, fichiers de test développement Kotlin'
         },
@@ -882,7 +882,7 @@ export const fr: SamplePageTranslations = {
       },
       log: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple LOG gratuits - Fichiers de test logs pour débogage et analyse système | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple LOG gratuits - Fichiers de test logs pour débogage et analyse système | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple LOG logs gratuits pour tester le parsing de logs, l\'analyse système et les outils de débogage. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les analyseurs de logs, les outils de surveillance système, les applications de débogage, les systèmes d\'agrégation de logs et les outils de diagnostic système.',
           keywords: 'fichiers d\'exemple LOG, fichiers de test LOG, télécharger exemples LOG, fichiers de test LOG gratuits, fichiers logs, fichiers de test .log, fichiers logs système, exemples logs d\'applications, fichiers de test parser de logs, fichiers débogage de logs, exemples analyse de logs système'
         },
@@ -898,7 +898,7 @@ export const fr: SamplePageTranslations = {
       },
       lua: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple LUA gratuits - Fichiers de test scripts Lua pour développement jeux et automatisation | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple LUA gratuits - Fichiers de test scripts Lua pour développement jeux et automatisation | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple LUA scripts Lua gratuits pour tester l\'exécution Lua, le développement de jeux et les outils d\'automatisation. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les interprètes Lua, les moteurs de jeux, les environnements de scripting, les outils d\'automatisation et les applications embarquées Lua.',
           keywords: 'fichiers d\'exemple LUA, fichiers de test LUA, télécharger exemples LUA, fichiers de test LUA gratuits, fichiers scripts Lua, fichiers de test .lua, fichiers programmation Lua, fichiers scripts de jeux, fichiers de test interprète Lua, exemples scripts d\'automatisation, fichiers de test embarqués Lua'
         },
@@ -914,7 +914,7 @@ export const fr: SamplePageTranslations = {
       },
       m3u: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple M3U gratuits - Fichiers de test playlist M3U pour lecteurs multimédias | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple M3U gratuits - Fichiers de test playlist M3U pour lecteurs multimédias | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple M3U playlist M3U gratuits pour tester les lecteurs multimédias, le parsing de playlists et les outils de streaming audio/vidéo. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les lecteurs multimédias, les gestionnaires de playlists, les applications de streaming, les lecteurs audio et les logiciels de lecteurs vidéo.',
           keywords: 'fichiers d\'exemple M3U, fichiers de test M3U, télécharger exemples M3U, fichiers de test M3U gratuits, fichiers playlist M3U, fichiers de test .m3u, fichiers playlists multimédias, exemples playlists audio, fichiers playlists vidéo, fichiers de test lecteurs multimédias, exemples playlists streaming'
         },
@@ -930,7 +930,7 @@ export const fr: SamplePageTranslations = {
       },
       m3u8: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple M3U8 gratuits - Fichiers de test playlist M3U8 HLS pour streaming vidéo | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple M3U8 gratuits - Fichiers de test playlist M3U8 HLS pour streaming vidéo | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple M3U8 playlist M3U8 HLS (HTTP Live Streaming) gratuits pour tester le streaming vidéo, les lecteurs HLS et les outils de livraison multimédias. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les lecteurs HLS, les plateformes de streaming vidéo, le streaming de bitrate adaptatif, les serveurs multimédias et les systèmes de livraison vidéo.',
           keywords: 'fichiers d\'exemple M3U8, fichiers de test M3U8, télécharger exemples M3U8, fichiers de test M3U8 gratuits, fichiers playlist M3U8 HLS, fichiers de test .m3u8, fichiers HTTP Live Streaming, exemples playlists streaming vidéo, fichiers de test lecteur HLS, exemples streaming adaptatif, fichiers playlists serveurs multimédias'
         },
@@ -946,7 +946,7 @@ export const fr: SamplePageTranslations = {
       },
       makefile: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple Makefile gratuits - Fichiers de test configuration build Makefile | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple Makefile gratuits - Fichiers de test configuration build Makefile | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple Makefile configuration build gratuits pour tester l\'automatisation de build, le système de build Make et les outils de développement. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester le système de build Make, les outils d\'automatisation de build, la compilation C/C++, les scripts de build et les environnements de build de développement.',
           keywords: 'fichiers d\'exemple Makefile, fichiers de test Makefile, télécharger exemples Makefile, fichiers de test Makefile gratuits, fichiers build Makefile, fichiers de test Makefile, fichiers configuration build, exemples système de build Make, fichiers build C/C++, fichiers de test automatisation de build, exemples compilation Makefile'
         },
@@ -962,7 +962,7 @@ export const fr: SamplePageTranslations = {
       },
       mbtiles: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple MBTiles gratuits - Fichiers de test base de données tiles de cartes MBTiles | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple MBTiles gratuits - Fichiers de test base de données tiles de cartes MBTiles | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple MBTiles base de données tiles de cartes gratuits pour tester le rendu de cartes, les applications GIS et les outils de cartographie. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les serveurs de tiles de cartes, les logiciels GIS, les moteurs de rendu de cartes, les applications de cartographie mobile et les outils de cartes hors ligne.',
           keywords: 'fichiers d\'exemple MBTiles, fichiers de test MBTiles, télécharger exemples MBTiles, fichiers de test MBTiles gratuits, fichiers tiles de cartes MBTiles, fichiers de test .mbtiles, fichiers base de données de cartes, exemples tiles GIS, fichiers rendu de cartes, fichiers de test cartes mobiles, exemples tiles de cartes hors ligne'
         },
@@ -978,7 +978,7 @@ export const fr: SamplePageTranslations = {
       },
       md: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple MD gratuits - Fichiers de test documentation Markdown | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple MD gratuits - Fichiers de test documentation Markdown | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple MD documentation Markdown gratuits pour tester le parsing Markdown, les outils de documentation et les systèmes de gestion de contenu. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les parsers Markdown, les générateurs de documentation, les générateurs de sites statiques, GitHub Markdown et les plateformes de gestion de contenu.',
           keywords: 'fichiers d\'exemple MD, fichiers de test MD, télécharger exemples MD, fichiers de test MD gratuits, fichiers Markdown, fichiers de test .md, fichiers documentation Markdown, fichiers de test parser Markdown, exemples GitHub Markdown, fichiers générateurs de sites statiques, fichiers de test générateurs de documentation'
         },
@@ -994,7 +994,7 @@ export const fr: SamplePageTranslations = {
       },
       mdx: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple MDX gratuits - Fichiers de test MDX React Markdown pour documentación | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple MDX gratuits - Fichiers de test MDX React Markdown pour documentación | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple MDX MDX (Markdown + JSX) gratuits pour tester la documentation React, les générateurs de sites statiques et les systèmes de gestion de contenu. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les parsers MDX, les outils de documentation React, Next.js, Gatsby, les générateurs de sites statiques et les plateformes de documentation modernes.',
           keywords: 'fichiers d\'exemple MDX, fichiers de test MDX, télécharger exemples MDX, fichiers de test MDX gratuits, fichiers MDX React Markdown, fichiers de test .mdx, fichiers documentation React, fichiers de test parser MDX, exemples MDX Next.js, fichiers MDX Gatsby, fichiers de test générateurs de sites statiques MDX'
         },
@@ -1010,7 +1010,7 @@ export const fr: SamplePageTranslations = {
       },
       apk: {
         meta: {
-          title: 'Télécharger fichiers d\'exemple APK gratuits - Fichiers de test paquets application Android | FomiPeek',
+          title: 'Télécharger fichiers d\'exemple APK gratuits - Fichiers de test paquets application Android | FormiPeek',
           description: 'Téléchargez fichiers d\'exemple APK paquets application Android gratuits pour tester installation applications Android, analyse APK, reverse engineering et outils développement mobile. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester installateurs APK, émulateurs Android, analyseurs applications, scanners sécurité et plateformes développement applications mobiles.',
           keywords: 'fichiers d\'exemple APK, fichiers de test APK, télécharger exemples APK, fichiers de test APK gratuits, fichiers APK Android, fichiers de test .apk, fichiers paquets application Android, fichiers de test installateur APK, fichiers de test émulateur Android, exemples développement applications mobiles, fichiers reverse engineering APK'
         },
@@ -1026,7 +1026,7 @@ export const fr: SamplePageTranslations = {
       },
       appimage: {
         meta: {
-          title: 'Télécharger fichiers d\'exemple AppImage gratuits - Fichiers de test applications portables Linux | FomiPeek',
+          title: 'Télécharger fichiers d\'exemple AppImage gratuits - Fichiers de test applications portables Linux | FormiPeek',
           description: 'Téléchargez fichiers d\'exemple AppImage applications portables Linux gratuits pour tester distribution applications Linux, exécution AppImage et compatibilité cross-distribution. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester runners AppImage, lanceurs applications Linux, outils applications portables et distribution logiciel Linux universelle.',
           keywords: 'fichiers d\'exemple AppImage, fichiers de test AppImage, télécharger exemples AppImage, fichiers de test AppImage gratuits, fichiers AppImage Linux, fichiers de test .AppImage, applications portables Linux, fichiers de test runner AppImage, fichiers applications Linux, applications cross-distribution, exemples logiciel Linux universel'
         },
@@ -1042,7 +1042,7 @@ export const fr: SamplePageTranslations = {
       },
       elf: {
         meta: {
-          title: 'Télécharger fichiers d\'exemple ELF gratuits - Fichiers de test Executable and Linkable Format pour Linux/Unix | FomiPeek',
+          title: 'Télécharger fichiers d\'exemple ELF gratuits - Fichiers de test Executable and Linkable Format pour Linux/Unix | FormiPeek',
           description: 'Téléchargez fichiers d\'exemple ELF Executable and Linkable Format gratuits pour tester analyse binaires Linux/Unix, parsing ELF, reverse engineering et débogage système. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester analyseurs ELF, désassembleurs binaires, outils reverse engineering, débogueurs système et plateformes analyse exécutables Linux.',
           keywords: 'fichiers d\'exemple ELF, fichiers de test ELF, télécharger exemples ELF, fichiers de test ELF gratuits, fichiers ELF Linux, fichiers de test .elf, fichiers exécutables Unix, fichiers analyse binaire ELF, fichiers reverse engineering ELF, fichiers binaires Linux, fichiers de test désassembleur ELF'
         },
@@ -1058,7 +1058,7 @@ export const fr: SamplePageTranslations = {
       },
       exe: {
         meta: {
-          title: 'Télécharger fichiers d\'exemple EXE gratuits - Fichiers de test exécutables Windows | FomiPeek',
+          title: 'Télécharger fichiers d\'exemple EXE gratuits - Fichiers de test exécutables Windows | FormiPeek',
           description: 'Téléchargez fichiers d\'exemple EXE exécutables Windows gratuits pour tester exécution applications Windows, analyse EXE, parsing binaires et outils développement Windows. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester analyseurs exécutables Windows, désassembleurs binaires, outils reverse engineering, plateformes analyse malware et développement applications Windows.',
           keywords: 'fichiers d\'exemple EXE, fichiers de test EXE, télécharger exemples EXE, fichiers de test EXE gratuits, fichiers EXE Windows, fichiers de test .exe, fichiers exécutables Windows, fichiers analyse binaire EXE, fichiers applications Windows, fichiers reverse engineering EXE, fichiers de test désassembleur binaires Windows'
         },
@@ -1074,7 +1074,7 @@ export const fr: SamplePageTranslations = {
       },
       ipa: {
         meta: {
-          title: 'Télécharger fichiers d\'exemple IPA gratuits - Fichiers de test paquets application iOS | FomiPeek',
+          title: 'Télécharger fichiers d\'exemple IPA gratuits - Fichiers de test paquets application iOS | FormiPeek',
           description: 'Téléchargez fichiers d\'exemple IPA paquets application iOS gratuits pour tester installation applications iOS, analyse IPA, distribution applications iOS et outils développement mobile. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester installateurs IPA, simulateurs iOS, analyseurs applications, outils développement iOS et plateformes distribution applications mobiles.',
           keywords: 'fichiers d\'exemple IPA, fichiers de test IPA, télécharger exemples IPA, fichiers de test IPA gratuits, fichiers IPA iOS, fichiers de test .ipa, fichiers paquets application iOS, fichiers de test installateur IPA, fichiers de test simulateur iOS, exemples développement applications mobiles, fichiers distribution application iOS'
         },
@@ -1090,7 +1090,7 @@ export const fr: SamplePageTranslations = {
       },
       jar: {
         meta: {
-          title: 'Télécharger fichiers d\'exemple JAR gratuits - Fichiers de test archives Java | FomiPeek',
+          title: 'Télécharger fichiers d\'exemple JAR gratuits - Fichiers de test archives Java | FormiPeek',
           description: 'Téléchargez fichiers d\'exemple JAR archives Java gratuits pour tester exécution applications Java, extraction JAR, analyse JAR et outils développement Java. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester extracteurs JAR, environnements d\'exécution Java, analyseurs JAR, outils développement Java et plateformes déploiement applications Java.',
           keywords: 'fichiers d\'exemple JAR, fichiers de test JAR, télécharger exemples JAR, fichiers de test JAR gratuits, fichiers JAR Java, fichiers de test .jar, fichiers archives Java, fichiers de test extracteur JAR, fichiers de test runtime Java, exemples développement Java, fichiers analyse JAR'
         },
@@ -1106,7 +1106,7 @@ export const fr: SamplePageTranslations = {
       },
       crx: {
         meta: {
-          title: 'Télécharger fichiers d\'exemple CRX gratuits - Fichiers de test paquets extensions Chrome | FomiPeek',
+          title: 'Télécharger fichiers d\'exemple CRX gratuits - Fichiers de test paquets extensions Chrome | FormiPeek',
           description: 'Téléchargez fichiers d\'exemple CRX paquets extensions Chrome gratuits pour tester installation extensions Chrome, analyse CRX, développement extensions navigateur et outils extensions web. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester installateurs CRX, analyseurs extensions Chrome, outils développement extensions navigateur et plateformes distribution extensions web.',
           keywords: 'fichiers d\'exemple CRX, fichiers de test CRX, télécharger exemples CRX, fichiers de test CRX gratuits, fichiers CRX Chrome, fichiers de test .crx, fichiers extensions Chrome, fichiers de test installateur CRX, fichiers extensions navigateur, exemples développement extensions web, fichiers analyse extensions Chrome'
         },
@@ -1122,7 +1122,7 @@ export const fr: SamplePageTranslations = {
       },
       '3ds': {
         meta: {
-          title: 'Télécharger fichiers d\'exemple 3DS gratuits - Fichiers de test modèles 3D pour impression 3D et modélisation | FomiPeek',
+          title: 'Télécharger fichiers d\'exemple 3DS gratuits - Fichiers de test modèles 3D pour impression 3D et modélisation | FormiPeek',
           description: 'Téléchargez fichiers d\'exemple 3DS modèles 3D gratuits pour tester logiciels modélisation 3D, outils impression 3D, conversion maillages et applications visualisation 3D. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester visualiseurs modèles 3D, imprimantes 3D, logiciels CAD, éditeurs maillages et applications graphiques 3D.',
           keywords: 'fichiers d\'exemple 3DS, fichiers de test 3DS, télécharger exemples 3DS, fichiers de test 3DS gratuits, fichiers modèles 3D 3DS, fichiers de test .3ds, fichiers modélisation 3D, fichiers de test impression 3D, fichiers CAD 3DS, fichiers modèles maillages, exemples graphiques 3D'
         },
@@ -1138,7 +1138,7 @@ export const fr: SamplePageTranslations = {
       },
       '3mf': {
         meta: {
-          title: 'Télécharger fichiers d\'exemple 3MF gratuits - Fichiers de test 3D Manufacturing Format pour impression 3D | FomiPeek',
+          title: 'Télécharger fichiers d\'exemple 3MF gratuits - Fichiers de test 3D Manufacturing Format pour impression 3D | FormiPeek',
           description: 'Téléchargez fichiers d\'exemple 3MF 3D Manufacturing Format gratuits pour tester impression 3D, fabrication additive, découpage modèles 3D et compatibilité imprimantes 3D. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester découpeuses imprimantes 3D, logiciels fabrication additive, visualiseurs 3MF, workflows impression 3D et plateformes fabrication 3D modernes.',
           keywords: 'fichiers d\'exemple 3MF, fichiers de test 3MF, télécharger exemples 3MF, fichiers de test 3MF gratuits, fichiers impression 3D 3MF, fichiers de test .3mf, fichiers fabrication additive, fichiers de test découpeuse imprimante 3D, fichiers de test visualiseur 3MF, exemples fabrication 3D, fichiers impression 3D moderne'
         },
@@ -1154,7 +1154,7 @@ export const fr: SamplePageTranslations = {
       },
       ai: {
         meta: {
-          title: 'Télécharger fichiers d\'exemple AI gratuits - Fichiers de test graphiques vectoriels Adobe Illustrator | FomiPeek',
+          title: 'Télécharger fichiers d\'exemple AI gratuits - Fichiers de test graphiques vectoriels Adobe Illustrator | FormiPeek',
           description: 'Téléchargez fichiers d\'exemple AI graphiques vectoriels Adobe Illustrator gratuits pour tester édition graphiques vectoriels, conversion fichiers AI, compatibilité logiciels design et outils design graphique. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester Adobe Illustrator, éditeurs graphiques vectoriels, convertisseurs fichiers AI, logiciels design et plateformes design graphique professionnelles.',
           keywords: 'fichiers d\'exemple AI, fichiers de test AI, télécharger exemples AI, fichiers de test AI gratuits, fichiers AI Adobe Illustrator, fichiers de test .ai, fichiers graphiques vectoriels, fichiers de test Illustrator, fichiers logiciels design, exemples édition vectorielle, fichiers design graphique AI'
         },
@@ -1170,7 +1170,7 @@ export const fr: SamplePageTranslations = {
       },
       ase: {
         meta: {
-          title: 'Télécharger fichiers d\'exemple ASE gratuits - Fichiers de test animations sprite Aseprite | FomiPeek',
+          title: 'Télécharger fichiers d\'exemple ASE gratuits - Fichiers de test animations sprite Aseprite | FormiPeek',
           description: 'Téléchargez fichiers d\'exemple ASE animations sprite Aseprite gratuits pour tester édition pixel art, animation sprites, outils développement jeux et logiciels animation 2D. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester Aseprite, éditeurs pixel art, outils animation sprites, logiciels développement jeux et plateformes animation 2D.',
           keywords: 'fichiers d\'exemple ASE, fichiers de test ASE, télécharger exemples ASE, fichiers de test ASE gratuits, fichiers ASE Aseprite, fichiers de test .ase, fichiers animation sprite, fichiers de test pixel art, fichiers développement jeux, exemples animation 2D, fichiers de test Aseprite'
         },
@@ -1186,7 +1186,7 @@ export const fr: SamplePageTranslations = {
       },
       'animation-fbx': {
         meta: {
-          title: 'Télécharger fichiers d\'exemple Animation FBX gratuits - Fichiers de test animations 3D Autodesk FBX | FomiPeek',
+          title: 'Télécharger fichiers d\'exemple Animation FBX gratuits - Fichiers de test animations 3D Autodesk FBX | FormiPeek',
           description: 'Téléchargez fichiers d\'exemple Animation FBX animations 3D Autodesk FBX gratuits pour tester animation 3D, rigging personnages, données motion capture et logiciels graphiques 3D. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester logiciels animation 3D, moteurs de jeux, outils motion capture, plateformes animation personnages et applications graphiques 3D.',
           keywords: 'fichiers d\'exemple Animation FBX, fichiers de test animation FBX, télécharger exemples animation FBX, fichiers de test animation FBX gratuits, fichiers Autodesk FBX, fichiers de test animation .fbx, fichiers animation 3D, fichiers de test animation personnages, fichiers motion capture, exemples animation graphiques 3D, fichiers FBX moteur jeux'
         },
@@ -1202,7 +1202,7 @@ export const fr: SamplePageTranslations = {
       },
       assetbundle: {
         meta: {
-          title: 'Télécharger fichiers d\'exemple AssetBundle gratuits - Fichiers de test Unity AssetBundle pour développement jeux | FomiPeek',
+          title: 'Télécharger fichiers d\'exemple AssetBundle gratuits - Fichiers de test Unity AssetBundle pour développement jeux | FormiPeek',
           description: 'Téléchargez fichiers d\'exemple AssetBundle Unity AssetBundle gratuits pour tester développement jeux Unity, chargement assets, gestion ressources jeux et outils moteur Unity. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester moteur Unity, chargeurs assets jeux, outils développement Unity, gestionnaires ressources jeux et plateformes développement jeux Unity.',
           keywords: 'fichiers d\'exemple AssetBundle, fichiers de test AssetBundle, télécharger exemples AssetBundle, fichiers de test AssetBundle gratuits, fichiers Unity AssetBundle, fichiers assets Unity, fichiers développement jeux, fichiers de test moteur Unity, fichiers de test chargeur assets jeux, exemples développement Unity, fichiers gestion ressources jeux'
         },
@@ -1218,7 +1218,7 @@ export const fr: SamplePageTranslations = {
       },
       blend: {
         meta: {
-          title: 'Télécharger fichiers d\'exemple BLEND gratuits - Fichiers de test projets 3D Blender | FomiPeek',
+          title: 'Télécharger fichiers d\'exemple BLEND gratuits - Fichiers de test projets 3D Blender | FormiPeek',
           description: 'Téléchargez fichiers d\'exemple BLEND projets 3D Blender gratuits pour tester modélisation 3D, compatibilité projets Blender, workflows animation 3D et logiciels graphiques 3D. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester logiciel Blender, outils modélisation 3D, visualiseurs projets Blender, plateformes animation 3D et applications graphiques 3D professionnelles.',
           keywords: 'fichiers d\'exemple BLEND, fichiers de test BLEND, télécharger exemples BLEND, fichiers de test BLEND gratuits, fichiers BLEND Blender, fichiers de test .blend, fichiers projets Blender, fichiers de test modélisation 3D, fichiers de test Blender, exemples animation 3D, fichiers graphiques 3D BLEND'
         },
@@ -1234,7 +1234,7 @@ export const fr: SamplePageTranslations = {
       },
       bvh: {
         meta: {
-          title: 'Télécharger fichiers d\'exemple BVH gratuits - Fichiers de test motion capture Biovision Hierarchy | FomiPeek',
+          title: 'Télécharger fichiers d\'exemple BVH gratuits - Fichiers de test motion capture Biovision Hierarchy | FormiPeek',
           description: 'Téléchargez fichiers d\'exemple BVH motion capture Biovision Hierarchy gratuits pour tester données motion capture, animation personnages, systèmes animation squelette et logiciels animation 3D. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester visualiseurs motion capture, outils animation personnages, systèmes animation squelette, plateformes animation 3D et logiciels analyse motion capture.',
           keywords: 'fichiers d\'exemple BVH, fichiers de test BVH, télécharger exemples BVH, fichiers de test BVH gratuits, fichiers BVH Biovision Hierarchy, fichiers de test .bvh, fichiers motion capture, fichiers de test animation personnages, fichiers animation squelette, exemples animation 3D BVH, fichiers analyse motion capture'
         },
@@ -1250,7 +1250,7 @@ export const fr: SamplePageTranslations = {
       },
       dwg: {
         meta: {
-          title: 'Télécharger fichiers d\'exemple DWG gratuits - Fichiers de test dessins AutoCAD pour design CAD | FomiPeek',
+          title: 'Télécharger fichiers d\'exemple DWG gratuits - Fichiers de test dessins AutoCAD pour design CAD | FormiPeek',
           description: 'Téléchargez fichiers d\'exemple DWG dessins AutoCAD gratuits pour tester logiciels CAD, compatibilité AutoCAD, outils dessin technique et applications design ingénierie. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester AutoCAD, visualiseurs CAD, logiciels dessin technique, outils design ingénierie et plateformes CAD professionnelles.',
           keywords: 'fichiers d\'exemple DWG, fichiers de test DWG, télécharger exemples DWG, fichiers de test DWG gratuits, fichiers DWG AutoCAD, fichiers de test .dwg, fichiers dessins CAD, fichiers de test AutoCAD, fichiers dessin technique, exemples design ingénierie, fichiers logiciels CAD DWG'
         },
@@ -1266,7 +1266,7 @@ export const fr: SamplePageTranslations = {
       },
       dxf: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple DXF gratuits - Fichiers de test Drawing Exchange Format AutoCAD | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple DXF gratuits - Fichiers de test Drawing Exchange Format AutoCAD | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple DXF Drawing Exchange Format gratuits pour tester les logiciels CAD, les convertisseurs DXF et les outils de dessin technique. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester AutoCAD, les visionneuses CAD, les analyseurs DXF et les applications d\'échange de fichiers de dessin.',
           keywords: 'fichiers d\'exemple DXF, fichiers de test DXF, télécharger exemples DXF, fichiers de test DXF gratuits, fichiers AutoCAD DXF, fichiers Drawing Exchange Format, fichiers CAD DXF, fichiers de test convertisseur DXF, fichiers de dessin technique, fichiers de test analyseur DXF, exemples d\'échange de fichiers CAD'
         },
@@ -1282,7 +1282,7 @@ export const fr: SamplePageTranslations = {
       },
       ifc: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple IFC gratuits - Fichiers de test Industry Foundation Classes BIM | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple IFC gratuits - Fichiers de test Industry Foundation Classes BIM | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple IFC Industry Foundation Classes gratuits pour tester les logiciels BIM, les visionneuses IFC, les outils de modélisation des informations du bâtiment et les applications de gestion de la construction. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester Revit, ArchiCAD, les analyseurs IFC, les visionneuses BIM et les logiciels de conception de bâtiments.',
           keywords: 'fichiers d\'exemple IFC, fichiers de test IFC, télécharger exemples IFC, fichiers de test IFC gratuits, fichiers Industry Foundation Classes, fichiers BIM IFC, fichiers de modélisation des informations du bâtiment, fichiers de test visionneuse IFC, fichiers logiciels de construction, fichiers de test analyseur IFC, exemples de format d\'échange BIM'
         },
@@ -1298,7 +1298,7 @@ export const fr: SamplePageTranslations = {
       },
       iges: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple IGES gratuits - Fichiers de test Initial Graphics Exchange Specification CAD | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple IGES gratuits - Fichiers de test Initial Graphics Exchange Specification CAD | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple IGES Initial Graphics Exchange Specification gratuits pour tester les logiciels CAD, les convertisseurs IGES, les outils de modélisation 3D et les applications de conception d\'ingénierie. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les systèmes CAD, les analyseurs IGES, les outils d\'échange de modèles 3D et les logiciels d\'ingénierie.',
           keywords: 'fichiers d\'exemple IGES, fichiers de test IGES, télécharger exemples IGES, fichiers de test IGES gratuits, fichiers Initial Graphics Exchange Specification, fichiers CAD IGES, fichiers d\'échange de modèles 3D, fichiers de test convertisseur IGES, fichiers de conception d\'ingénierie, fichiers de test analyseur IGES, exemples de format d\'échange CAD'
         },
@@ -1314,7 +1314,7 @@ export const fr: SamplePageTranslations = {
       },
       igs: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple IGS gratuits - Fichiers de test Initial Graphics Exchange Specification CAD | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple IGS gratuits - Fichiers de test Initial Graphics Exchange Specification CAD | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple IGS Initial Graphics Exchange Specification gratuits pour tester les logiciels CAD, les convertisseurs IGS, les outils de modélisation 3D et les applications de conception d\'ingénierie. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les systèmes CAD, les analyseurs IGS, les outils d\'échange de modèles 3D et les logiciels d\'ingénierie.',
           keywords: 'fichiers d\'exemple IGS, fichiers de test IGS, télécharger exemples IGS, fichiers de test IGS gratuits, fichiers Initial Graphics Exchange Specification, fichiers CAD IGS, fichiers d\'échange de modèles 3D, fichiers de test convertisseur IGS, fichiers de conception d\'ingénierie, fichiers de test analyseur IGS, exemples de format d\'échange CAD'
         },
@@ -1330,7 +1330,7 @@ export const fr: SamplePageTranslations = {
       },
       las: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple LAS gratuits - Fichiers de test données nuage de points LiDAR | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple LAS gratuits - Fichiers de test données nuage de points LiDAR | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple LAS nuage de points LiDAR gratuits pour tester le traitement des nuages de points, les outils d\'analyse LiDAR, les logiciels de cartographie 3D et les applications géospatiales. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les analyseurs LAS, les visionneuses de nuages de points, les outils de traitement LiDAR, les logiciels de cartographie 3D et les plateformes d\'analyse géospatiale.',
           keywords: 'fichiers d\'exemple LAS, fichiers de test LAS, télécharger exemples LAS, fichiers de test LAS gratuits, fichiers nuage de points LiDAR, fichiers format LAS, fichiers données nuage de points, fichiers de test analyseur LAS, fichiers géospatiaux, fichiers de test analyse LiDAR, exemples de cartographie 3D'
         },
@@ -1346,7 +1346,7 @@ export const fr: SamplePageTranslations = {
       },
       ma: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple MA gratuits - Fichiers de test scène Maya ASCII | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple MA gratuits - Fichiers de test scène Maya ASCII | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple MA scène Maya ASCII gratuits pour tester la conversion de scènes Maya, les logiciels d\'animation 3D, les analyseurs de fichiers MA et les outils d\'animation. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester Autodesk Maya, les visionneuses de fichiers MA, les outils de conversion de scènes, les plateformes d\'animation 3D et les logiciels de workflow d\'animation.',
           keywords: 'fichiers d\'exemple MA, fichiers de test MA, télécharger exemples MA, fichiers de test MA gratuits, fichiers scène Maya ASCII, fichiers format MA, fichiers scène animation 3D, fichiers de test analyseur MA, fichiers animation, fichiers de test scène Maya, exemples animation 3D'
         },
@@ -1362,7 +1362,7 @@ export const fr: SamplePageTranslations = {
       },
       max: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple MAX gratuits - Fichiers de test scène 3ds Max | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple MAX gratuits - Fichiers de test scène 3ds Max | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple MAX scène 3ds Max gratuits pour tester la conversion de scènes 3ds Max, les logiciels de modélisation 3D, les analyseurs de fichiers MAX et les outils de conception 3D. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester Autodesk 3ds Max, les visionneuses de fichiers MAX, les outils de conversion de scènes, les plateformes de modélisation 3D et les logiciels de workflow de conception 3D.',
           keywords: 'fichiers d\'exemple MAX, fichiers de test MAX, télécharger exemples MAX, fichiers de test MAX gratuits, fichiers scène 3ds Max, fichiers format MAX, fichiers scène modélisation 3D, fichiers de test analyseur MAX, fichiers conception 3D, fichiers de test scène 3ds Max, exemples modélisation 3D'
         },
@@ -1378,7 +1378,7 @@ export const fr: SamplePageTranslations = {
       },
       mb: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple MB gratuits - Fichiers de test scène Maya Binary | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple MB gratuits - Fichiers de test scène Maya Binary | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple MB scène Maya Binary gratuits pour tester la conversion de scènes Maya, les logiciels d\'animation 3D, les analyseurs de fichiers MB et les outils d\'animation. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester Autodesk Maya, les visionneuses de fichiers MB, les outils de conversion de scènes, les plateformes d\'animation 3D et les logiciels de workflow d\'animation.',
           keywords: 'fichiers d\'exemple MB, fichiers de test MB, télécharger exemples MB, fichiers de test MB gratuits, fichiers scène Maya Binary, fichiers format MB, fichiers scène animation 3D, fichiers de test analyseur MB, fichiers animation, fichiers de test scène Maya, exemples animation 3D'
         },
@@ -1394,7 +1394,7 @@ export const fr: SamplePageTranslations = {
       },
       indd: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple INDD gratuits - Fichiers de test document Adobe InDesign | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple INDD gratuits - Fichiers de test document Adobe InDesign | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple INDD document Adobe InDesign gratuits pour tester la compatibilité InDesign, les convertisseurs INDD, les logiciels de publication assistée par ordinateur et les outils de conception de mise en page. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester Adobe InDesign, les visionneuses de fichiers INDD, les outils de conversion de documents, les plateformes de publication assistée par ordinateur et les logiciels de conception de mise en page.',
           keywords: 'fichiers d\'exemple INDD, fichiers de test INDD, télécharger exemples INDD, fichiers de test INDD gratuits, fichiers Adobe InDesign, fichiers format INDD, fichiers publication assistée par ordinateur, fichiers de test convertisseur INDD, fichiers conception mise en page, fichiers de test document InDesign, exemples logiciels de publication'
         },
@@ -1410,7 +1410,7 @@ export const fr: SamplePageTranslations = {
       },
       'animated-gif': {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple GIF animés gratuits - Fichiers de test images animées | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple GIF animés gratuits - Fichiers de test images animées | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple GIF animés gratuits pour tester la lecture d\'animations GIF, les visionneuses d\'images, les navigateurs web et les outils d\'animation. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les visionneuses GIF, les lecteurs d\'animation, les outils de traitement d\'images, les plateformes de développement web et les applications multimédias.',
           keywords: 'fichiers d\'exemple GIF animés, fichiers de test GIF animés, télécharger exemples GIF animés, fichiers de test GIF animés gratuits, fichiers animation GIF, fichiers images animées, fichiers de test lecteur GIF, fichiers animation, fichiers de test animation web, exemples GIF multimédias'
         },
@@ -1426,7 +1426,7 @@ export const fr: SamplePageTranslations = {
       },
       apng: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple APNG gratuits - Fichiers de test images PNG animées | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple APNG gratuits - Fichiers de test images PNG animées | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple APNG Animated Portable Network Graphics gratuits pour tester la lecture d\'animations APNG, les visionneuses d\'images, les navigateurs web et les outils d\'images modernes. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les visionneuses APNG, les lecteurs d\'animation, les outils de traitement d\'images, les plateformes de développement web et les applications multimédias modernes.',
           keywords: 'fichiers d\'exemple APNG, fichiers de test APNG, télécharger exemples APNG, fichiers de test APNG gratuits, fichiers Animated PNG, fichiers animation APNG, fichiers de test lecteur APNG, fichiers animation, fichiers de test animation web, exemples format image moderne'
         },
@@ -1442,7 +1442,7 @@ export const fr: SamplePageTranslations = {
       },
       avif: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple AVIF gratuits - Fichiers de test format image AV1 | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple AVIF gratuits - Fichiers de test format image AV1 | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple AVIF AV1 Image File Format gratuits pour tester la compression d\'images moderne, les visionneuses AVIF, les navigateurs web et les outils d\'images de nouvelle génération. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les visionneuses AVIF, les outils de traitement d\'images, les plateformes de développement web, le support de format d\'image moderne et les applications multimédias de nouvelle génération.',
           keywords: 'fichiers d\'exemple AVIF, fichiers de test AVIF, télécharger exemples AVIF, fichiers de test AVIF gratuits, fichiers AV1 Image File Format, fichiers images AVIF, fichiers de test visionneuse AVIF, fichiers images modernes, fichiers de test format image web, exemples format image nouvelle génération'
         },
@@ -1458,7 +1458,7 @@ export const fr: SamplePageTranslations = {
       },
       bmp: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple BMP gratuits - Fichiers de test images bitmap | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple BMP gratuits - Fichiers de test images bitmap | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple BMP bitmap gratuits pour tester les visionneuses d\'images, les convertisseurs BMP, les logiciels graphiques et les outils de traitement d\'images. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les visionneuses BMP, les éditeurs d\'images, les outils de conversion graphique, les plateformes de traitement d\'images et le support de format bitmap.',
           keywords: 'fichiers d\'exemple BMP, fichiers de test BMP, télécharger exemples BMP, fichiers de test BMP gratuits, fichiers images bitmap, fichiers format BMP, fichiers de test visionneuse images, fichiers graphiques, fichiers de test conversion images, exemples format bitmap'
         },
@@ -1474,7 +1474,7 @@ export const fr: SamplePageTranslations = {
       },
       'barcode-svg': {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple code-barres SVG gratuits - Fichiers de test codes-barres vectoriels scalables | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple code-barres SVG gratuits - Fichiers de test codes-barres vectoriels scalables | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple code-barres SVG gratuits pour tester la génération de codes-barres, les lecteurs de codes-barres SVG, les outils de graphiques vectoriels et les applications de scan de codes-barres. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les générateurs de codes-barres, les visionneuses SVG, les outils de scan de codes-barres, les plateformes de graphiques vectoriels et les logiciels de reconnaissance de codes-barres.',
           keywords: 'fichiers d\'exemple code-barres SVG, fichiers de test code-barres SVG, télécharger exemples code-barres SVG, fichiers de test code-barres SVG gratuits, fichiers codes-barres SVG, fichiers codes-barres vectoriels, fichiers de test générateur code-barres, fichiers SVG, fichiers de test scan code-barres, exemples graphiques vectoriels'
         },
@@ -1490,7 +1490,7 @@ export const fr: SamplePageTranslations = {
       },
       avi: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple AVI gratuits - Fichiers de test vidéo Audio Video Interleave | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple AVI gratuits - Fichiers de test vidéo Audio Video Interleave | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple AVI Audio Video Interleave gratuits pour tester les lecteurs vidéo, les convertisseurs AVI, les logiciels multimédias et les outils de traitement vidéo. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les lecteurs AVI, les éditeurs vidéo, les outils de conversion multimédia, les plateformes de traitement vidéo et le support de format vidéo.',
           keywords: 'fichiers d\'exemple AVI, fichiers de test AVI, télécharger exemples AVI, fichiers de test AVI gratuits, fichiers Audio Video Interleave, fichiers vidéo AVI, fichiers de test lecteur vidéo, fichiers multimédias, fichiers de test conversion vidéo, exemples format vidéo'
         },
@@ -1506,7 +1506,7 @@ export const fr: SamplePageTranslations = {
       },
       '3gp': {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple 3GP gratuits - Fichiers de test vidéo mobile 3GPP | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple 3GP gratuits - Fichiers de test vidéo mobile 3GPP | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple 3GP vidéo mobile 3GPP gratuits pour tester les lecteurs vidéo mobiles, les convertisseurs 3GP, les logiciels multimédias et les outils de traitement vidéo mobile. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les lecteurs 3GP, les éditeurs vidéo mobiles, les outils de conversion vidéo, les plateformes multimédias mobiles et le support de format vidéo mobile.',
           keywords: 'fichiers d\'exemple 3GP, fichiers de test 3GP, télécharger exemples 3GP, fichiers de test 3GP gratuits, fichiers vidéo mobile 3GPP, fichiers vidéo 3GP, fichiers de test lecteur vidéo mobile, fichiers multimédias, fichiers de test conversion vidéo mobile, exemples format vidéo mobile'
         },
@@ -1522,7 +1522,7 @@ export const fr: SamplePageTranslations = {
       },
       dav: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple DAV gratuits - Fichiers de test vidéo DAV pour caméras de sécurité | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple DAV gratuits - Fichiers de test vidéo DAV pour caméras de sécurité | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple DAV gratuits pour tester les lecteurs vidéo DAV, le traitement vidéo des caméras de sécurité, les convertisseurs DAV et les outils d\'analyse vidéo de surveillance. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester la lecture DAV, les convertisseurs DAV vers MP4, les logiciels de caméras de sécurité, les outils de surveillance vidéo et la compatibilité du format DAV.',
           keywords: 'fichiers d\'exemple DAV, fichiers de test DAV, télécharger exemples DAV, fichiers de test DAV gratuits, fichiers vidéo DAV, fichiers vidéo caméras sécurité, convertisseur DAV vers MP4, test lecteur DAV, exemples vidéo surveillance, fichiers de test format DAV, fichiers de test surveillance vidéo'
         },
@@ -1538,7 +1538,7 @@ export const fr: SamplePageTranslations = {
       },
       dds: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple DDS gratuits - Fichiers de test texture DirectDraw Surface | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple DDS gratuits - Fichiers de test texture DirectDraw Surface | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple DDS DirectDraw Surface gratuits pour tester la conversion d\'images de texture, la visualisation DDS, les outils de développement de jeux et les logiciels de traitement graphique. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester le chargement de textures DDS, les convertisseurs DDS vers PNG, la compatibilité des moteurs de jeux, les outils de compression de textures et le support du format DirectDraw Surface.',
           keywords: 'fichiers d\'exemple DDS, fichiers de test DDS, télécharger exemples DDS, fichiers de test DDS gratuits, fichiers DirectDraw Surface, fichiers texture DDS, convertisseur DDS vers PNG, exemples images texture, fichiers de test développement jeux, test format DDS, exemples textures graphiques'
         },
@@ -1554,7 +1554,7 @@ export const fr: SamplePageTranslations = {
       },
       dng: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple DNG gratuits - Fichiers de test images raw Digital Negative | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple DNG gratuits - Fichiers de test images raw Digital Negative | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple DNG Digital Negative d\'images raw gratuits pour tester le traitement d\'images raw, la conversion DNG, les logiciels photo et les outils d\'édition d\'images professionnels. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs DNG vers JPEG, les éditeurs d\'images raw, la visualisation DNG, le traitement raw des appareils photo et le support du format Adobe Digital Negative.',
           keywords: 'fichiers d\'exemple DNG, fichiers de test DNG, télécharger exemples DNG, fichiers de test DNG gratuits, fichiers Digital Negative, fichiers images raw DNG, convertisseur DNG vers JPEG, traitement images raw, fichiers de test photographie, test format DNG, exemples raw appareil photo, fichiers de test Adobe DNG'
         },
@@ -1570,7 +1570,7 @@ export const fr: SamplePageTranslations = {
       },
       eps: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple EPS gratuits - Fichiers de test graphiques vectoriels Encapsulated PostScript | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple EPS gratuits - Fichiers de test graphiques vectoriels Encapsulated PostScript | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple EPS Encapsulated PostScript gratuits pour tester la conversion de graphiques vectoriels, la visualisation EPS, le traitement PostScript et les logiciels de design professionnels. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs EPS vers PDF, les convertisseurs EPS vers SVG, les éditeurs de graphiques vectoriels, les visualiseurs PostScript et la compatibilité du format Encapsulated PostScript.',
           keywords: 'fichiers d\'exemple EPS, fichiers de test EPS, télécharger exemples EPS, fichiers de test EPS gratuits, fichiers Encapsulated PostScript, graphiques vectoriels EPS, convertisseur EPS vers PDF, convertisseur EPS vers SVG, exemples graphiques vectoriels, fichiers de test PostScript, fichiers de test logiciels design, test format EPS'
         },
@@ -1586,7 +1586,7 @@ export const fr: SamplePageTranslations = {
       },
       exr: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple EXR gratuits - Fichiers de test images High Dynamic Range OpenEXR | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple EXR gratuits - Fichiers de test images High Dynamic Range OpenEXR | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple EXR OpenEXR d\'images High Dynamic Range gratuits pour tester le traitement d\'images HDR, la conversion EXR, les logiciels photo professionnels et les outils d\'effets visuels. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs EXR vers JPEG, les éditeurs d\'images HDR, la visualisation EXR, le traitement High Dynamic Range et le support du format OpenEXR.',
           keywords: 'fichiers d\'exemple EXR, fichiers de test EXR, télécharger exemples EXR, fichiers de test EXR gratuits, fichiers OpenEXR, images HDR EXR, convertisseur EXR vers JPEG, traitement images HDR, exemples High Dynamic Range, fichiers de test effets visuels, test format EXR, fichiers de test photographie professionnelle'
         },
@@ -1602,7 +1602,7 @@ export const fr: SamplePageTranslations = {
       },
       hdr: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple HDR gratuits - Fichiers de test images High Dynamic Range | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple HDR gratuits - Fichiers de test images High Dynamic Range | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple HDR d\'images High Dynamic Range gratuits pour tester le traitement d\'images HDR, la conversion HDR, les logiciels photo et les outils d\'édition d\'images. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs HDR vers JPEG, les éditeurs d\'images HDR, la visualisation HDR, les outils de mappage de tons et le support du format High Dynamic Range.',
           keywords: 'fichiers d\'exemple HDR, fichiers de test HDR, télécharger exemples HDR, fichiers de test HDR gratuits, fichiers High Dynamic Range, images HDR, convertisseur HDR vers JPEG, traitement images HDR, fichiers de test mappage tons, fichiers de test photographie, test format HDR, exemples High Dynamic Range'
         },
@@ -1618,7 +1618,7 @@ export const fr: SamplePageTranslations = {
       },
       heic: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple HEIC gratuits - Fichiers de test High Efficiency Image Container | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple HEIC gratuits - Fichiers de test High Efficiency Image Container | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple HEIC High Efficiency Image Container gratuits pour tester la conversion d\'images HEIC, la visualisation HEIC, le traitement de formats d\'image modernes et les outils de photographie mobile. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs HEIC vers JPEG, les convertisseurs HEIC vers PNG, le traitement d\'images iOS, les logiciels de visualisation HEIC et le support du format High Efficiency Image Container.',
           keywords: 'fichiers d\'exemple HEIC, fichiers de test HEIC, télécharger exemples HEIC, fichiers de test HEIC gratuits, fichiers High Efficiency Image Container, images HEIC, convertisseur HEIC vers JPEG, convertisseur HEIC vers PNG, exemples images iOS, fichiers de test photographie mobile, test format HEIC, exemples formats image modernes'
         },
@@ -1634,7 +1634,7 @@ export const fr: SamplePageTranslations = {
       },
       heif: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple HEIF gratuits - Fichiers de test High Efficiency Image Format | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple HEIF gratuits - Fichiers de test High Efficiency Image Format | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple HEIF High Efficiency Image Format gratuits pour tester la conversion d\'images HEIF, la visualisation HEIF, le traitement de formats d\'image modernes et les outils de photographie mobile. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs HEIF vers JPEG, les convertisseurs HEIF vers PNG, le traitement d\'images mobiles, les logiciels de visualisation HEIF et le support du format High Efficiency Image Format.',
           keywords: 'fichiers d\'exemple HEIF, fichiers de test HEIF, télécharger exemples HEIF, fichiers de test HEIF gratuits, fichiers High Efficiency Image Format, images HEIF, convertisseur HEIF vers JPEG, convertisseur HEIF vers PNG, exemples images mobiles, fichiers de test formats image modernes, test format HEIF, fichiers de test compression images'
         },
@@ -1650,7 +1650,7 @@ export const fr: SamplePageTranslations = {
       },
       icns: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple ICNS gratuits - Fichiers de test icônes macOS | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple ICNS gratuits - Fichiers de test icônes macOS | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple ICNS d\'icônes macOS gratuits pour tester la conversion d\'icônes macOS, la visualisation ICNS, les outils de design d\'icônes et le développement d\'applications macOS. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs ICNS vers PNG, les convertisseurs ICNS vers ICO, les éditeurs d\'icônes macOS, les logiciels de design d\'icônes et le support du format d\'icônes macOS.',
           keywords: 'fichiers d\'exemple ICNS, fichiers de test ICNS, télécharger exemples ICNS, fichiers de test ICNS gratuits, fichiers icônes macOS, icônes ICNS, convertisseur ICNS vers PNG, convertisseur ICNS vers ICO, design icônes macOS, fichiers de test éditeur icônes, test format ICNS, exemples icônes Apple'
         },
@@ -1666,7 +1666,7 @@ export const fr: SamplePageTranslations = {
       },
       ico: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple ICO gratuits - Fichiers de test icônes Windows | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple ICO gratuits - Fichiers de test icônes Windows | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple ICO d\'icônes Windows gratuits pour tester la conversion d\'icônes Windows, la visualisation ICO, les outils de design d\'icônes et le développement d\'applications Windows. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs ICO vers PNG, les convertisseurs ICO vers ICNS, les éditeurs d\'icônes Windows, les logiciels de design d\'icônes et le support du format d\'icônes Windows.',
           keywords: 'fichiers d\'exemple ICO, fichiers de test ICO, télécharger exemples ICO, fichiers de test ICO gratuits, fichiers icônes Windows, icônes ICO, convertisseur ICO vers PNG, convertisseur ICO vers ICNS, design icônes Windows, fichiers de test éditeur icônes, test format ICO, exemples icônes Windows'
         },
@@ -1682,7 +1682,7 @@ export const fr: SamplePageTranslations = {
       },
       jpeg: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple JPEG gratuits - Fichiers de test images JPEG pour outils de conversion | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple JPEG gratuits - Fichiers de test images JPEG pour outils de conversion | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple JPEG gratuits pour tester la conversion d\'images JPEG, la compression JPEG, les outils de traitement d\'images et les logiciels d\'édition photo. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs JPEG vers PNG, les convertisseurs JPEG vers PDF, les outils de compression d\'images, l\'optimisation JPEG et le support du format Joint Photographic Experts Group.',
           keywords: 'fichiers d\'exemple JPEG, fichiers de test JPEG, télécharger exemples JPEG, fichiers de test JPEG gratuits, fichiers images JPEG, convertisseur JPEG vers PNG, convertisseur JPEG vers PDF, fichiers de test compression images, fichiers de test édition photo, test format JPEG, exemples traitement images'
         },
@@ -1698,7 +1698,7 @@ export const fr: SamplePageTranslations = {
       },
       jpg: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple JPG gratuits - Fichiers de test images JPG pour outils de conversion | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple JPG gratuits - Fichiers de test images JPG pour outils de conversion | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple JPG gratuits pour tester la conversion d\'images JPG, la compression JPG, les outils de traitement d\'images et les logiciels d\'édition photo. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs JPG vers PNG, les convertisseurs JPG vers PDF, les outils de compression d\'images, l\'optimisation JPG et le support du format Joint Photographic Experts Group.',
           keywords: 'fichiers d\'exemple JPG, fichiers de test JPG, télécharger exemples JPG, fichiers de test JPG gratuits, fichiers images JPG, convertisseur JPG vers PNG, convertisseur JPG vers PDF, fichiers de test compression images, fichiers de test édition photo, test format JPG, exemples traitement images'
         },
@@ -1714,7 +1714,7 @@ export const fr: SamplePageTranslations = {
       },
       m4v: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple M4V gratuits - Fichiers de test vidéo M4V pour outils de conversion | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple M4V gratuits - Fichiers de test vidéo M4V pour outils de conversion | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple M4V gratuits pour tester la conversion vidéo M4V, la lecture M4V, les outils de traitement vidéo et les logiciels multimédias. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs M4V vers MP4, les convertisseurs M4V vers AVI, les lecteurs vidéo, la compatibilité de lecture M4V et le support du format vidéo MPEG-4.',
           keywords: 'fichiers d\'exemple M4V, fichiers de test M4V, télécharger exemples M4V, fichiers de test M4V gratuits, fichiers vidéo M4V, convertisseur M4V vers MP4, convertisseur M4V vers AVI, fichiers de test lecteur vidéo, test lecture M4V, exemples conversion vidéo, test format vidéo MPEG-4'
         },
@@ -1730,7 +1730,7 @@ export const fr: SamplePageTranslations = {
       },
       mkv: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple MKV gratuits - Fichiers de test vidéo Matroska pour outils de conversion | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple MKV gratuits - Fichiers de test vidéo Matroska pour outils de conversion | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple MKV Matroska gratuits pour tester la conversion vidéo MKV, la lecture MKV, les outils de traitement vidéo et les logiciels multimédias. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs MKV vers MP4, les convertisseurs MKV vers AVI, les lecteurs vidéo, la compatibilité de lecture MKV et le support du format vidéo Matroska.',
           keywords: 'fichiers d\'exemple MKV, fichiers de test MKV, télécharger exemples MKV, fichiers de test MKV gratuits, fichiers vidéo Matroska, convertisseur MKV vers MP4, convertisseur MKV vers AVI, fichiers de test lecteur vidéo, test lecture MKV, exemples conversion vidéo, test format Matroska'
         },
@@ -1746,7 +1746,7 @@ export const fr: SamplePageTranslations = {
       },
       aac: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple AAC gratuits - Fichiers de test Advanced Audio Coding | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple AAC gratuits - Fichiers de test Advanced Audio Coding | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple AAC Advanced Audio Coding gratuits pour tester la conversion audio, la lecture AAC, les outils de traitement audio et les logiciels multimédias. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs AAC vers MP3, les convertisseurs AAC vers WAV, les lecteurs audio, la compatibilité de lecture AAC et le support du format Advanced Audio Coding.',
           keywords: 'fichiers d\'exemple AAC, fichiers de test AAC, télécharger exemples AAC, fichiers de test AAC gratuits, fichiers Advanced Audio Coding, convertisseur AAC vers MP3, convertisseur AAC vers WAV, fichiers de test lecteur audio, test lecture AAC, exemples conversion audio, test format Advanced Audio Coding'
         },
@@ -1762,7 +1762,7 @@ export const fr: SamplePageTranslations = {
       },
       ac3: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple AC3 gratuits - Fichiers de test audio Dolby Digital | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple AC3 gratuits - Fichiers de test audio Dolby Digital | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple AC3 Dolby Digital gratuits pour tester la conversion audio, la lecture AC3, les outils de traitement audio et les logiciels multimédias. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs AC3 vers MP3, les convertisseurs AC3 vers WAV, les lecteurs audio, la compatibilité de lecture AC3 et le support du format Dolby Digital.',
           keywords: 'fichiers d\'exemple AC3, fichiers de test AC3, télécharger exemples AC3, fichiers de test AC3 gratuits, fichiers Dolby Digital, convertisseur AC3 vers MP3, convertisseur AC3 vers WAV, fichiers de test lecteur audio, test lecture AC3, exemples conversion audio, test format Dolby Digital'
         },
@@ -1778,7 +1778,7 @@ export const fr: SamplePageTranslations = {
       },
       aif: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple AIF gratuits - Fichiers de test Audio Interchange File Format | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple AIF gratuits - Fichiers de test Audio Interchange File Format | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple AIF Audio Interchange File Format gratuits pour tester la conversion audio, la lecture AIF, les outils de traitement audio et les logiciels multimédias. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs AIF vers MP3, les convertisseurs AIF vers WAV, les lecteurs audio, la compatibilité de lecture AIF et le support du format Audio Interchange File Format.',
           keywords: 'fichiers d\'exemple AIF, fichiers de test AIF, télécharger exemples AIF, fichiers de test AIF gratuits, fichiers Audio Interchange File Format, convertisseur AIF vers MP3, convertisseur AIF vers WAV, fichiers de test lecteur audio, test lecture AIF, exemples conversion audio, test format Audio Interchange File Format'
         },
@@ -1794,7 +1794,7 @@ export const fr: SamplePageTranslations = {
       },
       aiff: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple AIFF gratuits - Fichiers de test Audio Interchange File Format | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple AIFF gratuits - Fichiers de test Audio Interchange File Format | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple AIFF Audio Interchange File Format gratuits pour tester la conversion audio, la lecture AIFF, les outils de traitement audio et les logiciels multimédias. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs AIFF vers MP3, les convertisseurs AIFF vers WAV, les lecteurs audio, la compatibilité de lecture AIFF et le support du format Audio Interchange File Format.',
           keywords: 'fichiers d\'exemple AIFF, fichiers de test AIFF, télécharger exemples AIFF, fichiers de test AIFF gratuits, fichiers Audio Interchange File Format, convertisseur AIFF vers MP3, convertisseur AIFF vers WAV, fichiers de test lecteur audio, test lecture AIFF, exemples conversion audio, test format Audio Interchange File Format'
         },
@@ -1810,7 +1810,7 @@ export const fr: SamplePageTranslations = {
       },
       amr: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple AMR gratuits - Fichiers de test Adaptive Multi-Rate Audio | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple AMR gratuits - Fichiers de test Adaptive Multi-Rate Audio | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple AMR Adaptive Multi-Rate gratuits pour tester la conversion audio, la lecture AMR, les outils de traitement audio et les logiciels multimédias mobiles. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs AMR vers MP3, les convertisseurs AMR vers WAV, les lecteurs audio, la compatibilité de lecture AMR et le support du format Adaptive Multi-Rate.',
           keywords: 'fichiers d\'exemple AMR, fichiers de test AMR, télécharger exemples AMR, fichiers de test AMR gratuits, fichiers Adaptive Multi-Rate, convertisseur AMR vers MP3, convertisseur AMR vers WAV, fichiers de test lecteur audio, test lecture AMR, exemples conversion audio, test format Adaptive Multi-Rate'
         },
@@ -1826,7 +1826,7 @@ export const fr: SamplePageTranslations = {
       },
       caf: {
         meta: {
-          title: 'Télécharger des fichiers d\'exemple CAF gratuits - Fichiers de test Core Audio Format | FomiPeek',
+          title: 'Télécharger des fichiers d\'exemple CAF gratuits - Fichiers de test Core Audio Format | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple CAF Core Audio Format gratuits pour tester la conversion audio, la lecture CAF, les outils de traitement audio et les logiciels multimédias macOS. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs CAF vers MP3, les convertisseurs CAF vers WAV, les lecteurs audio, la compatibilité de lecture CAF et le support du format Core Audio Format.',
           keywords: 'fichiers d\'exemple CAF, fichiers de test CAF, télécharger exemples CAF, fichiers de test CAF gratuits, fichiers Core Audio Format, convertisseur CAF vers MP3, convertisseur CAF vers WAV, fichiers de test lecteur audio, test lecture CAF, exemples conversion audio, test format Core Audio Format'
         },
@@ -1842,7 +1842,7 @@ export const fr: SamplePageTranslations = {
       },
       cue: {
         meta: {
-          title: 'Téléchargement de Fichiers d\'exemple CUE Gratuits - Fichiers de Test CUE Sheet pour Gravure de CD Audio | FomiPeek',
+          title: 'Téléchargement de Fichiers d\'exemple CUE Gratuits - Fichiers de Test CUE Sheet pour Gravure de CD Audio | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple CUE CUE sheet gratuits pour tester les outils de gravure de CD audio et d\'analyse de CUE sheet. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester l\'analyse de CUE sheet, les logiciels de gravure de CD audio, la validation de fichiers CUE et les outils d\'édition de CD.',
           keywords: 'fichiers d\'exemple CUE, fichiers de test CUE, télécharger exemples CUE, fichiers de test CUE gratuits, fichiers CUE sheet, test de gravure de CD audio, analyseur de CUE sheet, fichiers de test d\'édition de CD, validation de fichiers CUE, test d\'image de disque audio'
         },
@@ -1858,7 +1858,7 @@ export const fr: SamplePageTranslations = {
       },
       m4a: {
         meta: {
-          title: 'Téléchargement de Fichiers d\'exemple M4A Gratuits - Fichiers de Test M4A Audio pour Outils de Conversion | FomiPeek',
+          title: 'Téléchargement de Fichiers d\'exemple M4A Gratuits - Fichiers de Test M4A Audio pour Outils de Conversion | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple M4A M4A audio gratuits pour tester la conversion audio M4A, la lecture M4A, les outils de traitement audio et les logiciels multimédias. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs M4A vers MP3, les convertisseurs M4A vers WAV, les lecteurs audio, la compatibilité de lecture M4A et le support du format audio MPEG-4.',
           keywords: 'fichiers d\'exemple M4A, fichiers de test M4A, télécharger exemples M4A, fichiers de test M4A gratuits, fichiers audio M4A, convertisseur M4A vers MP3, convertisseur M4A vers WAV, fichiers de test de lecteur audio, test de lecture M4A, échantillons de conversion audio, test de format audio MPEG-4'
         },
@@ -1874,7 +1874,7 @@ export const fr: SamplePageTranslations = {
       },
       midi: {
         meta: {
-          title: 'Téléchargement de Fichiers d\'exemple MIDI Gratuits - Fichiers de Test MIDI Music pour Séquencement Musical | FomiPeek',
+          title: 'Téléchargement de Fichiers d\'exemple MIDI Gratuits - Fichiers de Test MIDI Music pour Séquencement Musical | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple MIDI MIDI music gratuits pour tester la lecture MIDI, la conversion MIDI, les outils de séquencement musical et les stations de travail audio numériques. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs MIDI vers MP3, les convertisseurs MIDI vers WAV, les séquenceurs MIDI, les logiciels de production musicale et le support du format Musical Instrument Digital Interface.',
           keywords: 'fichiers d\'exemple MIDI, fichiers de test MIDI, télécharger exemples MIDI, fichiers de test MIDI gratuits, fichiers music MIDI, convertisseur MIDI vers MP3, convertisseur MIDI vers WAV, test de séquenceur MIDI, fichiers de test de production musicale, test de lecture MIDI, échantillons de séquencement musical'
         },
@@ -1890,7 +1890,7 @@ export const fr: SamplePageTranslations = {
       },
       ace: {
         meta: {
-          title: 'Téléchargement de Fichiers d\'exemple ACE Gratuits - Fichiers de Test ACE Archive pour Outils d\'Extraction | FomiPeek',
+          title: 'Téléchargement de Fichiers d\'exemple ACE Gratuits - Fichiers de Test ACE Archive pour Outils d\'Extraction | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple ACE archive gratuits pour tester les outils d\'extraction et de compression d\'archives. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester l\'extraction d\'archives ACE, la décompression de fichiers ACE, les outils de gestion d\'archives et les logiciels de compression de fichiers.',
           keywords: 'fichiers d\'exemple ACE, fichiers de test ACE, télécharger exemples ACE, fichiers de test ACE gratuits, fichiers archive ACE, test d\'extraction ACE, test de décompression ACE, fichiers de test de gestion d\'archives, échantillons de compression de fichiers'
         },
@@ -1906,7 +1906,7 @@ export const fr: SamplePageTranslations = {
       },
       arj: {
         meta: {
-          title: 'Téléchargement de Fichiers d\'exemple ARJ Gratuits - Fichiers de Test ARJ Archive pour Outils d\'Extraction | FomiPeek',
+          title: 'Téléchargement de Fichiers d\'exemple ARJ Gratuits - Fichiers de Test ARJ Archive pour Outils d\'Extraction | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple ARJ archive gratuits pour tester les outils d\'extraction et de compression d\'archives. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester l\'extraction d\'archives ARJ, la décompression de fichiers ARJ, les outils de gestion d\'archives et les logiciels de compression de fichiers.',
           keywords: 'fichiers d\'exemple ARJ, fichiers de test ARJ, télécharger exemples ARJ, fichiers de test ARJ gratuits, fichiers archive ARJ, test d\'extraction ARJ, test de décompression ARJ, fichiers de test de gestion d\'archives, échantillons de compression de fichiers'
         },
@@ -1922,7 +1922,7 @@ export const fr: SamplePageTranslations = {
       },
       bz2: {
         meta: {
-          title: 'Téléchargement de Fichiers d\'exemple BZ2 Gratuits - Fichiers de Test BZ2 Compressed Archive | FomiPeek',
+          title: 'Téléchargement de Fichiers d\'exemple BZ2 Gratuits - Fichiers de Test BZ2 Compressed Archive | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple BZ2 bzip2 compressed archive gratuits pour tester les outils de décompression et de compression d\'archives. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester la décompression d\'archives BZ2, l\'extraction de fichiers BZ2, les outils de compression bzip2 et les logiciels de gestion d\'archives.',
           keywords: 'fichiers d\'exemple BZ2, fichiers de test BZ2, télécharger exemples BZ2, fichiers de test BZ2 gratuits, fichiers compressés BZ2, test de décompression BZ2, test de compression bzip2, fichiers de test d\'extraction d\'archives, échantillons de compression de fichiers'
         },
@@ -1938,7 +1938,7 @@ export const fr: SamplePageTranslations = {
       },
       gz: {
         meta: {
-          title: 'Téléchargement de Fichiers d\'exemple GZ Gratuits - Fichiers de Test GZ Gzip Compressed Archive | FomiPeek',
+          title: 'Téléchargement de Fichiers d\'exemple GZ Gratuits - Fichiers de Test GZ Gzip Compressed Archive | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple GZ gzip compressed archive gratuits pour tester les outils de décompression gzip, d\'extraction d\'archives et de compression de fichiers. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester la décompression d\'archives GZ, l\'extraction de fichiers GZ, les outils de compression gzip et les logiciels de gestion d\'archives.',
           keywords: 'fichiers d\'exemple GZ, fichiers de test GZ, télécharger exemples GZ, fichiers de test GZ gratuits, fichiers compressés GZ, test de décompression GZ, test de compression gzip, fichiers de test d\'extraction d\'archives, échantillons de compression de fichiers'
         },
@@ -1954,7 +1954,7 @@ export const fr: SamplePageTranslations = {
       },
       cab: {
         meta: {
-          title: 'Téléchargement de Fichiers d\'exemple CAB Gratuits - Fichiers de Test CAB Windows Cabinet Archive | FomiPeek',
+          title: 'Téléchargement de Fichiers d\'exemple CAB Gratuits - Fichiers de Test CAB Windows Cabinet Archive | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple CAB Windows cabinet archive gratuits pour tester les outils d\'extraction et de compression d\'archives. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester l\'extraction d\'archives CAB, la décompression de fichiers CAB, les outils Windows cabinet archive et les logiciels de gestion d\'archives.',
           keywords: 'fichiers d\'exemple CAB, fichiers de test CAB, télécharger exemples CAB, fichiers de test CAB gratuits, fichiers archive CAB, test d\'extraction CAB, test Windows cabinet archive, fichiers de test de gestion d\'archives, échantillons de compression de fichiers'
         },
@@ -1970,7 +1970,7 @@ export const fr: SamplePageTranslations = {
       },
       cpio: {
         meta: {
-          title: 'Téléchargement de Fichiers d\'exemple CPIO Gratuits - Fichiers de Test CPIO Archive pour Outils d\'Extraction | FomiPeek',
+          title: 'Téléchargement de Fichiers d\'exemple CPIO Gratuits - Fichiers de Test CPIO Archive pour Outils d\'Extraction | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple CPIO archive gratuits pour tester les outils d\'extraction et de compression d\'archives. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester l\'extraction d\'archives CPIO, la décompression de fichiers CPIO, les outils de gestion d\'archives et les logiciels de compression de fichiers.',
           keywords: 'fichiers d\'exemple CPIO, fichiers de test CPIO, télécharger exemples CPIO, fichiers de test CPIO gratuits, fichiers archive CPIO, test d\'extraction CPIO, test de décompression CPIO, fichiers de test de gestion d\'archives, échantillons de compression de fichiers'
         },
@@ -1986,7 +1986,7 @@ export const fr: SamplePageTranslations = {
       },
       zip: {
         meta: {
-          title: 'Téléchargement de Fichiers d\'exemple ZIP Gratuits - Fichiers de Test ZIP Archive pour Outils d\'Extraction | FomiPeek',
+          title: 'Téléchargement de Fichiers d\'exemple ZIP Gratuits - Fichiers de Test ZIP Archive pour Outils d\'Extraction | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple ZIP archive gratuits pour tester les outils d\'extraction et de compression d\'archives. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester l\'extraction d\'archives ZIP, la décompression de fichiers ZIP, les outils de gestion d\'archives et les logiciels de compression de fichiers.',
           keywords: 'fichiers d\'exemple ZIP, fichiers de test ZIP, télécharger exemples ZIP, fichiers de test ZIP gratuits, fichiers archive ZIP, test d\'extraction ZIP, test de décompression ZIP, fichiers de test de gestion d\'archives, échantillons de compression de fichiers'
         },
@@ -2002,7 +2002,7 @@ export const fr: SamplePageTranslations = {
       },
       dmg: {
         meta: {
-          title: 'Téléchargement de Fichiers d\'exemple DMG Gratuits - Fichiers de Test DMG macOS Disk Image | FomiPeek',
+          title: 'Téléchargement de Fichiers d\'exemple DMG Gratuits - Fichiers de Test DMG macOS Disk Image | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple DMG macOS disk image gratuits pour tester les outils de montage de disk image et d\'extraction DMG. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester le montage de disk image DMG, l\'extraction de fichiers DMG, les outils disk image macOS et les logiciels de traitement de disk image.',
           keywords: 'fichiers d\'exemple DMG, fichiers de test DMG, télécharger exemples DMG, fichiers de test DMG gratuits, fichiers disk image DMG, test de montage DMG, test disk image macOS, fichiers de test d\'extraction de disk image, échantillons de traitement de disk image'
         },
@@ -2018,7 +2018,7 @@ export const fr: SamplePageTranslations = {
       },
       img: {
         meta: {
-          title: 'Téléchargement de Fichiers d\'exemple IMG Gratuits - Fichiers de Test IMG Disk Image | FomiPeek',
+          title: 'Téléchargement de Fichiers d\'exemple IMG Gratuits - Fichiers de Test IMG Disk Image | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple IMG disk image gratuits pour tester les outils de montage de disk image, d\'extraction IMG et de traitement de disk image. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester le montage de disk image IMG, l\'extraction de fichiers IMG, les outils disk image et les logiciels de traitement de disk image.',
           keywords: 'fichiers d\'exemple IMG, fichiers de test IMG, télécharger exemples IMG, fichiers de test IMG gratuits, fichiers disk image IMG, test de montage IMG, test d\'extraction de disk image, fichiers de test de traitement de disk image, échantillons de disk image'
         },
@@ -2034,7 +2034,7 @@ export const fr: SamplePageTranslations = {
       },
       iso: {
         meta: {
-          title: 'Téléchargement de Fichiers d\'exemple ISO Gratuits - Fichiers de Test ISO Disk Image | FomiPeek',
+          title: 'Téléchargement de Fichiers d\'exemple ISO Gratuits - Fichiers de Test ISO Disk Image | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple ISO ISO disk image gratuits pour tester les outils de montage de disk image ISO, d\'extraction ISO et de traitement de disk image. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester le montage de disk image ISO, l\'extraction de fichiers ISO, les outils disk image et les logiciels de traitement de disk image.',
           keywords: 'fichiers d\'exemple ISO, fichiers de test ISO, télécharger exemples ISO, fichiers de test ISO gratuits, fichiers disk image ISO, test de montage ISO, test d\'extraction ISO, fichiers de test de traitement de disk image, échantillons de disk image'
         },
@@ -2050,7 +2050,7 @@ export const fr: SamplePageTranslations = {
       },
       kmz: {
         meta: {
-          title: 'Téléchargement de Fichiers d\'exemple KMZ Gratuits - Fichiers de Test KMZ Compressed KML | FomiPeek',
+          title: 'Téléchargement de Fichiers d\'exemple KMZ Gratuits - Fichiers de Test KMZ Compressed KML | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple KMZ compressed Keyhole Markup Language gratuits pour tester les outils d\'extraction KMZ, de traitement de données géographiques et d\'intégration Google Earth. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester l\'extraction de fichiers KMZ, la conversion KMZ vers KML, la compatibilité Google Earth, le traitement de données géographiques et les logiciels de cartographie.',
           keywords: 'fichiers d\'exemple KMZ, fichiers de test KMZ, télécharger exemples KMZ, fichiers de test KMZ gratuits, fichiers compressés KMZ, test d\'extraction KMZ, fichiers de test Google Earth, test de traitement de données géographiques, échantillons de logiciels de cartographie'
         },
@@ -2066,7 +2066,7 @@ export const fr: SamplePageTranslations = {
       },
       laz: {
         meta: {
-          title: 'Téléchargement de Fichiers d\'exemple LAZ Gratuits - Fichiers de Test LAZ Compressed LiDAR | FomiPeek',
+          title: 'Téléchargement de Fichiers d\'exemple LAZ Gratuits - Fichiers de Test LAZ Compressed LiDAR | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple LAZ compressed LiDAR point cloud data gratuits pour tester les outils d\'extraction LAZ, de traitement de point cloud et de cartographie 3D. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester l\'extraction de fichiers LAZ, la conversion LAZ vers LAS, le traitement de point cloud LiDAR, les logiciels de cartographie 3D et les outils d\'analyse de données géographiques.',
           keywords: 'fichiers d\'exemple LAZ, fichiers de test LAZ, télécharger exemples LAZ, fichiers de test LAZ gratuits, fichiers compressés LAZ, test d\'extraction LAZ, test point cloud LiDAR, fichiers de test de cartographie 3D, échantillons d\'analyse de données géographiques'
         },
@@ -2082,7 +2082,7 @@ export const fr: SamplePageTranslations = {
       },
       lha: {
         meta: {
-          title: 'Téléchargement de Fichiers d\'exemple LHA Gratuits - Fichiers de Test LHA Archive pour Outils d\'Extraction | FomiPeek',
+          title: 'Téléchargement de Fichiers d\'exemple LHA Gratuits - Fichiers de Test LHA Archive pour Outils d\'Extraction | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple LHA LHA archive gratuits pour tester les outils d\'extraction LHA, de décompression d\'archives et d\'archivage de fichiers. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester l\'extraction d\'archives LHA, la décompression de fichiers LHA, les outils de gestion d\'archives et les logiciels de compression de fichiers.',
           keywords: 'fichiers d\'exemple LHA, fichiers de test LHA, télécharger exemples LHA, fichiers de test LHA gratuits, fichiers archive LHA, test d\'extraction LHA, test de décompression LHA, fichiers de test de gestion d\'archives, échantillons de compression de fichiers'
         },
@@ -2098,7 +2098,7 @@ export const fr: SamplePageTranslations = {
       },
       lzh: {
         meta: {
-          title: 'Téléchargement de Fichiers d\'exemple LZH Gratuits - Fichiers de Test LZH Archive pour Outils d\'Extraction | FomiPeek',
+          title: 'Téléchargement de Fichiers d\'exemple LZH Gratuits - Fichiers de Test LZH Archive pour Outils d\'Extraction | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple LZH LZH archive gratuits pour tester les outils d\'extraction LZH, de décompression d\'archives et d\'archivage de fichiers. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester l\'extraction d\'archives LZH, la décompression de fichiers LZH, les outils de gestion d\'archives et les logiciels de compression de fichiers.',
           keywords: 'fichiers d\'exemple LZH, fichiers de test LZH, télécharger exemples LZH, fichiers de test LZH gratuits, fichiers archive LZH, test d\'extraction LZH, test de décompression LZH, fichiers de test de gestion d\'archives, échantillons de compression de fichiers'
         },
@@ -2114,7 +2114,7 @@ export const fr: SamplePageTranslations = {
       },
       lzma: {
         meta: {
-          title: 'Téléchargement de Fichiers d\'exemple LZMA Gratuits - Fichiers de Test LZMA Compressed Archive | FomiPeek',
+          title: 'Téléchargement de Fichiers d\'exemple LZMA Gratuits - Fichiers de Test LZMA Compressed Archive | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple LZMA LZMA compressed gratuits pour tester les outils de décompression LZMA, d\'extraction d\'archives et de compression de fichiers. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester la décompression d\'archives LZMA, l\'extraction de fichiers LZMA, les outils de compression LZMA et les logiciels de gestion d\'archives.',
           keywords: 'fichiers d\'exemple LZMA, fichiers de test LZMA, télécharger exemples LZMA, fichiers de test LZMA gratuits, fichiers compressés LZMA, test de décompression LZMA, test de compression LZMA, fichiers de test d\'extraction d\'archives, échantillons de compression de fichiers'
         },
@@ -2130,7 +2130,7 @@ export const fr: SamplePageTranslations = {
       },
       '7z': {
         meta: {
-          title: 'Téléchargement de Fichiers d\'exemple 7Z Gratuits - Fichiers de Test 7Z Archive pour Outils d\'Extraction | FomiPeek',
+          title: 'Téléchargement de Fichiers d\'exemple 7Z Gratuits - Fichiers de Test 7Z Archive pour Outils d\'Extraction | FormiPeek',
           description: 'Téléchargez des fichiers d\'exemple 7Z archive gratuits pour tester les outils de conversion et d\'extraction d\'archives. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester l\'extraction d\'archives 7Z, la décompression de fichiers 7Z, les outils de gestion d\'archives et les logiciels de compression de fichiers.',
           keywords: 'fichiers d\'exemple 7Z, fichiers de test 7Z, télécharger exemples 7Z, fichiers de test 7Z gratuits, fichiers archive 7Z, test d\'extraction 7Z, test de décompression 7Z, fichiers de test de gestion d\'archives, échantillons de compression de fichiers'
         },

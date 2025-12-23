@@ -34,7 +34,7 @@ export const ja: SamplePageTranslations = {
     formats: {
       docx: {
         meta: {
-          title: '無料DOCXサンプルファイルをダウンロード - テストファイル | FomiPeek',
+          title: '無料DOCXサンプルファイルをダウンロード - テストファイル | FormiPeek',
           description: 'テスト用の無料DOCXサンプルファイルをダウンロード。複数のファイルサイズを利用可能: 100 KB、1 MB、5 MB、50 MB、100 MB。ドキュメント変換および処理ツールのテストに最適です。',
           keywords: 'DOCXサンプルファイル、DOCXテストファイル、DOCXサンプルをダウンロード、無料DOCXテストファイル、ドキュメントサンプル、Microsoft Wordサンプル'
         },
@@ -50,7 +50,7 @@ export const ja: SamplePageTranslations = {
       },
       doc: {
         meta: {
-          title: '無料DOCサンプルファイルをダウンロード - Microsoft Word DOCテストファイル | FomiPeek',
+          title: '無料DOCサンプルファイルをダウンロード - Microsoft Word DOCテストファイル | FormiPeek',
           description: 'ドキュメント変換ツールをテストするための無料DOCサンプルファイルをダウンロード。複数のファイルサイズを利用可能: 100 KB、1 MB、5 MB、50 MB、100 MB。DOCからPDF、DOCからDOCXへのコンバーター、レガシーMicrosoft Wordドキュメント処理のテストに最適です。',
           keywords: 'DOCサンプルファイル、DOCテストファイル、DOCサンプルをダウンロード、無料DOCテストファイル、Microsoft Word DOCサンプル、DOCからPDFコンバーターテスト、DOCからDOCXへの変換、レガシーWordドキュメントサンプル、.docテストファイル、ドキュメント変換サンプル'
         },
@@ -66,7 +66,7 @@ export const ja: SamplePageTranslations = {
       },
       pdf: {
         meta: {
-          title: '無料PDFサンプルファイルをダウンロード - 変換ツール用PDFテストファイル | FomiPeek',
+          title: '無料PDFサンプルファイルをダウンロード - 変換ツール用PDFテストファイル | FormiPeek',
           description: 'PDFコンバーター、ビューアー、プロセッサーをテストするための無料PDFサンプルファイルをダウンロード。複数のファイルサイズを利用可能: 100 KB、1 MB、5 MB、50 MB、100 MB。PDFからWord、PDFからJPG、PDF圧縮、PDF編集ツールのテストに最適です。',
           keywords: 'PDFサンプルファイル、PDFテストファイル、PDFサンプルをダウンロード、無料PDFテストファイル、PDFコンバーターテストファイル、PDFからWordサンプル、PDFからJPGサンプル、PDF圧縮テスト、PDFビューアーテストファイル、.pdfテストファイル、ドキュメント変換サンプル'
         },
@@ -82,7 +82,7 @@ export const ja: SamplePageTranslations = {
       },
       odp: {
         meta: {
-          title: '無料ODPサンプルファイルをダウンロード - OpenDocumentプレゼンテーションテストファイル | FomiPeek',
+          title: '無料ODPサンプルファイルをダウンロード - OpenDocumentプレゼンテーションテストファイル | FormiPeek',
           description: 'プレゼンテーション変換ツールをテストするための無料ODPサンプルファイルをダウンロード。複数のファイルサイズを利用可能: 100 KB、1 MB、5 MB、50 MB、100 MB。ODPからPPT、ODPからPDFへのコンバーター、LibreOffice Impressファイル、OpenDocument形式処理のテストに最適です。',
           keywords: 'ODPサンプルファイル、ODPテストファイル、ODPサンプルをダウンロード、無料ODPテストファイル、OpenDocumentプレゼンテーションサンプル、ODPからPPTコンバーター、ODPからPDFコンバーター、LibreOffice Impressサンプル、.odpテストファイル、プレゼンテーション変換サンプル、OpenDocument形式テスト'
         },
@@ -98,7 +98,7 @@ export const ja: SamplePageTranslations = {
       },
       rtf: {
         meta: {
-          title: '無料RTFサンプルファイルをダウンロード - Rich Text Formatテストファイル | FomiPeek',
+          title: '無料RTFサンプルファイルをダウンロード - Rich Text Formatテストファイル | FormiPeek',
           description: 'Rich Text Format変換ツールをテストするための無料RTFサンプルファイルをダウンロード。複数のファイルサイズを利用可能: 100 KB、1 MB、5 MB、50 MB、100 MB。RTFからDOC、RTFからPDFへのコンバーター、ワードプロセッサー互換性、ドキュメント形式変換のテストに最適です。',
           keywords: 'RTFサンプルファイル、RTFテストファイル、RTFサンプルをダウンロード、無料RTFテストファイル、Rich Text Formatサンプル、RTFからDOCコンバーター、RTFからPDFコンバーター、.rtfテストファイル、ワードプロセッサーテストファイル、ドキュメント形式変換サンプル'
         },
@@ -114,7 +114,7 @@ export const ja: SamplePageTranslations = {
       },
       epub: {
         meta: {
-          title: '無料EPUBサンプルファイルをダウンロード - リーダー用eBookテストファイル | FomiPeek',
+          title: '無料EPUBサンプルファイルをダウンロード - リーダー用eBookテストファイル | FormiPeek',
           description: 'eBookリーダーと変換ツールをテストするための無料EPUBサンプルファイルをダウンロード。複数のファイルサイズを利用可能: 100 KB、1 MB、5 MB、50 MB、100 MB。EPUBリーダー、EPUBからPDF、EPUBからMOBIへのコンバーター、デジタル出版ツール、eBook形式互換性のテストに最適です。',
           keywords: 'EPUBサンプルファイル、EPUBテストファイル、EPUBサンプルをダウンロード、無料EPUBテストファイル、eBookサンプル、EPUBリーダーテスト、EPUBからPDFコンバーター、EPUBからMOBIコンバーター、.epubテストファイル、デジタル出版サンプル、eBook形式テストファイル'
         },
@@ -130,7 +130,7 @@ export const ja: SamplePageTranslations = {
       },
       'invoice-pdf': {
         meta: {
-          title: '無料請求書PDFサンプルファイルをダウンロード - 請求書ドキュメントテストファイル | FomiPeek',
+          title: '無料請求書PDFサンプルファイルをダウンロード - 請求書ドキュメントテストファイル | FormiPeek',
           description: '請求書処理および解析ツールをテストするための無料請求書PDFサンプルファイルをダウンロード。複数のファイルサイズを利用可能: 100 KB、1 MB、5 MB、50 MB、100 MB。請求書OCR、請求書データ抽出、請求書自動化、請求書PDF解析、ドキュメント管理システムのテストに最適です。',
           keywords: '請求書PDFサンプルファイル、請求書PDFテストファイル、請求書PDFサンプルをダウンロード、無料請求書PDFテストファイル、請求書ドキュメントサンプル、請求書OCRテスト、請求書データ抽出、請求書自動化テスト、請求書PDF解析、請求書処理サンプル、ドキュメント管理テストファイル'
         },
@@ -146,7 +146,7 @@ export const ja: SamplePageTranslations = {
       },
       mobi: {
         meta: {
-          title: '無料MOBIサンプルファイルをダウンロード - Kindle用MOBI eBookテストファイル | FomiPeek',
+          title: '無料MOBIサンプルファイルをダウンロード - Kindle用MOBI eBookテストファイル | FormiPeek',
           description: 'MOBI eBookリーダーと変換ツールをテストするための無料MOBIサンプルファイルをダウンロード。複数のファイルサイズを利用可能: 100 KB、1 MB、5 MB、50 MB、100 MB。Kindle互換性、MOBIからEPUB、MOBIからPDFへのコンバーター、eBook形式変換、デジタルリーディングアプリケーションのテストに最適です。',
           keywords: 'MOBIサンプルファイル、MOBIテストファイル、MOBIサンプルをダウンロード、無料MOBIテストファイル、MOBI eBookサンプル、Kindleテストファイル、MOBIからEPUBコンバーター、MOBIからPDFコンバーター、.mobiテストファイル、eBook変換サンプル、デジタルリーディングテストファイル'
         },
@@ -162,7 +162,7 @@ export const ja: SamplePageTranslations = {
       },
       csv: {
         meta: {
-          title: '無料CSVサンプルファイルをダウンロード - データ処理用CSVテストファイル | FomiPeek',
+          title: '無料CSVサンプルファイルをダウンロード - データ処理用CSVテストファイル | FormiPeek',
           description: 'データ処理および変換ツールをテストするための無料CSVサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。CSVからExcel、CSVからJSONへのコンバーター、データインポートツール、スプレッドシートアプリケーション、カンマ区切り値処理のテストに最適です。',
           keywords: 'CSVサンプルファイル、CSVテストファイル、CSVサンプルをダウンロード、無料CSVテストファイル、CSVからExcelコンバーター、CSVからJSONコンバーター、カンマ区切り値サンプル、データ処理テストファイル、スプレッドシートインポートサンプル、.csvテストファイル、データ変換サンプル'
         },
@@ -178,7 +178,7 @@ export const ja: SamplePageTranslations = {
       },
       xls: {
         meta: {
-          title: '無料XLSサンプルファイルをダウンロード - Microsoft Excel XLSテストファイル | FomiPeek',
+          title: '無料XLSサンプルファイルをダウンロード - Microsoft Excel XLSテストファイル | FormiPeek',
           description: 'Excel変換およびデータ処理ツールをテストするための無料XLSサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。XLSからXLSX、XLSからCSV、XLSからPDFへのコンバーター、Excelデータ抽出、レガシースプレッドシート処理のテストに最適です。',
           keywords: 'XLSサンプルファイル、XLSテストファイル、XLSサンプルをダウンロード、無料XLSテストファイル、Microsoft Excel XLSサンプル、XLSからXLSXコンバーター、XLSからCSVコンバーター、XLSからPDFコンバーター、Excelデータ抽出、.xlsテストファイル、スプレッドシート変換サンプル'
         },
@@ -194,7 +194,7 @@ export const ja: SamplePageTranslations = {
       },
       xlsx: {
         meta: {
-          title: '無料XLSXサンプルファイルをダウンロード - 変換ツール用Excel XLSXテストファイル | FomiPeek',
+          title: '無料XLSXサンプルファイルをダウンロード - 変換ツール用Excel XLSXテストファイル | FormiPeek',
           description: 'Excel変換およびデータ処理ツールをテストするための無料XLSXサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。XLSXからCSV、XLSXからPDF、XLSXからJSONへのコンバーター、Excelデータ分析、スプレッドシート自動化、Office Open XML処理のテストに最適です。',
           keywords: 'XLSXサンプルファイル、XLSXテストファイル、XLSXサンプルをダウンロード、無料XLSXテストファイル、Excel XLSXサンプル、XLSXからCSVコンバーター、XLSXからPDFコンバーター、XLSXからJSONコンバーター、Excelデータ分析、.xlsxテストファイル、スプレッドシート自動化サンプル、Office Open XMLサンプル'
         },
@@ -210,7 +210,7 @@ export const ja: SamplePageTranslations = {
       },
       xml: {
         meta: {
-          title: '無料XMLサンプルファイルをダウンロード - 解析および変換用XMLテストファイル | FomiPeek',
+          title: '無料XMLサンプルファイルをダウンロード - 解析および変換用XMLテストファイル | FormiPeek',
           description: 'XML解析、変換、データ処理ツールをテストするための無料XMLサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。XMLからJSON、XMLからCSVへのコンバーター、XML検証、構造化データ処理、マークアップ言語解析のテストに最適です。',
           keywords: 'XMLサンプルファイル、XMLテストファイル、XMLサンプルをダウンロード、無料XMLテストファイル、XMLからJSONコンバーター、XMLからCSVコンバーター、XML検証テスト、Extensible Markup Languageサンプル、構造化データサンプル、.xmlテストファイル、マークアップ言語解析サンプル'
         },
@@ -226,7 +226,7 @@ export const ja: SamplePageTranslations = {
       },
       html: {
         meta: {
-          title: '無料HTMLサンプルファイルをダウンロード - Web開発用HTMLテストファイル | FomiPeek',
+          title: '無料HTMLサンプルファイルをダウンロード - Web開発用HTMLテストファイル | FormiPeek',
           description: 'Web開発およびHTML処理ツールをテストするための無料HTMLサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。HTMLからPDF、HTMLからDOCXへのコンバーター、HTML検証、Webスクレイピング、ブラウザレンダリング、HyperText Markup Language処理のテストに最適です。',
           keywords: 'HTMLサンプルファイル、HTMLテストファイル、HTMLサンプルをダウンロード、無料HTMLテストファイル、HTMLからPDFコンバーター、HTMLからDOCXコンバーター、HTML検証テスト、HyperText Markup Languageサンプル、Web開発サンプル、.htmlテストファイル、Webスクレイピングサンプル、ブラウザレンダリングテスト'
         },
@@ -242,7 +242,7 @@ export const ja: SamplePageTranslations = {
       },
       ods: {
         meta: {
-          title: '無料ODSサンプルファイルをダウンロード - OpenDocumentスプレッドシートテストファイル | FomiPeek',
+          title: '無料ODSサンプルファイルをダウンロード - OpenDocumentスプレッドシートテストファイル | FormiPeek',
           description: 'スプレッドシート変換およびデータ処理ツールをテストするための無料ODSサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。ODSからExcel、ODSからCSVへのコンバーター、LibreOffice Calcファイル、OpenDocument形式処理、スプレッドシートデータ抽出のテストに最適です。',
           keywords: 'ODSサンプルファイル、ODSテストファイル、ODSサンプルをダウンロード、無料ODSテストファイル、OpenDocumentスプレッドシートサンプル、ODSからExcelコンバーター、ODSからCSVコンバーター、LibreOffice Calcサンプル、.odsテストファイル、スプレッドシート変換サンプル、OpenDocument形式テスト'
         },
@@ -258,7 +258,7 @@ export const ja: SamplePageTranslations = {
       },
       'ansible-yml': {
         meta: {
-          title: '無料Ansible YMLサンプルファイルをダウンロード - YAML設定テストファイル | FomiPeek',
+          title: '無料Ansible YMLサンプルファイルをダウンロード - YAML設定テストファイル | FormiPeek',
           description: 'YAML解析および設定管理ツールをテストするための無料Ansible YMLサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Ansible playbook、YAML検証、DevOps自動化、設定管理システム、infrastructure as codeツールのテストに最適です。',
           keywords: 'Ansible YMLサンプルファイル、YMLテストファイル、YMLサンプルをダウンロード、無料YMLテストファイル、Ansible playbookサンプル、YAML設定サンプル、YAML検証テスト、DevOps自動化サンプル、.ymlテストファイル、設定管理サンプル、infrastructure as codeサンプル'
         },
@@ -274,7 +274,7 @@ export const ja: SamplePageTranslations = {
       },
       'api-response-json': {
         meta: {
-          title: '無料API Response JSONサンプルファイルをダウンロード - API開発用JSONテストファイル | FomiPeek',
+          title: '無料API Response JSONサンプルファイルをダウンロード - API開発用JSONテストファイル | FormiPeek',
           description: 'JSON解析、API統合、Web開発ツールをテストするための無料API Response JSONサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。REST API応答、JSONバリデーター、APIモッキング、webhookテスト、データ交換形式処理のテストに最適です。',
           keywords: 'API Response JSONサンプルファイル、JSONテストファイル、JSONサンプルをダウンロード、無料JSONテストファイル、API応答サンプル、JSON解析サンプル、REST APIテストファイル、JSONバリデーターテスト、APIモッキングサンプル、webhookテストファイル、.jsonテストファイル、Web APIサンプル、データ交換形式サンプル'
         },
@@ -290,7 +290,7 @@ export const ja: SamplePageTranslations = {
       },
       'arduino-ino': {
         meta: {
-          title: '無料Arduino INOサンプルファイルをダウンロード - 組み込み開発用Arduino Sketchテストファイル | FomiPeek',
+          title: '無料Arduino INOサンプルファイルをダウンロード - 組み込み開発用Arduino Sketchテストファイル | FormiPeek',
           description: 'Arduino Sketchコンパイルおよび組み込みプログラミングツールをテストするための無料Arduino INOサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Arduino IDE、Sketch検証、マイクロコントローラー programming、組み込みシステム開発、IoTデバイステストのテストに最適です。',
           keywords: 'Arduino INOサンプルファイル、Arduino INOテストファイル、Arduino INOサンプルをダウンロード、無料Arduino INOテストファイル、Arduino Sketchサンプル、組み込みコードサンプル、Arduino IDEテストファイル、.inoテストファイル、マイクロコントローラーサンプル、IoT開発サンプル、組み込みプログラミングサンプル'
         },
@@ -306,7 +306,7 @@ export const ja: SamplePageTranslations = {
       },
       bat: {
         meta: {
-          title: '無料BATサンプルファイルをダウンロード - Windows自動化用バッチスクリプトテストファイル | FomiPeek',
+          title: '無料BATサンプルファイルをダウンロード - Windows自動化用バッチスクリプトテストファイル | FormiPeek',
           description: 'Windows自動化およびコマンドライン処理ツールをテストするための無料BATバッチスクリプトサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。バッチスクリプト実行、Windowsタスク自動化、コマンドラインツール、スクリプトバリデーター、システム管理ユーティリティのテストに最適です。',
           keywords: 'BATサンプルファイル、BATテストファイル、BATサンプルをダウンロード、無料BATテストファイル、バッチスクリプトサンプル、Windowsバッチファイル、自動化スクリプトサンプル、.batテストファイル、コマンドラインスクリプトサンプル、Windows自動化サンプル、スクリプト実行テストファイル'
         },
@@ -322,7 +322,7 @@ export const ja: SamplePageTranslations = {
       },
       asc: {
         meta: {
-          title: '無料ASCサンプルファイルをダウンロード - テキスト処理用ASCIIテキストテストファイル | FomiPeek',
+          title: '無料ASCサンプルファイルをダウンロード - テキスト処理用ASCIIテキストテストファイル | FormiPeek',
           description: 'テキスト処理およびエンコーディングツールをテストするための無料ASC ASCIIテキストサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。ASCIIエンコーディング、テキストファイル解析、プレーンテキストエディター、文字エンコーディング検証、テキスト形式変換ツールのテストに最適です。',
           keywords: 'ASCサンプルファイル、ASCテストファイル、ASCサンプルをダウンロード、無料ASCテストファイル、ASCIIテキストサンプル、プレーンテキストサンプル、.ascテストファイル、テキスト形式サンプル、ASCIIエンコーディングテストファイル、テキスト処理サンプル、文字エンコーディングサンプル'
         },
@@ -338,7 +338,7 @@ export const ja: SamplePageTranslations = {
       },
       bib: {
         meta: {
-          title: '無料BIBサンプルファイルをダウンロード - 学術研究用参考文献テストファイル | FomiPeek',
+          title: '無料BIBサンプルファイルをダウンロード - 学術研究用参考文献テストファイル | FormiPeek',
           description: '参考文献管理および引用ツールをテストするための無料BIB参考文献サンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。BibTeX形式処理、参考文献マネージャー、引用ジェネレーター、学術執筆ツール、LaTeX参考文献統合のテストに最適です。',
           keywords: 'BIBサンプルファイル、BIBテストファイル、BIBサンプルをダウンロード、無料BIBテストファイル、参考文献サンプル、BibTeXファイル、引用サンプル、.bibテストファイル、参考文献管理サンプル、学術引用サンプル、LaTeX参考文献サンプル'
         },
@@ -354,7 +354,7 @@ export const ja: SamplePageTranslations = {
       },
       c: {
         meta: {
-          title: '無料Cサンプルファイルをダウンロード - 開発用Cプログラミング言語テストファイル | FomiPeek',
+          title: '無料Cサンプルファイルをダウンロード - 開発用Cプログラミング言語テストファイル | FormiPeek',
           description: 'Cコードコンパイルおよび開発ツールをテストするための無料Cソースコードサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Cコンパイラー、構文チェッカー、コードアナライザー、GCC toolchain、組み込みC開発、システムプログラミングツールのテストに最適です。',
           keywords: 'Cサンプルファイル、Cテストファイル、Cサンプルをダウンロード、無料Cテストファイル、Cソースコードサンプル、Cプログラミングファイル、.cテストファイル、Cコンパイルテストファイル、GCCテストファイル、組み込みCサンプル、システムプログラミングサンプル'
         },
@@ -370,7 +370,7 @@ export const ja: SamplePageTranslations = {
       },
       'can-log': {
         meta: {
-          title: '無料CAN Logサンプルファイルをダウンロード - 自動車用Controller Area Networkテストファイル | FomiPeek',
+          title: '無料CAN Logサンプルファイルをダウンロード - 自動車用Controller Area Networkテストファイル | FormiPeek',
           description: 'CANバス解析および自動車診断ツールをテストするための無料CAN Logサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。CANバスアナライザー、自動車診断ツール、車両ネットワークプロトコル、OBD-IIテスト、組み込み自動車システムのテストに最適です。',
           keywords: 'CAN Logサンプルファイル、CAN Logテストファイル、CAN Logサンプルをダウンロード、無料CAN Logテストファイル、Controller Area Networkサンプル、CANバスサンプル、.logテストファイル、自動車診断サンプル、OBD-IIテストファイル、車両ネットワークサンプル、CANバスアナライザーテスト'
         },
@@ -386,7 +386,7 @@ export const ja: SamplePageTranslations = {
       },
       cmd: {
         meta: {
-          title: '無料CMDサンプルファイルをダウンロード - 自動化用Windowsコマンドスクリプトテストファイル | FomiPeek',
+          title: '無料CMDサンプルファイルをダウンロード - 自動化用Windowsコマンドスクリプトテストファイル | FormiPeek',
           description: 'バッチスクリプト実行およびWindows自動化ツールをテストするための無料CMD Windowsコマンドスクリプトサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Windowsコマンドプロンプト、バッチファイル実行、スクリプト自動化、システム管理、Windowsタスクスケジューリングツールのテストに最適です。',
           keywords: 'CMDサンプルファイル、CMDテストファイル、CMDサンプルをダウンロード、無料CMDテストファイル、Windowsコマンドスクリプトサンプル、バッチスクリプトサンプル、.cmdテストファイル、コマンドスクリプトサンプル、Windows自動化サンプル、システム管理サンプル'
         },
@@ -402,7 +402,7 @@ export const ja: SamplePageTranslations = {
       },
       conf: {
         meta: {
-          title: '無料CONFサンプルファイルをダウンロード - システム設定用設定ファイルテストファイル | FomiPeek',
+          title: '無料CONFサンプルファイルをダウンロード - システム設定用設定ファイルテストファイル | FormiPeek',
           description: '設定ファイル解析およびシステム設定ツールをテストするための無料CONF設定サンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。サーバー設定、アプリケーション設定、設定ファイルバリデーター、システム管理ツール、ソフトウェア展開ユーティリティのテストに最適です。',
           keywords: 'CONFサンプルファイル、CONFテストファイル、CONFサンプルをダウンロード、無料CONFテストファイル、設定ファイルサンプル、サーバー設定サンプル、.confテストファイル、設定ファイルサンプル、システム設定サンプル、アプリケーション設定サンプル'
         },
@@ -418,7 +418,7 @@ export const ja: SamplePageTranslations = {
       },
       'config-ini': {
         meta: {
-          title: '無料Config INIサンプルファイルをダウンロード - アプリケーション用INI設定テストファイル | FomiPeek',
+          title: '無料Config INIサンプルファイルをダウンロード - アプリケーション用INI設定テストファイル | FormiPeek',
           description: 'INIファイル解析および設定管理ツールをテストするための無料Config INI INI設定サンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。INIパーサー、アプリケーション設定、設定管理、Windows INIファイル、ソフトウェア設定ユーティリティのテストに最適です。',
           keywords: 'Config INIサンプルファイル、INIテストファイル、INIサンプルをダウンロード、無料INIテストファイル、INI設定サンプル、INI設定サンプル、.iniテストファイル、設定ファイルサンプル、Windows INIサンプル、アプリケーション設定サンプル'
         },
@@ -434,7 +434,7 @@ export const ja: SamplePageTranslations = {
       },
       cpp: {
         meta: {
-          title: '無料CPPサンプルファイルをダウンロード - 開発用C++プログラミング言語テストファイル | FomiPeek',
+          title: '無料CPPサンプルファイルをダウンロード - 開発用C++プログラミング言語テストファイル | FormiPeek',
           description: 'C++コードコンパイルおよび開発ツールをテストするための無料CPP C++ソースコードサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。C++コンパイラー、構文チェッカー、コードアナライザー、GCC/G++ toolchain、モダンC++機能、オブジェクト指向プログラミングツールのテストに最適です。',
           keywords: 'CPPサンプルファイル、CPPテストファイル、CPPサンプルをダウンロード、無料CPPテストファイル、C++ソースコードサンプル、C++コードファイル、.cppテストファイル、C++プログラミングファイル、C++コンパイルテストファイル、GCCテストファイル、モダンC++サンプル'
         },
@@ -450,7 +450,7 @@ export const ja: SamplePageTranslations = {
       },
       h: {
         meta: {
-          title: '無料Hサンプルファイルをダウンロード - プログラミング用C/C++ヘッダーファイルテストファイル | FomiPeek',
+          title: '無料Hサンプルファイルをダウンロード - プログラミング用C/C++ヘッダーファイルテストファイル | FormiPeek',
           description: 'ヘッダーファイル処理および開発ツールをテストするための無料H C/C++ヘッダーファイルサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。C/C++コンパイラー、ヘッダーファイルインクルード、プリプロセッサーツール、コード組織、クロスプラットフォーム開発ユーティリティのテストに最適です。',
           keywords: 'Hサンプルファイル、Hテストファイル、Hサンプルをダウンロード、無料Hテストファイル、Cヘッダーサンプル、C++ヘッダーサンプル、ヘッダーファイルサンプル、.hテストファイル、C/C++ヘッダーファイル、プログラミングヘッダーサンプル、コードヘッダーファイル'
         },
@@ -466,7 +466,7 @@ export const ja: SamplePageTranslations = {
       },
       hpp: {
         meta: {
-          title: '無料HPPサンプルファイルをダウンロード - モダンC++開発用C++ヘッダーファイルテストファイル | FomiPeek',
+          title: '無料HPPサンプルファイルをダウンロード - モダンC++開発用C++ヘッダーファイルテストファイル | FormiPeek',
           description: 'C++ヘッダーファイル処理および開発ツールをテストするための無料HPP C++ヘッダーファイルサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。C++コンパイラー、header-onlyライブラリー、テンプレートメタプログラミング、モダンC++機能、高度なC++開発ユーティリティのテストに最適です。',
           keywords: 'HPPサンプルファイル、HPPテストファイル、HPPサンプルをダウンロード、無料HPPテストファイル、C++ヘッダーサンプル、ヘッダーファイルサンプル、.hppテストファイル、C++ヘッダーファイル、プログラミングヘッダーサンプル、コードヘッダーファイル、C++開発ファイル、モダンC++ヘッダーサンプル'
         },
@@ -482,7 +482,7 @@ export const ja: SamplePageTranslations = {
       },
       hex: {
         meta: {
-          title: '無料HEXサンプルファイルをダウンロード - ファームウェアおよび組み込みシステム開発用hexテストファイル | FomiPeek',
+          title: '無料HEXサンプルファイルをダウンロード - ファームウェアおよび組み込みシステム開発用hexテストファイル | FormiPeek',
           description: 'ファームウェアプログラミング、組み込みシステム開発、バイナリデータ分析をテストするための無料HEX hexサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。hexエディター、ファームウェアローダー、マイクロコントローラープログラミング、組み込み開発ツールのテストに最適です。',
           keywords: 'HEXサンプルファイル、HEXテストファイル、HEXサンプルダウンロード、無料HEXテストファイル、hexファイル、hexファームウェアファイル、.hexテストファイル、hex組み込みファイル、hexマイクロコントローラーファイル、hexエディターテストファイル、ファームウェアプログラミングサンプル、hexバイナリファイル'
         },
@@ -498,7 +498,7 @@ export const ja: SamplePageTranslations = {
       },
       cs: {
         meta: {
-          title: '無料CSサンプルファイルをダウンロード - .NET開発用C#ソースコードテストファイル | FomiPeek',
+          title: '無料CSサンプルファイルをダウンロード - .NET開発用C#ソースコードテストファイル | FormiPeek',
           description: 'C#コンパイル、.NET開発、Visual Studioツールをテストするための無料CS C#ソースコードサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。C#コンパイラー、.NETフレームワーク、Visual Studio IDE、コード分析ツール、C#開発環境のテストに最適です。',
           keywords: 'CSサンプルファイル、CSテストファイル、CSサンプルダウンロード、無料CSテストファイル、C#ソースコードサンプル、.NETコードファイル、.csテストファイル、C#プログラミングファイル、Visual Studioテストファイル、.NET開発サンプル、C#コンパイルテストファイル'
         },
@@ -514,7 +514,7 @@ export const ja: SamplePageTranslations = {
       },
       css: {
         meta: {
-          title: '無料CSSサンプルファイルをダウンロード - Web開発用スタイルシートテストファイル | FomiPeek',
+          title: '無料CSSサンプルファイルをダウンロード - Web開発用スタイルシートテストファイル | FormiPeek',
           description: 'Webスタイリング、CSS解析、フロントエンドツールをテストするための無料CSSスタイルシートサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。CSSバリデーター、プリプロセッサー（SASS、LESS）、CSSミニファイアー、Webブラウザー、フロントエンド開発フレームワークのテストに最適です。',
           keywords: 'CSSサンプルファイル、CSSテストファイル、CSSサンプルダウンロード、無料CSSテストファイル、スタイルシートサンプル、CSSスタイルシートファイル、.cssテストファイル、Webスタイリングファイル、CSSパーサーテストファイル、フロントエンド開発サンプル、CSSフレームワークテストファイル'
         },
@@ -530,7 +530,7 @@ export const ja: SamplePageTranslations = {
       },
       csr: {
         meta: {
-          title: '無料CSRサンプルファイルをダウンロード - SSL/TLS用証明書署名リクエストテストファイル | FomiPeek',
+          title: '無料CSRサンプルファイルをダウンロード - SSL/TLS用証明書署名リクエストテストファイル | FormiPeek',
           description: 'SSL/TLS証明書生成、PKI管理、セキュリティツールをテストするための無料CSR証明書署名リクエストサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。証明機関、OpenSSL、SSL証明書生成、PKIインフラストラクチャ、セキュリティ証明書管理ツールのテストに最適です。',
           keywords: 'CSRサンプルファイル、CSRテストファイル、CSRサンプルダウンロード、無料CSRテストファイル、証明書署名リクエストサンプル、SSL証明書ファイル、.csrテストファイル、PKI証明書ファイル、OpenSSLテストファイル、SSL/TLS証明書サンプル、証明機関テストファイル'
         },
@@ -546,7 +546,7 @@ export const ja: SamplePageTranslations = {
       },
       'customer-database-sql': {
         meta: {
-          title: '無料Customer Database SQLサンプルファイルをダウンロード - SQLデータベーステストファイル | FomiPeek',
+          title: '無料Customer Database SQLサンプルファイルをダウンロード - SQLデータベーステストファイル | FormiPeek',
           description: 'SQLデータベース操作、クエリ実行、データベース管理ツールをテストするための無料Customer Database SQLサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。SQLパーサー、データベースインポートツール、SQLite、MySQL、PostgreSQL、データベース管理システムのテストに最適です。',
           keywords: 'Customer Database SQLサンプルファイル、SQLデータベーステストファイル、SQLサンプルダウンロード、無料SQLテストファイル、SQLデータベースファイル、.sqlテストファイル、SQLクエリファイル、データベースインポートサンプル、SQLiteテストファイル、MySQLサンプル、PostgreSQLテストファイル'
         },
@@ -562,7 +562,7 @@ export const ja: SamplePageTranslations = {
       },
       dbf: {
         meta: {
-          title: '無料DBFサンプルファイルをダウンロード - データ管理用dBASEデータベーステストファイル | FomiPeek',
+          title: '無料DBFサンプルファイルをダウンロード - データ管理用dBASEデータベーステストファイル | FormiPeek',
           description: 'データベース操作、データインポート/エクスポート、レガシーデータベース形式をテストするための無料DBF dBASEデータベースサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。dBASE互換性、データベースコンバーター、データ移行ツール、スプレッドシートアプリケーション、データベース管理システムのテストに最適です。',
           keywords: 'DBFサンプルファイル、DBFテストファイル、DBFサンプルダウンロード、無料DBFテストファイル、dBASEデータベースファイル、.dbfテストファイル、データベース形式ファイル、レガシーデータベースサンプル、dBASE互換性テストファイル、データインポートサンプル'
         },
@@ -578,7 +578,7 @@ export const ja: SamplePageTranslations = {
       },
       dem: {
         meta: {
-          title: '無料DEMサンプルファイルをダウンロード - GISおよびマッピング用デジタル標高モデルテストファイル | FomiPeek',
+          title: '無料DEMサンプルファイルをダウンロード - GISおよびマッピング用デジタル標高モデルテストファイル | FormiPeek',
           description: 'GISアプリケーション、地形マッピング、地理空間分析ツールをテストするための無料DEMデジタル標高モデルサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。GISソフトウェア、地形可視化、標高データ処理、マッピングアプリケーション、地理空間分析ツールのテストに最適です。',
           keywords: 'DEMサンプルファイル、DEMテストファイル、DEMサンプルダウンロード、無料DEMテストファイル、デジタル標高モデルファイル、.demテストファイル、GIS標高ファイル、地形データサンプル、地理空間データファイル、マッピングテストファイル、標高モデルサンプル'
         },
@@ -594,7 +594,7 @@ export const ja: SamplePageTranslations = {
       },
       der: {
         meta: {
-          title: '無料DERサンプルファイルをダウンロード - Distinguished Encoding Rules証明書テストファイル | FomiPeek',
+          title: '無料DERサンプルファイルをダウンロード - Distinguished Encoding Rules証明書テストファイル | FormiPeek',
           description: 'SSL/TLS証明書、PKI管理、セキュリティツールをテストするための無料DER Distinguished Encoding Rules証明書サンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。証明書解析、OpenSSL、PKIインフラストラクチャ、SSL証明書検証、セキュリティ証明書管理ツールのテストに最適です。',
           keywords: 'DERサンプルファイル、DERテストファイル、DERサンプルダウンロード、無料DERテストファイル、Distinguished Encoding Rulesファイル、.derテストファイル、証明書ファイル、SSL証明書サンプル、PKI証明書ファイル、OpenSSLテストファイル、証明書解析サンプル'
         },
@@ -610,7 +610,7 @@ export const ja: SamplePageTranslations = {
       },
       dmp: {
         meta: {
-          title: '無料DMPサンプルファイルをダウンロード - デバッグおよび分析用メモリダンプテストファイル | FomiPeek',
+          title: '無料DMPサンプルファイルをダウンロード - デバッグおよび分析用メモリダンプテストファイル | FormiPeek',
           description: 'クラッシュ分析、デバッグツール、システム診断をテストするための無料DMPメモリダンプサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。デバッガー、クラッシュ分析ツール、メモリアナライザー、システム診断ツール、フォレンジック分析アプリケーションのテストに最適です。',
           keywords: 'DMPサンプルファイル、DMPテストファイル、DMPサンプルダウンロード、無料DMPテストファイル、メモリダンプファイル、.dmpテストファイル、クラッシュダンプファイル、デバッグファイル、システムダンプサンプル、メモリ分析ファイル、クラッシュ分析テストファイル'
         },
@@ -626,7 +626,7 @@ export const ja: SamplePageTranslations = {
       },
       'docker-compose-yml': {
         meta: {
-          title: '無料Docker Compose YMLサンプルファイルをダウンロード - Docker Compose設定テストファイル | FomiPeek',
+          title: '無料Docker Compose YMLサンプルファイルをダウンロード - Docker Compose設定テストファイル | FormiPeek',
           description: 'Dockerコンテナオーケストレーション、マルチコンテナアプリケーション、DevOpsツールをテストするための無料Docker Compose YML設定サンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Docker Compose、コンテナオーケストレーション、YAML解析、DevOps自動化、コンテナ化アプリケーションデプロイメントツールのテストに最適です。',
           keywords: 'Docker Compose YMLサンプルファイル、docker-composeテストファイル、docker-composeサンプルダウンロード、無料docker-composeテストファイル、Docker Compose YAMLファイル、.ymlテストファイル、コンテナオーケストレーションファイル、DevOps設定サンプル、Docker Composeテストファイル、マルチコンテナ設定サンプル'
         },
@@ -642,7 +642,7 @@ export const ja: SamplePageTranslations = {
       },
       dockerfile: {
         meta: {
-          title: '無料Dockerfileサンプルファイルをダウンロード - Dockerコンテナビルドテストファイル | FomiPeek',
+          title: '無料Dockerfileサンプルファイルをダウンロード - Dockerコンテナビルドテストファイル | FormiPeek',
           description: 'コンテナ化、Dockerビルド、DevOpsツールをテストするための無料Dockerfile Dockerコンテナビルドサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Dockerビルド、コンテナイメージ作成、Dockerfile解析、コンテナ化ツール、DevOps自動化プラットフォームのテストに最適です。',
           keywords: 'Dockerfileサンプルファイル、Dockerfileテストファイル、Dockerfileサンプルダウンロード、無料Dockerfileテストファイル、Dockerコンテナファイル、Dockerfileテストファイル、コンテナビルドファイル、Dockerビルドサンプル、コンテナ化テストファイル、DevOps Dockerサンプル'
         },
@@ -658,7 +658,7 @@ export const ja: SamplePageTranslations = {
       },
       editorconfig: {
         meta: {
-          title: '無料EditorConfigサンプルファイルをダウンロード - エディター設定テストファイル | FomiPeek',
+          title: '無料EditorConfigサンプルファイルをダウンロード - エディター設定テストファイル | FormiPeek',
           description: 'コードエディター設定、フォーマット一貫性、開発ツールをテストするための無料EditorConfigエディター設定サンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。EditorConfigパーサー、コードエディタープラグイン、フォーマットツール、IDE設定、開発環境セットアップツールのテストに最適です。',
           keywords: 'EditorConfigサンプルファイル、EditorConfigテストファイル、EditorConfigサンプルダウンロード、無料EditorConfigテストファイル、エディター設定ファイル、.editorconfigテストファイル、コードエディター設定ファイル、IDE設定サンプル、フォーマット設定ファイル、エディター設定テストファイル'
         },
@@ -674,7 +674,7 @@ export const ja: SamplePageTranslations = {
       },
       ini: {
         meta: {
-          title: '無料INIサンプルファイルをダウンロード - アプリケーション用INI設定テストファイル | FomiPeek',
+          title: '無料INIサンプルファイルをダウンロード - アプリケーション用INI設定テストファイル | FormiPeek',
           description: 'アプリケーション設定、INIファイル解析、設定管理ツールをテストするための無料INI設定サンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。INIパーサー、アプリケーション設定、設定管理、Windows INIファイル、ソフトウェア設定ユーティリティのテストに最適です。',
           keywords: 'INIサンプルファイル、INIテストファイル、INIサンプルダウンロード、無料INIテストファイル、INI設定ファイル、.iniテストファイル、アプリケーション設定ファイル、INI設定サンプル、Windows INIファイル、設定ファイルサンプル、INI解析テストファイル'
         },
@@ -690,7 +690,7 @@ export const ja: SamplePageTranslations = {
       },
       intelhex: {
         meta: {
-          title: '無料IntelHexサンプルファイルをダウンロード - ファームウェア開発用Intel hexテストファイル | FomiPeek',
+          title: '無料IntelHexサンプルファイルをダウンロード - ファームウェア開発用Intel hexテストファイル | FormiPeek',
           description: 'ファームウェアプログラミング、組み込みシステム開発、マイクロコントローラーツールをテストするための無料IntelHex Intel hexサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。IntelHexパーサー、ファームウェアローダー、マイクロコントローラープログラミング、組み込み開発ツール、hexファイル処理アプリケーションのテストに最適です。',
           keywords: 'IntelHexサンプルファイル、IntelHexテストファイル、IntelHexサンプルダウンロード、無料IntelHexテストファイル、Intel hexファイル、.intelhexテストファイル、hexファームウェアファイル、hex組み込みファイル、hexマイクロコントローラーファイル、IntelHexパーサーテストファイル、ファームウェアプログラミングサンプル'
         },
@@ -706,7 +706,7 @@ export const ja: SamplePageTranslations = {
       },
       ipynb: {
         meta: {
-          title: '無料IPYNBサンプルファイルをダウンロード - データサイエンス用Jupyter Notebookテストファイル | FomiPeek',
+          title: '無料IPYNBサンプルファイルをダウンロード - データサイエンス用Jupyter Notebookテストファイル | FormiPeek',
           description: 'データサイエンスワークフロー、Python実行、ノートブック分析ツールをテストするための無料IPYNB Jupyter Notebookサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Jupyter Notebook、Pythonデータサイエンスツール、ノートブックビューアー、データ分析アプリケーション、科学計算プラットフォームのテストに最適です。',
           keywords: 'IPYNBサンプルファイル、IPYNBテストファイル、IPYNBサンプルダウンロード、無料IPYNBテストファイル、Jupyter Notebookファイル、.ipynbテストファイル、Pythonノートブックファイル、データサイエンスノートブックサンプル、Jupyterテストファイル、ノートブック分析ファイル、データサイエンスワークフローサンプル'
         },
@@ -722,7 +722,7 @@ export const ja: SamplePageTranslations = {
       },
       java: {
         meta: {
-          title: '無料Javaサンプルファイルをダウンロード - 開発用Javaソースコードテストファイル | FomiPeek',
+          title: '無料Javaサンプルファイルをダウンロード - 開発用Javaソースコードテストファイル | FormiPeek',
           description: 'Javaコンパイル、JVMアプリケーション、開発ツールをテストするための無料Java Javaソースコードサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Javaコンパイラー、JVM、IDEサポート（Eclipse、IntelliJ）、Javaビルドツール（Maven、Gradle）、Java開発環境のテストに最適です。',
           keywords: 'Javaサンプルファイル、Javaテストファイル、Javaサンプルダウンロード、無料Javaテストファイル、Javaソースコードファイル、.javaテストファイル、Javaプログラミングファイル、JVMテストファイル、Javaコンパイルサンプル、Java IDEテストファイル、Java開発サンプル'
         },
@@ -738,7 +738,7 @@ export const ja: SamplePageTranslations = {
       },
       jks: {
         meta: {
-          title: '無料JKSサンプルファイルをダウンロード - SSL/TLSセキュリティ用Java KeyStoreテストファイル | FomiPeek',
+          title: '無料JKSサンプルファイルをダウンロード - SSL/TLSセキュリティ用Java KeyStoreテストファイル | FormiPeek',
           description: 'SSL/TLS証明書ストレージ、Javaセキュリティ、PKI管理ツールをテストするための無料JKS Java KeyStoreサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Java KeyStore管理、JKS解析、SSL証明書ストレージ、Javaセキュリティツール、PKIインフラストラクチャのテストに最適です。',
           keywords: 'JKSサンプルファイル、JKSテストファイル、JKSサンプルダウンロード、無料JKSテストファイル、Java KeyStoreファイル、.jksテストファイル、SSL証明書ファイル、Javaセキュリティファイル、keystoreテストファイル、PKI証明書サンプル、Java KeyStore管理テストファイル'
         },
@@ -754,7 +754,7 @@ export const ja: SamplePageTranslations = {
       },
       json: {
         meta: {
-          title: '無料JSONサンプルファイルをダウンロード - Web開発用JSONデータテストファイル | FomiPeek',
+          title: '無料JSONサンプルファイルをダウンロード - Web開発用JSONデータテストファイル | FormiPeek',
           description: 'JSON解析、API統合、Web開発ツールをテストするための無料JSON JSONデータサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。JSONパーサー、APIレスポンス、データ交換形式、Webアプリケーション、JSON検証ツールのテストに最適です。',
           keywords: 'JSONサンプルファイル、JSONテストファイル、JSONサンプルダウンロード、無料JSONテストファイル、JSONデータファイル、.jsonテストファイル、JSON APIファイル、JSONパーサーテストファイル、データ交換サンプル、JSON Webファイル、JSON検証テストファイル'
         },
@@ -770,7 +770,7 @@ export const ja: SamplePageTranslations = {
       },
       jsonl: {
         meta: {
-          title: '無料JSONLサンプルファイルをダウンロード - データ処理用JSON Linesテストファイル | FomiPeek',
+          title: '無料JSONLサンプルファイルをダウンロード - データ処理用JSON Linesテストファイル | FormiPeek',
           description: 'データ処理、JSONストリーミング、ビッグデータツールをテストするための無料JSONL JSON Linesサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。JSONLパーサー、データストリーミングアプリケーション、ETLツール、ビッグデータ処理、ログファイル分析ツールのテストに最適です。',
           keywords: 'JSONLサンプルファイル、JSONLテストファイル、JSONLサンプルダウンロード、無料JSONLテストファイル、JSON Linesファイル、.jsonlテストファイル、JSONストリーミングファイル、データ処理サンプル、JSON ETLファイル、JSONビッグデータサンプル、JSONログ分析ファイル'
         },
@@ -786,7 +786,7 @@ export const ja: SamplePageTranslations = {
       },
       js: {
         meta: {
-          title: '無料JSサンプルファイルをダウンロード - Web開発用JavaScriptソースコードテストファイル | FomiPeek',
+          title: '無料JSサンプルファイルをダウンロード - Web開発用JavaScriptソースコードテストファイル | FormiPeek',
           description: 'JavaScript実行、Web開発、フロントエンドツールをテストするための無料JS JavaScriptソースコードサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。JavaScriptエンジン、Node.js、Webブラウザー、JavaScriptミニファイアー、コード分析ツール、フロントエンド開発フレームワークのテストに最適です。',
           keywords: 'JSサンプルファイル、JSテストファイル、JSサンプルダウンロード、無料JSテストファイル、JavaScriptソースコードファイル、.jsテストファイル、JavaScriptプログラミングファイル、Node.jsテストファイル、JavaScript Webファイル、JSミニファイアーテストファイル、フロントエンド開発サンプル'
         },
@@ -802,7 +802,7 @@ export const ja: SamplePageTranslations = {
       },
       jsx: {
         meta: {
-          title: '無料JSXサンプルファイルをダウンロード - フロントエンド開発用React JSXテストファイル | FomiPeek',
+          title: '無料JSXサンプルファイルをダウンロード - フロントエンド開発用React JSXテストファイル | FormiPeek',
           description: 'React開発、JSXコンパイル、フロントエンドフレームワークをテストするための無料JSX React JSXサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。React、JSXトランスパイラー（Babel）、フロントエンドビルドツール、React開発環境、モダンJavaScriptフレームワークのテストに最適です。',
           keywords: 'JSXサンプルファイル、JSXテストファイル、JSXサンプルダウンロード、無料JSXテストファイル、React JSXファイル、.jsxテストファイル、Reactコンポーネントファイル、JSXトランスパイラーテストファイル、JSXフロントエンドファイル、React開発サンプル、Babel JSXテストファイル'
         },
@@ -818,7 +818,7 @@ export const ja: SamplePageTranslations = {
       },
       jwt: {
         meta: {
-          title: '無料JWTサンプルファイルをダウンロード - APIセキュリティ用JSON Web Tokenテストファイル | FomiPeek',
+          title: '無料JWTサンプルファイルをダウンロード - APIセキュリティ用JSON Web Tokenテストファイル | FormiPeek',
           description: 'API認証、JWTトークン解析、セキュリティツールをテストするための無料JWT JSON Web Tokenサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。JWTパーサー、API認証、トークン検証、OAuth 2.0、セキュリティテストツールのテストに最適です。',
           keywords: 'JWTサンプルファイル、JWTテストファイル、JWTサンプルダウンロード、無料JWTテストファイル、JSON Web Tokenファイル、.jwtテストファイル、認証トークンファイル、APIセキュリティファイル、JWTパーサーテストファイル、OAuthトークンサンプル、セキュリティテストファイル'
         },
@@ -834,7 +834,7 @@ export const ja: SamplePageTranslations = {
       },
       key: {
         meta: {
-          title: '無料KEYサンプルファイルをダウンロード - SSL/TLSセキュリティ用秘密鍵テストファイル | FomiPeek',
+          title: '無料KEYサンプルファイルをダウンロード - SSL/TLSセキュリティ用秘密鍵テストファイル | FormiPeek',
           description: 'SSL/TLS証明書、暗号化操作、セキュリティツールをテストするための無料KEY秘密鍵サンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。秘密鍵解析、OpenSSL、SSL証明書生成、暗号化ライブラリー、セキュリティ証明書管理ツールのテストに最適です。',
           keywords: 'KEYサンプルファイル、KEYテストファイル、KEYサンプルダウンロード、無料KEYテストファイル、秘密鍵ファイル、.keyテストファイル、SSL鍵ファイル、暗号化鍵ファイル、OpenSSLテストファイル、セキュリティ鍵サンプル、証明書鍵テストファイル'
         },
@@ -850,7 +850,7 @@ export const ja: SamplePageTranslations = {
       },
       kml: {
         meta: {
-          title: '無料KMLサンプルファイルをダウンロード - GISおよびマッピング用Keyhole Markup Languageテストファイル | FomiPeek',
+          title: '無料KMLサンプルファイルをダウンロード - GISおよびマッピング用Keyhole Markup Languageテストファイル | FormiPeek',
           description: 'GISアプリケーション、地図可視化、地理空間ツールをテストするための無料KML Keyhole Markup Language地理データサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Google Earth、GISソフトウェア、地図レンダリング、地理データ処理、地理空間分析ツールのテストに最適です。',
           keywords: 'KMLサンプルファイル、KMLテストファイル、KMLサンプルダウンロード、無料KMLテストファイル、Keyhole Markup Languageファイル、.kmlテストファイル、地理データファイル、地図データサンプル、KML GISファイル、Google Earthテストファイル、地理空間データサンプル'
         },
@@ -866,7 +866,7 @@ export const ja: SamplePageTranslations = {
       },
       kt: {
         meta: {
-          title: '無料KTサンプルファイルをダウンロード - Android開発用Kotlinソースコードテストファイル | FomiPeek',
+          title: '無料KTサンプルファイルをダウンロード - Android開発用Kotlinソースコードテストファイル | FormiPeek',
           description: 'Kotlinコンパイル、Android開発、JVMアプリケーションをテストするための無料KT Kotlinソースコードサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Kotlinコンパイラー、Android Studio、Kotlin/JVM、IDEサポート、Kotlin開発環境のテストに最適です。',
           keywords: 'KTサンプルファイル、KTテストファイル、KTサンプルダウンロード、無料KTテストファイル、Kotlinソースコードファイル、.ktテストファイル、Kotlinプログラミングファイル、Android Kotlinファイル、Kotlinコンパイラーテストファイル、Kotlin JVMサンプル、Kotlin開発テストファイル'
         },
@@ -882,7 +882,7 @@ export const ja: SamplePageTranslations = {
       },
       log: {
         meta: {
-          title: '無料LOGサンプルファイルをダウンロード - デバッグおよびシステム分析用ログテストファイル | FomiPeek',
+          title: '無料LOGサンプルファイルをダウンロード - デバッグおよびシステム分析用ログテストファイル | FormiPeek',
           description: 'ログ解析、システム分析、デバッグツールをテストするための無料LOGログサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。ログアナライザー、システム監視ツール、デバッグアプリケーション、ログ集約システム、システム診断ツールのテストに最適です。',
           keywords: 'LOGサンプルファイル、LOGテストファイル、LOGサンプルダウンロード、無料LOGテストファイル、ログファイル、.logテストファイル、システムログファイル、アプリケーションログサンプル、ログパーサーテストファイル、ログデバッグファイル、システムログ分析サンプル'
         },
@@ -898,7 +898,7 @@ export const ja: SamplePageTranslations = {
       },
       lua: {
         meta: {
-          title: '無料LUAサンプルファイルをダウンロード - ゲーム開発および自動化用Luaスクリプトテストファイル | FomiPeek',
+          title: '無料LUAサンプルファイルをダウンロード - ゲーム開発および自動化用Luaスクリプトテストファイル | FormiPeek',
           description: 'Lua実行、ゲーム開発、自動化ツールをテストするための無料LUA Luaスクリプトサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Luaインタープリター、ゲームエンジン、スクリプト環境、自動化ツール、組み込みLuaアプリケーションのテストに最適です。',
           keywords: 'LUAサンプルファイル、LUAテストファイル、LUAサンプルダウンロード、無料LUAテストファイル、Luaスクリプトファイル、.luaテストファイル、Luaプログラミングファイル、ゲームスクリプトファイル、Luaインタープリターテストファイル、自動化スクリプトサンプル、組み込みLuaテストファイル'
         },
@@ -914,7 +914,7 @@ export const ja: SamplePageTranslations = {
       },
       m3u: {
         meta: {
-          title: '無料M3Uサンプルファイルをダウンロード - メディアプレーヤー用M3Uプレイリストテストファイル | FomiPeek',
+          title: '無料M3Uサンプルファイルをダウンロード - メディアプレーヤー用M3Uプレイリストテストファイル | FormiPeek',
           description: 'メディアプレーヤー、プレイリスト解析、audio/videoストリーミングツールをテストするための無料M3U M3Uプレイリストサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。メディアプレーヤー、プレイリストマネージャー、ストリーミングアプリケーション、audioプレーヤー、videoプレーヤーソフトウェアのテストに最適です。',
           keywords: 'M3Uサンプルファイル、M3Uテストファイル、M3Uサンプルダウンロード、無料M3Uテストファイル、M3Uプレイリストファイル、.m3uテストファイル、メディアプレイリストファイル、audioプレイリストサンプル、videoプレイリストファイル、メディアプレーヤーテストファイル、ストリーミングプレイリストサンプル'
         },
@@ -930,7 +930,7 @@ export const ja: SamplePageTranslations = {
       },
       m3u8: {
         meta: {
-          title: '無料M3U8サンプルファイルをダウンロード - videoストリーミング用M3U8 HLSプレイリストテストファイル | FomiPeek',
+          title: '無料M3U8サンプルファイルをダウンロード - videoストリーミング用M3U8 HLSプレイリストテストファイル | FormiPeek',
           description: 'videoストリーミング、HLSプレーヤー、メディア配信ツールをテストするための無料M3U8 M3U8 HLS (HTTP Live Streaming)プレイリストサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。HLSプレーヤー、videoストリーミングプラットフォーム、適応ビットレートストリーミング、メディアサーバー、video配信システムのテストに最適です。',
           keywords: 'M3U8サンプルファイル、M3U8テストファイル、M3U8サンプルダウンロード、無料M3U8テストファイル、M3U8 HLSプレイリストファイル、.m3u8テストファイル、HTTP Live Streamingファイル、videoストリーミングプレイリストサンプル、HLSプレーヤーテストファイル、適応ストリーミングサンプル、メディアサーバープレイリストファイル'
         },
@@ -946,7 +946,7 @@ export const ja: SamplePageTranslations = {
       },
       makefile: {
         meta: {
-          title: '無料Makefileサンプルファイルをダウンロード - Makefileビルド設定テストファイル | FomiPeek',
+          title: '無料Makefileサンプルファイルをダウンロード - Makefileビルド設定テストファイル | FormiPeek',
           description: 'ビルド自動化、Makeビルドシステム、開発ツールをテストするための無料Makefileビルド設定サンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Makeビルドシステム、ビルド自動化ツール、C/C++コンパイル、ビルドスクリプト、開発ビルド環境のテストに最適です。',
           keywords: 'Makefileサンプルファイル、Makefileテストファイル、Makefileサンプルダウンロード、無料Makefileテストファイル、Makefileビルドファイル、Makefileテストファイル、ビルド設定ファイル、Makeビルドシステムサンプル、C/C++ビルドファイル、ビルド自動化テストファイル、Makefileコンパイルサンプル'
         },
@@ -962,7 +962,7 @@ export const ja: SamplePageTranslations = {
       },
       mbtiles: {
         meta: {
-          title: '無料MBTilesサンプルファイルをダウンロード - MBTilesマップタイルデータベーステストファイル | FomiPeek',
+          title: '無料MBTilesサンプルファイルをダウンロード - MBTilesマップタイルデータベーステストファイル | FormiPeek',
           description: 'マップレンダリング、GISアプリケーション、マッピングツールをテストするための無料MBTilesマップタイルデータベースサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。マップタイルサーバー、GISソフトウェア、マップレンダリングエンジン、モバイルマッピングアプリケーション、オフラインマップツールのテストに最適です。',
           keywords: 'MBTilesサンプルファイル、MBTilesテストファイル、MBTilesサンプルダウンロード、無料MBTilesテストファイル、MBTilesマップタイルファイル、.mbtilesテストファイル、マップデータベースファイル、GISタイルサンプル、マップレンダリングファイル、モバイルマップテストファイル、オフラインマップタイルサンプル'
         },
@@ -978,7 +978,7 @@ export const ja: SamplePageTranslations = {
       },
       md: {
         meta: {
-          title: '無料MDサンプルファイルをダウンロード - Markdownドキュメントテストファイル | FomiPeek',
+          title: '無料MDサンプルファイルをダウンロード - Markdownドキュメントテストファイル | FormiPeek',
           description: 'Markdown解析、ドキュメントツール、コンテンツ管理システムをテストするための無料MD Markdownドキュメントサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Markdownパーサー、ドキュメントジェネレーター、静的サイトジェネレーター、GitHub Markdown、コンテンツ管理プラットフォームのテストに最適です。',
           keywords: 'MDサンプルファイル、MDテストファイル、MDサンプルダウンロード、無料MDテストファイル、Markdownファイル、.mdテストファイル、Markdownドキュメントファイル、Markdownパーサーテストファイル、GitHub Markdownサンプル、静的サイトジェネレーターファイル、ドキュメントジェネレーターテストファイル'
         },
@@ -994,7 +994,7 @@ export const ja: SamplePageTranslations = {
       },
       mdx: {
         meta: {
-          title: '無料MDXサンプルファイルをダウンロード - ドキュメント用MDX React Markdownテストファイル | FomiPeek',
+          title: '無料MDXサンプルファイルをダウンロード - ドキュメント用MDX React Markdownテストファイル | FormiPeek',
           description: 'Reactドキュメント、静的サイトジェネレーター、コンテンツ管理システムをテストするための無料MDX MDX (Markdown + JSX)サンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。MDXパーサー、Reactドキュメントツール、Next.js、Gatsby、静的サイトジェネレーター、モダンドキュメントプラットフォームのテストに最適です。',
           keywords: 'MDXサンプルファイル、MDXテストファイル、MDXサンプルダウンロード、無料MDXテストファイル、MDX React Markdownファイル、.mdxテストファイル、Reactドキュメントファイル、MDXパーサーテストファイル、MDX Next.jsサンプル、MDX Gatsbyファイル、静的サイトジェネレーターMDXテストファイル'
         },
@@ -1010,7 +1010,7 @@ export const ja: SamplePageTranslations = {
       },
       apk: {
         meta: {
-          title: '無料APKサンプルファイルをダウンロード - Androidアプリケーションパッケージテストファイル | FomiPeek',
+          title: '無料APKサンプルファイルをダウンロード - Androidアプリケーションパッケージテストファイル | FormiPeek',
           description: 'Androidアプリのインストール、APK分析、リバースエンジニアリング、モバイル開発ツールをテストするための無料APK Androidアプリケーションパッケージサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。APKインストーラー、Androidエミュレーター、アプリアナライザー、セキュリティスキャナー、モバイルアプリ開発プラットフォームのテストに最適です。',
           keywords: 'APKサンプルファイル、APKテストファイル、APKサンプルダウンロード、無料APKテストファイル、Android APKファイル、.apkテストファイル、Androidアプリパッケージファイル、APKインストーラーテストファイル、Androidエミュレーターテストファイル、モバイルアプリ開発サンプル、APKリバースエンジニアリングファイル'
         },
@@ -1026,7 +1026,7 @@ export const ja: SamplePageTranslations = {
       },
       appimage: {
         meta: {
-          title: '無料AppImageサンプルファイルをダウンロード - Linuxポータブルアプリケーションテストファイル | FomiPeek',
+          title: '無料AppImageサンプルファイルをダウンロード - Linuxポータブルアプリケーションテストファイル | FormiPeek',
           description: 'Linuxアプリの配布、AppImageの実行、ディストリビューション間の互換性をテストするための無料AppImage Linuxポータブルアプリケーションサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。AppImageランナー、Linuxアプリケーションランチャー、ポータブルアプリツール、ユニバーサルLinuxソフトウェア配布のテストに最適です。',
           keywords: 'AppImageサンプルファイル、AppImageテストファイル、AppImageサンプルダウンロード、無料AppImageテストファイル、Linux AppImageファイル、.AppImageテストファイル、Linuxポータブルアプリ、AppImageランナーテストファイル、Linuxアプリケーションファイル、ディストリビューション間アプリ、ユニバーサルLinuxソフトウェアサンプル'
         },
@@ -1042,7 +1042,7 @@ export const ja: SamplePageTranslations = {
       },
       elf: {
         meta: {
-          title: '無料ELFサンプルファイルをダウンロード - Linux/Unix用Executable and Linkable Formatテストファイル | FomiPeek',
+          title: '無料ELFサンプルファイルをダウンロード - Linux/Unix用Executable and Linkable Formatテストファイル | FormiPeek',
           description: 'Linux/Unixバイナリ分析、ELFパース、リバースエンジニアリング、システムデバッグをテストするための無料ELF Executable and Linkable Formatサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。ELFアナライザー、バイナリ逆アセンブラー、リバースエンジニアリングツール、システムデバッガー、Linux実行可能ファイル分析プラットフォームのテストに最適です。',
           keywords: 'ELFサンプルファイル、ELFテストファイル、ELFサンプルダウンロード、無料ELFテストファイル、Linux ELFファイル、.elfテストファイル、Unix実行可能ファイル、ELFバイナリ分析ファイル、リバースエンジニアリングELFファイル、Linuxバイナリファイル、ELF逆アセンブラーテストファイル'
         },
@@ -1058,7 +1058,7 @@ export const ja: SamplePageTranslations = {
       },
       exe: {
         meta: {
-          title: '無料EXEサンプルファイルをダウンロード - Windows実行可能ファイルテストファイル | FomiPeek',
+          title: '無料EXEサンプルファイルをダウンロード - Windows実行可能ファイルテストファイル | FormiPeek',
           description: 'Windowsアプリケーションの実行、EXE分析、バイナリパース、Windows開発ツールをテストするための無料EXE Windows実行可能ファイルサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Windows実行可能ファイルアナライザー、バイナリ逆アセンブラー、リバースエンジニアリングツール、マルウェア分析プラットフォーム、Windowsアプリケーション開発のテストに最適です。',
           keywords: 'EXEサンプルファイル、EXEテストファイル、EXEサンプルダウンロード、無料EXEテストファイル、Windows EXEファイル、.exeテストファイル、Windows実行可能ファイル、EXEバイナリ分析ファイル、Windowsアプリケーションファイル、リバースエンジニアリングEXEファイル、Windowsバイナリ逆アセンブラーテストファイル'
         },
@@ -1074,7 +1074,7 @@ export const ja: SamplePageTranslations = {
       },
       ipa: {
         meta: {
-          title: '無料IPAサンプルファイルをダウンロード - iOSアプリケーションパッケージテストファイル | FomiPeek',
+          title: '無料IPAサンプルファイルをダウンロード - iOSアプリケーションパッケージテストファイル | FormiPeek',
           description: 'iOSアプリのインストール、IPA分析、iOSアプリの配布、モバイル開発ツールをテストするための無料IPA iOSアプリケーションパッケージサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。IPAインストーラー、iOSシミュレーター、アプリアナライザー、iOS開発ツール、モバイルアプリ配布プラットフォームのテストに最適です。',
           keywords: 'IPAサンプルファイル、IPAテストファイル、IPAサンプルダウンロード、無料IPAテストファイル、iOS IPAファイル、.ipaテストファイル、iOSアプリパッケージファイル、IPAインストーラーテストファイル、iOSシミュレーターテストファイル、モバイルアプリ開発サンプル、iOSアプリ配布ファイル'
         },
@@ -1090,7 +1090,7 @@ export const ja: SamplePageTranslations = {
       },
       jar: {
         meta: {
-          title: '無料JARサンプルファイルをダウンロード - Javaアーカイブテストファイル | FomiPeek',
+          title: '無料JARサンプルファイルをダウンロード - Javaアーカイブテストファイル | FormiPeek',
           description: 'Javaアプリケーションの実行、JAR抽出、JAR分析、Java開発ツールをテストするための無料JAR Javaアーカイブサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。JAR抽出ツール、Javaランタイム環境、JARアナライザー、Java開発ツール、Javaアプリケーションデプロイメントプラットフォームのテストに最適です。',
           keywords: 'JARサンプルファイル、JARテストファイル、JARサンプルダウンロード、無料JARテストファイル、Java JARファイル、.jarテストファイル、Javaアーカイブファイル、JAR抽出ツールテストファイル、Javaランタイムテストファイル、Java開発サンプル、JAR分析ファイル'
         },
@@ -1106,7 +1106,7 @@ export const ja: SamplePageTranslations = {
       },
       crx: {
         meta: {
-          title: '無料CRXサンプルファイルをダウンロード - Chrome拡張機能パッケージテストファイル | FomiPeek',
+          title: '無料CRXサンプルファイルをダウンロード - Chrome拡張機能パッケージテストファイル | FormiPeek',
           description: 'Chrome拡張機能のインストール、CRX分析、ブラウザ拡張機能の開発、Web拡張機能ツールをテストするための無料CRX Chrome拡張機能パッケージサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。CRXインストーラー、Chrome拡張機能アナライザー、ブラウザ拡張機能開発ツール、Web拡張機能配布プラットフォームのテストに最適です。',
           keywords: 'CRXサンプルファイル、CRXテストファイル、CRXサンプルダウンロード、無料CRXテストファイル、Chrome CRXファイル、.crxテストファイル、Chrome拡張機能ファイル、CRXインストーラーテストファイル、ブラウザ拡張機能ファイル、Web拡張機能開発サンプル、Chrome拡張機能分析ファイル'
         },
@@ -1122,7 +1122,7 @@ export const ja: SamplePageTranslations = {
       },
       '3ds': {
         meta: {
-          title: '無料3DSサンプルファイルをダウンロード - 3Dプリンティングおよびモデリング用3Dモデルテストファイル | FomiPeek',
+          title: '無料3DSサンプルファイルをダウンロード - 3Dプリンティングおよびモデリング用3Dモデルテストファイル | FormiPeek',
           description: '3Dモデリングソフトウェア、3Dプリンティングツール、メッシュ変換、3D可視化アプリケーションをテストするための無料3DS 3Dモデルサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。3Dモデルビューアー、3Dプリンター、CADソフトウェア、メッシュエディター、3Dグラフィックスアプリケーションのテストに最適です。',
           keywords: '3DSサンプルファイル、3DSテストファイル、3DSサンプルダウンロード、無料3DSテストファイル、3Dモデル3DSファイル、.3dsテストファイル、3Dモデリングファイル、3Dプリンティングテストファイル、CAD 3DSファイル、メッシュモデルファイル、3Dグラフィックスサンプル'
         },
@@ -1138,7 +1138,7 @@ export const ja: SamplePageTranslations = {
       },
       '3mf': {
         meta: {
-          title: '無料3MFサンプルファイルをダウンロード - 3Dプリンティング用3D Manufacturing Formatテストファイル | FomiPeek',
+          title: '無料3MFサンプルファイルをダウンロード - 3Dプリンティング用3D Manufacturing Formatテストファイル | FormiPeek',
           description: '3Dプリンティング、付加製造、3Dモデルスライシング、3Dプリンターの互換性をテストするための無料3MF 3D Manufacturing Formatサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。3Dプリンタースライサー、付加製造ソフトウェア、3MFビューアー、3Dプリンティングワークフロー、最新の3D製造プラットフォームのテストに最適です。',
           keywords: '3MFサンプルファイル、3MFテストファイル、3MFサンプルダウンロード、無料3MFテストファイル、3Dプリンティング3MFファイル、.3mfテストファイル、付加製造ファイル、3Dプリンタースライサーテストファイル、3MFビューアーテストファイル、3D製造サンプル、最新の3Dプリンティングファイル'
         },
@@ -1154,7 +1154,7 @@ export const ja: SamplePageTranslations = {
       },
       ai: {
         meta: {
-          title: '無料AIサンプルファイルをダウンロード - Adobe Illustratorベクターグラフィックステストファイル | FomiPeek',
+          title: '無料AIサンプルファイルをダウンロード - Adobe Illustratorベクターグラフィックステストファイル | FormiPeek',
           description: 'ベクターグラフィック編集、AIファイル変換、デザインソフトウェアの互換性、グラフィックデザインツールをテストするための無料AI Adobe Illustratorベクターグラフィックスサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Adobe Illustrator、ベクターグラフィックスエディター、AIファイルコンバーター、デザインソフトウェア、プロフェッショナルグラフィックデザインプラットフォームのテストに最適です。',
           keywords: 'AIサンプルファイル、AIテストファイル、AIサンプルダウンロード、無料AIテストファイル、Adobe Illustrator AIファイル、.aiテストファイル、ベクターグラフィックスファイル、Illustratorテストファイル、デザインソフトウェアファイル、ベクター編集サンプル、グラフィックデザインAIファイル'
         },
@@ -1170,7 +1170,7 @@ export const ja: SamplePageTranslations = {
       },
       ase: {
         meta: {
-          title: '無料ASEサンプルファイルをダウンロード - Asepriteスプライトアニメーションテストファイル | FomiPeek',
+          title: '無料ASEサンプルファイルをダウンロード - Asepriteスプライトアニメーションテストファイル | FormiPeek',
           description: 'ピクセルアート編集、スプライトアニメーション、ゲーム開発ツール、2Dアニメーションソフトウェアをテストするための無料ASE Asepriteスプライトアニメーションサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Aseprite、ピクセルアートエディター、スプライトアニメーションツール、ゲーム開発ソフトウェア、2Dアニメーションプラットフォームのテストに最適です。',
           keywords: 'ASEサンプルファイル、ASEテストファイル、ASEサンプルダウンロード、無料ASEテストファイル、Aseprite ASEファイル、.aseテストファイル、スプライトアニメーションファイル、ピクセルアートテストファイル、ゲーム開発ファイル、2Dアニメーションサンプル、Asepriteテストファイル'
         },
@@ -1186,7 +1186,7 @@ export const ja: SamplePageTranslations = {
       },
       'animation-fbx': {
         meta: {
-          title: '無料Animation FBXサンプルファイルをダウンロード - Autodesk FBX 3Dアニメーションテストファイル | FomiPeek',
+          title: '無料Animation FBXサンプルファイルをダウンロード - Autodesk FBX 3Dアニメーションテストファイル | FormiPeek',
           description: '3Dアニメーション、キャラクターリギング、モーションキャプチャデータ、3Dグラフィックスソフトウェアをテストするための無料Animation FBX Autodesk FBX 3Dアニメーションサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。3Dアニメーションソフトウェア、ゲームエンジン、モーションキャプチャツール、キャラクターアニメーションプラットフォーム、3Dグラフィックスアプリケーションのテストに最適です。',
           keywords: 'Animation FBXサンプルファイル、FBXアニメーションテストファイル、FBXアニメーションサンプルダウンロード、無料FBXアニメーションテストファイル、Autodesk FBXファイル、.fbxアニメーションテストファイル、3Dアニメーションファイル、キャラクターアニメーションテストファイル、モーションキャプチャファイル、3Dグラフィックスアニメーションサンプル、ゲームエンジンFBXファイル'
         },
@@ -1202,7 +1202,7 @@ export const ja: SamplePageTranslations = {
       },
       assetbundle: {
         meta: {
-          title: '無料AssetBundleサンプルファイルをダウンロード - ゲーム開発用Unity AssetBundleテストファイル | FomiPeek',
+          title: '無料AssetBundleサンプルファイルをダウンロード - ゲーム開発用Unity AssetBundleテストファイル | FormiPeek',
           description: 'Unityゲーム開発、アセット読み込み、ゲームリソース管理、Unityエンジンツールをテストするための無料AssetBundle Unity AssetBundleサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Unityエンジン、ゲームアセットローダー、Unity開発ツール、ゲームリソースマネージャー、Unityゲーム開発プラットフォームのテストに最適です。',
           keywords: 'AssetBundleサンプルファイル、AssetBundleテストファイル、AssetBundleサンプルダウンロード、無料AssetBundleテストファイル、Unity AssetBundleファイル、Unityアセットファイル、ゲーム開発ファイル、Unityエンジンテストファイル、ゲームアセットローダーテストファイル、Unity開発サンプル、ゲームリソース管理ファイル'
         },
@@ -1218,7 +1218,7 @@ export const ja: SamplePageTranslations = {
       },
       blend: {
         meta: {
-          title: '無料BLENDサンプルファイルをダウンロード - Blender 3Dプロジェクトテストファイル | FomiPeek',
+          title: '無料BLENDサンプルファイルをダウンロード - Blender 3Dプロジェクトテストファイル | FormiPeek',
           description: '3Dモデリング、Blenderプロジェクトの互換性、3Dアニメーションワークフロー、3Dグラフィックスソフトウェアをテストするための無料BLEND Blender 3Dプロジェクトサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Blenderソフトウェア、3Dモデリングツール、Blenderプロジェクトビューアー、3Dアニメーションプラットフォーム、プロフェッショナル3Dグラフィックスアプリケーションのテストに最適です。',
           keywords: 'BLENDサンプルファイル、BLENDテストファイル、BLENDサンプルダウンロード、無料BLENDテストファイル、Blender BLENDファイル、.blendテストファイル、Blenderプロジェクトファイル、3Dモデリングテストファイル、Blenderテストファイル、3Dアニメーションサンプル、3DグラフィックスBLENDファイル'
         },
@@ -1234,7 +1234,7 @@ export const ja: SamplePageTranslations = {
       },
       bvh: {
         meta: {
-          title: '無料BVHサンプルファイルをダウンロード - Biovision Hierarchyモーションキャプチャテストファイル | FomiPeek',
+          title: '無料BVHサンプルファイルをダウンロード - Biovision Hierarchyモーションキャプチャテストファイル | FormiPeek',
           description: 'モーションキャプチャデータ、キャラクターアニメーション、スケレタルアニメーションシステム、3Dアニメーションソフトウェアをテストするための無料BVH Biovision Hierarchyモーションキャプチャサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。モーションキャプチャビューアー、キャラクターアニメーションツール、スケレタルアニメーションシステム、3Dアニメーションプラットフォーム、モーションキャプチャ分析ソフトウェアのテストに最適です。',
           keywords: 'BVHサンプルファイル、BVHテストファイル、BVHサンプルダウンロード、無料BVHテストファイル、Biovision Hierarchy BVHファイル、.bvhテストファイル、モーションキャプチャファイル、キャラクターアニメーションテストファイル、スケレタルアニメーションファイル、3DアニメーションBVHサンプル、モーションキャプチャ分析ファイル'
         },
@@ -1250,7 +1250,7 @@ export const ja: SamplePageTranslations = {
       },
       dwg: {
         meta: {
-          title: '無料DWGサンプルファイルをダウンロード - CADデザイン用AutoCAD図面テストファイル | FomiPeek',
+          title: '無料DWGサンプルファイルをダウンロード - CADデザイン用AutoCAD図面テストファイル | FormiPeek',
           description: 'CADソフトウェア、AutoCADの互換性、技術図面ツール、エンジニアリングデザインアプリケーションをテストするための無料DWG AutoCAD図面サンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。AutoCAD、CADビューアー、技術図面ソフトウェア、エンジニアリングデザインツール、プロフェッショナルCADプラットフォームのテストに最適です。',
           keywords: 'DWGサンプルファイル、DWGテストファイル、DWGサンプルダウンロード、無料DWGテストファイル、AutoCAD DWGファイル、.dwgテストファイル、CAD図面ファイル、AutoCADテストファイル、技術図面ファイル、エンジニアリングデザインサンプル、CADソフトウェアDWGファイル'
         },
@@ -1266,7 +1266,7 @@ export const ja: SamplePageTranslations = {
       },
       dxf: {
         meta: {
-          title: '無料DXFサンプルファイルをダウンロード - Drawing Exchange FormatテストファイルAutoCAD | FomiPeek',
+          title: '無料DXFサンプルファイルをダウンロード - Drawing Exchange FormatテストファイルAutoCAD | FormiPeek',
           description: 'CADソフトウェア、DXFコンバーター、技術図面ツールをテストするための無料DXF Drawing Exchange Formatサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。AutoCAD、CADビューアー、DXFパーサー、図面ファイル交換アプリケーションのテストに最適。',
           keywords: 'DXFサンプルファイル、DXFテストファイル、DXFサンプルをダウンロード、無料DXFテストファイル、AutoCAD DXFファイル、Drawing Exchange Formatファイル、CAD DXFファイル、DXFコンバーターテストファイル、技術図面ファイル、DXFパーサーテストファイル、CADファイル交換サンプル'
         },
@@ -1282,7 +1282,7 @@ export const ja: SamplePageTranslations = {
       },
       ifc: {
         meta: {
-          title: '無料IFCサンプルファイルをダウンロード - Industry Foundation Classes BIMテストファイル | FomiPeek',
+          title: '無料IFCサンプルファイルをダウンロード - Industry Foundation Classes BIMテストファイル | FormiPeek',
           description: 'BIMソフトウェア、IFCビューアー、建築情報モデリングツール、建設管理アプリケーションをテストするための無料IFC Industry Foundation Classesサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Revit、ArchiCAD、IFCパーサー、BIMビューアー、建築設計ソフトウェアのテストに最適。',
           keywords: 'IFCサンプルファイル、IFCテストファイル、IFCサンプルをダウンロード、無料IFCテストファイル、Industry Foundation Classesファイル、BIM IFCファイル、建築情報モデリングファイル、IFCビューアーテストファイル、建設ソフトウェアファイル、IFCパーサーテストファイル、BIM交換フォーマットサンプル'
         },
@@ -1298,7 +1298,7 @@ export const ja: SamplePageTranslations = {
       },
       iges: {
         meta: {
-          title: '無料IGESサンプルファイルをダウンロード - Initial Graphics Exchange Specification CADテストファイル | FomiPeek',
+          title: '無料IGESサンプルファイルをダウンロード - Initial Graphics Exchange Specification CADテストファイル | FormiPeek',
           description: 'CADソフトウェア、IGESコンバーター、3Dモデリングツール、エンジニアリング設計アプリケーションをテストするための無料IGES Initial Graphics Exchange Specificationサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。CADシステム、IGESパーサー、3Dモデル交換ツール、エンジニアリングソフトウェアのテストに最適。',
           keywords: 'IGESサンプルファイル、IGESテストファイル、IGESサンプルをダウンロード、無料IGESテストファイル、Initial Graphics Exchange Specificationファイル、CAD IGESファイル、3Dモデル交換ファイル、IGESコンバーターテストファイル、エンジニアリング設計ファイル、IGESパーサーテストファイル、CAD交換フォーマットサンプル'
         },
@@ -1314,7 +1314,7 @@ export const ja: SamplePageTranslations = {
       },
       igs: {
         meta: {
-          title: '無料IGSサンプルファイルをダウンロード - Initial Graphics Exchange Specification CADテストファイル | FomiPeek',
+          title: '無料IGSサンプルファイルをダウンロード - Initial Graphics Exchange Specification CADテストファイル | FormiPeek',
           description: 'CADソフトウェア、IGSコンバーター、3Dモデリングツール、エンジニアリング設計アプリケーションをテストするための無料IGS Initial Graphics Exchange Specificationサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。CADシステム、IGSパーサー、3Dモデル交換ツール、エンジニアリングソフトウェアのテストに最適。',
           keywords: 'IGSサンプルファイル、IGSテストファイル、IGSサンプルをダウンロード、無料IGSテストファイル、Initial Graphics Exchange Specificationファイル、CAD IGSファイル、3Dモデル交換ファイル、IGSコンバーターテストファイル、エンジニアリング設計ファイル、IGSパーサーテストファイル、CAD交換フォーマットサンプル'
         },
@@ -1330,7 +1330,7 @@ export const ja: SamplePageTranslations = {
       },
       las: {
         meta: {
-          title: '無料LASサンプルファイルをダウンロード - LiDARポイントクラウドデータテストファイル | FomiPeek',
+          title: '無料LASサンプルファイルをダウンロード - LiDARポイントクラウドデータテストファイル | FormiPeek',
           description: 'ポイントクラウド処理、LiDAR解析ツール、3Dマッピングソフトウェア、地理空間アプリケーションをテストするための無料LAS LiDARポイントクラウドサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。LASパーサー、ポイントクラウドビューアー、LiDAR処理ツール、3Dマッピングソフトウェア、地理空間解析プラットフォームのテストに最適。',
           keywords: 'LASサンプルファイル、LASテストファイル、LASサンプルをダウンロード、無料LASテストファイル、LiDARポイントクラウドファイル、LASフォーマットファイル、ポイントクラウドデータファイル、LASパーサーテストファイル、地理空間ファイル、LiDAR解析テストファイル、3Dマッピングサンプル'
         },
@@ -1346,7 +1346,7 @@ export const ja: SamplePageTranslations = {
       },
       ma: {
         meta: {
-          title: '無料MAサンプルファイルをダウンロード - Maya ASCIIシーンテストファイル | FomiPeek',
+          title: '無料MAサンプルファイルをダウンロード - Maya ASCIIシーンテストファイル | FormiPeek',
           description: 'Mayaシーン変換、3Dアニメーションソフトウェア、MAファイルパーサー、アニメーションツールをテストするための無料MA Maya ASCIIシーンサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Autodesk Maya、MAファイルビューアー、シーン変換ツール、3Dアニメーションプラットフォーム、アニメーションワークフローソフトウェアのテストに最適。',
           keywords: 'MAサンプルファイル、MAテストファイル、MAサンプルをダウンロード、無料MAテストファイル、Maya ASCIIシーンファイル、MAフォーマットファイル、3Dアニメーションシーンファイル、MAパーサーテストファイル、アニメーションファイル、Mayaシーンテストファイル、3Dアニメーションサンプル'
         },
@@ -1362,7 +1362,7 @@ export const ja: SamplePageTranslations = {
       },
       max: {
         meta: {
-          title: '無料MAXサンプルファイルをダウンロード - 3ds Maxシーンテストファイル | FomiPeek',
+          title: '無料MAXサンプルファイルをダウンロード - 3ds Maxシーンテストファイル | FormiPeek',
           description: '3ds Maxシーン変換、3Dモデリングソフトウェア、MAXファイルパーサー、3Dデザインツールをテストするための無料MAX 3ds Maxシーンサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Autodesk 3ds Max、MAXファイルビューアー、シーン変換ツール、3Dモデリングプラットフォーム、3Dデザインワークフローソフトウェアのテストに最適。',
           keywords: 'MAXサンプルファイル、MAXテストファイル、MAXサンプルをダウンロード、無料MAXテストファイル、3ds Maxシーンファイル、MAXフォーマットファイル、3Dモデリングシーンファイル、MAXパーサーテストファイル、3Dデザインファイル、3ds Maxシーンテストファイル、3Dモデリングサンプル'
         },
@@ -1378,7 +1378,7 @@ export const ja: SamplePageTranslations = {
       },
       mb: {
         meta: {
-          title: '無料MBサンプルファイルをダウンロード - Maya Binaryシーンテストファイル | FomiPeek',
+          title: '無料MBサンプルファイルをダウンロード - Maya Binaryシーンテストファイル | FormiPeek',
           description: 'Mayaシーン変換、3Dアニメーションソフトウェア、MBファイルパーサー、アニメーションツールをテストするための無料MB Maya Binaryシーンサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Autodesk Maya、MBファイルビューアー、シーン変換ツール、3Dアニメーションプラットフォーム、アニメーションワークフローソフトウェアのテストに最適。',
           keywords: 'MBサンプルファイル、MBテストファイル、MBサンプルをダウンロード、無料MBテストファイル、Maya Binaryシーンファイル、MBフォーマットファイル、3Dアニメーションシーンファイル、MBパーサーテストファイル、アニメーションファイル、Mayaシーンテストファイル、3Dアニメーションサンプル'
         },
@@ -1394,7 +1394,7 @@ export const ja: SamplePageTranslations = {
       },
       indd: {
         meta: {
-          title: '無料INDDサンプルファイルをダウンロード - Adobe InDesignドキュメントテストファイル | FomiPeek',
+          title: '無料INDDサンプルファイルをダウンロード - Adobe InDesignドキュメントテストファイル | FormiPeek',
           description: 'InDesign互換性、INDDコンバーター、デスクトップパブリッシングソフトウェア、レイアウトデザインツールをテストするための無料INDD Adobe InDesignドキュメントサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Adobe InDesign、INDDファイルビューアー、ドキュメント変換ツール、デスクトップパブリッシングプラットフォーム、レイアウトデザインソフトウェアのテストに最適。',
           keywords: 'INDDサンプルファイル、INDDテストファイル、INDDサンプルをダウンロード、無料INDDテストファイル、Adobe InDesignファイル、INDDフォーマットファイル、デスクトップパブリッシングファイル、INDDコンバーターテストファイル、レイアウトデザインファイル、InDesignドキュメントテストファイル、パブリッシングソフトウェアサンプル'
         },
@@ -1410,7 +1410,7 @@ export const ja: SamplePageTranslations = {
       },
       'animated-gif': {
         meta: {
-          title: '無料アニメーションGIFサンプルファイルをダウンロード - アニメーション画像テストファイル | FomiPeek',
+          title: '無料アニメーションGIFサンプルファイルをダウンロード - アニメーション画像テストファイル | FormiPeek',
           description: 'GIFアニメーション再生、画像ビューアー、ウェブブラウザー、アニメーションツールをテストするための無料アニメーションGIFサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。GIFビューアー、アニメーションプレーヤー、画像処理ツール、ウェブ開発プラットフォーム、マルチメディアアプリケーションのテストに最適。',
           keywords: 'アニメーションGIFサンプルファイル、アニメーションGIFテストファイル、アニメーションGIFサンプルをダウンロード、無料アニメーションGIFテストファイル、GIFアニメーションファイル、アニメーション画像ファイル、GIFプレーヤーテストファイル、アニメーションファイル、ウェブアニメーションテストファイル、マルチメディアGIFサンプル'
         },
@@ -1426,7 +1426,7 @@ export const ja: SamplePageTranslations = {
       },
       apng: {
         meta: {
-          title: '無料APNGサンプルファイルをダウンロード - アニメーションPNG画像テストファイル | FomiPeek',
+          title: '無料APNGサンプルファイルをダウンロード - アニメーションPNG画像テストファイル | FormiPeek',
           description: 'APNGアニメーション再生、画像ビューアー、ウェブブラウザー、モダンな画像ツールをテストするための無料APNG Animated Portable Network Graphicsサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。APNGビューアー、アニメーションプレーヤー、画像処理ツール、ウェブ開発プラットフォーム、モダンなマルチメディアアプリケーションのテストに最適。',
           keywords: 'APNGサンプルファイル、APNGテストファイル、APNGサンプルをダウンロード、無料APNGテストファイル、Animated PNGファイル、APNGアニメーションファイル、APNGプレーヤーテストファイル、アニメーションファイル、ウェブアニメーションテストファイル、モダンな画像フォーマットサンプル'
         },
@@ -1442,7 +1442,7 @@ export const ja: SamplePageTranslations = {
       },
       avif: {
         meta: {
-          title: '無料AVIFサンプルファイルをダウンロード - AV1 Image File Formatテストファイル | FomiPeek',
+          title: '無料AVIFサンプルファイルをダウンロード - AV1 Image File Formatテストファイル | FormiPeek',
           description: 'モダンな画像圧縮、AVIFビューアー、ウェブブラウザー、次世代画像ツールをテストするための無料AVIF AV1 Image File Formatサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。AVIFビューアー、画像処理ツール、ウェブ開発プラットフォーム、モダンな画像フォーマットサポート、次世代マルチメディアアプリケーションのテストに最適。',
           keywords: 'AVIFサンプルファイル、AVIFテストファイル、AVIFサンプルをダウンロード、無料AVIFテストファイル、AV1 Image File Formatファイル、AVIF画像ファイル、AVIFビューアーテストファイル、モダンな画像ファイル、ウェブ画像フォーマットテストファイル、次世代画像フォーマットサンプル'
         },
@@ -1458,7 +1458,7 @@ export const ja: SamplePageTranslations = {
       },
       bmp: {
         meta: {
-          title: '無料BMPサンプルファイルをダウンロード - ビットマップ画像テストファイル | FomiPeek',
+          title: '無料BMPサンプルファイルをダウンロード - ビットマップ画像テストファイル | FormiPeek',
           description: '画像ビューアー、BMPコンバーター、グラフィックソフトウェア、画像処理ツールをテストするための無料BMPビットマップサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。BMPビューアー、画像エディター、グラフィック変換ツール、画像処理プラットフォーム、ビットマップフォーマットサポートのテストに最適。',
           keywords: 'BMPサンプルファイル、BMPテストファイル、BMPサンプルをダウンロード、無料BMPテストファイル、ビットマップ画像ファイル、BMPフォーマットファイル、画像ビューアーテストファイル、グラフィックファイル、画像変換テストファイル、ビットマップフォーマットサンプル'
         },
@@ -1474,7 +1474,7 @@ export const ja: SamplePageTranslations = {
       },
       'barcode-svg': {
         meta: {
-          title: '無料バーコードSVGサンプルファイルをダウンロード - スケーラブルベクターバーコードテストファイル | FomiPeek',
+          title: '無料バーコードSVGサンプルファイルをダウンロード - スケーラブルベクターバーコードテストファイル | FormiPeek',
           description: 'バーコード生成、SVGバーコードリーダー、ベクターグラフィックツール、バーコードスキャンアプリケーションをテストするための無料バーコードSVGサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。バーコードジェネレーター、SVGビューアー、バーコードスキャンツール、ベクターグラフィックプラットフォーム、バーコード認識ソフトウェアのテストに最適。',
           keywords: 'バーコードSVGサンプルファイル、バーコードSVGテストファイル、バーコードSVGサンプルをダウンロード、無料バーコードSVGテストファイル、SVGバーコードファイル、ベクターバーコードファイル、バーコードジェネレーターテストファイル、SVGファイル、バーコードスキャンテストファイル、ベクターグラフィックサンプル'
         },
@@ -1490,7 +1490,7 @@ export const ja: SamplePageTranslations = {
       },
       avi: {
         meta: {
-          title: '無料AVIサンプルファイルをダウンロード - Audio Video Interleaveビデオテストファイル | FomiPeek',
+          title: '無料AVIサンプルファイルをダウンロード - Audio Video Interleaveビデオテストファイル | FormiPeek',
           description: 'ビデオプレーヤー、AVIコンバーター、マルチメディアソフトウェア、ビデオ処理ツールをテストするための無料AVI Audio Video Interleaveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。AVIプレーヤー、ビデオエディター、マルチメディア変換ツール、ビデオ処理プラットフォーム、ビデオフォーマットサポートのテストに最適。',
           keywords: 'AVIサンプルファイル、AVIテストファイル、AVIサンプルをダウンロード、無料AVIテストファイル、Audio Video Interleaveファイル、AVIビデオファイル、ビデオプレーヤーテストファイル、マルチメディアファイル、ビデオ変換テストファイル、ビデオフォーマットサンプル'
         },
@@ -1506,7 +1506,7 @@ export const ja: SamplePageTranslations = {
       },
       '3gp': {
         meta: {
-          title: '無料3GPサンプルファイルをダウンロード - 3GPPモバイルビデオテストファイル | FomiPeek',
+          title: '無料3GPサンプルファイルをダウンロード - 3GPPモバイルビデオテストファイル | FormiPeek',
           description: 'モバイルビデオプレーヤー、3GPコンバーター、マルチメディアソフトウェア、モバイルビデオ処理ツールをテストするための無料3GP 3GPPモバイルビデオサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。3GPプレーヤー、モバイルビデオエディター、ビデオ変換ツール、モバイルマルチメディアプラットフォーム、モバイルビデオフォーマットサポートのテストに最適。',
           keywords: '3GPサンプルファイル、3GPテストファイル、3GPサンプルをダウンロード、無料3GPテストファイル、3GPPモバイルビデオファイル、3GPビデオファイル、モバイルビデオプレーヤーテストファイル、マルチメディアファイル、モバイルビデオ変換テストファイル、モバイルビデオフォーマットサンプル'
         },
@@ -1522,7 +1522,7 @@ export const ja: SamplePageTranslations = {
       },
       dav: {
         meta: {
-          title: '無料DAVサンプルファイルをダウンロード - セキュリティカメラ用DAVビデオテストファイル | FomiPeek',
+          title: '無料DAVサンプルファイルをダウンロード - セキュリティカメラ用DAVビデオテストファイル | FormiPeek',
           description: 'DAVビデオプレーヤー、セキュリティカメラビデオ処理、DAVコンバーター、監視ビデオ分析ツールをテストするための無料DAVサンプルビデオファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。DAV再生、DAVからMP4へのコンバーター、セキュリティカメラソフトウェア、ビデオ監視ツール、DAVフォーマット互換性のテストに最適。',
           keywords: 'DAVサンプルファイル、DAVテストファイル、DAVサンプルをダウンロード、無料DAVテストファイル、DAVビデオファイル、セキュリティカメラビデオファイル、DAVからMP4へのコンバーター、DAVプレーヤーテスト、監視ビデオサンプル、DAVフォーマットテストファイル、ビデオ監視テストファイル'
         },
@@ -1538,7 +1538,7 @@ export const ja: SamplePageTranslations = {
       },
       dds: {
         meta: {
-          title: '無料DDSサンプルファイルをダウンロード - DirectDraw Surfaceテクスチャテストファイル | FomiPeek',
+          title: '無料DDSサンプルファイルをダウンロード - DirectDraw Surfaceテクスチャテストファイル | FormiPeek',
           description: 'テクスチャ画像変換、DDS表示、ゲーム開発ツール、グラフィック処理ソフトウェアをテストするための無料DDS DirectDraw Surfaceサンプル画像ファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。DDSテクスチャ読み込み、DDSからPNGへのコンバーター、ゲームエンジン互換性、テクスチャ圧縮ツール、DirectDraw Surfaceフォーマットサポートのテストに最適。',
           keywords: 'DDSサンプルファイル、DDSテストファイル、DDSサンプルをダウンロード、無料DDSテストファイル、DirectDraw Surfaceファイル、DDSテクスチャファイル、DDSからPNGへのコンバーター、テクスチャ画像サンプル、ゲーム開発テストファイル、DDSフォーマットテスト、グラフィックテクスチャサンプル'
         },
@@ -1554,7 +1554,7 @@ export const ja: SamplePageTranslations = {
       },
       dng: {
         meta: {
-          title: '無料DNGサンプルファイルをダウンロード - Digital Negative Raw画像テストファイル | FomiPeek',
+          title: '無料DNGサンプルファイルをダウンロード - Digital Negative Raw画像テストファイル | FormiPeek',
           description: 'Raw画像処理、DNG変換、写真ソフトウェア、プロフェッショナル画像編集ツールをテストするための無料DNG Digital Negative raw画像サンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。DNGからJPEGへのコンバーター、raw画像エディター、DNG表示、カメラraw処理、Adobe Digital Negativeフォーマットサポートのテストに最適。',
           keywords: 'DNGサンプルファイル、DNGテストファイル、DNGサンプルをダウンロード、無料DNGテストファイル、Digital Negativeファイル、DNG raw画像ファイル、DNGからJPEGへのコンバーター、raw画像処理、写真テストファイル、DNGフォーマットテスト、カメラrawサンプル、Adobe DNGテストファイル'
         },
@@ -1570,7 +1570,7 @@ export const ja: SamplePageTranslations = {
       },
       eps: {
         meta: {
-          title: '無料EPSサンプルファイルをダウンロード - Encapsulated PostScriptベクターグラフィックテストファイル | FomiPeek',
+          title: '無料EPSサンプルファイルをダウンロード - Encapsulated PostScriptベクターグラフィックテストファイル | FormiPeek',
           description: 'ベクターグラフィック変換、EPS表示、PostScript処理、プロフェッショナルデザインソフトウェアをテストするための無料EPS Encapsulated PostScriptサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。EPSからPDFへのコンバーター、EPSからSVGへのコンバーター、ベクターグラフィックエディター、PostScriptビューアー、Encapsulated PostScriptフォーマット互換性のテストに最適。',
           keywords: 'EPSサンプルファイル、EPSテストファイル、EPSサンプルをダウンロード、無料EPSテストファイル、Encapsulated PostScriptファイル、EPSベクターグラフィック、EPSからPDFへのコンバーター、EPSからSVGへのコンバーター、ベクターグラフィックサンプル、PostScriptテストファイル、デザインソフトウェアテストファイル、EPSフォーマットテスト'
         },
@@ -1586,7 +1586,7 @@ export const ja: SamplePageTranslations = {
       },
       exr: {
         meta: {
-          title: '無料EXRサンプルファイルをダウンロード - OpenEXR High Dynamic Range画像テストファイル | FomiPeek',
+          title: '無料EXRサンプルファイルをダウンロード - OpenEXR High Dynamic Range画像テストファイル | FormiPeek',
           description: 'HDR画像処理、EXR変換、プロフェッショナル写真ソフトウェア、視覚効果ツールをテストするための無料EXR OpenEXR High Dynamic Range画像サンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。EXRからJPEGへのコンバーター、HDR画像エディター、EXR表示、High Dynamic Range処理、OpenEXRフォーマットサポートのテストに最適。',
           keywords: 'EXRサンプルファイル、EXRテストファイル、EXRサンプルをダウンロード、無料EXRテストファイル、OpenEXRファイル、EXR HDR画像、EXRからJPEGへのコンバーター、HDR画像処理、High Dynamic Rangeサンプル、視覚効果テストファイル、EXRフォーマットテスト、プロフェッショナル写真テストファイル'
         },
@@ -1602,7 +1602,7 @@ export const ja: SamplePageTranslations = {
       },
       hdr: {
         meta: {
-          title: '無料HDRサンプルファイルをダウンロード - High Dynamic Range画像テストファイル | FomiPeek',
+          title: '無料HDRサンプルファイルをダウンロード - High Dynamic Range画像テストファイル | FormiPeek',
           description: 'HDR画像処理、HDR変換、写真ソフトウェア、画像編集ツールをテストするための無料HDR High Dynamic Range画像サンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。HDRからJPEGへのコンバーター、HDR画像エディター、HDR表示、トーンマッピングツール、High Dynamic Rangeフォーマットサポートのテストに最適。',
           keywords: 'HDRサンプルファイル、HDRテストファイル、HDRサンプルをダウンロード、無料HDRテストファイル、High Dynamic Rangeファイル、HDR画像、HDRからJPEGへのコンバーター、HDR画像処理、トーンマッピングテストファイル、写真テストファイル、HDRフォーマットテスト、High Dynamic Rangeサンプル'
         },
@@ -1618,7 +1618,7 @@ export const ja: SamplePageTranslations = {
       },
       heic: {
         meta: {
-          title: '無料HEICサンプルファイルをダウンロード - High Efficiency Image Containerテストファイル | FomiPeek',
+          title: '無料HEICサンプルファイルをダウンロード - High Efficiency Image Containerテストファイル | FormiPeek',
           description: 'HEIC画像変換、HEIC表示、モダン画像フォーマット処理、モバイル写真ツールをテストするための無料HEIC High Efficiency Image Containerサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。HEICからJPEGへのコンバーター、HEICからPNGへのコンバーター、iOS画像処理、HEIC表示ソフトウェア、High Efficiency Image Containerフォーマットサポートのテストに最適。',
           keywords: 'HEICサンプルファイル、HEICテストファイル、HEICサンプルをダウンロード、無料HEICテストファイル、High Efficiency Image Containerファイル、HEIC画像、HEICからJPEGへのコンバーター、HEICからPNGへのコンバーター、iOS画像サンプル、モバイル写真テストファイル、HEICフォーマットテスト、モダン画像フォーマットサンプル'
         },
@@ -1634,7 +1634,7 @@ export const ja: SamplePageTranslations = {
       },
       heif: {
         meta: {
-          title: '無料HEIFサンプルファイルをダウンロード - High Efficiency Image Formatテストファイル | FomiPeek',
+          title: '無料HEIFサンプルファイルをダウンロード - High Efficiency Image Formatテストファイル | FormiPeek',
           description: 'HEIF画像変換、HEIF表示、モダン画像フォーマット処理、モバイル写真ツールをテストするための無料HEIF High Efficiency Image Formatサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。HEIFからJPEGへのコンバーター、HEIFからPNGへのコンバーター、モバイル画像処理、HEIF表示ソフトウェア、High Efficiency Image Formatサポートのテストに最適。',
           keywords: 'HEIFサンプルファイル、HEIFテストファイル、HEIFサンプルをダウンロード、無料HEIFテストファイル、High Efficiency Image Formatファイル、HEIF画像、HEIFからJPEGへのコンバーター、HEIFからPNGへのコンバーター、モバイル画像サンプル、モダン画像フォーマットテストファイル、HEIFフォーマットテスト、画像圧縮テストファイル'
         },
@@ -1650,7 +1650,7 @@ export const ja: SamplePageTranslations = {
       },
       icns: {
         meta: {
-          title: '無料ICNSサンプルファイルをダウンロード - macOSアイコンテストファイル | FomiPeek',
+          title: '無料ICNSサンプルファイルをダウンロード - macOSアイコンテストファイル | FormiPeek',
           description: 'macOSアイコン変換、ICNS表示、アイコンデザインツール、macOSアプリ開発をテストするための無料ICNS macOSアイコンサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。ICNSからPNGへのコンバーター、ICNSからICOへのコンバーター、macOSアイコンエディター、アイコンデザインソフトウェア、macOSアイコンフォーマットサポートのテストに最適。',
           keywords: 'ICNSサンプルファイル、ICNSテストファイル、ICNSサンプルをダウンロード、無料ICNSテストファイル、macOSアイコンファイル、ICNSアイコン、ICNSからPNGへのコンバーター、ICNSからICOへのコンバーター、macOSアイコンデザイン、アイコンエディターテストファイル、ICNSフォーマットテスト、Appleアイコンサンプル'
         },
@@ -1666,7 +1666,7 @@ export const ja: SamplePageTranslations = {
       },
       ico: {
         meta: {
-          title: '無料ICOサンプルファイルをダウンロード - Windowsアイコンテストファイル | FomiPeek',
+          title: '無料ICOサンプルファイルをダウンロード - Windowsアイコンテストファイル | FormiPeek',
           description: 'Windowsアイコン変換、ICO表示、アイコンデザインツール、Windowsアプリ開発をテストするための無料ICO Windowsアイコンサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。ICOからPNGへのコンバーター、ICOからICNSへのコンバーター、Windowsアイコンエディター、アイコンデザインソフトウェア、Windowsアイコンフォーマットサポートのテストに最適。',
           keywords: 'ICOサンプルファイル、ICOテストファイル、ICOサンプルをダウンロード、無料ICOテストファイル、Windowsアイコンファイル、ICOアイコン、ICOからPNGへのコンバーター、ICOからICNSへのコンバーター、Windowsアイコンデザイン、アイコンエディターテストファイル、ICOフォーマットテスト、Windowsアイコンサンプル'
         },
@@ -1682,7 +1682,7 @@ export const ja: SamplePageTranslations = {
       },
       jpeg: {
         meta: {
-          title: '無料JPEGサンプルファイルをダウンロード - 変換ツール用JPEG画像テストファイル | FomiPeek',
+          title: '無料JPEGサンプルファイルをダウンロード - 変換ツール用JPEG画像テストファイル | FormiPeek',
           description: 'JPEG画像変換、JPEG圧縮、画像処理ツール、写真編集ソフトウェアをテストするための無料JPEGサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。JPEGからPNGへのコンバーター、JPEGからPDFへのコンバーター、画像圧縮ツール、JPEG最適化、Joint Photographic Experts Groupフォーマットサポートのテストに最適。',
           keywords: 'JPEGサンプルファイル、JPEGテストファイル、JPEGサンプルをダウンロード、無料JPEGテストファイル、JPEG画像ファイル、JPEGからPNGへのコンバーター、JPEGからPDFへのコンバーター、画像圧縮テストファイル、写真編集テストファイル、JPEGフォーマットテスト、画像処理サンプル'
         },
@@ -1698,7 +1698,7 @@ export const ja: SamplePageTranslations = {
       },
       jpg: {
         meta: {
-          title: '無料JPGサンプルファイルをダウンロード - 変換ツール用JPG画像テストファイル | FomiPeek',
+          title: '無料JPGサンプルファイルをダウンロード - 変換ツール用JPG画像テストファイル | FormiPeek',
           description: 'JPG画像変換、JPG圧縮、画像処理ツール、写真編集ソフトウェアをテストするための無料JPGサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。JPGからPNGへのコンバーター、JPGからPDFへのコンバーター、画像圧縮ツール、JPG最適化、Joint Photographic Experts Groupフォーマットサポートのテストに最適。',
           keywords: 'JPGサンプルファイル、JPGテストファイル、JPGサンプルをダウンロード、無料JPGテストファイル、JPG画像ファイル、JPGからPNGへのコンバーター、JPGからPDFへのコンバーター、画像圧縮テストファイル、写真編集テストファイル、JPGフォーマットテスト、画像処理サンプル'
         },
@@ -1714,7 +1714,7 @@ export const ja: SamplePageTranslations = {
       },
       m4v: {
         meta: {
-          title: '無料M4Vサンプルファイルをダウンロード - 変換ツール用M4Vビデオテストファイル | FomiPeek',
+          title: '無料M4Vサンプルファイルをダウンロード - 変換ツール用M4Vビデオテストファイル | FormiPeek',
           description: 'M4Vビデオ変換、M4V再生、ビデオ処理ツール、マルチメディアソフトウェアをテストするための無料M4Vサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。M4VからMP4へのコンバーター、M4VからAVIへのコンバーター、ビデオプレーヤー、M4V再生互換性、MPEG-4ビデオフォーマットサポートのテストに最適。',
           keywords: 'M4Vサンプルファイル、M4Vテストファイル、M4Vサンプルをダウンロード、無料M4Vテストファイル、M4Vビデオファイル、M4VからMP4へのコンバーター、M4VからAVIへのコンバーター、ビデオプレーヤーテストファイル、M4V再生テスト、ビデオ変換サンプル、MPEG-4ビデオフォーマットテスト'
         },
@@ -1730,7 +1730,7 @@ export const ja: SamplePageTranslations = {
       },
       mkv: {
         meta: {
-          title: '無料MKVサンプルファイルをダウンロード - 変換ツール用Matroskaビデオテストファイル | FomiPeek',
+          title: '無料MKVサンプルファイルをダウンロード - 変換ツール用Matroskaビデオテストファイル | FormiPeek',
           description: 'MKVビデオ変換、MKV再生、ビデオ処理ツール、マルチメディアソフトウェアをテストするための無料MKV Matroskaサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。MKVからMP4へのコンバーター、MKVからAVIへのコンバーター、ビデオプレーヤー、MKV再生互換性、Matroskaビデオフォーマットサポートのテストに最適。',
           keywords: 'MKVサンプルファイル、MKVテストファイル、MKVサンプルをダウンロード、無料MKVテストファイル、Matroskaビデオファイル、MKVからMP4へのコンバーター、MKVからAVIへのコンバーター、ビデオプレーヤーテストファイル、MKV再生テスト、ビデオ変換サンプル、Matroskaフォーマットテスト'
         },
@@ -1746,7 +1746,7 @@ export const ja: SamplePageTranslations = {
       },
       aac: {
         meta: {
-          title: '無料AACサンプルファイルをダウンロード - Advanced Audio Codingテストファイル | FomiPeek',
+          title: '無料AACサンプルファイルをダウンロード - Advanced Audio Codingテストファイル | FormiPeek',
           description: 'オーディオ変換、AAC再生、オーディオ処理ツール、マルチメディアソフトウェアをテストするための無料AAC Advanced Audio Codingサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。AACからMP3へのコンバーター、AACからWAVへのコンバーター、オーディオプレーヤー、AAC再生互換性、Advanced Audio Codingフォーマットサポートのテストに最適。',
           keywords: 'AACサンプルファイル、AACテストファイル、AACサンプルをダウンロード、無料AACテストファイル、Advanced Audio Codingファイル、AACからMP3へのコンバーター、AACからWAVへのコンバーター、オーディオプレーヤーテストファイル、AAC再生テスト、オーディオ変換サンプル、Advanced Audio Codingフォーマットテスト'
         },
@@ -1762,7 +1762,7 @@ export const ja: SamplePageTranslations = {
       },
       ac3: {
         meta: {
-          title: '無料AC3サンプルファイルをダウンロード - Dolby Digitalオーディオテストファイル | FomiPeek',
+          title: '無料AC3サンプルファイルをダウンロード - Dolby Digitalオーディオテストファイル | FormiPeek',
           description: 'オーディオ変換、AC3再生、オーディオ処理ツール、マルチメディアソフトウェアをテストするための無料AC3 Dolby Digitalサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。AC3からMP3へのコンバーター、AC3からWAVへのコンバーター、オーディオプレーヤー、AC3再生互換性、Dolby Digitalフォーマットサポートのテストに最適。',
           keywords: 'AC3サンプルファイル、AC3テストファイル、AC3サンプルをダウンロード、無料AC3テストファイル、Dolby Digitalファイル、AC3からMP3へのコンバーター、AC3からWAVへのコンバーター、オーディオプレーヤーテストファイル、AC3再生テスト、オーディオ変換サンプル、Dolby Digitalフォーマットテスト'
         },
@@ -1778,7 +1778,7 @@ export const ja: SamplePageTranslations = {
       },
       aif: {
         meta: {
-          title: '無料AIFサンプルファイルをダウンロード - Audio Interchange File Formatテストファイル | FomiPeek',
+          title: '無料AIFサンプルファイルをダウンロード - Audio Interchange File Formatテストファイル | FormiPeek',
           description: 'オーディオ変換、AIF再生、オーディオ処理ツール、マルチメディアソフトウェアをテストするための無料AIF Audio Interchange File Formatサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。AIFからMP3へのコンバーター、AIFからWAVへのコンバーター、オーディオプレーヤー、AIF再生互換性、Audio Interchange File Formatサポートのテストに最適。',
           keywords: 'AIFサンプルファイル、AIFテストファイル、AIFサンプルをダウンロード、無料AIFテストファイル、Audio Interchange File Formatファイル、AIFからMP3へのコンバーター、AIFからWAVへのコンバーター、オーディオプレーヤーテストファイル、AIF再生テスト、オーディオ変換サンプル、Audio Interchange File Formatテスト'
         },
@@ -1794,7 +1794,7 @@ export const ja: SamplePageTranslations = {
       },
       aiff: {
         meta: {
-          title: '無料AIFFサンプルファイルをダウンロード - Audio Interchange File Formatテストファイル | FomiPeek',
+          title: '無料AIFFサンプルファイルをダウンロード - Audio Interchange File Formatテストファイル | FormiPeek',
           description: 'オーディオ変換、AIFF再生、オーディオ処理ツール、マルチメディアソフトウェアをテストするための無料AIFF Audio Interchange File Formatサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。AIFFからMP3へのコンバーター、AIFFからWAVへのコンバーター、オーディオプレーヤー、AIFF再生互換性、Audio Interchange File Formatサポートのテストに最適。',
           keywords: 'AIFFサンプルファイル、AIFFテストファイル、AIFFサンプルをダウンロード、無料AIFFテストファイル、Audio Interchange File Formatファイル、AIFFからMP3へのコンバーター、AIFFからWAVへのコンバーター、オーディオプレーヤーテストファイル、AIFF再生テスト、オーディオ変換サンプル、Audio Interchange File Formatテスト'
         },
@@ -1810,7 +1810,7 @@ export const ja: SamplePageTranslations = {
       },
       amr: {
         meta: {
-          title: '無料AMRサンプルファイルをダウンロード - Adaptive Multi-Rate Audioテストファイル | FomiPeek',
+          title: '無料AMRサンプルファイルをダウンロード - Adaptive Multi-Rate Audioテストファイル | FormiPeek',
           description: 'オーディオ変換、AMR再生、オーディオ処理ツール、モバイルマルチメディアソフトウェアをテストするための無料AMR Adaptive Multi-Rateサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。AMRからMP3へのコンバーター、AMRからWAVへのコンバーター、オーディオプレーヤー、AMR再生互換性、Adaptive Multi-Rateフォーマットサポートのテストに最適。',
           keywords: 'AMRサンプルファイル、AMRテストファイル、AMRサンプルをダウンロード、無料AMRテストファイル、Adaptive Multi-Rateファイル、AMRからMP3へのコンバーター、AMRからWAVへのコンバーター、オーディオプレーヤーテストファイル、AMR再生テスト、オーディオ変換サンプル、Adaptive Multi-Rateフォーマットテスト'
         },
@@ -1826,7 +1826,7 @@ export const ja: SamplePageTranslations = {
       },
       caf: {
         meta: {
-          title: '無料CAFサンプルファイルをダウンロード - Core Audio Formatテストファイル | FomiPeek',
+          title: '無料CAFサンプルファイルをダウンロード - Core Audio Formatテストファイル | FormiPeek',
           description: 'オーディオ変換、CAF再生、オーディオ処理ツール、macOSマルチメディアソフトウェアをテストするための無料CAF Core Audio Formatサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。CAFからMP3へのコンバーター、CAFからWAVへのコンバーター、オーディオプレーヤー、CAF再生互換性、Core Audio Formatサポートのテストに最適。',
           keywords: 'CAFサンプルファイル、CAFテストファイル、CAFサンプルをダウンロード、無料CAFテストファイル、Core Audio Formatファイル、CAFからMP3へのコンバーター、CAFからWAVへのコンバーター、オーディオプレーヤーテストファイル、CAF再生テスト、オーディオ変換サンプル、Core Audio Formatテスト'
         },
@@ -1842,7 +1842,7 @@ export const ja: SamplePageTranslations = {
       },
       cue: {
         meta: {
-          title: '無料CUEサンプルファイルをダウンロード - オーディオCD書き込み用CUE Sheetテストファイル | FomiPeek',
+          title: '無料CUEサンプルファイルをダウンロード - オーディオCD書き込み用CUE Sheetテストファイル | FormiPeek',
           description: 'オーディオCD書き込みツールとCUE sheet解析ツールをテストするための無料CUE CUE sheetサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。CUE sheet解析、オーディオCD書き込みソフトウェア、CUEファイル検証、CD作成ツールのテストに最適。',
           keywords: 'CUEサンプルファイル、CUEテストファイル、CUE例をダウンロード、無料CUEテストファイル、CUE sheetファイル、オーディオCD書き込みテスト、CUE sheetパーサー、CD作成テストファイル、CUEファイル検証、オーディオディスクイメージテスト'
         },
@@ -1858,7 +1858,7 @@ export const ja: SamplePageTranslations = {
       },
       m4a: {
         meta: {
-          title: '無料M4Aサンプルファイルをダウンロード - 変換ツール用M4Aオーディオテストファイル | FomiPeek',
+          title: '無料M4Aサンプルファイルをダウンロード - 変換ツール用M4Aオーディオテストファイル | FormiPeek',
           description: 'M4Aオーディオ変換、M4A再生、オーディオ処理ツール、マルチメディアソフトウェアをテストするための無料M4A M4Aオーディオサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。M4AからMP3へのコンバーター、M4AからWAVへのコンバーター、オーディオプレーヤー、M4A再生互換性、MPEG-4オーディオフォーマットサポートのテストに最適。',
           keywords: 'M4Aサンプルファイル、M4Aテストファイル、M4A例をダウンロード、無料M4Aテストファイル、M4Aオーディオファイル、M4AからMP3へのコンバーター、M4AからWAVへのコンバーター、オーディオプレーヤーテストファイル、M4A再生テスト、オーディオ変換サンプル、MPEG-4オーディオフォーマットテスト'
         },
@@ -1874,7 +1874,7 @@ export const ja: SamplePageTranslations = {
       },
       midi: {
         meta: {
-          title: '無料MIDIサンプルファイルをダウンロード - 音楽シーケンシング用MIDI Musicテストファイル | FomiPeek',
+          title: '無料MIDIサンプルファイルをダウンロード - 音楽シーケンシング用MIDI Musicテストファイル | FormiPeek',
           description: 'MIDI再生、MIDI変換、音楽シーケンシングツール、デジタルオーディオワークステーションをテストするための無料MIDI MIDI musicサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。MIDIからMP3へのコンバーター、MIDIからWAVへのコンバーター、MIDIシーケンサー、音楽制作ソフトウェア、Musical Instrument Digital Interfaceフォーマットサポートのテストに最適。',
           keywords: 'MIDIサンプルファイル、MIDIテストファイル、MIDI例をダウンロード、無料MIDIテストファイル、MIDI musicファイル、MIDIからMP3へのコンバーター、MIDIからWAVへのコンバーター、MIDIシーケンサーテスト、音楽制作テストファイル、MIDI再生テスト、音楽シーケンシングサンプル'
         },
@@ -1890,7 +1890,7 @@ export const ja: SamplePageTranslations = {
       },
       ace: {
         meta: {
-          title: '無料ACEサンプルファイルをダウンロード - 抽出ツール用ACE Archiveテストファイル | FomiPeek',
+          title: '無料ACEサンプルファイルをダウンロード - 抽出ツール用ACE Archiveテストファイル | FormiPeek',
           description: 'アーカイブ抽出と圧縮ツールをテストするための無料ACE archiveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。ACEアーカイブ抽出、ACEファイル解凍、アーカイブ管理ツール、ファイル圧縮ソフトウェアのテストに最適。',
           keywords: 'ACEサンプルファイル、ACEテストファイル、ACE例をダウンロード、無料ACEテストファイル、ACE archiveファイル、ACE抽出テスト、ACE解凍テスト、アーカイブ管理テストファイル、ファイル圧縮サンプル'
         },
@@ -1906,7 +1906,7 @@ export const ja: SamplePageTranslations = {
       },
       arj: {
         meta: {
-          title: '無料ARJサンプルファイルをダウンロード - 抽出ツール用ARJ Archiveテストファイル | FomiPeek',
+          title: '無料ARJサンプルファイルをダウンロード - 抽出ツール用ARJ Archiveテストファイル | FormiPeek',
           description: 'アーカイブ抽出と圧縮ツールをテストするための無料ARJ archiveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。ARJアーカイブ抽出、ARJファイル解凍、アーカイブ管理ツール、ファイル圧縮ソフトウェアのテストに最適。',
           keywords: 'ARJサンプルファイル、ARJテストファイル、ARJ例をダウンロード、無料ARJテストファイル、ARJ archiveファイル、ARJ抽出テスト、ARJ解凍テスト、アーカイブ管理テストファイル、ファイル圧縮サンプル'
         },
@@ -1922,7 +1922,7 @@ export const ja: SamplePageTranslations = {
       },
       bz2: {
         meta: {
-          title: '無料BZ2サンプルファイルをダウンロード - BZ2 Compressed Archiveテストファイル | FomiPeek',
+          title: '無料BZ2サンプルファイルをダウンロード - BZ2 Compressed Archiveテストファイル | FormiPeek',
           description: 'アーカイブ解凍と圧縮ツールをテストするための無料BZ2 bzip2 compressed archiveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。BZ2アーカイブ解凍、BZ2ファイル抽出、bzip2圧縮ツール、アーカイブ管理ソフトウェアのテストに最適。',
           keywords: 'BZ2サンプルファイル、BZ2テストファイル、BZ2例をダウンロード、無料BZ2テストファイル、BZ2圧縮ファイル、BZ2解凍テスト、bzip2圧縮テスト、アーカイブ抽出テストファイル、ファイル圧縮サンプル'
         },
@@ -1938,7 +1938,7 @@ export const ja: SamplePageTranslations = {
       },
       gz: {
         meta: {
-          title: '無料GZサンプルファイルをダウンロード - GZ Gzip Compressed Archiveテストファイル | FomiPeek',
+          title: '無料GZサンプルファイルをダウンロード - GZ Gzip Compressed Archiveテストファイル | FormiPeek',
           description: 'gzip解凍、アーカイブ抽出、ファイル圧縮ツールをテストするための無料GZ gzip compressed archiveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。GZアーカイブ解凍、GZファイル抽出、gzip圧縮ツール、アーカイブ管理ソフトウェアのテストに最適。',
           keywords: 'GZサンプルファイル、GZテストファイル、GZ例をダウンロード、無料GZテストファイル、GZ圧縮ファイル、GZ解凍テスト、gzip圧縮テスト、アーカイブ抽出テストファイル、ファイル圧縮サンプル'
         },
@@ -1954,7 +1954,7 @@ export const ja: SamplePageTranslations = {
       },
       cab: {
         meta: {
-          title: '無料CABサンプルファイルをダウンロード - CAB Windows Cabinet Archiveテストファイル | FomiPeek',
+          title: '無料CABサンプルファイルをダウンロード - CAB Windows Cabinet Archiveテストファイル | FormiPeek',
           description: 'アーカイブ抽出と圧縮ツールをテストするための無料CAB Windows cabinet archiveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。CABアーカイブ抽出、CABファイル解凍、Windows cabinet archiveツール、アーカイブ管理ソフトウェアのテストに最適。',
           keywords: 'CABサンプルファイル、CABテストファイル、CAB例をダウンロード、無料CABテストファイル、CAB archiveファイル、CAB抽出テスト、Windows cabinet archiveテスト、アーカイブ管理テストファイル、ファイル圧縮サンプル'
         },
@@ -1970,7 +1970,7 @@ export const ja: SamplePageTranslations = {
       },
       cpio: {
         meta: {
-          title: '無料CPIOサンプルファイルをダウンロード - 抽出ツール用CPIO Archiveテストファイル | FomiPeek',
+          title: '無料CPIOサンプルファイルをダウンロード - 抽出ツール用CPIO Archiveテストファイル | FormiPeek',
           description: 'アーカイブ抽出と圧縮ツールをテストするための無料CPIO archiveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。CPIOアーカイブ抽出、CPIOファイル解凍、アーカイブ管理ツール、ファイル圧縮ソフトウェアのテストに最適。',
           keywords: 'CPIOサンプルファイル、CPIOテストファイル、CPIO例をダウンロード、無料CPIOテストファイル、CPIO archiveファイル、CPIO抽出テスト、CPIO解凍テスト、アーカイブ管理テストファイル、ファイル圧縮サンプル'
         },
@@ -1986,7 +1986,7 @@ export const ja: SamplePageTranslations = {
       },
       zip: {
         meta: {
-          title: '無料ZIPサンプルファイルをダウンロード - 抽出ツール用ZIP Archiveテストファイル | FomiPeek',
+          title: '無料ZIPサンプルファイルをダウンロード - 抽出ツール用ZIP Archiveテストファイル | FormiPeek',
           description: 'アーカイブ抽出と圧縮ツールをテストするための無料ZIP archiveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。ZIPアーカイブ抽出、ZIPファイル解凍、アーカイブ管理ツール、ファイル圧縮ソフトウェアのテストに最適。',
           keywords: 'ZIPサンプルファイル、ZIPテストファイル、ZIP例をダウンロード、無料ZIPテストファイル、ZIP archiveファイル、ZIP抽出テスト、ZIP解凍テスト、アーカイブ管理テストファイル、ファイル圧縮サンプル'
         },
@@ -2002,7 +2002,7 @@ export const ja: SamplePageTranslations = {
       },
       dmg: {
         meta: {
-          title: '無料DMGサンプルファイルをダウンロード - DMG macOS Disk Imageテストファイル | FomiPeek',
+          title: '無料DMGサンプルファイルをダウンロード - DMG macOS Disk Imageテストファイル | FormiPeek',
           description: 'ディスクイメージマウントとDMG抽出ツールをテストするための無料DMG macOS disk imageサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。DMGディスクイメージマウント、DMGファイル抽出、macOS disk imageツール、ディスクイメージ処理ソフトウェアのテストに最適。',
           keywords: 'DMGサンプルファイル、DMGテストファイル、DMG例をダウンロード、無料DMGテストファイル、DMG disk imageファイル、DMGマウントテスト、macOS disk imageテスト、ディスクイメージ抽出テストファイル、ディスクイメージ処理サンプル'
         },
@@ -2018,7 +2018,7 @@ export const ja: SamplePageTranslations = {
       },
       img: {
         meta: {
-          title: '無料IMGサンプルファイルをダウンロード - IMG Disk Imageテストファイル | FomiPeek',
+          title: '無料IMGサンプルファイルをダウンロード - IMG Disk Imageテストファイル | FormiPeek',
           description: 'ディスクイメージマウント、IMG抽出、ディスクイメージ処理ツールをテストするための無料IMG disk imageサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。IMGディスクイメージマウント、IMGファイル抽出、disk imageツール、ディスクイメージ処理ソフトウェアのテストに最適。',
           keywords: 'IMGサンプルファイル、IMGテストファイル、IMG例をダウンロード、無料IMGテストファイル、IMG disk imageファイル、IMGマウントテスト、ディスクイメージ抽出テスト、ディスクイメージ処理テストファイル、ディスクイメージサンプル'
         },
@@ -2034,7 +2034,7 @@ export const ja: SamplePageTranslations = {
       },
       iso: {
         meta: {
-          title: '無料ISOサンプルファイルをダウンロード - ISO Disk Imageテストファイル | FomiPeek',
+          title: '無料ISOサンプルファイルをダウンロード - ISO Disk Imageテストファイル | FormiPeek',
           description: 'ISOディスクイメージマウント、ISO抽出、ディスクイメージ処理ツールをテストするための無料ISO ISO disk imageサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。ISOディスクイメージマウント、ISOファイル抽出、disk imageツール、ディスクイメージ処理ソフトウェアのテストに最適。',
           keywords: 'ISOサンプルファイル、ISOテストファイル、ISO例をダウンロード、無料ISOテストファイル、ISO disk imageファイル、ISOマウントテスト、ISO抽出テスト、ディスクイメージ処理テストファイル、ディスクイメージサンプル'
         },
@@ -2050,7 +2050,7 @@ export const ja: SamplePageTranslations = {
       },
       kmz: {
         meta: {
-          title: '無料KMZサンプルファイルをダウンロード - KMZ Compressed KMLテストファイル | FomiPeek',
+          title: '無料KMZサンプルファイルをダウンロード - KMZ Compressed KMLテストファイル | FormiPeek',
           description: 'KMZ抽出、地理データ処理、Google Earth統合ツールをテストするための無料KMZ compressed Keyhole Markup Languageサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。KMZファイル抽出、KMZからKMLへの変換、Google Earth互換性、地理データ処理、マッピングソフトウェアのテストに最適。',
           keywords: 'KMZサンプルファイル、KMZテストファイル、KMZ例をダウンロード、無料KMZテストファイル、KMZ圧縮ファイル、KMZ抽出テスト、Google Earthテストファイル、地理データ処理テスト、マッピングソフトウェアサンプル'
         },
@@ -2066,7 +2066,7 @@ export const ja: SamplePageTranslations = {
       },
       laz: {
         meta: {
-          title: '無料LAZサンプルファイルをダウンロード - LAZ Compressed LiDARテストファイル | FomiPeek',
+          title: '無料LAZサンプルファイルをダウンロード - LAZ Compressed LiDARテストファイル | FormiPeek',
           description: 'LAZ抽出、ポイントクラウド処理、3Dマッピングツールをテストするための無料LAZ compressed LiDAR point cloud dataサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。LAZファイル抽出、LAZからLASへの変換、LiDARポイントクラウド処理、3Dマッピングソフトウェア、地理データ分析ツールのテストに最適。',
           keywords: 'LAZサンプルファイル、LAZテストファイル、LAZ例をダウンロード、無料LAZテストファイル、LAZ圧縮ファイル、LAZ抽出テスト、LiDARポイントクラウドテスト、3Dマッピングテストファイル、地理データ分析サンプル'
         },
@@ -2082,7 +2082,7 @@ export const ja: SamplePageTranslations = {
       },
       lha: {
         meta: {
-          title: '無料LHAサンプルファイルをダウンロード - 抽出ツール用LHA Archiveテストファイル | FomiPeek',
+          title: '無料LHAサンプルファイルをダウンロード - 抽出ツール用LHA Archiveテストファイル | FormiPeek',
           description: 'LHA抽出、アーカイブ解凍、ファイルアーカイブツールをテストするための無料LHA LHA archiveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。LHAアーカイブ抽出、LHAファイル解凍、アーカイブ管理ツール、ファイル圧縮ソフトウェアのテストに最適。',
           keywords: 'LHAサンプルファイル、LHAテストファイル、LHA例をダウンロード、無料LHAテストファイル、LHA archiveファイル、LHA抽出テスト、LHA解凍テスト、アーカイブ管理テストファイル、ファイル圧縮サンプル'
         },
@@ -2098,7 +2098,7 @@ export const ja: SamplePageTranslations = {
       },
       lzh: {
         meta: {
-          title: '無料LZHサンプルファイルをダウンロード - 抽出ツール用LZH Archiveテストファイル | FomiPeek',
+          title: '無料LZHサンプルファイルをダウンロード - 抽出ツール用LZH Archiveテストファイル | FormiPeek',
           description: 'LZH抽出、アーカイブ解凍、ファイルアーカイブツールをテストするための無料LZH LZH archiveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。LZHアーカイブ抽出、LZHファイル解凍、アーカイブ管理ツール、ファイル圧縮ソフトウェアのテストに最適。',
           keywords: 'LZHサンプルファイル、LZHテストファイル、LZH例をダウンロード、無料LZHテストファイル、LZH archiveファイル、LZH抽出テスト、LZH解凍テスト、アーカイブ管理テストファイル、ファイル圧縮サンプル'
         },
@@ -2114,7 +2114,7 @@ export const ja: SamplePageTranslations = {
       },
       lzma: {
         meta: {
-          title: '無料LZMAサンプルファイルをダウンロード - LZMA Compressed Archiveテストファイル | FomiPeek',
+          title: '無料LZMAサンプルファイルをダウンロード - LZMA Compressed Archiveテストファイル | FormiPeek',
           description: 'LZMA解凍、アーカイブ抽出、ファイル圧縮ツールをテストするための無料LZMA LZMA compressedサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。LZMAアーカイブ解凍、LZMAファイル抽出、LZMA圧縮ツール、アーカイブ管理ソフトウェアのテストに最適。',
           keywords: 'LZMAサンプルファイル、LZMAテストファイル、LZMA例をダウンロード、無料LZMAテストファイル、LZMA圧縮ファイル、LZMA解凍テスト、LZMA圧縮テスト、アーカイブ抽出テストファイル、ファイル圧縮サンプル'
         },
@@ -2130,7 +2130,7 @@ export const ja: SamplePageTranslations = {
       },
       '7z': {
         meta: {
-          title: '無料7Zサンプルファイルをダウンロード - 抽出ツール用7Z Archiveテストファイル | FomiPeek',
+          title: '無料7Zサンプルファイルをダウンロード - 抽出ツール用7Z Archiveテストファイル | FormiPeek',
           description: 'アーカイブ変換と抽出ツールをテストするための無料7Z archiveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。7Zアーカイブ抽出、7Zファイル解凍、アーカイブ管理ツール、ファイル圧縮ソフトウェアのテストに最適。',
           keywords: '7Zサンプルファイル、7Zテストファイル、7Z例をダウンロード、無料7Zテストファイル、7Z archiveファイル、7Z抽出テスト、7Z解凍テスト、アーカイブ管理テストファイル、ファイル圧縮サンプル'
         },

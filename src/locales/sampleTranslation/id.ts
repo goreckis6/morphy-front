@@ -34,7 +34,7 @@ export const id: SamplePageTranslations = {
     formats: {
       docx: {
         meta: {
-          title: 'Unduh File Sampel DOCX Gratis - File Uji | FomiPeek',
+          title: 'Unduh File Sampel DOCX Gratis - File Uji | FormiPeek',
           description: 'Unduh file sampel DOCX gratis untuk pengujian. Tersedia berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji alat konversi dan pemrosesan dokumen.',
           keywords: 'file sampel DOCX, file uji DOCX, unduh sampel DOCX, file uji DOCX gratis, sampel dokumen, sampel Microsoft Word'
         },
@@ -50,7 +50,7 @@ export const id: SamplePageTranslations = {
       },
       doc: {
         meta: {
-          title: 'Unduh File Sampel DOC Gratis - File Uji Microsoft Word DOC | FomiPeek',
+          title: 'Unduh File Sampel DOC Gratis - File Uji Microsoft Word DOC | FormiPeek',
           description: 'Unduh file sampel DOC gratis untuk menguji alat konversi dokumen. Berbagai ukuran tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji konverter DOC ke PDF, DOC ke DOCX, dan pemrosesan dokumen Microsoft Word legacy.',
           keywords: 'file sampel DOC, file uji DOC, unduh sampel DOC, file uji DOC gratis, sampel Microsoft Word DOC, uji konverter DOC ke PDF, konversi DOC ke DOCX, sampel dokumen Word legacy, file uji .doc, sampel konversi dokumen'
         },
@@ -66,7 +66,7 @@ export const id: SamplePageTranslations = {
       },
       pdf: {
         meta: {
-          title: 'Unduh File Sampel PDF Gratis - File Uji PDF untuk Alat Konversi | FomiPeek',
+          title: 'Unduh File Sampel PDF Gratis - File Uji PDF untuk Alat Konversi | FormiPeek',
           description: 'Unduh file sampel PDF gratis untuk menguji konverter PDF, penampil, dan pemroses. Berbagai ukuran tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji alat PDF ke Word, PDF ke JPG, kompresi PDF, dan pengeditan PDF.',
           keywords: 'file sampel PDF, file uji PDF, unduh sampel PDF, file uji PDF gratis, file uji konverter PDF, sampel PDF ke Word, sampel PDF ke JPG, uji kompresi PDF, file uji penampil PDF, file uji .pdf, sampel konversi dokumen'
         },
@@ -82,7 +82,7 @@ export const id: SamplePageTranslations = {
       },
       odp: {
         meta: {
-          title: 'Unduh File Sampel ODP Gratis - File Uji Presentasi OpenDocument | FomiPeek',
+          title: 'Unduh File Sampel ODP Gratis - File Uji Presentasi OpenDocument | FormiPeek',
           description: 'Unduh file sampel ODP gratis untuk menguji alat konversi presentasi. Berbagai ukuran tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji konverter ODP ke PPT, ODP ke PDF, file LibreOffice Impress, dan pemrosesan format OpenDocument.',
           keywords: 'file sampel ODP, file uji ODP, unduh sampel ODP, file uji ODP gratis, sampel presentasi OpenDocument, konverter ODP ke PPT, konverter ODP ke PDF, sampel LibreOffice Impress, file uji .odp, sampel konversi presentasi, uji format OpenDocument'
         },
@@ -98,7 +98,7 @@ export const id: SamplePageTranslations = {
       },
       rtf: {
         meta: {
-          title: 'Unduh File Sampel RTF Gratis - File Uji Rich Text Format | FomiPeek',
+          title: 'Unduh File Sampel RTF Gratis - File Uji Rich Text Format | FormiPeek',
           description: 'Unduh file sampel RTF gratis untuk menguji alat konversi Rich Text Format. Berbagai ukuran tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji konverter RTF ke DOC, RTF ke PDF, kompatibilitas pengolah kata, dan konversi format dokumen.',
           keywords: 'file sampel RTF, file uji RTF, unduh sampel RTF, file uji RTF gratis, sampel Rich Text Format, konverter RTF ke DOC, konverter RTF ke PDF, file uji .rtf, file uji pengolah kata, sampel konversi format dokumen'
         },
@@ -114,7 +114,7 @@ export const id: SamplePageTranslations = {
       },
       epub: {
         meta: {
-          title: 'Unduh File Sampel EPUB Gratis - File Uji eBook untuk Pembaca | FomiPeek',
+          title: 'Unduh File Sampel EPUB Gratis - File Uji eBook untuk Pembaca | FormiPeek',
           description: 'Unduh file sampel EPUB gratis untuk menguji pembaca eBook dan alat konversi. Berbagai ukuran tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pembaca EPUB, konverter EPUB ke PDF, EPUB ke MOBI, alat publikasi digital, dan kompatibilitas format eBook.',
           keywords: 'file sampel EPUB, file uji EPUB, unduh sampel EPUB, file uji EPUB gratis, sampel eBook, uji pembaca EPUB, konverter EPUB ke PDF, konverter EPUB ke MOBI, file uji .epub, sampel publikasi digital, file uji format eBook'
         },
@@ -130,7 +130,7 @@ export const id: SamplePageTranslations = {
       },
       'invoice-pdf': {
         meta: {
-          title: 'Unduh File Sampel PDF Faktur Gratis - File Uji Dokumen Faktur | FomiPeek',
+          title: 'Unduh File Sampel PDF Faktur Gratis - File Uji Dokumen Faktur | FormiPeek',
           description: 'Unduh file sampel PDF faktur gratis untuk menguji alat pemrosesan dan parsing faktur. Berbagai ukuran tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji OCR faktur, ekstraksi data faktur, otomatisasi faktur, parsing faktur PDF, dan sistem manajemen dokumen.',
           keywords: 'file sampel PDF faktur, file uji PDF faktur, unduh sampel PDF faktur, file uji PDF faktur gratis, sampel dokumen faktur, uji OCR faktur, ekstraksi data faktur, uji otomatisasi faktur, parsing faktur PDF, sampel pemrosesan faktur, file uji manajemen dokumen'
         },
@@ -146,7 +146,7 @@ export const id: SamplePageTranslations = {
       },
       mobi: {
         meta: {
-          title: 'Unduh File Sampel MOBI Gratis - File Uji eBook MOBI untuk Kindle | FomiPeek',
+          title: 'Unduh File Sampel MOBI Gratis - File Uji eBook MOBI untuk Kindle | FormiPeek',
           description: 'Unduh file sampel MOBI gratis untuk menguji pembaca eBook MOBI dan alat konversi. Berbagai ukuran tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompatibilitas Kindle, konverter MOBI ke EPUB, MOBI ke PDF, konversi format eBook, dan aplikasi membaca digital.',
           keywords: 'file sampel MOBI, file uji MOBI, unduh sampel MOBI, file uji MOBI gratis, sampel eBook MOBI, file uji Kindle, konverter MOBI ke EPUB, konverter MOBI ke PDF, file uji .mobi, sampel konversi eBook, file uji membaca digital'
         },
@@ -162,7 +162,7 @@ export const id: SamplePageTranslations = {
       },
       csv: {
         meta: {
-          title: 'Unduh file sampel CSV gratis - File uji CSV untuk pemrosesan data | FomiPeek',
+          title: 'Unduh file sampel CSV gratis - File uji CSV untuk pemrosesan data | FormiPeek',
           description: 'Unduh file sampel CSV gratis untuk menguji alat pemrosesan dan konversi data. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji konverter CSV ke Excel, CSV ke JSON, alat impor data, aplikasi spreadsheet, dan pemrosesan nilai yang dipisahkan koma.',
           keywords: 'file sampel CSV, file uji CSV, unduh contoh CSV, file uji CSV gratis, konverter CSV ke Excel, konverter CSV ke JSON, contoh nilai yang dipisahkan koma, file uji pemrosesan data, contoh impor spreadsheet, file uji .csv, contoh konversi data'
         },
@@ -178,7 +178,7 @@ export const id: SamplePageTranslations = {
       },
       xls: {
         meta: {
-          title: 'Unduh file sampel XLS gratis - File uji Microsoft Excel XLS | FomiPeek',
+          title: 'Unduh file sampel XLS gratis - File uji Microsoft Excel XLS | FormiPeek',
           description: 'Unduh file sampel XLS gratis untuk menguji alat konversi Excel dan pemrosesan data. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji konverter XLS ke XLSX, XLS ke CSV, XLS ke PDF, ekstraksi data Excel, dan pemrosesan spreadsheet legacy.',
           keywords: 'file sampel XLS, file uji XLS, unduh contoh XLS, file uji XLS gratis, contoh Microsoft Excel XLS, konverter XLS ke XLSX, konverter XLS ke CSV, konverter XLS ke PDF, ekstraksi data Excel, file uji .xls, contoh konversi spreadsheet'
         },
@@ -194,7 +194,7 @@ export const id: SamplePageTranslations = {
       },
       xlsx: {
         meta: {
-          title: 'Unduh file sampel XLSX gratis - File uji Excel XLSX untuk alat konversi | FomiPeek',
+          title: 'Unduh file sampel XLSX gratis - File uji Excel XLSX untuk alat konversi | FormiPeek',
           description: 'Unduh file sampel XLSX gratis untuk menguji alat konversi Excel dan pemrosesan data. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji konverter XLSX ke CSV, XLSX ke PDF, XLSX ke JSON, analisis data Excel, otomatisasi spreadsheet, dan pemrosesan Office Open XML.',
           keywords: 'file sampel XLSX, file uji XLSX, unduh contoh XLSX, file uji XLSX gratis, contoh Excel XLSX, konverter XLSX ke CSV, konverter XLSX ke PDF, konverter XLSX ke JSON, analisis data Excel, file uji .xlsx, contoh otomatisasi spreadsheet, contoh Office Open XML'
         },
@@ -210,7 +210,7 @@ export const id: SamplePageTranslations = {
       },
       xml: {
         meta: {
-          title: 'Unduh file sampel XML gratis - File uji XML untuk parsing dan konversi | FomiPeek',
+          title: 'Unduh file sampel XML gratis - File uji XML untuk parsing dan konversi | FormiPeek',
           description: 'Unduh file sampel XML gratis untuk menguji alat parsing, konversi, dan pemrosesan data XML. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji konverter XML ke JSON, XML ke CSV, validasi XML, pemrosesan data terstruktur, dan parsing bahasa markup.',
           keywords: 'file sampel XML, file uji XML, unduh contoh XML, file uji XML gratis, konverter XML ke JSON, konverter XML ke CSV, uji validasi XML, contoh Extensible Markup Language, contoh data terstruktur, file uji .xml, contoh parsing bahasa markup'
         },
@@ -226,7 +226,7 @@ export const id: SamplePageTranslations = {
       },
       html: {
         meta: {
-          title: 'Unduh file sampel HTML gratis - File uji HTML untuk pengembangan web | FomiPeek',
+          title: 'Unduh file sampel HTML gratis - File uji HTML untuk pengembangan web | FormiPeek',
           description: 'Unduh file sampel HTML gratis untuk menguji alat pengembangan web dan pemrosesan HTML. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji konverter HTML ke PDF, HTML ke DOCX, validasi HTML, web scraping, rendering browser, dan pemrosesan HyperText Markup Language.',
           keywords: 'file sampel HTML, file uji HTML, unduh contoh HTML, file uji HTML gratis, konverter HTML ke PDF, konverter HTML ke DOCX, uji validasi HTML, contoh HyperText Markup Language, contoh pengembangan web, file uji .html, contoh web scraping, uji rendering browser'
         },
@@ -242,7 +242,7 @@ export const id: SamplePageTranslations = {
       },
       ods: {
         meta: {
-          title: 'Unduh file sampel ODS gratis - File uji spreadsheet OpenDocument | FomiPeek',
+          title: 'Unduh file sampel ODS gratis - File uji spreadsheet OpenDocument | FormiPeek',
           description: 'Unduh file sampel ODS gratis untuk menguji alat konversi spreadsheet dan pemrosesan data. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji konverter ODS ke Excel, ODS ke CSV, file LibreOffice Calc, pemrosesan format OpenDocument, dan ekstraksi data spreadsheet.',
           keywords: 'file sampel ODS, file uji ODS, unduh contoh ODS, file uji ODS gratis, contoh spreadsheet OpenDocument, konverter ODS ke Excel, konverter ODS ke CSV, contoh LibreOffice Calc, file uji .ods, contoh konversi spreadsheet, uji format OpenDocument'
         },
@@ -258,7 +258,7 @@ export const id: SamplePageTranslations = {
       },
       'ansible-yml': {
         meta: {
-          title: 'Unduh file sampel Ansible YML gratis - File uji konfigurasi YAML | FomiPeek',
+          title: 'Unduh file sampel Ansible YML gratis - File uji konfigurasi YAML | FormiPeek',
           description: 'Unduh file sampel Ansible YML gratis untuk menguji alat parsing YAML dan manajemen konfigurasi. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji playbook Ansible, validasi YAML, otomatisasi DevOps, sistem manajemen konfigurasi, dan alat infrastructure as code.',
           keywords: 'file sampel Ansible YML, file uji YML, unduh contoh YML, file uji YML gratis, contoh playbook Ansible, contoh konfigurasi YAML, uji validasi YAML, contoh otomatisasi DevOps, file uji .yml, contoh manajemen konfigurasi, contoh infrastructure as code'
         },
@@ -274,7 +274,7 @@ export const id: SamplePageTranslations = {
       },
       'api-response-json': {
         meta: {
-          title: 'Unduh File Sampel API Response JSON Gratis - File Uji JSON untuk Pengembangan API | FomiPeek',
+          title: 'Unduh File Sampel API Response JSON Gratis - File Uji JSON untuk Pengembangan API | FormiPeek',
           description: 'Unduh file sampel API Response JSON gratis untuk menguji parsing JSON, integrasi API, dan alat pengembangan web. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji respons REST API, validator JSON, mocking API, pengujian webhook, dan pemrosesan format pertukaran data.',
           keywords: 'file sampel API Response JSON, file uji JSON, unduh contoh JSON, file uji JSON gratis, contoh respons API, contoh parsing JSON, file uji REST API, uji validator JSON, contoh mocking API, file uji webhook, file uji .json, contoh web API, contoh format pertukaran data'
         },
@@ -290,7 +290,7 @@ export const id: SamplePageTranslations = {
       },
       'arduino-ino': {
         meta: {
-          title: 'Unduh File Sampel Arduino INO Gratis - File Uji Sketch Arduino untuk Pengembangan Embedded | FomiPeek',
+          title: 'Unduh File Sampel Arduino INO Gratis - File Uji Sketch Arduino untuk Pengembangan Embedded | FormiPeek',
           description: 'Unduh file sampel Arduino INO gratis untuk menguji kompilasi sketch Arduino dan alat pemrograman embedded. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji Arduino IDE, validasi sketch, pemrograman mikrokontroler, pengembangan sistem embedded, dan pengujian perangkat IoT.',
           keywords: 'file sampel Arduino INO, file uji Arduino INO, unduh contoh Arduino INO, file uji Arduino INO gratis, contoh sketch Arduino, contoh kode embedded, file uji Arduino IDE, file uji .ino, contoh mikrokontroler, contoh pengembangan IoT, contoh pemrograman embedded'
         },
@@ -306,7 +306,7 @@ export const id: SamplePageTranslations = {
       },
       bat: {
         meta: {
-          title: 'Unduh File Sampel BAT Gratis - File Uji Script Batch untuk Otomatisasi Windows | FomiPeek',
+          title: 'Unduh File Sampel BAT Gratis - File Uji Script Batch untuk Otomatisasi Windows | FormiPeek',
           description: 'Unduh file sampel BAT script batch gratis untuk menguji otomatisasi Windows dan alat pemrosesan baris perintah. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji eksekusi script batch, otomatisasi tugas Windows, alat baris perintah, validator script, dan utilitas administrasi sistem.',
           keywords: 'file sampel BAT, file uji BAT, unduh contoh BAT, file uji BAT gratis, contoh script batch, contoh file batch Windows, contoh script otomatisasi, file uji .bat, contoh script baris perintah, contoh otomatisasi Windows, contoh eksekusi script'
         },
@@ -322,7 +322,7 @@ export const id: SamplePageTranslations = {
       },
       asc: {
         meta: {
-          title: 'Unduh File Sampel ASC Gratis - File Uji Teks ASCII untuk Pemrosesan Teks | FomiPeek',
+          title: 'Unduh File Sampel ASC Gratis - File Uji Teks ASCII untuk Pemrosesan Teks | FormiPeek',
           description: 'Unduh file sampel ASC teks ASCII gratis untuk menguji alat pemrosesan teks dan pengkodean. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pengkodean ASCII, parsing file teks, editor teks biasa, validasi pengkodean karakter, dan alat konversi format teks.',
           keywords: 'file sampel ASC, file uji ASC, unduh contoh ASC, file uji ASC gratis, contoh teks ASCII, contoh teks biasa, file uji .asc, contoh format teks, file uji pengkodean ASCII, contoh pemrosesan teks, contoh pengkodean karakter'
         },
@@ -338,7 +338,7 @@ export const id: SamplePageTranslations = {
       },
       bib: {
         meta: {
-          title: 'Unduh File Sampel BIB Gratis - File Uji Bibliografi untuk Penelitian Akademik | FomiPeek',
+          title: 'Unduh File Sampel BIB Gratis - File Uji Bibliografi untuk Penelitian Akademik | FormiPeek',
           description: 'Unduh file sampel BIB bibliografi gratis untuk menguji alat manajemen bibliografi dan kutipan. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan format BibTeX, manajer referensi, generator kutipan, alat penulisan akademik, dan integrasi bibliografi LaTeX.',
           keywords: 'file sampel BIB, file uji BIB, unduh contoh BIB, file uji BIB gratis, contoh bibliografi, contoh file BibTeX, contoh kutipan, file uji .bib, contoh manajemen referensi, contoh kutipan akademik, contoh bibliografi LaTeX'
         },
@@ -354,7 +354,7 @@ export const id: SamplePageTranslations = {
       },
       c: {
         meta: {
-          title: 'Unduh File Sampel C Gratis - File Uji Bahasa Pemrograman C untuk Pengembangan | FomiPeek',
+          title: 'Unduh File Sampel C Gratis - File Uji Bahasa Pemrograman C untuk Pengembangan | FormiPeek',
           description: 'Unduh file sampel C kode sumber gratis untuk menguji kompilasi kode C dan alat pengembangan. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompiler C, pemeriksa sintaks, analisator kode, toolchain GCC, pengembangan C embedded, dan alat pemrograman sistem.',
           keywords: 'file sampel C, file uji C, unduh contoh C, file uji C gratis, contoh kode sumber C, contoh file pemrograman C, file uji .c, file uji kompilasi C, file uji GCC, contoh C embedded, contoh pemrograman sistem'
         },
@@ -370,7 +370,7 @@ export const id: SamplePageTranslations = {
       },
       'can-log': {
         meta: {
-          title: 'Unduh File Sampel CAN Log Gratis - File Uji Controller Area Network untuk Otomotif | FomiPeek',
+          title: 'Unduh File Sampel CAN Log Gratis - File Uji Controller Area Network untuk Otomotif | FormiPeek',
           description: 'Unduh file sampel CAN Log gratis untuk menguji analisis bus CAN dan alat diagnostik otomotif. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji analisator bus CAN, alat diagnostik otomotif, protokol jaringan kendaraan, pengujian OBD-II, dan sistem embedded otomotif.',
           keywords: 'file sampel CAN Log, file uji log CAN, unduh contoh log CAN, file uji log CAN gratis, contoh Controller Area Network, contoh bus CAN, file uji .log, contoh diagnostik otomotif, file uji OBD-II, contoh jaringan kendaraan, uji analisator bus CAN'
         },
@@ -386,7 +386,7 @@ export const id: SamplePageTranslations = {
       },
       cmd: {
         meta: {
-          title: 'Unduh File Sampel CMD Gratis - File Uji Script Perintah Windows untuk Otomatisasi | FomiPeek',
+          title: 'Unduh File Sampel CMD Gratis - File Uji Script Perintah Windows untuk Otomatisasi | FormiPeek',
           description: 'Unduh file sampel CMD script perintah Windows gratis untuk menguji eksekusi script batch dan alat otomatisasi Windows. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji prompt perintah Windows, eksekusi file batch, otomatisasi script, administrasi sistem, dan alat penjadwalan tugas Windows.',
           keywords: 'file sampel CMD, file uji CMD, unduh contoh CMD, file uji CMD gratis, contoh script perintah Windows, contoh script batch, file uji .cmd, contoh script perintah, contoh otomatisasi Windows, contoh administrasi sistem'
         },
@@ -402,7 +402,7 @@ export const id: SamplePageTranslations = {
       },
       conf: {
         meta: {
-          title: 'Unduh File Sampel CONF Gratis - File Uji Konfigurasi untuk Konfigurasi Sistem | FomiPeek',
+          title: 'Unduh File Sampel CONF Gratis - File Uji Konfigurasi untuk Konfigurasi Sistem | FormiPeek',
           description: 'Unduh file sampel CONF konfigurasi gratis untuk menguji parsing file konfigurasi dan alat konfigurasi sistem. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji konfigurasi server, pengaturan aplikasi, validator file konfigurasi, alat administrasi sistem, dan utilitas penyebaran perangkat lunak.',
           keywords: 'file sampel CONF, file uji CONF, unduh contoh CONF, file uji CONF gratis, contoh file konfigurasi, contoh konfigurasi server, file uji .conf, contoh file konfigurasi, contoh konfigurasi sistem, contoh pengaturan aplikasi'
         },
@@ -418,7 +418,7 @@ export const id: SamplePageTranslations = {
       },
       'config-ini': {
         meta: {
-          title: 'Unduh File Sampel Config INI Gratis - File Uji Konfigurasi INI untuk Aplikasi | FomiPeek',
+          title: 'Unduh File Sampel Config INI Gratis - File Uji Konfigurasi INI untuk Aplikasi | FormiPeek',
           description: 'Unduh file sampel Config INI konfigurasi INI gratis untuk menguji parsing file INI dan alat manajemen konfigurasi. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji parser INI, konfigurasi aplikasi, manajemen pengaturan, file INI Windows, dan utilitas konfigurasi perangkat lunak.',
           keywords: 'file sampel Config INI, file uji INI, unduh contoh INI, file uji INI gratis, contoh konfigurasi INI, contoh konfigurasi INI, file uji .ini, contoh file konfigurasi, contoh INI Windows, contoh pengaturan aplikasi'
         },
@@ -434,7 +434,7 @@ export const id: SamplePageTranslations = {
       },
       cpp: {
         meta: {
-          title: 'Unduh File Sampel CPP Gratis - File Uji Bahasa Pemrograman C++ untuk Pengembangan | FomiPeek',
+          title: 'Unduh File Sampel CPP Gratis - File Uji Bahasa Pemrograman C++ untuk Pengembangan | FormiPeek',
           description: 'Unduh file sampel CPP kode sumber C++ gratis untuk menguji kompilasi kode C++ dan alat pengembangan. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompiler C++, pemeriksa sintaks, analisator kode, toolchain GCC/G++, fitur C++ modern, dan alat pemrograman berorientasi objek.',
           keywords: 'file sampel CPP, file uji CPP, unduh contoh CPP, file uji CPP gratis, contoh kode sumber C++, contoh file kode C++, file uji .cpp, contoh file pemrograman C++, file uji kompilasi C++, file uji GCC, contoh C++ modern'
         },
@@ -450,7 +450,7 @@ export const id: SamplePageTranslations = {
       },
       h: {
         meta: {
-          title: 'Unduh File Sampel H Gratis - File Uji Header C/C++ untuk Pemrograman | FomiPeek',
+          title: 'Unduh File Sampel H Gratis - File Uji Header C/C++ untuk Pemrograman | FormiPeek',
           description: 'Unduh file sampel H header C/C++ gratis untuk menguji pemrosesan file header dan alat pengembangan. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompiler C/C++, inklusi file header, alat preprosesor, organisasi kode, dan utilitas pengembangan lintas platform.',
           keywords: 'file sampel H, file uji H, unduh contoh H, file uji H gratis, contoh header C, contoh header C++, contoh file header, file uji .h, file header C/C++, contoh header pemrograman, contoh file header kode'
         },
@@ -466,7 +466,7 @@ export const id: SamplePageTranslations = {
       },
       hpp: {
         meta: {
-          title: 'Unduh File Sampel HPP Gratis - File Uji Header C++ untuk Pengembangan C++ Modern | FomiPeek',
+          title: 'Unduh File Sampel HPP Gratis - File Uji Header C++ untuk Pengembangan C++ Modern | FormiPeek',
           description: 'Unduh file sampel HPP header C++ gratis untuk menguji pemrosesan file header C++ dan alat pengembangan. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompiler C++, pustaka header-only, metaprogramming template, fitur C++ modern, dan utilitas pengembangan C++ lanjutan.',
           keywords: 'file sampel HPP, file uji HPP, unduh contoh HPP, file uji HPP gratis, contoh header C++, contoh file header, file uji .hpp, file header C++, contoh header pemrograman, contoh file header kode, contoh file pengembangan C++, contoh header C++ modern'
         },
@@ -482,7 +482,7 @@ export const id: SamplePageTranslations = {
       },
       hex: {
         meta: {
-          title: 'Unduh file sampel HEX gratis - File uji hex untuk pengembangan firmware dan sistem tertanam | FomiPeek',
+          title: 'Unduh file sampel HEX gratis - File uji hex untuk pengembangan firmware dan sistem tertanam | FormiPeek',
           description: 'Unduh file sampel HEX hex gratis untuk menguji pemrograman firmware, pengembangan sistem tertanam, dan analisis data biner. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji hex editor, firmware loader, pemrograman mikrokontroler, dan alat pengembangan tertanam.',
           keywords: 'file sampel HEX, file uji HEX, unduh sampel HEX, file uji HEX gratis, file hex, file hex firmware, file uji .hex, file hex tertanam, file hex mikrokontroler, file uji hex editor, sampel pemrograman firmware, file hex biner'
         },
@@ -498,7 +498,7 @@ export const id: SamplePageTranslations = {
       },
       cs: {
         meta: {
-          title: 'Unduh file sampel CS gratis - File uji kode sumber C# untuk pengembangan .NET | FomiPeek',
+          title: 'Unduh file sampel CS gratis - File uji kode sumber C# untuk pengembangan .NET | FormiPeek',
           description: 'Unduh file sampel CS kode sumber C# gratis untuk menguji kompilasi C#, pengembangan .NET, dan alat Visual Studio. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompiler C#, framework .NET, IDE Visual Studio, alat analisis kode, dan lingkungan pengembangan C#.',
           keywords: 'file sampel CS, file uji CS, unduh sampel CS, file uji CS gratis, sampel kode sumber C#, file kode .NET, file uji .cs, file pemrograman C#, file uji Visual Studio, sampel pengembangan .NET, file uji kompilasi C#'
         },
@@ -514,7 +514,7 @@ export const id: SamplePageTranslations = {
       },
       css: {
         meta: {
-          title: 'Unduh file sampel CSS gratis - File uji stylesheet untuk pengembangan web | FomiPeek',
+          title: 'Unduh file sampel CSS gratis - File uji stylesheet untuk pengembangan web | FormiPeek',
           description: 'Unduh file sampel CSS stylesheet gratis untuk menguji styling web, parsing CSS, dan alat front-end. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji validator CSS, preprocessor (SASS, LESS), CSS minifier, web browser, dan framework pengembangan front-end.',
           keywords: 'file sampel CSS, file uji CSS, unduh sampel CSS, file uji CSS gratis, sampel stylesheet, file stylesheet CSS, file uji .css, file styling web, file uji parser CSS, sampel pengembangan front-end, file uji framework CSS'
         },
@@ -530,7 +530,7 @@ export const id: SamplePageTranslations = {
       },
       csr: {
         meta: {
-          title: 'Unduh file sampel CSR gratis - File uji permintaan tanda tangan sertifikat untuk SSL/TLS | FomiPeek',
+          title: 'Unduh file sampel CSR gratis - File uji permintaan tanda tangan sertifikat untuk SSL/TLS | FormiPeek',
           description: 'Unduh file sampel CSR permintaan tanda tangan sertifikat gratis untuk menguji pembuatan sertifikat SSL/TLS, manajemen PKI, dan alat keamanan. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji otoritas sertifikat, OpenSSL, pembuatan sertifikat SSL, infrastruktur PKI, dan alat manajemen sertifikat keamanan.',
           keywords: 'file sampel CSR, file uji CSR, unduh sampel CSR, file uji CSR gratis, sampel permintaan tanda tangan sertifikat, file sertifikat SSL, file uji .csr, file sertifikat PKI, file uji OpenSSL, sampel sertifikat SSL/TLS, file uji otoritas sertifikat'
         },
@@ -546,7 +546,7 @@ export const id: SamplePageTranslations = {
       },
       'customer-database-sql': {
         meta: {
-          title: 'Unduh file sampel Customer Database SQL gratis - File uji database SQL | FomiPeek',
+          title: 'Unduh file sampel Customer Database SQL gratis - File uji database SQL | FormiPeek',
           description: 'Unduh file sampel Customer Database SQL gratis untuk menguji operasi database SQL, eksekusi query, dan alat manajemen database. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji SQL parser, alat impor database, SQLite, MySQL, PostgreSQL, dan sistem manajemen database.',
           keywords: 'file sampel Customer Database SQL, file uji database SQL, unduh sampel SQL, file uji SQL gratis, file database SQL, file uji .sql, file query SQL, sampel impor database, file uji SQLite, sampel MySQL, file uji PostgreSQL'
         },
@@ -562,7 +562,7 @@ export const id: SamplePageTranslations = {
       },
       dbf: {
         meta: {
-          title: 'Unduh file sampel DBF gratis - File uji database dBASE untuk manajemen data | FomiPeek',
+          title: 'Unduh file sampel DBF gratis - File uji database dBASE untuk manajemen data | FormiPeek',
           description: 'Unduh file sampel DBF database dBASE gratis untuk menguji operasi database, impor/ekspor data, dan format database legacy. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompatibilitas dBASE, konverter database, alat migrasi data, aplikasi spreadsheet, dan sistem manajemen database.',
           keywords: 'file sampel DBF, file uji DBF, unduh sampel DBF, file uji DBF gratis, file database dBASE, file uji .dbf, file format database, sampel database legacy, file uji kompatibilitas dBASE, sampel impor data'
         },
@@ -578,7 +578,7 @@ export const id: SamplePageTranslations = {
       },
       dem: {
         meta: {
-          title: 'Unduh file sampel DEM gratis - File uji model elevasi digital untuk GIS dan pemetaan | FomiPeek',
+          title: 'Unduh file sampel DEM gratis - File uji model elevasi digital untuk GIS dan pemetaan | FormiPeek',
           description: 'Unduh file sampel DEM model elevasi digital gratis untuk menguji aplikasi GIS, pemetaan medan, dan alat analisis geospasial. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji perangkat lunak GIS, visualisasi medan, pemrosesan data elevasi, aplikasi pemetaan, dan alat analisis geospasial.',
           keywords: 'file sampel DEM, file uji DEM, unduh sampel DEM, file uji DEM gratis, file model elevasi digital, file uji .dem, file elevasi GIS, sampel data medan, file data geospasial, file uji pemetaan, sampel model elevasi'
         },
@@ -594,7 +594,7 @@ export const id: SamplePageTranslations = {
       },
       der: {
         meta: {
-          title: 'Unduh file sampel DER gratis - File uji sertifikat Distinguished Encoding Rules | FomiPeek',
+          title: 'Unduh file sampel DER gratis - File uji sertifikat Distinguished Encoding Rules | FormiPeek',
           description: 'Unduh file sampel DER sertifikat Distinguished Encoding Rules gratis untuk menguji sertifikat SSL/TLS, manajemen PKI, dan alat keamanan. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji parsing sertifikat, OpenSSL, infrastruktur PKI, validasi sertifikat SSL, dan alat manajemen sertifikat keamanan.',
           keywords: 'file sampel DER, file uji DER, unduh sampel DER, file uji DER gratis, file Distinguished Encoding Rules, file uji .der, file sertifikat, sampel sertifikat SSL, file sertifikat PKI, file uji OpenSSL, sampel parsing sertifikat'
         },
@@ -610,7 +610,7 @@ export const id: SamplePageTranslations = {
       },
       dmp: {
         meta: {
-          title: 'Unduh file sampel DMP gratis - File uji memory dump untuk debugging dan analisis | FomiPeek',
+          title: 'Unduh file sampel DMP gratis - File uji memory dump untuk debugging dan analisis | FormiPeek',
           description: 'Unduh file sampel DMP memory dump gratis untuk menguji analisis crash, alat debugging, dan diagnostik sistem. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji debugger, alat analisis crash, memory analyzer, alat diagnostik sistem, dan aplikasi analisis forensik.',
           keywords: 'file sampel DMP, file uji DMP, unduh sampel DMP, file uji DMP gratis, file memory dump, file uji .dmp, file crash dump, file debugging, sampel sistem dump, file analisis memory, file uji analisis crash'
         },
@@ -626,7 +626,7 @@ export const id: SamplePageTranslations = {
       },
       'docker-compose-yml': {
         meta: {
-          title: 'Unduh file sampel Docker Compose YML gratis - File uji konfigurasi Docker Compose | FomiPeek',
+          title: 'Unduh file sampel Docker Compose YML gratis - File uji konfigurasi Docker Compose | FormiPeek',
           description: 'Unduh file sampel Docker Compose YML konfigurasi gratis untuk menguji orkestrasi container Docker, aplikasi multi-container, dan alat DevOps. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji Docker Compose, orkestrasi container, parsing YAML, otomasi DevOps, dan alat deployment aplikasi tercontainerisasi.',
           keywords: 'file sampel Docker Compose YML, file uji docker-compose, unduh sampel docker-compose, file uji docker-compose gratis, file YAML Docker Compose, file uji .yml, file orkestrasi container, sampel konfigurasi DevOps, file uji Docker Compose, sampel konfigurasi multi-container'
         },
@@ -642,7 +642,7 @@ export const id: SamplePageTranslations = {
       },
       dockerfile: {
         meta: {
-          title: 'Unduh file sampel Dockerfile gratis - File uji build container Docker | FomiPeek',
+          title: 'Unduh file sampel Dockerfile gratis - File uji build container Docker | FormiPeek',
           description: 'Unduh file sampel Dockerfile build container Docker gratis untuk menguji containerisasi, build Docker, dan alat DevOps. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji Docker build, pembuatan image container, parsing Dockerfile, alat containerisasi, dan platform otomasi DevOps.',
           keywords: 'file sampel Dockerfile, file uji Dockerfile, unduh sampel Dockerfile, file uji Dockerfile gratis, file container Docker, file uji Dockerfile, file build container, sampel build Docker, file uji containerisasi, sampel DevOps Docker'
         },
@@ -658,7 +658,7 @@ export const id: SamplePageTranslations = {
       },
       editorconfig: {
         meta: {
-          title: 'Unduh file sampel EditorConfig gratis - File uji konfigurasi editor | FomiPeek',
+          title: 'Unduh file sampel EditorConfig gratis - File uji konfigurasi editor | FormiPeek',
           description: 'Unduh file sampel EditorConfig konfigurasi editor gratis untuk menguji pengaturan editor kode, konsistensi format, dan alat pengembangan. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji parser EditorConfig, plugin editor kode, alat format, konfigurasi IDE, dan alat setup lingkungan pengembangan.',
           keywords: 'file sampel EditorConfig, file uji EditorConfig, unduh sampel EditorConfig, file uji EditorConfig gratis, file konfigurasi editor, file uji .editorconfig, file pengaturan editor kode, sampel konfigurasi IDE, file konfigurasi format, file uji pengaturan editor'
         },
@@ -674,7 +674,7 @@ export const id: SamplePageTranslations = {
       },
       ini: {
         meta: {
-          title: 'Unduh file sampel INI gratis - File uji konfigurasi INI untuk aplikasi | FomiPeek',
+          title: 'Unduh file sampel INI gratis - File uji konfigurasi INI untuk aplikasi | FormiPeek',
           description: 'Unduh file sampel INI konfigurasi gratis untuk menguji pengaturan aplikasi, parsing file INI, dan alat manajemen konfigurasi. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji parser INI, konfigurasi aplikasi, manajemen pengaturan, file INI Windows, dan utilitas konfigurasi perangkat lunak.',
           keywords: 'file sampel INI, file uji INI, unduh sampel INI, file uji INI gratis, file konfigurasi INI, file uji .ini, file pengaturan aplikasi, sampel konfigurasi INI, file INI Windows, sampel file konfigurasi, file uji parsing INI'
         },
@@ -690,7 +690,7 @@ export const id: SamplePageTranslations = {
       },
       intelhex: {
         meta: {
-          title: 'Unduh file sampel IntelHex gratis - File uji hex Intel untuk pengembangan firmware | FomiPeek',
+          title: 'Unduh file sampel IntelHex gratis - File uji hex Intel untuk pengembangan firmware | FormiPeek',
           description: 'Unduh file sampel IntelHex hex Intel gratis untuk menguji pemrograman firmware, pengembangan sistem tertanam, dan alat mikrokontroler. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji parser IntelHex, firmware loader, pemrograman mikrokontroler, alat pengembangan tertanam, dan aplikasi pemrosesan file hex.',
           keywords: 'file sampel IntelHex, file uji IntelHex, unduh sampel IntelHex, file uji IntelHex gratis, file hex Intel, file uji .intelhex, file hex firmware, file hex tertanam, file hex mikrokontroler, file uji parser IntelHex, sampel pemrograman firmware'
         },
@@ -706,7 +706,7 @@ export const id: SamplePageTranslations = {
       },
       ipynb: {
         meta: {
-          title: 'Unduh file sampel IPYNB gratis - File uji Jupyter Notebook untuk data science | FomiPeek',
+          title: 'Unduh file sampel IPYNB gratis - File uji Jupyter Notebook untuk data science | FormiPeek',
           description: 'Unduh file sampel IPYNB Jupyter Notebook gratis untuk menguji workflow data science, eksekusi Python, dan alat analisis notebook. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji Jupyter Notebook, alat data science Python, notebook viewer, aplikasi analisis data, dan platform komputasi ilmiah.',
           keywords: 'file sampel IPYNB, file uji IPYNB, unduh sampel IPYNB, file uji IPYNB gratis, file Jupyter Notebook, file uji .ipynb, file notebook Python, sampel notebook data science, file uji Jupyter, file analisis notebook, sampel workflow data science'
         },
@@ -722,7 +722,7 @@ export const id: SamplePageTranslations = {
       },
       java: {
         meta: {
-          title: 'Unduh file sampel Java gratis - File uji kode sumber Java untuk pengembangan | FomiPeek',
+          title: 'Unduh file sampel Java gratis - File uji kode sumber Java untuk pengembangan | FormiPeek',
           description: 'Unduh file sampel Java kode sumber Java gratis untuk menguji kompilasi Java, aplikasi JVM, dan alat pengembangan. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompiler Java, JVM, dukungan IDE (Eclipse, IntelliJ), alat build Java (Maven, Gradle), dan lingkungan pengembangan Java.',
           keywords: 'file sampel Java, file uji Java, unduh sampel Java, file uji Java gratis, file kode sumber Java, file uji .java, file pemrograman Java, file uji JVM, sampel kompilasi Java, file uji IDE Java, sampel pengembangan Java'
         },
@@ -738,7 +738,7 @@ export const id: SamplePageTranslations = {
       },
       jks: {
         meta: {
-          title: 'Unduh file sampel JKS gratis - File uji Java KeyStore untuk keamanan SSL/TLS | FomiPeek',
+          title: 'Unduh file sampel JKS gratis - File uji Java KeyStore untuk keamanan SSL/TLS | FormiPeek',
           description: 'Unduh file sampel JKS Java KeyStore gratis untuk menguji penyimpanan sertifikat SSL/TLS, keamanan Java, dan alat manajemen PKI. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji manajemen Java KeyStore, parsing JKS, penyimpanan sertifikat SSL, alat keamanan Java, dan infrastruktur PKI.',
           keywords: 'file sampel JKS, file uji JKS, unduh sampel JKS, file uji JKS gratis, file Java KeyStore, file uji .jks, file sertifikat SSL, file keamanan Java, file uji keystore, sampel sertifikat PKI, file uji manajemen Java KeyStore'
         },
@@ -754,7 +754,7 @@ export const id: SamplePageTranslations = {
       },
       json: {
         meta: {
-          title: 'Unduh file sampel JSON gratis - File uji data JSON untuk pengembangan web | FomiPeek',
+          title: 'Unduh file sampel JSON gratis - File uji data JSON untuk pengembangan web | FormiPeek',
           description: 'Unduh file sampel JSON data JSON gratis untuk menguji parsing JSON, integrasi API, dan alat pengembangan web. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji JSON parser, API response, format pertukaran data, aplikasi web, dan alat validasi JSON.',
           keywords: 'file sampel JSON, file uji JSON, unduh sampel JSON, file uji JSON gratis, file data JSON, file uji .json, file JSON API, file uji JSON parser, sampel pertukaran data, file JSON web, file uji validasi JSON'
         },
@@ -770,7 +770,7 @@ export const id: SamplePageTranslations = {
       },
       jsonl: {
         meta: {
-          title: 'Unduh file sampel JSONL gratis - File uji JSON Lines untuk pemrosesan data | FomiPeek',
+          title: 'Unduh file sampel JSONL gratis - File uji JSON Lines untuk pemrosesan data | FormiPeek',
           description: 'Unduh file sampel JSONL JSON Lines gratis untuk menguji pemrosesan data, streaming JSON, dan alat big data. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji JSONL parser, aplikasi streaming data, alat ETL, pemrosesan big data, dan alat analisis file log.',
           keywords: 'file sampel JSONL, file uji JSONL, unduh sampel JSONL, file uji JSONL gratis, file JSON Lines, file uji .jsonl, file streaming JSON, sampel pemrosesan data, file JSON ETL, sampel JSON big data, file analisis log JSON'
         },
@@ -786,7 +786,7 @@ export const id: SamplePageTranslations = {
       },
       js: {
         meta: {
-          title: 'Unduh file sampel JS gratis - File uji kode sumber JavaScript untuk pengembangan web | FomiPeek',
+          title: 'Unduh file sampel JS gratis - File uji kode sumber JavaScript untuk pengembangan web | FormiPeek',
           description: 'Unduh file sampel JS kode sumber JavaScript gratis untuk menguji eksekusi JavaScript, pengembangan web, dan alat front-end. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji JavaScript engine, Node.js, web browser, JavaScript minifier, alat analisis kode, dan framework pengembangan front-end.',
           keywords: 'file sampel JS, file uji JS, unduh sampel JS, file uji JS gratis, file kode sumber JavaScript, file uji .js, file pemrograman JavaScript, file uji Node.js, file JavaScript web, file uji JS minifier, sampel pengembangan front-end'
         },
@@ -802,7 +802,7 @@ export const id: SamplePageTranslations = {
       },
       jsx: {
         meta: {
-          title: 'Unduh file sampel JSX gratis - File uji React JSX untuk pengembangan front-end | FomiPeek',
+          title: 'Unduh file sampel JSX gratis - File uji React JSX untuk pengembangan front-end | FormiPeek',
           description: 'Unduh file sampel JSX React JSX gratis untuk menguji pengembangan React, kompilasi JSX, dan framework front-end. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji React, JSX transpiler (Babel), alat build front-end, lingkungan pengembangan React, dan framework JavaScript modern.',
           keywords: 'file sampel JSX, file uji JSX, unduh sampel JSX, file uji JSX gratis, file React JSX, file uji .jsx, file component React, file uji JSX transpiler, file JSX front-end, sampel pengembangan React, file uji Babel JSX'
         },
@@ -818,7 +818,7 @@ export const id: SamplePageTranslations = {
       },
       jwt: {
         meta: {
-          title: 'Unduh file sampel JWT gratis - File uji JSON Web Token untuk keamanan API | FomiPeek',
+          title: 'Unduh file sampel JWT gratis - File uji JSON Web Token untuk keamanan API | FormiPeek',
           description: 'Unduh file sampel JWT JSON Web Token gratis untuk menguji autentikasi API, parsing token JWT, dan alat keamanan. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji JWT parser, autentikasi API, validasi token, OAuth 2.0, dan alat uji keamanan.',
           keywords: 'file sampel JWT, file uji JWT, unduh sampel JWT, file uji JWT gratis, file JSON Web Token, file uji .jwt, file token autentikasi, file keamanan API, file uji JWT parser, sampel token OAuth, file uji keamanan'
         },
@@ -834,7 +834,7 @@ export const id: SamplePageTranslations = {
       },
       key: {
         meta: {
-          title: 'Unduh file sampel KEY gratis - File uji private key untuk keamanan SSL/TLS | FomiPeek',
+          title: 'Unduh file sampel KEY gratis - File uji private key untuk keamanan SSL/TLS | FormiPeek',
           description: 'Unduh file sampel KEY private key gratis untuk menguji sertifikat SSL/TLS, operasi kriptografi, dan alat keamanan. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji parsing private key, OpenSSL, pembuatan sertifikat SSL, library kriptografi, dan alat manajemen sertifikat keamanan.',
           keywords: 'file sampel KEY, file uji KEY, unduh sampel KEY, file uji KEY gratis, file private key, file uji .key, file key SSL, file key kriptografi, file uji OpenSSL, sampel key keamanan, file uji key sertifikat'
         },
@@ -850,7 +850,7 @@ export const id: SamplePageTranslations = {
       },
       kml: {
         meta: {
-          title: 'Unduh file sampel KML gratis - File uji Keyhole Markup Language untuk GIS dan pemetaan | FomiPeek',
+          title: 'Unduh file sampel KML gratis - File uji Keyhole Markup Language untuk GIS dan pemetaan | FormiPeek',
           description: 'Unduh file sampel KML Keyhole Markup Language data geografis gratis untuk menguji aplikasi GIS, visualisasi peta, dan alat geospasial. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji Google Earth, perangkat lunak GIS, rendering peta, pemrosesan data geografis, dan alat analisis geospasial.',
           keywords: 'file sampel KML, file uji KML, unduh sampel KML, file uji KML gratis, file Keyhole Markup Language, file uji .kml, file data geografis, sampel data peta, file KML GIS, file uji Google Earth, sampel data geospasial'
         },
@@ -866,7 +866,7 @@ export const id: SamplePageTranslations = {
       },
       kt: {
         meta: {
-          title: 'Unduh file sampel KT gratis - File uji kode sumber Kotlin untuk pengembangan Android | FomiPeek',
+          title: 'Unduh file sampel KT gratis - File uji kode sumber Kotlin untuk pengembangan Android | FormiPeek',
           description: 'Unduh file sampel KT kode sumber Kotlin gratis untuk menguji kompilasi Kotlin, pengembangan Android, dan aplikasi JVM. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompiler Kotlin, Android Studio, Kotlin/JVM, dukungan IDE, dan lingkungan pengembangan Kotlin.',
           keywords: 'file sampel KT, file uji KT, unduh sampel KT, file uji KT gratis, file kode sumber Kotlin, file uji .kt, file pemrograman Kotlin, file Android Kotlin, file uji kompiler Kotlin, sampel Kotlin JVM, file uji pengembangan Kotlin'
         },
@@ -882,7 +882,7 @@ export const id: SamplePageTranslations = {
       },
       log: {
         meta: {
-          title: 'Unduh file sampel LOG gratis - File uji log untuk debugging dan analisis sistem | FomiPeek',
+          title: 'Unduh file sampel LOG gratis - File uji log untuk debugging dan analisis sistem | FormiPeek',
           description: 'Unduh file sampel LOG log gratis untuk menguji parsing log, analisis sistem, dan alat debugging. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji log analyzer, alat monitoring sistem, aplikasi debugging, sistem agregasi log, dan alat diagnostik sistem.',
           keywords: 'file sampel LOG, file uji LOG, unduh sampel LOG, file uji LOG gratis, file log, file uji .log, file log sistem, sampel log aplikasi, file uji log parser, file debugging log, sampel analisis log sistem'
         },
@@ -898,7 +898,7 @@ export const id: SamplePageTranslations = {
       },
       lua: {
         meta: {
-          title: 'Unduh file sampel LUA gratis - File uji script Lua untuk pengembangan game dan otomasi | FomiPeek',
+          title: 'Unduh file sampel LUA gratis - File uji script Lua untuk pengembangan game dan otomasi | FormiPeek',
           description: 'Unduh file sampel LUA script Lua gratis untuk menguji eksekusi Lua, pengembangan game, dan alat otomasi. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji Lua interpreter, game engine, lingkungan scripting, alat otomasi, dan aplikasi Lua tertanam.',
           keywords: 'file sampel LUA, file uji LUA, unduh sampel LUA, file uji LUA gratis, file script Lua, file uji .lua, file pemrograman Lua, file script game, file uji Lua interpreter, sampel script otomasi, file uji Lua tertanam'
         },
@@ -914,7 +914,7 @@ export const id: SamplePageTranslations = {
       },
       m3u: {
         meta: {
-          title: 'Unduh file sampel M3U gratis - File uji playlist M3U untuk media player | FomiPeek',
+          title: 'Unduh file sampel M3U gratis - File uji playlist M3U untuk media player | FormiPeek',
           description: 'Unduh file sampel M3U playlist M3U gratis untuk menguji media player, parsing playlist, dan alat streaming audio/video. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji media player, playlist manager, aplikasi streaming, audio player, dan perangkat lunak video player.',
           keywords: 'file sampel M3U, file uji M3U, unduh sampel M3U, file uji M3U gratis, file playlist M3U, file uji .m3u, file playlist media, sampel playlist audio, file playlist video, file uji media player, sampel playlist streaming'
         },
@@ -930,7 +930,7 @@ export const id: SamplePageTranslations = {
       },
       m3u8: {
         meta: {
-          title: 'Unduh file sampel M3U8 gratis - File uji playlist M3U8 HLS untuk streaming video | FomiPeek',
+          title: 'Unduh file sampel M3U8 gratis - File uji playlist M3U8 HLS untuk streaming video | FormiPeek',
           description: 'Unduh file sampel M3U8 playlist M3U8 HLS (HTTP Live Streaming) gratis untuk menguji streaming video, HLS player, dan alat pengiriman media. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji HLS player, platform streaming video, adaptive bitrate streaming, media server, dan sistem pengiriman video.',
           keywords: 'file sampel M3U8, file uji M3U8, unduh sampel M3U8, file uji M3U8 gratis, file playlist M3U8 HLS, file uji .m3u8, file HTTP Live Streaming, sampel playlist streaming video, file uji HLS player, sampel adaptive streaming, file playlist media server'
         },
@@ -946,7 +946,7 @@ export const id: SamplePageTranslations = {
       },
       makefile: {
         meta: {
-          title: 'Unduh file sampel Makefile gratis - File uji konfigurasi build Makefile | FomiPeek',
+          title: 'Unduh file sampel Makefile gratis - File uji konfigurasi build Makefile | FormiPeek',
           description: 'Unduh file sampel Makefile konfigurasi build gratis untuk menguji otomasi build, sistem build Make, dan alat pengembangan. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji sistem build Make, alat otomasi build, kompilasi C/C++, build script, dan lingkungan build pengembangan.',
           keywords: 'file sampel Makefile, file uji Makefile, unduh sampel Makefile, file uji Makefile gratis, file build Makefile, file uji Makefile, file konfigurasi build, sampel sistem build Make, file build C/C++, file uji otomasi build, sampel kompilasi Makefile'
         },
@@ -962,7 +962,7 @@ export const id: SamplePageTranslations = {
       },
       mbtiles: {
         meta: {
-          title: 'Unduh file sampel MBTiles gratis - File uji database tile peta MBTiles | FomiPeek',
+          title: 'Unduh file sampel MBTiles gratis - File uji database tile peta MBTiles | FormiPeek',
           description: 'Unduh file sampel MBTiles database tile peta gratis untuk menguji rendering peta, aplikasi GIS, dan alat pemetaan. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji tile server peta, perangkat lunak GIS, engine rendering peta, aplikasi pemetaan mobile, dan alat peta offline.',
           keywords: 'file sampel MBTiles, file uji MBTiles, unduh sampel MBTiles, file uji MBTiles gratis, file tile peta MBTiles, file uji .mbtiles, file database peta, sampel tile GIS, file rendering peta, file uji peta mobile, sampel tile peta offline'
         },
@@ -978,7 +978,7 @@ export const id: SamplePageTranslations = {
       },
       md: {
         meta: {
-          title: 'Unduh file sampel MD gratis - File uji dokumentasi Markdown | FomiPeek',
+          title: 'Unduh file sampel MD gratis - File uji dokumentasi Markdown | FormiPeek',
           description: 'Unduh file sampel MD dokumentasi Markdown gratis untuk menguji parsing Markdown, alat dokumentasi, dan sistem manajemen konten. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji Markdown parser, generator dokumentasi, static site generator, GitHub Markdown, dan platform manajemen konten.',
           keywords: 'file sampel MD, file uji MD, unduh sampel MD, file uji MD gratis, file Markdown, file uji .md, file dokumentasi Markdown, file uji Markdown parser, sampel GitHub Markdown, file static site generator, file uji generator dokumentasi'
         },
@@ -994,7 +994,7 @@ export const id: SamplePageTranslations = {
       },
       mdx: {
         meta: {
-          title: 'Unduh file sampel MDX gratis - File uji MDX React Markdown untuk dokumentasi | FomiPeek',
+          title: 'Unduh file sampel MDX gratis - File uji MDX React Markdown untuk dokumentasi | FormiPeek',
           description: 'Unduh file sampel MDX MDX (Markdown + JSX) gratis untuk menguji dokumentasi React, static site generator, dan sistem manajemen konten. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji MDX parser, alat dokumentasi React, Next.js, Gatsby, static site generator, dan platform dokumentasi modern.',
           keywords: 'file sampel MDX, file uji MDX, unduh sampel MDX, file uji MDX gratis, file MDX React Markdown, file uji .mdx, file dokumentasi React, file uji MDX parser, sampel MDX Next.js, file MDX Gatsby, file uji static site generator MDX'
         },
@@ -1010,7 +1010,7 @@ export const id: SamplePageTranslations = {
       },
       apk: {
         meta: {
-          title: 'Unduh file sampel APK gratis - File uji paket aplikasi Android | FomiPeek',
+          title: 'Unduh file sampel APK gratis - File uji paket aplikasi Android | FormiPeek',
           description: 'Unduh file sampel APK paket aplikasi Android gratis untuk menguji instalasi aplikasi Android, analisis APK, reverse engineering, dan alat pengembangan seluler. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji installer APK, emulator Android, analisator aplikasi, pemindai keamanan, dan platform pengembangan aplikasi seluler.',
           keywords: 'file sampel APK, file uji APK, unduh sampel APK, file uji APK gratis, file APK Android, file uji .apk, file paket aplikasi Android, file uji installer APK, file uji emulator Android, sampel pengembangan aplikasi seluler, file reverse engineering APK'
         },
@@ -1026,7 +1026,7 @@ export const id: SamplePageTranslations = {
       },
       appimage: {
         meta: {
-          title: 'Unduh file sampel AppImage gratis - File uji aplikasi portabel Linux | FomiPeek',
+          title: 'Unduh file sampel AppImage gratis - File uji aplikasi portabel Linux | FormiPeek',
           description: 'Unduh file sampel AppImage aplikasi portabel Linux gratis untuk menguji distribusi aplikasi Linux, eksekusi AppImage, dan kompatibilitas lintas distribusi. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji runner AppImage, peluncur aplikasi Linux, alat aplikasi portabel, dan distribusi perangkat lunak Linux universal.',
           keywords: 'file sampel AppImage, file uji AppImage, unduh sampel AppImage, file uji AppImage gratis, file AppImage Linux, file uji .AppImage, aplikasi portabel Linux, file uji runner AppImage, file aplikasi Linux, aplikasi lintas distribusi, sampel perangkat lunak Linux universal'
         },
@@ -1042,7 +1042,7 @@ export const id: SamplePageTranslations = {
       },
       elf: {
         meta: {
-          title: 'Unduh file sampel ELF gratis - File uji Executable and Linkable Format untuk Linux/Unix | FomiPeek',
+          title: 'Unduh file sampel ELF gratis - File uji Executable and Linkable Format untuk Linux/Unix | FormiPeek',
           description: 'Unduh file sampel ELF Executable and Linkable Format gratis untuk menguji analisis biner Linux/Unix, parsing ELF, reverse engineering, dan debugging sistem. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji analisator ELF, disassembler biner, alat reverse engineering, debugger sistem, dan platform analisis executable Linux.',
           keywords: 'file sampel ELF, file uji ELF, unduh sampel ELF, file uji ELF gratis, file ELF Linux, file uji .elf, file executable Unix, file analisis biner ELF, file reverse engineering ELF, file biner Linux, file uji disassembler ELF'
         },
@@ -1058,7 +1058,7 @@ export const id: SamplePageTranslations = {
       },
       exe: {
         meta: {
-          title: 'Unduh file sampel EXE gratis - File uji executable Windows | FomiPeek',
+          title: 'Unduh file sampel EXE gratis - File uji executable Windows | FormiPeek',
           description: 'Unduh file sampel EXE executable Windows gratis untuk menguji eksekusi aplikasi Windows, analisis EXE, parsing biner, dan alat pengembangan Windows. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji analisator executable Windows, disassembler biner, alat reverse engineering, platform analisis malware, dan pengembangan aplikasi Windows.',
           keywords: 'file sampel EXE, file uji EXE, unduh sampel EXE, file uji EXE gratis, file EXE Windows, file uji .exe, file executable Windows, file analisis biner EXE, file aplikasi Windows, file reverse engineering EXE, file uji disassembler biner Windows'
         },
@@ -1074,7 +1074,7 @@ export const id: SamplePageTranslations = {
       },
       ipa: {
         meta: {
-          title: 'Unduh file sampel IPA gratis - File uji paket aplikasi iOS | FomiPeek',
+          title: 'Unduh file sampel IPA gratis - File uji paket aplikasi iOS | FormiPeek',
           description: 'Unduh file sampel IPA paket aplikasi iOS gratis untuk menguji instalasi aplikasi iOS, analisis IPA, distribusi aplikasi iOS, dan alat pengembangan seluler. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji installer IPA, simulator iOS, analisator aplikasi, alat pengembangan iOS, dan platform distribusi aplikasi seluler.',
           keywords: 'file sampel IPA, file uji IPA, unduh sampel IPA, file uji IPA gratis, file IPA iOS, file uji .ipa, file paket aplikasi iOS, file uji installer IPA, file uji simulator iOS, sampel pengembangan aplikasi seluler, file distribusi aplikasi iOS'
         },
@@ -1090,7 +1090,7 @@ export const id: SamplePageTranslations = {
       },
       jar: {
         meta: {
-          title: 'Unduh file sampel JAR gratis - File uji arsip Java | FomiPeek',
+          title: 'Unduh file sampel JAR gratis - File uji arsip Java | FormiPeek',
           description: 'Unduh file sampel JAR arsip Java gratis untuk menguji eksekusi aplikasi Java, ekstraksi JAR, analisis JAR, dan alat pengembangan Java. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji ekstraktor JAR, runtime Java, analisator JAR, alat pengembangan Java, dan platform deployment aplikasi Java.',
           keywords: 'file sampel JAR, file uji JAR, unduh sampel JAR, file uji JAR gratis, file JAR Java, file uji .jar, file arsip Java, file uji ekstraktor JAR, file uji runtime Java, sampel pengembangan Java, file analisis JAR'
         },
@@ -1106,7 +1106,7 @@ export const id: SamplePageTranslations = {
       },
       crx: {
         meta: {
-          title: 'Unduh file sampel CRX gratis - File uji paket ekstensi Chrome | FomiPeek',
+          title: 'Unduh file sampel CRX gratis - File uji paket ekstensi Chrome | FormiPeek',
           description: 'Unduh file sampel CRX paket ekstensi Chrome gratis untuk menguji instalasi ekstensi Chrome, analisis CRX, pengembangan ekstensi browser, dan alat ekstensi web. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji installer CRX, analisator ekstensi Chrome, alat pengembangan ekstensi browser, dan platform distribusi ekstensi web.',
           keywords: 'file sampel CRX, file uji CRX, unduh sampel CRX, file uji CRX gratis, file CRX Chrome, file uji .crx, file ekstensi Chrome, file uji installer CRX, file ekstensi browser, sampel pengembangan ekstensi web, file analisis ekstensi Chrome'
         },
@@ -1122,7 +1122,7 @@ export const id: SamplePageTranslations = {
       },
       '3ds': {
         meta: {
-          title: 'Unduh file sampel 3DS gratis - File uji model 3D untuk pencetakan 3D dan pemodelan | FomiPeek',
+          title: 'Unduh file sampel 3DS gratis - File uji model 3D untuk pencetakan 3D dan pemodelan | FormiPeek',
           description: 'Unduh file sampel 3DS model 3D gratis untuk menguji perangkat lunak pemodelan 3D, alat pencetakan 3D, konversi mesh, dan aplikasi visualisasi 3D. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji viewer model 3D, printer 3D, perangkat lunak CAD, editor mesh, dan aplikasi grafik 3D.',
           keywords: 'file sampel 3DS, file uji 3DS, unduh sampel 3DS, file uji 3DS gratis, file model 3D 3DS, file uji .3ds, file pemodelan 3D, file uji pencetakan 3D, file CAD 3DS, file model mesh, sampel grafik 3D'
         },
@@ -1138,7 +1138,7 @@ export const id: SamplePageTranslations = {
       },
       '3mf': {
         meta: {
-          title: 'Unduh file sampel 3MF gratis - File uji 3D Manufacturing Format untuk pencetakan 3D | FomiPeek',
+          title: 'Unduh file sampel 3MF gratis - File uji 3D Manufacturing Format untuk pencetakan 3D | FormiPeek',
           description: 'Unduh file sampel 3MF 3D Manufacturing Format gratis untuk menguji pencetakan 3D, manufaktur aditif, slicing model 3D, dan kompatibilitas printer 3D. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji slicer printer 3D, perangkat lunak manufaktur aditif, viewer 3MF, workflow pencetakan 3D, dan platform manufaktur 3D modern.',
           keywords: 'file sampel 3MF, file uji 3MF, unduh sampel 3MF, file uji 3MF gratis, file pencetakan 3D 3MF, file uji .3mf, file manufaktur aditif, file uji slicer printer 3D, file uji viewer 3MF, sampel manufaktur 3D, file pencetakan 3D modern'
         },
@@ -1154,7 +1154,7 @@ export const id: SamplePageTranslations = {
       },
       ai: {
         meta: {
-          title: 'Unduh file sampel AI gratis - File uji grafik vektor Adobe Illustrator | FomiPeek',
+          title: 'Unduh file sampel AI gratis - File uji grafik vektor Adobe Illustrator | FormiPeek',
           description: 'Unduh file sampel AI grafik vektor Adobe Illustrator gratis untuk menguji pengeditan grafik vektor, konversi file AI, kompatibilitas perangkat lunak desain, dan alat desain grafis. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji Adobe Illustrator, editor grafik vektor, konverter file AI, perangkat lunak desain, dan platform desain grafis profesional.',
           keywords: 'file sampel AI, file uji AI, unduh sampel AI, file uji AI gratis, file AI Adobe Illustrator, file uji .ai, file grafik vektor, file uji Illustrator, file perangkat lunak desain, sampel pengeditan vektor, file desain grafis AI'
         },
@@ -1170,7 +1170,7 @@ export const id: SamplePageTranslations = {
       },
       ase: {
         meta: {
-          title: 'Unduh file sampel ASE gratis - File uji animasi sprite Aseprite | FomiPeek',
+          title: 'Unduh file sampel ASE gratis - File uji animasi sprite Aseprite | FormiPeek',
           description: 'Unduh file sampel ASE animasi sprite Aseprite gratis untuk menguji pengeditan pixel art, animasi sprite, alat pengembangan game, dan perangkat lunak animasi 2D. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji Aseprite, editor pixel art, alat animasi sprite, perangkat lunak pengembangan game, dan platform animasi 2D.',
           keywords: 'file sampel ASE, file uji ASE, unduh sampel ASE, file uji ASE gratis, file ASE Aseprite, file uji .ase, file animasi sprite, file uji pixel art, file pengembangan game, sampel animasi 2D, file uji Aseprite'
         },
@@ -1186,7 +1186,7 @@ export const id: SamplePageTranslations = {
       },
       'animation-fbx': {
         meta: {
-          title: 'Unduh file sampel Animation FBX gratis - File uji animasi 3D Autodesk FBX | FomiPeek',
+          title: 'Unduh file sampel Animation FBX gratis - File uji animasi 3D Autodesk FBX | FormiPeek',
           description: 'Unduh file sampel Animation FBX animasi 3D Autodesk FBX gratis untuk menguji animasi 3D, rigging karakter, data motion capture, dan perangkat lunak grafik 3D. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji perangkat lunak animasi 3D, game engine, alat motion capture, platform animasi karakter, dan aplikasi grafik 3D.',
           keywords: 'file sampel Animation FBX, file uji animasi FBX, unduh sampel animasi FBX, file uji animasi FBX gratis, file Autodesk FBX, file uji animasi .fbx, file animasi 3D, file uji animasi karakter, file motion capture, sampel animasi grafik 3D, file FBX game engine'
         },
@@ -1202,7 +1202,7 @@ export const id: SamplePageTranslations = {
       },
       assetbundle: {
         meta: {
-          title: 'Unduh file sampel AssetBundle gratis - File uji Unity AssetBundle untuk pengembangan game | FomiPeek',
+          title: 'Unduh file sampel AssetBundle gratis - File uji Unity AssetBundle untuk pengembangan game | FormiPeek',
           description: 'Unduh file sampel AssetBundle Unity AssetBundle gratis untuk menguji pengembangan game Unity, pemuatan asset, manajemen sumber daya game, dan alat engine Unity. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji engine Unity, pemuat asset game, alat pengembangan Unity, manajer sumber daya game, dan platform pengembangan game Unity.',
           keywords: 'file sampel AssetBundle, file uji AssetBundle, unduh sampel AssetBundle, file uji AssetBundle gratis, file Unity AssetBundle, file asset Unity, file pengembangan game, file uji engine Unity, file uji pemuat asset game, sampel pengembangan Unity, file manajemen sumber daya game'
         },
@@ -1218,7 +1218,7 @@ export const id: SamplePageTranslations = {
       },
       blend: {
         meta: {
-          title: 'Unduh file sampel BLEND gratis - File uji proyek 3D Blender | FomiPeek',
+          title: 'Unduh file sampel BLEND gratis - File uji proyek 3D Blender | FormiPeek',
           description: 'Unduh file sampel BLEND proyek 3D Blender gratis untuk menguji pemodelan 3D, kompatibilitas proyek Blender, workflow animasi 3D, dan perangkat lunak grafik 3D. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji perangkat lunak Blender, alat pemodelan 3D, viewer proyek Blender, platform animasi 3D, dan aplikasi grafik 3D profesional.',
           keywords: 'file sampel BLEND, file uji BLEND, unduh sampel BLEND, file uji BLEND gratis, file BLEND Blender, file uji .blend, file proyek Blender, file uji pemodelan 3D, file uji Blender, sampel animasi 3D, file grafik 3D BLEND'
         },
@@ -1234,7 +1234,7 @@ export const id: SamplePageTranslations = {
       },
       bvh: {
         meta: {
-          title: 'Unduh file sampel BVH gratis - File uji motion capture Biovision Hierarchy | FomiPeek',
+          title: 'Unduh file sampel BVH gratis - File uji motion capture Biovision Hierarchy | FormiPeek',
           description: 'Unduh file sampel BVH motion capture Biovision Hierarchy gratis untuk menguji data motion capture, animasi karakter, sistem animasi kerangka, dan perangkat lunak animasi 3D. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji viewer motion capture, alat animasi karakter, sistem animasi kerangka, platform animasi 3D, dan perangkat lunak analisis motion capture.',
           keywords: 'file sampel BVH, file uji BVH, unduh sampel BVH, file uji BVH gratis, file BVH Biovision Hierarchy, file uji .bvh, file motion capture, file uji animasi karakter, file animasi kerangka, sampel animasi 3D BVH, file analisis motion capture'
         },
@@ -1250,7 +1250,7 @@ export const id: SamplePageTranslations = {
       },
       dwg: {
         meta: {
-          title: 'Unduh file sampel DWG gratis - File uji gambar AutoCAD untuk desain CAD | FomiPeek',
+          title: 'Unduh file sampel DWG gratis - File uji gambar AutoCAD untuk desain CAD | FormiPeek',
           description: 'Unduh file sampel DWG gambar AutoCAD gratis untuk menguji perangkat lunak CAD, kompatibilitas AutoCAD, alat gambar teknis, dan aplikasi desain teknik. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji AutoCAD, viewer CAD, perangkat lunak gambar teknis, alat desain teknik, dan platform CAD profesional.',
           keywords: 'file sampel DWG, file uji DWG, unduh sampel DWG, file uji DWG gratis, file DWG AutoCAD, file uji .dwg, file gambar CAD, file uji AutoCAD, file gambar teknis, sampel desain teknik, file perangkat lunak CAD DWG'
         },
@@ -1266,7 +1266,7 @@ export const id: SamplePageTranslations = {
       },
       dxf: {
         meta: {
-          title: 'Unduh File Sampel DXF Gratis - File Uji Drawing Exchange Format AutoCAD | FomiPeek',
+          title: 'Unduh File Sampel DXF Gratis - File Uji Drawing Exchange Format AutoCAD | FormiPeek',
           description: 'Unduh file sampel DXF Drawing Exchange Format gratis untuk menguji perangkat lunak CAD, konverter DXF, dan alat gambar teknis. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji AutoCAD, penampil CAD, parser DXF, dan aplikasi pertukaran file gambar.',
           keywords: 'file sampel DXF, file uji DXF, unduh contoh DXF, file uji DXF gratis, file AutoCAD DXF, file Drawing Exchange Format, file CAD DXF, file uji konverter DXF, file gambar teknis, file uji parser DXF, contoh pertukaran file CAD'
         },
@@ -1282,7 +1282,7 @@ export const id: SamplePageTranslations = {
       },
       ifc: {
         meta: {
-          title: 'Unduh File Sampel IFC Gratis - File Uji Industry Foundation Classes BIM | FomiPeek',
+          title: 'Unduh File Sampel IFC Gratis - File Uji Industry Foundation Classes BIM | FormiPeek',
           description: 'Unduh file sampel IFC Industry Foundation Classes gratis untuk menguji perangkat lunak BIM, penampil IFC, alat pemodelan informasi bangunan, dan aplikasi manajemen konstruksi. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji Revit, ArchiCAD, parser IFC, penampil BIM, dan perangkat lunak desain bangunan.',
           keywords: 'file sampel IFC, file uji IFC, unduh contoh IFC, file uji IFC gratis, file Industry Foundation Classes, file BIM IFC, file pemodelan informasi bangunan, file uji penampil IFC, file perangkat lunak konstruksi, file uji parser IFC, contoh format pertukaran BIM'
         },
@@ -1298,7 +1298,7 @@ export const id: SamplePageTranslations = {
       },
       iges: {
         meta: {
-          title: 'Unduh File Sampel IGES Gratis - File Uji Initial Graphics Exchange Specification CAD | FomiPeek',
+          title: 'Unduh File Sampel IGES Gratis - File Uji Initial Graphics Exchange Specification CAD | FormiPeek',
           description: 'Unduh file sampel IGES Initial Graphics Exchange Specification gratis untuk menguji perangkat lunak CAD, konverter IGES, alat pemodelan 3D, dan aplikasi desain teknik. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji sistem CAD, parser IGES, alat pertukaran model 3D, dan perangkat lunak teknik.',
           keywords: 'file sampel IGES, file uji IGES, unduh contoh IGES, file uji IGES gratis, file Initial Graphics Exchange Specification, file CAD IGES, file pertukaran model 3D, file uji konverter IGES, file desain teknik, file uji parser IGES, contoh format pertukaran CAD'
         },
@@ -1314,7 +1314,7 @@ export const id: SamplePageTranslations = {
       },
       igs: {
         meta: {
-          title: 'Unduh File Sampel IGS Gratis - File Uji Initial Graphics Exchange Specification CAD | FomiPeek',
+          title: 'Unduh File Sampel IGS Gratis - File Uji Initial Graphics Exchange Specification CAD | FormiPeek',
           description: 'Unduh file sampel IGS Initial Graphics Exchange Specification gratis untuk menguji perangkat lunak CAD, konverter IGS, alat pemodelan 3D, dan aplikasi desain teknik. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji sistem CAD, parser IGS, alat pertukaran model 3D, dan perangkat lunak teknik.',
           keywords: 'file sampel IGS, file uji IGS, unduh contoh IGS, file uji IGS gratis, file Initial Graphics Exchange Specification, file CAD IGS, file pertukaran model 3D, file uji konverter IGS, file desain teknik, file uji parser IGS, contoh format pertukaran CAD'
         },
@@ -1330,7 +1330,7 @@ export const id: SamplePageTranslations = {
       },
       las: {
         meta: {
-          title: 'Unduh File Sampel LAS Gratis - File Uji Data Point Cloud LiDAR | FomiPeek',
+          title: 'Unduh File Sampel LAS Gratis - File Uji Data Point Cloud LiDAR | FormiPeek',
           description: 'Unduh file sampel LAS point cloud LiDAR gratis untuk menguji pemrosesan point cloud, alat analisis LiDAR, perangkat lunak pemetaan 3D, dan aplikasi geospasial. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji parser LAS, penampil point cloud, alat pemrosesan LiDAR, perangkat lunak pemetaan 3D, dan platform analisis geospasial.',
           keywords: 'file sampel LAS, file uji LAS, unduh contoh LAS, file uji LAS gratis, file point cloud LiDAR, file format LAS, file data point cloud, file uji parser LAS, file geospasial, file uji analisis LiDAR, contoh pemetaan 3D'
         },
@@ -1346,7 +1346,7 @@ export const id: SamplePageTranslations = {
       },
       ma: {
         meta: {
-          title: 'Unduh File Sampel MA Gratis - File Uji Scene Maya ASCII | FomiPeek',
+          title: 'Unduh File Sampel MA Gratis - File Uji Scene Maya ASCII | FormiPeek',
           description: 'Unduh file sampel MA scene Maya ASCII gratis untuk menguji konversi scene Maya, perangkat lunak animasi 3D, parser file MA, dan alat animasi. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji Autodesk Maya, penampil file MA, alat konversi scene, platform animasi 3D, dan perangkat lunak workflow animasi.',
           keywords: 'file sampel MA, file uji MA, unduh contoh MA, file uji MA gratis, file scene Maya ASCII, file format MA, file scene animasi 3D, file uji parser MA, file animasi, file uji scene Maya, contoh animasi 3D'
         },
@@ -1362,7 +1362,7 @@ export const id: SamplePageTranslations = {
       },
       max: {
         meta: {
-          title: 'Unduh File Sampel MAX Gratis - File Uji Scene 3ds Max | FomiPeek',
+          title: 'Unduh File Sampel MAX Gratis - File Uji Scene 3ds Max | FormiPeek',
           description: 'Unduh file sampel MAX scene 3ds Max gratis untuk menguji konversi scene 3ds Max, perangkat lunak pemodelan 3D, parser file MAX, dan alat desain 3D. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji Autodesk 3ds Max, penampil file MAX, alat konversi scene, platform pemodelan 3D, dan perangkat lunak workflow desain 3D.',
           keywords: 'file sampel MAX, file uji MAX, unduh contoh MAX, file uji MAX gratis, file scene 3ds Max, file format MAX, file scene pemodelan 3D, file uji parser MAX, file desain 3D, file uji scene 3ds Max, contoh pemodelan 3D'
         },
@@ -1378,7 +1378,7 @@ export const id: SamplePageTranslations = {
       },
       mb: {
         meta: {
-          title: 'Unduh File Sampel MB Gratis - File Uji Scene Maya Binary | FomiPeek',
+          title: 'Unduh File Sampel MB Gratis - File Uji Scene Maya Binary | FormiPeek',
           description: 'Unduh file sampel MB scene Maya Binary gratis untuk menguji konversi scene Maya, perangkat lunak animasi 3D, parser file MB, dan alat animasi. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji Autodesk Maya, penampil file MB, alat konversi scene, platform animasi 3D, dan perangkat lunak workflow animasi.',
           keywords: 'file sampel MB, file uji MB, unduh contoh MB, file uji MB gratis, file scene Maya Binary, file format MB, file scene animasi 3D, file uji parser MB, file animasi, file uji scene Maya, contoh animasi 3D'
         },
@@ -1394,7 +1394,7 @@ export const id: SamplePageTranslations = {
       },
       indd: {
         meta: {
-          title: 'Unduh File Sampel INDD Gratis - File Uji Dokumen Adobe InDesign | FomiPeek',
+          title: 'Unduh File Sampel INDD Gratis - File Uji Dokumen Adobe InDesign | FormiPeek',
           description: 'Unduh file sampel INDD dokumen Adobe InDesign gratis untuk menguji kompatibilitas InDesign, konverter INDD, perangkat lunak desktop publishing, dan alat desain layout. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji Adobe InDesign, penampil file INDD, alat konversi dokumen, platform desktop publishing, dan perangkat lunak desain layout.',
           keywords: 'file sampel INDD, file uji INDD, unduh contoh INDD, file uji INDD gratis, file Adobe InDesign, file format INDD, file desktop publishing, file uji konverter INDD, file desain layout, file uji dokumen InDesign, contoh perangkat lunak penerbitan'
         },
@@ -1410,7 +1410,7 @@ export const id: SamplePageTranslations = {
       },
       'animated-gif': {
         meta: {
-          title: 'Unduh File Sampel GIF Animasi Gratis - File Uji Gambar Animasi | FomiPeek',
+          title: 'Unduh File Sampel GIF Animasi Gratis - File Uji Gambar Animasi | FormiPeek',
           description: 'Unduh file sampel GIF animasi gratis untuk menguji pemutaran animasi GIF, penampil gambar, browser web, dan alat animasi. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji penampil GIF, pemutar animasi, alat pemrosesan gambar, platform pengembangan web, dan aplikasi multimedia.',
           keywords: 'file sampel GIF animasi, file uji GIF animasi, unduh contoh GIF animasi, file uji GIF animasi gratis, file animasi GIF, file gambar animasi, file uji pemutar GIF, file animasi, file uji animasi web, contoh GIF multimedia'
         },
@@ -1426,7 +1426,7 @@ export const id: SamplePageTranslations = {
       },
       apng: {
         meta: {
-          title: 'Unduh File Sampel APNG Gratis - File Uji Gambar PNG Animasi | FomiPeek',
+          title: 'Unduh File Sampel APNG Gratis - File Uji Gambar PNG Animasi | FormiPeek',
           description: 'Unduh file sampel APNG Animated Portable Network Graphics gratis untuk menguji pemutaran animasi APNG, penampil gambar, browser web, dan alat gambar modern. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji penampil APNG, pemutar animasi, alat pemrosesan gambar, platform pengembangan web, dan aplikasi multimedia modern.',
           keywords: 'file sampel APNG, file uji APNG, unduh contoh APNG, file uji APNG gratis, file Animated PNG, file animasi APNG, file uji pemutar APNG, file animasi, file uji animasi web, contoh format gambar modern'
         },
@@ -1442,7 +1442,7 @@ export const id: SamplePageTranslations = {
       },
       avif: {
         meta: {
-          title: 'Unduh File Sampel AVIF Gratis - File Uji Format Gambar AV1 | FomiPeek',
+          title: 'Unduh File Sampel AVIF Gratis - File Uji Format Gambar AV1 | FormiPeek',
           description: 'Unduh file sampel AVIF AV1 Image File Format gratis untuk menguji kompresi gambar modern, penampil AVIF, browser web, dan alat gambar generasi berikutnya. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji penampil AVIF, alat pemrosesan gambar, platform pengembangan web, dukungan format gambar modern, dan aplikasi multimedia generasi berikutnya.',
           keywords: 'file sampel AVIF, file uji AVIF, unduh contoh AVIF, file uji AVIF gratis, file AV1 Image File Format, file gambar AVIF, file uji penampil AVIF, file gambar modern, file uji format gambar web, contoh format gambar generasi berikutnya'
         },
@@ -1458,7 +1458,7 @@ export const id: SamplePageTranslations = {
       },
       bmp: {
         meta: {
-          title: 'Unduh File Sampel BMP Gratis - File Uji Gambar Bitmap | FomiPeek',
+          title: 'Unduh File Sampel BMP Gratis - File Uji Gambar Bitmap | FormiPeek',
           description: 'Unduh file sampel BMP bitmap gratis untuk menguji penampil gambar, konverter BMP, perangkat lunak grafis, dan alat pemrosesan gambar. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji penampil BMP, editor gambar, alat konversi grafis, platform pemrosesan gambar, dan dukungan format bitmap.',
           keywords: 'file sampel BMP, file uji BMP, unduh contoh BMP, file uji BMP gratis, file gambar bitmap, file format BMP, file uji penampil gambar, file grafis, file uji konversi gambar, contoh format bitmap'
         },
@@ -1474,7 +1474,7 @@ export const id: SamplePageTranslations = {
       },
       'barcode-svg': {
         meta: {
-          title: 'Unduh File Sampel Barcode SVG Gratis - File Uji Barcode Vektor Skalabel | FomiPeek',
+          title: 'Unduh File Sampel Barcode SVG Gratis - File Uji Barcode Vektor Skalabel | FormiPeek',
           description: 'Unduh file sampel barcode SVG gratis untuk menguji pembuatan barcode, pembaca barcode SVG, alat grafik vektor, dan aplikasi pemindaian barcode. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji generator barcode, penampil SVG, alat pemindaian barcode, platform grafik vektor, dan perangkat lunak pengenalan barcode.',
           keywords: 'file sampel barcode SVG, file uji barcode SVG, unduh contoh barcode SVG, file uji barcode SVG gratis, file barcode SVG, file barcode vektor, file uji generator barcode, file SVG, file uji pemindaian barcode, contoh grafik vektor'
         },
@@ -1490,7 +1490,7 @@ export const id: SamplePageTranslations = {
       },
       avi: {
         meta: {
-          title: 'Unduh File Sampel AVI Gratis - File Uji Video Audio Video Interleave | FomiPeek',
+          title: 'Unduh File Sampel AVI Gratis - File Uji Video Audio Video Interleave | FormiPeek',
           description: 'Unduh file sampel AVI Audio Video Interleave gratis untuk menguji pemutar video, konverter AVI, perangkat lunak multimedia, dan alat pemrosesan video. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji pemutar AVI, editor video, alat konversi multimedia, platform pemrosesan video, dan dukungan format video.',
           keywords: 'file sampel AVI, file uji AVI, unduh contoh AVI, file uji AVI gratis, file Audio Video Interleave, file video AVI, file uji pemutar video, file multimedia, file uji konversi video, contoh format video'
         },
@@ -1506,7 +1506,7 @@ export const id: SamplePageTranslations = {
       },
       '3gp': {
         meta: {
-          title: 'Unduh File Sampel 3GP Gratis - File Uji Video Mobile 3GPP | FomiPeek',
+          title: 'Unduh File Sampel 3GP Gratis - File Uji Video Mobile 3GPP | FormiPeek',
           description: 'Unduh file sampel 3GP video mobile 3GPP gratis untuk menguji pemutar video mobile, konverter 3GP, perangkat lunak multimedia, dan alat pemrosesan video mobile. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji pemutar 3GP, editor video mobile, alat konversi video, platform multimedia mobile, dan dukungan format video mobile.',
           keywords: 'file sampel 3GP, file uji 3GP, unduh contoh 3GP, file uji 3GP gratis, file video mobile 3GPP, file video 3GP, file uji pemutar video mobile, file multimedia, file uji konversi video mobile, contoh format video mobile'
         },
@@ -1522,7 +1522,7 @@ export const id: SamplePageTranslations = {
       },
       dav: {
         meta: {
-          title: 'Unduh File Sampel DAV Gratis - File Uji Video DAV untuk Kamera Keamanan | FomiPeek',
+          title: 'Unduh File Sampel DAV Gratis - File Uji Video DAV untuk Kamera Keamanan | FormiPeek',
           description: 'Unduh file sampel DAV gratis untuk menguji pemutar video DAV, pemrosesan video kamera keamanan, konverter DAV, dan alat analisis video pengawasan. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji pemutaran DAV, konverter DAV ke MP4, perangkat lunak kamera keamanan, alat pengawasan video, dan kompatibilitas format DAV.',
           keywords: 'file sampel DAV, file uji DAV, unduh contoh DAV, file uji DAV gratis, file video DAV, file video kamera keamanan, konverter DAV ke MP4, uji pemutar DAV, contoh video pengawasan, file uji format DAV, file uji pengawasan video'
         },
@@ -1538,7 +1538,7 @@ export const id: SamplePageTranslations = {
       },
       dds: {
         meta: {
-          title: 'Unduh File Sampel DDS Gratis - File Uji Tekstur DirectDraw Surface | FomiPeek',
+          title: 'Unduh File Sampel DDS Gratis - File Uji Tekstur DirectDraw Surface | FormiPeek',
           description: 'Unduh file sampel DDS DirectDraw Surface gratis untuk menguji konversi gambar tekstur, visualisasi DDS, alat pengembangan game, dan perangkat lunak pemrosesan grafis. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji pemuatan tekstur DDS, konverter DDS ke PNG, kompatibilitas mesin game, alat kompresi tekstur, dan dukungan format DirectDraw Surface.',
           keywords: 'file sampel DDS, file uji DDS, unduh contoh DDS, file uji DDS gratis, file DirectDraw Surface, file tekstur DDS, konverter DDS ke PNG, contoh gambar tekstur, file uji pengembangan game, uji format DDS, contoh tekstur grafis'
         },
@@ -1554,7 +1554,7 @@ export const id: SamplePageTranslations = {
       },
       dng: {
         meta: {
-          title: 'Unduh File Sampel DNG Gratis - File Uji Gambar Raw Digital Negative | FomiPeek',
+          title: 'Unduh File Sampel DNG Gratis - File Uji Gambar Raw Digital Negative | FormiPeek',
           description: 'Unduh file sampel DNG Digital Negative gambar raw gratis untuk menguji pemrosesan gambar raw, konversi DNG, perangkat lunak fotografi, dan alat pengeditan gambar profesional. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter DNG ke JPEG, editor gambar raw, visualisasi DNG, pemrosesan raw kamera, dan dukungan format Adobe Digital Negative.',
           keywords: 'file sampel DNG, file uji DNG, unduh contoh DNG, file uji DNG gratis, file Digital Negative, file gambar raw DNG, konverter DNG ke JPEG, pemrosesan gambar raw, file uji fotografi, uji format DNG, contoh raw kamera, file uji Adobe DNG'
         },
@@ -1570,7 +1570,7 @@ export const id: SamplePageTranslations = {
       },
       eps: {
         meta: {
-          title: 'Unduh File Sampel EPS Gratis - File Uji Grafik Vektor Encapsulated PostScript | FomiPeek',
+          title: 'Unduh File Sampel EPS Gratis - File Uji Grafik Vektor Encapsulated PostScript | FormiPeek',
           description: 'Unduh file sampel EPS Encapsulated PostScript gratis untuk menguji konversi grafik vektor, visualisasi EPS, pemrosesan PostScript, dan perangkat lunak desain profesional. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter EPS ke PDF, konverter EPS ke SVG, editor grafik vektor, viewer PostScript, dan kompatibilitas format Encapsulated PostScript.',
           keywords: 'file sampel EPS, file uji EPS, unduh contoh EPS, file uji EPS gratis, file Encapsulated PostScript, grafik vektor EPS, konverter EPS ke PDF, konverter EPS ke SVG, contoh grafik vektor, file uji PostScript, file uji perangkat lunak desain, uji format EPS'
         },
@@ -1586,7 +1586,7 @@ export const id: SamplePageTranslations = {
       },
       exr: {
         meta: {
-          title: 'Unduh File Sampel EXR Gratis - File Uji Gambar High Dynamic Range OpenEXR | FomiPeek',
+          title: 'Unduh File Sampel EXR Gratis - File Uji Gambar High Dynamic Range OpenEXR | FormiPeek',
           description: 'Unduh file sampel EXR OpenEXR gambar High Dynamic Range gratis untuk menguji pemrosesan gambar HDR, konversi EXR, perangkat lunak fotografi profesional, dan alat efek visual. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter EXR ke JPEG, editor gambar HDR, visualisasi EXR, pemrosesan High Dynamic Range, dan dukungan format OpenEXR.',
           keywords: 'file sampel EXR, file uji EXR, unduh contoh EXR, file uji EXR gratis, file OpenEXR, gambar HDR EXR, konverter EXR ke JPEG, pemrosesan gambar HDR, contoh High Dynamic Range, file uji efek visual, uji format EXR, file uji fotografi profesional'
         },
@@ -1602,7 +1602,7 @@ export const id: SamplePageTranslations = {
       },
       hdr: {
         meta: {
-          title: 'Unduh File Sampel HDR Gratis - File Uji Gambar High Dynamic Range | FomiPeek',
+          title: 'Unduh File Sampel HDR Gratis - File Uji Gambar High Dynamic Range | FormiPeek',
           description: 'Unduh file sampel HDR gambar High Dynamic Range gratis untuk menguji pemrosesan gambar HDR, konversi HDR, perangkat lunak fotografi, dan alat pengeditan gambar. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter HDR ke JPEG, editor gambar HDR, visualisasi HDR, alat tone mapping, dan dukungan format High Dynamic Range.',
           keywords: 'file sampel HDR, file uji HDR, unduh contoh HDR, file uji HDR gratis, file High Dynamic Range, gambar HDR, konverter HDR ke JPEG, pemrosesan gambar HDR, file uji tone mapping, file uji fotografi, uji format HDR, contoh High Dynamic Range'
         },
@@ -1618,7 +1618,7 @@ export const id: SamplePageTranslations = {
       },
       heic: {
         meta: {
-          title: 'Unduh File Sampel HEIC Gratis - File Uji High Efficiency Image Container | FomiPeek',
+          title: 'Unduh File Sampel HEIC Gratis - File Uji High Efficiency Image Container | FormiPeek',
           description: 'Unduh file sampel HEIC High Efficiency Image Container gratis untuk menguji konversi gambar HEIC, visualisasi HEIC, pemrosesan format gambar modern, dan alat fotografi mobile. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter HEIC ke JPEG, konverter HEIC ke PNG, pemrosesan gambar iOS, perangkat lunak visualisasi HEIC, dan dukungan format High Efficiency Image Container.',
           keywords: 'file sampel HEIC, file uji HEIC, unduh contoh HEIC, file uji HEIC gratis, file High Efficiency Image Container, gambar HEIC, konverter HEIC ke JPEG, konverter HEIC ke PNG, contoh gambar iOS, file uji fotografi mobile, uji format HEIC, contoh format gambar modern'
         },
@@ -1634,7 +1634,7 @@ export const id: SamplePageTranslations = {
       },
       heif: {
         meta: {
-          title: 'Unduh File Sampel HEIF Gratis - File Uji High Efficiency Image Format | FomiPeek',
+          title: 'Unduh File Sampel HEIF Gratis - File Uji High Efficiency Image Format | FormiPeek',
           description: 'Unduh file sampel HEIF High Efficiency Image Format gratis untuk menguji konversi gambar HEIF, visualisasi HEIF, pemrosesan format gambar modern, dan alat fotografi mobile. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter HEIF ke JPEG, konverter HEIF ke PNG, pemrosesan gambar mobile, perangkat lunak visualisasi HEIF, dan dukungan format High Efficiency Image Format.',
           keywords: 'file sampel HEIF, file uji HEIF, unduh contoh HEIF, file uji HEIF gratis, file High Efficiency Image Format, gambar HEIF, konverter HEIF ke JPEG, konverter HEIF ke PNG, contoh gambar mobile, file uji format gambar modern, uji format HEIF, file uji kompresi gambar'
         },
@@ -1650,7 +1650,7 @@ export const id: SamplePageTranslations = {
       },
       icns: {
         meta: {
-          title: 'Unduh File Sampel ICNS Gratis - File Uji Ikon macOS | FomiPeek',
+          title: 'Unduh File Sampel ICNS Gratis - File Uji Ikon macOS | FormiPeek',
           description: 'Unduh file sampel ICNS ikon macOS gratis untuk menguji konversi ikon macOS, visualisasi ICNS, alat desain ikon, dan pengembangan aplikasi macOS. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter ICNS ke PNG, konverter ICNS ke ICO, editor ikon macOS, perangkat lunak desain ikon, dan dukungan format ikon macOS.',
           keywords: 'file sampel ICNS, file uji ICNS, unduh contoh ICNS, file uji ICNS gratis, file ikon macOS, ikon ICNS, konverter ICNS ke PNG, konverter ICNS ke ICO, desain ikon macOS, file uji editor ikon, uji format ICNS, contoh ikon Apple'
         },
@@ -1666,7 +1666,7 @@ export const id: SamplePageTranslations = {
       },
       ico: {
         meta: {
-          title: 'Unduh File Sampel ICO Gratis - File Uji Ikon Windows | FomiPeek',
+          title: 'Unduh File Sampel ICO Gratis - File Uji Ikon Windows | FormiPeek',
           description: 'Unduh file sampel ICO ikon Windows gratis untuk menguji konversi ikon Windows, visualisasi ICO, alat desain ikon, dan pengembangan aplikasi Windows. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter ICO ke PNG, konverter ICO ke ICNS, editor ikon Windows, perangkat lunak desain ikon, dan dukungan format ikon Windows.',
           keywords: 'file sampel ICO, file uji ICO, unduh contoh ICO, file uji ICO gratis, file ikon Windows, ikon ICO, konverter ICO ke PNG, konverter ICO ke ICNS, desain ikon Windows, file uji editor ikon, uji format ICO, contoh ikon Windows'
         },
@@ -1682,7 +1682,7 @@ export const id: SamplePageTranslations = {
       },
       jpeg: {
         meta: {
-          title: 'Unduh File Sampel JPEG Gratis - File Uji Gambar JPEG untuk Alat Konversi | FomiPeek',
+          title: 'Unduh File Sampel JPEG Gratis - File Uji Gambar JPEG untuk Alat Konversi | FormiPeek',
           description: 'Unduh file sampel JPEG gratis untuk menguji konversi gambar JPEG, kompresi JPEG, alat pemrosesan gambar, dan perangkat lunak pengeditan foto. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter JPEG ke PNG, konverter JPEG ke PDF, alat kompresi gambar, optimisasi JPEG, dan dukungan format Joint Photographic Experts Group.',
           keywords: 'file sampel JPEG, file uji JPEG, unduh contoh JPEG, file uji JPEG gratis, file gambar JPEG, konverter JPEG ke PNG, konverter JPEG ke PDF, file uji kompresi gambar, file uji pengeditan foto, uji format JPEG, contoh pemrosesan gambar'
         },
@@ -1698,7 +1698,7 @@ export const id: SamplePageTranslations = {
       },
       jpg: {
         meta: {
-          title: 'Unduh File Sampel JPG Gratis - File Uji Gambar JPG untuk Alat Konversi | FomiPeek',
+          title: 'Unduh File Sampel JPG Gratis - File Uji Gambar JPG untuk Alat Konversi | FormiPeek',
           description: 'Unduh file sampel JPG gratis untuk menguji konversi gambar JPG, kompresi JPG, alat pemrosesan gambar, dan perangkat lunak pengeditan foto. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter JPG ke PNG, konverter JPG ke PDF, alat kompresi gambar, optimisasi JPG, dan dukungan format Joint Photographic Experts Group.',
           keywords: 'file sampel JPG, file uji JPG, unduh contoh JPG, file uji JPG gratis, file gambar JPG, konverter JPG ke PNG, konverter JPG ke PDF, file uji kompresi gambar, file uji pengeditan foto, uji format JPG, contoh pemrosesan gambar'
         },
@@ -1714,7 +1714,7 @@ export const id: SamplePageTranslations = {
       },
       m4v: {
         meta: {
-          title: 'Unduh File Sampel M4V Gratis - File Uji Video M4V untuk Alat Konversi | FomiPeek',
+          title: 'Unduh File Sampel M4V Gratis - File Uji Video M4V untuk Alat Konversi | FormiPeek',
           description: 'Unduh file sampel M4V gratis untuk menguji konversi video M4V, pemutaran M4V, alat pemrosesan video, dan perangkat lunak multimedia. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter M4V ke MP4, konverter M4V ke AVI, pemutar video, kompatibilitas pemutaran M4V, dan dukungan format video MPEG-4.',
           keywords: 'file sampel M4V, file uji M4V, unduh contoh M4V, file uji M4V gratis, file video M4V, konverter M4V ke MP4, konverter M4V ke AVI, file uji pemutar video, uji pemutaran M4V, contoh konversi video, uji format video MPEG-4'
         },
@@ -1730,7 +1730,7 @@ export const id: SamplePageTranslations = {
       },
       mkv: {
         meta: {
-          title: 'Unduh File Sampel MKV Gratis - File Uji Video Matroska untuk Alat Konversi | FomiPeek',
+          title: 'Unduh File Sampel MKV Gratis - File Uji Video Matroska untuk Alat Konversi | FormiPeek',
           description: 'Unduh file sampel MKV Matroska gratis untuk menguji konversi video MKV, pemutaran MKV, alat pemrosesan video, dan perangkat lunak multimedia. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter MKV ke MP4, konverter MKV ke AVI, pemutar video, kompatibilitas pemutaran MKV, dan dukungan format video Matroska.',
           keywords: 'file sampel MKV, file uji MKV, unduh contoh MKV, file uji MKV gratis, file video Matroska, konverter MKV ke MP4, konverter MKV ke AVI, file uji pemutar video, uji pemutaran MKV, contoh konversi video, uji format Matroska'
         },
@@ -1746,7 +1746,7 @@ export const id: SamplePageTranslations = {
       },
       aac: {
         meta: {
-          title: 'Unduh File Sampel AAC Gratis - File Uji Advanced Audio Coding | FomiPeek',
+          title: 'Unduh File Sampel AAC Gratis - File Uji Advanced Audio Coding | FormiPeek',
           description: 'Unduh file sampel AAC Advanced Audio Coding gratis untuk menguji konversi audio, pemutaran AAC, alat pemrosesan audio, dan perangkat lunak multimedia. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter AAC ke MP3, konverter AAC ke WAV, pemutar audio, kompatibilitas pemutaran AAC, dan dukungan format Advanced Audio Coding.',
           keywords: 'file sampel AAC, file uji AAC, unduh contoh AAC, file uji AAC gratis, file Advanced Audio Coding, konverter AAC ke MP3, konverter AAC ke WAV, file uji pemutar audio, uji pemutaran AAC, contoh konversi audio, uji format Advanced Audio Coding'
         },
@@ -1762,7 +1762,7 @@ export const id: SamplePageTranslations = {
       },
       ac3: {
         meta: {
-          title: 'Unduh File Sampel AC3 Gratis - File Uji Audio Dolby Digital | FomiPeek',
+          title: 'Unduh File Sampel AC3 Gratis - File Uji Audio Dolby Digital | FormiPeek',
           description: 'Unduh file sampel AC3 Dolby Digital gratis untuk menguji konversi audio, pemutaran AC3, alat pemrosesan audio, dan perangkat lunak multimedia. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter AC3 ke MP3, konverter AC3 ke WAV, pemutar audio, kompatibilitas pemutaran AC3, dan dukungan format Dolby Digital.',
           keywords: 'file sampel AC3, file uji AC3, unduh contoh AC3, file uji AC3 gratis, file Dolby Digital, konverter AC3 ke MP3, konverter AC3 ke WAV, file uji pemutar audio, uji pemutaran AC3, contoh konversi audio, uji format Dolby Digital'
         },
@@ -1778,7 +1778,7 @@ export const id: SamplePageTranslations = {
       },
       aif: {
         meta: {
-          title: 'Unduh File Sampel AIF Gratis - File Uji Audio Interchange File Format | FomiPeek',
+          title: 'Unduh File Sampel AIF Gratis - File Uji Audio Interchange File Format | FormiPeek',
           description: 'Unduh file sampel AIF Audio Interchange File Format gratis untuk menguji konversi audio, pemutaran AIF, alat pemrosesan audio, dan perangkat lunak multimedia. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter AIF ke MP3, konverter AIF ke WAV, pemutar audio, kompatibilitas pemutaran AIF, dan dukungan format Audio Interchange File Format.',
           keywords: 'file sampel AIF, file uji AIF, unduh contoh AIF, file uji AIF gratis, file Audio Interchange File Format, konverter AIF ke MP3, konverter AIF ke WAV, file uji pemutar audio, uji pemutaran AIF, contoh konversi audio, uji format Audio Interchange File Format'
         },
@@ -1794,7 +1794,7 @@ export const id: SamplePageTranslations = {
       },
       aiff: {
         meta: {
-          title: 'Unduh File Sampel AIFF Gratis - File Uji Audio Interchange File Format | FomiPeek',
+          title: 'Unduh File Sampel AIFF Gratis - File Uji Audio Interchange File Format | FormiPeek',
           description: 'Unduh file sampel AIFF Audio Interchange File Format gratis untuk menguji konversi audio, pemutaran AIFF, alat pemrosesan audio, dan perangkat lunak multimedia. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter AIFF ke MP3, konverter AIFF ke WAV, pemutar audio, kompatibilitas pemutaran AIFF, dan dukungan format Audio Interchange File Format.',
           keywords: 'file sampel AIFF, file uji AIFF, unduh contoh AIFF, file uji AIFF gratis, file Audio Interchange File Format, konverter AIFF ke MP3, konverter AIFF ke WAV, file uji pemutar audio, uji pemutaran AIFF, contoh konversi audio, uji format Audio Interchange File Format'
         },
@@ -1810,7 +1810,7 @@ export const id: SamplePageTranslations = {
       },
       amr: {
         meta: {
-          title: 'Unduh File Sampel AMR Gratis - File Uji Adaptive Multi-Rate Audio | FomiPeek',
+          title: 'Unduh File Sampel AMR Gratis - File Uji Adaptive Multi-Rate Audio | FormiPeek',
           description: 'Unduh file sampel AMR Adaptive Multi-Rate gratis untuk menguji konversi audio, pemutaran AMR, alat pemrosesan audio, dan perangkat lunak multimedia mobile. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter AMR ke MP3, konverter AMR ke WAV, pemutar audio, kompatibilitas pemutaran AMR, dan dukungan format Adaptive Multi-Rate.',
           keywords: 'file sampel AMR, file uji AMR, unduh contoh AMR, file uji AMR gratis, file Adaptive Multi-Rate, konverter AMR ke MP3, konverter AMR ke WAV, file uji pemutar audio, uji pemutaran AMR, contoh konversi audio, uji format Adaptive Multi-Rate'
         },
@@ -1826,7 +1826,7 @@ export const id: SamplePageTranslations = {
       },
       caf: {
         meta: {
-          title: 'Unduh File Sampel CAF Gratis - File Uji Core Audio Format | FomiPeek',
+          title: 'Unduh File Sampel CAF Gratis - File Uji Core Audio Format | FormiPeek',
           description: 'Unduh file sampel CAF Core Audio Format gratis untuk menguji konversi audio, pemutaran CAF, alat pemrosesan audio, dan perangkat lunak multimedia macOS. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter CAF ke MP3, konverter CAF ke WAV, pemutar audio, kompatibilitas pemutaran CAF, dan dukungan format Core Audio Format.',
           keywords: 'file sampel CAF, file uji CAF, unduh contoh CAF, file uji CAF gratis, file Core Audio Format, konverter CAF ke MP3, konverter CAF ke WAV, file uji pemutar audio, uji pemutaran CAF, contoh konversi audio, uji format Core Audio Format'
         },
@@ -1842,7 +1842,7 @@ export const id: SamplePageTranslations = {
       },
       cue: {
         meta: {
-          title: 'Unduh File Sampel CUE Gratis - File Uji CUE Sheet untuk Pembakaran CD Audio | FomiPeek',
+          title: 'Unduh File Sampel CUE Gratis - File Uji CUE Sheet untuk Pembakaran CD Audio | FormiPeek',
           description: 'Unduh file sampel CUE CUE sheet gratis untuk menguji alat pembakaran CD audio dan alat parsing CUE sheet. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji parsing CUE sheet, perangkat lunak pembakaran CD audio, validasi file CUE, dan alat pembuatan CD.',
           keywords: 'file sampel CUE, file uji CUE, unduh contoh CUE, file uji CUE gratis, file CUE sheet, uji pembakaran CD audio, parser CUE sheet, file uji pembuatan CD, validasi file CUE, uji gambar disk audio'
         },
@@ -1858,7 +1858,7 @@ export const id: SamplePageTranslations = {
       },
       m4a: {
         meta: {
-          title: 'Unduh File Sampel M4A Gratis - File Uji M4A Audio untuk Alat Konversi | FomiPeek',
+          title: 'Unduh File Sampel M4A Gratis - File Uji M4A Audio untuk Alat Konversi | FormiPeek',
           description: 'Unduh file sampel M4A M4A audio gratis untuk menguji konversi audio M4A, pemutaran M4A, alat pemrosesan audio, dan perangkat lunak multimedia. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter M4A ke MP3, konverter M4A ke WAV, pemutar audio, kompatibilitas pemutaran M4A, dan dukungan format audio MPEG-4.',
           keywords: 'file sampel M4A, file uji M4A, unduh contoh M4A, file uji M4A gratis, file audio M4A, konverter M4A ke MP3, konverter M4A ke WAV, file uji pemutar audio, uji pemutaran M4A, contoh konversi audio, uji format audio MPEG-4'
         },
@@ -1874,7 +1874,7 @@ export const id: SamplePageTranslations = {
       },
       midi: {
         meta: {
-          title: 'Unduh File Sampel MIDI Gratis - File Uji MIDI Music untuk Sequencing Musik | FomiPeek',
+          title: 'Unduh File Sampel MIDI Gratis - File Uji MIDI Music untuk Sequencing Musik | FormiPeek',
           description: 'Unduh file sampel MIDI MIDI music gratis untuk menguji pemutaran MIDI, konversi MIDI, alat sequencing musik, dan stasiun kerja audio digital. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter MIDI ke MP3, konverter MIDI ke WAV, sequencer MIDI, perangkat lunak produksi musik, dan dukungan format Musical Instrument Digital Interface.',
           keywords: 'file sampel MIDI, file uji MIDI, unduh contoh MIDI, file uji MIDI gratis, file music MIDI, konverter MIDI ke MP3, konverter MIDI ke WAV, uji sequencer MIDI, file uji produksi musik, uji pemutaran MIDI, contoh sequencing musik'
         },
@@ -1890,7 +1890,7 @@ export const id: SamplePageTranslations = {
       },
       ace: {
         meta: {
-          title: 'Unduh File Sampel ACE Gratis - File Uji ACE Archive untuk Alat Ekstraksi | FomiPeek',
+          title: 'Unduh File Sampel ACE Gratis - File Uji ACE Archive untuk Alat Ekstraksi | FormiPeek',
           description: 'Unduh file sampel ACE archive gratis untuk menguji alat ekstraksi dan kompresi arsip. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji ekstraksi arsip ACE, dekompresi file ACE, alat manajemen arsip, dan perangkat lunak kompresi file.',
           keywords: 'file sampel ACE, file uji ACE, unduh contoh ACE, file uji ACE gratis, file archive ACE, uji ekstraksi ACE, uji dekompresi ACE, file uji manajemen arsip, contoh kompresi file'
         },
@@ -1906,7 +1906,7 @@ export const id: SamplePageTranslations = {
       },
       arj: {
         meta: {
-          title: 'Unduh File Sampel ARJ Gratis - File Uji ARJ Archive untuk Alat Ekstraksi | FomiPeek',
+          title: 'Unduh File Sampel ARJ Gratis - File Uji ARJ Archive untuk Alat Ekstraksi | FormiPeek',
           description: 'Unduh file sampel ARJ archive gratis untuk menguji alat ekstraksi dan kompresi arsip. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji ekstraksi arsip ARJ, dekompresi file ARJ, alat manajemen arsip, dan perangkat lunak kompresi file.',
           keywords: 'file sampel ARJ, file uji ARJ, unduh contoh ARJ, file uji ARJ gratis, file archive ARJ, uji ekstraksi ARJ, uji dekompresi ARJ, file uji manajemen arsip, contoh kompresi file'
         },
@@ -1922,7 +1922,7 @@ export const id: SamplePageTranslations = {
       },
       bz2: {
         meta: {
-          title: 'Unduh File Sampel BZ2 Gratis - File Uji BZ2 Compressed Archive | FomiPeek',
+          title: 'Unduh File Sampel BZ2 Gratis - File Uji BZ2 Compressed Archive | FormiPeek',
           description: 'Unduh file sampel BZ2 bzip2 compressed archive gratis untuk menguji alat dekompresi dan kompresi arsip. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji dekompresi arsip BZ2, ekstraksi file BZ2, alat kompresi bzip2, dan perangkat lunak manajemen arsip.',
           keywords: 'file sampel BZ2, file uji BZ2, unduh contoh BZ2, file uji BZ2 gratis, file terkompresi BZ2, uji dekompresi BZ2, uji kompresi bzip2, file uji ekstraksi arsip, contoh kompresi file'
         },
@@ -1938,7 +1938,7 @@ export const id: SamplePageTranslations = {
       },
       gz: {
         meta: {
-          title: 'Unduh File Sampel GZ Gratis - File Uji GZ Gzip Compressed Archive | FomiPeek',
+          title: 'Unduh File Sampel GZ Gratis - File Uji GZ Gzip Compressed Archive | FormiPeek',
           description: 'Unduh file sampel GZ gzip compressed archive gratis untuk menguji alat dekompresi gzip, ekstraksi arsip, dan kompresi file. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji dekompresi arsip GZ, ekstraksi file GZ, alat kompresi gzip, dan perangkat lunak manajemen arsip.',
           keywords: 'file sampel GZ, file uji GZ, unduh contoh GZ, file uji GZ gratis, file terkompresi GZ, uji dekompresi GZ, uji kompresi gzip, file uji ekstraksi arsip, contoh kompresi file'
         },
@@ -1954,7 +1954,7 @@ export const id: SamplePageTranslations = {
       },
       cab: {
         meta: {
-          title: 'Unduh File Sampel CAB Gratis - File Uji CAB Windows Cabinet Archive | FomiPeek',
+          title: 'Unduh File Sampel CAB Gratis - File Uji CAB Windows Cabinet Archive | FormiPeek',
           description: 'Unduh file sampel CAB Windows cabinet archive gratis untuk menguji alat ekstraksi dan kompresi arsip. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji ekstraksi arsip CAB, dekompresi file CAB, alat Windows cabinet archive, dan perangkat lunak manajemen arsip.',
           keywords: 'file sampel CAB, file uji CAB, unduh contoh CAB, file uji CAB gratis, file archive CAB, uji ekstraksi CAB, uji Windows cabinet archive, file uji manajemen arsip, contoh kompresi file'
         },
@@ -1970,7 +1970,7 @@ export const id: SamplePageTranslations = {
       },
       cpio: {
         meta: {
-          title: 'Unduh File Sampel CPIO Gratis - File Uji CPIO Archive untuk Alat Ekstraksi | FomiPeek',
+          title: 'Unduh File Sampel CPIO Gratis - File Uji CPIO Archive untuk Alat Ekstraksi | FormiPeek',
           description: 'Unduh file sampel CPIO archive gratis untuk menguji alat ekstraksi dan kompresi arsip. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji ekstraksi arsip CPIO, dekompresi file CPIO, alat manajemen arsip, dan perangkat lunak kompresi file.',
           keywords: 'file sampel CPIO, file uji CPIO, unduh contoh CPIO, file uji CPIO gratis, file archive CPIO, uji ekstraksi CPIO, uji dekompresi CPIO, file uji manajemen arsip, contoh kompresi file'
         },
@@ -1986,7 +1986,7 @@ export const id: SamplePageTranslations = {
       },
       zip: {
         meta: {
-          title: 'Unduh File Sampel ZIP Gratis - File Uji ZIP Archive untuk Alat Ekstraksi | FomiPeek',
+          title: 'Unduh File Sampel ZIP Gratis - File Uji ZIP Archive untuk Alat Ekstraksi | FormiPeek',
           description: 'Unduh file sampel ZIP archive gratis untuk menguji alat ekstraksi dan kompresi arsip. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji ekstraksi arsip ZIP, dekompresi file ZIP, alat manajemen arsip, dan perangkat lunak kompresi file.',
           keywords: 'file sampel ZIP, file uji ZIP, unduh contoh ZIP, file uji ZIP gratis, file archive ZIP, uji ekstraksi ZIP, uji dekompresi ZIP, file uji manajemen arsip, contoh kompresi file'
         },
@@ -2002,7 +2002,7 @@ export const id: SamplePageTranslations = {
       },
       dmg: {
         meta: {
-          title: 'Unduh File Sampel DMG Gratis - File Uji DMG macOS Disk Image | FomiPeek',
+          title: 'Unduh File Sampel DMG Gratis - File Uji DMG macOS Disk Image | FormiPeek',
           description: 'Unduh file sampel DMG macOS disk image gratis untuk menguji alat mounting disk image dan ekstraksi DMG. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji mounting disk image DMG, ekstraksi file DMG, alat disk image macOS, dan perangkat lunak pemrosesan disk image.',
           keywords: 'file sampel DMG, file uji DMG, unduh contoh DMG, file uji DMG gratis, file disk image DMG, uji mounting DMG, uji disk image macOS, file uji ekstraksi disk image, contoh pemrosesan disk image'
         },
@@ -2018,7 +2018,7 @@ export const id: SamplePageTranslations = {
       },
       img: {
         meta: {
-          title: 'Unduh File Sampel IMG Gratis - File Uji IMG Disk Image | FomiPeek',
+          title: 'Unduh File Sampel IMG Gratis - File Uji IMG Disk Image | FormiPeek',
           description: 'Unduh file sampel IMG disk image gratis untuk menguji alat mounting disk image, ekstraksi IMG, dan pemrosesan disk image. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji mounting disk image IMG, ekstraksi file IMG, alat disk image, dan perangkat lunak pemrosesan disk image.',
           keywords: 'file sampel IMG, file uji IMG, unduh contoh IMG, file uji IMG gratis, file disk image IMG, uji mounting IMG, uji ekstraksi disk image, file uji pemrosesan disk image, contoh disk image'
         },
@@ -2034,7 +2034,7 @@ export const id: SamplePageTranslations = {
       },
       iso: {
         meta: {
-          title: 'Unduh File Sampel ISO Gratis - File Uji ISO Disk Image | FomiPeek',
+          title: 'Unduh File Sampel ISO Gratis - File Uji ISO Disk Image | FormiPeek',
           description: 'Unduh file sampel ISO ISO disk image gratis untuk menguji alat mounting disk image ISO, ekstraksi ISO, dan pemrosesan disk image. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji mounting disk image ISO, ekstraksi file ISO, alat disk image, dan perangkat lunak pemrosesan disk image.',
           keywords: 'file sampel ISO, file uji ISO, unduh contoh ISO, file uji ISO gratis, file disk image ISO, uji mounting ISO, uji ekstraksi ISO, file uji pemrosesan disk image, contoh disk image'
         },
@@ -2050,7 +2050,7 @@ export const id: SamplePageTranslations = {
       },
       kmz: {
         meta: {
-          title: 'Unduh File Sampel KMZ Gratis - File Uji KMZ Compressed KML | FomiPeek',
+          title: 'Unduh File Sampel KMZ Gratis - File Uji KMZ Compressed KML | FormiPeek',
           description: 'Unduh file sampel KMZ compressed Keyhole Markup Language gratis untuk menguji alat ekstraksi KMZ, pemrosesan data geografis, dan alat integrasi Google Earth. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji ekstraksi file KMZ, konversi KMZ ke KML, kompatibilitas Google Earth, pemrosesan data geografis, dan perangkat lunak pemetaan.',
           keywords: 'file sampel KMZ, file uji KMZ, unduh contoh KMZ, file uji KMZ gratis, file terkompresi KMZ, uji ekstraksi KMZ, file uji Google Earth, uji pemrosesan data geografis, contoh perangkat lunak pemetaan'
         },
@@ -2066,7 +2066,7 @@ export const id: SamplePageTranslations = {
       },
       laz: {
         meta: {
-          title: 'Unduh File Sampel LAZ Gratis - File Uji LAZ Compressed LiDAR | FomiPeek',
+          title: 'Unduh File Sampel LAZ Gratis - File Uji LAZ Compressed LiDAR | FormiPeek',
           description: 'Unduh file sampel LAZ compressed LiDAR point cloud data gratis untuk menguji alat ekstraksi LAZ, pemrosesan point cloud, dan alat pemetaan 3D. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji ekstraksi file LAZ, konversi LAZ ke LAS, pemrosesan point cloud LiDAR, perangkat lunak pemetaan 3D, dan alat analisis data geografis.',
           keywords: 'file sampel LAZ, file uji LAZ, unduh contoh LAZ, file uji LAZ gratis, file terkompresi LAZ, uji ekstraksi LAZ, uji point cloud LiDAR, file uji pemetaan 3D, contoh analisis data geografis'
         },
@@ -2082,7 +2082,7 @@ export const id: SamplePageTranslations = {
       },
       lha: {
         meta: {
-          title: 'Unduh File Sampel LHA Gratis - File Uji LHA Archive untuk Alat Ekstraksi | FomiPeek',
+          title: 'Unduh File Sampel LHA Gratis - File Uji LHA Archive untuk Alat Ekstraksi | FormiPeek',
           description: 'Unduh file sampel LHA LHA archive gratis untuk menguji alat ekstraksi LHA, dekompresi arsip, dan alat pengarsipan file. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji ekstraksi arsip LHA, dekompresi file LHA, alat manajemen arsip, dan perangkat lunak kompresi file.',
           keywords: 'file sampel LHA, file uji LHA, unduh contoh LHA, file uji LHA gratis, file archive LHA, uji ekstraksi LHA, uji dekompresi LHA, file uji manajemen arsip, contoh kompresi file'
         },
@@ -2098,7 +2098,7 @@ export const id: SamplePageTranslations = {
       },
       lzh: {
         meta: {
-          title: 'Unduh File Sampel LZH Gratis - File Uji LZH Archive untuk Alat Ekstraksi | FomiPeek',
+          title: 'Unduh File Sampel LZH Gratis - File Uji LZH Archive untuk Alat Ekstraksi | FormiPeek',
           description: 'Unduh file sampel LZH LZH archive gratis untuk menguji alat ekstraksi LZH, dekompresi arsip, dan alat pengarsipan file. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji ekstraksi arsip LZH, dekompresi file LZH, alat manajemen arsip, dan perangkat lunak kompresi file.',
           keywords: 'file sampel LZH, file uji LZH, unduh contoh LZH, file uji LZH gratis, file archive LZH, uji ekstraksi LZH, uji dekompresi LZH, file uji manajemen arsip, contoh kompresi file'
         },
@@ -2114,7 +2114,7 @@ export const id: SamplePageTranslations = {
       },
       lzma: {
         meta: {
-          title: 'Unduh File Sampel LZMA Gratis - File Uji LZMA Compressed Archive | FomiPeek',
+          title: 'Unduh File Sampel LZMA Gratis - File Uji LZMA Compressed Archive | FormiPeek',
           description: 'Unduh file sampel LZMA LZMA compressed gratis untuk menguji alat dekompresi LZMA, ekstraksi arsip, dan kompresi file. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji dekompresi arsip LZMA, ekstraksi file LZMA, alat kompresi LZMA, dan perangkat lunak manajemen arsip.',
           keywords: 'file sampel LZMA, file uji LZMA, unduh contoh LZMA, file uji LZMA gratis, file terkompresi LZMA, uji dekompresi LZMA, uji kompresi LZMA, file uji ekstraksi arsip, contoh kompresi file'
         },
@@ -2130,7 +2130,7 @@ export const id: SamplePageTranslations = {
       },
       '7z': {
         meta: {
-          title: 'Unduh File Sampel 7Z Gratis - File Uji 7Z Archive untuk Alat Ekstraksi | FomiPeek',
+          title: 'Unduh File Sampel 7Z Gratis - File Uji 7Z Archive untuk Alat Ekstraksi | FormiPeek',
           description: 'Unduh file sampel 7Z archive gratis untuk menguji alat konversi dan ekstraksi arsip. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji ekstraksi arsip 7Z, dekompresi file 7Z, alat manajemen arsip, dan perangkat lunak kompresi file.',
           keywords: 'file sampel 7Z, file uji 7Z, unduh contoh 7Z, file uji 7Z gratis, file archive 7Z, uji ekstraksi 7Z, uji dekompresi 7Z, file uji manajemen arsip, contoh kompresi file'
         },

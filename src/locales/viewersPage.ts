@@ -48,7 +48,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   en: {
     viewers_page: {
       meta: {
-        title: 'Free Online File Viewers - FomiPeek | View Files in Browser',
+        title: 'Free Online File Viewers - FormiPeek | View Files in Browser',
         description:
           'View and preview files directly in your browser. Support for images, documents, spreadsheets, and more. No download required.',
         keywords:
@@ -245,7 +245,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   pl: {
     viewers_page: {
       meta: {
-        title: 'Darmowe podglądy plików online - FomiPeek | Otwieraj pliki w przeglądarce',
+        title: 'Darmowe podglądy plików online - FormiPeek | Otwieraj pliki w przeglądarce',
         description:
           'Przeglądaj pliki bezpośrednio w przeglądarce. Obsługa obrazów, dokumentów, arkuszy kalkulacyjnych i wielu innych. Bez pobierania.',
         keywords:
@@ -445,7 +445,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   de: {
     viewers_page: {
       meta: {
-        title: 'Kostenlose Online-Datei-Viewer - FomiPeek | Dateien im Browser anzeigen',
+        title: 'Kostenlose Online-Datei-Viewer - FormiPeek | Dateien im Browser anzeigen',
         description:
           'Zeige Dateien direkt im Browser an. Unterstützung für Bilder, Dokumente, Tabellen und mehr. Kein Download erforderlich.',
         keywords:
@@ -643,7 +643,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   es: {
     viewers_page: {
       meta: {
-        title: 'Visores de archivos en línea gratuitos - FomiPeek | Ver archivos en el navegador',
+        title: 'Visores de archivos en línea gratuitos - FormiPeek | Ver archivos en el navegador',
         description:
           'Ver y previsualizar archivos directamente en tu navegador. Soporte para imágenes, documentos, hojas de cálculo y más. No se requiere descarga.',
         keywords:
@@ -840,7 +840,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   fr: {
     viewers_page: {
       meta: {
-        title: 'Visionneuses de fichiers en ligne gratuites - FomiPeek | Voir les fichiers dans le navigateur',
+        title: 'Visionneuses de fichiers en ligne gratuites - FormiPeek | Voir les fichiers dans le navigateur',
         description:
           'Voir et prévisualiser les fichiers directement dans votre navigateur. Prise en charge des images, documents, feuilles de calcul et plus encore. Aucun téléchargement requis.',
         keywords:
@@ -1037,7 +1037,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   it: {
     viewers_page: {
       meta: {
-        title: 'Visualizzatori di file online gratuiti - FomiPeek | Visualizza file nel browser',
+        title: 'Visualizzatori di file online gratuiti - FormiPeek | Visualizza file nel browser',
         description:
           'Visualizza e anteprima file direttamente nel tuo browser. Supporto per immagini, documenti, fogli di calcolo e altro. Nessun download richiesto.',
         keywords:
@@ -1135,7 +1135,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   nl: {
     viewers_page: {
       meta: {
-        title: 'Gratis online bestandsviewers - FomiPeek | Bekijk bestanden in de browser',
+        title: 'Gratis online bestandsviewers - FormiPeek | Bekijk bestanden in de browser',
         description:
           'Bekijk en preview bestanden direct in uw browser. Ondersteuning voor afbeeldingen, documenten, spreadsheets en meer. Geen download vereist.',
         keywords:
@@ -1233,7 +1233,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   pt: {
     viewers_page: {
       meta: {
-        title: 'Visualizadores de arquivos online gratuitos - FomiPeek | Ver arquivos no navegador',
+        title: 'Visualizadores de arquivos online gratuitos - FormiPeek | Ver arquivos no navegador',
         description:
           'Visualize e pré-visualize arquivos diretamente no seu navegador. Suporte para imagens, documentos, planilhas e mais. Nenhum download necessário.',
         keywords:
@@ -1331,7 +1331,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   vi: {
     viewers_page: {
       meta: {
-        title: 'Trình xem tệp trực tuyến miễn phí - FomiPeek | Xem tệp trong trình duyệt',
+        title: 'Trình xem tệp trực tuyến miễn phí - FormiPeek | Xem tệp trong trình duyệt',
         description:
           'Xem và xem trước tệp trực tiếp trong trình duyệt của bạn. Hỗ trợ hình ảnh, tài liệu, bảng tính và nhiều hơn nữa. Không cần tải xuống.',
         keywords:
@@ -1429,7 +1429,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   tr: {
     viewers_page: {
       meta: {
-        title: 'Ücretsiz çevrimiçi dosya görüntüleyiciler - FomiPeek | Tarayıcıda dosya görüntüle',
+        title: 'Ücretsiz çevrimiçi dosya görüntüleyiciler - FormiPeek | Tarayıcıda dosya görüntüle',
         description:
           'Dosyaları doğrudan tarayıcınızda görüntüleyin ve önizleyin. Görüntüler, belgeler, elektronik tablolar ve daha fazlası için destek. İndirme gerekmez.',
         keywords:
@@ -1527,7 +1527,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   ru: {
     viewers_page: {
       meta: {
-        title: 'Бесплатные онлайн-просмотрщики файлов - FomiPeek | Просмотр файлов в браузере',
+        title: 'Бесплатные онлайн-просмотрщики файлов - FormiPeek | Просмотр файлов в браузере',
         description:
           'Просматривайте и предварительно просматривайте файлы прямо в браузере. Поддержка изображений, документов, электронных таблиц и многого другого. Загрузка не требуется.',
         keywords:
@@ -1627,7 +1627,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   ar: {
     viewers_page: {
       meta: {
-        title: 'عارضات الملفات المجانية عبر الإنترنت - FomiPeek | عرض الملفات في المتصفح',
+        title: 'عارضات الملفات المجانية عبر الإنترنت - FormiPeek | عرض الملفات في المتصفح',
         description:
           'عرض ومعاينة الملفات مباشرة في متصفحك. دعم الصور والمستندات وجداول البيانات والمزيد. لا حاجة للتنزيل.',
         keywords:
@@ -1725,7 +1725,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   th: {
     viewers_page: {
       meta: {
-        title: 'โปรแกรมดูไฟล์ออนไลน์ฟรี - FomiPeek | ดูไฟล์ในเบราว์เซอร์',
+        title: 'โปรแกรมดูไฟล์ออนไลน์ฟรี - FormiPeek | ดูไฟล์ในเบราว์เซอร์',
         description:
           'ดูและแสดงตัวอย่างไฟล์โดยตรงในเบราว์เซอร์ของคุณ รองรับรูปภาพ เอกสาร สเปรดชีต และอื่นๆ ไม่ต้องดาวน์โหลด',
         keywords:
@@ -1823,7 +1823,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   ja: {
     viewers_page: {
       meta: {
-        title: '無料オンラインファイルビューア - FomiPeek | ブラウザでファイルを表示',
+        title: '無料オンラインファイルビューア - FormiPeek | ブラウザでファイルを表示',
         description:
           'ブラウザで直接ファイルを表示およびプレビュー。画像、ドキュメント、スプレッドシートなどをサポート。ダウンロード不要。',
         keywords:
@@ -1921,7 +1921,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   zh: {
     viewers_page: {
       meta: {
-        title: '免费在线文件查看器 - FomiPeek | 在浏览器中查看文件',
+        title: '免费在线文件查看器 - FormiPeek | 在浏览器中查看文件',
         description:
           '直接在浏览器中查看和预览文件。支持图像、文档、电子表格等。无需下载。',
         keywords:
@@ -2019,7 +2019,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   id: {
     viewers_page: {
       meta: {
-        title: 'Penampil file online gratis - FomiPeek | Lihat file di browser',
+        title: 'Penampil file online gratis - FormiPeek | Lihat file di browser',
         description:
           'Lihat dan pratinjau file langsung di browser Anda. Dukungan untuk gambar, dokumen, spreadsheet, dan lainnya. Tidak perlu unduhan.',
         keywords:
@@ -2117,7 +2117,7 @@ const viewersPageResources: Record<string, ViewersPageTranslations> = {
   sv: {
     viewers_page: {
       meta: {
-        title: 'Gratis online filvisare - FomiPeek | Visa filer i webbläsaren',
+        title: 'Gratis online filvisare - FormiPeek | Visa filer i webbläsaren',
         description:
           'Visa och förhandsgranska filer direkt i din webbläsare. Stöd för bilder, dokument, kalkylblad och mer. Ingen nedladdning krävs.',
         keywords:

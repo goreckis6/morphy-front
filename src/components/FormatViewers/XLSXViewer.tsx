@@ -166,15 +166,15 @@ export const XLSXViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free Excel Viewer - View XLSX, XLS & Spreadsheets Online | FomiPeek</title>
+        <title>Free Excel Viewer - View XLSX, XLS & Spreadsheets Online | FormiPeek</title>
         <meta name="description" content="Free professional Excel viewer for spreadsheets. Upload and preview XLSX, XLS, XLSM, ODS files online with table formatting and data analysis. Supports batch viewing up to 20 files. 100% free Excel viewer tool." />
         <meta name="keywords" content="Excel viewer, XLSX viewer, spreadsheet viewer, XLS viewer online, ODS viewer, Excel online, free Excel viewer, spreadsheet preview" />
-        <meta property="og:title" content="Free Excel Viewer - View XLSX, XLS & Spreadsheets Online | FomiPeek" />
+        <meta property="og:title" content="Free Excel Viewer - View XLSX, XLS & Spreadsheets Online | FormiPeek" />
         <meta property="og:description" content="Free professional Excel viewer for spreadsheets. Upload and preview XLSX, XLS, XLSM, ODS files online with table formatting and data analysis." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://formipeek.com/viewers/xlsx" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free Excel Viewer - View XLSX, XLS & Spreadsheets Online | FomiPeek" />
+        <meta name="twitter:title" content="Free Excel Viewer - View XLSX, XLS & Spreadsheets Online | FormiPeek" />
         <meta name="twitter:description" content="Free professional Excel viewer for spreadsheets. Upload and preview XLSX, XLS, XLSM, ODS files online with table formatting and data analysis." />
         <script type="application/ld+json">
           {JSON.stringify({

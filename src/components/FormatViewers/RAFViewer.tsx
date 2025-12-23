@@ -451,12 +451,12 @@ export const RAFViewer: React.FC = () => {
         <title>{t('viewers.raf.meta_title')}</title>
         <meta name="description" content={t('viewers.raf.meta_description')} />
         <meta name="keywords" content={t('viewers.raf.meta_keywords')} />
-        <meta property="og:title" content="Free RAF Viewer - View Fujifilm RAW Files Online | FomiPeek" />
+        <meta property="og:title" content="Free RAF Viewer - View Fujifilm RAW Files Online | FormiPeek" />
         <meta property="og:description" content="Free professional RAF (Fujifilm RAW) viewer with high-quality rendering. Upload and preview Fujifilm X-Trans sensor files online with EXIF metadata." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://formipeek.com/viewers/raf" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free RAF Viewer - View Fujifilm RAW Files Online | FomiPeek" />
+        <meta name="twitter:title" content="Free RAF Viewer - View Fujifilm RAW Files Online | FormiPeek" />
         <meta name="twitter:description" content="Free professional RAF (Fujifilm RAW) viewer with high-quality rendering. Upload and preview Fujifilm RAW files online." />
         <script type="application/ld+json">
           {JSON.stringify({

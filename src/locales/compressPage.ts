@@ -49,16 +49,16 @@ const compressPageResources: Record<string, CompressPageTranslations> = {
   en: {
     compress_page: {
       meta: {
-        title: 'Online File Compressor – Reduce File Size | FomiPeek',
+        title: 'Online File Compressor – Reduce File Size | FormiPeek',
         description:
-          'Compress images, PDFs, videos, and documents online. FomiPeek makes your files smaller and faster to share — without losing quality.',
+          'Compress images, PDFs, videos, and documents online. FormiPeek makes your files smaller and faster to share — without losing quality.',
         keywords:
           'file compressor, online compressor, image compression, compress jpg, compress images, reduce file size, batch compression, free compressor, video compression'
       },
       schema: {
         name: 'Online File Compressor',
         description:
-          'Compress images, PDFs, videos, and more directly in your browser with FomiPeek. Reduce file size while keeping great quality — fast and secure.'
+          'Compress images, PDFs, videos, and more directly in your browser with FormiPeek. Reduce file size while keeping great quality — fast and secure.'
       },
       hero: {
         title: 'File Compression Tools',
@@ -127,16 +127,16 @@ const compressPageResources: Record<string, CompressPageTranslations> = {
   pl: {
     compress_page: {
       meta: {
-        title: 'Kompresor Plików Online – Zmniejsz Rozmiar Pliku | FomiPeek',
+        title: 'Kompresor Plików Online – Zmniejsz Rozmiar Pliku | FormiPeek',
         description:
-          'Kompresuj obrazy, PDF, wideo i dokumenty online. FomiPeek sprawia, że Twoje pliki są mniejsze i szybsze do udostępnienia — bez utraty jakości.',
+          'Kompresuj obrazy, PDF, wideo i dokumenty online. FormiPeek sprawia, że Twoje pliki są mniejsze i szybsze do udostępnienia — bez utraty jakości.',
         keywords:
           'kompresor plików, kompresor online, kompresja obrazów, kompresja jpg, kompresja obrazów, zmniejsz rozmiar pliku, kompresja wsadowa, darmowy kompresor, kompresja wideo'
       },
       schema: {
         name: 'Kompresor Plików Online',
         description:
-          'Kompresuj obrazy, PDF, wideo i więcej bezpośrednio w przeglądarce z FomiPeek. Zmniejsz rozmiar pliku przy zachowaniu wysokiej jakości — szybko i bezpiecznie.'
+          'Kompresuj obrazy, PDF, wideo i więcej bezpośrednio w przeglądarce z FormiPeek. Zmniejsz rozmiar pliku przy zachowaniu wysokiej jakości — szybko i bezpiecznie.'
       },
       hero: {
         title: 'Narzędzia Kompresji Plików',
@@ -205,16 +205,16 @@ const compressPageResources: Record<string, CompressPageTranslations> = {
   de: {
     compress_page: {
       meta: {
-        title: 'Online-Dateikompressor – Dateigröße Reduzieren | FomiPeek',
+        title: 'Online-Dateikompressor – Dateigröße Reduzieren | FormiPeek',
         description:
-          'Komprimieren Sie Bilder, PDFs, Videos und Dokumente online. FomiPeek macht Ihre Dateien kleiner und schneller zum Teilen — ohne Qualitätsverlust.',
+          'Komprimieren Sie Bilder, PDFs, Videos und Dokumente online. FormiPeek macht Ihre Dateien kleiner und schneller zum Teilen — ohne Qualitätsverlust.',
         keywords:
           'datei kompressor, online kompressor, bildkomprimierung, jpg komprimieren, bilder komprimieren, dateigröße reduzieren, stapel komprimierung, kostenloser kompressor, videokomprimierung'
       },
       schema: {
         name: 'Online-Dateikompressor',
         description:
-          'Komprimieren Sie Bilder, PDFs, Videos und mehr direkt in Ihrem Browser mit FomiPeek. Reduzieren Sie die Dateigröße bei gleichbleibender Qualität — schnell und sicher.'
+          'Komprimieren Sie Bilder, PDFs, Videos und mehr direkt in Ihrem Browser mit FormiPeek. Reduzieren Sie die Dateigröße bei gleichbleibender Qualität — schnell und sicher.'
       },
       hero: {
         title: 'Dateikomprimierungs-Tools',
@@ -283,16 +283,16 @@ const compressPageResources: Record<string, CompressPageTranslations> = {
   es: {
     compress_page: {
       meta: {
-        title: 'Compresor de archivos en línea – Reducir tamaño de archivo | FomiPeek',
+        title: 'Compresor de archivos en línea – Reducir tamaño de archivo | FormiPeek',
         description:
-          'Comprime imágenes, PDFs, videos y documentos en línea. FomiPeek hace que tus archivos sean más pequeños y rápidos de compartir — sin perder calidad.',
+          'Comprime imágenes, PDFs, videos y documentos en línea. FormiPeek hace que tus archivos sean más pequeños y rápidos de compartir — sin perder calidad.',
         keywords:
           'compresor de archivos, compresor en línea, compresión de imágenes, comprimir jpg, comprimir imágenes, reducir tamaño de archivo, compresión por lotes, compresor gratuito, compresión de video'
       },
       schema: {
         name: 'Compresor de archivos en línea',
         description:
-          'Comprime imágenes, PDFs, videos y más directamente en tu navegador con FomiPeek. Reduce el tamaño del archivo manteniendo una gran calidad — rápido y seguro.'
+          'Comprime imágenes, PDFs, videos y más directamente en tu navegador con FormiPeek. Reduce el tamaño del archivo manteniendo una gran calidad — rápido y seguro.'
       },
       hero: {
         title: 'Herramientas de compresión de archivos',
@@ -361,16 +361,16 @@ const compressPageResources: Record<string, CompressPageTranslations> = {
   fr: {
     compress_page: {
       meta: {
-        title: 'Compresseur de fichiers en ligne – Réduire la taille du fichier | FomiPeek',
+        title: 'Compresseur de fichiers en ligne – Réduire la taille du fichier | FormiPeek',
         description:
-          'Compressez des images, PDFs, vidéos et documents en ligne. FomiPeek rend vos fichiers plus petits et plus rapides à partager — sans perte de qualité.',
+          'Compressez des images, PDFs, vidéos et documents en ligne. FormiPeek rend vos fichiers plus petits et plus rapides à partager — sans perte de qualité.',
         keywords:
           'compresseur de fichiers, compresseur en ligne, compression d\'images, compresser jpg, compresser images, réduire taille fichier, compression par lots, compresseur gratuit, compression vidéo'
       },
       schema: {
         name: 'Compresseur de fichiers en ligne',
         description:
-          'Compressez des images, PDFs, vidéos et plus directement dans votre navigateur avec FomiPeek. Réduisez la taille du fichier tout en conservant une excellente qualité — rapide et sécurisé.'
+          'Compressez des images, PDFs, vidéos et plus directement dans votre navigateur avec FormiPeek. Réduisez la taille du fichier tout en conservant une excellente qualité — rapide et sécurisé.'
       },
       hero: {
         title: 'Outils de compression de fichiers',
@@ -439,16 +439,16 @@ const compressPageResources: Record<string, CompressPageTranslations> = {
   it: {
     compress_page: {
       meta: {
-        title: 'Compressore di file online – Riduci dimensione file | FomiPeek',
+        title: 'Compressore di file online – Riduci dimensione file | FormiPeek',
         description:
-          'Comprimi immagini, PDF, video e documenti online. FomiPeek rende i tuoi file più piccoli e veloci da condividere — senza perdere qualità.',
+          'Comprimi immagini, PDF, video e documenti online. FormiPeek rende i tuoi file più piccoli e veloci da condividere — senza perdere qualità.',
         keywords:
           'compressore file, compressore online, compressione immagini, comprimere jpg, comprimere immagini, ridurre dimensione file, compressione batch, compressore gratuito, compressione video'
       },
       schema: {
         name: 'Compressore di file online',
         description:
-          'Comprimi immagini, PDF, video e altro direttamente nel tuo browser con FomiPeek. Riduci la dimensione del file mantenendo un\'ottima qualità — veloce e sicuro.'
+          'Comprimi immagini, PDF, video e altro direttamente nel tuo browser con FormiPeek. Riduci la dimensione del file mantenendo un\'ottima qualità — veloce e sicuro.'
       },
       hero: {
         title: 'Strumenti di compressione file',
@@ -517,16 +517,16 @@ const compressPageResources: Record<string, CompressPageTranslations> = {
   nl: {
     compress_page: {
       meta: {
-        title: 'Online bestandscompressor – Bestandsgrootte verkleinen | FomiPeek',
+        title: 'Online bestandscompressor – Bestandsgrootte verkleinen | FormiPeek',
         description:
-          'Comprimeer afbeeldingen, PDF\'s, video\'s en documenten online. FomiPeek maakt uw bestanden kleiner en sneller om te delen — zonder kwaliteitsverlies.',
+          'Comprimeer afbeeldingen, PDF\'s, video\'s en documenten online. FormiPeek maakt uw bestanden kleiner en sneller om te delen — zonder kwaliteitsverlies.',
         keywords:
           'bestandscompressor, online compressor, beeldcompressie, jpg comprimeren, afbeeldingen comprimeren, bestandsgrootte verkleinen, batchcompressie, gratis compressor, videocompressie'
       },
       schema: {
         name: 'Online bestandscompressor',
         description:
-          'Comprimeer afbeeldingen, PDF\'s, video\'s en meer direct in uw browser met FomiPeek. Verklein de bestandsgrootte met behoud van uitstekende kwaliteit — snel en veilig.'
+          'Comprimeer afbeeldingen, PDF\'s, video\'s en meer direct in uw browser met FormiPeek. Verklein de bestandsgrootte met behoud van uitstekende kwaliteit — snel en veilig.'
       },
       hero: {
         title: 'Bestandscompressietools',
@@ -595,16 +595,16 @@ const compressPageResources: Record<string, CompressPageTranslations> = {
   pt: {
     compress_page: {
       meta: {
-        title: 'Compressor de arquivos online – Reduzir tamanho do arquivo | FomiPeek',
+        title: 'Compressor de arquivos online – Reduzir tamanho do arquivo | FormiPeek',
         description:
-          'Comprima imagens, PDFs, vídeos e documentos online. FomiPeek torna seus arquivos menores e mais rápidos para compartilhar — sem perder qualidade.',
+          'Comprima imagens, PDFs, vídeos e documentos online. FormiPeek torna seus arquivos menores e mais rápidos para compartilhar — sem perder qualidade.',
         keywords:
           'compressor de arquivos, compressor online, compressão de imagens, comprimir jpg, comprimir imagens, reduzir tamanho arquivo, compressão em lote, compressor gratuito, compressão de vídeo'
       },
       schema: {
         name: 'Compressor de arquivos online',
         description:
-          'Comprima imagens, PDFs, vídeos e mais diretamente no seu navegador com FomiPeek. Reduza o tamanho do arquivo mantendo ótima qualidade — rápido e seguro.'
+          'Comprima imagens, PDFs, vídeos e mais diretamente no seu navegador com FormiPeek. Reduza o tamanho do arquivo mantendo ótima qualidade — rápido e seguro.'
       },
       hero: {
         title: 'Ferramentas de compressão de arquivos',
@@ -673,16 +673,16 @@ const compressPageResources: Record<string, CompressPageTranslations> = {
   vi: {
     compress_page: {
       meta: {
-        title: 'Công cụ nén tệp trực tuyến – Giảm kích thước tệp | FomiPeek',
+        title: 'Công cụ nén tệp trực tuyến – Giảm kích thước tệp | FormiPeek',
         description:
-          'Nén hình ảnh, PDF, video và tài liệu trực tuyến. FomiPeek làm cho tệp của bạn nhỏ hơn và nhanh hơn để chia sẻ — không mất chất lượng.',
+          'Nén hình ảnh, PDF, video và tài liệu trực tuyến. FormiPeek làm cho tệp của bạn nhỏ hơn và nhanh hơn để chia sẻ — không mất chất lượng.',
         keywords:
           'công cụ nén tệp, công cụ nén trực tuyến, nén hình ảnh, nén jpg, nén hình ảnh, giảm kích thước tệp, nén hàng loạt, công cụ nén miễn phí, nén video'
       },
       schema: {
         name: 'Công cụ nén tệp trực tuyến',
         description:
-          'Nén hình ảnh, PDF, video và nhiều hơn nữa trực tiếp trong trình duyệt của bạn với FomiPeek. Giảm kích thước tệp trong khi vẫn giữ chất lượng tuyệt vời — nhanh chóng và an toàn.'
+          'Nén hình ảnh, PDF, video và nhiều hơn nữa trực tiếp trong trình duyệt của bạn với FormiPeek. Giảm kích thước tệp trong khi vẫn giữ chất lượng tuyệt vời — nhanh chóng và an toàn.'
       },
       hero: {
         title: 'Công cụ nén tệp',
@@ -751,16 +751,16 @@ const compressPageResources: Record<string, CompressPageTranslations> = {
   tr: {
     compress_page: {
       meta: {
-        title: 'Çevrimiçi dosya sıkıştırıcı – Dosya boyutunu azalt | FomiPeek',
+        title: 'Çevrimiçi dosya sıkıştırıcı – Dosya boyutunu azalt | FormiPeek',
         description:
-          'Görüntüleri, PDF\'leri, videoları ve belgeleri çevrimiçi sıkıştırın. FomiPeek dosyalarınızı daha küçük ve paylaşımı daha hızlı hale getirir — kalite kaybı olmadan.',
+          'Görüntüleri, PDF\'leri, videoları ve belgeleri çevrimiçi sıkıştırın. FormiPeek dosyalarınızı daha küçük ve paylaşımı daha hızlı hale getirir — kalite kaybı olmadan.',
         keywords:
           'dosya sıkıştırıcı, çevrimiçi sıkıştırıcı, görüntü sıkıştırma, jpg sıkıştır, görüntü sıkıştır, dosya boyutu azalt, toplu sıkıştırma, ücretsiz sıkıştırıcı, video sıkıştırma'
       },
       schema: {
         name: 'Çevrimiçi dosya sıkıştırıcı',
         description:
-          'FomiPeek ile tarayıcınızda doğrudan görüntüleri, PDF\'leri, videoları ve daha fazlasını sıkıştırın. Mükemmel kaliteyi korurken dosya boyutunu azaltın — hızlı ve güvenli.'
+          'FormiPeek ile tarayıcınızda doğrudan görüntüleri, PDF\'leri, videoları ve daha fazlasını sıkıştırın. Mükemmel kaliteyi korurken dosya boyutunu azaltın — hızlı ve güvenli.'
       },
       hero: {
         title: 'Dosya sıkıştırma araçları',
@@ -829,16 +829,16 @@ const compressPageResources: Record<string, CompressPageTranslations> = {
   ru: {
     compress_page: {
       meta: {
-        title: 'Онлайн-компрессор файлов – Уменьшить размер файла | FomiPeek',
+        title: 'Онлайн-компрессор файлов – Уменьшить размер файла | FormiPeek',
         description:
-          'Сжимайте изображения, PDF, видео и документы онлайн. FomiPeek делает ваши файлы меньше и быстрее для обмена — без потери качества.',
+          'Сжимайте изображения, PDF, видео и документы онлайн. FormiPeek делает ваши файлы меньше и быстрее для обмена — без потери качества.',
         keywords:
           'компрессор файлов, онлайн компрессор, сжатие изображений, сжать jpg, сжать изображения, уменьшить размер файла, пакетное сжатие, бесплатный компрессор, сжатие видео'
       },
       schema: {
         name: 'Онлайн-компрессор файлов',
         description:
-          'Сжимайте изображения, PDF, видео и многое другое прямо в браузере с FomiPeek. Уменьшите размер файла, сохраняя отличное качество — быстро и безопасно.'
+          'Сжимайте изображения, PDF, видео и многое другое прямо в браузере с FormiPeek. Уменьшите размер файла, сохраняя отличное качество — быстро и безопасно.'
       },
       hero: {
         title: 'Инструменты сжатия файлов',
@@ -909,16 +909,16 @@ const compressPageResources: Record<string, CompressPageTranslations> = {
   ar: {
     compress_page: {
       meta: {
-        title: 'ضاغط الملفات عبر الإنترنت – تقليل حجم الملف | FomiPeek',
+        title: 'ضاغط الملفات عبر الإنترنت – تقليل حجم الملف | FormiPeek',
         description:
-          'ضغط الصور وملفات PDF والفيديو والمستندات عبر الإنترنت. يجعل FomiPeek ملفاتك أصغر وأسرع للمشاركة — دون فقدان الجودة.',
+          'ضغط الصور وملفات PDF والفيديو والمستندات عبر الإنترنت. يجعل FormiPeek ملفاتك أصغر وأسرع للمشاركة — دون فقدان الجودة.',
         keywords:
           'ضاغط الملفات، ضاغط عبر الإنترنت، ضغط الصور، ضغط jpg، ضغط الصور، تقليل حجم الملف، الضغط المجمع، ضاغط مجاني، ضغط الفيديو'
       },
       schema: {
         name: 'ضاغط الملفات عبر الإنترنت',
         description:
-          'ضغط الصور وملفات PDF والفيديو والمزيد مباشرة في متصفحك مع FomiPeek. قلل حجم الملف مع الحفاظ على جودة رائعة — سريع وآمن.'
+          'ضغط الصور وملفات PDF والفيديو والمزيد مباشرة في متصفحك مع FormiPeek. قلل حجم الملف مع الحفاظ على جودة رائعة — سريع وآمن.'
       },
       hero: {
         title: 'أدوات ضغط الملفات',
@@ -987,16 +987,16 @@ const compressPageResources: Record<string, CompressPageTranslations> = {
   th: {
     compress_page: {
       meta: {
-        title: 'เครื่องมือบีบอัดไฟล์ออนไลน์ – ลดขนาดไฟล์ | FomiPeek',
+        title: 'เครื่องมือบีบอัดไฟล์ออนไลน์ – ลดขนาดไฟล์ | FormiPeek',
         description:
-          'บีบอัดรูปภาพ PDF วิดีโอ และเอกสารออนไลน์ FomiPeek ทำให้ไฟล์ของคุณเล็กลงและแชร์ได้เร็วขึ้น — โดยไม่สูญเสียคุณภาพ',
+          'บีบอัดรูปภาพ PDF วิดีโอ และเอกสารออนไลน์ FormiPeek ทำให้ไฟล์ของคุณเล็กลงและแชร์ได้เร็วขึ้น — โดยไม่สูญเสียคุณภาพ',
         keywords:
           'เครื่องมือบีบอัดไฟล์, เครื่องมือบีบอัดออนไลน์, การบีบอัดรูปภาพ, บีบอัด jpg, บีบอัดรูปภาพ, ลดขนาดไฟล์, การบีบอัดแบบกลุ่ม, เครื่องมือบีบอัดฟรี, การบีบอัดวิดีโอ'
       },
       schema: {
         name: 'เครื่องมือบีบอัดไฟล์ออนไลน์',
         description:
-          'บีบอัดรูปภาพ PDF วิดีโอ และอื่นๆ โดยตรงในเบราว์เซอร์ของคุณด้วย FomiPeek ลดขนาดไฟล์ในขณะที่ยังคงคุณภาพที่ดี — เร็วและปลอดภัย'
+          'บีบอัดรูปภาพ PDF วิดีโอ และอื่นๆ โดยตรงในเบราว์เซอร์ของคุณด้วย FormiPeek ลดขนาดไฟล์ในขณะที่ยังคงคุณภาพที่ดี — เร็วและปลอดภัย'
       },
       hero: {
         title: 'เครื่องมือบีบอัดไฟล์',
@@ -1065,16 +1065,16 @@ const compressPageResources: Record<string, CompressPageTranslations> = {
   ja: {
     compress_page: {
       meta: {
-        title: 'オンラインファイル圧縮ツール – ファイルサイズを削減 | FomiPeek',
+        title: 'オンラインファイル圧縮ツール – ファイルサイズを削減 | FormiPeek',
         description:
-          '画像、PDF、動画、ドキュメントをオンラインで圧縮。FomiPeekでファイルを小さく、共有を高速化 — 品質を損なわずに。',
+          '画像、PDF、動画、ドキュメントをオンラインで圧縮。FormiPeekでファイルを小さく、共有を高速化 — 品質を損なわずに。',
         keywords:
           'ファイル圧縮ツール, オンライン圧縮ツール, 画像圧縮, jpg圧縮, 画像圧縮, ファイルサイズ削減, バッチ圧縮, 無料圧縮ツール, 動画圧縮'
       },
       schema: {
         name: 'オンラインファイル圧縮ツール',
         description:
-          'FomiPeekでブラウザで直接画像、PDF、動画などを圧縮。優れた品質を維持しながらファイルサイズを削減 — 高速で安全。'
+          'FormiPeekでブラウザで直接画像、PDF、動画などを圧縮。優れた品質を維持しながらファイルサイズを削減 — 高速で安全。'
       },
       hero: {
         title: 'ファイル圧縮ツール',
@@ -1143,16 +1143,16 @@ const compressPageResources: Record<string, CompressPageTranslations> = {
   zh: {
     compress_page: {
       meta: {
-        title: '在线文件压缩工具 – 减小文件大小 | FomiPeek',
+        title: '在线文件压缩工具 – 减小文件大小 | FormiPeek',
         description:
-          '在线压缩图像、PDF、视频和文档。FomiPeek使您的文件更小、共享更快 — 不损失质量。',
+          '在线压缩图像、PDF、视频和文档。FormiPeek使您的文件更小、共享更快 — 不损失质量。',
         keywords:
           '文件压缩工具, 在线压缩工具, 图像压缩, 压缩 jpg, 压缩图像, 减小文件大小, 批量压缩, 免费压缩工具, 视频压缩'
       },
       schema: {
         name: '在线文件压缩工具',
         description:
-          '使用FomiPeek直接在浏览器中压缩图像、PDF、视频等。在保持出色质量的同时减小文件大小 — 快速且安全。'
+          '使用FormiPeek直接在浏览器中压缩图像、PDF、视频等。在保持出色质量的同时减小文件大小 — 快速且安全。'
       },
       hero: {
         title: '文件压缩工具',
@@ -1221,16 +1221,16 @@ const compressPageResources: Record<string, CompressPageTranslations> = {
   id: {
     compress_page: {
       meta: {
-        title: 'Alat kompresi file online – Kurangi ukuran file | FomiPeek',
+        title: 'Alat kompresi file online – Kurangi ukuran file | FormiPeek',
         description:
-          'Kompres gambar, PDF, video, dan dokumen online. FomiPeek membuat file Anda lebih kecil dan lebih cepat untuk dibagikan — tanpa kehilangan kualitas.',
+          'Kompres gambar, PDF, video, dan dokumen online. FormiPeek membuat file Anda lebih kecil dan lebih cepat untuk dibagikan — tanpa kehilangan kualitas.',
         keywords:
           'alat kompresi file, alat kompresi online, kompresi gambar, kompres jpg, kompres gambar, kurangi ukuran file, kompresi batch, alat kompresi gratis, kompresi video'
       },
       schema: {
         name: 'Alat kompresi file online',
         description:
-          'Kompres gambar, PDF, video, dan lebih banyak lagi langsung di browser Anda dengan FomiPeek. Kurangi ukuran file sambil mempertahankan kualitas yang bagus — cepat dan aman.'
+          'Kompres gambar, PDF, video, dan lebih banyak lagi langsung di browser Anda dengan FormiPeek. Kurangi ukuran file sambil mempertahankan kualitas yang bagus — cepat dan aman.'
       },
       hero: {
         title: 'Alat kompresi file',
@@ -1299,16 +1299,16 @@ const compressPageResources: Record<string, CompressPageTranslations> = {
   sv: {
     compress_page: {
       meta: {
-        title: 'Online filkomprimerare – Minska filstorlek | FomiPeek',
+        title: 'Online filkomprimerare – Minska filstorlek | FormiPeek',
         description:
-          'Komprimera bilder, PDF-filer, videor och dokument online. FomiPeek gör dina filer mindre och snabbare att dela — utan kvalitetsförlust.',
+          'Komprimera bilder, PDF-filer, videor och dokument online. FormiPeek gör dina filer mindre och snabbare att dela — utan kvalitetsförlust.',
         keywords:
           'filkomprimerare, online komprimerare, bildkomprimering, komprimera jpg, komprimera bilder, minska filstorlek, batchkomprimering, gratis komprimerare, videokomprimering'
       },
       schema: {
         name: 'Online filkomprimerare',
         description:
-          'Komprimera bilder, PDF-filer, videor och mer direkt i din webbläsare med FomiPeek. Minska filstorleken medan du behåller utmärkt kvalitet — snabbt och säkert.'
+          'Komprimera bilder, PDF-filer, videor och mer direkt i din webbläsare med FormiPeek. Minska filstorleken medan du behåller utmärkt kvalitet — snabbt och säkert.'
       },
       hero: {
         title: 'Filkomprimeringsverktyg',
