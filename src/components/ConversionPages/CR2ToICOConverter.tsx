@@ -258,6 +258,24 @@ export const CR2ToICOConverter: React.FC = () => {
         <title>{t('cr2_to_ico.meta_title')}</title>
         <meta name="description" content={t('cr2_to_ico.meta_description')} />
         <meta name="keywords" content="CR2 to ICO, Canon RAW converter, Windows icons, icon converter, camera RAW, batch conversion" />
+        <link rel="canonical" href={`${window.location.origin}/convert/cr2-to-ico`} />
+        <link rel="alternate" hrefLang="en" href={`${window.location.origin}/convert/cr2-to-ico`} />
+        <link rel="alternate" hrefLang="pl" href={`${window.location.origin}/pl/convert/cr2-to-ico`} />
+        <link rel="alternate" hrefLang="de" href={`${window.location.origin}/de/convert/cr2-to-ico`} />
+        <link rel="alternate" hrefLang="id" href={`${window.location.origin}/id/convert/cr2-to-ico`} />
+        <link rel="alternate" hrefLang="sv" href={`${window.location.origin}/sv/convert/cr2-to-ico`} />
+        <link rel="alternate" hrefLang="es" href={`${window.location.origin}/es/convert/cr2-to-ico`} />
+        <link rel="alternate" hrefLang="fr" href={`${window.location.origin}/fr/convert/cr2-to-ico`} />
+        <link rel="alternate" hrefLang="it" href={`${window.location.origin}/it/convert/cr2-to-ico`} />
+        <link rel="alternate" hrefLang="nl" href={`${window.location.origin}/nl/convert/cr2-to-ico`} />
+        <link rel="alternate" hrefLang="pt" href={`${window.location.origin}/pt/convert/cr2-to-ico`} />
+        <link rel="alternate" hrefLang="vi" href={`${window.location.origin}/vi/convert/cr2-to-ico`} />
+        <link rel="alternate" hrefLang="tr" href={`${window.location.origin}/tr/convert/cr2-to-ico`} />
+        <link rel="alternate" hrefLang="ru" href={`${window.location.origin}/ru/convert/cr2-to-ico`} />
+        <link rel="alternate" hrefLang="ar" href={`${window.location.origin}/ar/convert/cr2-to-ico`} />
+        <link rel="alternate" hrefLang="th" href={`${window.location.origin}/th/convert/cr2-to-ico`} />
+        <link rel="alternate" hrefLang="ja" href={`${window.location.origin}/ja/convert/cr2-to-ico`} />
+        <link rel="alternate" hrefLang="zh" href={`${window.location.origin}/zh/convert/cr2-to-ico`} />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-purple-50">
       <Header />

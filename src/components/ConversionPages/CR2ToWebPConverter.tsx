@@ -395,6 +395,24 @@ WEBP_FILE_END`;
         <title>{t('cr2_to_webp.meta_title')}</title>
         <meta name="description" content={t('cr2_to_webp.meta_description')} />
         <meta name="keywords" content="CR2 to WebP, Canon RAW, WebP converter, image optimization, photography, batch processing" />
+        <link rel="canonical" href={`${window.location.origin}/convert/cr2-to-webp`} />
+        <link rel="alternate" hrefLang="en" href={`${window.location.origin}/convert/cr2-to-webp`} />
+        <link rel="alternate" hrefLang="pl" href={`${window.location.origin}/pl/convert/cr2-to-webp`} />
+        <link rel="alternate" hrefLang="de" href={`${window.location.origin}/de/convert/cr2-to-webp`} />
+        <link rel="alternate" hrefLang="id" href={`${window.location.origin}/id/convert/cr2-to-webp`} />
+        <link rel="alternate" hrefLang="sv" href={`${window.location.origin}/sv/convert/cr2-to-webp`} />
+        <link rel="alternate" hrefLang="es" href={`${window.location.origin}/es/convert/cr2-to-webp`} />
+        <link rel="alternate" hrefLang="fr" href={`${window.location.origin}/fr/convert/cr2-to-webp`} />
+        <link rel="alternate" hrefLang="it" href={`${window.location.origin}/it/convert/cr2-to-webp`} />
+        <link rel="alternate" hrefLang="nl" href={`${window.location.origin}/nl/convert/cr2-to-webp`} />
+        <link rel="alternate" hrefLang="pt" href={`${window.location.origin}/pt/convert/cr2-to-webp`} />
+        <link rel="alternate" hrefLang="vi" href={`${window.location.origin}/vi/convert/cr2-to-webp`} />
+        <link rel="alternate" hrefLang="tr" href={`${window.location.origin}/tr/convert/cr2-to-webp`} />
+        <link rel="alternate" hrefLang="ru" href={`${window.location.origin}/ru/convert/cr2-to-webp`} />
+        <link rel="alternate" hrefLang="ar" href={`${window.location.origin}/ar/convert/cr2-to-webp`} />
+        <link rel="alternate" hrefLang="th" href={`${window.location.origin}/th/convert/cr2-to-webp`} />
+        <link rel="alternate" hrefLang="ja" href={`${window.location.origin}/ja/convert/cr2-to-webp`} />
+        <link rel="alternate" hrefLang="zh" href={`${window.location.origin}/zh/convert/cr2-to-webp`} />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-white to-blue-50">
       <Header />

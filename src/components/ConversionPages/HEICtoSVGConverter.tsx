@@ -354,6 +354,24 @@ export const HEICtoSVGConverter: React.FC = () => {
         <title>{t('heic_to_svg.meta_title')}</title>
         <meta name="description" content={t('heic_to_svg.meta_description')} />
         <meta name="keywords" content="HEIC to SVG, HEIF to SVG, Apple image converter, vector graphics, batch conversion" />
+        <link rel="canonical" href={`${window.location.origin}/convert/heic-to-svg`} />
+        <link rel="alternate" hrefLang="en" href={`${window.location.origin}/convert/heic-to-svg`} />
+        <link rel="alternate" hrefLang="pl" href={`${window.location.origin}/pl/convert/heic-to-svg`} />
+        <link rel="alternate" hrefLang="de" href={`${window.location.origin}/de/convert/heic-to-svg`} />
+        <link rel="alternate" hrefLang="id" href={`${window.location.origin}/id/convert/heic-to-svg`} />
+        <link rel="alternate" hrefLang="sv" href={`${window.location.origin}/sv/convert/heic-to-svg`} />
+        <link rel="alternate" hrefLang="es" href={`${window.location.origin}/es/convert/heic-to-svg`} />
+        <link rel="alternate" hrefLang="fr" href={`${window.location.origin}/fr/convert/heic-to-svg`} />
+        <link rel="alternate" hrefLang="it" href={`${window.location.origin}/it/convert/heic-to-svg`} />
+        <link rel="alternate" hrefLang="nl" href={`${window.location.origin}/nl/convert/heic-to-svg`} />
+        <link rel="alternate" hrefLang="pt" href={`${window.location.origin}/pt/convert/heic-to-svg`} />
+        <link rel="alternate" hrefLang="vi" href={`${window.location.origin}/vi/convert/heic-to-svg`} />
+        <link rel="alternate" hrefLang="tr" href={`${window.location.origin}/tr/convert/heic-to-svg`} />
+        <link rel="alternate" hrefLang="ru" href={`${window.location.origin}/ru/convert/heic-to-svg`} />
+        <link rel="alternate" hrefLang="ar" href={`${window.location.origin}/ar/convert/heic-to-svg`} />
+        <link rel="alternate" hrefLang="th" href={`${window.location.origin}/th/convert/heic-to-svg`} />
+        <link rel="alternate" hrefLang="ja" href={`${window.location.origin}/ja/convert/heic-to-svg`} />
+        <link rel="alternate" hrefLang="zh" href={`${window.location.origin}/zh/convert/heic-to-svg`} />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50">
       <Header />

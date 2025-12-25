@@ -264,6 +264,23 @@ export default function Home() {
         <meta name="description" content={metaDescription} />
         <meta name="keywords" content={metaKeywords} />
         <link rel="canonical" href={canonicalUrl} />
+        <link rel="alternate" hrefLang="en" href="https://formipeek.com/" />
+        <link rel="alternate" hrefLang="pl" href="https://formipeek.com/pl/" />
+        <link rel="alternate" hrefLang="de" href="https://formipeek.com/de/" />
+        <link rel="alternate" hrefLang="id" href="https://formipeek.com/id/" />
+        <link rel="alternate" hrefLang="sv" href="https://formipeek.com/sv/" />
+        <link rel="alternate" hrefLang="es" href="https://formipeek.com/es/" />
+        <link rel="alternate" hrefLang="fr" href="https://formipeek.com/fr/" />
+        <link rel="alternate" hrefLang="it" href="https://formipeek.com/it/" />
+        <link rel="alternate" hrefLang="nl" href="https://formipeek.com/nl/" />
+        <link rel="alternate" hrefLang="pt" href="https://formipeek.com/pt/" />
+        <link rel="alternate" hrefLang="vi" href="https://formipeek.com/vi/" />
+        <link rel="alternate" hrefLang="tr" href="https://formipeek.com/tr/" />
+        <link rel="alternate" hrefLang="ru" href="https://formipeek.com/ru/" />
+        <link rel="alternate" hrefLang="ar" href="https://formipeek.com/ar/" />
+        <link rel="alternate" hrefLang="th" href="https://formipeek.com/th/" />
+        <link rel="alternate" hrefLang="ja" href="https://formipeek.com/ja/" />
+        <link rel="alternate" hrefLang="zh" href="https://formipeek.com/zh/" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}

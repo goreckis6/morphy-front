@@ -161,6 +161,24 @@ export const HEIFtoJPGConventer: React.FC = () => {
         <title>{t('heif_to_jpg.meta_title')}</title>
         <meta name="description" content={t('heif_to_jpg.meta_description')} />
         <meta name="keywords" content="HEIF to JPG, HEIC to JPG, convert HEIC, iPhone to JPG, image converter, batch" />
+        <link rel="canonical" href={`${window.location.origin}/convert/heif-to-jpg`} />
+        <link rel="alternate" hrefLang="en" href={`${window.location.origin}/convert/heif-to-jpg`} />
+        <link rel="alternate" hrefLang="pl" href={`${window.location.origin}/pl/convert/heif-to-jpg`} />
+        <link rel="alternate" hrefLang="de" href={`${window.location.origin}/de/convert/heif-to-jpg`} />
+        <link rel="alternate" hrefLang="id" href={`${window.location.origin}/id/convert/heif-to-jpg`} />
+        <link rel="alternate" hrefLang="sv" href={`${window.location.origin}/sv/convert/heif-to-jpg`} />
+        <link rel="alternate" hrefLang="es" href={`${window.location.origin}/es/convert/heif-to-jpg`} />
+        <link rel="alternate" hrefLang="fr" href={`${window.location.origin}/fr/convert/heif-to-jpg`} />
+        <link rel="alternate" hrefLang="it" href={`${window.location.origin}/it/convert/heif-to-jpg`} />
+        <link rel="alternate" hrefLang="nl" href={`${window.location.origin}/nl/convert/heif-to-jpg`} />
+        <link rel="alternate" hrefLang="pt" href={`${window.location.origin}/pt/convert/heif-to-jpg`} />
+        <link rel="alternate" hrefLang="vi" href={`${window.location.origin}/vi/convert/heif-to-jpg`} />
+        <link rel="alternate" hrefLang="tr" href={`${window.location.origin}/tr/convert/heif-to-jpg`} />
+        <link rel="alternate" hrefLang="ru" href={`${window.location.origin}/ru/convert/heif-to-jpg`} />
+        <link rel="alternate" hrefLang="ar" href={`${window.location.origin}/ar/convert/heif-to-jpg`} />
+        <link rel="alternate" hrefLang="th" href={`${window.location.origin}/th/convert/heif-to-jpg`} />
+        <link rel="alternate" hrefLang="ja" href={`${window.location.origin}/ja/convert/heif-to-jpg`} />
+        <link rel="alternate" hrefLang="zh" href={`${window.location.origin}/zh/convert/heif-to-jpg`} />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-orange-50">
       <Header />
