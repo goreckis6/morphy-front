@@ -1,12 +1,51 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { FileText, File, BookOpen, FileCode } from 'lucide-react';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
+import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
+import { getLocalizedUrl } from '../../i18n';
+import '../../locales/viewersPage';
 
 export const DocumentViewer: React.FC = () => {
+  const { t, i18n } = useTranslation();
+  usePathLanguageSync(i18n);
+
+  const localizedPath = getLocalizedUrl('/viewers', i18n.language);
+  const canonicalUrl = `https://formipeek.com${localizedPath}`;
+
+  const pageJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: t('viewers_page.schema.name'),
+    url: canonicalUrl,
+    description: t('viewers_page.schema.description'),
+    isPartOf: { '@id': 'https://formipeek.com#website' },
+    publisher: { '@id': 'https://formipeek.com#organization' }
+  };
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Header />
+    <>
+      <Helmet>
+        <title>{t('viewers_page.meta.title')}</title>
+        <meta name="description" content={t('viewers_page.meta.description')} />
+        <meta name="keywords" content={t('viewers_page.meta.keywords')} />
+        <meta property="og:title" content={t('viewers_page.meta.title')} />
+        <meta property="og:description" content={t('viewers_page.meta.description')} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={t('viewers_page.meta.title')} />
+        <meta name="twitter:description" content={t('viewers_page.meta.description')} />
+        <link rel="canonical" href={canonicalUrl} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
+        />
+      </Helmet>
+      <div className="min-h-screen bg-gray-50">
+        <Header />
       
       {/* Header */}
       <div className="bg-white shadow-sm border-b">
@@ -183,6 +222,7 @@ export const DocumentViewer: React.FC = () => {
       </div>
       
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
