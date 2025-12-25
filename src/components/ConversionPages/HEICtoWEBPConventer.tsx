@@ -229,6 +229,24 @@ export const HEICtoWEBPConventer: React.FC = () => {
         <title>{t(`${translationKey}.meta_title`)}</title>
         <meta name="description" content={t(`${translationKey}.meta_description`)} />
         <meta name="keywords" content="HEIC to WEBP, HEIF to WEBP, convert HEIC, iPhone to WEBP, image converter, batch conversion" />
+        <link rel="canonical" href={`${window.location.origin}${location.pathname}`} />
+        <link rel="alternate" hrefLang="en" href={`${window.location.origin}/convert/${isHeifRoute ? 'heif-to-webp' : 'heic-to-webp'}`} />
+        <link rel="alternate" hrefLang="pl" href={`${window.location.origin}/pl/convert/${isHeifRoute ? 'heif-to-webp' : 'heic-to-webp'}`} />
+        <link rel="alternate" hrefLang="de" href={`${window.location.origin}/de/convert/${isHeifRoute ? 'heif-to-webp' : 'heic-to-webp'}`} />
+        <link rel="alternate" hrefLang="id" href={`${window.location.origin}/id/convert/${isHeifRoute ? 'heif-to-webp' : 'heic-to-webp'}`} />
+        <link rel="alternate" hrefLang="sv" href={`${window.location.origin}/sv/convert/${isHeifRoute ? 'heif-to-webp' : 'heic-to-webp'}`} />
+        <link rel="alternate" hrefLang="es" href={`${window.location.origin}/es/convert/${isHeifRoute ? 'heif-to-webp' : 'heic-to-webp'}`} />
+        <link rel="alternate" hrefLang="fr" href={`${window.location.origin}/fr/convert/${isHeifRoute ? 'heif-to-webp' : 'heic-to-webp'}`} />
+        <link rel="alternate" hrefLang="it" href={`${window.location.origin}/it/convert/${isHeifRoute ? 'heif-to-webp' : 'heic-to-webp'}`} />
+        <link rel="alternate" hrefLang="nl" href={`${window.location.origin}/nl/convert/${isHeifRoute ? 'heif-to-webp' : 'heic-to-webp'}`} />
+        <link rel="alternate" hrefLang="pt" href={`${window.location.origin}/pt/convert/${isHeifRoute ? 'heif-to-webp' : 'heic-to-webp'}`} />
+        <link rel="alternate" hrefLang="vi" href={`${window.location.origin}/vi/convert/${isHeifRoute ? 'heif-to-webp' : 'heic-to-webp'}`} />
+        <link rel="alternate" hrefLang="tr" href={`${window.location.origin}/tr/convert/${isHeifRoute ? 'heif-to-webp' : 'heic-to-webp'}`} />
+        <link rel="alternate" hrefLang="ru" href={`${window.location.origin}/ru/convert/${isHeifRoute ? 'heif-to-webp' : 'heic-to-webp'}`} />
+        <link rel="alternate" hrefLang="ar" href={`${window.location.origin}/ar/convert/${isHeifRoute ? 'heif-to-webp' : 'heic-to-webp'}`} />
+        <link rel="alternate" hrefLang="th" href={`${window.location.origin}/th/convert/${isHeifRoute ? 'heif-to-webp' : 'heic-to-webp'}`} />
+        <link rel="alternate" hrefLang="ja" href={`${window.location.origin}/ja/convert/${isHeifRoute ? 'heif-to-webp' : 'heic-to-webp'}`} />
+        <link rel="alternate" hrefLang="zh" href={`${window.location.origin}/zh/convert/${isHeifRoute ? 'heif-to-webp' : 'heic-to-webp'}`} />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50">
       <Header />
