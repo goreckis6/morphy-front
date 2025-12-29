@@ -221,6 +221,24 @@ export const EPUBToRTFConverter: React.FC = () => {
         <title>{t('epub_to_rtf.meta_title')}</title>
         <meta name="description" content={t('epub_to_rtf.meta_description')} />
         <meta name="keywords" content={t('epub_to_rtf.meta_keywords')} />
+        <link rel="canonical" href={`${window.location.origin}/convert/epub-to-rtf`} />
+        <link rel="alternate" hrefLang="en" href={`${window.location.origin}/convert/epub-to-rtf`} />
+        <link rel="alternate" hrefLang="pl" href={`${window.location.origin}/pl/convert/epub-to-rtf`} />
+        <link rel="alternate" hrefLang="de" href={`${window.location.origin}/de/convert/epub-to-rtf`} />
+        <link rel="alternate" hrefLang="id" href={`${window.location.origin}/id/convert/epub-to-rtf`} />
+        <link rel="alternate" hrefLang="sv" href={`${window.location.origin}/sv/convert/epub-to-rtf`} />
+        <link rel="alternate" hrefLang="es" href={`${window.location.origin}/es/convert/epub-to-rtf`} />
+        <link rel="alternate" hrefLang="fr" href={`${window.location.origin}/fr/convert/epub-to-rtf`} />
+        <link rel="alternate" hrefLang="it" href={`${window.location.origin}/it/convert/epub-to-rtf`} />
+        <link rel="alternate" hrefLang="nl" href={`${window.location.origin}/nl/convert/epub-to-rtf`} />
+        <link rel="alternate" hrefLang="pt" href={`${window.location.origin}/pt/convert/epub-to-rtf`} />
+        <link rel="alternate" hrefLang="vi" href={`${window.location.origin}/vi/convert/epub-to-rtf`} />
+        <link rel="alternate" hrefLang="tr" href={`${window.location.origin}/tr/convert/epub-to-rtf`} />
+        <link rel="alternate" hrefLang="ru" href={`${window.location.origin}/ru/convert/epub-to-rtf`} />
+        <link rel="alternate" hrefLang="ar" href={`${window.location.origin}/ar/convert/epub-to-rtf`} />
+        <link rel="alternate" hrefLang="th" href={`${window.location.origin}/th/convert/epub-to-rtf`} />
+        <link rel="alternate" hrefLang="ja" href={`${window.location.origin}/ja/convert/epub-to-rtf`} />
+        <link rel="alternate" hrefLang="zh" href={`${window.location.origin}/zh/convert/epub-to-rtf`} />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-sky-50 via-white to-blue-50">
       <Header />

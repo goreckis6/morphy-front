@@ -335,6 +335,24 @@ export const DOCToMOBIConverter: React.FC = () => {
         <title>{t('doc_to_mobi.meta_title')}</title>
         <meta name="description" content={t('doc_to_mobi.meta_description')} />
         <meta name="keywords" content="DOC to MOBI, Word to Kindle, document converter, MOBI format, e-reader, batch conversion" />
+        <link rel="canonical" href={`${window.location.origin}/convert/doc-to-mobi`} />
+        <link rel="alternate" hrefLang="en" href={`${window.location.origin}/convert/doc-to-mobi`} />
+        <link rel="alternate" hrefLang="pl" href={`${window.location.origin}/pl/convert/doc-to-mobi`} />
+        <link rel="alternate" hrefLang="de" href={`${window.location.origin}/de/convert/doc-to-mobi`} />
+        <link rel="alternate" hrefLang="id" href={`${window.location.origin}/id/convert/doc-to-mobi`} />
+        <link rel="alternate" hrefLang="sv" href={`${window.location.origin}/sv/convert/doc-to-mobi`} />
+        <link rel="alternate" hrefLang="es" href={`${window.location.origin}/es/convert/doc-to-mobi`} />
+        <link rel="alternate" hrefLang="fr" href={`${window.location.origin}/fr/convert/doc-to-mobi`} />
+        <link rel="alternate" hrefLang="it" href={`${window.location.origin}/it/convert/doc-to-mobi`} />
+        <link rel="alternate" hrefLang="nl" href={`${window.location.origin}/nl/convert/doc-to-mobi`} />
+        <link rel="alternate" hrefLang="pt" href={`${window.location.origin}/pt/convert/doc-to-mobi`} />
+        <link rel="alternate" hrefLang="vi" href={`${window.location.origin}/vi/convert/doc-to-mobi`} />
+        <link rel="alternate" hrefLang="tr" href={`${window.location.origin}/tr/convert/doc-to-mobi`} />
+        <link rel="alternate" hrefLang="ru" href={`${window.location.origin}/ru/convert/doc-to-mobi`} />
+        <link rel="alternate" hrefLang="ar" href={`${window.location.origin}/ar/convert/doc-to-mobi`} />
+        <link rel="alternate" hrefLang="th" href={`${window.location.origin}/th/convert/doc-to-mobi`} />
+        <link rel="alternate" hrefLang="ja" href={`${window.location.origin}/ja/convert/doc-to-mobi`} />
+        <link rel="alternate" hrefLang="zh" href={`${window.location.origin}/zh/convert/doc-to-mobi`} />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-red-50">
       <Header />

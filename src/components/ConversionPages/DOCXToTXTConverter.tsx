@@ -305,6 +305,24 @@ export const DOCXToTXTConverter: React.FC = () => {
         <title>{t('docx_to_txt.meta_title')}</title>
         <meta name="description" content={t('docx_to_txt.meta_description')} />
         <meta name="keywords" content="DOCX to TXT, Word to TXT, document converter, plain text, Pandoc, batch conversion" />
+        <link rel="canonical" href={`${window.location.origin}/convert/docx-to-txt`} />
+        <link rel="alternate" hrefLang="en" href={`${window.location.origin}/convert/docx-to-txt`} />
+        <link rel="alternate" hrefLang="pl" href={`${window.location.origin}/pl/convert/docx-to-txt`} />
+        <link rel="alternate" hrefLang="de" href={`${window.location.origin}/de/convert/docx-to-txt`} />
+        <link rel="alternate" hrefLang="id" href={`${window.location.origin}/id/convert/docx-to-txt`} />
+        <link rel="alternate" hrefLang="sv" href={`${window.location.origin}/sv/convert/docx-to-txt`} />
+        <link rel="alternate" hrefLang="es" href={`${window.location.origin}/es/convert/docx-to-txt`} />
+        <link rel="alternate" hrefLang="fr" href={`${window.location.origin}/fr/convert/docx-to-txt`} />
+        <link rel="alternate" hrefLang="it" href={`${window.location.origin}/it/convert/docx-to-txt`} />
+        <link rel="alternate" hrefLang="nl" href={`${window.location.origin}/nl/convert/docx-to-txt`} />
+        <link rel="alternate" hrefLang="pt" href={`${window.location.origin}/pt/convert/docx-to-txt`} />
+        <link rel="alternate" hrefLang="vi" href={`${window.location.origin}/vi/convert/docx-to-txt`} />
+        <link rel="alternate" hrefLang="tr" href={`${window.location.origin}/tr/convert/docx-to-txt`} />
+        <link rel="alternate" hrefLang="ru" href={`${window.location.origin}/ru/convert/docx-to-txt`} />
+        <link rel="alternate" hrefLang="ar" href={`${window.location.origin}/ar/convert/docx-to-txt`} />
+        <link rel="alternate" hrefLang="th" href={`${window.location.origin}/th/convert/docx-to-txt`} />
+        <link rel="alternate" hrefLang="ja" href={`${window.location.origin}/ja/convert/docx-to-txt`} />
+        <link rel="alternate" hrefLang="zh" href={`${window.location.origin}/zh/convert/docx-to-txt`} />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50">
       <Header />

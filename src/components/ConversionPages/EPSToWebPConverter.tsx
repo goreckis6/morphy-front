@@ -208,6 +208,24 @@ export const EPSToWebPConverter: React.FC = () => {
         <title>{t('eps_to_webp.meta_title')}</title>
         <meta name="description" content={t('eps_to_webp.meta_description')} />
         <meta name="keywords" content="EPS to WebP, vector converter, PostScript to WebP, web graphics, image conversion, free converter, batch conversion" />
+        <link rel="canonical" href={`${window.location.origin}/convert/eps-to-webp`} />
+        <link rel="alternate" hrefLang="en" href={`${window.location.origin}/convert/eps-to-webp`} />
+        <link rel="alternate" hrefLang="pl" href={`${window.location.origin}/pl/convert/eps-to-webp`} />
+        <link rel="alternate" hrefLang="de" href={`${window.location.origin}/de/convert/eps-to-webp`} />
+        <link rel="alternate" hrefLang="id" href={`${window.location.origin}/id/convert/eps-to-webp`} />
+        <link rel="alternate" hrefLang="sv" href={`${window.location.origin}/sv/convert/eps-to-webp`} />
+        <link rel="alternate" hrefLang="es" href={`${window.location.origin}/es/convert/eps-to-webp`} />
+        <link rel="alternate" hrefLang="fr" href={`${window.location.origin}/fr/convert/eps-to-webp`} />
+        <link rel="alternate" hrefLang="it" href={`${window.location.origin}/it/convert/eps-to-webp`} />
+        <link rel="alternate" hrefLang="nl" href={`${window.location.origin}/nl/convert/eps-to-webp`} />
+        <link rel="alternate" hrefLang="pt" href={`${window.location.origin}/pt/convert/eps-to-webp`} />
+        <link rel="alternate" hrefLang="vi" href={`${window.location.origin}/vi/convert/eps-to-webp`} />
+        <link rel="alternate" hrefLang="tr" href={`${window.location.origin}/tr/convert/eps-to-webp`} />
+        <link rel="alternate" hrefLang="ru" href={`${window.location.origin}/ru/convert/eps-to-webp`} />
+        <link rel="alternate" hrefLang="ar" href={`${window.location.origin}/ar/convert/eps-to-webp`} />
+        <link rel="alternate" hrefLang="th" href={`${window.location.origin}/th/convert/eps-to-webp`} />
+        <link rel="alternate" hrefLang="ja" href={`${window.location.origin}/ja/convert/eps-to-webp`} />
+        <link rel="alternate" hrefLang="zh" href={`${window.location.origin}/zh/convert/eps-to-webp`} />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-cyan-50">
       <Header />

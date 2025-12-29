@@ -350,6 +350,24 @@ export const DNGToWebPConverter: React.FC = () => {
         <title>{t('dng_to_webp.meta_title')}</title>
         <meta name="description" content={t('dng_to_webp.meta_description')} />
         <meta name="keywords" content={t('dng_to_webp.meta_keywords')} />
+        <link rel="canonical" href={`${window.location.origin}/convert/dng-to-webp`} />
+        <link rel="alternate" hrefLang="en" href={`${window.location.origin}/convert/dng-to-webp`} />
+        <link rel="alternate" hrefLang="pl" href={`${window.location.origin}/pl/convert/dng-to-webp`} />
+        <link rel="alternate" hrefLang="de" href={`${window.location.origin}/de/convert/dng-to-webp`} />
+        <link rel="alternate" hrefLang="id" href={`${window.location.origin}/id/convert/dng-to-webp`} />
+        <link rel="alternate" hrefLang="sv" href={`${window.location.origin}/sv/convert/dng-to-webp`} />
+        <link rel="alternate" hrefLang="es" href={`${window.location.origin}/es/convert/dng-to-webp`} />
+        <link rel="alternate" hrefLang="fr" href={`${window.location.origin}/fr/convert/dng-to-webp`} />
+        <link rel="alternate" hrefLang="it" href={`${window.location.origin}/it/convert/dng-to-webp`} />
+        <link rel="alternate" hrefLang="nl" href={`${window.location.origin}/nl/convert/dng-to-webp`} />
+        <link rel="alternate" hrefLang="pt" href={`${window.location.origin}/pt/convert/dng-to-webp`} />
+        <link rel="alternate" hrefLang="vi" href={`${window.location.origin}/vi/convert/dng-to-webp`} />
+        <link rel="alternate" hrefLang="tr" href={`${window.location.origin}/tr/convert/dng-to-webp`} />
+        <link rel="alternate" hrefLang="ru" href={`${window.location.origin}/ru/convert/dng-to-webp`} />
+        <link rel="alternate" hrefLang="ar" href={`${window.location.origin}/ar/convert/dng-to-webp`} />
+        <link rel="alternate" hrefLang="th" href={`${window.location.origin}/th/convert/dng-to-webp`} />
+        <link rel="alternate" hrefLang="ja" href={`${window.location.origin}/ja/convert/dng-to-webp`} />
+        <link rel="alternate" hrefLang="zh" href={`${window.location.origin}/zh/convert/dng-to-webp`} />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-blue-50">
       <Header />
