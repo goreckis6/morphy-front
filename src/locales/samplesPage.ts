@@ -60,9 +60,9 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   en: {
     samples_page: {
       meta: {
-        title: 'Free Sample Files – Download Test Files | FormiPeek',
-        description: 'Get free sample images, documents, and archives to test FormiPeek converters, compressors, and viewers.',
-        keywords: 'sample files, test files, download samples, free test files, DOCX samples, file samples, test files for conversion'
+        title: 'Professional Sample Files for Testing - Download Test Files in 100+ Formats | FormiPeek',
+        description: 'Download professional-grade sample and test files for free. Access high-quality test files in 100+ formats including images, documents, audio, video, and archives. Perfect for testing converters, viewers, and software validation.',
+        keywords: 'sample files for testing, test files download, professional test files, file format samples, testing files, sample documents, test images, free sample files, software testing files, format validation files'
       },
       schema: {
         name: 'Free Sample Files for Download and Testing',
@@ -649,9 +649,9 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   pl: {
     samples_page: {
       meta: {
-        title: 'Darmowe pliki przykładowe – Pobierz pliki testowe | FormiPeek',
-        description: 'Pobierz darmowe przykładowe pliki obrazów, dokumentów i archiwów do testowania konwerterów, kompresorów i przeglądarek FormiPeek.',
-        keywords: 'pliki przykładowe, pliki testowe, pobierz przykłady, darmowe pliki testowe, przykłady DOCX, przykłady plików, pliki testowe do konwersji'
+        title: 'Profesjonalne Pliki Próbne do Testów - Pobierz Pliki Testowe w Ponad 100 Formatach | FormiPeek',
+        description: 'Pobierz profesjonalne pliki próbne i testowe za darmo. Dostęp do wysokiej jakości plików testowych w ponad 100 formatach, w tym obrazów, dokumentów, audio, wideo i archiwów. Idealne do testowania konwerterów, przeglądarek i walidacji oprogramowania.',
+        keywords: 'pliki próbne do testów, pobieranie plików testowych, profesjonalne pliki testowe, próbki formatów plików, pliki do testowania, przykładowe dokumenty, testowe obrazy, darmowe pliki próbne, pliki do testowania oprogramowania, pliki walidacyjne'
       },
       schema: {
         name: 'Darmowe pliki przykładowe do pobrania i testowania',
@@ -1238,9 +1238,9 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   de: {
     samples_page: {
       meta: {
-        title: 'Kostenlose Beispieldateien – Testdateien herunterladen | FormiPeek',
-        description: 'Kostenlose Beispieldateien für Bilder, Dokumente und Archive herunterladen, um FormiPeek-Konverter, Komprimierer und Viewer zu testen.',
-        keywords: 'Beispieldateien, Testdateien, Beispiele herunterladen, kostenlose Testdateien, DOCX-Beispiele, Dateibeispiele, Testdateien für Konvertierung'
+        title: 'Professionelle Beispieldateien zum Testen - Testdateien in Über 100 Formaten Herunterladen | FormiPeek',
+        description: 'Laden Sie kostenlos professionelle Beispiel- und Testdateien herunter. Zugriff auf hochwertige Testdateien in über 100 Formaten einschließlich Bilder, Dokumente, Audio, Video und Archive. Perfekt zum Testen von Konvertern, Viewern und zur Softwarevalidierung.',
+        keywords: 'Beispieldateien zum Testen, Testdateien herunterladen, professionelle Testdateien, Dateiformatbeispiele, Testdateien, Beispieldokumente, Testbilder, kostenlose Beispieldateien, Software-Testdateien, Formatvalidierungsdateien'
       },
       schema: {
         name: 'Kostenlose Beispieldateien zum Herunterladen und Testen',
@@ -1827,9 +1827,9 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   es: {
     samples_page: {
       meta: {
-        title: 'Archivos de muestra gratuitos – Descargar archivos de prueba | FormiPeek',
-        description: 'Obtén archivos de muestra gratuitos de imágenes, documentos y archivos para probar los convertidores, compresores y visores de FormiPeek.',
-        keywords: 'archivos de muestra, archivos de prueba, descargar muestras, archivos de prueba gratuitos, muestras DOCX, muestras de archivos, archivos de prueba para conversión'
+        title: 'Archivos de Muestra Profesionales para Pruebas - Descargar Archivos de Prueba en Más de 100 Formatos | FormiPeek',
+        description: 'Descarga archivos de muestra y prueba de nivel profesional gratis. Accede a archivos de prueba de alta calidad en más de 100 formatos incluyendo imágenes, documentos, audio, video y archivos. Perfecto para probar convertidores, visores y validación de software.',
+        keywords: 'archivos de muestra para pruebas, descargar archivos de prueba, archivos de prueba profesionales, muestras de formatos de archivo, archivos de prueba, documentos de muestra, imágenes de prueba, archivos de muestra gratuitos, archivos de prueba de software, archivos de validación de formato'
       },
       schema: {
         name: 'Archivos de muestra gratuitos para descargar y probar',
@@ -2301,9 +2301,9 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   fr: {
     samples_page: {
       meta: {
-        title: 'Fichiers d\'échantillon gratuits – Télécharger des fichiers de test | FormiPeek',
-        description: 'Obtenez des fichiers d\'échantillon gratuits d\'images, documents et archives pour tester les convertisseurs, compresseurs et visionneuses de FormiPeek.',
-        keywords: 'fichiers d\'échantillon, fichiers de test, télécharger des échantillons, fichiers de test gratuits, échantillons DOCX, échantillons de fichiers, fichiers de test pour conversion'
+        title: 'Fichiers d\'Exemple Professionnels pour Tests - Télécharger des Fichiers de Test en Plus de 100 Formats | FormiPeek',
+        description: 'Téléchargez gratuitement des fichiers d\'exemple et de test de niveau professionnel. Accédez à des fichiers de test de haute qualité dans plus de 100 formats incluant images, documents, audio, vidéo et archives. Parfait pour tester les convertisseurs, visualiseurs et la validation de logiciels.',
+        keywords: 'fichiers d\'exemple pour tests, télécharger fichiers de test, fichiers de test professionnels, échantillons de formats de fichiers, fichiers de test, documents d\'exemple, images de test, fichiers d\'exemple gratuits, fichiers de test logiciels, fichiers de validation de format'
       },
       schema: {
         name: 'Fichiers d\'échantillon gratuits à télécharger et tester',
@@ -2517,9 +2517,9 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   it: {
     samples_page: {
       meta: {
-        title: 'File di esempio gratuiti – Scarica file di test | FormiPeek',
-        description: 'Ottieni file di esempio gratuiti di immagini, documenti e archivi per testare i convertitori, compressori e visualizzatori di FormiPeek.',
-        keywords: 'file di esempio, file di test, scarica esempi, file di test gratuiti, esempi DOCX, esempi di file, file di test per conversione'
+        title: 'File di Esempio Professionali per Test - Scarica File di Test in Oltre 100 Formati | FormiPeek',
+        description: 'Scarica gratuitamente file di esempio e test di livello professionale. Accedi a file di test di alta qualità in oltre 100 formati inclusi immagini, documenti, audio, video e archivi. Perfetto per testare convertitori, visualizzatori e validazione software.',
+        keywords: 'file di esempio per test, scaricare file di test, file di test professionali, campioni di formati file, file di test, documenti di esempio, immagini di test, file di esempio gratuiti, file di test software, file di validazione formato'
       },
       schema: {
         name: 'File di esempio gratuiti da scaricare e testare',
@@ -2722,9 +2722,9 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   nl: {
     samples_page: {
       meta: {
-        title: 'Gratis voorbeeldbestanden – Download testbestanden | FormiPeek',
-        description: 'Krijg gratis voorbeeldbestanden van afbeeldingen, documenten en archieven om FormiPeek converters, compressors en viewers te testen.',
-        keywords: 'voorbeeldbestanden, testbestanden, download voorbeelden, gratis testbestanden, DOCX voorbeelden, bestandsvoorbeelden, testbestanden voor conversie'
+        title: 'Professionele Voorbeeldbestanden voor Testen - Download Testbestanden in Meer dan 100 Formaten | FormiPeek',
+        description: 'Download gratis professionele voorbeeld- en testbestanden. Toegang tot hoogwaardige testbestanden in meer dan 100 formaten inclusief afbeeldingen, documenten, audio, video en archieven. Perfect voor het testen van converters, viewers en softwarevalidatie.',
+        keywords: 'voorbeeldbestanden voor testen, testbestanden downloaden, professionele testbestanden, bestandsformaat voorbeelden, testbestanden, voorbeelddocumenten, testafbeeldingen, gratis voorbeeldbestanden, software testbestanden, formaat validatiebestanden'
       },
       schema: {
         name: 'Gratis voorbeeldbestanden om te downloaden en testen',
@@ -2859,9 +2859,9 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   pt: {
     samples_page: {
       meta: {
-        title: 'Arquivos de exemplo gratuitos – Baixar arquivos de teste | FormiPeek',
-        description: 'Obtenha arquivos de exemplo gratuitos de imagens, documentos e arquivos para testar os conversores, compressores e visualizadores do FormiPeek.',
-        keywords: 'arquivos de exemplo, arquivos de teste, baixar exemplos, arquivos de teste gratuitos, exemplos DOCX, exemplos de arquivos, arquivos de teste para conversão'
+        title: 'Arquivos de Exemplo Profissionais para Testes - Baixar Arquivos de Teste em Mais de 100 Formatos | FormiPeek',
+        description: 'Baixe gratuitamente arquivos de exemplo e teste de nível profissional. Acesse arquivos de teste de alta qualidade em mais de 100 formatos incluindo imagens, documentos, áudio, vídeo e arquivos. Perfeito para testar conversores, visualizadores e validação de software.',
+        keywords: 'arquivos de exemplo para testes, baixar arquivos de teste, arquivos de teste profissionais, amostras de formatos de arquivo, arquivos de teste, documentos de exemplo, imagens de teste, arquivos de exemplo gratuitos, arquivos de teste de software, arquivos de validação de formato'
       },
       schema: {
         name: 'Arquivos de exemplo gratuitos para baixar e testar',
@@ -3064,9 +3064,9 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   vi: {
     samples_page: {
       meta: {
-        title: 'Tệp mẫu miễn phí – Tải xuống tệp thử nghiệm | FormiPeek',
-        description: 'Nhận tệp mẫu miễn phí của hình ảnh, tài liệu và tệp nén để kiểm tra các công cụ chuyển đổi, nén và xem của FormiPeek.',
-        keywords: 'tệp mẫu, tệp thử nghiệm, tải xuống mẫu, tệp thử nghiệm miễn phí, mẫu DOCX, mẫu tệp, tệp thử nghiệm để chuyển đổi'
+        title: 'File Mẫu Chuyên Nghiệp Để Kiểm Tra - Tải Xuống File Thử Nghiệm Hơn 100 Định Dạng | FormiPeek',
+        description: 'Tải xuống miễn phí các file mẫu và thử nghiệm chuyên nghiệp. Truy cập các file thử nghiệm chất lượng cao trong hơn 100 định dạng bao gồm hình ảnh, tài liệu, âm thanh, video và file nén. Hoàn hảo cho việc kiểm tra bộ chuyển đổi, trình xem và xác thực phần mềm.',
+        keywords: 'file mẫu để kiểm tra, tải xuống file thử nghiệm, file thử nghiệm chuyên nghiệp, mẫu định dạng file, file kiểm tra, tài liệu mẫu, hình ảnh thử nghiệm, file mẫu miễn phí, file thử nghiệm phần mềm, file xác thực định dạng'
       },
       schema: {
         name: 'Tệp mẫu miễn phí để tải xuống và kiểm tra',
@@ -3266,9 +3266,9 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   tr: {
     samples_page: {
       meta: {
-        title: 'Ücretsiz örnek dosyalar – Test dosyalarını indir | FormiPeek',
-        description: 'FormiPeek dönüştürücülerini, sıkıştırıcılarını ve görüntüleyicilerini test etmek için ücretsiz örnek görüntü, belge ve arşiv dosyaları alın.',
-        keywords: 'örnek dosyalar, test dosyaları, örnekleri indir, ücretsiz test dosyaları, DOCX örnekleri, dosya örnekleri, dönüştürme için test dosyaları'
+        title: 'Test için Profesyonel Örnek Dosyalar - 100\'den Fazla Formatta Test Dosyaları İndir | FormiPeek',
+        description: 'Ücretsiz olarak profesyonel seviyede örnek ve test dosyaları indirin. Görseller, belgeler, ses, video ve arşivler dahil 100\'den fazla formatta yüksek kaliteli test dosyalarına erişin. Dönüştürücüleri, görüntüleyicileri test etmek ve yazılım doğrulaması için mükemmel.',
+        keywords: 'test için örnek dosyalar, test dosyaları indir, profesyonel test dosyaları, dosya formatı örnekleri, test dosyaları, örnek belgeler, test görselleri, ücretsiz örnek dosyalar, yazılım test dosyaları, format doğrulama dosyaları'
       },
       schema: {
         name: 'İndirilecek ve test edilecek ücretsiz örnek dosyalar',
@@ -3471,9 +3471,9 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   ru: {
     samples_page: {
       meta: {
-        title: 'Бесплатные примеры файлов – Скачать тестовые файлы | FormiPeek',
-        description: 'Получите бесплатные примеры файлов изображений, документов и архивов для тестирования конвертеров, компрессоров и просмотрщиков FormiPeek.',
-        keywords: 'примеры файлов, тестовые файлы, скачать примеры, бесплатные тестовые файлы, примеры DOCX, примеры файлов, тестовые файлы для конвертации'
+        title: 'Профессиональные Примеры Файлов Для Тестирования - Скачать Тестовые Файлы В Более 100 Форматах | FormiPeek',
+        description: 'Бесплатно скачайте профессиональные примеры и тестовые файлы. Доступ к высококачественным тестовым файлам в более 100 форматах, включая изображения, документы, аудио, видео и архивы. Идеально для тестирования конвертеров, просмотрщиков и валидации программного обеспечения.',
+        keywords: 'примеры файлов для тестирования, скачать тестовые файлы, профессиональные тестовые файлы, образцы форматов файлов, тестовые файлы, примеры документов, тестовые изображения, бесплатные примеры файлов, файлы для тестирования программ, файлы валидации форматов'
       },
       schema: {
         name: 'Бесплатные примеры файлов для скачивания и тестирования',
@@ -3676,9 +3676,9 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   ar: {
     samples_page: {
       meta: {
-        title: 'ملفات عينة مجانية – تنزيل ملفات الاختبار | FormiPeek',
-        description: 'احصل على ملفات عينة مجانية للصور والمستندات والأرشيفات لاختبار محولات وضواغط وعارضات FormiPeek.',
-        keywords: 'ملفات عينة، ملفات اختبار، تنزيل عينات، ملفات اختبار مجانية، عينات DOCX، عينات ملفات، ملفات اختبار للتحويل'
+        title: 'ملفات عينة محترفة للاختبار - تنزيل ملفات اختبار في أكثر من 100 تنسيق | FormiPeek',
+        description: 'قم بتنزيل ملفات عينة واختبار محترفة مجانًا. احصل على ملفات اختبار عالية الجودة في أكثر من 100 تنسيق بما في ذللك الصور والمستندات والصوت والفيديو والأرشيفات. مثالي لاختبار المحولات والعارضات والتحقق من البرامج.',
+        keywords: 'ملفات عينة للاختبار, تنزيل ملفات اختبار, ملفات اختبار محترفة, عينات تنسيقات ملفات, ملفات اختبار, مستندات عينة, صور اختبار, ملفات عينة مجانية, ملفات اختبار برامج, ملفات التحقق من التنسيق'
       },
       schema: {
         name: 'ملفات عينة مجانية للتنزيل والاختبار',
@@ -3813,9 +3813,9 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   th: {
     samples_page: {
       meta: {
-        title: 'ไฟล์ตัวอย่างฟรี – ดาวน์โหลดไฟล์ทดสอบ | FormiPeek',
-        description: 'รับไฟล์ตัวอย่างฟรีของรูปภาพ เอกสาร และไฟล์เก็บถาวรเพื่อทดสอบเครื่องมือแปลง บีบอัด และดูของ FormiPeek',
-        keywords: 'ไฟล์ตัวอย่าง, ไฟล์ทดสอบ, ดาวน์โหลดตัวอย่าง, ไฟล์ทดสอบฟรี, ตัวอย่าง DOCX, ตัวอย่างไฟล์, ไฟล์ทดสอบสำหรับการแปลง'
+        title: 'ไฟล์ตัวอย่างมืออาชีพสำหรับการทดสอบ - ดาวน์โหลดไฟล์ทดสอบมากกว่า 100 รูปแบบ | FormiPeek',
+        description: 'ดาวน์โหลดไฟล์ตัวอย่างและไฟล์ทดสอบระดับมืออาชีพฟรี เข้าถึงไฟล์ทดสอบคุณภาพสูงในรูปแบบมากกว่า 100 รูปแบบ รวมถึงรูปภาพ เอกสาร เสียง วิดีโอ และไฟล์บีบอัด เหมาะสำหรับทดสอบตัวแปลง ตัวดู และการตรวจสอบซอฟต์แวร์',
+        keywords: 'ไฟล์ตัวอย่างสำหรับการทดสอบ, ดาวน์โหลดไฟล์ทดสอบ, ไฟล์ทดสอบมืออาชีพ, ตัวอย่างรูปแบบไฟล์, ไฟล์ทดสอบ, เอกสารตัวอย่าง, รูปภาพทดสอบ, ไฟล์ตัวอย่างฟรี, ไฟล์ทดสอบซอฟต์แวร์, ไฟล์ตรวจสอบรูปแบบ'
       },
       schema: {
         name: 'ไฟล์ตัวอย่างฟรีสำหรับดาวน์โหลดและทดสอบ',
@@ -4018,9 +4018,9 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   ja: {
     samples_page: {
       meta: {
-        title: '無料サンプルファイル – テストファイルをダウンロード | FormiPeek',
-        description: 'FormiPeekのコンバーター、コンプレッサー、ビューアーをテストするための無料のサンプル画像、ドキュメント、アーカイブファイルを取得します。',
-        keywords: 'サンプルファイル, テストファイル, サンプルをダウンロード, 無料テストファイル, DOCXサンプル, ファイルサンプル, 変換用テストファイル'
+        title: 'テスト用プロフェッショナルサンプルファイル - 100以上の形式でテストファイルをダウンロード | FormiPeek',
+        description: 'プロフェッショナルレベルのサンプルおよびテストファイルを無料でダウンロード。画像、文書、オーディオ、ビデオ、アーカイブを含む100以上の形式の高品質テストファイルにアクセス。コンバーター、ビューアーのテスト、ソフトウェア検証に最適。',
+        keywords: 'テスト用サンプルファイル, テストファイルダウンロード, プロフェッショナルテストファイル, ファイル形式サンプル, テストファイル, サンプル文書, テスト画像, 無料サンプルファイル, ソフトウェアテストファイル, 形式検証ファイル'
       },
       schema: {
         name: 'ダウンロードとテスト用の無料サンプルファイル',
@@ -4223,9 +4223,9 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   zh: {
     samples_page: {
       meta: {
-        title: '免费示例文件 – 下载测试文件 | FormiPeek',
-        description: '获取免费的示例图像、文档和存档文件，用于测试 FormiPeek 转换器、压缩器和查看器。',
-        keywords: '示例文件, 测试文件, 下载示例, 免费测试文件, DOCX 示例, 文件示例, 转换测试文件'
+        title: '专业测试示例文件 - 下载100多种格式的测试文件 | FormiPeek',
+        description: '免费下载专业级示例和测试文件。访问100多种格式的高质量测试文件，包括图像、文档、音频、视频和存档。非常适合测试转换器、查看器和软件验证。',
+        keywords: '测试示例文件, 下载测试文件, 专业测试文件, 文件格式示例, 测试文件, 示例文档, 测试图像, 免费示例文件, 软件测试文件, 格式验证文件'
       },
       schema: {
         name: '免费示例文件供下载和测试',
@@ -4360,9 +4360,9 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   id: {
     samples_page: {
       meta: {
-        title: 'File Contoh Gratis – Unduh File Uji | FormiPeek',
-        description: 'Dapatkan file contoh gratis gambar, dokumen, dan arsip untuk menguji konverter, kompresor, dan penampil FormiPeek.',
-        keywords: 'file contoh, file uji, unduh contoh, file uji gratis, contoh DOCX, contoh file, file uji untuk konversi'
+        title: 'File Contoh Profesional untuk Pengujian - Unduh File Uji dalam 100+ Format | FormiPeek',
+        description: 'Unduh file contoh dan uji tingkat profesional gratis. Akses file uji berkualitas tinggi dalam 100+ format termasuk gambar, dokumen, audio, video, dan arsip. Sempurna untuk menguji konverter, penampil, dan validasi perangkat lunak.',
+        keywords: 'file contoh untuk pengujian, unduh file uji, file uji profesional, contoh format file, file pengujian, dokumen contoh, gambar uji, file contoh gratis, file uji perangkat lunak, file validasi format'
       },
       schema: {
         name: 'File Contoh Gratis untuk Diunduh dan Diuji',
@@ -4565,9 +4565,9 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   sv: {
     samples_page: {
       meta: {
-        title: 'Gratis exempelfiler – Ladda ner testfiler | FormiPeek',
-        description: 'Få gratis exempelfiler av bilder, dokument och arkiv för att testa FormiPeek-konverterare, komprimerare och visare.',
-        keywords: 'exempelfiler, testfiler, ladda ner exempel, gratis testfiler, DOCX-exempel, filexempel, testfiler för konvertering'
+        title: 'Professionella Exempelfiler för Testning - Ladda Ner Testfiler i Över 100 Format | FormiPeek',
+        description: 'Ladda ner professionella exempel- och testfiler gratis. Få tillgång till högkvalitativa testfiler i över 100 format inklusive bilder, dokument, ljud, video och arkiv. Perfekt för att testa konverterare, visare och programvaruvalidering.',
+        keywords: 'exempelfiler för testning, ladda ner testfiler, professionella testfiler, filformatexempel, testfiler, exempeldokument, testbilder, gratis exempelfiler, programvarutestfiler, formatvalideringsfiler'
       },
       schema: {
         name: 'Gratis exempelfiler att ladda ner och testa',
