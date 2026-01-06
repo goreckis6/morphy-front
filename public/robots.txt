@@ -1,0 +1,9 @@
+# robots.txt for formipeek.com
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://formipeek.com/sitemap.xml
+
+# Crawl-delay (optional - helps with server load)
+Crawl-delay: 1
