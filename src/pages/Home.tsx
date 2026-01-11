@@ -281,6 +281,15 @@ export default function Home() {
         <link rel="alternate" hrefLang="th" href="https://formipeek.com/th/" />
         <link rel="alternate" hrefLang="ja" href="https://formipeek.com/ja/" />
         <link rel="alternate" hrefLang="zh" href="https://formipeek.com/zh/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:site_name" content="FormiPeek" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={canonicalUrl} />
+        <meta name="twitter:title" content={metaTitle} />
+        <meta name="twitter:description" content={metaDescription} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
