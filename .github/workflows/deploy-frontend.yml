@@ -66,8 +66,8 @@ jobs:
             cd /opt/frontend
             
             # Create letsencrypt directory with proper permissions
-            sudo mkdir -p letsencrypt
-            sudo chown -R $USER:$USER letsencrypt
+            sudo mkdir -p letsencrypt 2>/dev/null || mkdir -p letsencrypt
+            sudo chown -R $USER:$USER letsencrypt 2>/dev/null || chown -R $USER:$USER letsencrypt
             
             # Set environment variable
             export VITE_API_BASE_URL=https://api.formipeek.com
@@ -79,15 +79,21 @@ jobs:
             # Install/Update Rendertron for SEO prerendering
             if ! command -v rendertron &> /dev/null; then
               echo "Installing Rendertron..."
-              sudo npm install -g rendertron
+              npm install -g rendertron 2>/dev/null || sudo npm install -g rendertron || echo "Warning: Could not install Rendertron globally, continuing..."
             fi
             
             # Stop existing rendertron if running
             pkill -f rendertron || true
+            sleep 2
             
-            # Start Rendertron as background service on port 3000
-            nohup rendertron > /var/log/rendertron.log 2>&1 &
-            echo "Rendertron started on port 3000"
+            # Try to start Rendertron as background service on port 3000
+            if command -v rendertron &> /dev/null; then
+              nohup rendertron --port 3000 > /var/log/rendertron.log 2>&1 &
+              sleep 3
+              echo "Rendertron started on port 3000"
+            else
+              echo "Warning: Rendertron not available, SEO prerendering disabled"
+            fi
             
             # Pull latest image from Docker Hub
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/morphy-frontend:latest
