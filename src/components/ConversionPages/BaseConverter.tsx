@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Upload, Download, RefreshCw, ArrowLeft, CheckCircle, AlertCircle, Star } from 'lucide-react';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
@@ -35,20 +36,6 @@ export const BaseConverter: React.FC<BaseConverterProps> = ({
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [isConverting, setIsConverting] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
-  // Update page title and meta description
-  React.useEffect(() => {
-    document.title = seoTitle;
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', seoDescription);
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = seoDescription;
-      document.head.appendChild(meta);
-    }
-  }, [seoTitle, seoDescription]);
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -101,6 +88,18 @@ export const BaseConverter: React.FC<BaseConverterProps> = ({
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>{seoTitle}</title>
+        <meta name="description" content={seoDescription} />
+        <meta property="og:title" content={seoTitle} />
+        <meta property="og:description" content={seoDescription} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={window.location.href} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={seoTitle} />
+        <meta name="twitter:description" content={seoDescription} />
+      </Helmet>
+      
       <Header />
       
       {/* Back Button */}
