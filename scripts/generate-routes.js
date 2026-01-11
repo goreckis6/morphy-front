@@ -1,6 +1,10 @@
 // Generate all routes for prerendering
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const languages = ['en', 'pl', 'de', 'id', 'sv', 'es', 'fr', 'it', 'nl', 'pt', 'vi', 'tr', 'ru', 'ar', 'th', 'ja', 'zh'];
 
@@ -36,13 +40,13 @@ for (const match of converterMatches) {
 }
 
 // Add converter routes for all languages
-converterPaths.forEach(path => {
-  routes.push(path);
+converterPaths.forEach(converterPath => {
+  routes.push(converterPath);
   languages.slice(1).forEach(lang => {
-    routes.push(`/${lang}${path}`);
+    routes.push(`/${lang}${converterPath}`);
   });
 });
 
 console.log(`Generated ${routes.length} routes for prerendering`);
 
-module.exports = routes;
+export default routes;
