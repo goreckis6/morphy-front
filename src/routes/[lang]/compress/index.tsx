@@ -1,1 +1,1 @@
-export { default, head } from '../../../compress/index';
+export { default, head } from '../../compress/index';
