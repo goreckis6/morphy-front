@@ -6,8 +6,8 @@ WORKDIR /app
 # Copy package files
 COPY package*.json ./
 
-# Install dependencies
-RUN npm ci
+# Install dependencies (use install since we don't have package-lock.json yet)
+RUN npm install
 
 # Copy source code
 COPY . .
@@ -26,7 +26,7 @@ COPY --from=builder /app/server ./server
 COPY --from=builder /app/package*.json ./
 
 # Install only production dependencies
-RUN npm ci --only=production
+RUN npm install --only=production
 
 # Expose Qwik SSR port
 EXPOSE 3000
