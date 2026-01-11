@@ -4,24 +4,21 @@
 import express from 'express';
 import { fileURLToPath } from 'node:url';
 import { join } from 'node:path';
-import { qwikCity } from '@builder.io/qwik-city/middleware/node';
-import render from '../dist/server/entry.ssr.js';
+import qwikMiddleware from '../server/entry.express.js';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
 // Create Express app
 const app = express();
 
-// Serve static files from dist/client
-app.use(express.static(join(__dirname, '..', 'dist', 'client'), {
+// Serve static files from dist
+app.use(express.static(join(__dirname, '..', 'dist'), {
   maxAge: '1y',
   immutable: true
 }));
 
 // Qwik City SSR middleware
-app.use(qwikCity(render, {
-  base: '/'
-}));
+app.use(qwikMiddleware);
 
 // Start server
 const PORT = process.env.PORT || 3000;
