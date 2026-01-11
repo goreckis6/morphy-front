@@ -1,5 +1,5 @@
 import { component$, useSignal, $, type QRL } from '@builder.io/qwik';
-import { Upload, Download, RefreshCw, ArrowLeft, CheckCircle, AlertCircle } from 'lucide-react';
+import { Upload, Download, RefreshCw, ArrowLeft, CheckCircle, AlertCircle } from './icons';
 
 interface BaseConverterProps {
   title: string;
@@ -69,24 +69,24 @@ export const BaseConverter = component$<BaseConverterProps>(({
   });
 
   return (
-    <div class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
-        <div class="mb-8">
+        <div className="mb-8">
           <a href="/" class="inline-flex items-center text-blue-600 hover:text-blue-700 mb-4">
-            <ArrowLeft class="w-5 h-5 mr-2" />
+            <ArrowLeft className="w-5 h-5 mr-2" />
             Back to Home
           </a>
-          <h1 class="text-4xl font-bold text-gray-900 mb-4">{title}</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">{title}</h1>
           <p class="text-lg text-gray-600">{description}</p>
         </div>
 
         {/* Converter Card */}
-        <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+        <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
           {/* File Upload */}
           {!selectedFile.value && (
-            <div class="border-3 border-dashed border-gray-300 rounded-xl p-12 text-center hover:border-blue-400 transition-colors">
-              <Upload class="w-16 h-16 mx-auto text-gray-400 mb-4" />
+            <div className="border-3 border-dashed border-gray-300 rounded-xl p-12 text-center hover:border-blue-400 transition-colors">
+              <Upload className="w-16 h-16 mx-auto text-gray-400 mb-4" />
               <p class="text-lg font-semibold text-gray-700 mb-2">
                 Drop your {inputFormat} file here
               </p>
@@ -111,10 +111,10 @@ export const BaseConverter = component$<BaseConverterProps>(({
 
           {/* Selected File */}
           {selectedFile.value && !convertedFile.value && (
-            <div class="space-y-6">
-              <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
-                <div class="flex items-center space-x-3">
-                  <CheckCircle class="w-6 h-6 text-green-500" />
+            <div className="space-y-6">
+              <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-6 h-6 text-green-500" />
                   <div>
                     <p class="font-semibold text-gray-900">{selectedFile.value.name}</p>
                     <p class="text-sm text-gray-500">
@@ -137,12 +137,12 @@ export const BaseConverter = component$<BaseConverterProps>(({
               >
                 {isConverting.value ? (
                   <>
-                    <RefreshCw class="w-5 h-5 animate-spin" />
+                    <RefreshCw className="w-5 h-5 animate-spin" />
                     <span>Converting...</span>
                   </>
                 ) : (
                   <>
-                    <RefreshCw class="w-5 h-5" />
+                    <RefreshCw className="w-5 h-5" />
                     <span>Convert to {outputFormat}</span>
                   </>
                 )}
@@ -152,17 +152,17 @@ export const BaseConverter = component$<BaseConverterProps>(({
 
           {/* Error */}
           {error.value && (
-            <div class="flex items-center space-x-3 p-4 bg-red-50 rounded-lg border border-red-200">
-              <AlertCircle class="w-6 h-6 text-red-500 flex-shrink-0" />
+            <div className="flex items-center space-x-3 p-4 bg-red-50 rounded-lg border border-red-200">
+              <AlertCircle className="w-6 h-6 text-red-500 flex-shrink-0" />
               <p class="text-red-700">{error.value}</p>
             </div>
           )}
 
           {/* Success */}
           {convertedFile.value && (
-            <div class="space-y-6">
-              <div class="flex items-center justify-center p-8 bg-green-50 rounded-lg border border-green-200">
-                <CheckCircle class="w-12 h-12 text-green-500 mr-4" />
+            <div className="space-y-6">
+              <div className="flex items-center justify-center p-8 bg-green-50 rounded-lg border border-green-200">
+                <CheckCircle className="w-12 h-12 text-green-500 mr-4" />
                 <div>
                   <p class="text-lg font-semibold text-gray-900">Conversion Complete!</p>
                   <p class="text-sm text-gray-600">Your file is ready to download</p>
@@ -173,7 +173,7 @@ export const BaseConverter = component$<BaseConverterProps>(({
                 onClick$={handleDownload}
                 class="w-full py-4 bg-gradient-to-r from-green-600 to-teal-600 text-white rounded-lg font-semibold hover:from-green-700 hover:to-teal-700 transition-all shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
               >
-                <Download class="w-5 h-5" />
+                <Download className="w-5 h-5" />
                 <span>Download {outputFormat}</span>
               </button>
 
@@ -191,26 +191,26 @@ export const BaseConverter = component$<BaseConverterProps>(({
         </div>
 
         {/* Features */}
-        <div class="grid md:grid-cols-2 gap-8">
-          <div class="bg-white rounded-xl shadow-lg p-6">
-            <h2 class="text-xl font-bold text-gray-900 mb-4">Features</h2>
-            <ul class="space-y-3">
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-white rounded-xl shadow-lg p-6">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">Features</h2>
+            <ul className="space-y-3">
               {features.map((feature, idx) => (
                 <li key={idx} class="flex items-start space-x-2">
-                  <CheckCircle class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span class="text-gray-700">{feature}</span>
+                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">{feature}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div class="bg-white rounded-xl shadow-lg p-6">
-            <h2 class="text-xl font-bold text-gray-900 mb-4">Use Cases</h2>
-            <ul class="space-y-3">
+          <div className="bg-white rounded-xl shadow-lg p-6">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">Use Cases</h2>
+            <ul className="space-y-3">
               {useCases.map((useCase, idx) => (
                 <li key={idx} class="flex items-start space-x-2">
-                  <CheckCircle class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" />
-                  <span class="text-gray-700">{useCase}</span>
+                  <CheckCircle className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">{useCase}</span>
                 </li>
               ))}
             </ul>

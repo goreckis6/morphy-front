@@ -1,4 +1,4 @@
-import i18n from '../../i18n';
+import i18n // from '../i18n';
 import { SamplePageTranslations } from './types';
 import { en } from './en';
 import { id } from './id';

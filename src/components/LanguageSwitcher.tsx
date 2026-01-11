@@ -1,6 +1,6 @@
 import { component$, useSignal, $ } from '@builder.io/qwik';
 import { useLocation, useNavigate } from '@builder.io/qwik-city';
-import { Globe, ChevronDown } from 'lucide-react';
+import { Globe, ChevronDown } from './icons';
 
 interface Language {
   code: string;
@@ -64,18 +64,18 @@ export const LanguageSwitcher = component$(() => {
   });
 
   return (
-    <div class="relative">
+    <div className="relative">
       <button
         onClick$={() => showDropdown.value = !showDropdown.value}
         class="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors"
         aria-label="Change language"
       >
-        <Globe class="w-5 h-5 text-gray-600" />
-        <span class="text-2xl">{currentLanguage.flag}</span>
-        <span class="hidden sm:inline text-sm font-medium text-gray-700">
+        <Globe className="w-5 h-5 text-gray-600" />
+        <span className="text-2xl">{currentLanguage.flag}</span>
+        <span className="hidden sm:inline text-sm font-medium text-gray-700">
           {currentLanguage.nativeName}
         </span>
-        <ChevronDown class="w-4 h-4 text-gray-500" />
+        <ChevronDown className="w-4 h-4 text-gray-500" />
       </button>
 
       {showDropdown.value && (
@@ -84,7 +84,7 @@ export const LanguageSwitcher = component$(() => {
             class="fixed inset-0 z-40" 
             onClick$={() => showDropdown.value = false}
           />
-          <div class="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-200 z-50 max-h-96 overflow-y-auto">
+          <div className="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-200 z-50 max-h-96 overflow-y-auto">
             {LANGUAGES.map((lang) => (
               <button
                 key={lang.code}
@@ -93,13 +93,13 @@ export const LanguageSwitcher = component$(() => {
                   currentLang === lang.code ? 'bg-blue-50 border-l-4 border-blue-500' : ''
                 }`}
               >
-                <span class="text-2xl">{lang.flag}</span>
-                <div class="flex-1 text-left">
-                  <div class="text-sm font-medium text-gray-900">{lang.nativeName}</div>
-                  <div class="text-xs text-gray-500">{lang.name}</div>
+                <span className="text-2xl">{lang.flag}</span>
+                <div className="flex-1 text-left">
+                  <div className="text-sm font-medium text-gray-900">{lang.nativeName}</div>
+                  <div className="text-xs text-gray-500">{lang.name}</div>
                 </div>
                 {currentLang === lang.code && (
-                  <div class="w-2 h-2 rounded-full bg-blue-500" />
+                  <div className="w-2 h-2 rounded-full bg-blue-500" />
                 )}
               </button>
             ))}

@@ -1,4 +1,4 @@
-import i18n from '../i18n';
+import i18n // from '../i18n';
 
 type Feature = { title: string; description: string };
 type Spec = { label: string; value: string };
