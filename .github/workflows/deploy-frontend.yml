@@ -33,7 +33,7 @@ jobs:
       - name: Install dependencies
         run: |
           cd ${{ github.workspace }}
-          npm ci
+          npm install
 
       - name: Install react-snap for prerendering
         run: |
