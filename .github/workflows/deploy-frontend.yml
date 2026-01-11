@@ -61,15 +61,13 @@ jobs:
           host: ${{ secrets.FRONTEND_VPS_HOST }}
           username: ${{ secrets.FRONTEND_VPS_USERNAME }}
           key: ${{ secrets.FRONTEND_VPS_SSH_KEY }}
-          timeout: 10m
-          command_timeout: 10m
           script: |
             set -euo pipefail
             cd /opt/frontend
             
             # Create letsencrypt directory with proper permissions
-            sudo mkdir -p letsencrypt 2>/dev/null || mkdir -p letsencrypt
-            sudo chown -R $USER:$USER letsencrypt 2>/dev/null || chown -R $USER:$USER letsencrypt
+            sudo mkdir -p letsencrypt
+            sudo chown -R $USER:$USER letsencrypt
             
             # Set environment variable
             export VITE_API_BASE_URL=https://api.formipeek.com
@@ -78,23 +76,8 @@ jobs:
             docker stop morphy-frontend 2>/dev/null || true
             docker rm morphy-frontend 2>/dev/null || true
             
-            # Install/Update Rendertron for SEO prerendering (in background)
-            (
-              if ! command -v rendertron &> /dev/null; then
-                echo "Installing Rendertron in background..."
-                npm install -g rendertron 2>&1 || sudo npm install -g rendertron 2>&1 || echo "Rendertron install failed"
-              fi
-            ) &
-            
-            # Continue with deployment while Rendertron installs
-            echo "Proceeding with deployment..."
-            
             # Pull latest image from Docker Hub
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/morphy-frontend:latest
-            
-            # Stop and remove old frontend container
-            docker stop morphy-frontend 2>/dev/null || true
-            docker rm morphy-frontend 2>/dev/null || true
             
             # Deploy with corrected Traefik labels (serve via nginx on port 80)
             docker run -d \
@@ -109,22 +92,10 @@ jobs:
               --label "traefik.http.services.morphy.loadbalancer.server.port=80" \
               --network traefik \
               --restart unless-stopped \
-              --add-host host.docker.internal:host-gateway \
               -e VITE_API_BASE_URL=https://api.formipeek.com\
               ${{ secrets.DOCKERHUB_USERNAME }}/morphy-frontend:latest
             
             # Verify deployment
-            sleep 5
+            sleep 10
             docker ps | grep morphy-frontend
-            
-            # Start/Restart Rendertron in background (non-blocking)
-            (
-              pkill -f rendertron 2>/dev/null || true
-              sleep 2
-              if command -v rendertron &> /dev/null; then
-                nohup rendertron --port 3000 > /var/log/rendertron.log 2>&1 &
-                echo "Rendertron started on port 3000"
-              fi
-            ) &
-            
-            echo "Deployment completed successfully"
+
