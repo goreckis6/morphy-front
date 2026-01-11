@@ -13,13 +13,13 @@ export default component$(() => {
               </span>
             </a>
             <nav class="flex items-center space-x-6">
-              <a href="/converters" class="text-gray-700 hover:text-blue-600 transition-colors">
+              <a href="/en/converters" class="text-gray-700 hover:text-blue-600 transition-colors">
                 Converters
               </a>
-              <a href="/viewers" class="text-gray-700 hover:text-purple-600 transition-colors">
+              <a href="/en/viewers" class="text-gray-700 hover:text-purple-600 transition-colors">
                 Viewers
               </a>
-              <a href="/compress" class="text-gray-700 hover:text-orange-600 transition-colors">
+              <a href="/en/compress" class="text-gray-700 hover:text-orange-600 transition-colors">
                 Compress
               </a>
             </nav>
@@ -37,7 +37,7 @@ export default component$(() => {
           </p>
           <div class="flex justify-center gap-4">
             <a
-              href="/converters"
+              href="/en/converters"
               class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl transition-all"
             >
               Start Converting

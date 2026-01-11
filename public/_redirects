@@ -1,0 +1,4 @@
+/*    /index.html   200
+
+# Polish and German routes are now enabled
+# /pl/* and /de/* routes are handled by React Router

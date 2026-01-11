@@ -1,0 +1,6 @@
+# robots.txt for formipeek.com
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://formipeek.com/sitemap.xml

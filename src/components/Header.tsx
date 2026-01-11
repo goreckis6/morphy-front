@@ -96,21 +96,3 @@ export const Header = component$(() => {
     </header>
   );
 });
-                  <span>Compress</span>
-                </a>
-                <a href={getNavHref('/samples')} className="flex items-center space-x-3 text-gray-700 hover:text-teal-600 transition-colors font-medium py-2 group">
-                  <Download className="w-5 h-5 text-teal-600 group-hover:text-teal-700" />
-                  <span>Samples</span>
-                </a>
-                <div className="pt-4 border-t border-gray-200 mt-2 flex justify-start">
-                  <LanguageSwitcher />
-                </div>
-              </nav>
-            </div>
-          )}
-        </div>
-      </header>
-
-    </>
-  );
-};
