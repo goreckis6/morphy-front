@@ -4,7 +4,25 @@
 import express from 'express';
 import { fileURLToPath } from 'node:url';
 import { join } from 'node:path';
-import render from '../dist/server/entry.ssr.js';
+
+// Resolve SSR renderer with fallbacks for different build outputs
+async function loadRenderer() {
+  const candidates = [
+    '../dist/server/entry.ssr.js',
+    '../dist/server/entry.node.js',
+    '../dist/server/entry.preview.js',
+  ];
+  for (const p of candidates) {
+    try {
+      const mod = await import(p);
+      console.log(`✅ Loaded SSR entry: ${p}`);
+      return mod.default || mod.render || mod;
+    } catch (e) {
+      // continue to next candidate
+    }
+  }
+  throw new Error('❌ No SSR entry found in dist/server (tried entry.ssr.js, entry.node.js, entry.preview.js)');
+}
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
@@ -17,10 +35,13 @@ app.use(express.static(join(__dirname, '..', 'dist'), {
   index: false, // Don't auto-serve index.html
 }));
 
+// Load renderer once at startup, then serve requests
+let rendererPromise = loadRenderer();
+
 // Qwik SSR middleware
 app.get('*', async (req, res, next) => {
   try {
-    // Render using Qwik SSR
+    const render = await rendererPromise;
     const result = await render({
       url: req.url,
       base: '/',
