@@ -64,6 +64,13 @@ export default function Home() {
     };
   }, []);
 
+  // Signal to Rendertron that page is ready after Helmet updates
+  useEffect(() => {
+    setTimeout(() => {
+      (window as any).prerenderReady = true;
+    }, 100);
+  }, [metaTitle, metaDescription]);
+
   const formatDataProcessed = (gb: number) => {
     if (gb >= 1000) {
       return `${(gb / 1000).toFixed(1)} TB`;

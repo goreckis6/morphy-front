@@ -37,6 +37,14 @@ export const BaseConverter: React.FC<BaseConverterProps> = ({
   const [isConverting, setIsConverting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  // Signal to Rendertron that page is ready after Helmet updates
+  React.useEffect(() => {
+    // Wait for Helmet to update DOM
+    setTimeout(() => {
+      (window as any).prerenderReady = true;
+    }, 100);
+  }, [seoTitle, seoDescription]);
+
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
