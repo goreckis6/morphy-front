@@ -1,32 +1,35 @@
-## Frontend multi-stage production Dockerfile
-
-# 1) Builder: install deps and build static assets
+# Build stage
 FROM node:18-alpine AS builder
 
 WORKDIR /app
 
-# Copy package files first for better layer caching
+# Copy package files
 COPY package*.json ./
 
-# Install all dependencies (includes dev deps for Vite build)
+# Install dependencies
 RUN npm ci
 
-# Copy the rest of the source
+# Copy source code
 COPY . .
 
-# Build the Vite app
+# Build Qwik application (creates dist/ with server and client)
 RUN npm run build
 
-# 2) Runtime: serve with nginx
-FROM nginx:alpine AS runtime
+# Production stage
+FROM node:18-alpine
 
-# Copy built assets to nginx web root
-COPY --from=builder /app/dist /usr/share/nginx/html
+WORKDIR /app
 
-# Supply nginx config if present (optional)
-COPY docker/nginx.conf /etc/nginx/nginx.conf
-COPY docker/default.conf /etc/nginx/conf.d/default.conf
+# Copy built application from builder
+COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/server ./server
+COPY --from=builder /app/package*.json ./
 
-EXPOSE 80
+# Install only production dependencies
+RUN npm ci --only=production
 
-CMD ["nginx", "-g", "daemon off;"]
+# Expose Qwik SSR port
+EXPOSE 3000
+
+# Start Qwik SSR server
+CMD ["npm", "run", "serve"]
