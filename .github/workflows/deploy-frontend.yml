@@ -82,6 +82,7 @@ jobs:
             # Deploy with corrected Traefik labels (serve via nginx on port 80)
             docker run -d \
               --name morphy-frontend \
+              --add-host=host.docker.internal:host-gateway \
               --label "traefik.enable=true" \
               --label "traefik.http.routers.morphy.rule=Host(\`formipeek.com\`)" \
               --label "traefik.http.routers.morphy.tls=true" \
