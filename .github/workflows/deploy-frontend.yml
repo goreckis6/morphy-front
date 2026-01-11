@@ -35,12 +35,7 @@ jobs:
           cd ${{ github.workspace }}
           npm install
 
-      - name: Install react-snap for prerendering
-        run: |
-          cd ${{ github.workspace }}
-          npm install --save-dev react-snap
-
-      - name: Build with prerendering
+      - name: Build application
         run: |
           cd ${{ github.workspace }}
           npm run build
@@ -81,8 +76,25 @@ jobs:
             docker stop morphy-frontend 2>/dev/null || true
             docker rm morphy-frontend 2>/dev/null || true
             
+            # Install/Update Rendertron for SEO prerendering
+            if ! command -v rendertron &> /dev/null; then
+              echo "Installing Rendertron..."
+              sudo npm install -g rendertron
+            fi
+            
+            # Stop existing rendertron if running
+            pkill -f rendertron || true
+            
+            # Start Rendertron as background service on port 3000
+            nohup rendertron > /var/log/rendertron.log 2>&1 &
+            echo "Rendertron started on port 3000"
+            
             # Pull latest image from Docker Hub
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/morphy-frontend:latest
+            
+            # Stop and remove old frontend container
+            docker stop morphy-frontend 2>/dev/null || true
+            docker rm morphy-frontend 2>/dev/null || true
             
             # Deploy with corrected Traefik labels (serve via nginx on port 80)
             docker run -d \
@@ -97,10 +109,14 @@ jobs:
               --label "traefik.http.services.morphy.loadbalancer.server.port=80" \
               --network traefik \
               --restart unless-stopped \
+              --add-host host.docker.internal:host-gateway \
               -e VITE_API_BASE_URL=https://api.formipeek.com\
               ${{ secrets.DOCKERHUB_USERNAME }}/morphy-frontend:latest
             
             # Verify deployment
             sleep 10
             docker ps | grep morphy-frontend
+            
+            # Check Rendertron is running
+            curl -s http://localhost:3000/_ah/health || echo "Warning: Rendertron may not be running"
 

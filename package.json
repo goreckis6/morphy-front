@@ -6,32 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "prebuild": "node scripts/generate-snap-urls.js",
-    "postbuild": "react-snap",
+    "postbuild": "node scripts/generate-static-pages.js",
     "lint": "eslint .",
     "preview": "vite preview",
     "start": "vite preview --host 0.0.0.0 --port ${PORT:-5173}",
     "docker:dev": "docker-compose up --build",
     "docker:backend": "cd backend && npm run dev"
-  },
-  "reactSnap": {
-    "source": "dist",
-    "minifyHtml": {
-      "collapseWhitespace": false,
-      "removeComments": false
-    },
-    "crawl": true,
-    "include": [
-      "/",
-      "/converters",
-      "/compress",
-      "/samples",
-      "/viewers"
-    ],
-    "skipThirdPartyRequests": true,
-    "cacheAjaxRequests": false,
-    "http2PushManifest": false,
-    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"]
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.57.4",
