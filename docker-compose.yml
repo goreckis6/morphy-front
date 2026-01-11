@@ -11,6 +11,8 @@ services:
     restart: unless-stopped
     environment:
       - NODE_ENV=production
+      - HOST=0.0.0.0
+      - PORT=3000
     # Do NOT publish 3000; Traefik proxies internally
     # ports:
     #   - "3000:3000"
@@ -22,6 +24,7 @@ services:
       # HTTP router (redirects to HTTPS)
       - traefik.http.routers.morphy.rule=Host(`formipeek.com`)
       - traefik.http.routers.morphy.entrypoints=web
+      - traefik.http.routers.morphy.service=morphy
       - traefik.http.middlewares.morphy-redirect.redirectscheme.scheme=https
       - traefik.http.routers.morphy.middlewares=morphy-redirect
       # HTTPS router
@@ -29,6 +32,7 @@ services:
       - traefik.http.routers.morphy-secure.entrypoints=websecure
       - traefik.http.routers.morphy-secure.tls=true
       - traefik.http.routers.morphy-secure.tls.certresolver=letsencrypt
+      - traefik.http.routers.morphy-secure.service=morphy
       # Internal app port (Express SSR)
       - traefik.http.services.morphy.loadbalancer.server.port=3000
     healthcheck:

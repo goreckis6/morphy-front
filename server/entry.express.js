@@ -37,6 +37,7 @@ app.get('*', async (req, res, next) => {
 
 // Start server
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`✅ Qwik SSR server running on http://localhost:${PORT}`);
+const HOST = process.env.HOST || '0.0.0.0';
+app.listen(PORT, HOST, () => {
+  console.log(`✅ Qwik SSR server running on http://${HOST}:${PORT}`);
 });
