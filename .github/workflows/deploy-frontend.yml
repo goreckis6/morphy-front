@@ -30,10 +30,22 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install react-router-dom
+      - name: Install dependencies
         run: |
           cd ${{ github.workspace }}
-          npm install react-router-dom
+          npm ci
+
+      - name: Install react-snap for prerendering
+        run: |
+          cd ${{ github.workspace }}
+          npm install --save-dev react-snap
+
+      - name: Build with prerendering
+        run: |
+          cd ${{ github.workspace }}
+          npm run build
+        env:
+          VITE_API_BASE_URL: ${{ secrets.FRONTEND_API_URL }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
