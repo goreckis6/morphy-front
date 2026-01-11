@@ -6,13 +6,17 @@ networks:
 
 services:
   morphy-frontend:
-    image: ambro66/morphy-frontend:latest
+    image: node:20-alpine
     container_name: morphy-frontend
     restart: unless-stopped
     environment:
       - NODE_ENV=production
       - HOST=0.0.0.0
       - PORT=3000
+    working_dir: /srv/formipeek
+    volumes:
+      - /srv/formipeek:/srv/formipeek
+    command: sh -c "npm ci || npm install && npm run build && node server/entry.express.js"
     networks:
       - traefik
     labels:
