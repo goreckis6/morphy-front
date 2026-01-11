@@ -114,13 +114,7 @@ jobs:
               ${{ secrets.DOCKERHUB_USERNAME }}/morphy-frontend:latest
             
             # Verify deployment
-            sleep 10
-            docker ps | grep morphy-frontend
-            
-            # Check Rendertron is running
-            curl -s http://localhost:3000/_ah/health || echo "Warning: Rendertron may not be running"
-
-5
+            sleep 5
             docker ps | grep morphy-frontend
             
             # Start/Restart Rendertron in background (non-blocking)
@@ -133,4 +127,4 @@ jobs:
               fi
             ) &
             
-            echo "Deployment completed successfully
+            echo "Deployment completed successfully"
