@@ -1,10 +1,9 @@
 /**
- * Express server for Qwik SSR production
+ * Express server for Qwik static serving
  */
 import express from 'express';
 import { fileURLToPath } from 'node:url';
 import { join } from 'node:path';
-import qwikMiddleware from '../server/entry.express.js';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
@@ -13,15 +12,16 @@ const app = express();
 
 // Serve static files from dist
 app.use(express.static(join(__dirname, '..', 'dist'), {
-  maxAge: '1y',
-  immutable: true
+  maxAge: '1d'
 }));
 
-// Qwik City SSR middleware
-app.use(qwikMiddleware);
+// SPA fallback
+app.get('*', (req, res) => {
+  res.sendFile(join(__dirname, '..', 'dist', 'index.html'));
+});
 
 // Start server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`✅ Qwik SSR server running on http://localhost:${PORT}`);
+  console.log(`✅ Server running on http://localhost:${PORT}`);
 });
