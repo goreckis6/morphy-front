@@ -1,26 +1,26 @@
 import { defineConfig } from 'vite';
 import { qwikVite } from '@builder.io/qwik/optimizer';
 import { qwikCity } from '@builder.io/qwik-city/vite';
-import { qwikReact } from '@builder.io/qwik-react/vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
-export default defineConfig(() => {
-  return {
-    plugins: [
-      qwikCity(),
-      qwikVite(),
-      qwikReact(),
-      tsconfigPaths(),
-    ],
-    dev: {
-      headers: {
-        'Cache-Control': 'public, max-age=0',
-      },
+export default defineConfig({
+  plugins: [
+    qwikCity(),
+    qwikVite(),
+    tsconfigPaths(),
+  ],
+  server: {
+    headers: {
+      'Cross-Origin-Embedder-Policy': 'require-corp',
+      'Cross-Origin-Opener-Policy': 'same-origin',
     },
-    preview: {
-      headers: {
-        'Cache-Control': 'public, max-age=600',
-      },
+  },
+  preview: {
+    headers: {
+      'Cache-Control': 'public, max-age=600',
     },
-  };
+  },
+  ssr: {
+    noExternal: ['lucide-react'],
+  },
 });
