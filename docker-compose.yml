@@ -1,0 +1,39 @@
+version: '3.8'
+
+networks:
+  traefik:
+    external: true
+
+services:
+  morphy-frontend:
+    image: ambro66/morphy-frontend:latest
+    container_name: morphy-frontend
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    # Do NOT publish 3000; Traefik proxies internally
+    # ports:
+    #   - "3000:3000"
+    networks:
+      - traefik
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=traefik
+      # HTTP router (redirects to HTTPS)
+      - traefik.http.routers.formipeek.rule=Host(`formipeek.com`)
+      - traefik.http.routers.formipeek.entrypoints=web
+      - traefik.http.middlewares.formipeek-redirect.redirectscheme.scheme=https
+      - traefik.http.routers.formipeek.middlewares=formipeek-redirect
+      # HTTPS router
+      - traefik.http.routers.formipeek-secure.rule=Host(`formipeek.com`)
+      - traefik.http.routers.formipeek-secure.entrypoints=websecure
+      - traefik.http.routers.formipeek-secure.tls=true
+      - traefik.http.routers.formipeek-secure.tls.certresolver=letsencrypt
+      # Internal app port (Express SSR)
+      - traefik.http.services.formipeek.loadbalancer.server.port=3000
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/"]
+      interval: 20s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
