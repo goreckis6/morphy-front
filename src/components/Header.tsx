@@ -64,7 +64,7 @@ export const Header = component$(() => {
             onClick$={() => showMobileMenu.value = !showMobileMenu.value}
             class="md:hidden p-2 text-gray-500 hover:text-gray-700 rounded-lg transition-colors"
           >
-            {showMobileMenu.value ? <X class="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {showMobileMenu.value ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
