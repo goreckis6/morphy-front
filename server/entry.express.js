@@ -4,7 +4,7 @@
 import express from 'express';
 import { fileURLToPath } from 'node:url';
 import { join } from 'node:path';
-import render from './entry.ssr.js';
+import render from '../dist/server/entry.ssr.js';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
