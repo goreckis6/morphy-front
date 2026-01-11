@@ -34,15 +34,32 @@ export const LanguageSwitcher = component$(() => {
   const loc = useLocation();
   const nav = useNavigate();
   
-  // Extract current language from URL
-  const currentLang = loc.url.pathname.split('/')[1] || 'en';
+  // Extract current language from URL - default to 'en' if no language prefix
+  const pathParts = loc.url.pathname.split('/').filter(Boolean);
+  const supportedLangs = ['pl', 'de', 'es', 'fr', 'it', 'pt', 'ru', 'ja', 'zh', 'ko', 'ar', 'hi', 'id', 'tr', 'nl', 'sv'];
+  const currentLang = supportedLangs.includes(pathParts[0]) ? pathParts[0] : 'en';
   const currentLanguage = LANGUAGES.find(l => l.code === currentLang) || LANGUAGES[0];
 
   const changeLanguage = $((langCode: string) => {
-    const pathParts = loc.url.pathname.split('/');
-    pathParts[1] = langCode;
-    const newPath = pathParts.join('/') || `/${langCode}/`;
-    nav(newPath);
+    const pathParts = loc.url.pathname.split('/').filter(Boolean);
+    
+    // Check if first part is a language code
+    const supportedLangs = ['pl', 'de', 'es', 'fr', 'it', 'pt', 'ru', 'ja', 'zh', 'ko', 'ar', 'hi', 'id', 'tr', 'nl', 'sv'];
+    const hasLangInPath = supportedLangs.includes(pathParts[0]);
+    
+    if (langCode === 'en') {
+      // For English, remove language prefix
+      const newPath = hasLangInPath ? '/' + pathParts.slice(1).join('/') : loc.url.pathname;
+      nav(newPath || '/');
+    } else {
+      // For other languages, add/replace language prefix
+      if (hasLangInPath) {
+        pathParts[0] = langCode;
+      } else {
+        pathParts.unshift(langCode);
+      }
+      nav('/' + pathParts.join('/'));
+    }
     showDropdown.value = false;
   });
 

@@ -8,8 +8,11 @@ export const Header = component$(() => {
   const loc = useLocation();
   
   const currentLang = loc.url.pathname.split('/')[1] || 'en';
+  // Check if current lang is in supported languages list
+  const supportedLangs = ['pl', 'de', 'es', 'fr', 'it', 'pt', 'ru', 'ja', 'zh', 'ko', 'ar', 'hi', 'id', 'tr', 'nl', 'sv'];
+  const isNonEnglish = supportedLangs.includes(currentLang);
 
-  const getNavHref = (path: string) => `/${currentLang}${path}`;
+  const getNavHref = (path: string) => isNonEnglish ? `/${currentLang}${path}` : path;
 
   return (
     <header class="bg-white shadow-lg sticky top-0 z-40">
