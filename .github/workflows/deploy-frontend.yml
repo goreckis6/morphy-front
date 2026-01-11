@@ -61,6 +61,8 @@ jobs:
           host: ${{ secrets.FRONTEND_VPS_HOST }}
           username: ${{ secrets.FRONTEND_VPS_USERNAME }}
           key: ${{ secrets.FRONTEND_VPS_SSH_KEY }}
+          timeout: 10m
+          command_timeout: 10m
           script: |
             set -euo pipefail
             cd /opt/frontend
@@ -76,24 +78,16 @@ jobs:
             docker stop morphy-frontend 2>/dev/null || true
             docker rm morphy-frontend 2>/dev/null || true
             
-            # Install/Update Rendertron for SEO prerendering
-            if ! command -v rendertron &> /dev/null; then
-              echo "Installing Rendertron..."
-              npm install -g rendertron 2>/dev/null || sudo npm install -g rendertron || echo "Warning: Could not install Rendertron globally, continuing..."
-            fi
+            # Install/Update Rendertron for SEO prerendering (in background)
+            (
+              if ! command -v rendertron &> /dev/null; then
+                echo "Installing Rendertron in background..."
+                npm install -g rendertron 2>&1 || sudo npm install -g rendertron 2>&1 || echo "Rendertron install failed"
+              fi
+            ) &
             
-            # Stop existing rendertron if running
-            pkill -f rendertron || true
-            sleep 2
-            
-            # Try to start Rendertron as background service on port 3000
-            if command -v rendertron &> /dev/null; then
-              nohup rendertron --port 3000 > /var/log/rendertron.log 2>&1 &
-              sleep 3
-              echo "Rendertron started on port 3000"
-            else
-              echo "Warning: Rendertron not available, SEO prerendering disabled"
-            fi
+            # Continue with deployment while Rendertron installs
+            echo "Proceeding with deployment..."
             
             # Pull latest image from Docker Hub
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/morphy-frontend:latest
@@ -126,3 +120,17 @@ jobs:
             # Check Rendertron is running
             curl -s http://localhost:3000/_ah/health || echo "Warning: Rendertron may not be running"
 
+5
+            docker ps | grep morphy-frontend
+            
+            # Start/Restart Rendertron in background (non-blocking)
+            (
+              pkill -f rendertron 2>/dev/null || true
+              sleep 2
+              if command -v rendertron &> /dev/null; then
+                nohup rendertron --port 3000 > /var/log/rendertron.log 2>&1 &
+                echo "Rendertron started on port 3000"
+              fi
+            ) &
+            
+            echo "Deployment completed successfully
