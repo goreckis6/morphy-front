@@ -20,17 +20,17 @@ services:
       - traefik.enable=true
       - traefik.docker.network=traefik
       # HTTP router (redirects to HTTPS)
-      - traefik.http.routers.formipeek.rule=Host(`formipeek.com`)
-      - traefik.http.routers.formipeek.entrypoints=web
-      - traefik.http.middlewares.formipeek-redirect.redirectscheme.scheme=https
-      - traefik.http.routers.formipeek.middlewares=formipeek-redirect
+      - traefik.http.routers.morphy.rule=Host(`formipeek.com`)
+      - traefik.http.routers.morphy.entrypoints=web
+      - traefik.http.middlewares.morphy-redirect.redirectscheme.scheme=https
+      - traefik.http.routers.morphy.middlewares=morphy-redirect
       # HTTPS router
-      - traefik.http.routers.formipeek-secure.rule=Host(`formipeek.com`)
-      - traefik.http.routers.formipeek-secure.entrypoints=websecure
-      - traefik.http.routers.formipeek-secure.tls=true
-      - traefik.http.routers.formipeek-secure.tls.certresolver=letsencrypt
+      - traefik.http.routers.morphy-secure.rule=Host(`formipeek.com`)
+      - traefik.http.routers.morphy-secure.entrypoints=websecure
+      - traefik.http.routers.morphy-secure.tls=true
+      - traefik.http.routers.morphy-secure.tls.certresolver=letsencrypt
       # Internal app port (Express SSR)
-      - traefik.http.services.formipeek.loadbalancer.server.port=3000
+      - traefik.http.services.morphy.loadbalancer.server.port=3000
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://localhost:3000/"]
       interval: 20s
