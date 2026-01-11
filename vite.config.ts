@@ -1,5 +1,19 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import prerender from 'vite-plugin-prerender';
+import path from 'path';
+
+// Generate routes dynamically
+const generateRoutes = () => {
+  try {
+    const routes = require('./scripts/generate-routes.js');
+    console.log(`Prerendering ${routes.length} routes...`);
+    return routes;
+  } catch (error) {
+    console.warn('Could not load routes, using defaults:', error.message);
+    return ['/'];
+  }
+};
 
 // Plugin to serve sitemap files with correct Content-Type
 const sitemapPlugin = () => {
@@ -20,7 +34,21 @@ const sitemapPlugin = () => {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), sitemapPlugin()],
+  plugins: [
+    react(), 
+    sitemapPlugin(),
+    prerender({
+      routes: generateRoutes(),
+      postProcess(renderedRoute) {
+        // Signal that prerendering is complete
+        renderedRoute.html = renderedRoute.html.replace(
+          /<script/,
+          '<script>window.prerenderReady=true;</script><script'
+        );
+        return renderedRoute;
+      },
+    }),
+  ],
   server: {
     headers: {
       'Cross-Origin-Embedder-Policy': 'require-corp',
