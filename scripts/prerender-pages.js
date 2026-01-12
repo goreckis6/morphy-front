@@ -87,7 +87,7 @@ try {
     (process.platform === 'linux' ? '/usr/bin/chromium-browser' : undefined);
   
   const browser = await puppeteer.launch({
-    headless: true,
+    headless: 'new', // Use new headless mode to avoid deprecation warning
     executablePath,
     args: [
       '--no-sandbox',
@@ -105,6 +105,9 @@ try {
 
   let successCount = 0;
   let failCount = 0;
+  const startTime = Date.now();
+
+  console.log(`Starting prerendering of ${urls.length} URLs...\n`);
 
   // Prerender each URL
   for (let i = 0; i < urls.length; i++) {
@@ -112,8 +115,13 @@ try {
     const fullUrl = `http://localhost:${port}${url}`;
     
     try {
-      if ((i + 1) % 10 === 0 || i === 0) {
-        console.log(`[${i + 1}/${urls.length}] Prerendering ${url}...`);
+      // Log progress more frequently (every 5 URLs or first/last)
+      if ((i + 1) % 5 === 0 || i === 0 || i === urls.length - 1) {
+        const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+        const avgTime = elapsed / (i + 1);
+        const remaining = Math.ceil((urls.length - i - 1) * avgTime);
+        const progress = ((i + 1) / urls.length * 100).toFixed(1);
+        console.log(`[${i + 1}/${urls.length}] (${progress}%) Prerendering ${url}... (${elapsed}s elapsed, ~${remaining}s remaining)`);
       }
       
       // Navigate and wait for DOM (not networkidle0 - can hang on analytics/polling)
@@ -177,9 +185,12 @@ try {
 
   await browser.close();
   
+  const totalTime = ((Date.now() - startTime) / 1000).toFixed(1);
   console.log(`\n✓ Prerendering complete!`);
+  console.log(`  Total time: ${totalTime}s`);
   console.log(`  Success: ${successCount}`);
   console.log(`  Failed: ${failCount}`);
+  console.log(`  Average: ${(totalTime / urls.length).toFixed(2)}s per page`);
 
   // Close server
   server.close();
