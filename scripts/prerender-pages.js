@@ -1,0 +1,174 @@
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { createServer } from 'http';
+import { spawn } from 'child_process';
+import puppeteer from 'puppeteer';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const distPath = path.join(__dirname, '../dist');
+const port = 4173;
+
+// Read sitemap to get all URLs
+const sitemapPath = path.join(__dirname, '../public/sitemap.xml');
+const sitemap = fs.readFileSync(sitemapPath, 'utf-8');
+
+// Extract URLs
+const urlMatches = sitemap.match(/<loc>(.*?)<\/loc>/g) || [];
+const urls = [...new Set(urlMatches.map(match => {
+  const url = match.replace(/<\/?loc>/g, '');
+  return url.replace('https://formipeek.com', '');
+}))].filter(url => url && url !== '/');
+
+console.log(`Found ${urls.length} URLs to prerender`);
+
+// Simple HTTP server to serve dist folder
+const server = createServer((req, res) => {
+  let filePath = path.join(distPath, req.url === '/' ? 'index.html' : req.url);
+  
+  // If it's a directory, try index.html
+  if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory()) {
+    filePath = path.join(filePath, 'index.html');
+  }
+  
+  // If file doesn't exist, serve main index.html (SPA fallback)
+  if (!fs.existsSync(filePath) || !fs.statSync(filePath).isFile()) {
+    filePath = path.join(distPath, 'index.html');
+  }
+
+  const ext = path.extname(filePath).toLowerCase();
+  const contentTypes = {
+    '.html': 'text/html',
+    '.js': 'application/javascript',
+    '.css': 'text/css',
+    '.json': 'application/json',
+    '.png': 'image/png',
+    '.jpg': 'image/jpeg',
+    '.svg': 'image/svg+xml',
+    '.xml': 'application/xml'
+  };
+
+  fs.readFile(filePath, (err, data) => {
+    if (err) {
+      res.writeHead(404);
+      res.end('Not found');
+      return;
+    }
+
+    res.writeHead(200, {
+      'Content-Type': contentTypes[ext] || 'text/plain'
+    });
+    res.end(data);
+  });
+});
+
+// Start server
+await new Promise((resolve) => {
+  server.listen(port, () => {
+    console.log(`Server started on http://localhost:${port}`);
+    resolve();
+  });
+});
+
+try {
+  // Launch browser
+  const executablePath = process.env.PUPPETEER_EXECUTABLE_PATH || 
+    (process.platform === 'linux' ? '/usr/bin/chromium-browser' : undefined);
+  
+  const browser = await puppeteer.launch({
+    headless: true,
+    executablePath,
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--disable-dev-shm-usage',
+      '--disable-gpu',
+      '--disable-software-rasterizer'
+    ]
+  });
+
+  const page = await browser.newPage();
+  
+  // Set viewport
+  await page.setViewport({ width: 1920, height: 1080 });
+
+  let successCount = 0;
+  let failCount = 0;
+
+  // Prerender each URL
+  for (let i = 0; i < urls.length; i++) {
+    const url = urls[i];
+    const fullUrl = `http://localhost:${port}${url}`;
+    
+    try {
+      if ((i + 1) % 10 === 0 || i === 0) {
+        console.log(`[${i + 1}/${urls.length}] Prerendering ${url}...`);
+      }
+      
+      // Navigate and wait for content
+      await page.goto(fullUrl, {
+        waitUntil: 'networkidle0',
+        timeout: 30000
+      });
+
+      // Wait for React to render and Helmet to update meta tags
+      await page.waitForTimeout(1500);
+
+      // Get the rendered HTML
+      const html = await page.content();
+
+      // Save to file
+      const filePath = url === '/' 
+        ? path.join(distPath, 'index.html')
+        : path.join(distPath, url, 'index.html');
+
+      // Create directory if needed
+      const dir = path.dirname(filePath);
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+      }
+
+      fs.writeFileSync(filePath, html);
+      successCount++;
+      
+    } catch (error) {
+      console.error(`Failed to prerender ${url}:`, error.message);
+      failCount++;
+      
+      // Still create the directory structure with base HTML
+      const filePath = url === '/' 
+        ? path.join(distPath, 'index.html')
+        : path.join(distPath, url, 'index.html');
+      
+      const dir = path.dirname(filePath);
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+      }
+      
+      // Copy base index.html as fallback
+      try {
+        const baseHtml = fs.readFileSync(path.join(distPath, 'index.html'), 'utf-8');
+        fs.writeFileSync(filePath, baseHtml);
+      } catch (e) {
+        // If base HTML doesn't exist, skip
+      }
+    }
+  }
+
+  await browser.close();
+  
+  console.log(`\n✓ Prerendering complete!`);
+  console.log(`  Success: ${successCount}`);
+  console.log(`  Failed: ${failCount}`);
+
+  // Close server
+  server.close();
+  
+  process.exit(0);
+} catch (error) {
+  console.error('Prerendering error:', error);
+  server.close();
+  process.exit(1);
+}
