@@ -28,7 +28,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
 
       - name: Install dependencies
         run: |
@@ -79,24 +79,49 @@ jobs:
             # Pull latest image from Docker Hub
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/morphy-frontend:latest
             
-            # Deploy with corrected Traefik labels (serve via nginx on port 80)
+            # Deploy with corrected Traefik labels (Qwik SSR runs on port 3000)
             docker run -d \
               --name morphy-frontend \
               --add-host=host.docker.internal:host-gateway \
               --label "traefik.enable=true" \
+              --label "traefik.docker.network=traefik" \
               --label "traefik.http.routers.morphy.rule=Host(\`formipeek.com\`)" \
+              --label "traefik.http.routers.morphy.entrypoints=websecure" \
               --label "traefik.http.routers.morphy.tls=true" \
               --label "traefik.http.routers.morphy.tls.certresolver=letsencrypt" \
               --label "traefik.http.routers.morphy-www.rule=Host(\`www.formipeek.com\`)" \
+              --label "traefik.http.routers.morphy-www.entrypoints=websecure" \
               --label "traefik.http.routers.morphy-www.tls=true" \
               --label "traefik.http.routers.morphy-www.tls.certresolver=letsencrypt" \
-              --label "traefik.http.services.morphy.loadbalancer.server.port=80" \
+              --label "traefik.http.services.morphy.loadbalancer.server.port=3000" \
               --network traefik \
               --restart unless-stopped \
-              -e VITE_API_BASE_URL=https://api.formipeek.com\
+              -e NODE_ENV=production \
+              -e HOST=0.0.0.0 \
+              -e PORT=3000 \
+              -e VITE_API_BASE_URL=https://api.formipeek.com \
               ${{ secrets.DOCKERHUB_USERNAME }}/morphy-frontend:latest
             
             # Verify deployment
-            sleep 10
-            docker ps | grep morphy-frontend
+            echo "Waiting for container to start..."
+            sleep 15
+            
+            # Check if container is running
+            if docker ps | grep -q morphy-frontend; then
+              echo "✅ Container is running"
+              docker logs --tail 50 morphy-frontend
+              
+              # Check health endpoint (using node since wget may not be available in alpine)
+              sleep 5
+              if docker exec morphy-frontend node -e "require('http').get('http://localhost:3000/health', (r) => { process.exit(r.statusCode === 200 ? 0 : 1) }).on('error', () => process.exit(1))"; then
+                echo "✅ Health check passed"
+              else
+                echo "⚠️ Health check failed - check logs"
+                docker logs morphy-frontend
+              fi
+            else
+              echo "❌ Container failed to start"
+              docker ps -a | grep morphy-frontend
+              exit 1
+            fi
 
