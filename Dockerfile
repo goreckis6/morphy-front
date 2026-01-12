@@ -29,8 +29,8 @@ COPY --from=builder /app/dist ./dist
 # Copy built SSR bundle
 COPY --from=builder /app/server/entry.express.js ./server/entry.express.js
 
-# Copy runtime entry point from source (not from builder, as build may overwrite server/)
-COPY server/index.js ./server/index.js
+# Copy runtime entry point from builder (it was copied to builder in COPY . .)
+COPY --from=builder /app/server/index.js ./server/index.js
 
 EXPOSE 3000
 
