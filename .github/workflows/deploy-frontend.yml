@@ -49,6 +49,7 @@ jobs:
           file: Dockerfile
           platforms: linux/amd64
           push: true
+          no-cache: true
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/morphy-frontend:${{ github.sha }}
             ${{ secrets.DOCKERHUB_USERNAME }}/morphy-frontend:latest
