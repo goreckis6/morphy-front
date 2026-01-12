@@ -23,9 +23,14 @@ ENV PORT=3000
 COPY package*.json ./
 RUN npm ci --omit=dev
 
-# Copy built frontend/server artifacts
+# Copy built frontend
 COPY --from=builder /app/dist ./dist
-COPY --from=builder /app/server ./server
+
+# Copy built SSR bundle
+COPY --from=builder /app/server/entry.express.js ./server/entry.express.js
+
+# Copy runtime entry point from source (not from builder, as build may overwrite server/)
+COPY server/index.js ./server/index.js
 
 EXPOSE 3000
 
