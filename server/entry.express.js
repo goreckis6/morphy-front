@@ -10,6 +10,7 @@ import { existsSync } from 'node:fs';
 // Resolve SSR renderer with fallbacks for different build outputs
 async function loadRenderer() {
   const candidates = [
+    '../dist/server/entry.express.js',
     '../dist/server/entry.ssr.js',
     '../dist/server/entry.node.js',
     '../dist/server/entry.preview.js',
@@ -72,14 +73,23 @@ let rendererPromise = loadRenderer().then((r) => {
 app.get('*', async (req, res, next) => {
   try {
     const render = await rendererPromise;
-    const result = await render({
-      url: req.url,
-      base: '/',
-    });
-
-    res.set(result.headers);
-    res.status(result.status);
-    res.send(result.html);
+    
+    // Check if render is a function (entry.ssr.js) or middleware (entry.express.js)
+    if (typeof render === 'function') {
+      // entry.ssr.js - direct render function
+      const result = await render({
+        url: req.url,
+        base: '/',
+      });
+      res.set(result.headers);
+      res.status(result.status);
+      res.send(result.html);
+    } else if (render && typeof render.default === 'function') {
+      // entry.express.js - QwikCity middleware (Express handler)
+      await render.default(req, res, next);
+    } else {
+      throw new Error('Invalid renderer type');
+    }
   } catch (e) {
     console.error('SSR Error:', e);
     next(e);
