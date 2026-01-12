@@ -7,31 +7,6 @@ import { join, resolve } from 'node:path';
 import { readdir } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 
-// Resolve SSR renderer with fallbacks for different build outputs
-async function loadRenderer() {
-  const candidates = [
-    './dist/server/entry.express.js',
-    '../dist/server/entry.express.js',
-    './dist/server/entry.ssr.js',
-    '../dist/server/entry.ssr.js',
-    './dist/server/entry.node.js',
-    '../dist/server/entry.node.js',
-    './dist/server/entry.preview.js',
-    '../dist/server/entry.preview.js',
-  ];
-  for (const p of candidates) {
-    try {
-      console.log(`Trying SSR entry: ${p}`);
-      const mod = await import(p);
-      console.log(`✅ Loaded SSR entry: ${p}`);
-      return mod.default || mod.render || mod;
-    } catch (e) {
-      console.error(`Failed loading ${p}: ${e?.message || e}`);
-    }
-  }
-  throw new Error('❌ No SSR entry found in dist/server (tried entry.ssr.js, entry.node.js, entry.preview.js)');
-}
-
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
 // Create Express app
@@ -42,6 +17,37 @@ app.use(express.static(join(__dirname, '..', 'dist'), {
   maxAge: '1d',
   index: false, // Don't auto-serve index.html
 }));
+
+// Load QwikCity middleware
+let qwikCityMiddleware;
+let rendererReady = false;
+
+async function loadQwikCity() {
+  try {
+    // Try to load the built entry.express.js from dist/server
+    const entryPath = resolve(__dirname, '..', 'dist', 'server', 'entry.express.js');
+    console.log(`Loading QwikCity middleware from: ${entryPath}`);
+    
+    if (!existsSync(entryPath)) {
+      throw new Error(`Entry file not found: ${entryPath}`);
+    }
+    
+    const mod = await import(entryPath);
+    const middleware = mod.default || mod;
+    
+    if (typeof middleware !== 'function') {
+      throw new Error(`Invalid middleware type: ${typeof middleware}`);
+    }
+    
+    console.log('✅ QwikCity middleware loaded successfully');
+    rendererReady = true;
+    return middleware;
+  } catch (e) {
+    console.error(`❌ Failed to load QwikCity middleware: ${e?.message || e}`);
+    console.error(e.stack);
+    throw e;
+  }
+}
 
 // Startup diagnostics
 async function logStartup() {
@@ -66,41 +72,18 @@ async function logStartup() {
 }
 logStartup();
 
-// Load renderer once at startup, then serve requests
-let rendererReady = false;
-let rendererPromise = loadRenderer().then((r) => {
-  rendererReady = true;
-  return r;
+// Load middleware at startup
+const middlewarePromise = loadQwikCity().then((m) => {
+  qwikCityMiddleware = m;
+  return m;
+}).catch((e) => {
+  console.error('❌ Fatal: Could not load QwikCity middleware');
+  console.error(e);
+  // Don't throw - let health endpoint still work
+  return null;
 });
 
-// Qwik SSR middleware
-app.get('*', async (req, res, next) => {
-  try {
-    const render = await rendererPromise;
-    
-    // Check if render is a function (entry.ssr.js) or middleware (entry.express.js)
-    if (typeof render === 'function') {
-      // entry.ssr.js - direct render function
-      const result = await render({
-        url: req.url,
-        base: '/',
-      });
-      res.set(result.headers);
-      res.status(result.status);
-      res.send(result.html);
-    } else if (render && typeof render.default === 'function') {
-      // entry.express.js - QwikCity middleware (Express handler)
-      await render.default(req, res, next);
-    } else {
-      throw new Error('Invalid renderer type');
-    }
-  } catch (e) {
-    console.error('SSR Error:', e);
-    next(e);
-  }
-});
-
-// Health endpoint
+// Health endpoint (before QwikCity middleware so it's always available)
 app.get('/health', async (_req, res) => {
   try {
     const distPath = resolve(__dirname, '..', 'dist');
@@ -123,7 +106,7 @@ app.get('/health', async (_req, res) => {
   }
 });
 
-// Debug endpoint
+// Debug endpoint (before QwikCity middleware so it's always available)
 app.get('/__debug', async (_req, res) => {
   const distPath = resolve(__dirname, '..', 'dist');
   const serverPath = resolve(__dirname, '..', 'dist', 'server');
@@ -143,6 +126,20 @@ app.get('/__debug', async (_req, res) => {
     files,
     rendererReady,
   });
+});
+
+// Qwik SSR middleware - use QwikCity middleware for all routes
+app.use(async (req, res, next) => {
+  try {
+    const middleware = await middlewarePromise;
+    if (!middleware) {
+      return res.status(500).json({ error: 'QwikCity middleware not loaded' });
+    }
+    await middleware(req, res, next);
+  } catch (e) {
+    console.error('SSR Error:', e);
+    next(e);
+  }
 });
 
 // Start server

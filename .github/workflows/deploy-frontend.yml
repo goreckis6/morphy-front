@@ -73,8 +73,11 @@ jobs:
             export VITE_API_BASE_URL=https://api.formipeek.com
             
             # Stop and remove old containers
+            echo "=== Stopping old container ==="
             docker stop morphy-frontend 2>/dev/null || true
             docker rm morphy-frontend 2>/dev/null || true
+            echo "=== Checking old container logs before removal ==="
+            docker logs morphy-frontend 2>&1 || echo "No old logs"
             
             # Pull latest image from Docker Hub
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/morphy-frontend:latest
@@ -104,24 +107,65 @@ jobs:
             
             # Verify deployment
             echo "Waiting for container to start..."
-            sleep 15
+            sleep 5
+            echo "=== Checking container immediately ==="
+            docker ps -a | grep morphy-frontend || echo "Container not found"
+            echo ""
+            echo "=== Container logs (first check) ==="
+            docker logs morphy-frontend 2>&1 || echo "No logs yet"
+            echo ""
+            sleep 10
             
             # Check if container is running
             if docker ps | grep -q morphy-frontend; then
               echo "✅ Container is running"
-              docker logs --tail 50 morphy-frontend
+              echo "=== Container Status ==="
+              docker ps | grep morphy-frontend
+              echo ""
+              echo "=== Last 100 lines of logs ==="
+              docker logs --tail 100 morphy-frontend
+              echo ""
+              echo "=== Checking dist/server directory ==="
+              docker exec morphy-frontend ls -la /app/dist/server/ 2>&1 || echo "dist/server not found"
+              echo ""
+              echo "=== Checking server directory ==="
+              docker exec morphy-frontend ls -la /app/server/ 2>&1 || echo "server not found"
+              echo ""
               
               # Check health endpoint (using node since wget may not be available in alpine)
               sleep 5
+              echo "=== Health Check ==="
               if docker exec morphy-frontend node -e "require('http').get('http://localhost:3000/health', (r) => { process.exit(r.statusCode === 200 ? 0 : 1) }).on('error', () => process.exit(1))"; then
                 echo "✅ Health check passed"
               else
                 echo "⚠️ Health check failed - check logs"
-                docker logs morphy-frontend
+                docker logs --tail 200 morphy-frontend
               fi
+              echo ""
+              echo "=== Debug Endpoint ==="
+              docker exec morphy-frontend node -e "require('http').get('http://localhost:3000/__debug', (r) => { let data = ''; r.on('data', (chunk) => data += chunk); r.on('end', () => console.log(data)); }).on('error', (e) => console.error('Error:', e.message))" || echo "Debug endpoint not available"
             else
-              echo "❌ Container failed to start"
+              echo "❌ Container failed to start or is restarting"
+              echo "=== All containers ==="
               docker ps -a | grep morphy-frontend
+              echo ""
+              echo "=== Container logs (full) ==="
+              docker logs morphy-frontend 2>&1 || echo "No logs available"
+              echo ""
+              echo "=== Stopping container to inspect ==="
+              docker stop morphy-frontend 2>&1 || echo "Cannot stop container"
+              sleep 2
+              echo ""
+              echo "=== Trying to check files in stopped container ==="
+              docker exec morphy-frontend ls -la /app/ 2>&1 || echo "Cannot exec into container"
+              docker exec morphy-frontend ls -la /app/server/ 2>&1 || echo "Cannot check server directory"
+              docker exec morphy-frontend ls -la /app/dist/server/ 2>&1 || echo "Cannot check dist/server directory"
+              echo ""
+              echo "=== Inspecting container image directly ==="
+              docker run --rm --entrypoint sh ${{ secrets.DOCKERHUB_USERNAME }}/morphy-frontend:latest -c "ls -la /app/ 2>&1 || echo 'app not found'; ls -la /app/server/ 2>&1 || echo 'server not found'; ls -la /app/dist/server/ 2>&1 || echo 'dist/server not found'; cat /app/server/entry.express.js 2>&1 | head -20 || echo 'Cannot read entry.express.js'"
+              echo ""
+              echo "=== Trying to run entry.express.js in temporary container ==="
+              docker run --rm --entrypoint node ${{ secrets.DOCKERHUB_USERNAME }}/morphy-frontend:latest /app/server/entry.express.js 2>&1 || echo "Cannot run entry.express.js"
               exit 1
             fi
 
