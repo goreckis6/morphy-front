@@ -2,7 +2,6 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { createServer } from 'http';
-import { spawn } from 'child_process';
 import puppeteer from 'puppeteer';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -15,14 +14,24 @@ const port = 4173;
 const sitemapPath = path.join(__dirname, '../public/sitemap.xml');
 const sitemap = fs.readFileSync(sitemapPath, 'utf-8');
 
-// Extract URLs
-const urlMatches = sitemap.match(/<loc>(.*?)<\/loc>/g) || [];
-const urls = [...new Set(urlMatches.map(match => {
-  const url = match.replace(/<\/?loc>/g, '');
-  return url.replace('https://formipeek.com', '');
-}))].filter(url => url && url !== '/');
+// Extract URLs - improved parser with whitespace handling
+const urls = [...new Set(
+  [...sitemap.matchAll(/<loc>\s*(.*?)\s*<\/loc>/gs)]
+    .map(m => m[1].replace('https://formipeek.com', ''))
+    .filter(u => u && u.startsWith('/'))
+)];
 
 console.log(`Found ${urls.length} URLs to prerender`);
+
+// Save original index.html before prerendering to avoid race condition
+const originalIndexPath = path.join(distPath, 'index.original.html');
+if (fs.existsSync(path.join(distPath, 'index.html'))) {
+  fs.copyFileSync(
+    path.join(distPath, 'index.html'),
+    originalIndexPath
+  );
+  console.log('Saved original index.html');
+}
 
 // Simple HTTP server to serve dist folder
 const server = createServer((req, res) => {
@@ -107,17 +116,25 @@ try {
         console.log(`[${i + 1}/${urls.length}] Prerendering ${url}...`);
       }
       
-      // Navigate and wait for content
+      // Navigate and wait for DOM (not networkidle0 - can hang on analytics/polling)
       await page.goto(fullUrl, {
-        waitUntil: 'networkidle0',
+        waitUntil: 'domcontentloaded',
         timeout: 30000
       });
 
-      // Wait for React to render and Helmet to update meta tags
-      await page.waitForTimeout(1500);
+      // Wait for React Helmet to update meta tags in <head>
+      await page.waitForSelector('head > title', { timeout: 10000 });
+      await page.waitForTimeout(1000); // Extra time for Helmet to finish
 
       // Get the rendered HTML
-      const html = await page.content();
+      let html = await page.content();
+      
+      // Remove all module scripts and preloads to prevent React from rebooting
+      // This prevents meta tags from being overwritten and CLS issues
+      html = html
+        .replace(/<script type="module".*?<\/script>/gs, '')
+        .replace(/<link rel="modulepreload".*?>/g, '')
+        .replace(/<link rel="preload".*?as="script".*?>/g, '');
 
       // Save to file
       const filePath = url === '/' 
@@ -147,12 +164,13 @@ try {
         fs.mkdirSync(dir, { recursive: true });
       }
       
-      // Copy base index.html as fallback
+      // Copy original index.html as fallback (not the potentially corrupted one)
       try {
-        const baseHtml = fs.readFileSync(path.join(distPath, 'index.html'), 'utf-8');
+        const baseHtml = fs.readFileSync(originalIndexPath, 'utf-8');
         fs.writeFileSync(filePath, baseHtml);
       } catch (e) {
-        // If base HTML doesn't exist, skip
+        // If original HTML doesn't exist, skip
+        console.warn(`Could not use fallback for ${url}`);
       }
     }
   }
