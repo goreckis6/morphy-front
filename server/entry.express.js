@@ -10,9 +10,13 @@ import { existsSync } from 'node:fs';
 // Resolve SSR renderer with fallbacks for different build outputs
 async function loadRenderer() {
   const candidates = [
+    './dist/server/entry.express.js',
     '../dist/server/entry.express.js',
+    './dist/server/entry.ssr.js',
     '../dist/server/entry.ssr.js',
+    './dist/server/entry.node.js',
     '../dist/server/entry.node.js',
+    './dist/server/entry.preview.js',
     '../dist/server/entry.preview.js',
   ];
   for (const p of candidates) {
