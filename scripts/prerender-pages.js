@@ -259,10 +259,29 @@ try {
         timeout: 30000
       });
 
-      // Wait for React Helmet to update meta tags in <head>
-      await page.waitForSelector('head > title', { timeout: 10000 });
-      // Extra time for Helmet to finish (waitForTimeout was removed in Puppeteer 24+)
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Wait for React to render and Helmet to update meta tags
+      // Check if title changed from default (React Helmet updates it)
+      const defaultTitle = 'FormiPeek - Free Online File Converter | Convert 300+ Formats Instantly';
+      let titleUpdated = false;
+      let attempts = 0;
+      const maxAttempts = 20; // 20 * 200ms = 4 seconds max wait
+      
+      while (!titleUpdated && attempts < maxAttempts) {
+        await new Promise(resolve => setTimeout(resolve, 200));
+        const currentTitle = await page.evaluate(() => {
+          const titleEl = document.querySelector('head > title');
+          return titleEl ? titleEl.textContent.trim() : '';
+        });
+        
+        // Title is updated if it's different from default or if it has content
+        if (currentTitle && currentTitle !== defaultTitle && currentTitle.length > 0) {
+          titleUpdated = true;
+        }
+        attempts++;
+      }
+      
+      // Extra wait to ensure all meta tags are updated
+      await new Promise(resolve => setTimeout(resolve, 500));
 
       // Get the rendered HTML
       let html = await page.content();
