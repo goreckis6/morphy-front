@@ -17,9 +17,11 @@ WORKDIR /app
 
 # Copy built files and dependencies
 COPY --from=builder /app/dist ./dist
-COPY --from=builder /app/server ./server
 COPY --from=builder /app/node_modules ./node_modules
-COPY package.json .
+COPY --from=builder /app/package.json ./package.json
+
+# Copy server files explicitly
+COPY --from=builder /app/server/entry.express.js ./server/entry.express.js
 
 # Set environment variables
 ENV NODE_ENV=production
