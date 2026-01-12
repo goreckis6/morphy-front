@@ -2,7 +2,11 @@
 // This will be extended to load translations from the original i18n.ts file
 
 export type TranslationKey = string;
-export type Translations = Record<string, string | Translations>;
+
+// Use interface for recursive type to avoid circular reference error
+export interface Translations {
+  [key: string]: string | Translations;
+}
 
 // Basic translations - will be extended to load from original i18n.ts
 import { enTranslations } from '../locales/en';
