@@ -8,15 +8,16 @@ ENV VITE_API_BASE_URL=$VITE_API_BASE_URL
 COPY package*.json ./
 RUN npm ci
 
+# Copy everything except server/ first
 COPY . .
 
 # Save server/index.js before build (build may overwrite server/)
-RUN mkdir -p /tmp/runtime && cp server/index.js /tmp/runtime/index.js || true
+RUN if [ -f server/index.js ]; then mkdir -p /tmp/runtime && cp server/index.js /tmp/runtime/index.js; fi
 
 RUN npm run build
 
 # Restore server/index.js after build
-RUN cp /tmp/runtime/index.js server/index.js || true
+RUN if [ -f /tmp/runtime/index.js ]; then cp /tmp/runtime/index.js server/index.js; fi
 
 # -------- RUNTIME --------
 FROM node:20-alpine
@@ -36,7 +37,7 @@ COPY --from=builder /app/dist ./dist
 # Copy built SSR bundle
 COPY --from=builder /app/server/entry.express.js ./server/entry.express.js
 
-# Copy runtime entry point from builder (it was copied to builder in COPY . .)
+# Copy runtime entry point from builder (restored after build)
 COPY --from=builder /app/server/index.js ./server/index.js
 
 EXPOSE 3000
