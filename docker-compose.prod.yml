@@ -37,7 +37,7 @@ services:
       - traefik.http.routers.morphy-www.rule=Host(`www.formipeek.com`)
       - traefik.http.routers.morphy-www.tls=true
       - traefik.http.routers.morphy-www.tls.certresolver=letsencrypt
-      - traefik.http.services.morphy.loadbalancer.server.port=5173
+      - traefik.http.services.morphy.loadbalancer.server.port=80
     environment:
       - VITE_API_BASE_URL=https://api.formipeek.com
     networks:
