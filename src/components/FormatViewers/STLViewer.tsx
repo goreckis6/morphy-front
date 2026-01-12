@@ -1,0 +1,507 @@
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Box, Upload, Eye, Download, Share2, ArrowLeft, Zap, Grid3x3, Cpu, CheckCircle } from 'lucide-react';
+import { FileUpload } from '../FileUpload';
+import { Header } from '../Header';
+import { Footer } from '../Footer';
+import { useTranslation } from 'react-i18next';
+import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
+
+export const STLViewer: React.FC = () => {
+  const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
+  const { t, i18n } = useTranslation();
+  usePathLanguageSync(i18n);
+
+  const features = t('viewers.stl.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
+  const advantages = t('viewers.stl.advantages', { returnObjects: true }) as string[];
+  const useCases = t('viewers.stl.use_cases', { returnObjects: true }) as string[];
+  const specs = t('viewers.stl.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
+
+  const handleFilesSelected = (files: File[]) => {
+    // Filter only STL files
+    const stlFiles = files.filter(file => {
+      const extension = file.name.split('.').pop()?.toLowerCase();
+      return extension === 'stl';
+    });
+    setSelectedFiles(stlFiles);
+  };
+
+  const openViewer = (file: File) => {
+    // Open in new window with 3D viewer
+    const newWindow = window.open('', '_blank', 'width=1200,height=800');
+    if (newWindow) {
+      const modelUrl = URL.createObjectURL(file);
+      
+      newWindow.document.write(`
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <meta charset="UTF-8">
+          <title>STL 3D Viewer - ${file.name}</title>
+          <style>
+            body {
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              font-family: Arial, sans-serif;
+            }
+            #header-bar {
+              position: fixed;
+              top: 0;
+              left: 0;
+              right: 0;
+              background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+              color: white;
+              padding: 12px 20px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+              z-index: 1000;
+            }
+            #header-bar h1 {
+              margin: 0;
+              font-size: 18px;
+              font-weight: 600;
+            }
+            .header-actions {
+              display: flex;
+              gap: 10px;
+            }
+            .header-btn {
+              background: rgba(255,255,255,0.2);
+              border: 1px solid rgba(255,255,255,0.3);
+              color: white;
+              padding: 8px 16px;
+              border-radius: 6px;
+              cursor: pointer;
+              font-size: 14px;
+              font-weight: 500;
+              transition: all 0.2s;
+              border: none;
+            }
+            .header-btn:hover {
+              background: rgba(255,255,255,0.3);
+            }
+            #canvas-container {
+              position: fixed;
+              top: 60px;
+              left: 0;
+              right: 0;
+              bottom: 40px;
+            }
+            #info-bar {
+              position: fixed;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              background: #f3f4f6;
+              padding: 10px 20px;
+              border-top: 1px solid #e5e7eb;
+              font-size: 12px;
+              color: #6b7280;
+              text-align: center;
+            }
+            canvas {
+              display: block;
+              width: 100%;
+              height: 100%;
+            }
+          </style>
+        </head>
+        <body>
+          <div id="header-bar">
+            <h1>📦 3D Model Viewer - ${file.name}</h1>
+            <div class="header-actions">
+              <button class="header-btn" onclick="resetView()">🔄 Reset View</button>
+              <button class="header-btn" onclick="window.close()">✖️ Close</button>
+            </div>
+          </div>
+          <div id="canvas-container"></div>
+          <div id="info-bar">
+            🖱️ Left Click: Rotate • Right Click: Pan • Scroll: Zoom • File: ${file.name} (${(file.size / 1024 / 1024).toFixed(2)} MB)
+          </div>
+
+          <script type="importmap">
+            {
+              "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.163.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.163.0/examples/jsm/"
+              }
+            }
+          </script>
+          
+          <script type="module">
+            import * as THREE from 'three';
+            import { STLLoader } from 'three/addons/loaders/STLLoader.js';
+            import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+            let camera, scene, renderer, controls, mesh;
+
+            function init() {
+              const container = document.getElementById('canvas-container');
+              
+              // Scene
+              scene = new THREE.Scene();
+              scene.background = new THREE.Color(0xf5f5f5);
+
+              // Camera
+              camera = new THREE.PerspectiveCamera(
+                75,
+                container.clientWidth / container.clientHeight,
+                0.1,
+                1000
+              );
+              camera.position.set(0, 0, 100);
+
+              // Renderer
+              renderer = new THREE.WebGLRenderer({ antialias: true });
+              renderer.setSize(container.clientWidth, container.clientHeight);
+              renderer.setPixelRatio(window.devicePixelRatio);
+              container.appendChild(renderer.domElement);
+
+              // Lights
+              const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+              scene.add(ambientLight);
+
+              const directionalLight1 = new THREE.DirectionalLight(0xffffff, 0.8);
+              directionalLight1.position.set(1, 1, 1);
+              scene.add(directionalLight1);
+
+              const directionalLight2 = new THREE.DirectionalLight(0xffffff, 0.4);
+              directionalLight2.position.set(-1, -1, -1);
+              scene.add(directionalLight2);
+
+              // Grid
+              const gridHelper = new THREE.GridHelper(200, 20, 0x999999, 0xdddddd);
+              scene.add(gridHelper);
+
+              // Controls
+              controls = new OrbitControls(camera, renderer.domElement);
+              controls.enableDamping = true;
+              controls.dampingFactor = 0.05;
+              controls.screenSpacePanning = false;
+              controls.minDistance = 10;
+              controls.maxDistance = 500;
+
+              // Load STL
+              const loader = new STLLoader();
+              loader.load(
+                '${modelUrl}',
+                function (geometry) {
+                  geometry.center();
+                  geometry.computeBoundingBox();
+                  
+                  const boundingBox = geometry.boundingBox;
+                  const size = new THREE.Vector3();
+                  boundingBox.getSize(size);
+                  const maxDim = Math.max(size.x, size.y, size.z);
+                  const scale = maxDim > 0 ? 50 / maxDim : 1;
+                  
+                  const material = new THREE.MeshPhongMaterial({
+                    color: 0xff9800,
+                    specular: 0x222222,
+                    shininess: 200
+                  });
+
+                  mesh = new THREE.Mesh(geometry, material);
+                  mesh.scale.set(scale, scale, scale);
+                  mesh.rotation.x = -Math.PI / 2;
+                  scene.add(mesh);
+
+                  // Update info
+                  const triangles = geometry.attributes.position.count / 3;
+                  document.getElementById('info-bar').innerHTML += 
+                    \` • Triangles: \${triangles.toLocaleString()}\`;
+                },
+                function (xhr) {
+                  console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+                },
+                function (error) {
+                  console.error('Error loading STL:', error);
+                  alert('Failed to load STL file');
+                }
+              );
+
+              // Handle resize
+              window.addEventListener('resize', onWindowResize);
+            }
+
+            function onWindowResize() {
+              const container = document.getElementById('canvas-container');
+              camera.aspect = container.clientWidth / container.clientHeight;
+              camera.updateProjectionMatrix();
+              renderer.setSize(container.clientWidth, container.clientHeight);
+            }
+
+            function resetView() {
+              camera.position.set(0, 0, 100);
+              controls.reset();
+            }
+
+            function animate() {
+              requestAnimationFrame(animate);
+              controls.update();
+              renderer.render(scene, camera);
+            }
+
+            // Make resetView global
+            window.resetView = resetView;
+
+            // Start
+            init();
+            animate();
+          </script>
+        </body>
+        </html>
+      `);
+      
+      newWindow.document.close();
+    }
+  };
+
+  return (
+    <>
+      <Helmet>
+        <title>{t('viewers.stl.meta_title')}</title>
+        <meta name="description" content={t('viewers.stl.meta_description')} />
+        <meta name="keywords" content={t('viewers.stl.meta_keywords')} />
+        <link rel="canonical" href="https://formipeek.com/viewers/stl" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={t('viewers.stl.meta_title')} />
+        <meta property="og:description" content={t('viewers.stl.meta_description')} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://formipeek.com/viewers/stl" />
+        <meta property="og:image" content="https://formipeek.com/og-stl-viewer.jpg" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={t('viewers.stl.meta_title')} />
+        <meta name="twitter:description" content={t('viewers.stl.meta_description')} />
+        <meta name="twitter:image" content="https://formipeek.com/og-stl-viewer.jpg" />
+
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "Free STL Viewer",
+            "description": "Free online STL file viewer for 3D models and 3D printing files with interactive rendering",
+            "url": "https://formipeek.com/viewers/stl",
+            "applicationCategory": "UtilityApplication",
+            "operatingSystem": "Any",
+            "browserRequirements": "Requires WebGL",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "featureList": [
+              "Interactive 3D viewing",
+              "Rotate, zoom, and pan controls",
+              "ASCII and binary STL support",
+              "No installation required",
+              "Client-side processing",
+              "Up to 100MB file size"
+            ]
+          })}
+        </script>
+      </Helmet>
+
+      <div className="min-h-screen bg-gray-50">
+        <Header />
+        
+        {/* Hero Section */}
+        <div className="relative bg-gradient-to-br from-blue-600 via-indigo-500 to-purple-600 text-white overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-6">
+                <a
+                  href="/viewers"
+                  className="p-3 bg-white/10 backdrop-blur-sm hover:bg-white/20 rounded-xl transition-all border border-white/20"
+                >
+                  <ArrowLeft className="w-6 h-6 text-white" />
+                </a>
+                <div className="p-4 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
+                  <Box className="w-12 h-12 text-white" />
+                </div>
+                <div>
+                  <h1 className="text-5xl font-bold mb-3">
+                    {t('viewers.stl.hero_title')}
+                  </h1>
+                  <p className="text-xl text-blue-100">
+                    {t('viewers.stl.hero_subtitle')}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          {/* Upload Section */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="p-3 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl">
+                <Upload className="w-6 h-6 text-white" />
+              </div>
+                    <h2 className="text-3xl font-bold text-gray-900">
+                      {t('viewers.stl.upload_title')}
+                    </h2>
+                  </div>
+                  <p className="text-gray-600 mb-6">
+                    {t('viewers.stl.upload_description')}
+                  </p>
+            <FileUpload 
+              onFilesSelected={handleFilesSelected}
+              acceptedFormats={['stl']}
+              maxFiles={20}
+              maxSize={100 * 1024 * 1024}
+              hideFormatList={true}
+              showTotalSize={true}
+            />
+          </div>
+
+          {/* Preview Section */}
+          {selectedFiles.length > 0 && (
+            <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center space-x-3">
+                  <div className="p-3 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl">
+                    <CheckCircle className="w-6 h-6 text-white" />
+                  </div>
+                  <h2 className="text-3xl font-bold text-gray-900">
+                    {t('viewers.stl.files_heading', { count: selectedFiles.length })}
+                  </h2>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {selectedFiles.map((file, index) => (
+                  <div key={index} className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl p-4 hover:shadow-lg transition-all transform hover:scale-105 border border-gray-200">
+                    <div className="aspect-square bg-white rounded-xl mb-3 overflow-hidden shadow-md flex items-center justify-center">
+                      <Box className="w-20 h-20 text-blue-600" />
+                    </div>
+                    <div className="text-sm font-semibold text-gray-900 truncate mb-2" title={file.name}>
+                      {file.name}
+                    </div>
+                    <div className="text-xs text-gray-600 mb-3 font-medium">
+                      {(file.size / 1024 / 1024).toFixed(2)} MB • STL
+                    </div>
+                    <div className="flex gap-2">
+                      <button
+                        onClick={() => openViewer(file)}
+                        className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-sm font-semibold py-2.5 px-3 rounded-lg transition-all transform hover:scale-105 flex items-center justify-center gap-1.5"
+                      >
+                        <Eye className="w-4 h-4" />
+                        <span>{t('viewers.stl.buttons.view')}</span>
+                      </button>
+                      <button 
+                        onClick={() => {
+                          const url = URL.createObjectURL(file);
+                          const a = document.createElement('a');
+                          a.href = url;
+                          a.download = file.name;
+                          a.click();
+                          URL.revokeObjectURL(url);
+                        }}
+                        className="p-2 text-blue-600 hover:bg-blue-100 rounded-lg transition-colors"
+                        title={t('viewers.stl.buttons.download')}
+                      >
+                        <Download className="w-4 h-4" />
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+        {/* Features Section */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          {features.map((feature, index) => (
+            <div key={index} className="bg-white rounded-xl shadow-lg p-6">
+              {index === 0 && <Zap className="w-8 h-8 text-yellow-600 mb-4" />}
+              {index === 1 && <Grid3x3 className="w-8 h-8 text-blue-600 mb-4" />}
+              {index === 2 && <Cpu className="w-8 h-8 text-green-600 mb-4" />}
+              <h3 className="text-xl font-semibold text-gray-800 mb-2" dangerouslySetInnerHTML={{ __html: feature.title }} />
+              <p className="text-gray-600" dangerouslySetInnerHTML={{ __html: feature.description }} />
+            </div>
+          ))}
+        </div>
+
+        {/* STL Information */}
+        <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
+          <h2 className="text-2xl font-bold text-gray-800 mb-6">
+            {t('viewers.stl.about_title')}
+          </h2>
+          <div className="prose max-w-none text-gray-600">
+            <p className="mb-4" dangerouslySetInnerHTML={{ __html: t('viewers.stl.about_intro') }} />
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.stl.advantages_title')}</h3>
+                <ul className="space-y-2 text-sm">
+                  {advantages.map((advantage, index) => (
+                    <li key={index} dangerouslySetInnerHTML={{ __html: advantage }} />
+                  ))}
+                </ul>
+              </div>
+              
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.stl.use_cases_title')}</h3>
+                <ul className="space-y-2 text-sm">
+                  {useCases.map((useCase, index) => (
+                    <li key={index} dangerouslySetInnerHTML={{ __html: useCase }} />
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Technical Specifications */}
+        <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
+          <h2 className="text-2xl font-bold text-gray-800 mb-6">
+            {t('viewers.stl.specs_title')}
+          </h2>
+          
+          <div className="overflow-x-auto">
+            <table className="min-w-full">
+              <thead>
+                <tr className="bg-gray-100">
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">{t('viewers.stl.specs_header_label')}</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">{t('viewers.stl.specs_header_value')}</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                {specs.map((spec, index) => (
+                  <tr key={index}>
+                    <td className="px-6 py-4 text-sm font-medium text-gray-800">{spec.label}</td>
+                    <td className="px-6 py-4 text-sm text-gray-600">{spec.value}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+          {/* Back to Viewers Button */}
+          <div className="text-center">
+            <a
+              href="/viewers"
+              className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              {t('viewers.stl.buttons.back')}
+            </a>
+          </div>
+        </div>
+        
+        {/* Footer */}
+        <Footer />
+      </div>
+    </>
+  );
+};

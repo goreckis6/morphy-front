@@ -1,0 +1,1181 @@
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { useLocation } from 'react-router-dom';
+import { Search, X, Download, Printer, ZoomIn, ZoomOut, Maximize2, Play, ChevronLeft, ChevronRight, Menu, ChevronUp, ChevronDown } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { LanguageSwitcher } from '../LanguageSwitcher';
+import { FileProcessor } from '../../utils/fileProcessing';
+import { PDFDocument } from 'pdf-lib';
+import * as pdfjsLib from 'pdfjs-dist';
+
+interface PDFEditorProps {
+  files: File[];
+  onClose: () => void;
+  onAddFiles?: (files: File[]) => void;
+}
+
+export const PDFEditor: React.FC<PDFEditorProps> = ({ files, onClose, onAddFiles }) => {
+  const { t } = useTranslation();
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [zoom, setZoom] = useState(100);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState<Map<number, number>>(new Map());
+  const [pdfUrls, setPdfUrls] = useState<Map<number, string>>(new Map());
+  const [pdfHtml, setPdfHtml] = useState<Map<number, string>>(new Map());
+  const [isLoading, setIsLoading] = useState<Map<number, boolean>>(new Map());
+  const [pdfDocuments, setPdfDocuments] = useState<Map<number, any>>(new Map());
+  const [pageThumbnails, setPageThumbnails] = useState<Map<string, string>>(new Map());
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [isPresentationMode, setIsPresentationMode] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isPagesSidebarOpen, setIsPagesSidebarOpen] = useState(true);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const viewerRef = useRef<HTMLDivElement>(null);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const lastPageRef = useRef<number>(1);
+
+  const getScrollContainer = useCallback((): HTMLElement | null => {
+    const iframe = iframeRef.current;
+    if (!iframe) {
+      return null;
+    }
+
+    try {
+      const doc = iframe.contentDocument || iframe.contentWindow?.document;
+      if (!doc) {
+        return null;
+      }
+
+      const selectors = [
+        '#viewerContainer',
+        '.viewerContainer',
+        '.pdfViewer',
+        '#viewer',
+        '#page-container',
+        'body',
+      ];
+
+      for (const selector of selectors) {
+        const el = doc.querySelector(selector);
+        if (el instanceof HTMLElement) {
+          return el;
+        }
+      }
+
+      return doc.body as HTMLElement | null;
+    } catch (error) {
+      console.warn('Unable to access scroll container:', error);
+      return null;
+    }
+  }, []);
+
+  const location = useLocation();
+
+  // Prevent body scroll when editor is open
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, []);
+
+  // Ensure overflow is restored when route changes
+  useEffect(() => {
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [location.pathname]);
+
+  // Safety net: restore overflow on page unload
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      document.body.style.overflow = '';
+    };
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+      document.body.style.overflow = '';
+    };
+  }, []);
+
+  // Initialize PDF.js worker
+  useEffect(() => {
+    pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
+  }, []);
+
+  // Create object URLs for PDFs and load with pdfjs-dist
+  useEffect(() => {
+    const urls = new Map<number, string>();
+    const pdfDocs = new Map<number, any>();
+    const htmls = new Map<number, string>();
+    const loading = new Map<number, boolean>();
+    const thumbnails = new Map<string, string>();
+
+    files.forEach(async (file, index) => {
+      const url = URL.createObjectURL(file);
+      urls.set(index, url);
+      loading.set(index, true);
+      setIsLoading(new Map(loading));
+
+      try {
+        // Load PDF with pdfjs-dist
+        const arrayBuffer = await file.arrayBuffer();
+        const loadingTask = pdfjsLib.getDocument({ data: arrayBuffer });
+        const pdfDoc = await loadingTask.promise;
+        
+        const pageCount = pdfDoc.numPages;
+        pdfDocs.set(index, pdfDoc);
+        setPdfDocuments(new Map(pdfDocs));
+        
+        setTotalPages(prev => {
+          const newMap = new Map(prev);
+          newMap.set(index, pageCount);
+          return newMap;
+        });
+
+        // Generate thumbnails for first few pages
+        const thumbnailPromises: Promise<void>[] = [];
+        for (let pageNum = 1; pageNum <= Math.min(pageCount, 10); pageNum++) {
+          thumbnailPromises.push(
+            (async () => {
+              try {
+                const page = await pdfDoc.getPage(pageNum);
+                const viewport = page.getViewport({ scale: 0.3 });
+                const canvas = document.createElement('canvas');
+                const context = canvas.getContext('2d');
+                if (!context) return;
+                
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+                
+                await page.render({
+                  canvasContext: context,
+                  viewport: viewport
+                }).promise;
+                
+                const thumbnailUrl = canvas.toDataURL();
+                thumbnails.set(`${index}-${pageNum}`, thumbnailUrl);
+                setPageThumbnails(new Map(thumbnails));
+      } catch (error) {
+                console.error(`Error generating thumbnail for page ${pageNum}:`, error);
+              }
+            })()
+          );
+      }
+
+        // Also fetch HTML preview as fallback
+      try {
+        const formData = new FormData();
+        formData.append('file', file);
+        const response = await fetch('https://api.formipeek.com/api/preview/pdf', {
+          method: 'POST',
+          body: formData,
+        });
+        if (response.ok) {
+          let html = await response.text();
+          html = html.replace(/<style>([\s\S]*?)<\/style>/i, (match, styles) => {
+            return `<style>${styles}
+              .toolbar, .header-bar, [class*="toolbar"], [class*="header"] {
+                display: none !important;
+              }
+              body {
+                background: white !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                  overflow-y: auto !important;
+                  scroll-behavior: smooth !important;
+              }
+              html {
+                background: white !important;
+                  overflow-y: auto !important;
+                  scroll-behavior: smooth !important;
+                }
+                * {
+                  scroll-behavior: smooth !important;
+              }
+            </style>`;
+          });
+          if (!html.includes('<style>')) {
+            html = html.replace('<head>', `<head><style>
+              .toolbar, .header-bar, [class*="toolbar"], [class*="header"] {
+                display: none !important;
+              }
+              body {
+                background: white !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                  overflow-y: auto !important;
+                  scroll-behavior: smooth !important;
+              }
+              html {
+                background: white !important;
+                  overflow-y: auto !important;
+                  scroll-behavior: smooth !important;
+                }
+                * {
+                  scroll-behavior: smooth !important;
+              }
+            </style>`);
+          }
+          htmls.set(index, html);
+          setPdfHtml(new Map(htmls));
+        }
+      } catch (error) {
+          console.error('Error loading PDF HTML preview:', error);
+        }
+      } catch (error) {
+        console.error('Error loading PDF with pdfjs-dist:', error);
+        setTotalPages(prev => {
+          const newMap = new Map(prev);
+          newMap.set(index, 1);
+          return newMap;
+        });
+      } finally {
+        loading.set(index, false);
+        setIsLoading(new Map(loading));
+      }
+    });
+
+    setPdfUrls(new Map(urls));
+
+    return () => {
+      urls.forEach(url => URL.revokeObjectURL(url));
+      thumbnails.forEach(url => {
+        if (url.startsWith('data:')) {
+          // Data URLs don't need cleanup, but canvas URLs might
+        }
+      });
+    };
+  }, [files]);
+
+  // Filter files based on search
+  const filteredFiles = files.filter(file =>
+    file.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  const currentFile = filteredFiles[selectedIndex] || files[0];
+  const currentFileIndex = files.indexOf(currentFile);
+  const currentPdfUrl = pdfUrls.get(currentFileIndex) || '';
+  const currentPdfHtml = pdfHtml.get(currentFileIndex) || '';
+  const currentIsLoading = isLoading.get(currentFileIndex) || false;
+  const currentTotalPages = totalPages.get(currentFileIndex) || 1;
+  const currentPdfDoc = pdfDocuments.get(currentFileIndex);
+  const pagesContainerRef = useRef<HTMLDivElement>(null);
+
+  const handleNext = useCallback(() => {
+    if (selectedIndex < filteredFiles.length - 1) {
+      setSelectedIndex(selectedIndex + 1);
+    } else if (isPresentationMode) {
+      setSelectedIndex(0); // Loop back to start
+    }
+  }, [selectedIndex, filteredFiles.length, isPresentationMode]);
+
+  const handlePrevious = useCallback(() => {
+    if (selectedIndex > 0) {
+      setSelectedIndex(selectedIndex - 1);
+    } else if (isPresentationMode) {
+      setSelectedIndex(filteredFiles.length - 1); // Loop to end
+    }
+  }, [selectedIndex, filteredFiles.length, isPresentationMode]);
+
+  const handleZoomIn = () => {
+    setZoom(prev => Math.min(prev + 25, 500));
+  };
+
+  const handleZoomOut = () => {
+    setZoom(prev => Math.max(prev - 25, 25));
+  };
+
+  const handleResetZoom = () => {
+    setZoom(100);
+  };
+
+  const handlePreviousPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+      scrollToPage(currentPage - 1);
+    }
+  };
+
+  const handleNextPage = () => {
+    if (currentPage < currentTotalPages) {
+      setCurrentPage(currentPage + 1);
+      scrollToPage(currentPage + 1);
+    }
+  };
+
+  const scrollToPage = (page: number) => {
+    // Update current page immediately for UI feedback
+    setCurrentPage(page);
+    lastPageRef.current = page;
+
+    // Try to find page element by ID first
+    const pageElement = document.getElementById(`pdf-page-${currentFileIndex}-${page}`);
+    if (pageElement) {
+      pageElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
+    }
+
+    // Fallback: use scroll container
+    const container = getScrollContainer();
+    if (container) {
+      const scrollHeight = container.scrollHeight;
+      const pageHeight = scrollHeight / currentTotalPages;
+      const targetScroll = (page - 1) * pageHeight;
+      container.scrollTo({
+        top: targetScroll,
+        behavior: 'smooth',
+      });
+    }
+  };
+
+  const handlePageClick = (page: number) => {
+    scrollToPage(page);
+  };
+
+  const handleFitWidth = () => {
+    // Reset zoom to fit width - this is a placeholder, actual implementation depends on PDF viewer
+    setZoom(100);
+  };
+
+  const toggleFullscreen = () => {
+    if (!document.fullscreenElement) {
+      viewerRef.current?.requestFullscreen();
+      setIsFullscreen(true);
+    } else {
+      document.exitFullscreen();
+      setIsFullscreen(false);
+    }
+  };
+
+  const handleDownload = () => {
+    if (currentFile) {
+      const url = currentPdfUrl;
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = currentFile.name;
+      a.click();
+    }
+  };
+
+  const handlePrint = () => {
+    if (iframeRef.current?.contentWindow) {
+      iframeRef.current.contentWindow.focus();
+      iframeRef.current.contentWindow.print();
+    }
+  };
+
+  const handleFileSelect = (index: number) => {
+    setSelectedIndex(index);
+    setZoom(100);
+  };
+
+  const handleAddFiles = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && onAddFiles) {
+      const newFiles = Array.from(e.target.files).filter(file => {
+        const ext = file.name.split('.').pop()?.toLowerCase();
+        return ext === 'pdf';
+      });
+      onAddFiles(newFiles);
+    }
+  };
+
+  const formatFileSize = (bytes: number) => {
+    return FileProcessor.formatFileSize(bytes);
+  };
+
+  // Update selected index when filtered files change
+  useEffect(() => {
+    if (selectedIndex >= filteredFiles.length && filteredFiles.length > 0) {
+      setSelectedIndex(0);
+    }
+  }, [filteredFiles.length, selectedIndex]);
+
+  // Handle fullscreen changes
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      if (!document.fullscreenElement && isPresentationMode) {
+        setIsPresentationMode(false);
+        setIsFullscreen(false);
+      } else if (document.fullscreenElement) {
+        setIsFullscreen(true);
+      }
+    };
+
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    return () => {
+      document.removeEventListener('fullscreenchange', handleFullscreenChange);
+    };
+  }, [isPresentationMode]);
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (e.target instanceof HTMLInputElement) {
+        return;
+      }
+
+      if (isPresentationMode) {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+          e.preventDefault();
+          handleNext();
+        } else if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          handlePrevious();
+        } else if (e.key === 'Escape') {
+          setIsPresentationMode(false);
+        }
+        return;
+      }
+
+      if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        if (currentTotalPages > 1) {
+          handleNextPage();
+        } else {
+          handleNext();
+        }
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        if (currentTotalPages > 1) {
+          handlePreviousPage();
+        } else {
+          handlePrevious();
+        }
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (currentTotalPages > 1) {
+          handlePreviousPage();
+        }
+      } else if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (currentTotalPages > 1) {
+          handleNextPage();
+        }
+      } else if (e.key === 'Escape') {
+        onClose();
+      } else if ((e.key === '+' || e.key === '=') && !e.shiftKey) {
+        e.preventDefault();
+        handleZoomIn();
+      } else if (e.key === '-') {
+        e.preventDefault();
+        handleZoomOut();
+      } else if ((e.key === 'f' || e.key === 'F') && !e.ctrlKey && !e.metaKey) {
+        e.preventDefault();
+        toggleFullscreen();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [selectedIndex, filteredFiles.length, isPresentationMode, handleNext, handlePrevious, onClose, handleZoomIn, handleZoomOut, toggleFullscreen]);
+
+  // Render PDF pages using pdfjs-dist
+  useEffect(() => {
+    if (!currentPdfDoc || !pagesContainerRef.current) {
+      // Fallback to iframe if pdfjs-dist not available
+    if (iframeRef.current && currentPdfHtml) {
+      iframeRef.current.contentWindow?.document.open();
+      iframeRef.current.contentWindow?.document.write(currentPdfHtml);
+      iframeRef.current.contentWindow?.document.close();
+        setCurrentPage(1);
+        lastPageRef.current = 1;
+      }
+      return;
+    }
+    
+    const container = pagesContainerRef.current;
+    container.innerHTML = '';
+    setCurrentPage(1);
+    lastPageRef.current = 1;
+
+    const renderPages = async () => {
+      for (let pageNum = 1; pageNum <= currentTotalPages; pageNum++) {
+        try {
+          const page = await currentPdfDoc.getPage(pageNum);
+          const viewport = page.getViewport({ scale: zoom / 100 });
+          
+          const pageDiv = document.createElement('div');
+          pageDiv.id = `pdf-page-${currentFileIndex}-${pageNum}`;
+          pageDiv.className = 'pdf-page mb-4 mx-auto bg-white shadow-lg';
+          pageDiv.style.width = `${viewport.width}px`;
+          pageDiv.style.minHeight = `${viewport.height}px`;
+          
+          const canvas = document.createElement('canvas');
+          const context = canvas.getContext('2d');
+          if (!context) continue;
+          
+          canvas.height = viewport.height;
+          canvas.width = viewport.width;
+          
+          await page.render({
+            canvasContext: context,
+            viewport: viewport
+          }).promise;
+          
+          pageDiv.appendChild(canvas);
+          container.appendChild(pageDiv);
+        } catch (error) {
+          console.error(`Error rendering page ${pageNum}:`, error);
+        }
+      }
+    };
+    
+    renderPages();
+  }, [currentPdfDoc, currentTotalPages, currentFileIndex, zoom, currentPdfHtml, selectedIndex]);
+
+  // Use Intersection Observer for scroll detection when using pdfjs-dist
+  useEffect(() => {
+    if (!currentPdfDoc || currentTotalPages <= 1 || !containerRef.current) return;
+    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const pageId = entry.target.id;
+            const match = pageId.match(/pdf-page-\d+-(\d+)/);
+            if (match) {
+              const pageNum = parseInt(match[1], 10);
+              if (pageNum !== lastPageRef.current) {
+                lastPageRef.current = pageNum;
+                setCurrentPage(pageNum);
+              }
+            }
+          }
+        });
+      },
+      {
+        root: containerRef.current,
+        rootMargin: '-20% 0px -20% 0px',
+        threshold: 0.5
+      }
+    );
+
+    // Observe all page elements
+    for (let pageNum = 1; pageNum <= currentTotalPages; pageNum++) {
+      const pageElement = document.getElementById(`pdf-page-${currentFileIndex}-${pageNum}`);
+      if (pageElement) {
+        observer.observe(pageElement);
+      }
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [currentPdfDoc, currentTotalPages, currentFileIndex]);
+
+  // Handle scroll-based page navigation with reliable container tracking
+  useEffect(() => {
+    const iframe = iframeRef.current;
+    if (!iframe || currentTotalPages <= 1) return;
+
+    let checkInterval: NodeJS.Timeout;
+    let scrollContainer: HTMLElement | null = null;
+    let scrollHandler: (() => void) | null = null;
+
+    const updateCurrentPage = () => {
+      const container = scrollContainer || getScrollContainer();
+      if (!container) {
+        return;
+      }
+
+      const scrollTop = container.scrollTop;
+      const scrollHeight = container.scrollHeight || container.clientHeight * currentTotalPages;
+      const pageHeight = scrollHeight / currentTotalPages || container.clientHeight || 800;
+
+      const newPage = Math.min(
+        Math.max(Math.floor(scrollTop / pageHeight) + 1, 1),
+        currentTotalPages
+      );
+
+      if (newPage !== lastPageRef.current) {
+        lastPageRef.current = newPage;
+        setCurrentPage(newPage);
+      }
+    };
+
+    const attachListeners = () => {
+      scrollContainer = getScrollContainer();
+      if (!scrollContainer) {
+        return false;
+      }
+
+      scrollHandler = () => updateCurrentPage();
+      scrollContainer.addEventListener('scroll', scrollHandler, { passive: true });
+      return true;
+    };
+
+    // Attach listeners immediately if possible
+    attachListeners();
+
+    const loadHandler = () => {
+      setTimeout(() => {
+        attachListeners();
+        updateCurrentPage();
+      }, 300);
+    };
+
+    iframe.addEventListener('load', loadHandler);
+
+    // Frequent interval checks as fallback (in case listeners fail)
+    checkInterval = setInterval(() => {
+      updateCurrentPage();
+    }, 100);
+
+    // Initial check
+    setTimeout(() => {
+      updateCurrentPage();
+    }, 200);
+
+    return () => {
+      clearInterval(checkInterval);
+      iframe.removeEventListener('load', loadHandler);
+      if (scrollContainer && scrollHandler) {
+        scrollContainer.removeEventListener('scroll', scrollHandler);
+      }
+    };
+  }, [currentTotalPages, getScrollContainer]);
+
+  // Auto-scroll sidebar to show active page
+  useEffect(() => {
+    if (currentPage > 0 && isPagesSidebarOpen) {
+      const thumbElement = document.getElementById(`page-thumb-${currentPage}`);
+      const sidebar = document.getElementById('pages-sidebar');
+      
+      if (thumbElement && sidebar) {
+        const thumbRect = thumbElement.getBoundingClientRect();
+        const sidebarRect = sidebar.getBoundingClientRect();
+        
+        // Check if thumb is outside visible area
+        if (thumbRect.top < sidebarRect.top || thumbRect.bottom > sidebarRect.bottom) {
+          thumbElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+    }
+  }, [currentPage, isPagesSidebarOpen]);
+
+  return (
+    <div className="fixed inset-0 z-50 flex flex-col bg-white overflow-hidden" ref={viewerRef}>
+      {/* Header */}
+      <header className="h-12 sm:h-14 bg-gradient-to-r from-red-600 to-pink-600 text-white flex items-center justify-between px-3 sm:px-6 shadow-md z-20">
+        <div className="flex items-center gap-2 sm:gap-3">
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+            className="lg:hidden p-2 hover:bg-white/20 rounded transition-colors"
+            title={t('viewers.pdf.editor.toggle_sidebar', 'Toggle Sidebar')}
+          >
+            <Menu className="w-5 h-5" />
+          </button>
+          <div className="flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-lg p-1 sm:p-1.5 border border-white/20">
+            <img 
+              src="/logo.png" 
+              alt="FormiPeek" 
+              className="h-6 sm:h-8 w-auto object-contain"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                if (target.src.includes('logo.png')) {
+                  target.src = '/logo.jpg';
+                }
+              }}
+            />
+          </div>
+          <span className="font-bold text-sm sm:text-lg tracking-tight hidden sm:inline">FormiPeek</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <LanguageSwitcher />
+          <button
+            onClick={onClose}
+            className="p-2 hover:bg-white/20 rounded transition-colors"
+            title={t('viewers.pdf.editor.close', 'Close (Esc)')}
+          >
+            <X className="w-4 h-4 sm:w-5 sm:h-5" />
+          </button>
+        </div>
+      </header>
+
+      <main className="flex-1 flex overflow-hidden">
+        {/* Files Sidebar */}
+        <aside className={`absolute lg:relative inset-y-0 left-0 w-72 sm:w-80 bg-white border-r border-gray-200 flex flex-col z-30 lg:z-10 shadow-[4px_0_24px_rgba(0,0,0,0.02)] transform transition-transform duration-300 ease-in-out ${
+          isSidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
+        }`}>
+          {/* Mobile Close Button */}
+          <button
+            onClick={() => setIsSidebarOpen(false)}
+            className="lg:hidden absolute top-2 right-2 p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded transition-colors z-40"
+            title={t('viewers.pdf.editor.close_sidebar', 'Close Sidebar')}
+          >
+            <X className="w-5 h-5" />
+          </button>
+          {/* Search */}
+          <div className="p-2 sm:p-3 border-b border-gray-100 pt-12 lg:pt-2">
+            <div className="relative">
+              <Search className="absolute left-2 sm:left-3 top-2.5 w-4 h-4 text-gray-400" />
+              <input
+                type="text"
+                placeholder={t('viewers.pdf.editor.search_placeholder', 'Search files...')}
+                value={searchQuery}
+                onChange={(e) => {
+                  setSearchQuery(e.target.value);
+                  setSelectedIndex(0);
+                }}
+                className="w-full pl-8 sm:pl-9 pr-2 sm:pr-3 py-1.5 sm:py-2 bg-gray-50 border border-gray-200 rounded-md text-xs sm:text-sm focus:outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition-all"
+              />
+            </div>
+          </div>
+
+          {/* Files Header */}
+          <div className="px-3 sm:px-4 py-1.5 sm:py-2 flex justify-between items-center bg-gray-50/50">
+            <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+              {t('viewers.pdf.editor.files_header', 'Files')} ({filteredFiles.length})
+            </span>
+            {onAddFiles && (
+              <button
+                onClick={() => fileInputRef.current?.click()}
+                className="text-pink-600 hover:text-pink-700 text-xs font-bold uppercase tracking-wide transition-colors"
+              >
+                {t('viewers.pdf.editor.add_files', '+ Add')}
+              </button>
+            )}
+            <input
+              ref={fileInputRef}
+              type="file"
+              multiple
+              accept=".pdf"
+              onChange={handleAddFiles}
+              className="hidden"
+            />
+          </div>
+
+          {/* File List */}
+          <div className="flex-1 overflow-y-auto scroller p-2 sm:p-3 space-y-1.5 sm:space-y-2">
+            {filteredFiles.map((file, index) => {
+              const fileIndex = files.indexOf(file);
+              const isSelected = fileIndex === selectedIndex;
+              const pdfUrl = pdfUrls.get(fileIndex) || '';
+
+              return (
+                <div
+                  key={fileIndex}
+                  onClick={() => {
+                    handleFileSelect(fileIndex);
+                    setIsSidebarOpen(false);
+                  }}
+                  className={`group flex items-start gap-2 sm:gap-3 p-1.5 sm:p-2 rounded-lg cursor-pointer transition-all ${
+                    isSelected
+                      ? 'bg-pink-50 border border-pink-200 shadow-sm'
+                      : 'border border-transparent hover:bg-gray-100'
+                  }`}
+                >
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-200 rounded overflow-hidden flex-shrink-0 flex items-center justify-center">
+                    <div className="text-gray-400 text-xs font-bold">PDF</div>
+                  </div>
+                  <div className="flex-1 min-w-0 flex flex-col justify-center h-10 sm:h-12">
+                    <p
+                      className={`text-xs sm:text-sm truncate ${
+                        isSelected ? 'font-semibold text-pink-900' : 'font-medium text-gray-700'
+                      }`}
+                      title={file.name}
+                    >
+                      {file.name}
+                    </p>
+                    <p className={`text-xs ${isSelected ? 'text-pink-600' : 'text-gray-400'}`}>
+                      {formatFileSize(file.size)}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </aside>
+
+        {/* Main Viewer */}
+        <section className="flex-1 flex flex-col min-w-0 bg-gray-50 relative">
+          {/* Pages Thumbnails Sidebar */}
+          {currentTotalPages > 1 && (
+            <aside className={`absolute inset-y-0 left-0 w-48 sm:w-56 bg-white border-r border-gray-200 flex flex-col z-20 shadow-[4px_0_24px_rgba(0,0,0,0.02)] transform transition-transform duration-300 ease-in-out ${
+              isPagesSidebarOpen ? 'translate-x-0' : '-translate-x-full'
+            }`}>
+              <div className="px-3 py-2 border-b border-gray-200 flex items-center justify-between bg-gray-50">
+                <span className="text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                  {t('viewers.pdf.editor.pages', 'Pages')}
+                </span>
+                <button
+                  onClick={() => setIsPagesSidebarOpen(false)}
+                  className="p-1 text-gray-500 hover:text-gray-700 hover:bg-gray-200 rounded transition-colors"
+                  title={t('viewers.pdf.editor.close_pages_sidebar', 'Close Pages')}
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+              <div className="flex-1 overflow-y-auto scroller p-2 space-y-2" id="pages-sidebar">
+                {Array.from({ length: currentTotalPages }, (_, i) => i + 1).map((pageNum) => {
+                  const isActive = currentPage === pageNum;
+                  return (
+                  <button
+                    key={pageNum}
+                      onClick={() => {
+                        handlePageClick(pageNum);
+                        setIsPagesSidebarOpen(true); // Keep sidebar open when clicking
+                      }}
+                      className={`w-full p-2 rounded-lg border-2 transition-all text-left group ${
+                        isActive
+                          ? 'border-pink-500 bg-pink-50 shadow-md ring-2 ring-pink-200 scale-105'
+                          : 'border-gray-200 hover:border-pink-300 hover:bg-pink-50/50 hover:shadow-sm'
+                    }`}
+                      id={`page-thumb-${pageNum}`}
+                  >
+                      <div className="flex items-center justify-center w-full h-24 sm:h-32 bg-gradient-to-br from-gray-50 to-gray-100 rounded mb-2 overflow-hidden relative border border-gray-200">
+                        {/* Page number badge */}
+                        <span className={`absolute top-1 left-1 text-xs px-2 py-1 rounded font-bold z-10 ${
+                          isActive 
+                            ? 'bg-pink-600 text-white shadow-lg' 
+                            : 'bg-gray-700/80 text-white group-hover:bg-pink-600'
+                        }`}>
+                          {pageNum}
+                        </span>
+                        {/* Page preview - using thumbnail if available, otherwise placeholder */}
+                        <div className="w-full h-full flex items-center justify-center relative">
+                          {pageThumbnails.get(`${currentFileIndex}-${pageNum}`) ? (
+                            <img
+                              src={pageThumbnails.get(`${currentFileIndex}-${pageNum}`)}
+                              alt={`Page ${pageNum}`}
+                              className="w-full h-full object-contain"
+                            />
+                          ) : currentPdfUrl ? (
+                            <iframe
+                              src={`${currentPdfUrl}#page=${pageNum}`}
+                              className="w-full h-full border-0 pointer-events-none opacity-60"
+                              style={{ transform: 'scale(0.3)', transformOrigin: 'top left', width: '333%', height: '333%' }}
+                              title={`Page ${pageNum} preview`}
+                            />
+                          ) : (
+                            <div className="text-center">
+                              <div className={`text-2xl font-bold mb-1 ${
+                                isActive ? 'text-pink-600' : 'text-gray-400'
+                              }`}>
+                                {pageNum}
+                    </div>
+                              <div className="text-xs text-gray-500">
+                                {t('viewers.pdf.editor.page', 'Page')}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                        {/* Active indicator */}
+                        {isActive && (
+                          <div className="absolute bottom-0 left-0 right-0 h-1 bg-pink-500"></div>
+                        )}
+                      </div>
+                      <p className={`text-xs text-center font-medium mt-1 ${
+                        isActive ? 'text-pink-700 font-bold' : 'text-gray-600'
+                    }`}>
+                      {t('viewers.pdf.editor.page', 'Page')} {pageNum}
+                    </p>
+                  </button>
+                  );
+                })}
+              </div>
+            </aside>
+          )}
+
+          {/* Toggle Pages Sidebar Button (when closed) */}
+          {currentTotalPages > 1 && !isPagesSidebarOpen && (
+            <button
+              onClick={() => setIsPagesSidebarOpen(true)}
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-30 bg-white border border-gray-200 rounded-r-lg px-2 py-4 shadow-lg hover:bg-gray-50 transition-colors"
+              title={t('viewers.pdf.editor.show_pages', 'Show Pages')}
+            >
+              <ChevronRight className="w-4 h-4 text-gray-600" />
+            </button>
+          )}
+          {/* Toolbar */}
+          <div className="h-12 sm:h-14 border-b border-gray-200 bg-white flex flex-col sm:flex-row justify-between items-start sm:items-center px-2 sm:px-4 py-1.5 sm:py-0 shadow-sm z-10 gap-2 sm:gap-0">
+            <div className="flex items-center gap-1.5 sm:gap-2 min-w-0 flex-1">
+              <span className="font-semibold text-gray-700 text-xs sm:text-sm truncate">{currentFile?.name}</span>
+              <span className="text-xs px-1.5 sm:px-2 py-0.5 bg-gray-100 text-gray-500 rounded border border-gray-200 flex-shrink-0">
+                {t('viewers.pdf.editor.format_badge', 'PDF')}
+              </span>
+              {currentFile && (
+                <span className="text-xs text-gray-400 hidden sm:inline flex-shrink-0">
+                  {formatFileSize(currentFile.size)}
+                </span>
+              )}
+            </div>
+
+            <div className="flex items-center gap-1 sm:gap-2 w-full sm:w-auto justify-end flex-wrap">
+              {/* Page Navigation */}
+              {currentTotalPages > 1 && (
+                <>
+                  <div className="flex items-center gap-1 px-2 py-1 bg-gray-50 rounded border border-gray-200">
+                    <span className="text-xs text-gray-600 hidden sm:inline">Page</span>
+                    <span className="text-xs font-medium text-gray-700">{currentPage}</span>
+                    <span className="text-xs text-gray-400">/</span>
+                    <span className="text-xs text-gray-600">{currentTotalPages}</span>
+                  </div>
+                  <button
+                    onClick={handlePreviousPage}
+                    disabled={currentPage === 1}
+                    className="btn-icon w-8 h-8 text-gray-600 hover:bg-gray-100 rounded transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                    title={t('viewers.pdf.editor.previous_page', 'Previous Page')}
+                  >
+                    <ChevronLeft className="w-4 h-4" />
+                  </button>
+                  <button
+                    onClick={handleNextPage}
+                    disabled={currentPage === currentTotalPages}
+                    className="btn-icon w-8 h-8 text-gray-600 hover:bg-gray-100 rounded transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                    title={t('viewers.pdf.editor.next_page', 'Next Page')}
+                  >
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
+                  <div className="w-px h-4 sm:h-6 bg-gray-200 mx-0.5 sm:mx-1" />
+                </>
+              )}
+
+              {/* Zoom Controls */}
+              <button
+                onClick={handleZoomOut}
+                className="btn-icon w-8 h-8 text-gray-600 hover:bg-gray-100 rounded transition-colors"
+                title={t('viewers.pdf.editor.zoom_out', 'Zoom Out (-)')}
+              >
+                <ZoomOut className="w-4 h-4" />
+              </button>
+              <button
+                onClick={handleResetZoom}
+                className="text-xs font-mono font-medium px-2 py-1 text-center hover:text-pink-600 transition-colors min-w-[3rem]"
+                title={t('viewers.pdf.editor.reset_zoom', 'Click to reset zoom')}
+              >
+                {zoom}%
+              </button>
+              <button
+                onClick={handleZoomIn}
+                className="btn-icon w-8 h-8 text-gray-600 hover:bg-gray-100 rounded transition-colors"
+                title={t('viewers.pdf.editor.zoom_in', 'Zoom In (+)')}
+              >
+                <ZoomIn className="w-4 h-4" />
+              </button>
+              <button
+                onClick={handleFitWidth}
+                className="text-xs px-2 py-1 text-gray-600 hover:bg-gray-100 rounded transition-colors hidden sm:inline"
+                title={t('viewers.pdf.editor.fit_width', 'Fit Width')}
+              >
+                Fit Width
+              </button>
+              <div className="w-px h-4 sm:h-6 bg-gray-200 mx-0.5 sm:mx-1" />
+              <button
+                onClick={() => {
+                  setIsPresentationMode(!isPresentationMode);
+                  if (!isPresentationMode) {
+                    viewerRef.current?.requestFullscreen().catch(err => {
+                      console.error('Error entering fullscreen:', err);
+                    });
+                  } else {
+                    if (document.fullscreenElement) {
+                      document.exitFullscreen();
+                    }
+                  }
+                }}
+                className="btn-icon flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 text-gray-600 hover:bg-pink-50 hover:text-pink-700 rounded transition-colors text-xs sm:text-sm"
+                title={t('viewers.pdf.editor.start_presentation', 'Start Presentation (Space/Arrows to navigate)')}
+              >
+                <Play className="w-3 h-3 sm:w-4 sm:h-4" />
+                <span className="font-medium hidden sm:inline">
+                  {isPresentationMode ? t('viewers.pdf.editor.exit_presentation', 'Exit') : t('viewers.pdf.editor.present', 'Present')}
+                </span>
+              </button>
+
+              <button
+                onClick={handlePrint}
+                className="btn-icon w-8 h-8 sm:w-9 sm:h-9 text-gray-600 hover:bg-gray-100 rounded transition-colors"
+                title={t('viewers.pdf.editor.print_pdf', 'Print PDF')}
+              >
+                <Printer className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+              </button>
+
+              <button
+                onClick={handleDownload}
+                className="btn-icon w-8 h-8 sm:w-9 sm:h-9 text-gray-600 hover:bg-gray-100 rounded transition-colors"
+                title={t('viewers.pdf.editor.download_pdf', 'Download PDF')}
+              >
+                <Download className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+              </button>
+            </div>
+          </div>
+
+          {/* PDF Viewer */}
+          <div ref={containerRef} className="flex-1 overflow-auto p-0 bg-white flex justify-center items-center relative">
+            {/* Navigation Arrows */}
+            {filteredFiles.length > 1 && (
+              <>
+                <button
+                  onClick={handlePrevious}
+                  className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 p-2 sm:p-3 bg-white/90 backdrop-blur border border-gray-200 shadow-lg rounded-full hover:bg-white hover:text-pink-600 transition-all z-20"
+                  title={t('viewers.pdf.editor.previous', 'Previous (←)')}
+                >
+                  <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6" />
+                </button>
+                <button
+                  onClick={handleNext}
+                  className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 p-2 sm:p-3 bg-white/90 backdrop-blur border border-gray-200 shadow-lg rounded-full hover:bg-white hover:text-pink-600 transition-all z-20"
+                  title={t('viewers.pdf.editor.next', 'Next (→)')}
+                >
+                  <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6" />
+                </button>
+              </>
+            )}
+
+            {/* PDF Viewer - using pdfjs-dist if available, otherwise fallback to iframe */}
+            {currentIsLoading ? (
+              <div className="flex flex-col items-center justify-center text-gray-500">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-pink-600 mb-4"></div>
+                <p className="text-sm">{t('viewers.pdf.loading_window.title', 'Loading PDF...')}</p>
+              </div>
+            ) : currentPdfDoc ? (
+              <div 
+                ref={pagesContainerRef}
+                className="w-full py-4 px-2 flex flex-col items-center"
+                style={{
+                  transform: `scale(${zoom / 100})`,
+                  transformOrigin: 'top center',
+                }}
+              />
+            ) : currentPdfHtml ? (
+              <div 
+                className="w-full h-full bg-white"
+                style={{
+                  transform: `scale(${zoom / 100})`,
+                  transformOrigin: 'center center',
+                }}
+              >
+                <iframe
+                  ref={iframeRef}
+                  srcDoc={currentPdfHtml}
+                  className="w-full h-full border-0 bg-white"
+                  title={currentFile?.name}
+                  style={{ 
+                    display: 'block',
+                    margin: '0 auto',
+                    background: 'white',
+                    overflow: 'auto'
+                  }}
+                  scrolling="yes"
+                  onLoad={() => {
+                    // Ensure scroll events are attached after iframe loads
+                    const iframe = iframeRef.current;
+                    if (iframe?.contentWindow) {
+                      // Force a scroll check after load
+                      setTimeout(() => {
+                        try {
+                          const scrollTop = iframe.contentWindow?.scrollY || 0;
+                          const viewportHeight = iframe.contentWindow?.innerHeight || 800;
+                          const page = Math.min(
+                            Math.max(Math.floor(scrollTop / viewportHeight) + 1, 1),
+                            currentTotalPages
+                          );
+                          if (page !== currentPage) {
+                            setCurrentPage(page);
+                          }
+                        } catch (e) {
+                          // Ignore errors
+                        }
+                      }, 200);
+                    }
+                  }}
+                />
+              </div>
+            ) : currentPdfUrl ? (
+              <iframe
+                ref={iframeRef}
+                src={currentPdfUrl}
+                className="w-full h-full border-0 bg-white"
+                title={currentFile?.name}
+                style={{ 
+                  transform: `scale(${zoom / 100})`,
+                  transformOrigin: 'center center',
+                  display: 'block',
+                  margin: '0 auto',
+                  background: 'white',
+                  overflow: 'auto'
+                }}
+                scrolling="yes"
+                onLoad={() => {
+                  // Ensure scroll events are attached after iframe loads
+                  const iframe = iframeRef.current;
+                  if (iframe?.contentWindow) {
+                    // Force a scroll check after load
+                    setTimeout(() => {
+                      const scrollTop = iframe.contentWindow?.scrollY || 0;
+                      const viewportHeight = iframe.contentWindow?.innerHeight || 800;
+                      const page = Math.min(
+                        Math.max(Math.floor(scrollTop / viewportHeight) + 1, 1),
+                        currentTotalPages
+                      );
+                      if (page !== currentPage) {
+                        setCurrentPage(page);
+                      }
+                    }, 100);
+                  }
+                }}
+              />
+            ) : null}
+
+            {/* Fullscreen button only (zoom controls moved to toolbar) */}
+            <div className="absolute bottom-2 sm:bottom-4 md:bottom-6 right-2 sm:right-4 bg-white/90 backdrop-blur border border-gray-200 shadow-lg rounded-full p-2 z-20">
+              <button
+                onClick={toggleFullscreen}
+                className="hover:text-pink-600 transition-colors"
+                title={t('viewers.pdf.editor.fullscreen', 'Fullscreen (F)')}
+              >
+                <Maximize2 className="w-4 h-4 sm:w-5 sm:h-5" />
+              </button>
+            </div>
+
+            {/* File Counter */}
+            {filteredFiles.length > 1 && (
+              <div className="absolute top-2 sm:top-4 md:top-6 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur border border-gray-200 shadow-lg rounded-full px-3 sm:px-4 py-1.5 sm:py-2 text-xs font-medium text-gray-700 z-20">
+                {selectedIndex + 1} / {filteredFiles.length}
+              </div>
+            )}
+          </div>
+        </section>
+      </main>
+
+      {/* Mobile Overlay when sidebar is open */}
+      {isSidebarOpen && (
+        <div
+          className="lg:hidden fixed inset-0 bg-black/50 z-20"
+          onClick={() => setIsSidebarOpen(false)}
+        />
+      )}
+
+      <style>{`
+        body {
+          overflow: hidden !important;
+        }
+        .scroller::-webkit-scrollbar {
+          width: 4px;
+        }
+        @media (min-width: 640px) {
+          .scroller::-webkit-scrollbar {
+            width: 6px;
+          }
+        }
+        .scroller::-webkit-scrollbar-thumb {
+          background-color: #cbd5e1;
+          border-radius: 4px;
+        }
+        .scroller::-webkit-scrollbar-thumb:hover {
+          background-color: #94a3b8;
+        }
+        .btn-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      `}</style>
+    </div>
+  );
+};
+

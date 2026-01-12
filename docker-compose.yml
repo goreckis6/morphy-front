@@ -1,33 +1,26 @@
 version: '3.8'
 
-networks:
-  traefik:
-    external: true
-
 services:
-  morphy-frontend:
-    image: node:20-alpine
-    container_name: morphy-frontend
-    restart: unless-stopped
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
     environment:
-      - NODE_ENV=production
-      - HOST=0.0.0.0
-      - PORT=3000
-    working_dir: /srv/formipeek
+      - NODE_ENV=development
+      - FRONTEND_URL=http://localhost:5173
     volumes:
-      - /srv/formipeek:/srv/formipeek
-    command: sh -c "npm ci || npm install && npm run build && node server/entry.express.js"
-    networks:
-      - traefik
-    labels:
-      - traefik.enable=true
-      - traefik.docker.network=traefik
-      - traefik.http.routers.morphy.rule=Host(`formipeek.com`)
-      - traefik.http.routers.morphy.entrypoints=web
-      - traefik.http.middlewares.morphy-redirect.redirectscheme.scheme=https
-      - traefik.http.routers.morphy.middlewares=morphy-redirect
-      - traefik.http.routers.morphy-secure.rule=Host(`formipeek.com`)
-      - traefik.http.routers.morphy-secure.entrypoints=websecure
-      - traefik.http.routers.morphy-secure.tls=true
-      - traefik.http.routers.morphy-secure.tls.certresolver=letsencrypt
-      - traefik.http.services.morphy.loadbalancer.server.port=3000
+      - ./backend/src:/app/src
+    restart: unless-stopped
+
+  frontend:
+    build: .
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_BASE_URL=http://localhost:3000
+    volumes:
+      - .:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+    restart: unless-stopped

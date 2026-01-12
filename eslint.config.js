@@ -1,48 +1,28 @@
-// ESLint 9 flat config for Qwik + TypeScript
-import eslint from '@eslint/js';
-// @ts-ignore
+import js from '@eslint/js';
+import globals from 'globals';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from 'typescript-eslint';
-import qwik from 'eslint-plugin-qwik';
 
 export default tseslint.config(
-  eslint.configs.recommended,
-  ...tseslint.configs.recommended,
+  { ignores: ['dist'] },
   {
-    // Use TypeScript parser without type-aware linting to avoid CI failures
+    extends: [js.configs.recommended, ...tseslint.configs.recommended],
+    files: ['**/*.{ts,tsx}'],
     languageOptions: {
-      parser: tseslint.parser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-      },
+      ecmaVersion: 2020,
+      globals: globals.browser,
     },
     plugins: {
-      qwik: qwik,
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
     },
     rules: {
-      // Qwik specific rules
-      'qwik/use-method-usage': 'warn',
-      // Disable type-aware rule to prevent build failures without typed linting
-      'qwik/valid-lexical-scope': 'off',
-      // TypeScript rules
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
-      '@typescript-eslint/no-explicit-any': 'warn',
-      // General rules
-      'no-console': 'warn',
+      ...reactHooks.configs.recommended.rules,
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true },
+      ],
     },
-  },
-  {
-    ignores: [
-      'dist/**',
-      'node_modules/**',
-      '*.config.js',
-      '*.config.ts',
-      '*.timestamp-*.mjs',
-      'public/**',
-      'server/**',
-      '.github/**',
-      'scripts/**',
-      '.eslintcache',
-    ],
   }
 );
