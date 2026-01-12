@@ -1,3 +1,29 @@
+/**
+ * Prerendering script for SPA
+ * 
+ * Configuration via environment variables:
+ * - PRERENDER_CONCURRENT: Number of pages to prerender in parallel (default: 5)
+ *   Example: PRERENDER_CONCURRENT=10 npm run build
+ * 
+ * - PRERENDER_MAX_PAGES: Limit total pages to prerender (default: 0 = all)
+ *   Set to lower number for faster builds in CI/CD
+ *   Example: PRERENDER_MAX_PAGES=50 npm run build  (only prerenders 50 most important pages)
+ * 
+ * - PRERENDER_INCREMENTAL: Enable incremental prerendering (default: true)
+ *   Only prerenders new/changed pages, skips existing ones
+ *   Set to 'false' to always prerender all pages
+ *   Example: PRERENDER_INCREMENTAL=false npm run build
+ * 
+ * - PRERENDER_FORCE: Force full prerender, ignore cache (default: false)
+ *   Example: PRERENDER_FORCE=true npm run build
+ * 
+ * Performance tips:
+ * - For fast builds: PRERENDER_MAX_PAGES=50 (only priority pages)
+ * - For full prerendering: PRERENDER_CONCURRENT=10 (faster, but uses more memory)
+ * - Incremental mode (default): Only prerenders new/changed pages - much faster on subsequent builds!
+ * - Default: 5 concurrent, incremental mode enabled (balanced)
+ */
+
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -10,6 +36,29 @@ const __dirname = path.dirname(__filename);
 const distPath = path.join(__dirname, '../dist');
 const port = 4173;
 
+// Configuration: how many pages to prerender in parallel
+const CONCURRENT_PAGES = parseInt(process.env.PRERENDER_CONCURRENT || '5');
+// Configuration: limit total pages to prerender (0 = all, set to lower number for faster builds)
+const MAX_PAGES = parseInt(process.env.PRERENDER_MAX_PAGES || '0');
+// Configuration: force full prerender (ignore cache)
+const FORCE_PRERENDER = process.env.PRERENDER_FORCE === 'true';
+// Configuration: enable incremental prerendering (only new/changed pages)
+const INCREMENTAL = process.env.PRERENDER_INCREMENTAL !== 'false'; // default: true
+
+// Priority URLs that should always be prerendered (homepage, hubs, popular converters)
+const PRIORITY_URLS = [
+  '/',
+  '/converters',
+  '/viewers',
+  '/compress',
+  '/samples',
+  '/convert/csv-to-json',
+  '/convert/pdf-to-jpg',
+  '/convert/jpg-to-pdf',
+  '/convert/docx-to-pdf',
+  '/convert/pdf-to-docx',
+];
+
 // Read sitemap to get all URLs
 const sitemapPath = path.join(__dirname, '../public/sitemap.xml');
 const sitemap = fs.readFileSync(sitemapPath, 'utf-8');
@@ -21,17 +70,105 @@ const urls = [...new Set(
     .filter(u => u && u.startsWith('/'))
 )];
 
-console.log(`Found ${urls.length} URLs to prerender`);
+// Separate priority URLs from the rest
+const priorityUrls = urls.filter(url => PRIORITY_URLS.includes(url));
+const otherUrls = urls.filter(url => !PRIORITY_URLS.includes(url));
 
 // Save original index.html before prerendering to avoid race condition
+// This must be done early so we can compare timestamps
 const originalIndexPath = path.join(distPath, 'index.original.html');
 if (fs.existsSync(path.join(distPath, 'index.html'))) {
   fs.copyFileSync(
     path.join(distPath, 'index.html'),
     originalIndexPath
   );
-  console.log('Saved original index.html');
+} else {
+  // If index.html doesn't exist yet, create a dummy file for comparison
+  fs.writeFileSync(originalIndexPath, '<html></html>');
 }
+
+// Function to check if a page needs prerendering
+const needsPrerendering = (url) => {
+  if (FORCE_PRERENDER) return true;
+  if (!INCREMENTAL) return true;
+  
+  const filePath = url === '/' 
+    ? path.join(distPath, 'index.html')
+    : path.join(distPath, url, 'index.html');
+  
+  // Check if file exists
+  if (!fs.existsSync(filePath)) {
+    return true; // File doesn't exist, needs prerendering
+  }
+  
+  // Check if file is older than the build (index.original.html)
+  // If build is newer, we should rerender
+  try {
+    if (!fs.existsSync(originalIndexPath)) {
+      return true; // Can't compare, better prerender
+    }
+    
+    const fileStat = fs.statSync(filePath);
+    const buildStat = fs.statSync(originalIndexPath);
+    
+    // If prerendered file is older than build, needs rerendering
+    if (fileStat.mtime < buildStat.mtime) {
+      return true;
+    }
+    
+    // Check if file is valid (has content, not just a copy of base HTML)
+    const fileContent = fs.readFileSync(filePath, 'utf-8');
+    const baseContent = fs.readFileSync(originalIndexPath, 'utf-8');
+    
+    // If prerendered file is identical to base HTML, it's probably a fallback
+    // Priority URLs should always be checked more carefully
+    if (PRIORITY_URLS.includes(url) && fileContent === baseContent) {
+      return true;
+    }
+    
+    return false; // File exists and is up to date
+  } catch (e) {
+    // If we can't check, better safe than sorry - prerender it
+    return true;
+  }
+};
+
+// Limit total URLs if MAX_PAGES is set
+let urlsToRender = [...priorityUrls];
+if (MAX_PAGES > 0) {
+  const remaining = MAX_PAGES - priorityUrls.length;
+  if (remaining > 0) {
+    urlsToRender = [...priorityUrls, ...otherUrls.slice(0, remaining)];
+  }
+} else {
+  urlsToRender = urls;
+}
+
+// Filter to only pages that need prerendering
+if (INCREMENTAL && !FORCE_PRERENDER) {
+  const beforeCount = urlsToRender.length;
+  urlsToRender = urlsToRender.filter(needsPrerendering);
+  const skipped = beforeCount - urlsToRender.length;
+  
+  if (skipped > 0) {
+    console.log(`Found ${urls.length} total URLs in sitemap`);
+    console.log(`  Priority URLs: ${priorityUrls.length}`);
+    console.log(`  Pages needing prerendering: ${urlsToRender.length} (${skipped} already up-to-date)`);
+    console.log(`  Incremental mode: enabled`);
+  } else {
+    console.log(`Found ${urls.length} total URLs in sitemap`);
+    console.log(`  Priority URLs: ${priorityUrls.length}`);
+    console.log(`  Will prerender: ${urlsToRender.length}${MAX_PAGES > 0 ? ` (limited to ${MAX_PAGES})` : ''}`);
+  }
+} else {
+  console.log(`Found ${urls.length} total URLs in sitemap`);
+  console.log(`  Priority URLs: ${priorityUrls.length}`);
+  console.log(`  Will prerender: ${urlsToRender.length}${MAX_PAGES > 0 ? ` (limited to ${MAX_PAGES})` : ''}`);
+  if (FORCE_PRERENDER) {
+    console.log(`  Force mode: enabled (ignoring cache)`);
+  }
+}
+console.log(`  Concurrent pages: ${CONCURRENT_PAGES}`);
 
 // Simple HTTP server to serve dist folder
 const server = createServer((req, res) => {
@@ -98,32 +235,24 @@ try {
     ]
   });
 
-  const page = await browser.newPage();
-  
-  // Set viewport
-  await page.setViewport({ width: 1920, height: 1080 });
-
   let successCount = 0;
   let failCount = 0;
   const startTime = Date.now();
 
-  console.log(`Starting prerendering of ${urls.length} URLs...\n`);
+  if (urlsToRender.length === 0) {
+    console.log(`\n✓ All pages are already prerendered and up-to-date!`);
+    console.log(`  No prerendering needed.`);
+    server.close();
+    process.exit(0);
+  }
 
-  // Prerender each URL
-  for (let i = 0; i < urls.length; i++) {
-    const url = urls[i];
+  console.log(`Starting prerendering of ${urlsToRender.length} URLs with ${CONCURRENT_PAGES} concurrent pages...\n`);
+
+  // Function to prerender a single URL
+  const prerenderUrl = async (url, page) => {
     const fullUrl = `http://localhost:${port}${url}`;
     
     try {
-      // Log progress more frequently (every 5 URLs or first/last)
-      if ((i + 1) % 5 === 0 || i === 0 || i === urls.length - 1) {
-        const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
-        const avgTime = elapsed / (i + 1);
-        const remaining = Math.ceil((urls.length - i - 1) * avgTime);
-        const progress = ((i + 1) / urls.length * 100).toFixed(1);
-        console.log(`[${i + 1}/${urls.length}] (${progress}%) Prerendering ${url}... (${elapsed}s elapsed, ~${remaining}s remaining)`);
-      }
-      
       // Navigate and wait for DOM (not networkidle0 - can hang on analytics/polling)
       await page.goto(fullUrl, {
         waitUntil: 'domcontentloaded',
@@ -156,12 +285,9 @@ try {
       }
 
       fs.writeFileSync(filePath, html);
-      successCount++;
+      return { success: true, url };
       
     } catch (error) {
-      console.error(`Failed to prerender ${url}:`, error.message);
-      failCount++;
-      
       // Still create the directory structure with base HTML
       const filePath = url === '/' 
         ? path.join(distPath, 'index.html')
@@ -178,19 +304,71 @@ try {
         fs.writeFileSync(filePath, baseHtml);
       } catch (e) {
         // If original HTML doesn't exist, skip
-        console.warn(`Could not use fallback for ${url}`);
       }
+      
+      return { success: false, url, error: error.message };
+    }
+  };
+
+  // Create multiple pages for parallel processing
+  const pages = [];
+  for (let i = 0; i < CONCURRENT_PAGES; i++) {
+    const page = await browser.newPage();
+    await page.setViewport({ width: 1920, height: 1080 });
+    pages.push(page);
+  }
+
+  // Process URLs in batches
+  for (let i = 0; i < urlsToRender.length; i += CONCURRENT_PAGES) {
+    const batch = urlsToRender.slice(i, i + CONCURRENT_PAGES);
+    
+    // Prerender batch in parallel
+    const results = await Promise.all(
+      batch.map((url, idx) => prerenderUrl(url, pages[idx]))
+    );
+
+    // Process results
+    results.forEach(result => {
+      if (result.success) {
+        successCount++;
+      } else {
+        failCount++;
+        console.error(`Failed to prerender ${result.url}: ${result.error}`);
+      }
+    });
+
+    // Log progress
+    const completed = Math.min(i + CONCURRENT_PAGES, urlsToRender.length);
+    if (completed % 10 === 0 || completed === urlsToRender.length) {
+      const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+      const avgTime = elapsed / completed;
+      const remaining = Math.ceil((urlsToRender.length - completed) * avgTime / CONCURRENT_PAGES);
+      const progress = (completed / urlsToRender.length * 100).toFixed(1);
+      console.log(`[${completed}/${urlsToRender.length}] (${progress}%) Prerendered... (${elapsed}s elapsed, ~${remaining}s remaining)`);
     }
   }
+
+  // Close all pages
+  await Promise.all(pages.map(page => page.close()));
 
   await browser.close();
   
   const totalTime = ((Date.now() - startTime) / 1000).toFixed(1);
+  const skippedCount = urls.length - urlsToRender.length;
+  
   console.log(`\n✓ Prerendering complete!`);
   console.log(`  Total time: ${totalTime}s`);
   console.log(`  Success: ${successCount}`);
   console.log(`  Failed: ${failCount}`);
-  console.log(`  Average: ${(totalTime / urls.length).toFixed(2)}s per page`);
+  if (urlsToRender.length > 0) {
+    console.log(`  Average: ${(totalTime / urlsToRender.length).toFixed(2)}s per page`);
+  }
+  if (INCREMENTAL && !FORCE_PRERENDER && skippedCount > 0) {
+    console.log(`  Skipped (already up-to-date): ${skippedCount}`);
+  }
+  if (MAX_PAGES > 0 && urlsToRender.length < urls.length) {
+    console.log(`  Note: Limited to ${MAX_PAGES} pages (${urls.length - urlsToRender.length} skipped)`);
+  }
 
   // Close server
   server.close();
