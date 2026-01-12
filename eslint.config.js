@@ -37,10 +37,12 @@ export default tseslint.config(
       'node_modules/**',
       '*.config.js',
       '*.config.ts',
+      '*.timestamp-*.mjs',
       'public/**',
       'server/**',
       '.github/**',
       'scripts/**',
+      '.eslintcache',
     ],
   }
 );

@@ -10,7 +10,7 @@
     "build.client": "vite build",
     "build.preview": "vite build --ssr src/entry.preview.tsx",
     "build.types": "tsc --incremental --noEmit",
-    "lint": "eslint . --ext .ts,.tsx",
+    "lint": "eslint . --ext .ts,.tsx --no-cache",
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
     "preview": "qwik build preview && vite preview --open",
     "start": "vite --open --mode ssr",
