@@ -14,7 +14,7 @@
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
     "preview": "qwik build preview && vite preview --open",
     "start": "vite --open --mode ssr",
-    "serve": "node server/entry.express.js"
+    "serve": "node server/index.js"
   },
   "devDependencies": {
     "@builder.io/qwik": "^1.18.0",

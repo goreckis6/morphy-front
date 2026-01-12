@@ -111,10 +111,13 @@ jobs:
             echo "=== Checking container immediately ==="
             docker ps -a | grep morphy-frontend || echo "Container not found"
             echo ""
-            echo "=== Container logs (first check) ==="
-            docker logs morphy-frontend 2>&1 || echo "No logs yet"
+            echo "=== Container logs (first check, last 50 lines) ==="
+            docker logs --tail 50 morphy-frontend 2>&1 || echo "No logs yet"
             echo ""
             sleep 10
+            echo "=== Container logs (after 10s wait, last 100 lines) ==="
+            docker logs --tail 100 morphy-frontend 2>&1 || echo "No logs available"
+            echo ""
             
             # Check if container is running
             if docker ps | grep -q morphy-frontend; then
