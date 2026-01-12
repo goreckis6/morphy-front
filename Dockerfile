@@ -9,7 +9,14 @@ COPY package*.json ./
 RUN npm ci
 
 COPY . .
+
+# Save server/index.js before build (build may overwrite server/)
+RUN mkdir -p /tmp/runtime && cp server/index.js /tmp/runtime/index.js || true
+
 RUN npm run build
+
+# Restore server/index.js after build
+RUN cp /tmp/runtime/index.js server/index.js || true
 
 # -------- RUNTIME --------
 FROM node:20-alpine
