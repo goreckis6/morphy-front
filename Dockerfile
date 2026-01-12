@@ -20,6 +20,9 @@ COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/server ./server
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/package.json ./package.json
+# Ensure runtime entrypoint exists (not overwritten by build outputs)
+RUN mkdir -p /app/server
+COPY server/index.js ./server/index.js
 
 # Set environment variables
 ENV NODE_ENV=production
