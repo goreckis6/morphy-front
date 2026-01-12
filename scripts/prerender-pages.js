@@ -260,28 +260,36 @@ try {
       });
 
       // Wait for React to render and Helmet to update meta tags
-      // Check if title changed from default (React Helmet updates it)
-      const defaultTitle = 'FormiPeek - Free Online File Converter | Convert 300+ Formats Instantly';
-      let titleUpdated = false;
-      let attempts = 0;
-      const maxAttempts = 20; // 20 * 200ms = 4 seconds max wait
-      
-      while (!titleUpdated && attempts < maxAttempts) {
-        await new Promise(resolve => setTimeout(resolve, 200));
-        const currentTitle = await page.evaluate(() => {
-          const titleEl = document.querySelector('head > title');
-          return titleEl ? titleEl.textContent.trim() : '';
-        });
+      // React Helmet removes data-default attribute when it updates title
+      // Wait for React to mount and Helmet to update
+      await page.waitForFunction(() => {
+        // Check if React has rendered (root element has content)
+        const root = document.getElementById('root');
+        if (!root || !root.hasChildNodes()) return false;
         
-        // Title is updated if it's different from default or if it has content
-        if (currentTitle && currentTitle !== defaultTitle && currentTitle.length > 0) {
-          titleUpdated = true;
+        // Check if title exists
+        const titleEl = document.querySelector('head > title');
+        if (!titleEl) return false;
+        
+        // React Helmet removes data-default attribute when it updates title
+        // If data-default is gone, Helmet has updated the title
+        const hasDataDefault = titleEl.hasAttribute('data-default');
+        
+        if (!hasDataDefault) {
+          // Title was updated by Helmet, check if it's not default
+          const title = titleEl.textContent.trim();
+          const defaultTitle = 'FormiPeek - Free Online File Converter | Convert 300+ Formats Instantly';
+          return title && title.length > 0 && title !== defaultTitle;
         }
-        attempts++;
-      }
+        
+        return false;
+      }, { timeout: 15000 }).catch(() => {
+        // If timeout, continue anyway - maybe title didn't change but page rendered
+        console.warn(`Title update timeout for ${url}, continuing...`);
+      });
       
-      // Extra wait to ensure all meta tags are updated
-      await new Promise(resolve => setTimeout(resolve, 500));
+      // Extra wait to ensure all meta tags are fully updated by Helmet
+      await new Promise(resolve => setTimeout(resolve, 1000));
 
       // Get the rendered HTML
       let html = await page.content();
