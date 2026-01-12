@@ -72,9 +72,11 @@ async function logStartup() {
 }
 logStartup();
 
-// Load middleware at startup
+// Load middleware at startup - wait for it before starting server
+let middlewareLoaded = false;
 const middlewarePromise = loadQwikCity().then((m) => {
   qwikCityMiddleware = m;
+  middlewareLoaded = true;
   console.log('✅ QwikCity middleware promise resolved');
   return m;
 }).catch((e) => {
@@ -172,16 +174,33 @@ process.on('unhandledRejection', (reason, promise) => {
   process.exit(1);
 });
 
-// Start server
+// Start server - wait for middleware to load first
 const PORT = process.env.PORT || 3000;
 const HOST = process.env.HOST || '0.0.0.0';
 
-try {
-  app.listen(PORT, HOST, () => {
-    console.log(`✅ Qwik SSR server running on http://${HOST}:${PORT}`);
-  });
-} catch (error) {
-  console.error('❌ Failed to start server:', error);
+// Wait for middleware to load, then start server
+middlewarePromise.then(() => {
+  try {
+    console.log('🚀 Starting Express server...');
+    app.listen(PORT, HOST, () => {
+      console.log(`✅ Qwik SSR server running on http://${HOST}:${PORT}`);
+      console.log(`✅ Middleware loaded: ${middlewareLoaded}`);
+    });
+  } catch (error) {
+    console.error('❌ Failed to start server:', error);
+    console.error(error.stack);
+    process.exit(1);
+  }
+}).catch((error) => {
+  console.error('❌ Failed to load middleware before starting server:', error);
   console.error(error.stack);
-  process.exit(1);
-}
+  // Start server anyway so health endpoint works
+  try {
+    app.listen(PORT, HOST, () => {
+      console.log(`⚠️ Qwik SSR server running WITHOUT middleware on http://${HOST}:${PORT}`);
+    });
+  } catch (err) {
+    console.error('❌ Failed to start server:', err);
+    process.exit(1);
+  }
+});
