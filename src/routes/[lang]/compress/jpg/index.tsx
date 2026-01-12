@@ -1,4 +1,4 @@
-import { component$, $, useSignal } from '@builder.io/qwik';
+import { component$, $ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
 import { BaseConverter } from '../../../../components/BaseConverter.qwik';
 
@@ -18,7 +18,9 @@ export default component$(() => {
       try {
         const err = await response.json();
         message = err.detail || message;
-      } catch {}
+      } catch {
+        // Ignore JSON parse errors, use default message
+      }
       throw new Error(message);
     }
 

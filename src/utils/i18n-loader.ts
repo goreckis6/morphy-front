@@ -39,7 +39,7 @@ export const getTranslationValue = (
   key: TranslationKey
 ): string => {
   const keys = key.split('.');
-  let value: any = translations;
+  let value: string | Translations = translations;
   
   for (const k of keys) {
     if (value && typeof value === 'object' && k in value) {

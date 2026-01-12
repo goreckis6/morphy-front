@@ -29,6 +29,7 @@ export const importTranslationsFromOriginal = async (lang: string): Promise<Tran
     // Full translations should be extracted manually or via script
     return {};
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.warn(`Failed to load translations from original file for language: ${lang}`, error);
     return {};
   }

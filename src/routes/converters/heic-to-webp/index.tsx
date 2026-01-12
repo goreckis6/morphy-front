@@ -15,7 +15,12 @@ export default component$(() => {
 
     if (!response.ok) {
       let message = 'Conversion failed';
-      try { const err = await response.json(); message = err.detail || message; } catch {}
+      try {
+        const err = await response.json();
+        message = err.detail || message;
+      } catch {
+        // Ignore JSON parse errors, use default message
+      }
       throw new Error(message);
     }
 

@@ -10,6 +10,7 @@ import { manifest } from '@qwik-client-manifest';
 import render from './entry.ssr';
 
 declare global {
+  // eslint-disable-next-line @typescript-eslint/no-empty-object-type
   interface QwikCityPlatform extends PlatformNode {}
 }
 

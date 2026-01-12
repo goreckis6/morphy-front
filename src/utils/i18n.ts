@@ -38,7 +38,7 @@ export const getLanguageFromUrl = (pathname: string): string => {
 export type TranslationKey = string;
 
 // Simple translation function - can be enhanced later with actual translation files
-export const t = (key: TranslationKey, lang: string = DEFAULT_LANGUAGE): string => {
+export const t = (key: TranslationKey, _lang: string = DEFAULT_LANGUAGE): string => {
   // For now, just return the key - will integrate with translation files later
   return key;
 };

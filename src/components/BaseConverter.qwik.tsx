@@ -19,7 +19,7 @@ export const BaseConverter = component$<BaseConverterProps>(({
   inputFormat,
   outputFormat,
   inputExtensions,
-  outputExtensions,
+  outputExtensions: _outputExtensions,
   onConvert,
   features,
   useCases
