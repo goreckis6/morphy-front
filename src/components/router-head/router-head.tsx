@@ -25,13 +25,17 @@ export const RouterHead = component$(() => {
         // If props contains dangerouslySetInnerHTML, use it; otherwise use s.style
         if (s.props?.dangerouslySetInnerHTML) {
           const { dangerouslySetInnerHTML, ...restProps } = s.props;
+          // In Qwik, dangerouslySetInnerHTML accepts string directly, not { __html: string }
+          const htmlContent = typeof dangerouslySetInnerHTML === 'string' 
+            ? dangerouslySetInnerHTML 
+            : (dangerouslySetInnerHTML as any)?.__html || '';
           return (
-            <style key={s.key} {...restProps} dangerouslySetInnerHTML={dangerouslySetInnerHTML} />
+            <style key={s.key} {...restProps} dangerouslySetInnerHTML={htmlContent} />
           );
         }
-        // Otherwise, use s.style directly (it's already a string or object)
+        // Otherwise, use s.style directly (it's already a string)
         return (
-          <style key={s.key} {...(s.props || {})} dangerouslySetInnerHTML={s.style ? { __html: s.style } : undefined} />
+          <style key={s.key} {...(s.props || {})} dangerouslySetInnerHTML={s.style || undefined} />
         );
       })}
 
@@ -39,13 +43,17 @@ export const RouterHead = component$(() => {
         // If props contains dangerouslySetInnerHTML, use it; otherwise use s.script
         if (s.props?.dangerouslySetInnerHTML) {
           const { dangerouslySetInnerHTML, ...restProps } = s.props;
+          // In Qwik, dangerouslySetInnerHTML accepts string directly, not { __html: string }
+          const htmlContent = typeof dangerouslySetInnerHTML === 'string' 
+            ? dangerouslySetInnerHTML 
+            : (dangerouslySetInnerHTML as any)?.__html || '';
           return (
-            <script key={s.key} {...restProps} dangerouslySetInnerHTML={dangerouslySetInnerHTML} />
+            <script key={s.key} {...restProps} dangerouslySetInnerHTML={htmlContent} />
           );
         }
-        // Otherwise, use s.script directly (it's already a string or object)
+        // Otherwise, use s.script directly (it's already a string)
         return (
-          <script key={s.key} {...(s.props || {})} dangerouslySetInnerHTML={s.script ? { __html: s.script } : undefined} />
+          <script key={s.key} {...(s.props || {})} dangerouslySetInnerHTML={s.script || undefined} />
         );
       })}
     </>
