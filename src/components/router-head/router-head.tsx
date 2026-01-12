@@ -22,16 +22,30 @@ export const RouterHead = component$(() => {
       ))}
 
       {head.styles.map((s) => {
-        const { dangerouslySetInnerHTML, ...restProps } = s.props || {};
+        // If props contains dangerouslySetInnerHTML, use it; otherwise use s.style
+        if (s.props?.dangerouslySetInnerHTML) {
+          const { dangerouslySetInnerHTML, ...restProps } = s.props;
+          return (
+            <style key={s.key} {...restProps} dangerouslySetInnerHTML={dangerouslySetInnerHTML} />
+          );
+        }
+        // Otherwise, use s.style directly (it's already a string or object)
         return (
-          <style key={s.key} {...restProps} dangerouslySetInnerHTML={s.style} />
+          <style key={s.key} {...(s.props || {})} dangerouslySetInnerHTML={s.style ? { __html: s.style } : undefined} />
         );
       })}
 
       {head.scripts.map((s) => {
-        const { dangerouslySetInnerHTML, ...restProps } = s.props || {};
+        // If props contains dangerouslySetInnerHTML, use it; otherwise use s.script
+        if (s.props?.dangerouslySetInnerHTML) {
+          const { dangerouslySetInnerHTML, ...restProps } = s.props;
+          return (
+            <script key={s.key} {...restProps} dangerouslySetInnerHTML={dangerouslySetInnerHTML} />
+          );
+        }
+        // Otherwise, use s.script directly (it's already a string or object)
         return (
-          <script key={s.key} {...restProps} dangerouslySetInnerHTML={s.script} />
+          <script key={s.key} {...(s.props || {})} dangerouslySetInnerHTML={s.script ? { __html: s.script } : undefined} />
         );
       })}
     </>

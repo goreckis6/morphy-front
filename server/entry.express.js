@@ -128,18 +128,31 @@ app.get('/__debug', async (_req, res) => {
   });
 });
 
-// Qwik SSR middleware - use QwikCity middleware for all routes
+// Qwik SSR middleware - use QwikCity middleware for all routes (catch-all)
 app.use(async (req, res, next) => {
   try {
     const middleware = await middlewarePromise;
     if (!middleware) {
+      console.error(`[${req.method}] ${req.url} - QwikCity middleware not loaded`);
       return res.status(500).json({ error: 'QwikCity middleware not loaded' });
     }
+    console.log(`[${req.method}] ${req.url} - Routing to QwikCity`);
     await middleware(req, res, next);
   } catch (e) {
-    console.error('SSR Error:', e);
-    next(e);
+    console.error(`[${req.method}] ${req.url} - SSR Error:`, e);
+    console.error(e.stack);
+    if (!res.headersSent) {
+      res.status(500).json({ error: 'Internal server error', message: e.message });
+    } else {
+      next(e);
+    }
   }
+});
+
+// Error handler for unhandled routes (should not be reached if QwikCity works correctly)
+app.use((req, res) => {
+  console.log(`[${req.method}] ${req.url} - No handler found (404)`);
+  res.status(404).json({ error: 'Not found', path: req.url });
 });
 
 // Start server
