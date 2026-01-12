@@ -1,8 +1,7 @@
-# Build stage
+# -------- BUILD --------
 FROM node:20-alpine AS builder
 WORKDIR /app
 
-# Accept build arguments
 ARG VITE_API_BASE_URL
 ENV VITE_API_BASE_URL=$VITE_API_BASE_URL
 
@@ -12,27 +11,26 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
+# -------- RUNTIME --------
 FROM node:20-alpine
 WORKDIR /app
 
-# Copy built files and dependencies
-COPY --from=builder /app/dist ./dist
-COPY --from=builder /app/server ./server
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package.json ./package.json
-# Ensure runtime entrypoint exists (not overwritten by build outputs)
-RUN mkdir -p /app/server
-COPY server/index.js ./server/index.js
-
-# Set environment variables
 ENV NODE_ENV=production
 ENV HOST=0.0.0.0
 ENV PORT=3000
 
+# Install only production dependencies
+COPY package*.json ./
+RUN npm ci --omit=dev
+
+# Copy built frontend/server artifacts
+COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/server ./server
+
 EXPOSE 3000
 
-# Health check
+# Health check with error handling
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD node -e "require('http').get('http://localhost:3000/health', (r) => { process.exit(r.statusCode === 200 ? 0 : 1) })"
+  CMD node -e "const http=require('http');const req=http.get('http://localhost:3000/health',r=>process.exit(r.statusCode===200?0:1));req.on('error',()=>process.exit(1));"
 
 CMD ["node", "server/index.js"]
