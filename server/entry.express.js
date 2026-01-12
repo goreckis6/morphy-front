@@ -75,13 +75,18 @@ logStartup();
 // Load middleware at startup
 const middlewarePromise = loadQwikCity().then((m) => {
   qwikCityMiddleware = m;
+  console.log('✅ QwikCity middleware promise resolved');
   return m;
 }).catch((e) => {
   console.error('❌ Fatal: Could not load QwikCity middleware');
-  console.error(e);
+  console.error('Error message:', e?.message || e);
+  console.error('Error stack:', e?.stack || 'No stack trace');
   // Don't throw - let health endpoint still work
   return null;
 });
+
+// Log when middleware promise is created
+console.log('📦 QwikCity middleware promise created');
 
 // Health endpoint (before QwikCity middleware so it's always available)
 app.get('/health', async (_req, res) => {
@@ -155,9 +160,28 @@ app.use((req, res) => {
   res.status(404).json({ error: 'Not found', path: req.url });
 });
 
+// Error handler for uncaught exceptions
+process.on('uncaughtException', (error) => {
+  console.error('❌ Uncaught Exception:', error);
+  console.error(error.stack);
+  process.exit(1);
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('❌ Unhandled Rejection at:', promise, 'reason:', reason);
+  process.exit(1);
+});
+
 // Start server
 const PORT = process.env.PORT || 3000;
 const HOST = process.env.HOST || '0.0.0.0';
-app.listen(PORT, HOST, () => {
-  console.log(`✅ Qwik SSR server running on http://${HOST}:${PORT}`);
-});
+
+try {
+  app.listen(PORT, HOST, () => {
+    console.log(`✅ Qwik SSR server running on http://${HOST}:${PORT}`);
+  });
+} catch (error) {
+  console.error('❌ Failed to start server:', error);
+  console.error(error.stack);
+  process.exit(1);
+}

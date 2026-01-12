@@ -75,9 +75,9 @@ jobs:
             # Stop and remove old containers
             echo "=== Stopping old container ==="
             docker stop morphy-frontend 2>/dev/null || true
-            docker rm morphy-frontend 2>/dev/null || true
             echo "=== Checking old container logs before removal ==="
-            docker logs morphy-frontend 2>&1 || echo "No old logs"
+            docker logs morphy-frontend 2>&1 | tail -100 || echo "No old logs"
+            docker rm morphy-frontend 2>/dev/null || true
             
             # Pull latest image from Docker Hub
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/morphy-frontend:latest
@@ -149,12 +149,12 @@ jobs:
               echo "=== All containers ==="
               docker ps -a | grep morphy-frontend
               echo ""
-              echo "=== Container logs (full) ==="
-              docker logs morphy-frontend 2>&1 || echo "No logs available"
+              echo "=== Container logs (full, last 200 lines) ==="
+              docker logs morphy-frontend 2>&1 | tail -200 || echo "No logs available"
               echo ""
               echo "=== Stopping container to inspect ==="
               docker stop morphy-frontend 2>&1 || echo "Cannot stop container"
-              sleep 2
+              sleep 3
               echo ""
               echo "=== Trying to check files in stopped container ==="
               docker exec morphy-frontend ls -la /app/ 2>&1 || echo "Cannot exec into container"
@@ -162,10 +162,13 @@ jobs:
               docker exec morphy-frontend ls -la /app/dist/server/ 2>&1 || echo "Cannot check dist/server directory"
               echo ""
               echo "=== Inspecting container image directly ==="
-              docker run --rm --entrypoint sh ${{ secrets.DOCKERHUB_USERNAME }}/morphy-frontend:latest -c "ls -la /app/ 2>&1 || echo 'app not found'; ls -la /app/server/ 2>&1 || echo 'server not found'; ls -la /app/dist/server/ 2>&1 || echo 'dist/server not found'; cat /app/server/entry.express.js 2>&1 | head -20 || echo 'Cannot read entry.express.js'"
+              docker run --rm --entrypoint sh ${{ secrets.DOCKERHUB_USERNAME }}/morphy-frontend:latest -c "ls -la /app/ 2>&1 || echo 'app not found'; ls -la /app/server/ 2>&1 || echo 'server not found'; ls -la /app/dist/server/ 2>&1 || echo 'dist/server not found'; cat /app/server/entry.express.js 2>&1 | head -30 || echo 'Cannot read entry.express.js'"
               echo ""
-              echo "=== Trying to run entry.express.js in temporary container ==="
-              docker run --rm --entrypoint node ${{ secrets.DOCKERHUB_USERNAME }}/morphy-frontend:latest /app/server/entry.express.js 2>&1 || echo "Cannot run entry.express.js"
+              echo "=== Trying to run entry.express.js in temporary container (with timeout) ==="
+              timeout 10 docker run --rm --entrypoint node ${{ secrets.DOCKERHUB_USERNAME }}/morphy-frontend:latest /app/server/entry.express.js 2>&1 || echo "Container exited or timed out"
+              echo ""
+              echo "=== Trying to run entry.express.js with explicit error handling ==="
+              docker run --rm --entrypoint sh ${{ secrets.DOCKERHUB_USERNAME }}/morphy-frontend:latest -c "cd /app && node server/entry.express.js 2>&1" || echo "Failed to run"
               exit 1
             fi
 
