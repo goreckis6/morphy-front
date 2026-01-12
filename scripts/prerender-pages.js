@@ -267,6 +267,10 @@ try {
         const root = document.getElementById('root');
         if (!root || !root.hasChildNodes()) return false;
         
+        // Quick check - Header renders first (fast optimization)
+        const header = document.querySelector('header, nav');
+        if (!header) return false;
+        
         // Check if title exists
         const titleEl = document.querySelector('head > title');
         if (!titleEl) return false;
@@ -289,7 +293,12 @@ try {
       });
       
       // Extra wait to ensure all meta tags are fully updated by Helmet
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 500));
+      
+      // For converter pages, wait a bit longer for i18n to load translations
+      if (url.includes('/convert/')) {
+        await new Promise(resolve => setTimeout(resolve, 500));
+      }
 
       // Get the rendered HTML
       let html = await page.content();
@@ -300,6 +309,9 @@ try {
         .replace(/<script type="module".*?<\/script>/gs, '')
         .replace(/<link rel="modulepreload".*?>/g, '')
         .replace(/<link rel="preload".*?as="script".*?>/g, '');
+      
+      // Remove data-default attribute from title if still present (fast regex operation)
+      html = html.replace(/<title\s+data-default[^>]*>/g, '<title>');
 
       // Save to file
       const filePath = url === '/' 
