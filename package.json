@@ -11,7 +11,10 @@
     "preview": "vite preview",
     "start": "vite preview --host 0.0.0.0 --port ${PORT:-5173}",
     "docker:dev": "docker-compose up --build",
-    "docker:backend": "cd backend && npm run dev"
+    "docker:backend": "cd backend && npm run dev",
+    "verify:seo": "node scripts/verify-prerender-seo.js",
+    "verify:seo:summary": "node scripts/verify-prerender-seo.js --summary",
+    "verify:seo:missing": "node scripts/verify-prerender-seo.js --missing-only"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.57.4",

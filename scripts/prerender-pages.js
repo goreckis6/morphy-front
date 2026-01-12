@@ -261,7 +261,8 @@ try {
 
       // Wait for React Helmet to update meta tags in <head>
       await page.waitForSelector('head > title', { timeout: 10000 });
-      await page.waitForTimeout(1000); // Extra time for Helmet to finish
+      // Extra time for Helmet to finish (waitForTimeout was removed in Puppeteer 24+)
+      await new Promise(resolve => setTimeout(resolve, 1000));
 
       // Get the rendered HTML
       let html = await page.content();
